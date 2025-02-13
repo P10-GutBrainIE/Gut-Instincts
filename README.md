@@ -16,7 +16,7 @@ deactivate
 ### Installing Dependencies
 To install the necessary dependencies for the project (as specified in pyproject.toml), run:
 ```
-pip install .
+pip install -e .
 ```
 ### Code Formatting
 The project is set up to use Ruff as the formatter. Install the Ruff extension in VS Code, and use the shorcut `Alt + Shift + F` to run the formatter in a specfiic file.
