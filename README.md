@@ -29,4 +29,4 @@ To install the necessary dependencies for the project (as specified in pyproject
 pip install -e .
 ```
 ### Code Formatting
-The project is set up to use Ruff (https://bitly.cx/2AuGB) as the formatter. Install the Ruff extension in VS Code, and use the shorcut `Alt + Shift + F` to run the formatter in a specfiic file.
+The project is set up to use Ruff (https://bitly.cx/2AuGB) as the formatter and linter. Install the Ruff extension in VS Code, and use the shorcut `Alt + Shift + F` to run the formatter in a specfiic file.
