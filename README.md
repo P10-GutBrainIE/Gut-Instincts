@@ -1,7 +1,7 @@
 # nlp_tutorials
 ## Setup
 ### Virtual Environment
-You can optionally create a virtual environment (https://bitly.cx/VHGf4)  before installing any dependencies. This helps keep the project dependencies isolated and avoids conflicts with other projects.
+You can optionally create a virtual environment before installing any dependencies. This helps keep the project dependencies isolated and avoids conflicts with other projects.
 
 On Windows, to create the virtual environment, run:
 ```
