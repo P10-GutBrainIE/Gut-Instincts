@@ -9,6 +9,9 @@ from transformers import (
 	Trainer,
 )
 from utils.utils import load_bio_labels, load_data
+from huggingface_hub import login
+
+login("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")
 
 label_list, label2id, id2label = load_bio_labels()
 
@@ -60,7 +63,7 @@ training_args = TrainingArguments(
 	eval_strategy="epoch",
 	save_strategy="epoch",
 	load_best_model_at_end=True,
-	push_to_hub=False,
+	push_to_hub=True,
 )
 
 trainer = Trainer(
@@ -74,3 +77,4 @@ trainer = Trainer(
 )
 
 trainer.train()
+trainer.push_to_hub()

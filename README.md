@@ -1,4 +1,4 @@
-# nlp_tutorials
+# Gut-Instincts
 ## Setup
 ### Virtual Environment
 You can optionally create a virtual environment before installing any dependencies. This helps keep the project dependencies isolated and avoids conflicts with other projects.
