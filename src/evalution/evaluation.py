@@ -1,7 +1,8 @@
 import json
+import os
 
 # DEFINE HERE THE PATH(S) TO YOUR PREDICTIONS
-PREDICTIONS_PATH_6_1 = "inference_results.json"
+PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", "ner.json")
 PREDICTIONS_PATH_6_2 = "org_T621_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"
@@ -12,7 +13,7 @@ eval_6_2_binary_tag_RE = False
 eval_6_3_ternary_tag_RE = False
 eval_6_4_ternary_mention_RE = False
 
-GROUND_TRUTH_PATH = "data/Annotations/Dev/json_format/dev.json"
+GROUND_TRUTH_PATH = os.path.join("data", "Annotations", "Dev", "json_format", "dev.json")
 try:
 	with open(GROUND_TRUTH_PATH, "r", encoding="utf-8") as file:
 		ground_truth = json.load(file)
