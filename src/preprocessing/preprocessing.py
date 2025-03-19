@@ -9,6 +9,14 @@ from utils.utils import load_bio_labels
 class Preprocessor:
 	"""
 	Preprocess the paper titles and abstracts for NER training.
+
+	Attributes:
+	    file_paths (list[str]): List of file paths to the JSON files containing the paper data.
+	    save_path (str): Directory path where the processed data will be saved.
+	    tokenizer (AutoTokenizer): Tokenizer from the transformers library.
+	    max_length (int): Maximum length for tokenization.
+	    train_val_split (float): Proportion of data to be used for training.
+	    label2id (dict): Mapping from BIO labels to their corresponding IDs.
 	"""
 
 	def __init__(
@@ -19,6 +27,16 @@ class Preprocessor:
 		max_length: int = 512,
 		train_val_split: float = 0.9,
 	):
+		"""
+		Initialize the Preprocessor with file paths, save path, tokenizer, and other configurations.
+
+		Args:
+		    file_paths (list[str]): List of file paths to the JSON files containing the paper data.
+		    save_path (str): Directory path where the processed data will be saved.
+		    tokenizer (AutoTokenizer): Tokenizer from the transformers library.
+		    max_length (int, optional): Maximum length for tokenization. Defaults to 512.
+		    train_val_split (float, optional): Proportion of data to be used for training. Defaults to 0.9.
+		"""
 		self.file_paths = file_paths
 		self.save_path = save_path
 		self.tokenizer = tokenizer
@@ -28,7 +46,10 @@ class Preprocessor:
 
 	def process_files(self):
 		"""
-		Load a JSON file of papers and process each paper.
+		Load JSON files of papers and process each paper.
+
+		This method reads the JSON files, processes each paper's content, splits the data into training and validation sets,
+		and saves the processed data to pickle files.
 		"""
 		processed_papers = []
 		for file_path in self.file_paths:
@@ -49,7 +70,12 @@ class Preprocessor:
 	def _process_paper(self, content):
 		"""
 		Process a single paper's content for both title and abstract.
-		Returns a list of dictionaries with the processed data.
+
+		Args:
+		    content (dict): Dictionary containing the paper's metadata and entities.
+
+		Returns:
+		    list[dict]: List of dictionaries with the processed data for title and abstract.
 		"""
 		processed = []
 		metadata = content.get("metadata", {})
@@ -72,7 +98,14 @@ class Preprocessor:
 	def _tokenize_with_bio(self, text, entities, section):
 		"""
 		Tokenize a given text using the fast tokenizer (with offset mapping) and assign BIO tags.
-		Only entities that match the given section (e.g., "title" or "abstract") are considered.
+
+		Args:
+		    text (str): The text to be tokenized.
+		    entities (list[dict]): List of entities with their text spans and labels.
+		    section (str): The section of the text (e.g., "title" or "abstract").
+
+		Returns:
+		    tuple: A tuple containing tokens, BIO tag IDs, input IDs, and attention mask.
 		"""
 		encoding = self.tokenizer(
 			text, return_offsets_mapping=True, truncation=True, max_length=self.max_length, padding="max_length"
@@ -117,6 +150,12 @@ class Preprocessor:
 	def _train_val_split(self, processed_papers):
 		"""
 		Split the data into training and validation sets.
+
+		Args:
+		    processed_papers (list[list[dict]]): List of processed papers.
+
+		Returns:
+		    tuple: A tuple containing training data and validation data.
 		"""
 		training_data = []
 		validation_data = []
@@ -131,13 +170,17 @@ class Preprocessor:
 
 	def _save_to_pickle(self, training_data, validation_data):
 		"""
-		Save the processed data to a Pickle file.
+		Save the processed data to pickle files.
+
+		Args:
+		    training_data (list[dict]): List of training data.
+		    validation_data (list[dict]): List of validation data.
 		"""
 		os.makedirs(self.save_path, exist_ok=True)
 
-		with open(os.path.join(self.save_path, "train.pkl"), "wb") as f:
+		with open(os.path.join(self.save_path, "training.pkl"), "wb") as f:
 			pickle.dump(training_data, f)
-		with open(os.path.join(self.save_path, "val.pkl"), "wb") as f:
+		with open(os.path.join(self.save_path, "validation.pkl"), "wb") as f:
 			pickle.dump(validation_data, f)
 
 
@@ -153,5 +196,5 @@ if __name__ == "__main__":
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
 
-	preprocessor = Preprocessor(file_paths, os.path.join("data", "preprocessed"), tokenizer, max_length=512)
+	preprocessor = Preprocessor(file_paths, os.path.join("data_preprocessed"), tokenizer, max_length=512)
 	preprocessor.process_files()

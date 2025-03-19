@@ -4,7 +4,9 @@ import pickle
 import numpy as np
 
 
-def load_bio_labels(bio_labels_path: str = os.path.join("data", "bio_labels.json")) -> tuple[dict, dict]:
+def load_bio_labels(
+	bio_labels_path: str = os.path.join("src", "preprocessing", "bio_labels.json"),
+) -> tuple[dict, dict]:
 	"""
 	Load the BIO labels from the specified path.
 
