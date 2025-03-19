@@ -1,0 +1,2263 @@
+pmid	annotator	subject_text_span	subject_label	predicate	object_text_span	object_label
+35654142	expert_3	PD symptoms	DDF	target	mice	animal
+
+
+32816830	expert_3	IBS	DDF	target	patients	human
+32816830	expert_3	IBS	DDF	target	people	human
+32816830	expert_3	irritable bowel syndrome	DDF	target	people	human
+
+
+30659564	expert_7	gut microbiome	microbiome	is linked to	inflammatory gastrointestinal disorders	DDF
+30659564	expert_7	gut microbiota	microbiome	is linked to	chronic stress	DDF
+30659564	expert_7	gut microbiome	microbiome	is linked to	obesity	DDF
+30659564	expert_7	gut microbiota	microbiome	is linked to	mental disorders	DDF
+30659564	expert_7	gut microbiota	microbiome	is linked to	depression	DDF
+30659564	expert_7	gut microbiota	microbiome	is linked to	psychiatric disorders	DDF
+
+
+38283894	expert_5	autism spectrum disorders	DDF	target	adolescents	human
+38283894	expert_5	Parabacteroides	bacteria	located in	controls	human
+38283894	expert_5	oxytocin	chemical	located in	controls	human
+38283894	expert_5	CRP	chemical	located in	Children	human
+38283894	expert_5	Faecalibacterium	bacteria	located in	Children	human
+38283894	expert_5	Parabacteroides	bacteria	located in	children	human
+38283894	expert_5	Bifidobacterium	bacteria	located in	Children	human
+38283894	expert_5	ASD	DDF	target	Children	human
+38283894	expert_5	Autism spectrum disorder	DDF	target	children	human
+38283894	expert_5	oxytocin	chemical	located in	children	human
+38283894	expert_5	Bacteroides	bacteria	located in	Children	human
+38283894	expert_5	iron	chemical	located in	Children	human
+38283894	expert_5	Faecalibacterium	bacteria	located in	controls	human
+38283894	expert_5	Bifidobacterium	bacteria	located in	controls	human
+38283894	expert_5	iron	chemical	located in	children	human
+38283894	expert_5	CRP	chemical	located in	controls	human
+38283894	expert_5	CRP	chemical	located in	children	human
+38283894	expert_5	Bacteroides	bacteria	located in	controls	human
+38283894	expert_5	ASD	DDF	target	children	human
+38283894	expert_5	iron	chemical	located in	controls	human
+38283894	expert_5	Clostridium	bacteria	located in	Children	human
+38283894	expert_5	Bifidobacterium	bacteria	located in	children	human
+38283894	expert_5	trace elements	chemical	located in	children	human
+38283894	expert_5	Autism spectrum disorder	DDF	target	adolescents	human
+38283894	expert_5	autism spectrum disorder	DDF	target	children	human
+38283894	expert_5	Bacteroides	bacteria	located in	children	human
+38283894	expert_5	zinc	chemical	located in	Children	human
+38283894	expert_5	zinc	chemical	located in	controls	human
+38283894	expert_5	Clostridium	bacteria	located in	controls	human
+38283894	expert_5	trace elements	chemical	located in	control subjects	human
+38283894	expert_5	trace elements	chemical	located in	adolescents	human
+38283894	expert_5	trace elements	chemical	located in	healthy controls	human
+38283894	expert_5	Clostridium	bacteria	located in	children	human
+38283894	expert_5	ASD	DDF	target	adolescents	human
+38283894	expert_5	autism spectrum disorders	DDF	target	children	human
+38283894	expert_5	zinc	chemical	located in	children	human
+38283894	expert_5	GABA	chemical	located in	children	human
+38283894	expert_5	GABA	chemical	located in	Children	human
+38283894	expert_5	Parabacteroides	bacteria	located in	Children	human
+38283894	expert_5	GABA	chemical	located in	controls	human
+38283894	expert_5	oxytocin	chemical	located in	Children	human
+38283894	expert_5	c-reactive protein	chemical	located in	children	human
+
+
+36072680	expert_6	gut microbiota	microbiome	is linked to	gastroenteritis	DDF
+36072680	expert_6	gut microbiota	microbiome	is linked to	stress	DDF
+36072680	expert_6	Irritable bowel syndrome	DDF	is a	chronic debilitating issues	DDF
+36072680	expert_6	IBS	DDF	target	patients	human
+36072680	expert_6	IBS	DDF	is a	chronic debilitating issues	DDF
+
+
+37127945	expert_4	BD	DDF	target	patients	human
+37127945	expert_4	BD	DDF	change abundance	Ruminococcus	bacteria
+37127945	expert_4	BD	DDF	change abundance	Lactobacillus	bacteria
+37127945	expert_4	Probiotic supplementation	dietary supplement	influence	cognitive impairments	DDF
+37127945	expert_4	BD	DDF	change abundance	Faecalibacterium	bacteria
+37127945	expert_4	depressive symptoms	DDF	target	patients	human
+37127945	expert_4	Probiotic supplementation	dietary supplement	influence	depressive symptoms	DDF
+37127945	expert_4	cognitive impairments	DDF	target	patients	human
+
+
+36411639	expert_4	Gut microbes	bacteria	influence	irritable bowel syndrome	DDF
+36411639	expert_4	Gut microbial-derived metabolites	chemical	influence	neurological diseases	DDF
+36411639	expert_4	Gut microbes	bacteria	influence	ulcer stomach and intestine	DDF
+36411639	expert_4	Gut microbes	bacteria	influence	gastrointestinal diseases	DDF
+36411639	expert_4	Gut microbial-derived metabolites	chemical	influence	Alzheimer's disease	DDF
+36411639	expert_4	Gut microbial-derived metabolites	chemical	influence	Parkinson's disease	DDF
+
+
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	multiple sclerosis	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	neurological disorders	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	atherosclerosis	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	Alzheimer's disease	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	inflammatory bowel diseases	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	rheumatoid arthritis	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	ischemic and non-ischemic heart disease	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	inflammatory issues	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	neurologic disorders	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	amyotrophic lateral sclerosis	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	obesity	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	Parkinson's disease	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	liver diseases	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	cardiovascular diseases	DDF
+32545788	expert_6	dead cells	chemical	influence	Inflammation	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	metabolic pathologies	DDF
+32545788	expert_6	pathogens	chemical	influence	Inflammation	DDF
+32545788	expert_6	NLRP3 inflammasome	chemical	influence	type 2 diabetes	DDF
+32545788	expert_6	irritants	chemical	influence	Inflammation	DDF
+
+
+
+
+30072879	expert_2	group III mGlu	chemical	interact	1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine	chemical
+30072879	expert_2	gastrointestinal dysfunction	DDF	affect	Parkinson's disease	DDF
+30072879	expert_2	mGlu8	chemical	interact	1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine	chemical
+30072879	expert_2	mGlu8	chemical	interact	MPTP	chemical
+30072879	expert_2	MPTP	chemical	impact	gut microbiome	microbiome
+30072879	expert_2	gut microbiome	microbiome	located in	WT and KO mice	animal
+30072879	expert_2	gut microbiome	microbiome	is linked to	PD pathogenesis	DDF
+30072879	expert_2	mGlu8	chemical	influence	PD	DDF
+30072879	expert_2	Motor dysfunction	DDF	affect	Parkinson's disease	DDF
+30072879	expert_2	metabotropic glutamate receptor 8	chemical	interact	1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine	chemical
+30072879	expert_2	group III mGlu	chemical	interact	MPTP	chemical
+30072879	expert_2	1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine	chemical	impact	gut microbiome	microbiome
+30072879	expert_2	Parkinson's disease	DDF	target	female and male mice	animal
+30072879	expert_2	Motor dysfunction	DDF	affect	PD	DDF
+30072879	expert_2	metabotropic glutamate receptor 8	chemical	interact	MPTP	chemical
+30072879	expert_2	gastrointestinal dysfunction	DDF	affect	PD	DDF
+
+
+32572814	expert_4	AR 420626	drug	interact	FA3R	chemical
+32572814	expert_4	BHB	drug	interact	butyrate	chemical
+32572814	expert_4	BHB	drug	interact	SALS	chemical
+32572814	expert_4	Butyrate	chemical	influence	Salsolinol-Induced Toxicity	DDF
+32572814	expert_4	Butyrate	chemical	located in	gut	anatomical location
+32572814	expert_4	BHB	drug	interact	FA3R	chemical
+32572814	expert_4	AR 420626	drug	interact	SALS	chemical
+32572814	expert_4	beta-hydroxy butyrate	drug	interact	butyrate	chemical
+32572814	expert_4	beta-hydroxy butyrate	drug	interact	FA3R	chemical
+
+
+30828318	expert_5	gut microbiota	microbiome	located in	agile, fit hunter gatherers	human
+30828318	expert_5	probiotic applications	dietary supplement	influence	depression	DDF
+30828318	expert_5	gut	anatomical location	located in	obese westerners	human
+30828318	expert_5	gut	anatomical location	located in	agile, fit hunter gatherers	human
+30828318	expert_5	gut microbiota	microbiome	located in	Danes	human
+30828318	expert_5	gut microbiota	microbiome	located in	obese westerners	human
+30828318	expert_5	gut microbiota	microbiome	located in	gut	anatomical location
+30828318	expert_5	gut microbiota	microbiome	located in	brain	anatomical location
+30828318	expert_5	gut	anatomical location	located in	Danes	human
+30828318	expert_5	probiotic applications	dietary supplement	influence	anxiety	DDF
+
+
+31148353	expert_5	L-3,4-dihydroxyphenylalanine (L-DOPA)	drug	change effect	PD	DDF
+31148353	expert_5	hUCB-derived plasma	chemical	located in	SNpc	anatomical location
+31148353	expert_5	L-3,4-dihydroxyphenylalanine (L-DOPA)	drug	change effect	Parkinson's disease	DDF
+31148353	expert_5	inflammation-associated gut microbiota	microbiome	located in	gut	anatomical location
+31148353	expert_5	anti-inflammatory cytokines	chemical	influence	parkinsonian symptoms	DDF
+31148353	expert_5	pro-inflammatory cytokines	chemical	located in	SNpc	anatomical location
+31148353	expert_5	hUCB-derived plasma	chemical	located in	substantia nigra pars compacta	anatomical location
+31148353	expert_5	gut microbiome	microbiome	is linked to	PD	DDF
+31148353	expert_5	parkinsonian symptoms	DDF	affect	PD	DDF
+31148353	expert_5	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+31148353	expert_5	parkinsonian symptoms	DDF	affect	Parkinson's disease	DDF
+31148353	expert_5	gut microbiome	microbiome	located in	gut	anatomical location
+31148353	expert_5	L-3,4-dihydroxyphenylalanine (L-DOPA)	drug	change effect	dyskinetic side effects	DDF
+
+
+31821833	expert_5	gut microbiota	microbiome	is linked to	schizophrenia	DDF
+31821833	expert_5	human microbiome	microbiome	is linked to	CNS diseases	DDF
+31821833	expert_5	gastrointestinal microbiota	microbiome	located in	gut	anatomical location
+31821833	expert_5	gut microbiota	microbiome	is linked to	CNS diseases	DDF
+31821833	expert_5	intestinal microbiota	microbiome	located in	gut	anatomical location
+31821833	expert_5	intestinal microbiota	microbiome	is linked to	CNS diseases	DDF
+31821833	expert_5	gastrointestinal microbiota	microbiome	is linked to	schizophrenia	DDF
+31821833	expert_5	gastrointestinal microbiota	microbiome	is linked to	CNS diseases	DDF
+31821833	expert_5	human microbiome	microbiome	is linked to	schizophrenia	DDF
+31821833	expert_5	intestinal microbiota	microbiome	is linked to	schizophrenia	DDF
+31821833	expert_5	gut microbiota	microbiome	located in	gut	anatomical location
+
+
+33063712	expert_4	cancer	DDF	change abundance	gut microbiota	microbiome
+33063712	expert_4	neurodegenerative disorders	DDF	change abundance	gut microbiota	microbiome
+33063712	expert_4	human disorders	DDF	change abundance	gut microbiota	microbiome
+
+
+36462169	expert_4	SMI	DDF	interact	sMAdCAM-1	chemical
+36462169	expert_4	SMI	DDF	interact	LBP	chemical
+36462169	expert_4	SCZ	DDF	interact	CCL25	chemical
+36462169	expert_4	AFF	DDF	interact	I-FABP	chemical
+36462169	expert_4	SMI	DDF	interact	CCL25	chemical
+36462169	expert_4	SMI	DDF	interact	I-FABP	chemical
+36462169	expert_4	I-FABP	chemical	interact	IL-18BPa	chemical
+36462169	expert_4	AFF	DDF	interact	LBP	chemical
+
+
+27698624	expert_2	gut microbiota	microbiome	is linked to	depression	DDF
+27698624	expert_2	gut microbiota	microbiome	is linked to	anxiety	DDF
+27698624	expert_2	gut microbiota	microbiome	is linked to	stress related disorders	DDF
+27698624	expert_2	Gut Microbiome	microbiome	is linked to	Anxiety	DDF
+
+
+
+
+33938181	expert_5	multidrug resistant bacteria	bacteria	interact	human glucose-dependent insulinotropic polypeptide	chemical
+33938181	expert_5	Increasing antibiotic resistance	DDF	change abundance	Gram-negative bacteria	bacteria
+33938181	expert_5	gastrointestinal peptides	chemical	impact	gut microbiota	microbiome
+33938181	expert_5	E. amylovora 1189	bacteria	interact	multidrug resistant bacteria	bacteria
+33938181	expert_5	multidrug resistant bacteria	bacteria	interact	GIP	chemical
+33938181	expert_5	TolC	chemical	part of	inner and outer membrane efflux pump factor proteins	chemical
+33938181	expert_5	E. coli TG1	bacteria	interact	multidrug resistant bacteria	bacteria
+33938181	expert_5	Human glucose-dependent insulinotropic polypeptide	chemical	impact	antimicrobial adjuvant re-sensitising multidrug-resistant Gram-negative bacteria	bacteria
+33938181	expert_5	GIP	chemical	impact	antimicrobial adjuvant re-sensitising multidrug-resistant Gram-negative bacteria	bacteria
+33938181	expert_5	AcrB	chemical	part of	inner and outer membrane efflux pump factor proteins	chemical
+
+
+31917834	expert_2	stress	DDF	affect	dysbiosis	DDF
+31917834	expert_2	Adolescence Inflammatory Stress	DDF	affect	Neurodegeneration	DDF
+31917834	expert_2	gut microbiota	microbiome	is linked to	stress	DDF
+31917834	expert_2	depression	DDF	is a	neurological disorders	DDF
+31917834	expert_2	gut microbiota	microbiome	is linked to	neurodegenerative disorders	DDF
+31917834	expert_2	Alzheimer's disease	DDF	is a	neurological disorders	DDF
+31917834	expert_2	probiotics	dietary supplement	influence	dysbiosis	DDF
+31917834	expert_2	probiotics	dietary supplement	influence	brain disorders	DDF
+31917834	expert_2	pubertal neuroinflammatory insults	DDF	affect	brain disorders	DDF
+31917834	expert_2	neuroinflammation	DDF	affect	dysbiosis	DDF
+31917834	expert_2	dysbiosis	DDF	affect	brain disorders	DDF
+31917834	expert_2	probiotics	dietary supplement	influence	inflammation	DDF
+31917834	expert_2	infection	DDF	affect	dysbiosis	DDF
+31917834	expert_2	Microbiota Alterations	DDF	affect	Neurodegeneration	DDF
+31917834	expert_2	Parkinson's disease	DDF	is a	neurological disorders	DDF
+
+
+38123016	expert_2	ASD	DDF	is a	neurodevelopmental disorders	DDF
+38123016	expert_2	metabolite supplementation	dietary supplement	influence	ASD	DDF
+38123016	expert_2	gut microbiota	microbiome	located in	ASD patients	human
+38123016	expert_2	probiotics	dietary supplement	influence	ASD	DDF
+38123016	expert_2	microbiota modulators	dietary supplement	influence	ASD	DDF
+38123016	expert_2	autism spectrum disorder	DDF	is a	neurodevelopmental disorders	DDF
+38123016	expert_2	infections	DDF	change abundance	gut microbiome	microbiome
+
+
+25231862	expert_1	glucose intolerance	DDF	target	healthy human subjects	human
+25231862	expert_1	NAS	dietary supplement	influence	glucose intolerance	DDF
+25231862	expert_1	NAS-induced dysbiosis	DDF	target	healthy human subjects	human
+25231862	expert_1	NAS	dietary supplement	influence	dysbiosis	DDF
+25231862	expert_1	NAS	dietary supplement	influence	metabolic abnormalities	DDF
+25231862	expert_1	Artificial sweeteners	dietary supplement	influence	glucose intolerance	DDF
+25231862	expert_1	Non-caloric artificial sweeteners	dietary supplement	influence	glucose intolerance	DDF
+25231862	expert_1	Artificial sweeteners	dietary supplement	impact	gut microbiota	microbiome
+
+
+33677218	expert_6	depression-like behaviors	DDF	target	Rats	animal
+33677218	expert_6	depression-like behaviors	DDF	affect	chronic unpredictable mild stress	DDF
+33677218	expert_6	gut microbiota	microbiome	is linked to	depression-like behaviors	DDF
+33677218	expert_6	gut microbiota	microbiome	is linked to	neuroinflammation	DDF
+33677218	expert_6	neuroinflammation	DDF	target	Rats	animal
+
+
+36938477	expert_4	Probiotics	dietary supplement	influence	functional constipation	DDF
+36938477	expert_4	probiotic intake	dietary supplement	influence	constipation	DDF
+36938477	expert_4	constipation	DDF	target	PD patients	human
+36938477	expert_4	constipation	DDF	target	patients	human
+36938477	expert_4	Parkinson's disease	DDF	target	patients	human
+36938477	expert_4	Constipation	DDF	target	PD patients	human
+36938477	expert_4	PD	DDF	target	patients	human
+
+
+31940482	expert_4	Bacillus subtilis probiotic strain PXN21	bacteria	influence	synucleinopathy	DDF
+31940482	expert_4	gut	anatomical location	located in	worms	animal
+31940482	expert_4	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+31940482	expert_4	Multiple B. subtilis strains	bacteria	interact	bacterial metabolites	chemical
+31940482	expert_4	synucleinopathy	DDF	target	young and aging animals	animal
+
+
+33416892	expert_4	gut microbiome	microbiome	is linked to	inflammation	DDF
+33416892	expert_4	gut microbiome	microbiome	is linked to	amyotrophic lateral sclerosis	DDF
+33416892	expert_4	gut microbiome	microbiome	is linked to	CNS neurodegenerative diseases	DDF
+33416892	expert_4	gut microbiome	microbiome	is linked to	multiple sclerosis	DDF
+33416892	expert_4	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+33416892	expert_4	gut microbiome	microbiome	is linked to	Alzheimer's disease	DDF
+
+
+
+
+32600151	expert_4	gut microbiome	microbiome	is linked to	multiple sclerosis	DDF
+32600151	expert_4	AD	DDF	change abundance	gut microbiome	microbiome
+32600151	expert_4	gut microbiome	microbiome	is linked to	neurological diseases	DDF
+32600151	expert_4	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+32600151	expert_4	AD	DDF	target	patient	human
+32600151	expert_4	AD	DDF	target	patients	human
+
+
+31302116	expert_1	generalized anxiety	DDF	target	Women	human
+31302116	expert_1	gut microbiota	microbiome	is linked to	mood and anxiety disorders	DDF
+31302116	expert_1	major depression	DDF	target	men	human
+31302116	expert_1	stress-related disorders	DDF	target	Women	human
+31302116	expert_1	gut microbiota	microbiome	located in	gastrointestinal tract	anatomical location
+31302116	expert_1	gut microbiota	microbiome	is linked to	mental illnesses	DDF
+31302116	expert_1	major depression	DDF	target	Women	human
+31302116	expert_1	stress-related disorders	DDF	target	men	human
+31302116	expert_1	generalized anxiety	DDF	target	men	human
+
+
+34970638	expert_5	Synapsin-1	chemical	located in	DEX and CUMS groups	animal
+34970638	expert_5	glial fibrillary acidic protein	chemical	located in	DEX and CUMS groups	animal
+34970638	expert_5	gut microbiota	microbiome	located in	individuals	human
+34970638	expert_5	excessive immunosuppression with damaged neuronal synapses	DDF	affect	DEX-induced depression	DDF
+34970638	expert_5	hippocampus	anatomical location	located in	DEX and CUMS groups	animal
+34970638	expert_5	control (CON) group	animal	used by	ELISA	biomedical technique
+34970638	expert_5	Clostridium XVIII	bacteria	located in	DEX-treated mice	animal
+34970638	expert_5	DEX	drug	administered	DEX group	animal
+34970638	expert_5	IL-1β	chemical	located in	DEX-treated mice	animal
+34970638	expert_5	neuroinflammation	DDF	strike	brain	anatomical location
+34970638	expert_5	depression	DDF	target	individuals	human
+34970638	expert_5	occludin	chemical	located in	DEX-treated mice	animal
+34970638	expert_5	dexamethasone (DEX) group	animal	used by	Enzyme-linked immunosorbent assay	biomedical technique
+34970638	expert_5	CORT	chemical	located in	DEX-treated mice	animal
+34970638	expert_5	Adolescent female mice	animal	used by	western blot	biomedical technique
+34970638	expert_5	mild stress (CUMS) group	animal	used by	Enzyme-linked immunosorbent assay	biomedical technique
+34970638	expert_5	P2Y12 receptor	chemical	located in	hippocampus	anatomical location
+34970638	expert_5	CUMS	DDF	affect	depression-like phenotypes	DDF
+34970638	expert_5	dexamethasone (DEX) group	animal	used by	sequencing 16S rDNAs	biomedical technique
+34970638	expert_5	dexamethasone	drug	change effect	depression-like phenotypes	DDF
+34970638	expert_5	gut microbiota	microbiome	is linked to	depression	DDF
+34970638	expert_5	dexamethasone (DEX) group	animal	used by	ELISA	biomedical technique
+34970638	expert_5	gut microbiota	microbiome	located in	mice	animal
+34970638	expert_5	control (CON) group	animal	used by	western blot	biomedical technique
+34970638	expert_5	neuroinflammation	DDF	affect	CUMS-induced depression	DDF
+34970638	expert_5	Nestin	chemical	located in	DEX and CUMS groups	animal
+34970638	expert_5	mild stress (CUMS) group	animal	used by	ELISA	biomedical technique
+34970638	expert_5	mild stress (CUMS) group	animal	used by	sequencing 16S rDNAs	biomedical technique
+34970638	expert_5	gut microbiota	microbiome	is linked to	depression-like phenotypes	DDF
+34970638	expert_5	P2Y12 receptor	chemical	located in	DEX and CUMS groups	animal
+34970638	expert_5	Prevotellaceae	bacteria	located in	CUMS group	animal
+34970638	expert_5	Bacilli	bacteria	located in	CUMS group	animal
+34970638	expert_5	GFAP	chemical	located in	DEX and CUMS groups	animal
+34970638	expert_5	IL-1β	chemical	located in	DEX and CUMS groups	animal
+34970638	expert_5	mild stress (CUMS) group	animal	used by	western blot	biomedical technique
+34970638	expert_5	Adolescent female mice	animal	used by	Enzyme-linked immunosorbent assay	biomedical technique
+34970638	expert_5	solvent	chemical	located in	CON mice	animal
+34970638	expert_5	Adolescent female mice	animal	used by	sequencing 16S rDNAs	biomedical technique
+34970638	expert_5	dexamethasone (DEX) group	animal	used by	western blot	biomedical technique
+34970638	expert_5	depression-like phenotypes	DDF	target	mice	animal
+34970638	expert_5	control (CON) group	animal	used by	Enzyme-linked immunosorbent assay	biomedical technique
+34970638	expert_5	Adolescent female mice	animal	used by	ELISA	biomedical technique
+34970638	expert_5	Desulfovibrio	bacteria	located in	CUMS group	animal
+34970638	expert_5	pathobionts	microbiome	is linked to	DEX-induced depression	DDF
+34970638	expert_5	control (CON) group	animal	used by	sequencing 16S rDNAs	biomedical technique
+34970638	expert_5	severe depression-like behaviours	DDF	target	CUMS and DEX groups	animal
+34970638	expert_5	dexamethasone	drug	impact	gut microbiota	microbiome
+
+
+
+
+36931666	expert_2	type 2 diabetes mellitus	DDF	target	patients	human
+36931666	expert_2	type 2 diabetes mellitus	DDF	affect	chronic hyperglycaemia-related damage	DDF
+36931666	expert_2	T2DM	DDF	affect	chronic hyperglycaemia-related damage	DDF
+36931666	expert_2	patients	human	used by	randomised, triple-blind, placebo-controlled trial	biomedical technique
+36931666	expert_2	T2DM	DDF	target	patients	human
+
+
+38686220	expert_4	mild to moderate Parkinson's disease	DDF	target	patients	human
+38686220	expert_4	gut microbiome	microbiome	is linked to	PD	DDF
+38686220	expert_4	early-stage PD	DDF	target	patients	human
+38686220	expert_4	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+38686220	expert_4	PD	DDF	target	patients	human
+
+
+35798742	expert_7	Oral Lactobacillus	bacteria	located in	PD patients	human
+35798742	expert_7	Oral and gut dysbiosis	DDF	affect	PD	DDF
+35798742	expert_7	oral and gut microbiome	microbiome	is linked to	PD	DDF
+35798742	expert_7	oral and gut microbiota	microbiome	is linked to	PD	DDF
+35798742	expert_7	oral and gut microbiome	microbiome	located in	PD patients	human
+35798742	expert_7	Oral and gut dysbiosis	DDF	affect	Parkinson's disease	DDF
+35798742	expert_7	oral microbiome	microbiome	is linked to	Parkinson's disease	DDF
+35798742	expert_7	Parkinson's disease	DDF	target	PD patients	human
+35798742	expert_7	PD	DDF	target	PD patients	human
+35798742	expert_7	oral and gut microbiota	microbiome	is linked to	Parkinson's disease	DDF
+35798742	expert_7	PD-specific gut microbiome	microbiome	is linked to	PD	DDF
+35798742	expert_7	glutamate	chemical	located in	PD patients	human
+35798742	expert_7	oral and gut microbiome	microbiome	used by	shotgun metagenomic sequencing	biomedical technique
+35798742	expert_7	oral and gut microbiome	microbiome	compared to	PD-specific gut microbiome	microbiome
+35798742	expert_7	PD-specific gut microbiome	microbiome	used by	shotgun metagenomic sequencing	biomedical technique
+35798742	expert_7	oral and gut microbiome	microbiome	located in	healthy controls	human
+35798742	expert_7	oral microbiome	microbiome	is linked to	PD	DDF
+35798742	expert_7	gut	anatomical location	located in	PD patients	human
+35798742	expert_7	arginine	chemical	located in	PD patients	human
+
+
+37655441	expert_4	Prevotella copri	bacteria	influence	rheumatoid arthritis	DDF
+37655441	expert_4	Prevotella copri	bacteria	part of	human gastrointestinal microbiome	microbiome
+37655441	expert_4	Prevotella copri	bacteria	influence	Parkinson's disease	DDF
+
+
+36651663	expert_2	depression	DDF	change abundance	Fusicatenibacter saccharivorans	bacteria
+36651663	expert_2	Spanish cohort	human	used by	16S ribosomal RNA gene V3-4 amplicon sequencing	biomedical technique
+36651663	expert_2	anxiety	DDF	change abundance	Fusicatenibacter saccharivorans	bacteria
+36651663	expert_2	depression	DDF	change abundance	Proteobacteria	bacteria
+36651663	expert_2	depression	DDF	target	Spanish cohort	human
+36651663	expert_2	PTSD	DDF	target	Spanish cohort	human
+36651663	expert_2	individuals	human	used by	16S ribosomal RNA gene V3-4 amplicon sequencing	biomedical technique
+36651663	expert_2	posttraumatic stress disorder	DDF	change abundance	Turicibacter sanguinis	bacteria
+36651663	expert_2	posttraumatic stress disorder	DDF	change abundance	Anaerostipes	bacteria
+36651663	expert_2	PTSD	DDF	change abundance	Fusicatenibacter saccharivorans	bacteria
+36651663	expert_2	posttraumatic stress disorder	DDF	change abundance	Fusicatenibacter saccharivorans	bacteria
+36651663	expert_2	posttraumatic stress disorder	DDF	change abundance	Lentisphaerae	bacteria
+36651663	expert_2	anxiety	DDF	target	Spanish cohort	human
+36651663	expert_2	posttraumatic stress disorder	DDF	target	Spanish cohort	human
+36651663	expert_2	trait anxiety	DDF	target	Individuals	human
+36651663	expert_2	depression	DDF	change abundance	Synergistetes phyla	bacteria
+
+
+36816743	expert_4	gut microbiota	microbiome	is linked to	neurological diseases	DDF
+
+
+31330299	expert_5	gut microbiota	microbiome	is linked to	Alzheimer's disease	DDF
+31330299	expert_5	traumatic brain injury	DDF	strike	brain	anatomical location
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	peripheral inflammation	DDF
+31330299	expert_5	gut microbiota	microbiome	is linked to	mental illnesses	DDF
+31330299	expert_5	gastrointestinal microbiome	microbiome	located in	brain	anatomical location
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	stress	DDF
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	mental illnesses	DDF
+31330299	expert_5	gut microbiota	microbiome	is linked to	stress	DDF
+31330299	expert_5	gut microbiota	microbiome	is linked to	disorders of the central nervous system	DDF
+31330299	expert_5	gut microbiota	microbiome	is linked to	Parkinson's disease	DDF
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	Parkinson's disease	DDF
+31330299	expert_5	gut microbiota	microbiome	located in	brain	anatomical location
+31330299	expert_5	gut microbiota	microbiome	is linked to	stroke	DDF
+31330299	expert_5	gut microbiota	microbiome	is linked to	multiple sclerosis	DDF
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	traumatic brain injury	DDF
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	stroke	DDF
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	multiple sclerosis	DDF
+31330299	expert_5	gut microbiota	microbiome	is linked to	traumatic brain injury	DDF
+31330299	expert_5	gut microbiota	microbiome	is linked to	peripheral inflammation	DDF
+31330299	expert_5	gastrointestinal microbiota	microbiome	is linked to	Alzheimer's disease	DDF
+
+
+32188376	expert_6	major depression	DDF	affect	morbidity	DDF
+32188376	expert_6	Bipolar disorder	DDF	affect	disability	DDF
+32188376	expert_6	major depression	DDF	affect	reduced life expectancy	DDF
+32188376	expert_6	Bipolar disorder	DDF	affect	reduced life expectancy	DDF
+32188376	expert_6	mood disorders	DDF	target	People	human
+32188376	expert_6	Neurocognitive dysfunction	DDF	affect	mood disorders	DDF
+32188376	expert_6	Neurocognitive dysfunction	DDF	affect	social dysfunction	DDF
+32188376	expert_6	major depression	DDF	affect	disability	DDF
+32188376	expert_6	Bipolar disorder	DDF	affect	morbidity	DDF
+
+
+27319972	expert_7	gut	anatomical location	located in	adult human	human
+27319972	expert_7	Early life stress	DDF	strike	intestine	anatomical location
+27319972	expert_7	early life stress	DDF	affect	adult psychopathology	DDF
+
+
+
+
+36699448	expert_2	gut microbiome	microbiome	is linked to	depression	DDF
+36699448	expert_2	depression	DDF	target	Asian, Chinese people	human
+36699448	expert_2	major depressive disorder	DDF	target	Asian, Chinese group	human
+36699448	expert_2	major depressive disorder	DDF	change abundance	Pseudomonades	bacteria
+36699448	expert_2	gut microbiome	microbiome	located in	Asian, Chinese people	human
+36699448	expert_2	MDD	DDF	target	Asian, Chinese group	human
+36699448	expert_2	gut microbiome	microbiome	is linked to	major depressive disorder	DDF
+36699448	expert_2	gut microbiome	microbiome	is linked to	MDD	DDF
+36699448	expert_2	major depressive disorder	DDF	change abundance	Actinobacteria	bacteria
+
+
+37193253	expert_2	anxiety disorder	DDF	affect	gut dysbiosis	DDF
+37193253	expert_2	Main gut microbiota alterations	DDF	change abundance	gut microbiota	microbiome
+37193253	expert_2	pSS	DDF	is a	psychological disorders	DDF
+37193253	expert_2	Gut Dysbiosis	DDF	target	Primary Sjögren's Syndrome-Mediated Dry Eye Patients	human
+37193253	expert_2	gut dysbiosis	DDF	affect	anxiety disorder	DDF
+37193253	expert_2	Odoribacter	bacteria	influence	pSS	DDF
+37193253	expert_2	gut microbiota	microbiome	is linked to	pSS	DDF
+37193253	expert_2	Dry eye discomfort	DDF	affect	anxiety disorders	DDF
+37193253	expert_2	pSS-mediated dry eye	DDF	target	patients	human
+37193253	expert_2	Anxiety Disorders	DDF	target	Primary Sjögren's Syndrome-Mediated Dry Eye Patients	human
+37193253	expert_2	Main gut microbiota alterations	DDF	affect	pSS-mediated dry eye	DDF
+37193253	expert_2	anxiety	DDF	affect	pSS	DDF
+37193253	expert_2	patients	human	used by	16S ribosomal RNA gene sequencing	biomedical technique
+37193253	expert_2	gut microbiota	microbiome	is linked to	ocular conditions	DDF
+37193253	expert_2	Bacteroidetes	bacteria	influence	pSS	DDF
+37193253	expert_2	ocular conditions	DDF	affect	pSS	DDF
+37193253	expert_2	Main gut microbiota alterations	DDF	affect	anxiety	DDF
+37193253	expert_2	gut microbiota	microbiome	is linked to	anxiety disorder	DDF
+37193253	expert_2	Prevotella	bacteria	influence	Dry eye discomfort	DDF
+37193253	expert_2	Primary Sjögren's syndrome	DDF	is a	psychological disorders	DDF
+
+
+33505487	expert_7	cytokines	chemical	located in	CFC patients	human
+33505487	expert_7	Pseudobutyrivibrio	bacteria	located in	experiment group	human
+33505487	expert_7	cytokines	chemical	impact	Pseudobutyrivibrio	bacteria
+33505487	expert_7	Gut Microbiome	microbiome	located in	Functional Constipation Patients	human
+33505487	expert_7	CFC	DDF	target	CFC patients	human
+33505487	expert_7	gut microbiome	microbiome	located in	CFC patients	human
+33505487	expert_7	gut microbiome	microbiome	located in	experimental and control groups	human
+33505487	expert_7	Fusicatenibacter	bacteria	located in	experiment group	human
+33505487	expert_7	Ruminiclostridium	bacteria	located in	experiment group	human
+
+
+
+
+
+
+34692176	expert_5	ulcerative colitis	DDF	is a	IBDs	DDF
+34692176	expert_5	IBD	DDF	target	IBD patients	human
+34692176	expert_5	ulcerative colitis	DDF	is a	idiopathic disorders	DDF
+34692176	expert_5	UC	DDF	is a	IBDs	DDF
+34692176	expert_5	CD	DDF	is a	idiopathic disorders	DDF
+34692176	expert_5	Inflammatory bowel diseases	DDF	target	IBD patients	human
+34692176	expert_5	UC	DDF	is a	idiopathic disorders	DDF
+34692176	expert_5	CD	DDF	is a	IBDs	DDF
+34692176	expert_5	pathophysiology of IBD	DDF	target	IBD patients	human
+34692176	expert_5	Crohn's disease	DDF	is a	IBDs	DDF
+34692176	expert_5	Inflammatory bowel diseases	DDF	is a	complex chronic inflammatory disorders	DDF
+34692176	expert_5	IBDs	DDF	is a	complex chronic inflammatory disorders	DDF
+34692176	expert_5	Crohn's disease	DDF	is a	idiopathic disorders	DDF
+34692176	expert_5	IBDs	DDF	target	IBD patients	human
+
+
+31539679	expert_1	antibiotic cocktail	drug	impact	Proteobacteria	bacteria
+31539679	expert_1	prefrontal cortex	anatomical location	located in	antibiotic-treated mice	animal
+31539679	expert_1	antibiotic-induced microbiome depletion	DDF	affect	anhedonia	DDF
+31539679	expert_1	host gut	anatomical location	located in	mice	animal
+31539679	expert_1	CSDS	DDF	target	mice	animal
+31539679	expert_1	chronic social defeat stress	DDF	target	adult mice	animal
+31539679	expert_1	gut bacteria	bacteria	influence	CSDS-induced anhedonia	DDF
+31539679	expert_1	antibiotic-induced microbiome depletion	DDF	target	adult mice	animal
+31539679	expert_1	anhedonia	DDF	target	mice	animal
+31539679	expert_1	CSDS	DDF	target	adult mice	animal
+31539679	expert_1	gut microbiota	microbiome	located in	antibiotic-treated group	animal
+31539679	expert_1	antibiotic cocktail	drug	impact	gut microbiota	microbiome
+31539679	expert_1	CSDS	DDF	change abundance	gut microbiota	microbiome
+
+
+
+
+35207632	expert_3	Gastrointestinal Dysfunction	DDF	affect	Parkinson's Disease	DDF
+35207632	expert_3	GI dysfunction	DDF	affect	PD	DDF
+35207632	expert_3	PD	DDF	target	people	human
+
+
+37607587	expert_2	gut microbiome	microbiome	is linked to	neurodegenerative diseases	DDF
+37607587	expert_2	gut microbiome	microbiome	is linked to	cancer	DDF
+37607587	expert_2	Gastrointestinal Dysfunction	DDF	affect	Neurological and Neurodegenerative Disorders	DDF
+37607587	expert_2	Dysbiosis	DDF	affect	inflammation	DDF
+37607587	expert_2	gut microbiome	microbiome	is linked to	metabolic syndrome	DDF
+37607587	expert_2	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+37607587	expert_2	gut microbiome	microbiome	is linked to	Alzheimer's disease	DDF
+37607587	expert_2	dysfunctional microbiome	DDF	affect	inflammation	DDF
+37607587	expert_2	gut microbiome	microbiome	is linked to	neurodegenerative disorders	DDF
+
+
+21167931	expert_3	human depression	DDF	affect	chronic inflammatory disorders	DDF
+21167931	expert_3	proinflammatory cytokines	chemical	influence	depression	DDF
+21167931	expert_3	central nervous system (CNS) antigens	chemical	influence	psychological stress	DDF
+21167931	expert_3	IFN-α	chemical	influence	depression	DDF
+21167931	expert_3	central nervous system (CNS) antigens	chemical	influence	nerve injury	DDF
+21167931	expert_3	human depression	DDF	interact	proinflammatory cytokines	chemical
+21167931	expert_3	IL-2	chemical	influence	depression	DDF
+
+
+
+
+35317228	expert_5	gut microbiome	microbiome	is linked to	autism spectrum disorder	DDF
+35317228	expert_5	gut microbiome	microbiome	is linked to	depression	DDF
+35317228	expert_5	brain disorder	DDF	strike	brain	anatomical location
+35317228	expert_5	gut microbiome	microbiome	is linked to	neurodegenerative diseases	DDF
+35317228	expert_5	anxiety	DDF	is a	neuropsychiatric diseases	DDF
+35317228	expert_5	gut microbiome	microbiome	is linked to	neuropsychiatric and neurodegenerative disorders	DDF
+35317228	expert_5	gut microbiome	microbiome	is linked to	neuropsychiatric or neurodegenerative disorders	DDF
+35317228	expert_5	autism spectrum disorder	DDF	is a	neuropsychiatric diseases	DDF
+35317228	expert_5	Parkinson's disease	DDF	is a	neurodegenerative diseases	DDF
+35317228	expert_5	Alzheimer's disease	DDF	is a	neurodegenerative diseases	DDF
+35317228	expert_5	gut microbiome	microbiome	located in	brain	anatomical location
+35317228	expert_5	gut microbiome	microbiome	is linked to	anxiety	DDF
+35317228	expert_5	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+35317228	expert_5	gut microbiome	microbiome	is linked to	Alzheimer's disease	DDF
+35317228	expert_5	gut microbiome	microbiome	is linked to	neuropsychiatric diseases	DDF
+35317228	expert_5	depression	DDF	is a	neuropsychiatric diseases	DDF
+
+
+33287442	expert_4	probiotic supplementation	dietary supplement	impact	gut microbiota	microbiome
+33287442	expert_4	gut microbiota	microbiome	is linked to	breast cancer	DDF
+33287442	expert_4	prebiotic	dietary supplement	impact	gut microbiota	microbiome
+
+
+25173628	expert_3	HFD-shaped microbiota	microbiome	is linked to	neuroinflammation	DDF
+25173628	expert_3	HFD microbiota	microbiome	change expression	ionized calcium-binding adapter molecule 1	gene
+25173628	expert_3	Obese-type gut microbiota	microbiome	is linked to	neurobehavioral changes	DDF
+25173628	expert_3	HFD microbiota	microbiome	change expression	toll-like receptor 4	gene
+25173628	expert_3	dementia	DDF	affect	obesity	DDF
+25173628	expert_3	depression	DDF	affect	obesity	DDF
+25173628	expert_3	HFD microbiota	microbiome	change expression	toll-like receptor 2	gene
+25173628	expert_3	gut microbiota	microbiome	is linked to	obesity	DDF
+25173628	expert_3	mental illness	DDF	affect	obesity	DDF
+25173628	expert_3	gut dysbiosis	DDF	affect	neurologic dysfunction	DDF
+25173628	expert_3	control diet microbiota	microbiome	located in	mice	animal
+25173628	expert_3	HFD microbiota	microbiome	located in	mice	animal
+
+
+32431588	expert_6	α-synuclein	chemical	influence	synucleinopathy	DDF
+32431588	expert_6	3-HPPA	chemical	influence	intracellular α-syn seeding aggregation	DDF
+32431588	expert_6	3,4-diHBA	chemical	influence	intracellular α-syn seeding aggregation	DDF
+32431588	expert_6	α-synuclein	chemical	influence	multiple system atrophy	DDF
+32431588	expert_6	Parkinson's disease	DDF	affect	synucleinopathy	DDF
+32431588	expert_6	α-synuclein	chemical	influence	Parkinson's disease	DDF
+32431588	expert_6	PD	DDF	affect	MSA	DDF
+32431588	expert_6	probiotic	dietary supplement	influence	α-synucleinopathies	DDF
+32431588	expert_6	α-syn	chemical	influence	MSA	DDF
+32431588	expert_6	α-syn	chemical	influence	PD	DDF
+32431588	expert_6	4-HBA	chemical	influence	intracellular α-syn seeding aggregation	DDF
+32431588	expert_6	Parkinson's disease	DDF	affect	MSA	DDF
+32431588	expert_6	PD	DDF	affect	multiple system atrophy	DDF
+32431588	expert_6	Gut Microbiome-Modified Polyphenolic Compounds	chemical	influence	α-Synucleinopathies	DDF
+32431588	expert_6	3-HBA	chemical	influence	intracellular α-syn seeding aggregation	DDF
+32431588	expert_6	PD	DDF	affect	synucleinopathy	DDF
+32431588	expert_6	α-synuclein	chemical	influence	MSA	DDF
+32431588	expert_6	α-synuclein	chemical	influence	PD	DDF
+32431588	expert_6	3-HPPA	chemical	influence	MSA-induced aggregation of monomer	DDF
+32431588	expert_6	α-syn	chemical	influence	Parkinson's disease	DDF
+32431588	expert_6	α-syn	chemical	influence	synucleinopathy	DDF
+32431588	expert_6	α-syn pathology	DDF	strike	brain regions	anatomical location
+32431588	expert_6	α-syn	chemical	influence	multiple system atrophy	DDF
+32431588	expert_6	synbiotic	dietary supplement	influence	α-synucleinopathies	DDF
+32431588	expert_6	prebiotic	dietary supplement	influence	α-synucleinopathies	DDF
+32431588	expert_6	Parkinson's disease	DDF	affect	multiple system atrophy	DDF
+
+
+33819374	expert_3	human gut microbiome	microbiome	is linked to	cardiovascular diseases	DDF
+33819374	expert_3	human gut microbiome	microbiome	is linked to	diabetes	DDF
+33819374	expert_3	Trimethylamine	chemical	influence	dauer formation	DDF
+33819374	expert_3	Trimethylamine	chemical	influence	neurodegeneration	DDF
+
+
+28843021	expert_1	idiopathic rapid eye movement sleep behavior disorder patients	human	used by	16S and 18S ribosomal RNA amplicon sequencing	biomedical technique
+28843021	expert_1	PD	DDF	change abundance	gut microbes	bacteria
+28843021	expert_1	PD patients	human	used by	16S and 18S ribosomal RNA amplicon sequencing	biomedical technique
+28843021	expert_1	PD	DDF	change abundance	Akkermansia	bacteria
+28843021	expert_1	gut microbiota	microbiome	is linked to	Parkinson's disease	DDF
+28843021	expert_1	gut microbiota	microbiome	is linked to	PD	DDF
+28843021	expert_1	healthy controls	human	used by	16S and 18S ribosomal RNA amplicon sequencing	biomedical technique
+
+
+34004259	expert_6	SCFAs	chemical	located in	adult mice	animal
+34004259	expert_6	CNO	chemical	impact	gut microbiota	microbiome
+34004259	expert_6	gut microbiota	microbiome	located in	adult mice	animal
+34004259	expert_6	gut microbiota	microbiome	located in	mice	animal
+34004259	expert_6	gut microbiota	microbiome	located in	control mice	animal
+34004259	expert_6	gastrointestinal microbiota	microbiome	located in	brain	anatomical location
+34004259	expert_6	C21	chemical	impact	gut microbiota	microbiome
+34004259	expert_6	DREADD ligands	drug	impact	gut microbiota	microbiome
+34004259	expert_6	short-chain fatty acids	chemical	located in	adult mice	animal
+
+
+33301807	expert_6	SCI	DDF	affect	gut dysbiosis	DDF
+33301807	expert_6	gut microbiota	microbiome	is linked to	SCI	DDF
+33301807	expert_6	SCI	DDF	affect	anxiety and depression	DDF
+33301807	expert_6	SCI	DDF	affect	neuropathic pain	DDF
+33301807	expert_6	SCI	DDF	affect	intestinal dysfunction	DDF
+33301807	expert_6	SCI	DDF	affect	metabolic disorders	DDF
+33301807	expert_6	spinal cord injury	DDF	affect	intestinal dysfunction	DDF
+
+
+27930574	expert_5	Prebiotics	dietary supplement	impact	gut microbiota	microbiome
+
+
+32667590	expert_5	gut microbiota	microbiome	is linked to	schizophrenia	DDF
+32667590	expert_5	gut microbiota	microbiome	is linked to	dementia	DDF
+32667590	expert_5	intestinal metabolites of microbial origin	chemical	located in	small and large intestine	anatomical location
+32667590	expert_5	intestinal microbiota	microbiome	located in	small and large intestine	anatomical location
+32667590	expert_5	gut microbiota	microbiome	is linked to	Alzheimer disease	DDF
+32667590	expert_5	intestinal microbiota	microbiome	is linked to	neurological and psychiatric disorders	DDF
+32667590	expert_5	intestinal metabolites of microbial origin	chemical	produced by	intestinal microbiota	microbiome
+32667590	expert_5	prebiotics	dietary supplement	influence	neuropsychiatric disorders	DDF
+32667590	expert_5	probiotics	dietary supplement	influence	neuropsychiatric disorders	DDF
+32667590	expert_5	gut microbiota	microbiome	is linked to	autism spectrum disorder	DDF
+32667590	expert_5	gut microbiota	microbiome	is linked to	major depressive disorder	DDF
+32667590	expert_5	gut microbiota	microbiome	is linked to	anxiety	DDF
+32667590	expert_5	gut microbiota	microbiome	is linked to	Parkinson's disease	DDF
+32667590	expert_5	gut microbiota	microbiome	is linked to	bipolar disorder	DDF
+32667590	expert_5	gut microbiota	microbiome	located in	brain	anatomical location
+
+
+30033172	expert_2	gut microbiota	microbiome	is linked to	non-communicable diseases	DDF
+30033172	expert_2	gut microbiota	microbiome	located in	human host	human
+30033172	expert_2	gut microbiota	microbiome	is linked to	intestinal dysbiosis	DDF
+30033172	expert_2	gut microbiota	microbiome	is linked to	dietary-induced alterations	DDF
+
+
+27763700	expert_6	lactoferrin	chemical	influence	stress	DDF
+27763700	expert_6	GOS	dietary supplement	impact	gut bacteria	bacteria
+27763700	expert_6	PDX	dietary supplement	impact	gut bacteria	bacteria
+27763700	expert_6	galactooligosaccharide	dietary supplement	influence	stress	DDF
+27763700	expert_6	GOS	dietary supplement	influence	stress	DDF
+27763700	expert_6	PDX	dietary supplement	influence	stress	DDF
+27763700	expert_6	GOS	dietary supplement	influence	stress-induced learned helplessness	DDF
+27763700	expert_6	inescapable stress	DDF	target	rats	animal
+27763700	expert_6	bioactive milk fractions	dietary supplement	influence	stress	DDF
+27763700	expert_6	prebiotics	dietary supplement	influence	stress resistance	DDF
+27763700	expert_6	PDX	dietary supplement	influence	stress-induced learned helplessness	DDF
+27763700	expert_6	LAC	chemical	influence	stress-evoked decreases in mRNA	DDF
+27763700	expert_6	prebiotics	dietary supplement	influence	stress	DDF
+27763700	expert_6	LAC	chemical	impact	gut bacteria	bacteria
+27763700	expert_6	polydextrose	dietary supplement	influence	stress	DDF
+27763700	expert_6	LAC	chemical	influence	stress	DDF
+27763700	expert_6	GOS	dietary supplement	impact	Lactobacillus spp.	bacteria
+27763700	expert_6	PDX	dietary supplement	impact	Lactobacillus spp.	bacteria
+27763700	expert_6	LAC	chemical	influence	stress-induced learned helplessness	DDF
+27763700	expert_6	GOS	dietary supplement	influence	stress-evoked decreases in mRNA	DDF
+27763700	expert_6	PDX	dietary supplement	influence	stress-evoked decreases in mRNA	DDF
+
+
+31383280	expert_7	PMAD	DDF	target	child	human
+31383280	expert_7	Maternal Gut Microbiome	microbiome	located in	mother	human
+31383280	expert_7	Perinatal mood and anxiety disorders	DDF	target	mother	human
+31383280	expert_7	Maternal Gut Microbiome	microbiome	is linked to	PMAD	DDF
+31383280	expert_7	Perinatal mood and anxiety disorders	DDF	target	child	human
+31383280	expert_7	PMAD	DDF	target	mother	human
+
+
+38606411	expert_2	gut microbiota	microbiome	is linked to	insomnia disorder	DDF
+38606411	expert_2	chronic insomnia disorder	DDF	affect	anxiety	DDF
+38606411	expert_2	chronic insomnia disorder	DDF	target	Individuals	human
+38606411	expert_2	gut microbiota	microbiome	located in	individuals	human
+38606411	expert_2	Insomnia disorder	DDF	is a	clinical sleep and psychiatric disorders	DDF
+38606411	expert_2	chronic insomnia disorder	DDF	affect	impaired intestinal barrier function	DDF
+38606411	expert_2	insomnia disorder	DDF	target	individuals	human
+38606411	expert_2	chronic insomnia disorder	DDF	target	patients	human
+38606411	expert_2	healthy volunteers	human	used by	ELISA technology	biomedical technique
+38606411	expert_2	intestinal barrier	anatomical location	located in	individuals	human
+38606411	expert_2	patients	human	used by	ELISA technology	biomedical technique
+
+
+
+
+28073356	expert_7	gastrointestinal helminth infections	DDF	affect	childhood cognitive morbidity	DDF
+28073356	expert_7	Gut microbiota disturbance	DDF	affect	helminth infection	DDF
+28073356	expert_7	helminth infection	DDF	target	children	human
+28073356	expert_7	helminth infections	DDF	affect	cognitive impairment	DDF
+28073356	expert_7	Gut microbiota disturbance	DDF	target	children	human
+28073356	expert_7	helminth infections	DDF	target	school-aged children	human
+28073356	expert_7	cognitive impairment	DDF	target	school-aged children	human
+28073356	expert_7	gut microbiota	microbiome	located in	brain	anatomical location
+
+
+37764277	expert_3	Baicalin	chemical	influence	intestinal disorders	DDF
+37764277	expert_3	Baicalin	chemical	impact	intestinal microorganisms	bacteria
+37764277	expert_3	baicalin	chemical	influence	gut-brain axis disorders	DDF
+37764277	expert_3	Baicalin	chemical	influence	obesity	DDF
+
+
+34357134	expert_2	social cognitive impairment	DDF	affect	schizophrenia	DDF
+34357134	expert_2	schizophrenia	DDF	target	patients	human
+
+
+37049591	expert_3	gut microbiota	microbiome	located in	major depressive disorder (MDD) patients	human
+37049591	expert_3	intestinal flora	microbiome	located in	MDD patients	human
+37049591	expert_3	Kyn	chemical	located in	Venous blood	anatomical location
+37049591	expert_3	tryptophan	chemical	located in	Venous blood	anatomical location
+37049591	expert_3	kynurenine	chemical	located in	Venous blood	anatomical location
+37049591	expert_3	gut microbiota	microbiome	is linked to	neurological and psychiatric diseases	DDF
+37049591	expert_3	Ido	chemical	located in	Venous blood	anatomical location
+37049591	expert_3	Trp	chemical	located in	Venous blood	anatomical location
+37049591	expert_3	plasma indoleamine-2,3-dioxygenase	chemical	located in	Venous blood	anatomical location
+37049591	expert_3	Major Depressive Disorder	DDF	target	Patients	human
+37049591	expert_3	MDD	DDF	target	patients	human
+
+
+
+
+37156128	expert_2	DN SCZ	human	used by	16s rRNA sequencing	biomedical technique
+37156128	expert_2	schizophrenia	DDF	change abundance	Ruminococcus	bacteria
+37156128	expert_2	gut microbiota	microbiome	located in	drug-naïve (DN SCZ) and risperidone-treated SCZ patients	human
+37156128	expert_2	schizophrenia	DDF	target	patients	human
+37156128	expert_2	schizophrenia	DDF	change abundance	Bifidobacterium	bacteria
+37156128	expert_2	schizophrenia	DDF	change abundance	Clostridium_sensu_stricto_1	bacteria
+37156128	expert_2	gut microbiota	microbiome	located in	HCs	human
+37156128	expert_2	gut microbiota	microbiome	located in	healthy controls	human
+37156128	expert_2	gut microbiota	microbiome	located in	RISP SCZ	human
+37156128	expert_2	gut microbiome	microbiome	is linked to	schizophrenia	DDF
+37156128	expert_2	RISP SCZ	human	used by	16s rRNA sequencing	biomedical technique
+37156128	expert_2	HCs	human	used by	16s rRNA sequencing	biomedical technique
+37156128	expert_2	human gut microbiome	microbiome	is linked to	neuropsychiatric disorders	DDF
+37156128	expert_2	schizophrenia	DDF	change abundance	UCG005	bacteria
+
+
+31769847	expert_7	probiotics	dietary supplement	impact	gut microbiota	microbiome
+31769847	expert_7	Probiotics	dietary supplement	administered	psychiatric patients	human
+31769847	expert_7	prebiotics	dietary supplement	administered	psychiatric patients	human
+31769847	expert_7	microbial dysbiosis	DDF	affect	psychiatric diseases	DDF
+31769847	expert_7	probiotics	dietary supplement	influence	psychiatric disorders	DDF
+31769847	expert_7	schizophrenia	DDF	target	patients	human
+31769847	expert_7	Probiotics	dietary supplement	influence	psychiatric disorders	DDF
+31769847	expert_7	probiotics	dietary supplement	influence	autism spectrum disorders	DDF
+31769847	expert_7	gut microbiota	microbiome	is linked to	psychiatric diseases	DDF
+31769847	expert_7	prebiotics	dietary supplement	impact	gut microbiota	microbiome
+31769847	expert_7	probiotics	dietary supplement	administered	patients	human
+31769847	expert_7	psychiatric disorders	DDF	target	psychiatric patients	human
+31769847	expert_7	psychiatric disorder	DDF	target	patients	human
+31769847	expert_7	prebiotics	dietary supplement	administered	patients	human
+31769847	expert_7	Probiotics	dietary supplement	influence	major depressive disorder	DDF
+31769847	expert_7	psychiatric diseases	DDF	target	psychiatric patients	human
+31769847	expert_7	prebiotics	dietary supplement	influence	psychiatric disorders	DDF
+31769847	expert_7	Probiotics	dietary supplement	influence	Alzheimer's disease	DDF
+31769847	expert_7	acute mania	DDF	target	patients	human
+31769847	expert_7	probiotics	dietary supplement	administered	psychiatric patients	human
+
+
+36072564	expert_6	gut microbiome	microbiome	is linked to	brain disorders	DDF
+36072564	expert_6	gut microbiome	microbiome	is linked to	depression	DDF
+36072564	expert_6	microbiota-derived metabolites	chemical	located in	older individuals	human
+36072564	expert_6	gut microbiome	microbiome	is linked to	age-related diseases	DDF
+36072564	expert_6	gut microbiome	microbiome	is linked to	anxiety	DDF
+36072564	expert_6	gut microbiome	microbiome	is linked to	Alzheimer's and Parkinson's disease	DDF
+36072564	expert_6	gut microbiome	microbiome	is linked to	schizophrenia	DDF
+36072564	expert_6	cognitive defects	DDF	target	older individuals	human
+36072564	expert_6	choline	chemical	influence	age-related diseases	DDF
+36072564	expert_6	microbiota-derived metabolites	chemical	influence	age-associated diseases	DDF
+36072564	expert_6	trimethylamine	chemical	influence	age-related diseases	DDF
+36072564	expert_6	age-associated diseases	DDF	target	older individuals	human
+
+
+31596658	expert_6	gut microbiome	microbiome	located in	gut	anatomical location
+31596658	expert_6	gut microbiome	microbiome	located in	mouth	anatomical location
+
+
+30518033	expert_6	gut microbiota	microbiome	is linked to	anxiety	DDF
+30518033	expert_6	gut microbiota	microbiome	is linked to	psychological symptoms	DDF
+30518033	expert_6	gut microbiota	microbiome	is linked to	host anxiety levels	DDF
+30518033	expert_6	Gut Microbiota Composition	microbiome	is linked to	Anxiety Levels	DDF
+
+
+34216356	expert_6	gut microbiome	microbiome	is linked to	neurodegenerative diseases	DDF
+34216356	expert_6	Gut Microbiome	microbiome	is linked to	Neurodegenerative Diseases	DDF
+34216356	expert_6	intestinal microbiota	microbiome	is linked to	Parkinson's disease	DDF
+34216356	expert_6	gut microbiome	microbiome	used by	assay techniques	biomedical technique
+34216356	expert_6	gut microbiota	microbiome	is linked to	neurodegenerative diseases	DDF
+34216356	expert_6	intestinal microbiota	microbiome	is linked to	Alzheimer's disease	DDF
+
+
+26627987	expert_2	gut disorders	DDF	affect	Alzheimer's and Parkinson's diseases	DDF
+26627987	expert_2	gut microbiome	microbiome	is linked to	IBS	DDF
+26627987	expert_2	gut disorders	DDF	affect	irritable bowel syndrome	DDF
+26627987	expert_2	gut microbiome	microbiome	is linked to	Alzheimer's and Parkinson's diseases	DDF
+26627987	expert_2	gut disorders	DDF	affect	ulcerative colitis	DDF
+26627987	expert_2	gut microbiome	microbiome	is linked to	gut disorders	DDF
+26627987	expert_2	gut disorders	DDF	affect	central nervous system (CNS) disorders	DDF
+26627987	expert_2	gut microbiome	microbiome	is linked to	irritable bowel syndrome	DDF
+26627987	expert_2	gut microbiome	microbiome	is linked to	central nervous system (CNS) disorders	DDF
+26627987	expert_2	gut microbiome	microbiome	is linked to	UC	DDF
+26627987	expert_2	gut microbiome	microbiome	is linked to	ulcerative colitis	DDF
+
+
+35203906	expert_3	SARS-CoV-2	DDF	affect	Parkinson's disease	DDF
+35203906	expert_3	PD/parkinsonism	DDF	affect	viral infection	DDF
+35203906	expert_3	viral infection	DDF	target	PD patients	human
+35203906	expert_3	impairment of cough reflex	DDF	target	elderly population	human
+35203906	expert_3	SARS-CoV-2	DDF	affect	PD	DDF
+35203906	expert_3	coronavirus disease 2019	DDF	affect	PD	DDF
+35203906	expert_3	COVID-19	DDF	affect	PD	DDF
+35203906	expert_3	COVID-19	DDF	target	PD patients	human
+35203906	expert_3	rigidity of respiratory muscles	DDF	target	elderly population	human
+35203906	expert_3	dyspnea	DDF	target	elderly population	human
+
+
+
+
+31488882	expert_4	sodium oligomannate	drug	change effect	neuroinflammation	DDF
+31488882	expert_4	Sodium oligomannate	dietary supplement	influence	gut bacterial amino acids-shaped neuroinflammation	DDF
+31488882	expert_4	sodium oligomannate	drug	interact	phenylalanine	chemical
+31488882	expert_4	AD progression	DDF	interact	isoleucine	chemical
+31488882	expert_4	GV-971	drug	change effect	gut dysbiosis	DDF
+31488882	expert_4	sodium oligomannate	drug	change effect	cognition impairment	DDF
+31488882	expert_4	GV-971	drug	change effect	neuroinflammation	DDF
+31488882	expert_4	GV-971	drug	interact	isoleucine	chemical
+31488882	expert_4	MCI	DDF	target	patients	human
+31488882	expert_4	AD	DDF	affect	mild cognitive impairment	DDF
+31488882	expert_4	mild cognitive impairment	DDF	target	patients	human
+31488882	expert_4	AD progression	DDF	interact	phenylalanine	chemical
+31488882	expert_4	AD	DDF	affect	MCI	DDF
+31488882	expert_4	sodium oligomannate	drug	interact	isoleucine	chemical
+31488882	expert_4	GV-971	drug	change effect	cognition impairment	DDF
+31488882	expert_4	Sodium oligomannate	dietary supplement	influence	Alzheimer's disease progression	DDF
+31488882	expert_4	GV-971	drug	interact	phenylalanine	chemical
+31488882	expert_4	Sodium oligomannate	dietary supplement	impact	gut microbiota	microbiome
+31488882	expert_4	sodium oligomannate	drug	change effect	gut dysbiosis	DDF
+
+
+37502424	expert_3	mildly impaired cognition	DDF	target	community-dwelling older adults	human
+37502424	expert_3	mildly impaired cognitive functions	DDF	target	community-dwelling individuals	human
+
+
+38011787	expert_4	CPT	chemical	influence	depression	DDF
+38011787	expert_4	Cryptotanshinone	chemical	impact	gut microbiota	microbiome
+38011787	expert_4	Cryptotanshinone	chemical	influence	CUMS induced depressive symptoms	DDF
+38011787	expert_4	gut microbiota	microbiome	used by	16 S rDNA analysis	biomedical technique
+38011787	expert_4	gut microbiota	microbiome	located in	rats	animal
+
+
+
+
+37400971	expert_3	MMD	DDF	affect	behavioral impairments	DDF
+37400971	expert_3	MMD	DDF	affect	obsessive-compulsive-like behavior	DDF
+37400971	expert_3	psychiatric-related abnormalities	DDF	change abundance	maternal gut microbiota	microbiome
+37400971	expert_3	experimental perinatal MMD	DDF	target	offspring	animal
+
+
+31132457	expert_3	GMC	microbiome	located in	toddler	human
+31132457	expert_3	GMC	microbiome	located in	young infants	human
+
+
+
+
+34408160	expert_5	alpha-synuclein	chemical	influence	PD	DDF
+34408160	expert_5	alpha-synuclein	chemical	influence	Parkinson's disease	DDF
+34408160	expert_5	pathogenesis of PD	DDF	affect	PD	DDF
+34408160	expert_5	opportunistic pathogens	bacteria	influence	dysbiosis of gut microbiome	DDF
+34408160	expert_5	pathogenesis of PD	DDF	affect	Parkinson's disease	DDF
+34408160	expert_5	alpha-synuclein	chemical	influence	familial PD	DDF
+34408160	expert_5	opportunistic pathogens	bacteria	influence	PD	DDF
+34408160	expert_5	dysbiosis of gut microbiome	DDF	affect	Parkinson's disease	DDF
+34408160	expert_5	gut microbiome	microbiome	located in	gut	anatomical location
+34408160	expert_5	gut microbiome	microbiome	is linked to	pathogenesis of PD	DDF
+34408160	expert_5	dysbiosis of gut microbiome	DDF	affect	PD	DDF
+
+
+
+
+31377712	expert_1	Multiple sclerosis	DDF	affect	disability	DDF
+31377712	expert_1	MS	DDF	target	young <u>a</u>dults	human
+31377712	expert_1	MS	DDF	affect	disability	DDF
+31377712	expert_1	MS	DDF	target	young patients	human
+31377712	expert_1	Multiple sclerosis	DDF	target	young adults	human
+31377712	expert_1	gut microbiota	microbiome	located in	young adults	human
+31377712	expert_1	MS	DDF	target	young adults	human
+31377712	expert_1	young adults	human	used by	cerebrospinal fluid and blood biomarkers	biomedical technique
+31377712	expert_1	young adults	human	used by	neurological examinations	biomedical technique
+31377712	expert_1	young adults	human	used by	MRI	biomedical technique
+31377712	expert_1	MS	DDF	target	patients	human
+
+
+38331354	expert_4	liver cirrhosis	DDF	target	mice	animal
+38331354	expert_4	liver cirrhosis	DDF	target	patients	human
+38331354	expert_4	Dysbiosis	DDF	affect	depression	DDF
+
+
+
+
+33692356	expert_5	dysbiosis	DDF	affect	pro-inflammatory status	DDF
+33692356	expert_5	PD-specific microbiota	microbiome	located in	PD patients	human
+33692356	expert_5	recurrent gastrointestinal symptoms	DDF	target	PD patients	human
+33692356	expert_5	gut microbes	microbiome	is linked to	PD	DDF
+33692356	expert_5	alterations of the enteric nervous system	DDF	affect	Parkinson's disease (PD) symptomatology and pathophysiology	DDF
+33692356	expert_5	pro-inflammatory status	DDF	affect	recurrent gastrointestinal symptoms	DDF
+33692356	expert_5	gastrointestinal symptoms	DDF	affect	Parkinson's disease (PD) symptomatology and pathophysiology	DDF
+33692356	expert_5	gut microbiota	microbiome	is linked to	Parkinson's disease (PD) symptomatology and pathophysiology	DDF
+33692356	expert_5	gut microbiota	microbiome	located in	PD and controls	human
+33692356	expert_5	gut microbiota	microbiome	is linked to	neurodegenerative diseases	DDF
+33692356	expert_5	gut microbiota	microbiome	located in	PD patients	human
+33692356	expert_5	Lachnospiraceae	bacteria	interact	short-chain fatty acids	chemical
+33692356	expert_5	alterations of the enteric nervous system	DDF	affect	PD	DDF
+33692356	expert_5	gastrointestinal symptoms	DDF	affect	PD	DDF
+33692356	expert_5	PD-associated microbiome	microbiome	located in	PD patients	human
+33692356	expert_5	Faecalibacterium	bacteria	interact	short-chain fatty acids	chemical
+33692356	expert_5	gut microbes	microbiome	is linked to	Parkinson's disease (PD) symptomatology and pathophysiology	DDF
+33692356	expert_5	gut microbes	microbiome	is linked to	neurodegenerative diseases	DDF
+33692356	expert_5	gut microbiota	microbiome	is linked to	PD	DDF
+
+
+27566465	expert_3	probiotics	dietary supplement	impact	gut microbiota	microbiome
+27566465	expert_3	AD	DDF	change abundance	gut microbiota	microbiome
+27566465	expert_3	Alzheimer's disease	DDF	affect	impaired cognition	DDF
+27566465	expert_3	Pathogenic microbes infection	DDF	affect	AD	DDF
+27566465	expert_3	antibiotics	drug	impact	gut microbiota	microbiome
+27566465	expert_3	AD	DDF	affect	impaired cognition	DDF
+27566465	expert_3	gut microbiota	microbiome	is linked to	AD	DDF
+27566465	expert_3	neurodegenerative disorder	DDF	affect	impaired cognition	DDF
+
+
+
+
+29249803	expert_7	Deltaproteobacteria	bacteria	located in	susceptible mice	animal
+29249803	expert_7	(R)-ketamine	drug	administered	CSDS-susceptible mice	animal
+29249803	expert_7	(S)-ketamine	drug	administered	susceptible mice	animal
+29249803	expert_7	(R)-ketamine	drug	impact	Deltaproteobacteria	bacteria
+29249803	expert_7	Mollicutes	bacteria	located in	susceptible mice	animal
+29249803	expert_7	Actinobacteria	bacteria	located in	CSDS-susceptible mice	animal
+29249803	expert_7	(R)-ketamine	drug	impact	Mollicutes	bacteria
+29249803	expert_7	ketamine enantiomers	drug	administered	CSDS-susceptible mice	animal
+29249803	expert_7	ketamine enantiomers	drug	impact	Deltaproteobacteria	bacteria
+29249803	expert_7	Butyricimonas	bacteria	located in	susceptible mice	animal
+29249803	expert_7	(S)-ketamine	drug	administered	CSDS-susceptible mice	animal
+29249803	expert_7	gut microbiota	microbiome	located in	CSDS-susceptible mice	animal
+29249803	expert_7	(R)-ketamine	drug	administered	susceptible mice	animal
+29249803	expert_7	(R)-ketamine	drug	impact	Butyricimonas	bacteria
+29249803	expert_7	Tenericutes	bacteria	located in	CSDS-susceptible mice	animal
+29249803	expert_7	(S)-ketamine	drug	impact	Deltaproteobacteria	bacteria
+29249803	expert_7	ketamine enantiomers	drug	administered	susceptible mice	animal
+29249803	expert_7	ketamine enantiomers	drug	impact	Butyricimonas	bacteria
+29249803	expert_7	ketamine enantiomers	drug	change effect	depression	DDF
+29249803	expert_7	gut microbiota	microbiome	located in	susceptible mice	animal
+29249803	expert_7	(S)-ketamine	drug	impact	Butyricimonas	bacteria
+
+
+32379622	expert_2	gut microbiome	microbiome	located in	mice	animal
+32379622	expert_2	chronic social defeat stress	DDF	target	mice	animal
+32379622	expert_2	betaine	dietary supplement	influence	stress-related psychiatric disorders	DDF
+32379622	expert_2	Betaine supplementation	dietary supplement	influence	CSDS	DDF
+32379622	expert_2	Betaine supplementation	dietary supplement	influence	chronic social defeat stress	DDF
+32379622	expert_2	betaine	dietary supplement	impact	gut microbiome	microbiome
+32379622	expert_2	gut microbiome	microbiome	used by	Sucrose preference test	biomedical technique
+32379622	expert_2	Betaine supplementation	dietary supplement	impact	gut microbiome	microbiome
+32379622	expert_2	CSDS	DDF	target	mice	animal
+32379622	expert_2	CSDS	DDF	interact	succinic acid	chemical
+32379622	expert_2	gut microbiome	microbiome	used by	16S rRNA analysis	biomedical technique
+32379622	expert_2	CSDS	DDF	interact	acetic acid	chemical
+32379622	expert_2	CSDS	DDF	target	betaine-treated mice	animal
+32379622	expert_2	anhedonia	DDF	target	mice	animal
+32379622	expert_2	CSDS	DDF	interact	short-chain fatty acids	chemical
+32379622	expert_2	CSDS	DDF	target	water-treated mice	animal
+32379622	expert_2	betaine supplementation	dietary supplement	influence	anhedonia	DDF
+
+
+37023596	expert_2	MDD	DDF	target	Patients	human
+37023596	expert_2	MDD	DDF	target	patients	human
+37023596	expert_2	major depression disorder	DDF	target	patients	human
+37023596	expert_2	gut microbiota	microbiome	located in	patients	human
+
+
+28816544	expert_7	polyunsaturated fatty acids	chemical	influence	inflammation	DDF
+28816544	expert_7	PUFAs	chemical	influence	depression	DDF
+28816544	expert_7	PUFAs	chemical	influence	inflammation	DDF
+28816544	expert_7	gut microbiota	microbiome	is linked to	inflammation	DDF
+28816544	expert_7	gut microbiota	microbiome	is linked to	depression	DDF
+28816544	expert_7	polyunsaturated fatty acids	chemical	influence	depression	DDF
+28816544	expert_7	glucocorticoids	chemical	influence	depression	DDF
+28816544	expert_7	glucocorticoids	chemical	influence	inflammation	DDF
+
+
+31218116	expert_3	gastrointestinal upset	DDF	target	people	human
+31218116	expert_3	celiac disease	DDF	target	people	human
+31218116	expert_3	Celiac Disease	DDF	target	Inactive Adults	human
+31218116	expert_3	celiac disease	DDF	target	inactive adults	human
+31218116	expert_3	celiac disease	DDF	target	Individuals	human
+
+
+34250955	expert_6	PD	DDF	affect	bradykinesia	DDF
+34250955	expert_6	upper and lower gastrointestinal issues	DDF	target	patients	human
+34250955	expert_6	PD	DDF	affect	postural instability	DDF
+34250955	expert_6	gastrointestinal conditions and symptoms	DDF	target	patients	human
+34250955	expert_6	gut microbiome	microbiome	is linked to	PD	DDF
+34250955	expert_6	initial pathophysiological changes	DDF	strike	gastrointestinal tract	anatomical location
+34250955	expert_6	Parkinson's disease	DDF	affect	bradykinesia	DDF
+34250955	expert_6	Parkinson's disease	DDF	affect	postural instability	DDF
+34250955	expert_6	PD	DDF	strike	gut	anatomical location
+34250955	expert_6	PD	DDF	strike	gastrointestinal tract	anatomical location
+34250955	expert_6	Parkinson's disease	DDF	affect	rigidity	DDF
+34250955	expert_6	prodromal PD subtypes	DDF	strike	gut	anatomical location
+34250955	expert_6	PD	DDF	affect	tremor	DDF
+34250955	expert_6	Parkinson's disease	DDF	affect	tremor	DDF
+34250955	expert_6	PD	DDF	affect	rigidity	DDF
+
+
+33092203	expert_5	human microbiome	microbiome	used by	16S rRNA technology	biomedical technique
+
+
+32163822	expert_4	probiotics	dietary supplement	impact	gut microbiota	microbiome
+32163822	expert_4	probiotics	dietary supplement	influence	pregnancy related stress	DDF
+32163822	expert_4	gut microbiota	microbiome	located in	newborn child	human
+
+
+32538869	expert_7	CsgA protein	chemical	located in	gut	anatomical location
+32538869	expert_7	CsgA	chemical	located in	gut	anatomical location
+32538869	expert_7	amyloidogenic protein	chemical	located in	mice	animal
+32538869	expert_7	alpha-synuclein	chemical	part of	amyloidogenic human and non-human proteins	chemical
+32538869	expert_7	CsgA	chemical	influence	Parkinson's disease	DDF
+32538869	expert_7	Parkinson's disease	DDF	target	mice	animal
+32538869	expert_7	amyloidogenic protein	chemical	influence	Parkinson's disease	DDF
+32538869	expert_7	Alpha-Synuclein	chemical	part of	Human and Non-Human Amyloidogenic Proteins	chemical
+32538869	expert_7	CsgA protein	chemical	influence	Parkinson's disease	DDF
+32538869	expert_7	amyloidogenic proteins	chemical	impact	gut bacteria	bacteria
+32538869	expert_7	amyloidogenic protein	chemical	located in	gut	anatomical location
+32538869	expert_7	stable allergenic proteins	chemical	influence	amyloid-related diseases	DDF
+32538869	expert_7	CsgA	chemical	influence	amyloid-related diseases	DDF
+32538869	expert_7	CsgA	chemical	located in	mice	animal
+32538869	expert_7	amyloidogenic protein	chemical	influence	amyloid-related diseases	DDF
+32538869	expert_7	CsgA protein	chemical	influence	amyloid-related diseases	DDF
+32538869	expert_7	CsgA protein	chemical	located in	mice	animal
+32538869	expert_7	amyloidogenic proteins	chemical	influence	amyloid-related diseases	DDF
+32538869	expert_7	amyloidogenic proteins	chemical	influence	human diseases	DDF
+
+
+34884399	expert_4	PD	DDF	change abundance	Bacteroides</i> phylum	bacteria
+34884399	expert_4	PD	DDF	change abundance	Proteobacteria	bacteria
+34884399	expert_4	PD	DDF	change abundance	Flavonifractor	bacteria
+34884399	expert_4	Parkinson's Disease	DDF	target	Patients	human
+34884399	expert_4	PD	DDF	change abundance	Corynebacteria	bacteria
+34884399	expert_4	PD	DDF	change abundance	Butyricimonas	bacteria
+34884399	expert_4	PD	DDF	change abundance	Robinsoniella	bacteria
+34884399	expert_4	PD	DDF	change abundance	Actinobacteria	bacteria
+34884399	expert_4	PD	DDF	change abundance	Deltaproteobacteria	bacteria
+34884399	expert_4	PD	DDF	change abundance	gut microbiota	microbiome
+34884399	expert_4	PD	DDF	target	patients	human
+
+
+33406628	expert_5	Microbially derived toxic bile acids	chemical	influence	Parkinson's disease	DDF
+33406628	expert_5	functional microbiota	microbiome	located in	controls	human
+33406628	expert_5	Gut Microbiota Dysbiosis	DDF	affect	Parkinson's Disease	DDF
+33406628	expert_5	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+33406628	expert_5	appendix microbiome	microbiome	located in	vermiform appendix	anatomical location
+33406628	expert_5	lithocholic acid	chemical	located in	PD appendix	anatomical location
+33406628	expert_5	deoxycholic acid	chemical	located in	PD appendix	anatomical location
+33406628	expert_5	functional microbiota	microbiome	used by	metatranscriptomic analysis	biomedical technique
+33406628	expert_5	Gut Microbiota Dysbiosis	DDF	interact	Bile Acids	chemical
+33406628	expert_5	PD patients	human	used by	Bile acid analysis	biomedical technique
+33406628	expert_5	bacteria responsible for secondary bile acid synthesis	bacteria	influence	microbial dysbiosis	DDF
+33406628	expert_5	hydrophobic and secondary bile acids	chemical	located in	PD appendix	anatomical location
+33406628	expert_5	appendix	anatomical location	located in	PD patients	human
+33406628	expert_5	controls	human	used by	Bile acid analysis	biomedical technique
+33406628	expert_5	biliary abnormalities	DDF	affect	PD pathogenesis	DDF
+33406628	expert_5	gut microbiome	microbiome	is linked to	Gut Microbiota Dysbiosis	DDF
+33406628	expert_5	PD patients	human	used by	metatranscriptomic analysis	biomedical technique
+33406628	expert_5	controls	human	used by	metatranscriptomic analysis	biomedical technique
+33406628	expert_5	Parkinson's disease	DDF	target	PD patients	human
+33406628	expert_5	alterations in mediators of cholesterol homeostasis and lipid metabolism	DDF	strike	PD gut	anatomical location
+33406628	expert_5	PD	DDF	target	PD patients	human
+33406628	expert_5	PD appendix	anatomical location	located in	PD patients	human
+33406628	expert_5	PD gut	anatomical location	located in	PD patients	human
+33406628	expert_5	functional microbiota	microbiome	located in	appendix	anatomical location
+33406628	expert_5	Microbially derived toxic bile acids	chemical	influence	PD	DDF
+33406628	expert_5	disruption in bile acid control	DDF	strike	PD gut	anatomical location
+33406628	expert_5	gut microbiome	microbiome	is linked to	PD	DDF
+33406628	expert_5	appendix	anatomical location	located in	controls	human
+33406628	expert_5	LCA	chemical	located in	PD appendix	anatomical location
+33406628	expert_5	DCA	chemical	located in	PD appendix	anatomical location
+
+
+31260640	expert_3	intestinal microbiota	microbiome	located in	brain	anatomical location
+31260640	expert_3	gut microbiota	microbiome	is linked to	psychiatry and other central nervous system (CNS) disorders	DDF
+
+
+28399458	expert_7	gastrointestinal complaints	DDF	target	offspring	human
+28399458	expert_7	depressive disorders	DDF	affect	infants' inflammatory diseases	DDF
+28399458	expert_7	psychopathological symptoms	DDF	affect	inflammatory diseases	DDF
+28399458	expert_7	maternal anxiety	DDF	affect	infant gastrointestinal complaints	DDF
+28399458	expert_7	perinatal distress	DDF	affect	infants' inflammatory diseases	DDF
+28399458	expert_7	DSM-IV lifetime anxiety and depressive disorders	DDF	target	(expectant) mothers	human
+28399458	expert_7	maternal perinatal distress	DDF	affect	infant inflammatory diseases	DDF
+28399458	expert_7	maternal anxiety	DDF	affect	early infant diseases	DDF
+28399458	expert_7	anxiety	DDF	affect	diarrhea	DDF
+28399458	expert_7	anxiety	DDF	affect	colic complaints	DDF
+28399458	expert_7	inflammatory diseases	DDF	target	offspring	human
+28399458	expert_7	anxiety	DDF	target	(expectant) mothers	human
+28399458	expert_7	anxiety	DDF	affect	gastrointestinal complaints	DDF
+28399458	expert_7	depressive disorders	DDF	affect	infant gastrointestinal complaints	DDF
+28399458	expert_7	anxiety	DDF	affect	infants' inflammatory diseases	DDF
+28399458	expert_7	(expectant) mothers	human	used by	Brief Symptom Inventory	biomedical technique
+28399458	expert_7	depressive disorders	DDF	affect	diarrhea	DDF
+28399458	expert_7	depressive disorders	DDF	affect	gastrointestinal complaints	DDF
+28399458	expert_7	infant inflammatory diseases	DDF	target	offspring	human
+28399458	expert_7	depressive disorders	DDF	affect	early infant diseases	DDF
+28399458	expert_7	depressive disorders	DDF	affect	colic complaints	DDF
+28399458	expert_7	perinatal psychopathological symptoms	DDF	affect	early infant diseases	DDF
+28399458	expert_7	depressive disorders	DDF	target	(expectant) mothers	human
+28399458	expert_7	infants' inflammatory diseases	DDF	target	offspring	human
+28399458	expert_7	(expectant) mothers	human	used by	Composite International Diagnostic Interview for Women	biomedical technique
+28399458	expert_7	psychopathological symptoms	DDF	target	(expectant) mothers	human
+28399458	expert_7	infant gastrointestinal complaints	DDF	target	offspring	human
+28399458	expert_7	Infant inflammatory diseases	DDF	target	offspring	human
+28399458	expert_7	gut microbiota	microbiome	is linked to	infant gastrointestinal complaints	DDF
+28399458	expert_7	perinatal distress	DDF	affect	gastrointestinal complaints	DDF
+
+
+30826885	expert_2	gut microbiota	microbiome	is linked to	perinatal mood and anxiety disorders	DDF
+30826885	expert_2	cortisol	chemical	influence	PMAD	DDF
+30826885	expert_2	psychopathology	DDF	target	women during pregnancy and postpartum	human
+30826885	expert_2	gut microbiota	microbiome	is linked to	PMAD	DDF
+30826885	expert_2	gut microbiota	microbiome	located in	women during pregnancy and postpartum	human
+
+
+27793225	expert_2	highly processed, poor quality foods	food	impact	gut microbiota	microbiome
+27793225	expert_2	nutrient-rich diet	food	impact	gut microbiota	microbiome
+27793225	expert_2	highly processed, poor quality foods	food	influence	mental disorder	DDF
+27793225	expert_2	nutrients	food	impact	gut microbiota	microbiome
+27793225	expert_2	mental disorders	DDF	target	populations	human
+27793225	expert_2	fiber	dietary supplement	impact	gut microbiota	microbiome
+
+
+24103493	expert_2	excess body weight during and after pregnancy	DDF	affect	offspring overweight	DDF
+24103493	expert_2	Excess body weight during pregnancy	DDF	affect	offspring obesity	DDF
+24103493	expert_2	excess body weight during and after pregnancy	DDF	affect	obesity	DDF
+24103493	expert_2	excess body weight	DDF	affect	type 2 diabetes	DDF
+24103493	expert_2	excess body weight	DDF	affect	depression	DDF
+24103493	expert_2	excess body weight	DDF	affect	cardiovascular problems	DDF
+
+
+33967849	expert_4	probiotics	dietary supplement	influence	depression	DDF
+33967849	expert_4	probiotics	dietary supplement	influence	anxiety symptoms	DDF
+33967849	expert_4	Perinatal Mental Health	DDF	target	Mothers	human
+
+
+
+
+26426677	expert_5	gut microbiota	microbiome	located in	gastrointestinal tract	anatomical location
+26426677	expert_5	psychiatric disturbances	DDF	affect	Intestinal inflammation	DDF
+26426677	expert_5	intestinal inflammation	DDF	strike	gastrointestinal tract	anatomical location
+26426677	expert_5	stress	DDF	affect	Intestinal inflammation	DDF
+
+
+38401573	expert_2	synaptic proteins	chemical	located in	PFC	anatomical location
+38401573	expert_2	arketamine	drug	impact	gut microbiota	microbiome
+38401573	expert_2	chronic restrain stress	DDF	target	male mice	animal
+38401573	expert_2	prefrontal cortex	anatomical location	located in	male mice	animal
+38401573	expert_2	PFC	anatomical location	located in	male mice	animal
+38401573	expert_2	gut microbiota	microbiome	is linked to	depression	DDF
+38401573	expert_2	microbiome-derived metabolites	chemical	produced by	gut microbiota	microbiome
+38401573	expert_2	arketamine	drug	change effect	CRS-induced body weight loss	DDF
+38401573	expert_2	arketamine	drug	interact	GluA1	chemical
+38401573	expert_2	gut microbiota	microbiome	located in	CRS-exposed mice	animal
+38401573	expert_2	arketamine	drug	interact	PSD-95	chemical
+38401573	expert_2	microbiome-derived metabolites	chemical	influence	depression	DDF
+
+
+34908715	expert_2	gut microbiota	microbiome	is linked to	autism	DDF
+34908715	expert_2	gut microbiota	microbiome	is linked to	Alzheimer's disease	DDF
+34908715	expert_2	gut microbiota	microbiome	is linked to	anxiety	DDF
+34908715	expert_2	gut microbiota	microbiome	is linked to	Parkinson's disease	DDF
+34908715	expert_2	gut microbiota	microbiome	is linked to	obesity	DDF
+34908715	expert_2	gut microbiota	microbiome	is linked to	severe mental illness	DDF
+
+
+29955222	expert_7	macronutrients	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	carbohydrates	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	plant foods	food	influence	colon cancer	DDF
+29955222	expert_7	gut bacteria	bacteria	influence	chronic disease	DDF
+29955222	expert_7	plant foods	food	impact	gut bacteria	bacteria
+29955222	expert_7	micronutrients	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	phytochemicals	chemical	influence	type 2 diabetes	DDF
+29955222	expert_7	vitamins	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	non-nutrient bioactive compounds	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	fiber	chemical	influence	type 2 diabetes	DDF
+29955222	expert_7	plant foods	food	influence	chronic disease	DDF
+29955222	expert_7	minerals	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	phytochemicals	chemical	impact	gut bacteria	bacteria
+29955222	expert_7	gut bacteria	bacteria	influence	type 2 diabetes	DDF
+29955222	expert_7	proteins	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	fiber	chemical	influence	colon cancer	DDF
+29955222	expert_7	phytochemicals	chemical	influence	colon cancer	DDF
+29955222	expert_7	plant foods	food	influence	type 2 diabetes	DDF
+29955222	expert_7	fiber	chemical	impact	gut bacteria	bacteria
+29955222	expert_7	phytochemicals	chemical	influence	chronic disease	DDF
+29955222	expert_7	fats	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	fiber	chemical	influence	chronic disease	DDF
+29955222	expert_7	phytochemicals	chemical	impact	mammalian gut microbiota	microbiome
+29955222	expert_7	gut bacteria	bacteria	influence	colon cancer	DDF
+
+
+37291666	expert_3	SCI	DDF	target	patients	human
+37291666	expert_3	neurological disruption	DDF	affect	immune, endocrine, and multisystem dysfunction	DDF
+
+
+26408987	expert_2	probiotics	dietary supplement	influence	chronic-stress-induced depression	DDF
+26408987	expert_2	L. helveticus NS8	dietary supplement	influence	anxiety	DDF
+26408987	expert_2	L. helveticus NS8	dietary supplement	influence	cognitive dysfunction	DDF
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	OFT	biomedical technique
+26408987	expert_2	L. helveticus NS8	dietary supplement	influence	chronic restraint stress-induced behavioral	DDF
+26408987	expert_2	gut microbiota	microbiome	is linked to	stress-related disorders	DDF
+26408987	expert_2	Chronic stress	DDF	affect	behavioral, cognitive, biochemical, and gut microbiota aberrations	DDF
+26408987	expert_2	L. helveticus NS8	dietary supplement	influence	chronic restraint stress depression	DDF
+26408987	expert_2	chronic restraint stress depression	DDF	target	rats	animal
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	SPT	biomedical technique
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	OPT	biomedical technique
+26408987	expert_2	Lactobacillus helveticus NS8	bacteria	influence	behavioral, cognitive, and biochemical aberrations	DDF
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	biochemical analysis	biomedical technique
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	elevated-plus maze test	biomedical technique
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	object recognition test	biomedical technique
+26408987	expert_2	restraint stress	DDF	target	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal
+26408987	expert_2	chronic restraint stress	DDF	affect	behavioral, cognitive, and biochemical aberrations	DDF
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	sucrose preference test	biomedical technique
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	object placement test	biomedical technique
+26408987	expert_2	L. helveticus NS8	dietary supplement	influence	depression	DDF
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	open-field test	biomedical technique
+26408987	expert_2	Adult specific pathogen free (SPF) Sprague-Dawley rats	animal	used by	ORT	biomedical technique
+
+
+38292207	expert_2	intestinal microbiota	microbiome	located in	humans	human
+38292207	expert_2	intestines	anatomical location	located in	dogs	animal
+38292207	expert_2	prebiotics	dietary supplement	influence	anxiety disorders	DDF
+38292207	expert_2	probiotics	dietary supplement	influence	anxiety disorders	DDF
+38292207	expert_2	intestinal microbiota	microbiome	is linked to	anxiety disorders	DDF
+38292207	expert_2	canine anxiety disorders	DDF	target	dogs	animal
+38292207	expert_2	dysbiosis	DDF	affect	anxiety	DDF
+38292207	expert_2	dysbiosis	DDF	affect	mental disorders	DDF
+38292207	expert_2	Anxiety disorders	DDF	target	dogs	animal
+
+
+34311029	expert_5	AD	DDF	is a	neurodegenerative disease	DDF
+34311029	expert_5	cognitive impairment	DDF	affect	major accompanying pathological symptom	DDF
+34311029	expert_5	Lipids	chemical	located in	aged and Alzheimer's disease (AD) brains	anatomical location
+34311029	expert_5	perturbed metabolic function	DDF	affect	AD	DDF
+34311029	expert_5	changes in lipid metabolism	DDF	affect	cognitive impairment	DDF
+34311029	expert_5	lipid-based nutraceuticals	dietary supplement	influence	AD	DDF
+34311029	expert_5	increased oxidative stress	DDF	affect	AD	DDF
+34311029	expert_5	lipid-based nutraceuticals	dietary supplement	influence	cognitive impairment	DDF
+34311029	expert_5	nutraceuticals	dietary supplement	influence	cognitive decline	DDF
+34311029	expert_5	Lipids	chemical	located in	healthy mature brains	anatomical location
+34311029	expert_5	beneficial lipids	chemical	produced by	Gut microbiota	microbiome
+
+
+34836918	expert_4	BMAA	chemical	impact	SFB	bacteria
+34836918	expert_4	BMAA	chemical	influence	dopaminergic neuronal loss	DDF
+34836918	expert_4	BMAA	chemical	impact	segmented filamentous bacteria	bacteria
+34836918	expert_4	BMAA	chemical	influence	gut dysbiosis	DDF
+34836918	expert_4	BMAA	chemical	influence	loss of barrier integrity	DDF
+34836918	expert_4	BMAA	chemical	influence	motor deficits	DDF
+34836918	expert_4	BMAA	chemical	influence	intestinal inflammation	DDF
+34836918	expert_4	BMAA	chemical	influence	neuroinflammation	DDF
+34836918	expert_4	BMAA	chemical	influence	immune cell migration	DDF
+34836918	expert_4	BMAA	chemical	influence	PD pathology	DDF
+
+
+37900921	expert_5	4EP	chemical	located in	gut epithelium	anatomical location
+37900921	expert_5	4EPS	chemical	located in	gut epithelium	anatomical location
+37900921	expert_5	4EPS	chemical	influence	anxiety phenotype	DDF
+37900921	expert_5	kidney dysfunction	DDF	target	autistic individuals	human
+37900921	expert_5	4EP	chemical	influence	increased intestinal permeability	DDF
+37900921	expert_5	4EP	chemical	influence	kidney dysfunction	DDF
+37900921	expert_5	4-Ethylphenol	chemical	located in	gut	anatomical location
+37900921	expert_5	4EP	chemical	located in	gut	anatomical location
+37900921	expert_5	brain	anatomical location	located in	mice	animal
+37900921	expert_5	neuromodulator	chemical	impact	gut microbiome	microbiome
+37900921	expert_5	gut epithelium	anatomical location	located in	autistic individuals	human
+37900921	expert_5	gut microbiome	microbiome	is linked to	autism	DDF
+37900921	expert_5	4-ethylphenol sulfate	chemical	influence	anxiety phenotype	DDF
+37900921	expert_5	4EP	chemical	located in	human brains	anatomical location
+37900921	expert_5	4EP	chemical	located in	kidneys	anatomical location
+37900921	expert_5	4EPS	chemical	influence	increased intestinal permeability	DDF
+37900921	expert_5	4EPS	chemical	located in	kidneys	anatomical location
+37900921	expert_5	4EPS	chemical	located in	human brains	anatomical location
+37900921	expert_5	4EP	chemical	produced by	gut microbiome	microbiome
+37900921	expert_5	anxiety	DDF	target	mice	animal
+37900921	expert_5	4EP	chemical	located in	brain	anatomical location
+37900921	expert_5	increased intestinal permeability	DDF	target	autistic individuals	human
+37900921	expert_5	anxiety phenotype	DDF	target	autistic individuals	human
+37900921	expert_5	Gut-microbiome-derived metabolites	chemical	located in	gut	anatomical location
+37900921	expert_5	4EPS	chemical	located in	brain	anatomical location
+37900921	expert_5	gut microbiome	microbiome	located in	gut	anatomical location
+37900921	expert_5	4EPS	chemical	influence	anxiety	DDF
+
+
+
+
+33318317	expert_5	Elderly patients	human	used by	Neuropsychological assessments	biomedical technique
+33318317	expert_5	Elderly patients	human	used by	randomized-control trial of mindful awareness practice	biomedical technique
+33318317	expert_5	mild cognitive impairment	DDF	target	Elderly patients	human
+33318317	expert_5	gut microbiota	microbiome	located in	brain	anatomical location
+33318317	expert_5	gut microbes	microbiome	located in	brain	anatomical location
+33318317	expert_5	Elderly patients	human	used by	inflammatory markers	biomedical technique
+
+
+34704023	expert_6	gut microbiome alpha-diversity	DDF	affect	neurological disorders	DDF
+
+
+28629758	expert_5	Flavobacterium spp.	bacteria	influence	chronic social defeat	DDF
+28629758	expert_5	pro-inflammatory variations	DDF	target	socially stressed mice	animal
+28629758	expert_5	Turicibacter spp.	bacteria	influence	Social avoidance behaviors	DDF
+28629758	expert_5	gut microbiome	microbiome	located in	socially stressed mice	animal
+28629758	expert_5	gut microbiota	microbiome	is linked to	chronic social defeat	DDF
+28629758	expert_5	gut microbiota	microbiome	located in	male mice	animal
+28629758	expert_5	Turicibacter spp.	bacteria	influence	chronic social defeat	DDF
+28629758	expert_5	interleukin (IL)-1β	chemical	located in	prefrontal cortex	anatomical location
+28629758	expert_5	IL-6	chemical	influence	severe social avoidance behaviors	DDF
+28629758	expert_5	gut microbiome	microbiome	is linked to	depression	DDF
+28629758	expert_5	interleukin (IL)-1β	chemical	impact	Flavobacterium spp.	bacteria
+28629758	expert_5	social avoidance behaviors	DDF	target	socially stressed mice	animal
+28629758	expert_5	IL-6	chemical	influence	Social avoidance behaviors	DDF
+28629758	expert_5	chronic social defeat	DDF	target	Mice	animal
+28629758	expert_5	interleukin (IL)-1β	chemical	influence	severe social avoidance behaviors	DDF
+28629758	expert_5	IL-6	chemical	influence	chronic social defeat	DDF
+28629758	expert_5	gut microbiota	microbiome	is linked to	social avoidance effects	DDF
+28629758	expert_5	severe social avoidance behaviors	DDF	target	Mice	animal
+28629758	expert_5	IL-6	chemical	impact	Turicibacter spp.	bacteria
+28629758	expert_5	interleukin (IL)-1β	chemical	influence	chronic social defeat	DDF
+28629758	expert_5	interleukin (IL)-1β	chemical	impact	Turicibacter spp.	bacteria
+28629758	expert_5	interleukin (IL)-1β	chemical	influence	Social avoidance behaviors	DDF
+28629758	expert_5	gut microbiome	microbiome	located in	Male C57BL/6 mice	animal
+28629758	expert_5	Social avoidance behaviors	DDF	interact	corticosterone	chemical
+28629758	expert_5	chronic social defeat	DDF	target	male mice	animal
+28629758	expert_5	Flavobacterium spp.	bacteria	influence	severe social avoidance behaviors	DDF
+28629758	expert_5	Turicibacter spp.	bacteria	influence	severe social avoidance behaviors	DDF
+28629758	expert_5	social avoidance effects	DDF	affect	chronic social defeat	DDF
+28629758	expert_5	Social avoidance behaviors	DDF	interact	pro-inflammatory cytokines	chemical
+28629758	expert_5	Flavobacterium spp.	bacteria	influence	Social avoidance behaviors	DDF
+28629758	expert_5	gut microbiome	microbiome	is linked to	social avoidance behaviors	DDF
+28629758	expert_5	social avoidance behaviors	DDF	target	Male C57BL/6 mice	animal
+28629758	expert_5	depression	DDF	target	socially stressed mice	animal
+28629758	expert_5	IL-6	chemical	located in	prefrontal cortex	anatomical location
+28629758	expert_5	gut microbiome	microbiome	is linked to	pro-inflammatory variations	DDF
+28629758	expert_5	social avoidance effects	DDF	target	male mice	animal
+28629758	expert_5	IL-6	chemical	impact	Flavobacterium spp.	bacteria
+
+
+36191806	expert_5	depression-like behaviors	DDF	target	Chrna7 knock-out (KO) mice	animal
+36191806	expert_5	depression-like behaviors	DDF	target	Chrna7 KO mice	animal
+36191806	expert_5	subdiaphragmatic vagus nerve	anatomical location	located in	Chrna7 KO mice	animal
+36191806	expert_5	microbes-derived metabolites	chemical	located in	subdiaphragmatic vagus nerve	anatomical location
+36191806	expert_5	medial prefrontal cortex	anatomical location	located in	Chrna7 KO mice	animal
+36191806	expert_5	Lactobacillus sp. BL302	bacteria	located in	KO + SDV group	animal
+36191806	expert_5	mPFC	anatomical location	located in	Chrna7 KO mice	animal
+36191806	expert_5	Chrna7 KO mice	animal	used by	SDV	biomedical technique
+36191806	expert_5	depression-like phenotypes	DDF	target	Chrna7 knock-out mice	animal
+36191806	expert_5	plasma metabolites	chemical	located in	three groups [wild-type (WT) + sham group, KO + sham group, KO + SDV group]	animal
+36191806	expert_5	subdiaphragmatic vagus nerve	anatomical location	located in	Chrna7 knock-out mice	animal
+36191806	expert_5	Chrna7 KO mice	animal	used by	subdiaphragmatic vagotomy	biomedical technique
+36191806	expert_5	several microbiome	microbiome	located in	three groups [wild-type (WT) + sham group, KO + sham group, KO + SDV group]	animal
+36191806	expert_5	synaptic proteins	chemical	located in	mPFC	anatomical location
+36191806	expert_5	Lactobacillus reuteri	bacteria	located in	KO + SDV group	animal
+36191806	expert_5	synaptic proteins	chemical	located in	Chrna7 KO mice	animal
+36191806	expert_5	synaptic proteins	chemical	located in	medial prefrontal cortex	anatomical location
+36191806	expert_5	plasma metabolites	chemical	impact	several microbiome	microbiome
+36191806	expert_5	abnormal composition of gut microbiota	DDF	target	Chrna7 KO mice	animal
+36191806	expert_5	systemic inflammation	DDF	target	Chrna7 knock-out (KO) mice	animal
+36191806	expert_5	Lactobacillus hominis	bacteria	located in	KO + SDV group	animal
+36191806	expert_5	abnormal composition of gut microbiota	DDF	target	Chrna7 knock-out (KO) mice	animal
+
+
+37485386	expert_3	GOS	dietary supplement	influence	depressive symptoms	DDF
+37485386	expert_3	eicosapentaenoic acid	chemical	influence	depressive symptoms	DDF
+37485386	expert_3	prebiotics	dietary supplement	influence	depression	DDF
+37485386	expert_3	Prebiotics	dietary supplement	influence	depression	DDF
+
+
+33936013	expert_6	i>Bacteroides thetaiotaomicron</i> DSM 2079	bacteria	influence	acid-induced cellular damage	DDF
+33936013	expert_6	intestinal <i>Bacteroides</i>	bacteria	interact	GABA	chemical
+
+
+33467657	expert_6	overnutrition	DDF	target	offspring	human
+33467657	expert_6	maternal obesity	DDF	target	offspring	human
+33467657	expert_6	Cognitive and Behavioural Effects	DDF	affect	Maternal Obesity	DDF
+33467657	expert_6	maternal overnutrition	DDF	affect	dysregulated brain hormones	DDF
+33467657	expert_6	gut microbiota	microbiome	is linked to	obesity-induced changes	DDF
+33467657	expert_6	maternal overnutrition	DDF	affect	disrupted neuronal circuities and connectivity	DDF
+33467657	expert_6	neuroinflammation	DDF	change abundance	gut microbiome	microbiome
+33467657	expert_6	maternal overnutrition	DDF	affect	neuroinflammation	DDF
+
+
+36707651	expert_2	serotonin	chemical	impact	gut microbiota	microbiome
+36707651	expert_2	gut microbiota	microbiome	is linked to	psychiatric disorder	DDF
+36707651	expert_2	psychiatric drugs	drug	impact	gut microbiota	microbiome
+36707651	expert_2	gut microbiota	microbiome	is linked to	BD	DDF
+36707651	expert_2	gut microbiota	microbiome	located in	BD patients	human
+36707651	expert_2	gut microbiota	microbiome	located in	patients	human
+36707651	expert_2	gut microbiota	microbiome	is linked to	neuroinflammation	DDF
+36707651	expert_2	gut microbiota	microbiome	is linked to	intestinal, systemic and brain inflammation	DDF
+
+
+34589852	expert_6	altered gut microbiota	microbiome	is linked to	nutritional deficits	DDF
+34589852	expert_6	nutritional deficits	DDF	affect	inflammation and immune dysregulation	DDF
+34589852	expert_6	altered gut microbiota	microbiome	is linked to	inflammation and immune dysregulation	DDF
+34589852	expert_6	schizophrenia-spectrum disorders	DDF	target	patients	human
+34589852	expert_6	psychotropic medication	drug	change effect	schizophrenia-spectrum disorders	DDF
+
+
+
+
+37764088	expert_2	Altered Gut Microbiota Composition	DDF	affect	Difficulty in Explicit Emotion Regulation	DDF
+37764088	expert_2	Actinomyces	bacteria	part of	GM	microbiome
+37764088	expert_2	Sutterella	bacteria	part of	GM	microbiome
+37764088	expert_2	GM	microbiome	is linked to	physical and mental problems	DDF
+37764088	expert_2	Gut microbiota	microbiome	is linked to	physical and mental problems	DDF
+37764088	expert_2	children aged 3-4	human	used by	16S rRNA gene sequencing	biomedical technique
+37764088	expert_2	GM	microbiome	located in	children aged 3-4	human
+37764088	expert_2	GM	microbiome	used by	16S rRNA gene sequencing	biomedical technique
+37764088	expert_2	Difficulty in Explicit Emotion Regulation	DDF	target	Young Children	human
+
+
+31255682	expert_1	gut microbiota	microbiome	is linked to	schizophrenia	DDF
+31255682	expert_1	schizophrenia	DDF	target	patients	human
+31255682	expert_1	sex- and age-matched healthy controls	human	used by	Shotgun metagenomic sequencing	biomedical technique
+31255682	expert_1	sex- and age-matched healthy controls	human	used by	16S rRNA sequencing	biomedical technique
+31255682	expert_1	schizophrenia	DDF	target	Patients	human
+31255682	expert_1	patients	human	used by	Shotgun metagenomic sequencing	biomedical technique
+31255682	expert_1	patients	human	used by	16S rRNA sequencing	biomedical technique
+
+
+
+
+38432867	expert_4	Disordered gut microbiota	microbiome	is linked to	TAO	DDF
+38432867	expert_4	gut microbiota	microbiome	is linked to	TAO	DDF
+
+
+35565918	expert_4	neurological problems	DDF	target	patients	human
+
+
+33076930	expert_2	constipation	DDF	is a	Gastrointestinal tract dysfunction	DDF
+33076930	expert_2	C. sporogenes	bacteria	interact	levodopa	drug
+33076930	expert_2	Gastrointestinal tract dysfunction	DDF	affect	Parkinson's disease	DDF
+33076930	expert_2	gut bacterium C. sporogenes	bacteria	part of	gut microbiota	microbiome
+33076930	expert_2	3-(3,4-dihydroxyphenyl)propionic acid	chemical	produced by	gut microbiota	microbiome
+33076930	expert_2	Parkinson's disease	DDF	is a	progressive neurodegenerative disorder	DDF
+33076930	expert_2	levodopa	drug	change effect	Parkinson's disease	DDF
+33076930	expert_2	constipation	DDF	affect	Parkinson's disease	DDF
+33076930	expert_2	PD	DDF	is a	progressive neurodegenerative disorder	DDF
+
+
+30258234	expert_5	Injury to neurons	DDF	affect	Parkinson's	DDF
+30258234	expert_5	Injury to neurons	DDF	affect	amyotrophic lateral sclerosis	DDF
+30258234	expert_5	Injury to neurons	DDF	affect	Huntington's	DDF
+30258234	expert_5	Injury to neurons	DDF	affect	Alzheimer's	DDF
+30258234	expert_5	Injury to neurons	DDF	affect	frontotemporal dementia	DDF
+30258234	expert_5	neuroinflammation	DDF	affect	Injury to neurons	DDF
+30258234	expert_5	disruption of the sentinel or housekeeping functions	DDF	affect	Injury to neurons	DDF
+30258234	expert_5	dysregulation of the defense function	DDF	affect	Injury to neurons	DDF
+30258234	expert_5	Injury to neurons	DDF	affect	chronic traumatic encephalopathy	DDF
+30258234	expert_5	gut microbiome	microbiome	is linked to	neurodegeneration	DDF
+
+
+33963284	expert_4	(R,S)-ketamine	drug	interact	N-methyl-D-aspartate receptor	chemical
+33963284	expert_4	esketamine	drug	change effect	treatment-resistant depression	DDF
+33963284	expert_4	(R,S)-ketamine	drug	interact	NMDAR	chemical
+33963284	expert_4	arketamine	drug	interact	NMDAR	chemical
+33963284	expert_4	depression	DDF	target	patients	human
+
+
+32518376	expert_4	synaptic proteins	chemical	located in	mPFC	anatomical location
+32518376	expert_4	LPS	chemical	influence	inflammation	DDF
+32518376	expert_4	synaptic proteins	chemical	located in	medial prefrontal cortex	anatomical location
+32518376	expert_4	gut microbiota	microbiome	located in	mice	animal
+32518376	expert_4	medial prefrontal cortex	anatomical location	located in	sham-operated mice	animal
+32518376	expert_4	lipopolysaccharide	chemical	impact	gut microbiota	microbiome
+32518376	expert_4	LPS	chemical	impact	gut microbiota	microbiome
+32518376	expert_4	mPFC	anatomical location	located in	sham-operated mice	animal
+
+
+32819434	expert_3	gut microbiota	microbiome	change expression	EPHB6	gene
+32819434	expert_3	gut microbiota	microbiome	is linked to	autism-like behavior	DDF
+32819434	expert_3	autism-like behavior	DDF	target	wild-type mice	animal
+32819434	expert_3	fecal microbiota	microbiome	located in	EphB6-deficient mice	animal
+32819434	expert_3	gut microbiota	microbiome	is linked to	brain dysfunctions	DDF
+32819434	expert_3	ASD	DDF	target	patients	human
+32819434	expert_3	gut microbiota	microbiome	located in	mice	animal
+32819434	expert_3	gut microbiota	microbiome	located in	EphB6-deficient mice	animal
+32819434	expert_3	autism-like behavior	DDF	target	EphB6-deficient mice	animal
+32819434	expert_3	gut microbiota	microbiome	is linked to	autism-like social behavior	DDF
+
+
+34576000	expert_7	host gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+34576000	expert_7	Parkinson's disease	DDF	target	elderly individuals	human
+34576000	expert_7	Gut Microbiome	microbiome	is linked to	Parkinson's Disease	DDF
+34576000	expert_7	PD	DDF	target	elderly individuals	human
+34576000	expert_7	Parkinson's disease	DDF	target	PD patients	human
+34576000	expert_7	Gut Microbiome	microbiome	is linked to	PD	DDF
+34576000	expert_7	host gut microbiome	microbiome	is linked to	PD	DDF
+34576000	expert_7	PD	DDF	target	PD patients	human
+34576000	expert_7	neurodegenerative disorder	DDF	target	elderly individuals	human
+34576000	expert_7	host gut microbiome	microbiome	located in	PD patients	human
+34576000	expert_7	Gut Microbiome	microbiome	is linked to	Parkinson's disease	DDF
+
+
+38247868	expert_5	psychiatric manifestations of IBD	DDF	target	IBD patients	human
+38247868	expert_5	Psychiatric Comorbidities	DDF	affect	Inflammatory Bowel Disease	DDF
+38247868	expert_5	Crohn's disease	DDF	is a	Inflammatory bowel disease	DDF
+38247868	expert_5	IBD-associated comorbidities	DDF	target	IBD patients	human
+38247868	expert_5	ulcerative colitis	DDF	is a	Inflammatory bowel disease	DDF
+38247868	expert_5	IBD	DDF	target	IBD patients	human
+38247868	expert_5	brain	anatomical location	located in	IBD patients	human
+38247868	expert_5	Psychiatric comorbidities	DDF	target	IBD patients	human
+38247868	expert_5	Crohn's disease	DDF	is a	IBD	DDF
+38247868	expert_5	Psychiatric comorbidities	DDF	affect	Inflammatory bowel disease	DDF
+38247868	expert_5	depression	DDF	target	IBD patients	human
+38247868	expert_5	ulcerative colitis	DDF	is a	IBD	DDF
+38247868	expert_5	anxiety	DDF	is a	Psychiatric comorbidities	DDF
+38247868	expert_5	Inflammatory bowel disease	DDF	affect	chronic, relapse-remitting condition	DDF
+38247868	expert_5	Inflammatory bowel disease	DDF	strike	gastrointestinal tract	anatomical location
+38247868	expert_5	neuroinflammation	DDF	target	IBD patients	human
+38247868	expert_5	anxiety	DDF	target	IBD patients	human
+38247868	expert_5	Inflammatory bowel disease	DDF	target	IBD patients	human
+38247868	expert_5	Psychiatric comorbidities	DDF	affect	IBD	DDF
+38247868	expert_5	depression	DDF	is a	Psychiatric comorbidities	DDF
+
+
+34357554	expert_2	neurodegeneration	DDF	is a	CNS pathologies	DDF
+34357554	expert_2	gut microbiota	microbiome	is linked to	neurodegenerative disorders	DDF
+
+
+31154909	expert_2	BCM-7	chemical	influence	obesity	DDF
+31154909	expert_2	beta-casomorphin-7	chemical	interact	A1 beta-casein	chemical
+31154909	expert_2	BCM-7	chemical	influence	type 1 diabetes	DDF
+31154909	expert_2	BCM-7	chemical	influence	cardiovascular diseases	DDF
+31154909	expert_2	bovine milk	food	influence	cardiovascular diseases	DDF
+31154909	expert_2	bioactive peptides	chemical	influence	cardiovascular diseases	DDF
+31154909	expert_2	μ-opioid receptors	chemical	influence	gut inflammation	DDF
+31154909	expert_2	bioactive peptides	chemical	influence	type 1 diabetes	DDF
+31154909	expert_2	beta-casomorphin-7	chemical	influence	type 1 diabetes	DDF
+31154909	expert_2	beta-casomorphin-7	chemical	influence	cardiovascular diseases	DDF
+31154909	expert_2	BCM-7	chemical	influence	fractures	DDF
+31154909	expert_2	bovine milk	food	influence	type 1 diabetes	DDF
+
+
+28442250	expert_5	fecal microbiota	microbiome	located in	FEP patients	human
+28442250	expert_5	Lactobacillus group bacteria	bacteria	influence	first-episode psychosis	DDF
+28442250	expert_5	mental disorders	DDF	target	patients	human
+28442250	expert_5	fecal microbiota	microbiome	located in	healthy matched controls	human
+28442250	expert_5	psychotic illness	DDF	target	patients	human
+28442250	expert_5	fecal microbiota	microbiome	is linked to	psychotic illness	DDF
+28442250	expert_5	Lactobacillus group bacteria	bacteria	part of	fecal microbiota	microbiome
+28442250	expert_5	gut microbiota	microbiome	is linked to	microbiota alterations	DDF
+28442250	expert_5	microbiota alterations	DDF	affect	psychotic illness	DDF
+28442250	expert_5	fecal microbiota	microbiome	is linked to	FEP	DDF
+28442250	expert_5	fecal microbiota	microbiome	is linked to	mental disorders	DDF
+28442250	expert_5	Lactobacillus group bacteria	bacteria	influence	FEP	DDF
+28442250	expert_5	gut microbiota	microbiome	is linked to	psychotic illness	DDF
+28442250	expert_5	first-episode psychosis	DDF	target	patients	human
+28442250	expert_5	FEP	DDF	target	patients	human
+28442250	expert_5	fecal microbiota	microbiome	located in	patients	human
+28442250	expert_5	fecal microbiota	microbiome	located in	FEP-patients	human
+28442250	expert_5	gut microbiota	microbiome	is linked to	mental disorders	DDF
+28442250	expert_5	fecal microbiota	microbiome	is linked to	first-episode psychosis	DDF
+28442250	expert_5	fecal microbiota	microbiome	is linked to	microbiota alterations	DDF
+
+
+
+
+30701194	expert_7	autism spectrum disorders	DDF	target	ASD group	human
+30701194	expert_7	typical development	DDF	target	TD group	human
+30701194	expert_7	Autism Spectrum Disorder	DDF	target	children	human
+30701194	expert_7	typical development	DDF	target	age-matched children	human
+30701194	expert_7	TD	DDF	target	TD group	human
+30701194	expert_7	Eggerthella lenta	bacteria	located in	ASD group	human
+30701194	expert_7	ASD	DDF	target	Children	human
+30701194	expert_7	Bacteroides vulgatus	bacteria	located in	ASD group	human
+30701194	expert_7	TD	DDF	target	age-matched children	human
+30701194	expert_7	ASD	DDF	target	children	human
+30701194	expert_7	gut microbiota	microbiome	located in	children	human
+30701194	expert_7	children	human	used by	gut metagenomic and metabolome study	biomedical technique
+30701194	expert_7	gut 2-keto-glutaramic acid	chemical	influence	ASD	DDF
+30701194	expert_7	ASD	DDF	target	ASD group	human
+30701194	expert_7	gut microbiota	microbiome	is linked to	Autism Spectrum Disorder	DDF
+30701194	expert_7	Clostridium botulinum	bacteria	located in	ASD group	human
+30701194	expert_7	glutamate metabolites	chemical	located in	ASD group	human
+30701194	expert_7	autism spectrum disorders	DDF	target	children	human
+30701194	expert_7	gut microbiota	microbiome	is linked to	ASD	DDF
+30701194	expert_7	Autism Spectrum Disorder	DDF	target	Children	human
+30701194	expert_7	2-keto-glutaramic acid	chemical	located in	ASD group	human
+
+
+
+
+34988495	expert_6	gut microbiome	microbiome	is linked to	trauma- and stressor-related disorders	DDF
+34988495	expert_6	gut microbiome	microbiome	is linked to	posttraumatic stress disorder	DDF
+34988495	expert_6	PVD	DDF	affect	severe depression	DDF
+34988495	expert_6	PVD	DDF	affect	cardiovascular disease	DDF
+34988495	expert_6	bipolar disorders	DDF	affect	severe depression	DDF
+34988495	expert_6	gut microbiome	microbiome	located in	Veterans	human
+34988495	expert_6	peripheral vascular disease	DDF	affect	severe depression	DDF
+34988495	expert_6	gastroenteritis	DDF	affect	severe depression	DDF
+34988495	expert_6	gut microbiota	microbiome	located in	Veterans	human
+34988495	expert_6	gut microbiome	microbiome	is linked to	affective disorders	DDF
+34988495	expert_6	gut microbiome	microbiome	is linked to	anxiety disorders	DDF
+34988495	expert_6	gut microbiome	microbiome	is linked to	PTSD	DDF
+34988495	expert_6	PTSD	DDF	target	male	human
+34988495	expert_6	gut microbiota	microbiome	is linked to	chronic health conditions	DDF
+34988495	expert_6	gut microbiome	microbiome	located in	United States (US) military Veterans	human
+34988495	expert_6	traumatic brain injuries	DDF	target	male	human
+
+
+32890382	expert_6	epigenetic processes	DDF	affect	traumatic or stress events	DDF
+32890382	expert_6	neurophysiological, inflammatory or hypothalamic-pituitary-adrenal axis dysregulations	DDF	affect	psychological stress	DDF
+32890382	expert_6	gut microbiota	microbiome	is linked to	epigenetic processes	DDF
+32890382	expert_6	epigenetic processes	DDF	affect	psychiatric disorders	DDF
+32890382	expert_6	gut microbiota	microbiome	is linked to	inflammatory response	DDF
+32890382	expert_6	gut microbiota	microbiome	is linked to	traumatic or stress events	DDF
+
+
+34147969	expert_2	Faecalibaculum rodentium	bacteria	influence	anhedonia-like behavior	DDF
+34147969	expert_2	CSDS	DDF	target	Ephx2 knock-out (KO) mice	animal
+34147969	expert_2	anhedonia-like behavior	DDF	target	ABX-treated WT and Ephx2 KO mice	animal
+34147969	expert_2	F. rodentium	bacteria	influence	anhedonia-like behavior	DDF
+34147969	expert_2	F. rodentium	bacteria	influence	depression- and anhedonia-like behaviors	DDF
+34147969	expert_2	F. rodentium	bacteria	interact	synaptic proteins	chemical
+34147969	expert_2	F. rodentium	bacteria	interact	interleukin-6	chemical
+34147969	expert_2	inflammation	DDF	affect	stress-related depression	DDF
+34147969	expert_2	Soluble epoxide hydrolase	chemical	influence	inflammation	DDF
+34147969	expert_2	chronic social defeat stress	DDF	target	Ephx2 knock-out (KO) mice	animal
+
+
+
+
+
+
+37624502	expert_4	Bifidobacterium longum	bacteria	part of	gut microbiota	microbiome
+
+
+36056574	expert_7	sleep disturbance	DDF	target	participants	human
+36056574	expert_7	GM	microbiome	located in	Asian Americans	human
+36056574	expert_7	depressive symptoms	DDF	target	Chinese and Korean immigrants	human
+36056574	expert_7	sleep disturbance	DDF	target	AsA	human
+36056574	expert_7	GM	microbiome	is linked to	depressive symptoms	DDF
+36056574	expert_7	gut microbiota	microbiome	located in	Asian Americans	human
+36056574	expert_7	Gut Microbiota	microbiome	is linked to	sleep disturbance	DDF
+36056574	expert_7	depressive symptoms	DDF	change abundance	Actinobacteria	bacteria
+36056574	expert_7	GM	microbiome	located in	AsA	human
+36056574	expert_7	depressive symptoms	DDF	target	Chinese and Korean American immigrants	human
+36056574	expert_7	gut microbiota	microbiome	located in	AsA	human
+36056574	expert_7	sleep disturbance	DDF	target	Asian Americans	human
+36056574	expert_7	Depression	DDF	target	population	human
+36056574	expert_7	sleep disturbance	DDF	target	Chinese and Korean immigrants	human
+36056574	expert_7	GM	microbiome	located in	Chinese and Korean American immigrants	human
+36056574	expert_7	depression	DDF	target	AsA	human
+36056574	expert_7	sleep disturbance	DDF	target	Chinese and Korean American immigrants	human
+36056574	expert_7	Gut Microbiota	microbiome	located in	Chinese and Korean American immigrants	human
+36056574	expert_7	Sleep Disturbance	DDF	target	Chinese and Korean Immigrants	human
+36056574	expert_7	depression	DDF	target	Asian Americans	human
+36056574	expert_7	Gut Microbiota	microbiome	is linked to	Sleep Disturbance	DDF
+36056574	expert_7	depression	DDF	affect	sleep disturbance	DDF
+36056574	expert_7	Depressive Symptoms	DDF	target	Chinese and Korean Immigrants	human
+36056574	expert_7	sleep disturbance	DDF	target	population	human
+36056574	expert_7	depressive symptoms	DDF	affect	sleep disturbance	DDF
+36056574	expert_7	GM	microbiome	located in	population	human
+36056574	expert_7	Depression	DDF	target	Asian Americans	human
+36056574	expert_7	Gut Microbiota	microbiome	is linked to	Depressive Symptoms	DDF
+36056574	expert_7	Depression	DDF	target	AsA	human
+36056574	expert_7	depressive symptoms	DDF	target	participants	human
+36056574	expert_7	Gut Microbiota	microbiome	is linked to	depressive symptoms	DDF
+36056574	expert_7	depression	DDF	target	population	human
+36056574	expert_7	Gut Microbiota	microbiome	located in	Chinese and Korean Immigrants	human
+36056574	expert_7	GM	microbiome	is linked to	sleep disturbance	DDF
+36056574	expert_7	GM	microbiome	located in	participants	human
+
+
+33514545	expert_6	microbiome-associated short-chain fatty acids	chemical	influence	PD	DDF
+
+
+31750916	expert_5	inflammatory compounds	chemical	influence	depression	DDF
+31750916	expert_5	microbiota-driven modification of gene expression	DDF	affect	depression	DDF
+31750916	expert_5	dietary fiber	dietary supplement	influence	depression	DDF
+31750916	expert_5	dietary fiber	dietary supplement	influence	inflammatory and depressive disorders	DDF
+31750916	expert_5	Dietary fiber	dietary supplement	influence	depression	DDF
+31750916	expert_5	Dietary fiber	dietary supplement	influence	inflammation	DDF
+31750916	expert_5	increased production of neurotransmitters	DDF	affect	depression	DDF
+31750916	expert_5	Dietary fiber	dietary supplement	impact	gut microbiota	microbiome
+31750916	expert_5	gut microbiota	microbiome	located in	gut	anatomical location
+31750916	expert_5	inflammation	DDF	affect	depression	DDF
+31750916	expert_5	dietary fiber	dietary supplement	influence	increased production of neurotransmitters	DDF
+31750916	expert_5	dietary fiber	dietary supplement	influence	microbiota-driven modification of gene expression	DDF
+31750916	expert_5	high-fiber diet	food	influence	inflammation	DDF
+
+
+34074025	expert_2	dysbiosis	DDF	affect	chronic diseases	DDF
+34074025	expert_2	Dysfunction of MAIT cells	DDF	affect	chronic diseases	DDF
+34074025	expert_2	Multiple Sclerosis	DDF	is a	Autoimmune Diseases	DDF
+34074025	expert_2	autoimmune disorders	DDF	change abundance	gut microbiota	microbiome
+34074025	expert_2	multiple sclerosis	DDF	change abundance	gut microbiota	microbiome
+
+
+24956966	expert_3	gut microbiota	microbiome	is linked to	mental health outcomes	DDF
+
+
+30528936	expert_3	ketamine	drug	impact	gut microbiota	microbiome
+30528936	expert_3	Coriobacteriia	bacteria	influence	immobility	DDF
+30528936	expert_3	Actinobacteria	bacteria	influence	immobility	DDF
+30528936	expert_3	Ketamine	drug	change effect	immobility time	DDF
+
+
+37995475	expert_2	narcolepsy type 1	DDF	target	patients	human
+37995475	expert_2	narcolepsy type 2	DDF	target	patients	human
+37995475	expert_2	gut microbiota	microbiome	is linked to	sleep disorders	DDF
+37995475	expert_2	idiopathic hypersomnia	DDF	target	patients	human
+37995475	expert_2	gut microbiota	microbiome	located in	patients	human
+
+
+38278499	expert_2	major depressive disorder	DDF	target	individuals	human
+38278499	expert_2	major depressive disorder	DDF	interact	hippuric acid	chemical
+38278499	expert_2	MDD	DDF	target	individuals	human
+38278499	expert_2	GP	human	used by	targeted liquid chromatography mass spectrometry method	biomedical technique
+38278499	expert_2	non-depressed general population	human	used by	targeted liquid chromatography mass spectrometry method	biomedical technique
+38278499	expert_2	depression	DDF	target	persons	human
+38278499	expert_2	individuals	human	used by	targeted liquid chromatography mass spectrometry method	biomedical technique
+38278499	expert_2	hippuric acid	chemical	influence	Alcohol use-associated alterations	DDF
+38278499	expert_2	Alcohol use-associated alterations	DDF	affect	depression	DDF
+
+
+38679353	expert_4	PD	DDF	change abundance	Prevotellaceae	bacteria
+38679353	expert_4	PD	DDF	change abundance	Rikenellaceae	bacteria
+38679353	expert_4	PD	DDF	change abundance	Verrucomicrobiaceae	bacteria
+38679353	expert_4	PD	DDF	change abundance	Ruminococcaceae	bacteria
+38679353	expert_4	PD	DDF	change abundance	Lachnospiraceae	bacteria
+38679353	expert_4	PD	DDF	change abundance	Faecalibacterium	bacteria
+38679353	expert_4	PD	DDF	change abundance	Christensenellaceae	bacteria
+38679353	expert_4	gut microbiome	microbiome	is linked to	PD	DDF
+38679353	expert_4	PD	DDF	change abundance	Bifidobacteriaceae	bacteria
+38679353	expert_4	PD	DDF	change abundance	Lactobacillaceae	bacteria
+38679353	expert_4	PD	DDF	change abundance	Erysipelotrichaceae	bacteria
+
+
+38664425	expert_5	neuronal damage	DDF	affect	NDDs	DDF
+38664425	expert_5	progressive loss of neuron function	DDF	affect	Neurodegenerative diseases	DDF
+38664425	expert_5	progressive loss of neuron function	DDF	affect	NDDs	DDF
+38664425	expert_5	neuronal damage	DDF	affect	Neurodegenerative diseases	DDF
+
+
+33454868	expert_6	gut microbiome	microbiome	is linked to	cancer	DDF
+33454868	expert_6	bacteria	bacteria	influence	breast cancer	DDF
+33454868	expert_6	intestinal microbes	microbiome	is linked to	breast cancer	DDF
+33454868	expert_6	Breast cancer	DDF	target	women	human
+33454868	expert_6	cancer	DDF	target	women	human
+33454868	expert_6	gut microbiota	microbiome	is linked to	breast cancer	DDF
+33454868	expert_6	gut microbiome	microbiome	is linked to	diabetes	DDF
+
+
+31498131	expert_6	atypical parkinsonism cohorts	human	used by	measurements of fecal microbial concentrations	biomedical technique
+31498131	expert_6	prodromal and treatment-naïve de novo PD subjects	human	used by	multi-omics assessments	biomedical technique
+31498131	expert_6	gut microbiome	microbiome	is linked to	PD	DDF
+31498131	expert_6	Gut microbiota	microbiome	is linked to	PD	DDF
+31498131	expert_6	Gut microbiota	microbiome	is linked to	Parkinson's disease	DDF
+31498131	expert_6	prodromal and treatment-naïve de novo PD subjects	human	used by	measurements of fecal microbial concentrations	biomedical technique
+31498131	expert_6	atypical parkinsonism cohorts	human	used by	multi-omics assessments	biomedical technique
+
+
+33782648	expert_5	neurodegenerative diseases	DDF	target	patients	human
+33782648	expert_5	Fisetin	chemical	influence	traumatic brain injury	DDF
+33782648	expert_5	stroke (both ischemic and hemorrhagic)	DDF	is a	neurological disorders	DDF
+33782648	expert_5	Fisetin	chemical	influence	neurological disorders	DDF
+33782648	expert_5	Fisetin	chemical	influence	Alzheimer's disease	DDF
+33782648	expert_5	traumatic brain injury	DDF	is a	neurological disorders	DDF
+33782648	expert_5	Alzheimer's disease	DDF	is a	neurological disorders	DDF
+33782648	expert_5	Flavonol Fisetin	chemical	influence	Neurological Disorders	DDF
+33782648	expert_5	neurodegenerative diseases	DDF	target	aging population	human
+33782648	expert_5	Fisetin	chemical	influence	amyotrophic lateral sclerosis	DDF
+33782648	expert_5	Neurological disorders	DDF	target	patients	human
+33782648	expert_5	Fisetin	chemical	influence	brain dysfunction	DDF
+33782648	expert_5	brain dysfunction	DDF	target	humans	human
+33782648	expert_5	amyotrophic lateral sclerosis	DDF	is a	neurological disorders	DDF
+33782648	expert_5	Fisetin	chemical	influence	Parkinson's disease	DDF
+33782648	expert_5	Parkinson's disease	DDF	is a	neurological disorders	DDF
+33782648	expert_5	Neurological disorders	DDF	target	aging population	human
+33782648	expert_5	Fisetin	chemical	influence	stroke (both ischemic and hemorrhagic)	DDF
+33782648	expert_5	Fisetin	chemical	influence	Huntington's disease	DDF
+33782648	expert_5	gut microbiome	microbiome	is linked to	neurological disorders	DDF
+33782648	expert_5	Huntington's disease	DDF	is a	neurological disorders	DDF
+33782648	expert_5	disruptions in multiple cellular systems	DDF	affect	neurological disorders	DDF
+
+
+32739746	expert_6	dysregulation of CORT production	DDF	affect	acute stress	DDF
+32739746	expert_6	endocannabinoid N-arachidonoylethanolamide	chemical	influence	anxiety-like behavior	DDF
+32739746	expert_6	C. albicans	bacteria	influence	anxiety-like behavior	DDF
+32739746	expert_6	AEA	chemical	influence	anxiety-like behavior	DDF
+32739746	expert_6	gut microbiota	microbiome	located in	mice	animal
+32739746	expert_6	commensal fungus Candida albicans	bacteria	influence	dysregulation of endocannabinoid signaling	DDF
+
+
+33860090	expert_7	Probiotic supplementation	dietary supplement	influence	intestinal inflammation	DDF
+33860090	expert_7	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+33860090	expert_7	probiotics	dietary supplement	influence	Parkinson's disease	DDF
+33860090	expert_7	Probiotic supplementation	dietary supplement	influence	inflammation	DDF
+33860090	expert_7	Probiotics	dietary supplement	influence	Parkinson's disease	DDF
+33860090	expert_7	dysbiosis	DDF	affect	Parkinson's disease	DDF
+33860090	expert_7	intestinal inflammation	DDF	affect	PD	DDF
+33860090	expert_7	constipation	DDF	affect	PD	DDF
+33860090	expert_7	probiotics	dietary supplement	impact	gut microbiome	microbiome
+33860090	expert_7	fecal short-chain fatty acids	chemical	influence	PD	DDF
+33860090	expert_7	probiotics	dietary supplement	influence	dopaminergic neuronal degeneration	DDF
+33860090	expert_7	constipation	DDF	affect	Parkinson's disease	DDF
+33860090	expert_7	probiotics	dietary supplement	influence	motor disability	DDF
+33860090	expert_7	Probiotic supplementation	dietary supplement	impact	gut microbiome	microbiome
+33860090	expert_7	probiotics	dietary supplement	influence	intestinal inflammation	DDF
+33860090	expert_7	fecal short-chain fatty acids	chemical	influence	Parkinson's disease	DDF
+33860090	expert_7	intestinal inflammation	DDF	affect	Parkinson's disease	DDF
+33860090	expert_7	dysbiosis	DDF	affect	PD	DDF
+33860090	expert_7	gut microbiome	microbiome	is linked to	PD	DDF
+33860090	expert_7	dysbiosis	DDF	affect	peripheral inflammatory states	DDF
+33860090	expert_7	probiotics	dietary supplement	influence	PD	DDF
+33860090	expert_7	probiotics	dietary supplement	influence	constipation	DDF
+
+
+33240722	expert_4	gut microbiome	microbiome	is linked to	CNS disorders	DDF
+33240722	expert_4	gut microbiome	microbiome	is linked to	neurodevelopmental and neurodegenerative disorders	DDF
+
+
+38302874	expert_5	mucosa associated microbiota	microbiome	is linked to	PIPO	DDF
+38302874	expert_5	mucosa associated microbiota	microbiome	used by	next generation sequencing (NGS) of the V3-V4 region of the bacterial RNA 16 S	biomedical technique
+38302874	expert_5	duodenum	anatomical location	located in	age-/sex-matched healthy controls	human
+38302874	expert_5	Pediatric chronic intestinal pseudo-obstruction	DDF	target	PIPO patients	human
+38302874	expert_5	MAM	microbiome	used by	next generation sequencing (NGS) of the V3-V4 region of the bacterial RNA 16 S	biomedical technique
+38302874	expert_5	5-HT	chemical	impact	Gut microbiota	microbiome
+38302874	expert_5	age-/sex-matched healthy controls	human	used by	DNA extraction	biomedical technique
+38302874	expert_5	PIPO patients	human	used by	qPCR	biomedical technique
+38302874	expert_5	gut microbiota	microbiome	is linked to	Chronic intestinal pseudo-obstruction	DDF
+38302874	expert_5	specific MAM associated to underlying pathology	microbiome	is linked to	altered intestinal serotonin pathway	DDF
+38302874	expert_5	MAM	microbiome	used by	DNA extraction	biomedical technique
+38302874	expert_5	5-HT	chemical	impact	gut microbiota	microbiome
+38302874	expert_5	dysfunction of the serotonin pathway, possibly related to or triggered by an altered microbiota	DDF	target	PIPO patients	human
+38302874	expert_5	mucosa associated microbiota	microbiome	used by	DNA extraction	biomedical technique
+38302874	expert_5	PIPO patients	human	used by	next generation sequencing (NGS) of the V3-V4 region of the bacterial RNA 16 S	biomedical technique
+38302874	expert_5	neurotransmitter 5-hydroxytryptamine	chemical	impact	Gut microbiota	microbiome
+38302874	expert_5	extremely severe impairment of propulsive motility	DDF	affect	PIPO	DDF
+38302874	expert_5	MAM	microbiome	is linked to	PIPO	DDF
+38302874	expert_5	MAM	microbiome	is linked to	dysbiosis	DDF
+38302874	expert_5	specific MAM associated to underlying pathology	microbiome	located in	PIPO patients	human
+38302874	expert_5	colon	anatomical location	located in	PIPO patients	human
+38302874	expert_5	ileum	anatomical location	located in	PIPO patients	human
+38302874	expert_5	symptoms and radiological signs suggestive of intestinal obstruction	DDF	affect	Pediatric chronic intestinal pseudo-obstruction	DDF
+38302874	expert_5	5-HT	chemical	influence	PIPO	DDF
+38302874	expert_5	controls	human	used by	qPCR	biomedical technique
+38302874	expert_5	PIPO patients	human	used by	DNA extraction	biomedical technique
+38302874	expert_5	dysmotility	DDF	target	PIPO patients	human
+38302874	expert_5	neurotransmitter 5-hydroxytryptamine	chemical	influence	PIPO	DDF
+38302874	expert_5	MAM	microbiome	located in	PIPO patients	human
+38302874	expert_5	duodenum	anatomical location	located in	PIPO patients	human
+38302874	expert_5	serotonin	chemical	influence	PIPO	DDF
+38302874	expert_5	dysbiosis	DDF	target	PIPO patients	human
+38302874	expert_5	gut microbiota	microbiome	is linked to	PIPO	DDF
+38302874	expert_5	ileum	anatomical location	located in	age-/sex-matched healthy controls	human
+38302874	expert_5	altered intestinal serotonin pathway	DDF	target	PIPO patients	human
+38302874	expert_5	PIPO	DDF	target	PIPO patients	human
+38302874	expert_5	age-/sex-matched healthy controls	human	used by	qPCR	biomedical technique
+38302874	expert_5	MAM	microbiome	located in	controls	human
+38302874	expert_5	dysfunction of the serotonin pathway, possibly related to or triggered by an altered microbiota	DDF	affect	dysmotility	DDF
+38302874	expert_5	symptoms and radiological signs suggestive of intestinal obstruction	DDF	affect	PIPO	DDF
+38302874	expert_5	colon	anatomical location	located in	age-/sex-matched healthy controls	human
+38302874	expert_5	age-/sex-matched healthy controls	human	used by	next generation sequencing (NGS) of the V3-V4 region of the bacterial RNA 16 S	biomedical technique
+38302874	expert_5	extremely severe impairment of propulsive motility	DDF	affect	Pediatric chronic intestinal pseudo-obstruction	DDF
+38302874	expert_5	serotonin	chemical	impact	Gut microbiota	microbiome
+
+
+38229613	expert_4	Parkinson's Disease	DDF	target	Patients	human
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Fusicatenibacter	bacteria
+38229613	expert_4	healthy controls	human	used by	Full-length bacterial 16S rRNA gene sequencing	biomedical technique
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Coriobacteriaceae	bacteria
+38229613	expert_4	gut microbiota	microbiome	used by	Full-length bacterial 16S rRNA gene sequencing	biomedical technique
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Cristensenellaceae	bacteria
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Clostridia UCG 014	bacteria
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Oscillospiraceae	bacteria
+38229613	expert_4	HCs	human	used by	Full-length bacterial 16S rRNA gene sequencing	biomedical technique
+38229613	expert_4	PD	DDF	change abundance	Bacteroides	bacteria
+38229613	expert_4	PD	DDF	change abundance	Clostridia UCG 014	bacteria
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Blautia	bacteria
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Lachinospiracea	bacteria
+38229613	expert_4	PD	DDF	change abundance	Lachnospiraceae NK4A136	bacteria
+38229613	expert_4	PD	DDF	change abundance	Akkermansia	bacteria
+38229613	expert_4	PD	DDF	change abundance	Dialister	bacteria
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Faecalibacterium	bacteria
+38229613	expert_4	Parkinson's disease	DDF	change abundance	Roseburia	bacteria
+38229613	expert_4	PD cases	human	used by	Full-length bacterial 16S rRNA gene sequencing	biomedical technique
+
+
+26129950	expert_1	gut microbiota	microbiome	is linked to	liver injuries	DDF
+26129950	expert_1	gut microbiota	microbiome	is linked to	cholesterol-related metabolic disorders	DDF
+26129950	expert_1	gut microbiota	microbiome	is linked to	liver injury	DDF
+26129950	expert_1	gut microbiota	microbiome	is linked to	cholesterol accumulation	DDF
+26129950	expert_1	antibiotics	drug	impact	gut microbiota	microbiome
+26129950	expert_1	gut microbiota	microbiome	is linked to	metabolic diseases	DDF
+26129950	expert_1	cholesterol accumulation	DDF	target	rats	animal
+26129950	expert_1	liver injury	DDF	target	rats	animal
+26129950	expert_1	gut microbiota	microbiome	located in	rats	animal
+
+
+32155131	expert_2	Parkinson	DDF	is a	neurodegenerative disorder	DDF
+32155131	expert_2	SLAB51	dietary supplement	influence	PD	DDF
+32155131	expert_2	abnormalities in the gut function	DDF	affect	Parkinson	DDF
+
+
+37468912	expert_2	LDSD	DDF	interact	7-ketodeoxycholic acid	chemical
+37468912	expert_2	liver depression and spleen deficiency	DDF	affect	diarrhea-predominant irritable bowel syndrome	DDF
+37468912	expert_2	LDSD	DDF	interact	serum BA precursor 7α-hydroxy-4-cholesten-3-one	chemical
+37468912	expert_2	abdominal pain	DDF	affect	liver depression and spleen deficiency	DDF
+37468912	expert_2	Dysregulation of gut microbiota-host bile acid (BA) co-metabolism	DDF	affect	IBS-D	DDF
+37468912	expert_2	liver depression	DDF	target	IBS-D patients	human
+37468912	expert_2	spleen deficiency pattern	DDF	target	IBS-D patients	human
+37468912	expert_2	7-dehydroxylating bacteria	bacteria	part of	LDSD gut microbiota	microbiome
+37468912	expert_2	liver depression and spleen deficiency	DDF	change abundance	7-dehydroxylating bacteria	bacteria
+37468912	expert_2	Altered gut microbiota-host bile acid metabolism	DDF	target	IBS-D patients	human
+37468912	expert_2	gut microbiota	microbiome	is linked to	liver depression and spleen deficiency	DDF
+37468912	expert_2	IBS-D	DDF	target	Patients	human
+37468912	expert_2	LDSD	DDF	interact	deoxycholic acid	chemical
+37468912	expert_2	LDSD	DDF	target	IBS patients	human
+37468912	expert_2	LDSD	DDF	target	IBS-D patients	human
+37468912	expert_2	LDSD	DDF	affect	IBS-D	DDF
+37468912	expert_2	BAs	chemical	influence	liver depression and spleen deficiency	DDF
+37468912	expert_2	LDSD	DDF	interact	lithocholic acid	chemical
+37468912	expert_2	LDSD	DDF	interact	DCA	chemical
+37468912	expert_2	Dysregulation of gut microbiota-host bile acid (BA) co-metabolism	DDF	affect	diarrhea-predominant irritable bowel syndrome	DDF
+
+
+
+
+32987656	expert_6	PD	DDF	affect	bradykinesia	DDF
+32987656	expert_6	Polyphenols	chemical	produced by	gut microbiome	microbiome
+32987656	expert_6	PD	DDF	affect	neuroinflammatory processes	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	postural instability	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	fatigue	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	tremor at rest	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	impaired sleep	DDF
+32987656	expert_6	PD	DDF	affect	olfactory impairment	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	autonomic dysfunction	DDF
+32987656	expert_6	PD	DDF	affect	disruption to mitochondria	DDF
+32987656	expert_6	PD	DDF	affect	pain	DDF
+32987656	expert_6	Polyphenols	chemical	influence	inflammation	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	bradykinesia	DDF
+32987656	expert_6	PD	DDF	affect	alterations to the protein α-synuclein	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	rigidity	DDF
+32987656	expert_6	Dietary Polyphenols	chemical	influence	Parkinson's Disease	DDF
+32987656	expert_6	PD	DDF	affect	non-motor symptoms	DDF
+32987656	expert_6	PD	DDF	affect	postural instability	DDF
+32987656	expert_6	PD	DDF	affect	oxidative stress	DDF
+32987656	expert_6	PD	DDF	affect	fatigue	DDF
+32987656	expert_6	PD	DDF	affect	behavioral changes	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	olfactory impairment	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	pain	DDF
+32987656	expert_6	PD	DDF	affect	tremor at rest	DDF
+32987656	expert_6	PD	DDF	affect	impaired sleep	DDF
+32987656	expert_6	PD	DDF	affect	autonomic dysfunction	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	behavioral changes	DDF
+32987656	expert_6	Parkinson's disease	DDF	affect	non-motor symptoms	DDF
+32987656	expert_6	PD	DDF	affect	rigidity	DDF
+
+
+
+
+
+
+
+
+36986165	expert_7	inflammation	DDF	affect	central nervous system diseases	DDF
+36986165	expert_7	Neurological diseases	DDF	affect	disability	DDF
+36986165	expert_7	omega-3 fatty acids	chemical	influence	neurological diseases	DDF
+36986165	expert_7	probiotics	dietary supplement	influence	neurological diseases	DDF
+36986165	expert_7	inflammatory processes	DDF	affect	neurological diseases	DDF
+36986165	expert_7	polyphenols	chemical	influence	neurological diseases	DDF
+36986165	expert_7	essential minerals	chemical	influence	neurological diseases	DDF
+36986165	expert_7	nuts	food	influence	neurological diseases	DDF
+36986165	expert_7	gut microbiome	microbiome	is linked to	neurological diseases	DDF
+36986165	expert_7	Inflammatory Process	DDF	affect	Neurological Diseases	DDF
+36986165	expert_7	fruits	food	influence	neurological diseases	DDF
+36986165	expert_7	herbs	food	influence	neurological diseases	DDF
+36986165	expert_7	legumes	food	influence	neurological diseases	DDF
+36986165	expert_7	vegetables	food	influence	neurological diseases	DDF
+36986165	expert_7	vitamins	chemical	influence	neurological diseases	DDF
+36986165	expert_7	spices	food	influence	neurological diseases	DDF
+
+
+
+
+33244049	expert_5	gut microbiome	microbiome	located in	healthy adults	human
+33244049	expert_5	healthy Korean adults	human	used by	high-throughput 16S rRNA gene sequencing	biomedical technique
+33244049	expert_5	gut microbiota	microbiome	used by	high-throughput 16S rRNA gene sequencing	biomedical technique
+33244049	expert_5	gut microbiota	microbiome	located in	healthy Korean adults	human
+33244049	expert_5	gut microbiota	microbiome	located in	gut	anatomical location
+
+
+33651324	expert_4	HIV	DDF	target	persons	human
+33651324	expert_4	aerotolerant bacteria	bacteria	located in	PLWH	human
+
+
+33825149	expert_7	Gut microbial dysbiosis	DDF	affect	mitochondrial dysfunction	DDF
+33825149	expert_7	gut microbial metabolites	chemical	influence	PD	DDF
+33825149	expert_7	Mitochondrial dysfunction	DDF	affect	Parkinson's Disease	DDF
+33825149	expert_7	Mitochondrial Dysfunction	DDF	affect	Parkinson's Disease	DDF
+33825149	expert_7	gut microbial dysbiosis	DDF	affect	PD	DDF
+33825149	expert_7	Mitochondrial dysfunction	DDF	affect	Parkinson's disease	DDF
+33825149	expert_7	gut microbial dysbiosis	DDF	affect	Parkinson's disease	DDF
+33825149	expert_7	gut microbiota	microbiome	is linked to	Parkinson's disease	DDF
+33825149	expert_7	gut microbiota	microbiome	is linked to	PD	DDF
+33825149	expert_7	microbial metabolites	chemical	influence	mitochondrial dysfunction	DDF
+33825149	expert_7	Mitochondrial dysfunction	DDF	affect	PD	DDF
+33825149	expert_7	gut microbial metabolites	chemical	influence	Parkinson's disease	DDF
+33825149	expert_7	microbial metabolites	chemical	influence	PD	DDF
+33825149	expert_7	Gut Microbial Metabolites	chemical	influence	Parkinson's Disease	DDF
+
+
+
+
+36881806	expert_2	gut microbiota	microbiome	is linked to	psychiatric disorders	DDF
+
+
+33899052	expert_5	gut microbiome	microbiome	is linked to	constipation	DDF
+33899052	expert_5	PD	DDF	target	individuals	human
+33899052	expert_5	Parkinson's disease	DDF	target	men and women over 40 years old	human
+33899052	expert_5	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+33899052	expert_5	Anaerotruncus	bacteria	part of	gut microbiome	microbiome
+33899052	expert_5	PD	DDF	target	men and women over 40 years old	human
+33899052	expert_5	genus Roseburia	bacteria	part of	gut microbiome	microbiome
+33899052	expert_5	constipation	DDF	target	individuals	human
+33899052	expert_5	individuals	human	used by	OMM-sequence	biomedical technique
+33899052	expert_5	constipation	DDF	target	subjects	human
+33899052	expert_5	phylum Firmicutes	bacteria	part of	gut microbiome	microbiome
+33899052	expert_5	gut microbiome	microbiome	located in	individuals	human
+33899052	expert_5	PD	DDF	target	patients	human
+33899052	expert_5	men and women over 40 years old	human	used by	OMM-sequence	biomedical technique
+33899052	expert_5	constipation	DDF	target	patients	human
+33899052	expert_5	phyla Actinobacteria	bacteria	part of	gut microbiome	microbiome
+33899052	expert_5	gut microbiome	microbiome	located in	men and women over 40 years old	human
+33899052	expert_5	men and women over 40 years old	human	used by	osteopathic manipulative medicine (OMM) sequence	biomedical technique
+33899052	expert_5	Verrucomicrobia	bacteria	part of	gut microbiome	microbiome
+33899052	expert_5	chronic constipation	DDF	target	men and women over 40 years old	human
+33899052	expert_5	gut microbiome	microbiome	is linked to	PD	DDF
+33899052	expert_5	Intestinimonas	bacteria	part of	gut microbiome	microbiome
+
+
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	anxiety	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	behavioural and psychological symptoms of dementia	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	BPSD	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	mental health and neurocognitive disorders	DDF
+32772900	expert_5	post-traumatic stress disorder	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	depression	DDF
+32772900	expert_5	depression	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	PTSD	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	GM	microbiome	is linked to	mental health and neurocognitive disorders	DDF
+32772900	expert_5	GM	microbiome	is linked to	anxiety	DDF
+32772900	expert_5	GM	microbiome	is linked to	OCD	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	PTSD	DDF
+32772900	expert_5	psychotropics	drug	impact	gut microbiota	microbiome
+32772900	expert_5	bipolar disorder	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	Gut microbes	microbiome	located in	individuals	human
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	schizophrenia	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	OCD	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	BP	DDF
+32772900	expert_5	GM	microbiome	is linked to	depression	DDF
+32772900	expert_5	neurocognitive and mental health disorders	DDF	target	individuals	human
+32772900	expert_5	GM	microbiome	is linked to	behavioural and psychological symptoms of dementia	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	depression	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	post-traumatic stress disorder	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	BPSD	DDF
+32772900	expert_5	schizophrenia	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	dementia	DDF
+32772900	expert_5	psychotropics	drug	impact	GM	microbiome
+32772900	expert_5	GM	microbiome	is linked to	PTSD	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	behavioural and psychological symptoms of dementia	DDF
+32772900	expert_5	psychotropics	drug	change effect	neurocognitive and mental health disorders	DDF
+32772900	expert_5	GM	microbiome	is linked to	schizophrenia	DDF
+32772900	expert_5	obsessive-compulsive disorder	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	dementia	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	GM	microbiome	is linked to	BPSD	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	schizophrenia	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	post-traumatic stress disorder	DDF
+32772900	expert_5	GM	microbiome	is linked to	BP	DDF
+32772900	expert_5	probiotics	dietary supplement	influence	neurocognitive and mental health disorders	DDF
+32772900	expert_5	psychotropic medications	drug	impact	gut microbiota	microbiome
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	bipolar disorder	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	BP	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	obsessive-compulsive disorder	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	dementia	DDF
+32772900	expert_5	BP	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	PTSD	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	microbial dysbiosis	DDF
+32772900	expert_5	OCD	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	Gut Microbiome	microbiome	located in	individuals	human
+32772900	expert_5	gut microbiota	microbiome	is linked to	Gut dysbiosis	DDF
+32772900	expert_5	psychotropic medications	drug	impact	GM	microbiome
+32772900	expert_5	gut microbiota	microbiome	is linked to	neurocognitive and mental health disorders	DDF
+32772900	expert_5	GM	microbiome	is linked to	dementia	DDF
+32772900	expert_5	GM	microbiome	is linked to	obsessive-compulsive disorder	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	obsessive-compulsive disorder	DDF
+32772900	expert_5	anxiety	DDF	is a	mental health and neurocognitive disorders	DDF
+32772900	expert_5	microbial dysbiosis	DDF	affect	bipolar disorder	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	mental health and neurocognitive disorders	DDF
+32772900	expert_5	GM	microbiome	is linked to	post-traumatic stress disorder	DDF
+32772900	expert_5	Gut Microbiome	microbiome	is linked to	OCD	DDF
+32772900	expert_5	GM	microbiome	located in	individuals	human
+32772900	expert_5	GM	microbiome	is linked to	bipolar disorder	DDF
+32772900	expert_5	Gut microbes	microbiome	is linked to	neurocognitive and mental health disorders	DDF
+32772900	expert_5	GM	microbiome	is linked to	microbial dysbiosis	DDF
+
+
+
+
+27900676	expert_1	gut microbiota	microbiome	located in	schizophrenia patients	human
+27900676	expert_1	Chronic low-grade inflammation	DDF	affect	schizophrenia	DDF
+27900676	expert_1	cytokines	chemical	influence	schizophrenia	DDF
+27900676	expert_1	schizophrenia	DDF	target	patients	human
+
+
+26190966	expert_4	obesity	DDF	affect	peripheral low-grade inflammation	DDF
+26190966	expert_4	Obesity	DDF	affect	mood disorders	DDF
+26190966	expert_4	Obesity	DDF	affect	type 2 diabetes	DDF
+26190966	expert_4	obesity	DDF	affect	neuroinflammation	DDF
+26190966	expert_4	dysfunction	DDF	strike	vulnerable brain regions	anatomical location
+26190966	expert_4	Obesity	DDF	affect	cardiovascular diseases	DDF
+26190966	expert_4	Obesity	DDF	affect	cognitive dysfunctions	DDF
+
+
+35722294	expert_7	Parkinson's Disease	DDF	change abundance	Blautia	bacteria
+35722294	expert_7	Parkinson's disease	DDF	target	PD patients	human
+35722294	expert_7	Blautia	bacteria	located in	PD patients	human
+35722294	expert_7	brain	anatomical location	located in	PD patients	human
+35722294	expert_7	gut microbiome	microbiome	is linked to	PD	DDF
+35722294	expert_7	gut microbiome	microbiome	is linked to	Parkinson's disease	DDF
+35722294	expert_7	PD	DDF	target	PD patients	human
+35722294	expert_7	PD	DDF	change abundance	Blautia	bacteria
+
+
+38260914	expert_4	rosacea	DDF	target	patients	human
+
+
+34032650	expert_7	fermented foods	food	administered	patients	human
+34032650	expert_7	grains	food	administered	patients	human
+34032650	expert_7	psychobiotics	bacteria	located in	healthy populations	human
+34032650	expert_7	Psychobiotics	bacteria	interact	Antidepressants	drug
+34032650	expert_7	psychobiotics	bacteria	influence	depression	DDF
+34032650	expert_7	gut microbiota	microbiome	is linked to	depression	DDF
+34032650	expert_7	psychobiotics	bacteria	located in	patients	human
+34032650	expert_7	fish	food	administered	patients	human
+34032650	expert_7	fibres	food	administered	patients	human
+34032650	expert_7	major depression	DDF	target	patients	human
+34032650	expert_7	depression	DDF	target	patients	human
+
+
+34277527	expert_7	gut microbiota	microbiome	located in	Brain	anatomical location
+34277527	expert_7	gut microbiota alterations	DDF	affect	NDDs	DDF
+34277527	expert_7	gut microbiota alterations	DDF	affect	neurodevelopmental disorders	DDF
+34277527	expert_7	nutritional deficiencies	DDF	affect	neurodevelopmental disorders	DDF
+34277527	expert_7	nutritional deficiencies	DDF	affect	NDDs	DDF
+
+
+36216056	expert_4	Fibrobacteres	bacteria	interact	phosphocholine	chemical
+36216056	expert_4	phosphocholine	chemical	influence	anxiety	DDF
+36216056	expert_4	Verrucomicrobia	bacteria	interact	estriol	chemical
+36216056	expert_4	PM	chemical	impact	Fibrobacteres	bacteria
+36216056	expert_4	particulate matter	chemical	influence	SCZ	DDF
+36216056	expert_4	PM	chemical	influence	schizophrenia	DDF
+36216056	expert_4	particulate matter	chemical	influence	schizophrenia	DDF
+36216056	expert_4	PM	chemical	impact	Verrucomicrobia	bacteria
+36216056	expert_4	Deinococcus-Thermus	bacteria	interact	phosphocholine	chemical
+36216056	expert_4	PM	chemical	influence	SCZ	DDF
+
+
+37834373	expert_4	microbial community	microbiome	is linked to	Alzheimer's disease	DDF
+37834373	expert_4	microbial community	microbiome	is linked to	Parkinson's disease	DDF
+
+
+34002020	expert_4	endocannabinoid palmitoylethanolamide	chemical	influence	anhedonia/amotivation	DDF
+34002020	expert_4	PEA	chemical	influence	anhedonia/amotivation	DDF
+
+
+31704402	expert_4	gut microbiome	microbiome	located in	mice	animal
+31704402	expert_4	Kineothrix alysoides	bacteria	located in	high biodiversity treatment mice	animal
+31704402	expert_4	Kineothrix alysoides	bacteria	influence	anxiety-like behaviour	DDF
+31704402	expert_4	anxiety-like behaviour	DDF	target	anxious mice	animal
+
+
+35327401	expert_7	gut microbiota	microbiome	located in	Drosophila melanogaster	animal
+35327401	expert_7	Gut Microbiota	microbiome	is linked to	Neurodegenerative Diseases	DDF
+35327401	expert_7	mammalian gut microbiome	microbiome	located in	mammals	animal
+35327401	expert_7	gut microbiota	microbiome	is linked to	neurodegenerative diseases	DDF
+35327401	expert_7	gut microbiota	microbiome	located in	fruit fly	animal
+35327401	expert_7	gut microbiota	microbiome	is linked to	Neurodegenerative Diseases	DDF
+35327401	expert_7	gut microbiota	microbiome	located in	Drosophila	animal
+
+
+34520319	expert_3	gut microbiota	microbiome	is linked to	mild cognitive impairment	DDF
+34520319	expert_3	gut microbiota	microbiome	is linked to	Alzheimer's disease	DDF
+34520319	expert_3	sleep and circadian rhythm disruption	DDF	interact	Aβ	chemical
+34520319	expert_3	SCRD	DDF	interact	β-amyloid	chemical
+34520319	expert_3	SCRD	DDF	interact	Aβ	chemical
+34520319	expert_3	sleep and circadian rhythm disruption	DDF	interact	β-amyloid	chemical
+34520319	expert_3	GM	microbiome	is linked to	AD	DDF
+34520319	expert_3	GM	microbiome	is linked to	mild cognitive impairment	DDF
+34520319	expert_3	gut microbiota	microbiome	is linked to	AD	DDF
+34520319	expert_3	impaired sleep and circadian patterns	DDF	affect	AD	DDF
+34520319	expert_3	GM	microbiome	is linked to	MCI	DDF
+34520319	expert_3	GM	microbiome	is linked to	SCRD	DDF
+34520319	expert_3	gut microbiota	microbiome	is linked to	MCI	DDF
+34520319	expert_3	GM	microbiome	is linked to	Alzheimer's disease	DDF
+
+

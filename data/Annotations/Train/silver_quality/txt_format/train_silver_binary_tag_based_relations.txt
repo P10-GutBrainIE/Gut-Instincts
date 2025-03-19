@@ -1,0 +1,3157 @@
+pmid	annotator	subject_label	object_label
+36479494	student_A	dietary supplement	microbiome
+36479494	student_A	dietary supplement	DDF
+
+
+38891970	student_A	DDF	human
+
+
+33381005	student_A	animal	biomedical technique
+33381005	student_A	microbiome	DDF
+33381005	student_A	drug	DDF
+33381005	student_A	DDF	animal
+33381005	student_A	drug	microbiome
+33381005	student_A	bacteria	microbiome
+
+
+38173790	student_A	DDF	human
+38173790	student_A	microbiome	anatomical location
+38173790	student_A	dietary supplement	DDF
+38173790	student_A	microbiome	DDF
+
+
+35263739	student_A	DDF	human
+35263739	student_A	microbiome	anatomical location
+35263739	student_A	DDF	microbiome
+35263739	student_A	microbiome	DDF
+35263739	student_A	bacteria	microbiome
+
+
+36406865	student_A	DDF	human
+36406865	student_A	microbiome	human
+36406865	student_A	bacteria	human
+36406865	student_A	microbiome	DDF
+36406865	student_A	bacteria	DDF
+
+
+33099131	student_A	DDF	human
+33099131	student_A	microbiome	human
+33099131	student_A	microbiome	biomedical technique
+33099131	student_A	human	biomedical technique
+33099131	student_A	bacteria	DDF
+
+
+32941730	student_B	bacteria	animal
+32941730	student_B	DDF	animal
+32941730	student_B	animal	biomedical technique
+
+
+32733812	student_A	chemical	DDF
+32733812	student_A	bacteria	microbiome
+32733812	student_A	microbiome	DDF
+
+
+39237483	student_B	DDF	human
+39237483	student_B	microbiome	human
+39237483	student_B	microbiome	biomedical technique
+39237483	student_B	DDF	microbiome
+39237483	student_B	microbiome	DDF
+39237483	student_B	bacteria	DDF
+39237483	student_B	bacteria	microbiome
+
+
+34769091	student_A	chemical	anatomical location
+
+
+35411052	student_A	chemical	human
+35411052	student_A	DDF	bacteria
+35411052	student_A	microbiome	DDF
+35411052	student_A	chemical	DDF
+35411052	student_A	bacteria	chemical
+
+
+32733199	student_A	microbiome	DDF
+
+
+31576631	student_A	microbiome	animal
+31576631	student_A	animal	biomedical technique
+31576631	student_A	chemical	anatomical location
+31576631	student_A	microbiome	anatomical location
+31576631	student_A	DDF	animal
+31576631	student_A	DDF	DDF
+31576631	student_A	anatomical location	animal
+31576631	student_A	chemical	microbiome
+31576631	student_A	chemical	DDF
+
+
+33327916	student_B	dietary supplement	microbiome
+33327916	student_B	dietary supplement	DDF
+33327916	student_B	microbiome	anatomical location
+33327916	student_B	microbiome	DDF
+
+
+33643026	student_A	DDF	human
+33643026	student_A	microbiome	human
+33643026	student_A	DDF	chemical
+33643026	student_A	DDF	bacteria
+33643026	student_A	DDF	DDF
+33643026	student_A	microbiome	DDF
+33643026	student_A	chemical	microbiome
+
+
+33070123	student_A	food	DDF
+33070123	student_A	dietary supplement	DDF
+33070123	student_A	food	microbiome
+33070123	student_A	dietary supplement	microbiome
+33070123	student_A	DDF	microbiome
+33070123	student_A	microbiome	DDF
+33070123	student_A	chemical	DDF
+33070123	student_A	drug	microbiome
+
+
+35931717	student_A	bacteria	DDF
+35931717	student_A	DDF	DDF
+35931717	student_A	microbiome	DDF
+
+
+35052575	student_A	chemical	microbiome
+
+
+35730414	student_A	DDF	human
+35730414	student_A	food	DDF
+35730414	student_A	dietary supplement	DDF
+35730414	student_A	DDF	microbiome
+35730414	student_A	DDF	DDF
+35730414	student_A	microbiome	DDF
+
+
+36613586	student_B	bacteria	DDF
+36613586	student_B	dietary supplement	DDF
+36613586	student_B	microbiome	anatomical location
+36613586	student_B	bacteria	microbiome
+
+
+38914414	student_A	dietary supplement	DDF
+38914414	student_A	microbiome	DDF
+
+
+35362965	student_A	bacteria	DDF
+35362965	student_A	anatomical location	human
+
+
+32557853	student_A	DDF	human
+32557853	student_A	microbiome	human
+32557853	student_A	microbiome	biomedical technique
+32557853	student_A	DDF	bacteria
+32557853	student_A	human	biomedical technique
+32557853	student_A	microbiome	DDF
+32557853	student_A	chemical	DDF
+
+
+
+
+35666299	student_B	DDF	human
+35666299	student_B	anatomical location	animal
+35666299	student_B	microbiome	anatomical location
+35666299	student_B	microbiome	DDF
+35666299	student_B	chemical	gene
+35666299	student_B	chemical	microbiome
+35666299	student_B	chemical	DDF
+35666299	student_B	bacteria	microbiome
+
+
+38868440	student_A	DDF	DDF
+38868440	student_A	DDF	human
+
+
+39247907	student_A	microbiome	animal
+39247907	student_A	DDF	microbiome
+39247907	student_A	DDF	bacteria
+39247907	student_A	microbiome	DDF
+39247907	student_A	DDF	animal
+
+
+36289839	student_B	anatomical location	human
+36289839	student_B	DDF	human
+36289839	student_B	microbiome	human
+36289839	student_B	microbiome	anatomical location
+36289839	student_B	microbiome	DDF
+36289839	student_B	chemical	microbiome
+
+
+38975363	student_A	bacteria	DDF
+38975363	student_A	microbiome	DDF
+
+
+39375584	student_A	DDF	human
+39375584	student_A	food	bacteria
+39375584	student_A	food	DDF
+39375584	student_A	microbiome	human
+39375584	student_A	dietary supplement	DDF
+39375584	student_A	food	microbiome
+39375584	student_A	microbiome	biomedical technique
+
+
+36155528	student_A	DDF	anatomical location
+36155528	student_A	microbiome	animal
+36155528	student_A	microbiome	biomedical technique
+36155528	student_A	DDF	microbiome
+36155528	student_A	microbiome	DDF
+36155528	student_A	bacteria	microbiome
+
+
+36087572	student_A	DDF	human
+36087572	student_A	microbiome	human
+36087572	student_A	dietary supplement	DDF
+36087572	student_A	dietary supplement	microbiome
+36087572	student_A	DDF	microbiome
+36087572	student_A	DDF	DDF
+36087572	student_A	human	biomedical technique
+
+
+33704660	student_A	DDF	human
+33704660	student_A	microbiome	DDF
+
+
+32266160	student_A	microbiome	human
+32266160	student_A	DDF	human
+32266160	student_A	microbiome	DDF
+
+
+35917710	student_A	DDF	anatomical location
+35917710	student_A	chemical	anatomical location
+35917710	student_A	chemical	DDF
+
+
+32088434	student_A	microbiome	animal
+32088434	student_A	chemical	microbiome
+32088434	student_A	DDF	DDF
+32088434	student_A	DDF	animal
+32088434	student_A	chemical	DDF
+
+
+35352107	student_A	anatomical location	human
+35352107	student_A	microbiome	human
+35352107	student_A	dietary supplement	DDF
+35352107	student_A	dietary supplement	microbiome
+35352107	student_A	microbiome	DDF
+35352107	student_A	bacteria	DDF
+35352107	student_A	chemical	microbiome
+35352107	student_A	bacteria	microbiome
+
+
+39452233	student_A	dietary supplement	DDF
+
+
+36458229	student_B	microbiome	DDF
+
+
+35956395	student_B	microbiome	human
+35956395	student_B	DDF	human
+35956395	student_B	chemical	DDF
+
+
+39291634	student_B	dietary supplement	DDF
+39291634	student_B	DDF	human
+39291634	student_B	human	biomedical technique
+39291634	student_B	microbiome	DDF
+
+
+32643435	student_A	DDF	human
+32643435	student_A	microbiome	DDF
+
+
+33803607	student_B	food	DDF
+33803607	student_B	food	bacteria
+
+
+32735929	student_B	dietary supplement	DDF
+32735929	student_B	microbiome	anatomical location
+32735929	student_B	dietary supplement	microbiome
+32735929	student_B	DDF	DDF
+32735929	student_B	microbiome	DDF
+
+
+35594949	student_A	microbiome	animal
+35594949	student_A	animal	biomedical technique
+35594949	student_A	DDF	human
+35594949	student_A	chemical	microbiome
+35594949	student_A	DDF	DDF
+35594949	student_A	microbiome	DDF
+35594949	student_A	drug	DDF
+35594949	student_A	bacteria	DDF
+35594949	student_A	DDF	animal
+35594949	student_A	chemical	DDF
+35594949	student_A	drug	microbiome
+35594949	student_A	bacteria	microbiome
+
+
+34128115	student_B	microbiome	biomedical technique
+34128115	student_B	human	biomedical technique
+34128115	student_B	microbiome	DDF
+34128115	student_B	drug	DDF
+34128115	student_B	drug	microbiome
+
+
+36263629	student_A	human	biomedical technique
+36263629	student_A	DDF	human
+36263629	student_A	chemical	DDF
+
+
+38959253	student_A	DDF	human
+38959253	student_A	microbiome	human
+38959253	student_A	microbiome	anatomical location
+38959253	student_A	bacteria	human
+38959253	student_A	microbiome	DDF
+38959253	student_A	bacteria	DDF
+38959253	student_A	chemical	DDF
+
+
+35812394	student_B	dietary supplement	DDF
+35812394	student_B	DDF	chemical
+
+
+32066253	student_A	DDF	anatomical location
+32066253	student_A	microbiome	animal
+32066253	student_A	bacteria	animal
+32066253	student_A	dietary supplement	DDF
+32066253	student_A	dietary supplement	microbiome
+32066253	student_A	microbiome	DDF
+32066253	student_A	bacteria	DDF
+32066253	student_A	DDF	animal
+32066253	student_A	bacteria	microbiome
+
+
+33153085	student_B	DDF	chemical
+33153085	student_B	microbiome	anatomical location
+33153085	student_B	microbiome	DDF
+
+
+39063241	student_A	DDF	human
+39063241	student_A	drug	human
+39063241	student_A	DDF	DDF
+39063241	student_A	microbiome	DDF
+39063241	student_A	drug	DDF
+39063241	student_A	bacteria	DDF
+39063241	student_A	chemical	DDF
+
+
+32282304	student_A	microbiome	anatomical location
+32282304	student_A	microbiome	DDF
+
+
+32039674	student_A	dietary supplement	microbiome
+32039674	student_A	chemical	bacteria
+32039674	student_A	bacteria	chemical
+
+
+34413194	student_A	bacteria	DDF
+34413194	student_A	microbiome	DDF
+
+
+35309241	student_B	DDF	human
+35309241	student_B	chemical	DDF
+
+
+32516966	student_A	anatomical location	human
+32516966	student_A	microbiome	human
+32516966	student_A	microbiome	anatomical location
+32516966	student_A	microbiome	biomedical technique
+32516966	student_A	microbiome	DDF
+
+
+35276981	student_A	dietary supplement	DDF
+
+
+32473843	student_B	bacteria	DDF
+32473843	student_B	DDF	DDF
+32473843	student_B	chemical	DDF
+32473843	student_B	microbiome	DDF
+
+
+32819577	student_B	microbiome	animal
+32819577	student_B	animal	biomedical technique
+32819577	student_B	bacteria	animal
+32819577	student_B	DDF	microbiome
+32819577	student_B	bacteria	human
+32819577	student_B	microbiome	DDF
+32819577	student_B	bacteria	DDF
+32819577	student_B	DDF	animal
+
+
+35650202	student_A	microbiome	animal
+35650202	student_A	animal	biomedical technique
+35650202	student_A	DDF	human
+35650202	student_A	chemical	microbiome
+35650202	student_A	microbiome	human
+35650202	student_A	DDF	microbiome
+35650202	student_A	DDF	DDF
+35650202	student_A	human	biomedical technique
+35650202	student_A	microbiome	DDF
+35650202	student_A	anatomical location	animal
+35650202	student_A	DDF	animal
+
+
+35002935	student_B	food	DDF
+35002935	student_B	bacteria	DDF
+35002935	student_B	DDF	human
+
+
+33417221	student_A	DDF	human
+
+
+34112355	student_A	chemical	microbiome
+34112355	student_A	chemical	DDF
+34112355	student_A	DDF	chemical
+
+
+38922485	student_B	microbiome	animal
+38922485	student_B	animal	biomedical technique
+38922485	student_B	dietary supplement	DDF
+38922485	student_B	drug	bacteria
+38922485	student_B	dietary supplement	microbiome
+38922485	student_B	microbiome	DDF
+38922485	student_B	drug	DDF
+38922485	student_B	DDF	animal
+38922485	student_B	drug	microbiome
+38922485	student_B	bacteria	microbiome
+
+
+39267834	student_B	DDF	microbiome
+39267834	student_B	DDF	human
+39267834	student_B	DDF	bacteria
+39267834	student_B	microbiome	biomedical technique
+
+
+36104346	student_A	microbiome	animal
+36104346	student_A	DDF	animal
+36104346	student_A	DDF	human
+36104346	student_A	human	biomedical technique
+
+
+32946938	student_A	DDF	human
+32946938	student_A	chemical	anatomical location
+32946938	student_A	chemical	human
+32946938	student_A	DDF	bacteria
+32946938	student_A	bacteria	DDF
+32946938	student_A	chemical	bacteria
+32946938	student_A	chemical	DDF
+
+
+35308282	student_A	DDF	human
+
+
+36494405	student_A	bacteria	DDF
+36494405	student_A	chemical	DDF
+36494405	student_A	drug	bacteria
+
+
+35304983	student_B	dietary supplement	bacteria
+35304983	student_B	dietary supplement	DDF
+35304983	student_B	microbiome	DDF
+35304983	student_B	chemical	microbiome
+35304983	student_B	chemical	DDF
+
+
+38866914	student_A	DDF	human
+38866914	student_A	chemical	bacteria
+38866914	student_A	chemical	DDF
+38866914	student_A	chemical	microbiome
+
+
+35275534	student_B	bacteria	DDF
+35275534	student_B	chemical	DDF
+35275534	student_B	microbiome	DDF
+
+
+35967810	student_B	food	bacteria
+35967810	student_B	food	DDF
+35967810	student_B	microbiome	anatomical location
+35967810	student_B	food	microbiome
+35967810	student_B	dietary supplement	microbiome
+
+
+35085752	student_A	DDF	anatomical location
+35085752	student_A	DDF	human
+35085752	student_A	microbiome	anatomical location
+35085752	student_A	drug	DDF
+35085752	student_A	drug	chemical
+35085752	student_A	drug	microbiome
+
+
+36370535	student_B	DDF	human
+36370535	student_B	microbiome	DDF
+
+
+36648872	student_B	DDF	human
+36648872	student_B	microbiome	human
+36648872	student_B	dietary supplement	DDF
+36648872	student_B	microbiome	DDF
+36648872	student_B	drug	DDF
+36648872	student_B	chemical	DDF
+36648872	student_B	drug	microbiome
+
+
+38979127	student_A	DDF	human
+38979127	student_A	microbiome	human
+38979127	student_A	microbiome	biomedical technique
+38979127	student_A	human	biomedical technique
+38979127	student_A	microbiome	DDF
+
+
+31843492	student_A	animal	biomedical technique
+31843492	student_A	DDF	human
+31843492	student_A	anatomical location	animal
+31843492	student_A	microbiome	human
+31843492	student_A	DDF	microbiome
+31843492	student_A	microbiome	DDF
+31843492	student_A	drug	DDF
+31843492	student_A	chemical	DDF
+31843492	student_A	drug	microbiome
+31843492	student_A	bacteria	microbiome
+
+
+36144449	student_A	dietary supplement	DDF
+36144449	student_A	dietary supplement	microbiome
+36144449	student_A	DDF	bacteria
+36144449	student_A	drug	DDF
+36144449	student_A	chemical	chemical
+36144449	student_A	chemical	DDF
+
+
+35463646	student_A	drug	DDF
+35463646	student_A	microbiome	human
+35463646	student_A	drug	gene
+35463646	student_A	drug	microbiome
+
+
+36037991	student_B	microbiome	animal
+36037991	student_B	animal	biomedical technique
+36037991	student_B	anatomical location	animal
+36037991	student_B	chemical	microbiome
+36037991	student_B	microbiome	biomedical technique
+36037991	student_B	DDF	microbiome
+36037991	student_B	microbiome	DDF
+36037991	student_B	drug	DDF
+36037991	student_B	microbiome	gene
+36037991	student_B	DDF	animal
+36037991	student_B	chemical	DDF
+
+
+35144237	student_A	dietary supplement	bacteria
+35144237	student_A	dietary supplement	DDF
+35144237	student_A	dietary supplement	microbiome
+35144237	student_A	microbiome	DDF
+35144237	student_A	bacteria	DDF
+
+
+39271063	student_A	bacteria	DDF
+39271063	student_A	DDF	DDF
+39271063	student_A	DDF	human
+39271063	student_A	bacteria	chemical
+
+
+34839011	student_A	dietary supplement	DDF
+34839011	student_A	microbiome	DDF
+
+
+35449203	student_A	DDF	human
+35449203	student_A	microbiome	human
+35449203	student_A	chemical	human
+35449203	student_A	DDF	DDF
+35449203	student_A	human	biomedical technique
+35449203	student_A	chemical	microbiome
+35449203	student_A	chemical	DDF
+
+
+35886849	student_A	DDF	DDF
+35886849	student_A	microbiome	DDF
+
+
+33417973	student_A	DDF	anatomical location
+33417973	student_A	chemical	anatomical location
+33417973	student_A	DDF	chemical
+33417973	student_A	microbiome	DDF
+33417973	student_A	chemical	DDF
+
+
+36329546	student_A	food	DDF
+36329546	student_A	dietary supplement	DDF
+36329546	student_A	microbiome	DDF
+
+
+38737108	student_A	chemical	chemical
+38737108	student_A	chemical	DDF
+38737108	student_A	bacteria	gene
+
+
+35779869	student_A	microbiome	DDF
+
+
+35873830	student_A	drug	DDF
+35873830	student_A	dietary supplement	DDF
+
+
+35302147	student_B	microbiome	animal
+35302147	student_B	dietary supplement	DDF
+35302147	student_B	DDF	bacteria
+35302147	student_B	microbiome	DDF
+35302147	student_B	bacteria	DDF
+35302147	student_B	DDF	animal
+35302147	student_B	chemical	DDF
+
+
+36160716	student_A	drug	DDF
+36160716	student_A	microbiome	anatomical location
+
+
+34795270	student_A	dietary supplement	microbiome
+34795270	student_A	dietary supplement	DDF
+
+
+35704960	student_A	DDF	human
+35704960	student_A	dietary supplement	DDF
+35704960	student_A	microbiome	biomedical technique
+35704960	student_A	human	biomedical technique
+35704960	student_A	drug	DDF
+35704960	student_A	chemical	DDF
+
+
+39134099	student_A	animal	biomedical technique
+39134099	student_A	DDF	chemical
+39134099	student_A	DDF	microbiome
+39134099	student_A	DDF	DDF
+39134099	student_A	microbiome	DDF
+39134099	student_A	drug	DDF
+39134099	student_A	chemical	microbiome
+39134099	student_A	drug	microbiome
+
+
+35889348	student_B	chemical	chemical
+35889348	student_B	DDF	human
+35889348	student_B	chemical	microbiome
+35889348	student_B	chemical	DDF
+
+
+35806985	student_B	DDF	human
+35806985	student_B	microbiome	DDF
+
+
+36422338	student_B	anatomical location	human
+36422338	student_B	dietary supplement	bacteria
+36422338	student_B	dietary supplement	DDF
+36422338	student_B	microbiome	anatomical location
+36422338	student_B	dietary supplement	microbiome
+36422338	student_B	microbiome	DDF
+36422338	student_B	chemical	microbiome
+
+
+34783227	student_A	chemical	microbiome
+34783227	student_A	chemical	bacteria
+
+
+32712266	student_A	drug	animal
+32712266	student_A	animal	biomedical technique
+32712266	student_A	DDF	DDF
+32712266	student_A	microbiome	DDF
+32712266	student_A	drug	DDF
+32712266	student_A	DDF	animal
+32712266	student_A	chemical	DDF
+
+
+39187187	student_A	microbiome	animal
+39187187	student_A	animal	biomedical technique
+39187187	student_A	DDF	human
+39187187	student_A	microbiome	human
+39187187	student_A	microbiome	biomedical technique
+39187187	student_A	microbiome	DDF
+39187187	student_A	DDF	animal
+
+
+35788394	student_A	microbiome	animal
+35788394	student_A	DDF	animal
+35788394	student_A	microbiome	DDF
+35788394	student_A	chemical	bacteria
+35788394	student_A	chemical	microbiome
+35788394	student_A	chemical	DDF
+35788394	student_A	bacteria	microbiome
+
+
+38960582	student_A	DDF	human
+38960582	student_A	DDF	animal
+38960582	student_A	microbiome	DDF
+38960582	student_A	drug	DDF
+38960582	student_A	chemical	microbiome
+38960582	student_A	chemical	DDF
+38960582	student_A	bacteria	microbiome
+
+
+36558556	student_B	microbiome	human
+36558556	student_B	human	biomedical technique
+36558556	student_B	chemical	microbiome
+36558556	student_B	microbiome	microbiome
+36558556	student_B	bacteria	microbiome
+
+
+35956326	student_A	DDF	microbiome
+35956326	student_A	DDF	DDF
+35956326	student_A	microbiome	DDF
+
+
+39139979	student_A	DDF	human
+39139979	student_A	food	microbiome
+39139979	student_A	food	bacteria
+
+
+35562885	student_B	DDF	human
+35562885	student_B	microbiome	human
+35562885	student_B	dietary supplement	DDF
+35562885	student_B	DDF	microbiome
+35562885	student_B	microbiome	DDF
+
+
+33293403	student_A	DDF	anatomical location
+33293403	student_A	DDF	human
+33293403	student_A	microbiome	human
+33293403	student_A	chemical	anatomical location
+33293403	student_A	DDF	bacteria
+33293403	student_A	DDF	DDF
+33293403	student_A	bacteria	human
+33293403	student_A	human	biomedical technique
+33293403	student_A	microbiome	DDF
+33293403	student_A	bacteria	DDF
+33293403	student_A	chemical	DDF
+
+
+38792361	student_B	dietary supplement	microbiome
+38792361	student_B	dietary supplement	DDF
+38792361	student_B	microbiome	DDF
+
+
+33459114	student_A	DDF	DDF
+33459114	student_A	microbiome	DDF
+
+
+36278467	student_B	drug	DDF
+36278467	student_B	drug	bacteria
+
+
+38960388	student_A	bacteria	DDF
+38960388	student_A	chemical	DDF
+
+
+36467550	student_A	animal	biomedical technique
+36467550	student_A	dietary supplement	DDF
+36467550	student_A	dietary supplement	gene
+36467550	student_A	dietary supplement	microbiome
+36467550	student_A	anatomical location	animal
+36467550	student_A	chemical	microbiome
+36467550	student_A	bacteria	chemical
+
+
+35127957	student_A	chemical	gene
+35127957	student_A	chemical	chemical
+35127957	student_A	chemical	microbiome
+35127957	student_A	chemical	DDF
+
+
+35563197	student_A	drug	DDF
+35563197	student_A	chemical	chemical
+35563197	student_A	drug	microbiome
+35563197	student_A	DDF	chemical
+
+
+35279596	student_B	microbiome	animal
+35279596	student_B	drug	gene
+35279596	student_B	drug	bacteria
+35279596	student_B	DDF	bacteria
+35279596	student_B	microbiome	DDF
+35279596	student_B	drug	DDF
+35279596	student_B	DDF	animal
+35279596	student_B	drug	microbiome
+35279596	student_B	bacteria	microbiome
+
+
+
+
+35370947	student_A	microbiome	human
+35370947	student_A	microbiome	DDF
+
+
+36058421	student_B	DDF	human
+36058421	student_B	microbiome	human
+36058421	student_B	DDF	DDF
+36058421	student_B	human	biomedical technique
+36058421	student_B	microbiome	DDF
+36058421	student_B	chemical	DDF
+
+
+38903788	student_A	anatomical location	human
+38903788	student_A	microbiome	human
+38903788	student_A	microbiome	anatomical location
+38903788	student_A	microbiome	biomedical technique
+38903788	student_A	human	biomedical technique
+38903788	student_A	bacteria	microbiome
+
+
+36191374	student_A	microbiome	animal
+36191374	student_A	animal	biomedical technique
+36191374	student_A	DDF	human
+36191374	student_A	DDF	animal
+36191374	student_A	microbiome	DDF
+36191374	student_A	chemical	microbiome
+36191374	student_A	bacteria	microbiome
+
+
+35091889	student_A	animal	biomedical technique
+35091889	student_A	DDF	animal
+35091889	student_A	drug	bacteria
+35091889	student_A	microbiome	DDF
+35091889	student_A	drug	DDF
+35091889	student_A	drug	gene
+35091889	student_A	drug	microbiome
+
+
+39158758	student_B	animal	biomedical technique
+39158758	student_B	anatomical location	animal
+39158758	student_B	DDF	bacteria
+39158758	student_B	microbiome	DDF
+39158758	student_B	drug	DDF
+39158758	student_B	DDF	animal
+
+
+36552604	student_A	food	DDF
+36552604	student_A	food	microbiome
+36552604	student_A	microbiome	DDF
+
+
+39295905	student_A	bacteria	DDF
+39295905	student_A	DDF	human
+39295905	student_A	DDF	bacteria
+
+
+32865266	student_A	microbiome	human
+32865266	student_A	bacteria	human
+32865266	student_A	DDF	human
+32865266	student_A	microbiome	DDF
+
+
+36099873	student_B	DDF	microbiome
+36099873	student_B	DDF	bacteria
+36099873	student_B	microbiome	DDF
+
+
+37515687	student_A	bacteria	DDF
+37515687	student_A	chemical	microbiome
+37515687	student_A	chemical	bacteria
+37515687	student_A	microbiome	DDF
+
+
+35611932	student_A	DDF	human
+35611932	student_A	microbiome	human
+35611932	student_A	human	biomedical technique
+35611932	student_A	drug	DDF
+35611932	student_A	chemical	microbiome
+35611932	student_A	chemical	DDF
+
+
+36280322	student_A	DDF	anatomical location
+36280322	student_A	chemical	anatomical location
+36280322	student_A	DDF	chemical
+36280322	student_A	DDF	DDF
+36280322	student_A	microbiome	DDF
+36280322	student_A	drug	DDF
+36280322	student_A	bacteria	DDF
+36280322	student_A	chemical	DDF
+
+
+35337376	student_A	DDF	DDF
+35337376	student_A	DDF	human
+35337376	student_A	microbiome	DDF
+
+
+35631252	student_B	drug	DDF
+35631252	student_B	drug	microbiome
+35631252	student_B	microbiome	DDF
+
+
+36516809	student_B	DDF	human
+36516809	student_B	chemical	anatomical location
+36516809	student_B	human	biomedical technique
+36516809	student_B	microbiome	DDF
+36516809	student_B	drug	DDF
+36516809	student_B	chemical	microbiome
+36516809	student_B	chemical	DDF
+
+
+35246670	student_A	DDF	microbiome
+35246670	student_A	DDF	DDF
+35246670	student_A	DDF	human
+35246670	student_A	chemical	DDF
+
+
+35840611	student_A	dietary supplement	human
+35840611	student_A	microbiome	human
+35840611	student_A	microbiome	anatomical location
+35840611	student_A	microbiome	biomedical technique
+
+
+39065244	student_A	DDF	microbiome
+39065244	student_A	microbiome	anatomical location
+39065244	student_A	bacteria	microbiome
+39065244	student_A	microbiome	DDF
+
+
+35013099	student_B	DDF	human
+35013099	student_B	human	biomedical technique
+35013099	student_B	microbiome	DDF
+
+
+35923300	student_B	DDF	human
+
+
+39339649	student_A	DDF	human
+39339649	student_A	microbiome	human
+39339649	student_A	dietary supplement	DDF
+39339649	student_A	chemical	DDF
+39339649	student_A	microbiome	gene
+39339649	student_A	chemical	microbiome
+39339649	student_A	dietary supplement	human
+39339649	student_A	bacteria	microbiome
+
+
+36228569	student_A	bacteria	DDF
+36228569	student_A	dietary supplement	DDF
+36228569	student_A	microbiome	human
+
+
+34785689	student_B	DDF	human
+34785689	student_B	chemical	microbiome
+34785689	student_B	human	biomedical technique
+34785689	student_B	microbiome	biomedical technique
+
+
+35194166	student_B	DDF	bacteria
+35194166	student_B	DDF	human
+35194166	student_B	microbiome	DDF
+
+
+33279302	student_A	microbiome	DDF
+33279302	student_A	microbiome	biomedical technique
+
+
+
+
+32112917	student_A	DDF	DDF
+32112917	student_A	chemical	DDF
+
+
+35276927	student_A	dietary supplement	DDF
+35276927	student_A	microbiome	DDF
+
+
+36034698	student_B	animal	biomedical technique
+36034698	student_B	microbiome	DDF
+36034698	student_B	chemical	bacteria
+36034698	student_B	chemical	microbiome
+36034698	student_B	chemical	DDF
+36034698	student_B	bacteria	chemical
+
+
+32032654	student_A	anatomical location	human
+32032654	student_A	DDF	human
+32032654	student_A	microbiome	human
+32032654	student_A	DDF	bacteria
+32032654	student_A	microbiome	DDF
+32032654	student_A	bacteria	microbiome
+
+
+35286767	student_A	dietary supplement	human
+35286767	student_A	dietary supplement	DDF
+35286767	student_A	DDF	human
+35286767	student_A	microbiome	DDF
+
+
+35257836	student_A	chemical	anatomical location
+35257836	student_A	DDF	chemical
+
+
+32154946	student_A	DDF	chemical
+32154946	student_A	chemical	microbiome
+32154946	student_A	DDF	human
+32154946	student_A	chemical	DDF
+
+
+34430117	student_B	DDF	anatomical location
+34430117	student_B	food	DDF
+34430117	student_B	chemical	anatomical location
+34430117	student_B	dietary supplement	DDF
+34430117	student_B	microbiome	DDF
+34430117	student_B	chemical	DDF
+
+
+37492530	student_A	bacteria	DDF
+37492530	student_A	chemical	bacteria
+37492530	student_A	bacteria	microbiome
+
+
+39360283	student_A	dietary supplement	DDF
+39360283	student_A	DDF	human
+39360283	student_A	human	biomedical technique
+
+
+34012926	student_B	DDF	bacteria
+34012926	student_B	bacteria	human
+34012926	student_B	bacteria	bacteria
+34012926	student_B	bacteria	DDF
+34012926	student_B	chemical	bacteria
+34012926	student_B	bacteria	chemical
+34012926	student_B	bacteria	microbiome
+
+
+38806681	student_A	DDF	animal
+
+
+34371014	student_A	anatomical location	human
+34371014	student_A	DDF	human
+34371014	student_A	microbiome	human
+34371014	student_A	microbiome	anatomical location
+34371014	student_A	microbiome	biomedical technique
+34371014	student_A	human	biomedical technique
+34371014	student_A	microbiome	DDF
+34371014	student_A	chemical	DDF
+
+
+38852801	student_A	bacteria	animal
+38852801	student_A	dietary supplement	DDF
+38852801	student_A	chemical	anatomical location
+38852801	student_A	microbiome	DDF
+38852801	student_A	bacteria	DDF
+38852801	student_A	bacteria	microbiome
+
+
+34032647	student_B	chemical	microbiome
+34032647	student_B	chemical	anatomical location
+34032647	student_B	microbiome	DDF
+34032647	student_B	chemical	bacteria
+34032647	student_B	chemical	DDF
+
+
+31790727	student_A	drug	DDF
+31790727	student_A	DDF	microbiome
+31790727	student_A	microbiome	DDF
+31790727	student_A	anatomical location	animal
+31790727	student_A	DDF	animal
+31790727	student_A	drug	microbiome
+
+
+35275538	student_A	DDF	human
+35275538	student_A	microbiome	human
+35275538	student_A	DDF	DDF
+35275538	student_A	bacteria	DDF
+35275538	student_A	bacteria	microbiome
+
+
+35741624	student_A	human	biomedical technique
+
+
+
+
+39426041	student_A	chemical	chemical
+39426041	student_A	DDF	human
+39426041	student_A	microbiome	human
+39426041	student_A	DDF	bacteria
+39426041	student_A	DDF	DDF
+39426041	student_A	microbiome	DDF
+39426041	student_A	bacteria	DDF
+39426041	student_A	bacteria	chemical
+
+
+36240098	student_B	DDF	human
+36240098	student_B	drug	bacteria
+36240098	student_B	human	biomedical technique
+36240098	student_B	microbiome	DDF
+36240098	student_B	drug	DDF
+36240098	student_B	bacteria	DDF
+36240098	student_B	microbiome	gene
+36240098	student_B	drug	gene
+36240098	student_B	bacteria	gene
+36240098	student_B	bacteria	microbiome
+
+
+35400445	student_B	dietary supplement	bacteria
+35400445	student_B	dietary supplement	microbiome
+35400445	student_B	DDF	DDF
+35400445	student_B	chemical	chemical
+35400445	student_B	DDF	animal
+35400445	student_B	drug	microbiome
+35400445	student_B	chemical	anatomical location
+35400445	student_B	microbiome	anatomical location
+35400445	student_B	DDF	bacteria
+35400445	student_B	bacteria	DDF
+35400445	student_B	chemical	microbiome
+35400445	student_B	microbiome	DDF
+35400445	student_B	chemical	DDF
+35400445	student_B	bacteria	bacteria
+35400445	student_B	DDF	anatomical location
+35400445	student_B	dietary supplement	DDF
+35400445	student_B	drug	DDF
+35400445	student_B	chemical	bacteria
+35400445	student_B	bacteria	chemical
+
+
+35731901	student_A	DDF	microbiome
+35731901	student_A	chemical	DDF
+
+
+35405323	student_A	DDF	DDF
+
+
+39078446	student_A	dietary supplement	DDF
+
+
+39110402	student_A	microbiome	DDF
+
+
+32290475	student_A	DDF	human
+32290475	student_A	microbiome	human
+32290475	student_A	chemical	anatomical location
+32290475	student_A	DDF	chemical
+32290475	student_A	microbiome	DDF
+32290475	student_A	drug	DDF
+32290475	student_A	chemical	bacteria
+32290475	student_A	chemical	DDF
+32290475	student_A	bacteria	chemical
+32290475	student_A	bacteria	microbiome
+
+
+32089785	student_A	DDF	human
+32089785	student_A	microbiome	human
+32089785	student_A	microbiome	anatomical location
+32089785	student_A	DDF	DDF
+32089785	student_A	microbiome	DDF
+32089785	student_A	bacteria	DDF
+32089785	student_A	chemical	DDF
+32089785	student_A	bacteria	microbiome
+
+
+39121711	student_A	DDF	bacteria
+39121711	student_A	DDF	human
+39121711	student_A	bacteria	DDF
+39121711	student_A	microbiome	DDF
+
+
+39335452	student_B	anatomical location	human
+39335452	student_B	microbiome	human
+39335452	student_B	bacteria	microbiome
+39335452	student_B	microbiome	biomedical technique
+
+
+32252363	student_A	chemical	anatomical location
+32252363	student_A	chemical	microbiome
+32252363	student_A	chemical	DDF
+
+
+35743087	student_B	microbiome	human
+35743087	student_B	DDF	human
+35743087	student_B	microbiome	DDF
+
+
+36293176	student_A	DDF	human
+36293176	student_A	dietary supplement	DDF
+36293176	student_A	DDF	microbiome
+36293176	student_A	DDF	DDF
+36293176	student_A	microbiome	DDF
+36293176	student_A	drug	DDF
+36293176	student_A	drug	microbiome
+
+
+38901183	student_A	chemical	microbiome
+38901183	student_A	chemical	anatomical location
+38901183	student_A	microbiome	anatomical location
+38901183	student_A	microbiome	DDF
+38901183	student_A	bacteria	DDF
+38901183	student_A	chemical	bacteria
+38901183	student_A	chemical	DDF
+
+
+35607987	student_A	DDF	DDF
+35607987	student_A	chemical	microbiome
+35607987	student_A	DDF	human
+35607987	student_A	human	biomedical technique
+
+
+34909657	student_A	DDF	DDF
+
+
+38732043	student_B	dietary supplement	DDF
+38732043	student_B	microbiome	anatomical location
+38732043	student_B	chemical	anatomical location
+38732043	student_B	chemical	DDF
+
+
+35157987	student_A	drug	DDF
+35157987	student_A	DDF	animal
+
+
+34243604	student_A	chemical	anatomical location
+34243604	student_A	chemical	microbiome
+34243604	student_A	chemical	DDF
+34243604	student_A	DDF	chemical
+
+
+38801922	student_B	microbiome	biomedical technique
+38801922	student_B	DDF	microbiome
+38801922	student_B	microbiome	DDF
+38801922	student_B	bacteria	DDF
+38801922	student_B	bacteria	microbiome
+
+
+33262001	student_B	microbiome	human
+33262001	student_B	DDF	DDF
+33262001	student_B	chemical	DDF
+
+
+32105745	student_A	chemical	bacteria
+32105745	student_A	anatomical location	animal
+32105745	student_A	chemical	microbiome
+32105745	student_A	DDF	DDF
+32105745	student_A	drug	bacteria
+32105745	student_A	drug	DDF
+32105745	student_A	DDF	animal
+32105745	student_A	chemical	DDF
+32105745	student_A	drug	microbiome
+32105745	student_A	bacteria	microbiome
+
+
+32768944	student_A	DDF	anatomical location
+32768944	student_A	microbiome	animal
+32768944	student_A	chemical	animal
+32768944	student_A	microbiome	anatomical location
+32768944	student_A	microbiome	DDF
+32768944	student_A	chemical	microbiome
+32768944	student_A	chemical	DDF
+
+
+37960284	student_A	DDF	DDF
+37960284	student_A	microbiome	DDF
+
+
+34370175	student_A	dietary supplement	DDF
+34370175	student_A	microbiome	anatomical location
+34370175	student_A	microbiome	DDF
+
+
+35308288	student_B	dietary supplement	microbiome
+35308288	student_B	chemical	microbiome
+35308288	student_B	anatomical location	animal
+35308288	student_B	chemical	DDF
+
+
+36402501	student_A	microbiome	DDF
+
+
+38963982	student_A	drug	DDF
+38963982	student_A	drug	gene
+38963982	student_A	DDF	animal
+38963982	student_A	drug	microbiome
+
+
+39458270	student_A	DDF	human
+39458270	student_A	microbiome	biomedical technique
+39458270	student_A	DDF	microbiome
+39458270	student_A	microbiome	DDF
+39458270	student_A	bacteria	DDF
+
+
+34530073	student_A	DDF	human
+34530073	student_A	microbiome	human
+34530073	student_A	microbiome	biomedical technique
+34530073	student_A	DDF	bacteria
+34530073	student_A	human	biomedical technique
+34530073	student_A	microbiome	DDF
+34530073	student_A	chemical	microbiome
+34530073	student_A	chemical	DDF
+34530073	student_A	bacteria	microbiome
+
+
+34569965	student_B	microbiome	animal
+34569965	student_B	DDF	microbiome
+34569965	student_B	microbiome	human
+34569965	student_B	microbiome	DDF
+
+
+36363733	student_B	anatomical location	human
+36363733	student_B	DDF	human
+36363733	student_B	dietary supplement	DDF
+36363733	student_B	dietary supplement	microbiome
+36363733	student_B	chemical	microbiome
+
+
+35819136	student_B	drug	DDF
+35819136	student_B	chemical	microbiome
+35819136	student_B	DDF	human
+35819136	student_B	drug	microbiome
+
+
+35572129	student_A	DDF	microbiome
+35572129	student_A	DDF	human
+35572129	student_A	DDF	animal
+35572129	student_A	chemical	DDF
+
+
+39092201	student_B	DDF	anatomical location
+39092201	student_B	animal	biomedical technique
+39092201	student_B	chemical	anatomical location
+39092201	student_B	microbiome	anatomical location
+39092201	student_B	microbiome	DDF
+39092201	student_B	chemical	DDF
+
+
+33194809	student_A	drug	DDF
+33194809	student_A	chemical	anatomical location
+33194809	student_A	drug	microbiome
+33194809	student_A	microbiome	DDF
+
+
+33050862	student_B	dietary supplement	microbiome
+33050862	student_B	dietary supplement	DDF
+33050862	student_B	DDF	human
+33050862	student_B	microbiome	DDF
+
+
+
+
+38999739	student_A	DDF	human
+38999739	student_A	dietary supplement	DDF
+38999739	student_A	dietary supplement	microbiome
+38999739	student_A	DDF	bacteria
+38999739	student_A	microbiome	DDF
+38999739	student_A	drug	DDF
+38999739	student_A	bacteria	DDF
+
+
+36168204	student_A	DDF	anatomical location
+36168204	student_A	bacteria	DDF
+36168204	student_A	bacteria	drug
+36168204	student_A	DDF	microbiome
+
+
+35076890	student_A	DDF	microbiome
+35076890	student_A	DDF	human
+35076890	student_A	microbiome	human
+
+
+32317956	student_A	chemical	microbiome
+32317956	student_A	food	DDF
+32317956	student_A	chemical	anatomical location
+32317956	student_A	chemical	bacteria
+32317956	student_A	chemical	DDF
+32317956	student_A	bacteria	microbiome
+
+
+33418492	student_B	DDF	human
+33418492	student_B	DDF	chemical
+33418492	student_B	DDF	DDF
+33418492	student_B	human	biomedical technique
+33418492	student_B	chemical	DDF
+
+
+34669122	student_A	drug	DDF
+34669122	student_A	DDF	DDF
+34669122	student_A	chemical	DDF
+
+
+35432048	student_B	dietary supplement	DDF
+35432048	student_B	microbiome	DDF
+
+
+36365032	student_B	microbiome	human
+36365032	student_B	DDF	human
+36365032	student_B	human	biomedical technique
+
+
+35981685	student_B	microbiome	animal
+35981685	student_B	DDF	human
+35981685	student_B	microbiome	DDF
+35981685	student_B	anatomical location	animal
+35981685	student_B	DDF	animal
+
+
+36244970	student_A	DDF	human
+36244970	student_A	microbiome	human
+36244970	student_A	microbiome	biomedical technique
+36244970	student_A	microbiome	DDF
+36244970	student_A	bacteria	DDF
+36244970	student_A	chemical	DDF
+36244970	student_A	bacteria	microbiome
+
+
+
+
+33889128	student_B	DDF	human
+33889128	student_B	human	biomedical technique
+33889128	student_B	microbiome	anatomical location
+
+
+39260135	student_B	dietary supplement	DDF
+39260135	student_B	microbiome	anatomical location
+39260135	student_B	dietary supplement	microbiome
+39260135	student_B	DDF	microbiome
+39260135	student_B	DDF	DDF
+39260135	student_B	microbiome	DDF
+39260135	student_B	drug	DDF
+39260135	student_B	chemical	microbiome
+39260135	student_B	chemical	DDF
+39260135	student_B	drug	microbiome
+
+
+33064969	student_A	microbiome	animal
+33064969	student_A	microbiome	human
+33064969	student_A	microbiome	DDF
+33064969	student_A	bacteria	DDF
+33064969	student_A	DDF	animal
+
+
+38984896	student_A	DDF	human
+38984896	student_A	microbiome	DDF
+
+
+32157731	student_A	microbiome	animal
+32157731	student_A	animal	biomedical technique
+32157731	student_A	chemical	animal
+32157731	student_A	drug	DDF
+32157731	student_A	dietary supplement	DDF
+32157731	student_A	DDF	animal
+32157731	student_A	chemical	gene
+32157731	student_A	bacteria	DDF
+32157731	student_A	food	human
+32157731	student_A	chemical	microbiome
+32157731	student_A	chemical	DDF
+32157731	student_A	drug	microbiome
+
+
+36958817	student_A	DDF	anatomical location
+36958817	student_A	DDF	human
+36958817	student_A	DDF	microbiome
+36958817	student_A	chemical	microbiome
+36958817	student_A	chemical	DDF
+
+
+36466655	student_A	anatomical location	human
+36466655	student_A	chemical	bacteria
+36466655	student_A	dietary supplement	bacteria
+36466655	student_A	chemical	anatomical location
+36466655	student_A	dietary supplement	DDF
+36466655	student_A	microbiome	DDF
+36466655	student_A	bacteria	DDF
+36466655	student_A	chemical	microbiome
+36466655	student_A	bacteria	microbiome
+
+
+35526743	student_B	anatomical location	human
+35526743	student_B	DDF	human
+35526743	student_B	microbiome	human
+35526743	student_B	chemical	anatomical location
+35526743	student_B	microbiome	DDF
+35526743	student_B	chemical	microbiome
+
+
+39371767	student_A	dietary supplement	DDF
+39371767	student_A	microbiome	DDF
+
+
+35151796	student_B	microbiome	animal
+35151796	student_B	DDF	animal
+35151796	student_B	anatomical location	animal
+35151796	student_B	microbiome	DDF
+
+
+38097625	student_A	DDF	human
+38097625	student_A	microbiome	DDF
+38097625	student_A	human	biomedical technique
+38097625	student_A	chemical	bacteria
+38097625	student_A	chemical	microbiome
+
+
+39203714	student_A	dietary supplement	DDF
+39203714	student_A	DDF	microbiome
+39203714	student_A	DDF	DDF
+39203714	student_A	chemical	chemical
+39203714	student_A	chemical	DDF
+
+
+35837118	student_A	microbiome	biomedical technique
+35837118	student_A	DDF	microbiome
+35837118	student_A	human	biomedical technique
+35837118	student_A	microbiome	DDF
+35837118	student_A	chemical	DDF
+
+
+36615279	student_A	chemical	chemical
+36615279	student_A	chemical	microbiome
+36615279	student_A	chemical	DDF
+
+
+35303781	student_A	microbiome	DDF
+
+
+37179826	student_A	DDF	DDF
+
+
+39346901	student_A	animal	biomedical technique
+39346901	student_A	dietary supplement	DDF
+39346901	student_A	microbiome	DDF
+39346901	student_A	drug	DDF
+39346901	student_A	bacteria	DDF
+
+
+34475403	student_A	microbiome	animal
+34475403	student_A	animal	biomedical technique
+34475403	student_A	DDF	animal
+34475403	student_A	microbiome	biomedical technique
+34475403	student_A	DDF	chemical
+34475403	student_A	DDF	bacteria
+34475403	student_A	microbiome	DDF
+34475403	student_A	chemical	microbiome
+34475403	student_A	chemical	DDF
+34475403	student_A	bacteria	microbiome
+
+
+36687704	student_A	dietary supplement	microbiome
+36687704	student_A	dietary supplement	DDF
+36687704	student_A	chemical	anatomical location
+36687704	student_A	DDF	chemical
+
+
+
+
+38931307	student_A	microbiome	animal
+38931307	student_A	chemical	bacteria
+38931307	student_A	DDF	human
+38931307	student_A	chemical	microbiome
+38931307	student_A	microbiome	DDF
+38931307	student_A	DDF	animal
+38931307	student_A	chemical	DDF
+
+
+38896988	student_A	DDF	DDF
+38896988	student_A	DDF	animal
+38896988	student_A	chemical	anatomical location
+
+
+35599496	student_A	microbiome	animal
+35599496	student_A	DDF	animal
+35599496	student_A	DDF	DDF
+35599496	student_A	microbiome	DDF
+35599496	student_A	microbiome	gene
+35599496	student_A	drug	gene
+35599496	student_A	drug	microbiome
+
+
+33571701	student_A	dietary supplement	DDF
+33571701	student_A	DDF	DDF
+
+
+33092396	student_A	anatomical location	human
+33092396	student_A	dietary supplement	DDF
+33092396	student_A	DDF	human
+33092396	student_A	DDF	DDF
+
+
+35203645	student_B	chemical	anatomical location
+35203645	student_B	DDF	DDF
+35203645	student_B	chemical	microbiome
+35203645	student_B	chemical	DDF
+35203645	student_B	bacteria	microbiome
+
+
+39126817	student_A	dietary supplement	microbiome
+39126817	student_A	dietary supplement	DDF
+
+
+39203794	student_A	DDF	human
+39203794	student_A	microbiome	human
+39203794	student_A	microbiome	biomedical technique
+39203794	student_A	DDF	microbiome
+39203794	student_A	DDF	DDF
+39203794	student_A	human	biomedical technique
+39203794	student_A	microbiome	DDF
+39203794	student_A	bacteria	DDF
+39203794	student_A	bacteria	chemical
+39203794	student_A	bacteria	bacteria
+
+
+
+
+36364961	student_B	dietary supplement	microbiome
+36364961	student_B	dietary supplement	DDF
+36364961	student_B	microbiome	DDF
+
+
+35157946	student_A	DDF	microbiome
+35157946	student_A	DDF	human
+35157946	student_A	microbiome	DDF
+
+
+33662500	student_A	animal	biomedical technique
+33662500	student_A	food	microbiome
+33662500	student_A	food	bacteria
+
+
+34571840	student_A	bacteria	DDF
+34571840	student_A	DDF	DDF
+34571840	student_A	microbiome	DDF
+
+
+31737957	student_A	DDF	human
+31737957	student_A	DDF	DDF
+31737957	student_A	microbiome	DDF
+31737957	student_A	drug	DDF
+31737957	student_A	drug	microbiome
+
+
+35937875	student_A	DDF	human
+35937875	student_A	microbiome	human
+35937875	student_A	microbiome	biomedical technique
+35937875	student_A	microbiome	DDF
+35937875	student_A	drug	DDF
+35937875	student_A	chemical	microbiome
+35937875	student_A	drug	microbiome
+35937875	student_A	bacteria	microbiome
+
+
+36543925	student_A	microbiome	animal
+36543925	student_A	DDF	human
+36543925	student_A	microbiome	human
+36543925	student_A	chemical	anatomical location
+36543925	student_A	dietary supplement	gene
+36543925	student_A	microbiome	DDF
+36543925	student_A	drug	DDF
+36543925	student_A	bacteria	DDF
+36543925	student_A	microbiome	gene
+36543925	student_A	DDF	animal
+36543925	student_A	bacteria	microbiome
+
+
+39360304	student_A	microbiome	animal
+39360304	student_A	animal	biomedical technique
+39360304	student_A	microbiome	biomedical technique
+39360304	student_A	DDF	microbiome
+39360304	student_A	DDF	DDF
+39360304	student_A	DDF	animal
+
+
+39456245	student_A	microbiome	human
+39456245	student_A	human	biomedical technique
+
+
+32987244	student_A	food	DDF
+32987244	student_A	DDF	DDF
+32987244	student_A	chemical	DDF
+
+
+38974216	student_B	DDF	microbiome
+38974216	student_B	chemical	DDF
+38974216	student_B	microbiome	DDF
+
+
+32710966	student_A	DDF	anatomical location
+32710966	student_A	chemical	anatomical location
+32710966	student_A	anatomical location	animal
+32710966	student_A	chemical	chemical
+32710966	student_A	chemical	DDF
+
+
+34896331	student_A	DDF	chemical
+34896331	student_A	chemical	microbiome
+34896331	student_A	chemical	DDF
+34896331	student_A	microbiome	DDF
+
+
+38928361	student_B	DDF	human
+38928361	student_B	microbiome	anatomical location
+38928361	student_B	DDF	DDF
+38928361	student_B	microbiome	DDF
+38928361	student_B	drug	DDF
+
+
+39331265	student_A	DDF	microbiome
+39331265	student_A	microbiome	DDF
+39331265	student_A	chemical	gene
+39331265	student_A	chemical	microbiome
+39331265	student_A	chemical	DDF
+
+
+36075637	student_B	DDF	DDF
+
+
+33573273	student_A	chemical	anatomical location
+33573273	student_A	chemical	bacteria
+33573273	student_A	chemical	microbiome
+
+
+31854093	student_B	DDF	anatomical location
+31854093	student_B	animal	biomedical technique
+31854093	student_B	DDF	DDF
+31854093	student_B	anatomical location	animal
+31854093	student_B	bacteria	DDF
+31854093	student_B	chemical	DDF
+
+
+
+
+35464431	student_A	dietary supplement	DDF
+35464431	student_A	microbiome	anatomical location
+35464431	student_A	DDF	DDF
+35464431	student_A	microbiome	DDF
+35464431	student_A	DDF	animal
+
+
+32894625	student_A	DDF	DDF
+32894625	student_A	DDF	human
+
+
+34835406	student_A	dietary supplement	microbiome
+34835406	student_A	microbiome	biomedical technique
+34835406	student_A	microbiome	DDF
+
+
+36569929	student_A	DDF	microbiome
+36569929	student_A	DDF	DDF
+36569929	student_A	chemical	DDF
+36569929	student_A	microbiome	DDF
+
+
+35041424	student_A	food	DDF
+35041424	student_A	microbiome	DDF
+
+
+37490970	student_A	DDF	human
+37490970	student_A	microbiome	human
+37490970	student_A	microbiome	DDF
+37490970	student_A	bacteria	DDF
+37490970	student_A	chemical	DDF
+
+
+35844606	student_B	microbiome	anatomical location
+35844606	student_B	microbiome	DDF
+
+
+33935107	student_A	chemical	microbiome
+
+
+35879588	student_A	microbiome	human
+35879588	student_A	dietary supplement	DDF
+35879588	student_A	DDF	human
+35879588	student_A	microbiome	DDF
+
+
+32244373	student_B	food	DDF
+32244373	student_B	DDF	DDF
+32244373	student_B	chemical	microbiome
+
+
+39339804	student_B	food	bacteria
+39339804	student_B	microbiome	human
+39339804	student_B	dietary supplement	bacteria
+39339804	student_B	microbiome	anatomical location
+39339804	student_B	food	microbiome
+39339804	student_B	dietary supplement	microbiome
+39339804	student_B	DDF	DDF
+39339804	student_B	microbiome	microbiome
+39339804	student_B	bacteria	microbiome
+
+
+38776563	student_A	DDF	DDF
+38776563	student_A	DDF	human
+38776563	student_A	microbiome	anatomical location
+38776563	student_A	microbiome	DDF
+
+
+39106786	student_A	microbiome	DDF
+
+
+33549028	student_A	microbiome	anatomical location
+33549028	student_A	microbiome	DDF
+
+
+32247371	student_A	drug	DDF
+32247371	student_A	microbiome	human
+32247371	student_A	DDF	human
+32247371	student_A	microbiome	DDF
+
+
+39089603	student_A	DDF	human
+39089603	student_A	microbiome	biomedical technique
+39089603	student_A	DDF	DDF
+39089603	student_A	microbiome	DDF
+39089603	student_A	bacteria	DDF
+
+
+34402617	student_A	microbiome	biomedical technique
+
+
+33390888	student_A	drug	DDF
+33390888	student_A	dietary supplement	DDF
+
+
+33138351	student_A	chemical	DDF
+33138351	student_A	microbiome	DDF
+
+
+38848976	student_B	chemical	gene
+38848976	student_B	microbiome	biomedical technique
+38848976	student_B	microbiome	DDF
+38848976	student_B	drug	DDF
+38848976	student_B	microbiome	gene
+38848976	student_B	bacteria	gene
+38848976	student_B	bacteria	microbiome
+
+
+39364125	student_B	DDF	human
+39364125	student_B	microbiome	human
+39364125	student_B	microbiome	anatomical location
+39364125	student_B	DDF	microbiome
+39364125	student_B	DDF	DDF
+39364125	student_B	DDF	bacteria
+39364125	student_B	microbiome	DDF
+
+
+39337263	student_A	DDF	microbiome
+39337263	student_A	DDF	DDF
+39337263	student_A	DDF	human
+39337263	student_A	microbiome	DDF
+
+
+35245613	student_A	DDF	anatomical location
+35245613	student_A	bacteria	DDF
+35245613	student_A	DDF	human
+35245613	student_A	microbiome	DDF
+
+
+35367961	student_A	microbiome	DDF
+
+
+35444255	student_B	DDF	human
+35444255	student_B	microbiome	biomedical technique
+35444255	student_B	DDF	microbiome
+35444255	student_B	human	biomedical technique
+35444255	student_B	microbiome	DDF
+35444255	student_B	chemical	microbiome
+35444255	student_B	bacteria	microbiome
+
+
+38057970	student_A	DDF	human
+
+
+31968211	student_A	microbiome	human
+31968211	student_A	anatomical location	human
+31968211	student_A	microbiome	anatomical location
+31968211	student_A	microbiome	DDF
+
+
+34358037	student_A	bacteria	DDF
+34358037	student_A	DDF	DDF
+34358037	student_A	microbiome	DDF
+
+
+36235622	student_A	bacteria	DDF
+36235622	student_A	DDF	DDF
+36235622	student_A	dietary supplement	DDF
+
+
+35207483	student_B	drug	DDF
+35207483	student_B	dietary supplement	DDF
+
+
+31931152	student_A	dietary supplement	DDF
+31931152	student_A	DDF	human
+31931152	student_A	microbiome	DDF
+
+
+39360531	student_A	DDF	human
+39360531	student_A	chemical	DDF
+
+
+39386896	student_B	DDF	human
+39386896	student_B	microbiome	human
+39386896	student_B	chemical	anatomical location
+39386896	student_B	microbiome	anatomical location
+39386896	student_B	microbiome	biomedical technique
+39386896	student_B	DDF	bacteria
+39386896	student_B	microbiome	DDF
+
+
+33338469	student_B	DDF	anatomical location
+33338469	student_B	bacteria	DDF
+33338469	student_B	chemical	chemical
+33338469	student_B	chemical	bacteria
+33338469	student_B	chemical	DDF
+33338469	student_B	bacteria	chemical
+
+
+35603160	student_A	DDF	human
+35603160	student_A	DDF	bacteria
+35603160	student_A	DDF	DDF
+35603160	student_A	human	biomedical technique
+35603160	student_A	chemical	DDF
+35603160	student_A	bacteria	microbiome
+
+
+39027446	student_A	DDF	human
+39027446	student_A	dietary supplement	DDF
+39027446	student_A	bacteria	DDF
+39027446	student_A	DDF	chemical
+39027446	student_A	DDF	microbiome
+39027446	student_A	DDF	bacteria
+39027446	student_A	DDF	DDF
+39027446	student_A	microbiome	DDF
+39027446	student_A	drug	DDF
+39027446	student_A	chemical	chemical
+39027446	student_A	chemical	microbiome
+39027446	student_A	bacteria	bacteria
+
+
+38735387	student_A	drug	DDF
+38735387	student_A	DDF	DDF
+38735387	student_A	bacteria	gene
+
+
+36362150	student_A	chemical	anatomical location
+36362150	student_A	DDF	microbiome
+36362150	student_A	DDF	DDF
+36362150	student_A	microbiome	DDF
+36362150	student_A	bacteria	DDF
+
+
+38863592	student_A	DDF	human
+38863592	student_A	food	DDF
+38863592	student_A	microbiome	human
+38863592	student_A	dietary supplement	DDF
+38863592	student_A	food	microbiome
+
+
+35715396	student_A	microbiome	human
+35715396	student_A	bacteria	human
+35715396	student_A	DDF	human
+35715396	student_A	microbiome	biomedical technique
+
+
+35508109	student_B	microbiome	animal
+35508109	student_B	animal	biomedical technique
+35508109	student_B	dietary supplement	DDF
+35508109	student_B	microbiome	gene
+35508109	student_B	DDF	animal
+
+
+35342048	student_A	DDF	microbiome
+35342048	student_A	chemical	microbiome
+35342048	student_A	DDF	human
+35342048	student_A	microbiome	biomedical technique
+
+
+31654753	student_A	DDF	DDF
+31654753	student_A	microbiome	DDF
+
+
+38959280	student_A	anatomical location	human
+38959280	student_A	DDF	human
+38959280	student_A	microbiome	DDF
+
+
+36593694	student_B	DDF	anatomical location
+36593694	student_B	chemical	anatomical location
+36593694	student_B	DDF	bacteria
+36593694	student_B	DDF	DDF
+36593694	student_B	DDF	microbiome
+36593694	student_B	bacteria	bacteria
+36593694	student_B	microbiome	DDF
+36593694	student_B	bacteria	DDF
+36593694	student_B	bacteria	chemical
+36593694	student_B	bacteria	microbiome
+
+
+39029984	student_A	DDF	human
+39029984	student_A	microbiome	anatomical location
+39029984	student_A	DDF	DDF
+39029984	student_A	drug	DDF
+39029984	student_A	chemical	microbiome
+39029984	student_A	chemical	DDF
+
+
+34768765	student_A	DDF	human
+34768765	student_A	drug	DDF
+34768765	student_A	bacteria	animal
+34768765	student_A	bacteria	human
+34768765	student_A	DDF	DDF
+34768765	student_A	human	biomedical technique
+34768765	student_A	microbiome	DDF
+34768765	student_A	anatomical location	animal
+34768765	student_A	bacteria	DDF
+34768765	student_A	DDF	animal
+
+
+38815661	student_B	DDF	human
+38815661	student_B	microbiome	human
+38815661	student_B	microbiome	biomedical technique
+38815661	student_B	microbiome	DDF
+38815661	student_B	bacteria	microbiome
+
+
+38827186	student_A	microbiome	DDF
+
+
+38869657	student_B	DDF	human
+38869657	student_B	microbiome	human
+38869657	student_B	drug	human
+38869657	student_B	chemical	human
+38869657	student_B	microbiome	biomedical technique
+38869657	student_B	bacteria	human
+38869657	student_B	chemical	microbiome
+38869657	student_B	bacteria	chemical
+38869657	student_B	drug	microbiome
+
+
+39417049	student_A	DDF	microbiome
+39417049	student_A	microbiome	DDF
+
+
+35713539	student_A	DDF	human
+
+
+34982206	student_A	drug	DDF
+34982206	student_A	drug	human
+34982206	student_A	chemical	DDF
+34982206	student_A	chemical	human
+
+
+35779628	student_A	drug	DDF
+35779628	student_A	drug	animal
+35779628	student_A	DDF	DDF
+35779628	student_A	drug	human
+
+
+36039924	student_A	dietary supplement	DDF
+
+
+35103734	student_A	chemical	animal
+35103734	student_A	chemical	anatomical location
+35103734	student_A	DDF	DDF
+35103734	student_A	chemical	gene
+35103734	student_A	chemical	chemical
+35103734	student_A	chemical	microbiome
+35103734	student_A	chemical	DDF
+35103734	student_A	bacteria	microbiome
+
+
+35831877	student_B	DDF	microbiome
+35831877	student_B	microbiome	DDF
+
+
+35044528	student_B	microbiome	DDF
+
+
+
+
+38857554	student_A	DDF	human
+38857554	student_A	dietary supplement	DDF
+38857554	student_A	anatomical location	animal
+38857554	student_A	DDF	animal
+38857554	student_A	chemical	DDF
+
+
+31829756	student_A	DDF	DDF
+31829756	student_A	chemical	DDF
+31829756	student_A	microbiome	DDF
+
+
+32844199	student_A	microbiome	gene
+32844199	student_A	DDF	human
+32844199	student_A	human	biomedical technique
+32844199	student_A	microbiome	DDF
+
+
+39476179	student_A	dietary supplement	microbiome
+39476179	student_A	DDF	microbiome
+39476179	student_A	drug	microbiome
+39476179	student_A	microbiome	DDF
+
+
+38908788	student_A	DDF	human
+38908788	student_A	microbiome	human
+38908788	student_A	microbiome	biomedical technique
+38908788	student_A	DDF	microbiome
+38908788	student_A	DDF	bacteria
+38908788	student_A	microbiome	DDF
+38908788	student_A	chemical	DDF
+
+
+32827699	student_A	animal	biomedical technique
+32827699	student_A	microbiome	biomedical technique
+32827699	student_A	microbiome	DDF
+32827699	student_A	anatomical location	animal
+32827699	student_A	bacteria	DDF
+32827699	student_A	DDF	animal
+32827699	student_A	chemical	DDF
+
+
+38892645	student_A	DDF	human
+38892645	student_A	microbiome	human
+38892645	student_A	dietary supplement	DDF
+38892645	student_A	dietary supplement	microbiome
+38892645	student_A	DDF	DDF
+38892645	student_A	dietary supplement	human
+
+
+36408101	student_B	microbiome	anatomical location
+36408101	student_B	chemical	DDF
+
+
+35600818	student_B	animal	biomedical technique
+35600818	student_B	drug	bacteria
+35600818	student_B	DDF	bacteria
+35600818	student_B	microbiome	DDF
+35600818	student_B	drug	DDF
+35600818	student_B	DDF	animal
+35600818	student_B	drug	microbiome
+
+
+36421902	student_B	DDF	human
+36421902	student_B	DDF	chemical
+36421902	student_B	human	biomedical technique
+36421902	student_B	microbiome	DDF
+36421902	student_B	chemical	DDF
+
+
+31684843	student_A	food	DDF
+31684843	student_A	DDF	DDF
+31684843	student_A	dietary supplement	DDF
+
+
+34566874	student_B	drug	DDF
+34566874	student_B	microbiome	human
+34566874	student_B	DDF	human
+
+
+35453597	student_B	anatomical location	human
+35453597	student_B	DDF	human
+35453597	student_B	DDF	microbiome
+35453597	student_B	microbiome	DDF
+35453597	student_B	drug	DDF
+
+
+35822696	student_A	DDF	microbiome
+35822696	student_A	bacteria	DDF
+35822696	student_A	microbiome	DDF
+
+
+32035595	student_B	dietary supplement	DDF
+32035595	student_B	chemical	DDF
+
+
+35349746	student_A	DDF	DDF
+35349746	student_A	microbiome	anatomical location
+
+
+36686268	student_A	bacteria	DDF
+36686268	student_A	microbiome	DDF
+
+
+39303815	student_B	animal	biomedical technique
+39303815	student_B	chemical	anatomical location
+39303815	student_B	DDF	animal
+39303815	student_B	drug	bacteria
+39303815	student_B	microbiome	DDF
+39303815	student_B	drug	DDF
+39303815	student_B	chemical	microbiome
+
+
+32934117	student_A	DDF	human
+32934117	student_A	DDF	chemical
+32934117	student_A	DDF	DDF
+32934117	student_A	human	biomedical technique
+32934117	student_A	microbiome	DDF
+32934117	student_A	bacteria	DDF
+32934117	student_A	chemical	microbiome
+32934117	student_A	chemical	DDF
+
+
+34682763	student_A	dietary supplement	microbiome
+34682763	student_A	drug	microbiome
+34682763	student_A	bacteria	microbiome
+34682763	student_A	microbiome	DDF
+
+
+32323181	student_A	DDF	DDF
+32323181	student_A	chemical	microbiome
+32323181	student_A	microbiome	anatomical location
+32323181	student_A	microbiome	DDF
+
+
+35299696	student_A	microbiome	DDF
+
+
+39458509	student_A	dietary supplement	microbiome
+39458509	student_A	DDF	microbiome
+39458509	student_A	dietary supplement	DDF
+39458509	student_A	microbiome	DDF
+
+
+
+
+32357258	student_A	DDF	human
+32357258	student_A	DDF	chemical
+32357258	student_A	DDF	DDF
+32357258	student_A	human	biomedical technique
+32357258	student_A	microbiome	DDF
+32357258	student_A	chemical	microbiome
+32357258	student_A	chemical	DDF
+
+
+35076270	student_A	drug	DDF
+35076270	student_A	DDF	microbiome
+35076270	student_A	drug	gene
+
+
+31340904	student_A	dietary supplement	DDF
+31340904	student_A	DDF	DDF
+31340904	student_A	microbiome	DDF
+31340904	student_A	bacteria	DDF
+31340904	student_A	chemical	bacteria
+
+
+35959396	student_A	bacteria	DDF
+35959396	student_A	bacteria	chemical
+
+
+36145184	student_B	dietary supplement	DDF
+36145184	student_B	chemical	microbiome
+36145184	student_B	chemical	DDF
+
+
+38968876	student_A	DDF	microbiome
+38968876	student_A	bacteria	microbiome
+
+
+32325848	student_B	bacteria	human
+32325848	student_B	microbiome	DDF
+
+
+
+
+39163908	student_B	dietary supplement	bacteria
+39163908	student_B	dietary supplement	DDF
+39163908	student_B	dietary supplement	microbiome
+39163908	student_B	human	biomedical technique
+39163908	student_B	bacteria	DDF
+39163908	student_B	chemical	microbiome
+39163908	student_B	bacteria	microbiome
+
+
+35067061	student_B	microbiome	animal
+35067061	student_B	anatomical location	animal
+35067061	student_B	bacteria	DDF
+35067061	student_B	DDF	animal
+35067061	student_B	bacteria	gene
+35067061	student_B	bacteria	chemical
+35067061	student_B	bacteria	microbiome
+
+
+32161568	student_B	DDF	human
+32161568	student_B	microbiome	human
+32161568	student_B	chemical	human
+32161568	student_B	DDF	bacteria
+32161568	student_B	DDF	DDF
+32161568	student_B	bacteria	human
+32161568	student_B	human	biomedical technique
+32161568	student_B	microbiome	DDF
+32161568	student_B	bacteria	DDF
+
+
+33499229	student_A	DDF	human
+33499229	student_A	microbiome	human
+33499229	student_A	DDF	bacteria
+33499229	student_A	microbiome	DDF
+33499229	student_A	chemical	microbiome
+33499229	student_A	bacteria	microbiome
+
+
+35491707	student_A	DDF	microbiome
+35491707	student_A	dietary supplement	DDF
+
+
+34907601	student_B	microbiome	animal
+34907601	student_B	DDF	human
+34907601	student_B	dietary supplement	DDF
+34907601	student_B	dietary supplement	gene
+34907601	student_B	microbiome	biomedical technique
+34907601	student_B	dietary supplement	microbiome
+34907601	student_B	DDF	animal
+34907601	student_B	bacteria	microbiome
+
+
+38756585	student_B	DDF	human
+38756585	student_B	DDF	bacteria
+38756585	student_B	DDF	DDF
+38756585	student_B	human	biomedical technique
+
+
+34025392	student_A	DDF	anatomical location
+34025392	student_A	DDF	human
+34025392	student_A	dietary supplement	DDF
+34025392	student_A	DDF	DDF
+34025392	student_A	DDF	animal
+
+
+31552496	student_A	dietary supplement	microbiome
+31552496	student_A	chemical	DDF
+31552496	student_A	drug	DDF
+31552496	student_A	microbiome	DDF
+
+
+35849305	student_A	DDF	human
+35849305	student_A	dietary supplement	DDF
+35849305	student_A	dietary supplement	microbiome
+35849305	student_A	microbiome	DDF
+35849305	student_A	bacteria	DDF
+
+
+38732060	student_A	dietary supplement	microbiome
+38732060	student_A	dietary supplement	DDF
+38732060	student_A	microbiome	anatomical location
+38732060	student_A	dietary supplement	human
+
+
+35399732	student_B	bacteria	DDF
+35399732	student_B	DDF	human
+35399732	student_B	microbiome	human
+
+
+34274348	student_A	chemical	microbiome
+34274348	student_A	microbiome	anatomical location
+
+
+39317918	student_A	microbiome	anatomical location
+
+
+32247376	student_A	DDF	DDF
+32247376	student_A	microbiome	DDF
+
+
+36613486	student_B	anatomical location	human
+36613486	student_B	chemical	microbiome
+36613486	student_B	DDF	human
+36613486	student_B	microbiome	human
+
+
+38889540	student_B	anatomical location	human
+38889540	student_B	DDF	human
+38889540	student_B	microbiome	human
+38889540	student_B	dietary supplement	microbiome
+38889540	student_B	DDF	microbiome
+
+
+
+
+36421473	student_A	chemical	DDF
+36421473	student_A	microbiome	anatomical location
+36421473	student_A	bacteria	microbiome
+36421473	student_A	microbiome	DDF
+
+
+33860738	student_A	DDF	DDF
+33860738	student_A	DDF	human
+
+
+39378456	student_A	dietary supplement	microbiome
+39378456	student_A	dietary supplement	DDF
+39378456	student_A	drug	microbiome
+39378456	student_A	microbiome	DDF
+
+
+39125364	student_A	dietary supplement	human
+39125364	student_A	dietary supplement	DDF
+39125364	student_A	DDF	human
+39125364	student_A	microbiome	DDF
+
+
+35711580	student_B	DDF	human
+35711580	student_B	microbiome	human
+35711580	student_B	chemical	anatomical location
+35711580	student_B	human	biomedical technique
+35711580	student_B	microbiome	DDF
+
+
+35742813	student_B	drug	animal
+35742813	student_B	anatomical location	animal
+35742813	student_B	dietary supplement	DDF
+35742813	student_B	microbiome	DDF
+35742813	student_B	drug	DDF
+35742813	student_B	drug	gene
+
+
+37389240	student_A	DDF	anatomical location
+37389240	student_A	DDF	bacteria
+37389240	student_A	DDF	DDF
+37389240	student_A	DDF	human
+
+
+
+
+36359864	student_A	microbiome	animal
+36359864	student_A	drug	animal
+36359864	student_A	DDF	human
+36359864	student_A	microbiome	human
+36359864	student_A	drug	human
+36359864	student_A	chemical	DDF
+36359864	student_A	drug	bacteria
+36359864	student_A	microbiome	DDF
+36359864	student_A	drug	DDF
+36359864	student_A	chemical	chemical
+36359864	student_A	drug	chemical
+36359864	student_A	drug	microbiome
+
+
+35016506	student_A	food	DDF
+35016506	student_A	DDF	animal
+35016506	student_A	food	gene
+35016506	student_A	microbiome	DDF
+
+
+33148438	student_A	animal	biomedical technique
+33148438	student_A	chemical	animal
+33148438	student_A	dietary supplement	DDF
+33148438	student_A	microbiome	biomedical technique
+33148438	student_A	microbiome	DDF
+33148438	student_A	DDF	animal
+
+
+38803488	student_A	chemical	DDF
+38803488	student_A	bacteria	gene
+38803488	student_A	microbiome	DDF
+
+
+35115853	student_A	microbiome	animal
+35115853	student_A	DDF	microbiome
+
+
+34347266	student_B	anatomical location	animal
+34347266	student_B	DDF	animal
+34347266	student_B	chemical	DDF
+34347266	student_B	microbiome	DDF
+
+
+37529095	student_A	bacteria	animal
+37529095	student_A	DDF	DDF
+
+
+35422756	student_A	DDF	anatomical location
+35422756	student_A	chemical	anatomical location
+35422756	student_A	DDF	chemical
+35422756	student_A	DDF	DDF
+35422756	student_A	chemical	DDF
+35422756	student_A	bacteria	microbiome
+
+
+34954497	student_A	microbiome	human
+34954497	student_A	microbiome	DDF
+34954497	student_A	DDF	human
+34954497	student_A	bacteria	microbiome
+
+
+37346870	student_A	DDF	animal
+37346870	student_A	DDF	human
+37346870	student_A	microbiome	DDF
+
+
+36558531	student_A	chemical	microbiome
+36558531	student_A	bacteria	DDF
+36558531	student_A	microbiome	DDF
+36558531	student_A	chemical	chemical
+36558531	student_A	chemical	bacteria
+36558531	student_A	chemical	DDF
+36558531	student_A	bacteria	chemical
+
+
+33633723	student_A	DDF	human
+33633723	student_A	microbiome	anatomical location
+33633723	student_A	bacteria	human
+33633723	student_A	microbiome	DDF
+33633723	student_A	bacteria	DDF
+
+
+36934020	student_B	DDF	anatomical location
+36934020	student_B	bacteria	animal
+36934020	student_B	microbiome	biomedical technique
+36934020	student_B	DDF	bacteria
+36934020	student_B	DDF	DDF
+36934020	student_B	chemical	chemical
+36934020	student_B	chemical	bacteria
+36934020	student_B	chemical	DDF
+
+
+35433746	student_A	dietary supplement	DDF
+35433746	student_A	microbiome	anatomical location
+35433746	student_A	microbiome	DDF
+
+
+31606537	student_A	chemical	bacteria
+31606537	student_A	chemical	microbiome
+31606537	student_A	drug	bacteria
+31606537	student_A	drug	DDF
+31606537	student_A	DDF	animal
+31606537	student_A	chemical	DDF
+31606537	student_A	drug	microbiome
+31606537	student_A	bacteria	microbiome
+
+
+38892525	student_B	food	DDF
+38892525	student_B	chemical	microbiome
+38892525	student_B	food	microbiome
+38892525	student_B	microbiome	DDF
+
+
+35631301	student_B	anatomical location	human
+35631301	student_B	DDF	human
+35631301	student_B	microbiome	human
+35631301	student_B	dietary supplement	DDF
+35631301	student_B	chemical	anatomical location
+35631301	student_B	drug	DDF
+35631301	student_B	chemical	microbiome
+35631301	student_B	chemical	DDF
+
+
+38972900	student_A	DDF	DDF
+38972900	student_A	DDF	animal
+
+
+31837645	student_A	food	DDF
+31837645	student_A	dietary supplement	DDF
+31837645	student_A	microbiome	anatomical location
+31837645	student_A	food	microbiome
+31837645	student_A	dietary supplement	microbiome
+31837645	student_A	DDF	DDF
+31837645	student_A	microbiome	DDF
+
+
+36183483	student_A	microbiome	human
+36183483	student_A	bacteria	microbiome
+36183483	student_A	microbiome	biomedical technique
+
+
+35243260	student_A	chemical	animal
+35243260	student_A	microbiome	DDF
+
+
+39195546	student_A	anatomical location	human
+39195546	student_A	DDF	human
+39195546	student_A	microbiome	human
+39195546	student_A	microbiome	anatomical location
+39195546	student_A	chemical	human
+39195546	student_A	DDF	chemical
+39195546	student_A	DDF	microbiome
+39195546	student_A	bacteria	human
+39195546	student_A	chemical	microbiome
+
+
+38944290	student_B	microbiome	animal
+38944290	student_B	DDF	microbiome
+38944290	student_B	DDF	bacteria
+38944290	student_B	anatomical location	animal
+38944290	student_B	microbiome	gene
+38944290	student_B	DDF	animal
+
+
+32926778	student_A	microbiome	animal
+32926778	student_A	microbiome	DDF
+32926778	student_A	chemical	chemical
+32926778	student_A	DDF	animal
+32926778	student_A	chemical	DDF
+32926778	student_A	bacteria	microbiome
+
+
+39121264	student_A	chemical	microbiome
+
+
+36478577	student_B	dietary supplement	microbiome
+36478577	student_B	DDF	microbiome
+36478577	student_B	dietary supplement	DDF
+36478577	student_B	chemical	microbiome
+
+
+34996385	student_A	DDF	DDF
+34996385	student_A	chemical	microbiome
+34996385	student_A	human	biomedical technique
+34996385	student_A	drug	chemical
+
+
+32871960	student_A	microbiome	human
+32871960	student_A	DDF	human
+32871960	student_A	microbiome	biomedical technique
+32871960	student_A	microbiome	DDF
+
+
+39021622	student_A	DDF	human
+39021622	student_A	microbiome	human
+39021622	student_A	dietary supplement	DDF
+39021622	student_A	microbiome	anatomical location
+39021622	student_A	microbiome	DDF
+
+
+34996879	student_A	DDF	human
+34996879	student_A	chemical	human
+34996879	student_A	microbiome	biomedical technique
+34996879	student_A	DDF	microbiome
+34996879	student_A	bacteria	human
+34996879	student_A	chemical	microbiome
+34996879	student_A	chemical	DDF
+34996879	student_A	bacteria	chemical
+
+
+35600753	student_B	microbiome	animal
+35600753	student_B	DDF	human
+35600753	student_B	microbiome	human
+35600753	student_B	dietary supplement	DDF
+35600753	student_B	microbiome	DDF
+35600753	student_B	drug	DDF
+35600753	student_B	DDF	animal
+35600753	student_B	drug	microbiome
+
+
+35127723	student_A	drug	DDF
+35127723	student_A	DDF	DDF
+35127723	student_A	chemical	anatomical location
+
+
+36088985	student_A	microbiome	animal
+36088985	student_A	anatomical location	animal
+36088985	student_A	drug	DDF
+36088985	student_A	DDF	animal
+36088985	student_A	chemical	DDF
+36088985	student_A	drug	microbiome
+
+
+36078738	student_A	dietary supplement	bacteria
+36078738	student_A	dietary supplement	DDF
+36078738	student_A	microbiome	anatomical location
+36078738	student_A	dietary supplement	microbiome
+36078738	student_A	drug	DDF
+
+
+38748594	student_A	microbiome	human
+38748594	student_A	DDF	human
+38748594	student_A	microbiome	DDF
+
+
+35654260	student_B	anatomical location	human
+35654260	student_B	DDF	human
+35654260	student_B	microbiome	human
+35654260	student_B	DDF	microbiome
+35654260	student_B	microbiome	DDF
+35654260	student_B	chemical	DDF
+
+
+35432038	student_A	DDF	microbiome
+35432038	student_A	microbiome	anatomical location
+35432038	student_A	microbiome	DDF
+
+
+38847603	student_B	microbiome	human
+38847603	student_B	dietary supplement	DDF
+38847603	student_B	dietary supplement	microbiome
+38847603	student_B	microbiome	DDF
+38847603	student_B	chemical	microbiome
+
+
+35317694	student_B	dietary supplement	microbiome
+35317694	student_B	dietary supplement	bacteria
+35317694	student_B	dietary supplement	DDF
+35317694	student_B	microbiome	DDF
+
+
+36001607	student_A	DDF	DDF
+36001607	student_A	chemical	microbiome
+36001607	student_A	microbiome	biomedical technique
+
+
+35981631	student_A	microbiome	animal
+35981631	student_A	animal	biomedical technique
+35981631	student_A	chemical	microbiome
+35981631	student_A	microbiome	biomedical technique
+35981631	student_A	drug	DDF
+35981631	student_A	DDF	animal
+35981631	student_A	chemical	DDF
+35981631	student_A	drug	microbiome
+35981631	student_A	bacteria	microbiome
+
+
+36158270	student_A	DDF	human
+36158270	student_A	microbiome	human
+36158270	student_A	microbiome	biomedical technique
+36158270	student_A	DDF	microbiome
+36158270	student_A	microbiome	DDF
+36158270	student_A	bacteria	microbiome
+
+
+36619768	student_A	DDF	human
+36619768	student_A	DDF	microbiome
+36619768	student_A	DDF	DDF
+36619768	student_A	microbiome	DDF
+36619768	student_A	drug	DDF
+
+
+35135531	student_B	anatomical location	human
+35135531	student_B	DDF	human
+35135531	student_B	drug	DDF
+35135531	student_B	microbiome	human
+35135531	student_B	dietary supplement	DDF
+35135531	student_B	dietary supplement	microbiome
+35135531	student_B	DDF	microbiome
+35135531	student_B	human	biomedical technique
+35135531	student_B	microbiome	DDF
+35135531	student_B	chemical	gene
+35135531	student_B	chemical	microbiome
+35135531	student_B	chemical	DDF
+
+
+
+
+36959989	student_A	DDF	human
+36959989	student_A	dietary supplement	DDF
+36959989	student_A	microbiome	anatomical location
+36959989	student_A	DDF	DDF
+36959989	student_A	microbiome	DDF
+36959989	student_A	drug	DDF
+36959989	student_A	bacteria	DDF
+
+
+33362788	student_A	chemical	DDF
+33362788	student_A	DDF	chemical
+
+
+34938619	student_A	DDF	DDF
+
+
+35272713	student_B	microbiome	animal
+35272713	student_B	drug	gene
+35272713	student_B	microbiome	DDF
+35272713	student_B	drug	bacteria
+35272713	student_B	drug	DDF
+35272713	student_B	DDF	animal
+35272713	student_B	drug	microbiome
+35272713	student_B	bacteria	microbiome
+
+
+35889175	student_A	chemical	microbiome
+35889175	student_A	chemical	DDF
+35889175	student_A	microbiome	DDF
+
+
+36551872	student_A	dietary supplement	microbiome
+36551872	student_A	DDF	DDF
+36551872	student_A	chemical	DDF
+36551872	student_A	microbiome	DDF
+
+
+32103766	student_A	microbiome	human
+32103766	student_A	microbiome	anatomical location
+32103766	student_A	bacteria	microbiome
+32103766	student_A	microbiome	DDF
+
+
+33617267	student_A	animal	biomedical technique
+33617267	student_A	chemical	animal
+33617267	student_A	dietary supplement	DDF
+33617267	student_A	dietary supplement	microbiome
+33617267	student_A	chemical	gene
+33617267	student_A	chemical	microbiome
+33617267	student_A	chemical	DDF
+
+
+36093196	student_B	dietary supplement	microbiome
+36093196	student_B	microbiome	human
+36093196	student_B	dietary supplement	DDF
+36093196	student_B	DDF	human
+
+
+36334596	student_B	microbiome	anatomical location
+
+
+
+
+39287570	student_A	microbiome	human
+39287570	student_A	DDF	human
+39287570	student_A	microbiome	biomedical technique
+
+
+38582194	student_A	DDF	human
+38582194	student_A	microbiome	DDF
+
+
+36358286	student_A	microbiome	animal
+36358286	student_A	animal	biomedical technique
+36358286	student_A	microbiome	DDF
+36358286	student_A	bacteria	DDF
+36358286	student_A	DDF	animal
+36358286	student_A	bacteria	microbiome
+
+
+32226375	student_B	microbiome	DDF
+
+
+39375215	student_A	microbiome	DDF
+
+
+37798034	student_A	drug	DDF
+37798034	student_A	DDF	human
+37798034	student_A	human	biomedical technique
+37798034	student_A	microbiome	DDF
+
+
+35650236	student_B	DDF	human
+35650236	student_B	microbiome	biomedical technique
+35650236	student_B	microbiome	DDF
+35650236	student_B	bacteria	DDF
+35650236	student_B	chemical	microbiome
+
+
+34911958	student_A	drug	DDF
+34911958	student_A	bacteria	drug
+34911958	student_A	drug	chemical
+34911958	student_A	chemical	DDF
+
+
+35799798	student_B	microbiome	human
+35799798	student_B	DDF	human
+35799798	student_B	microbiome	biomedical technique
+
+
+39392025	student_A	bacteria	DDF
+
+
+34750307	student_A	dietary supplement	DDF
+34750307	student_A	microbiome	DDF
+
+
+36355135	student_A	microbiome	anatomical location
+36355135	student_A	microbiome	DDF
+
+
+34719435	student_A	drug	DDF
+34719435	student_A	bacteria	DDF
+34719435	student_A	microbiome	DDF
+
+
+33470765	student_A	anatomical location	animal
+33470765	student_A	chemical	anatomical location
+33470765	student_A	DDF	animal
+33470765	student_A	chemical	DDF
+
+
+36226922	student_A	dietary supplement	DDF
+36226922	student_A	chemical	bacteria
+36226922	student_A	chemical	DDF
+36226922	student_A	chemical	anatomical location
+
+
+
+
+39199404	student_B	microbiome	animal
+39199404	student_B	DDF	human
+39199404	student_B	microbiome	DDF
+39199404	student_B	DDF	animal
+39199404	student_B	chemical	DDF
+
+
+35829770	student_A	DDF	DDF
+35829770	student_A	chemical	microbiome
+35829770	student_A	microbiome	DDF
+
+
+34948234	student_A	anatomical location	human
+34948234	student_A	DDF	human
+34948234	student_A	microbiome	human
+34948234	student_A	chemical	anatomical location
+34948234	student_A	microbiome	anatomical location
+34948234	student_A	DDF	DDF
+34948234	student_A	microbiome	DDF
+34948234	student_A	chemical	microbiome
+
+
+33404072	student_A	bacteria	DDF
+33404072	student_A	bacteria	microbiome
+33404072	student_A	microbiome	DDF
+
+
+33291597	student_A	chemical	anatomical location
+33291597	student_A	dietary supplement	DDF
+33291597	student_A	DDF	microbiome
+33291597	student_A	DDF	DDF
+33291597	student_A	chemical	microbiome
+33291597	student_A	chemical	DDF
+
+
+38892694	student_B	DDF	human
+38892694	student_B	microbiome	human
+38892694	student_B	chemical	microbiome
+38892694	student_B	drug	microbiome
+38892694	student_B	bacteria	microbiome
+
+
+39015337	student_A	DDF	human
+39015337	student_A	microbiome	human
+39015337	student_A	microbiome	biomedical technique
+39015337	student_A	bacteria	human
+39015337	student_A	human	biomedical technique
+39015337	student_A	microbiome	DDF
+
+
+32739365	student_A	anatomical location	animal
+32739365	student_A	dietary supplement	DDF
+32739365	student_A	DDF	animal
+32739365	student_A	dietary supplement	microbiome
+
+
+
+
+36191590	student_A	DDF	human
+36191590	student_A	microbiome	human
+36191590	student_A	microbiome	biomedical technique
+36191590	student_A	bacteria	human
+36191590	student_A	microbiome	DDF
+
+
+39033825	student_A	microbiome	gene
+39033825	student_A	bacteria	gene
+39033825	student_A	bacteria	microbiome
+39033825	student_A	microbiome	DDF
+
+
+34386321	student_A	microbiome	anatomical location
+34386321	student_A	drug	microbiome
+
+
+33106549	student_A	microbiome	animal
+33106549	student_A	DDF	human
+33106549	student_A	DDF	DDF
+33106549	student_A	DDF	animal
+33106549	student_A	chemical	DDF
+33106549	student_A	bacteria	microbiome
+
+
+36455673	student_B	microbiome	animal
+36455673	student_B	chemical	microbiome
+36455673	student_B	chemical	anatomical location
+36455673	student_B	DDF	microbiome
+36455673	student_B	DDF	DDF
+36455673	student_B	microbiome	DDF
+36455673	student_B	chemical	chemical
+36455673	student_B	DDF	animal
+36455673	student_B	chemical	DDF
+
+
+35225349	student_A	DDF	anatomical location
+35225349	student_A	DDF	human
+35225349	student_A	microbiome	human
+35225349	student_A	DDF	microbiome
+35225349	student_A	DDF	DDF
+35225349	student_A	DDF	bacteria
+35225349	student_A	human	biomedical technique
+35225349	student_A	microbiome	DDF
+
+
+35897024	student_A	DDF	human
+
+
+39217732	student_A	DDF	bacteria
+39217732	student_A	DDF	human
+39217732	student_A	bacteria	microbiome
+39217732	student_A	microbiome	DDF
+
+
+36742204	student_A	DDF	anatomical location
+36742204	student_A	dietary supplement	DDF
+36742204	student_A	microbiome	DDF
+
+
+35445772	student_A	chemical	DDF
+35445772	student_A	bacteria	chemical
+35445772	student_A	microbiome	DDF
+
+
+33400024	student_A	bacteria	DDF
+33400024	student_A	chemical	anatomical location
+33400024	student_A	DDF	human
+33400024	student_A	chemical	DDF
+
+
+36140263	student_B	microbiome	human
+36140263	student_B	microbiome	biomedical technique
+36140263	student_B	DDF	microbiome
+36140263	student_B	DDF	bacteria
+36140263	student_B	human	biomedical technique
+36140263	student_B	microbiome	DDF
+36140263	student_B	chemical	gene
+36140263	student_B	microbiome	gene
+36140263	student_B	chemical	microbiome
+36140263	student_B	bacteria	microbiome
+
+
+36558405	student_A	DDF	human
+36558405	student_A	microbiome	anatomical location
+36558405	student_A	DDF	microbiome
+36558405	student_A	DDF	bacteria
+36558405	student_A	microbiome	DDF
+36558405	student_A	chemical	microbiome
+36558405	student_A	bacteria	microbiome
+
+
+35684340	student_A	dietary supplement	DDF
+35684340	student_A	microbiome	anatomical location
+35684340	student_A	microbiome	DDF
+35684340	student_A	chemical	DDF
+35684340	student_A	bacteria	microbiome
+
+
+35924055	student_A	DDF	anatomical location
+35924055	student_A	chemical	DDF
+35924055	student_A	chemical	animal
+35924055	student_A	chemical	gene
+
+
+35035709	student_A	DDF	human
+35035709	student_A	microbiome	biomedical technique
+35035709	student_A	DDF	microbiome
+35035709	student_A	human	biomedical technique
+35035709	student_A	microbiome	DDF
+
+
+32916966	student_A	microbiome	DDF
+
+
+36881358	student_A	DDF	human
+36881358	student_A	DDF	microbiome
+36881358	student_A	DDF	bacteria
+36881358	student_A	bacteria	human
+36881358	student_A	bacteria	DDF
+36881358	student_A	bacteria	microbiome
+
+
+38879123	student_A	bacteria	DDF
+38879123	student_A	DDF	human
+38879123	student_A	microbiome	DDF
+
+
+38875919	student_A	microbiome	human
+38875919	student_A	DDF	human
+38875919	student_A	microbiome	DDF
+
+
+36432461	student_A	DDF	human
+36432461	student_A	food	DDF
+36432461	student_A	microbiome	human
+36432461	student_A	dietary supplement	DDF
+36432461	student_A	dietary supplement	microbiome
+36432461	student_A	microbiome	DDF
+
+
+33719004	student_B	chemical	anatomical location
+33719004	student_B	DDF	chemical
+33719004	student_B	DDF	microbiome
+33719004	student_B	DDF	animal
+33719004	student_B	chemical	DDF
+
+
+34829716	student_A	food	DDF
+34829716	student_A	dietary supplement	microbiome
+
+
+36120376	student_A	microbiome	animal
+36120376	student_A	animal	biomedical technique
+36120376	student_A	anatomical location	animal
+36120376	student_A	drug	bacteria
+36120376	student_A	drug	DDF
+36120376	student_A	bacteria	microbiome
+
+
+36048886	student_A	dietary supplement	human
+36048886	student_A	microbiome	human
+36048886	student_A	DDF	human
+
+
+38983862	student_A	anatomical location	human
+38983862	student_A	DDF	human
+38983862	student_A	DDF	DDF
+38983862	student_A	human	biomedical technique
+38983862	student_A	microbiome	DDF
+
+
+36126853	student_B	microbiome	animal
+36126853	student_B	microbiome	DDF
+
+
+33557583	student_A	chemical	gene
+33557583	student_A	microbiome	gene
+33557583	student_A	microbiome	biomedical technique
+
+
+33185912	student_A	DDF	human
+33185912	student_A	drug	human
+33185912	student_A	human	biomedical technique
+33185912	student_A	microbiome	DDF
+33185912	student_A	drug	DDF
+33185912	student_A	drug	microbiome
+
+
+39313515	student_A	chemical	microbiome
+39313515	student_A	chemical	anatomical location
+39313515	student_A	DDF	DDF
+39313515	student_A	drug	DDF
+39313515	student_A	chemical	chemical
+39313515	student_A	DDF	animal
+39313515	student_A	chemical	DDF
+
+
+35677440	student_A	DDF	human
+35677440	student_A	microbiome	DDF
+
+
+34440599	student_A	DDF	human
+34440599	student_A	microbiome	anatomical location
+34440599	student_A	microbiome	DDF
+
+
+33352217	student_A	microbiome	microbiome
+33352217	student_A	microbiome	DDF
+
+
+35565888	student_A	chemical	microbiome
+35565888	student_A	microbiome	anatomical location
+35565888	student_A	microbiome	DDF
+
+
+35852145	student_A	microbiome	human
+35852145	student_A	human	biomedical technique
+35852145	student_A	microbiome	DDF
+35852145	student_A	chemical	bacteria
+35852145	student_A	bacteria	bacteria
+
+
+36200207	student_A	dietary supplement	DDF
+36200207	student_A	chemical	anatomical location
+36200207	student_A	microbiome	anatomical location
+36200207	student_A	DDF	chemical
+36200207	student_A	dietary supplement	microbiome
+36200207	student_A	DDF	DDF
+36200207	student_A	microbiome	DDF
+36200207	student_A	chemical	microbiome
+36200207	student_A	chemical	DDF
+
+
+37798868	student_A	chemical	microbiome
+37798868	student_A	chemical	DDF
+37798868	student_A	microbiome	biomedical technique
+37798868	student_A	microbiome	DDF
+
+

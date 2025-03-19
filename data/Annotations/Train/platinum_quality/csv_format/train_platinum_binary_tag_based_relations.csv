@@ -1,0 +1,475 @@
+pmid|annotator|subject_label|object_label
+38068763|expert_3|DDF|human
+35965349|expert_7|drug|DDF
+35965349|expert_7|drug|animal
+35965349|expert_7|anatomical location|animal
+35965349|expert_7|drug|microbiome
+34870091|expert_4|microbiome|human
+34870091|expert_4|DDF|human
+34870091|expert_4|microbiome|DDF
+28158162|expert_2|DDF|human
+28158162|expert_2|dietary supplement|DDF
+28158162|expert_2|DDF|microbiome
+28158162|expert_2|DDF|DDF
+28158162|expert_2|microbiome|DDF
+28158162|expert_2|dietary supplement|human
+34172092|expert_6|microbiome|animal
+34172092|expert_6|microbiome|DDF
+34172092|expert_6|bacteria|DDF
+34172092|expert_6|DDF|animal
+34172092|expert_6|chemical|DDF
+34172092|expert_6|drug|microbiome
+37845499|expert_3|DDF|human
+37845499|expert_3|microbiome|anatomical location
+37845499|expert_3|DDF|DDF
+37845499|expert_3|microbiome|DDF
+37845499|expert_3|bacteria|microbiome
+37371676|expert_1|DDF|DDF
+37371676|expert_1|chemical|DDF
+37371676|expert_1|microbiome|DDF
+37574818|expert_2|microbiome|animal
+37574818|expert_2|anatomical location|human
+37574818|expert_2|DDF|human
+37574818|expert_2|chemical|animal
+37574818|expert_2|bacteria|animal
+37574818|expert_2|DDF|DDF
+37574818|expert_2|bacteria|bacteria
+37574818|expert_2|microbiome|DDF
+37574818|expert_2|bacteria|DDF
+37574818|expert_2|DDF|animal
+37574818|expert_2|bacteria|gene
+37574818|expert_2|bacteria|chemical
+37574818|expert_2|bacteria|microbiome
+37571393|expert_2|dietary supplement|DDF
+37571393|expert_2|DDF|human
+37571393|expert_2|dietary supplement|gene
+37571393|expert_2|DDF|DDF
+37841274|expert_4|chemical|anatomical location
+37841274|expert_4|chemical|DDF
+37841274|expert_4|DDF|chemical
+37485660|expert_4|dietary supplement|microbiome
+37485660|expert_4|microbiome|animal
+37485660|expert_4|dietary supplement|DDF
+34098340|expert_1|microbiome|animal
+34098340|expert_1|microbiome|biomedical technique
+38350463|expert_4|chemical|anatomical location
+29352709|expert_7|microbiome|human
+29352709|expert_7|human|biomedical technique
+29352709|expert_7|DDF|human
+29352709|expert_7|microbiome|DDF
+33511258|expert_1|DDF|human
+33511258|expert_1|microbiome|human
+33511258|expert_1|dietary supplement|DDF
+33511258|expert_1|dietary supplement|bacteria
+33511258|expert_1|microbiome|DDF
+33511258|expert_1|bacteria|DDF
+33511258|expert_1|bacteria|microbiome
+33422110|expert_7|dietary supplement|DDF
+33422110|expert_7|chemical|bacteria
+33422110|expert_7|DDF|human
+33422110|expert_7|chemical|DDF
+34985325|expert_2|dietary supplement|DDF
+34985325|expert_2|microbiome|anatomical location
+34985325|expert_2|DDF|DDF
+34985325|expert_2|microbiome|DDF
+34985325|expert_2|bacteria|microbiome
+36550591|expert_3|microbiome|animal
+36550591|expert_3|microbiome|human
+36550591|expert_3|DDF|human
+36550591|expert_3|microbiome|DDF
+30459574|expert_6|dietary supplement|bacteria
+30459574|expert_6|dietary supplement|DDF
+30459574|expert_6|DDF|DDF
+30459574|expert_6|microbiome|DDF
+30459574|expert_6|DDF|animal
+38026003|expert_5|microbiome|animal
+38026003|expert_5|microbiome|human
+38026003|expert_5|DDF|DDF
+38026003|expert_5|microbiome|DDF
+33194817|expert_4|DDF|human
+33194817|expert_4|DDF|microbiome
+33194817|expert_4|DDF|DDF
+33194817|expert_4|DDF|bacteria
+33194817|expert_4|human|biomedical technique
+29022384|expert_2|microbiome|biomedical technique
+29022384|expert_2|bacteria|human
+29022384|expert_2|human|biomedical technique
+29022384|expert_2|microbiome|microbiome
+29022384|expert_2|bacteria|microbiome
+29857583|expert_1|DDF|bacteria
+29857583|expert_1|microbiome|DDF
+34758889|expert_4|microbiome|animal
+34758889|expert_4|animal|biomedical technique
+34758889|expert_4|chemical|animal
+34758889|expert_4|DDF|bacteria
+34758889|expert_4|DDF|DDF
+34758889|expert_4|DDF|microbiome
+34758889|expert_4|microbiome|DDF
+34758889|expert_4|anatomical location|animal
+34758889|expert_4|DDF|animal
+34758889|expert_4|chemical|DDF
+37881577|expert_6|DDF|DDF
+37881577|expert_6|animal|biomedical technique
+37881577|expert_6|DDF|animal
+37881577|expert_6|microbiome|DDF
+36984505|expert_5|DDF|human
+36984505|expert_5|dietary supplement|DDF
+36984505|expert_5|DDF|DDF
+36984505|expert_5|microbiome|DDF
+36984505|expert_5|bacteria|DDF
+36984505|expert_5|chemical|DDF
+36984505|expert_5|bacteria|microbiome
+32979562|expert_3|DDF|bacteria
+32979562|expert_3|DDF|human
+32979562|expert_3|microbiome|biomedical technique
+34961418|expert_2|DDF|human
+34961418|expert_2|microbiome|human
+34961418|expert_2|drug|human
+34961418|expert_2|dietary supplement|bacteria
+34961418|expert_2|dietary supplement|microbiome
+34961418|expert_2|drug|bacteria
+34961418|expert_2|DDF|DDF
+34961418|expert_2|bacteria|human
+34961418|expert_2|human|biomedical technique
+34961418|expert_2|microbiome|DDF
+34961418|expert_2|drug|DDF
+34961418|expert_2|dietary supplement|human
+34961418|expert_2|drug|microbiome
+25034760|expert_1|DDF|human
+25034760|expert_1|DDF|bacteria
+25034760|expert_1|DDF|DDF
+25034760|expert_1|microbiome|DDF
+25034760|expert_1|chemical|DDF
+33067915|expert_4|DDF|DDF
+33067915|expert_4|DDF|human
+33271210|expert_2|DDF|human
+33271210|expert_2|microbiome|human
+33271210|expert_2|dietary supplement|DDF
+33271210|expert_2|dietary supplement|bacteria
+33271210|expert_2|dietary supplement|microbiome
+33271210|expert_2|bacteria|human
+33271210|expert_2|DDF|DDF
+33271210|expert_2|microbiome|DDF
+33271210|expert_2|dietary supplement|human
+36794003|expert_1|DDF|human
+36794003|expert_1|food|bacteria
+36794003|expert_1|food|DDF
+36794003|expert_1|microbiome|human
+36794003|expert_1|food|microbiome
+38132705|expert_6|microbiome|human
+36900437|expert_1|microbiome|animal
+36900437|expert_1|animal|biomedical technique
+36900437|expert_1|dietary supplement|DDF
+36900437|expert_1|dietary supplement|microbiome
+36900437|expert_1|anatomical location|animal
+36900437|expert_1|bacteria|DDF
+36900437|expert_1|DDF|animal
+34603341|expert_3|dietary supplement|microbiome
+34603341|expert_3|dietary supplement|DDF
+34603341|expert_3|DDF|animal
+34422393|expert_4|DDF|DDF
+35914559|expert_2|microbiome|animal
+35914559|expert_2|animal|biomedical technique
+35914559|expert_2|DDF|human
+35914559|expert_2|chemical|bacteria
+35914559|expert_2|microbiome|human
+35914559|expert_2|DDF|animal
+35914559|expert_2|microbiome|biomedical technique
+35914559|expert_2|DDF|microbiome
+35914559|expert_2|microbiome|DDF
+35914559|expert_2|chemical|microbiome
+35914559|expert_2|chemical|DDF
+35914559|expert_2|bacteria|microbiome
+38422755|expert_1|DDF|human
+38422755|expert_1|microbiome|human
+38422755|expert_1|human|biomedical technique
+38422755|expert_1|microbiome|DDF
+38422755|expert_1|bacteria|DDF
+37228957|expert_6|DDF|DDF
+37228957|expert_6|microbiome|anatomical location
+30717162|expert_3|microbiome|human
+30717162|expert_3|DDF|human
+30717162|expert_3|microbiome|biomedical technique
+30717162|expert_3|microbiome|DDF
+31248424|expert_3|microbiome|human
+31248424|expert_3|DDF|human
+31248424|expert_3|microbiome|DDF
+37469436|expert_6|bacteria|DDF
+37469436|expert_6|chemical|bacteria
+37469436|expert_6|animal|biomedical technique
+37469436|expert_6|chemical|DDF
+31179435|expert_5|dietary supplement|microbiome
+31179435|expert_5|DDF|DDF
+31179435|expert_5|dietary supplement|DDF
+31179435|expert_5|microbiome|DDF
+37995075|expert_1|microbiome|human
+37995075|expert_1|DDF|human
+37995075|expert_1|microbiome|biomedical technique
+37995075|expert_1|microbiome|DDF
+35326429|expert_6|bacteria|DDF
+35326429|expert_6|DDF|DDF
+35326429|expert_6|chemical|DDF
+35326429|expert_6|microbiome|DDF
+31083360|expert_3|dietary supplement|DDF
+31083360|expert_3|DDF|human
+38010793|expert_1|DDF|human
+38010793|expert_1|microbiome|human
+38010793|expert_1|human|biomedical technique
+38010793|expert_1|microbiome|DDF
+38010793|expert_1|bacteria|DDF
+31685046|expert_2|DDF|human
+31685046|expert_2|chemical|human
+31685046|expert_2|microbiome|biomedical technique
+31685046|expert_2|DDF|bacteria
+31685046|expert_2|bacteria|human
+31685046|expert_2|human|biomedical technique
+31685046|expert_2|microbiome|DDF
+31685046|expert_2|bacteria|DDF
+31685046|expert_2|chemical|microbiome
+31685046|expert_2|chemical|DDF
+34444820|expert_7|DDF|human
+34444820|expert_7|dietary supplement|bacteria
+34444820|expert_7|dietary supplement|DDF
+34444820|expert_7|dietary supplement|human
+34092293|expert_6|dietary supplement|bacteria
+34092293|expert_6|dietary supplement|DDF
+34092293|expert_6|DDF|DDF
+34092293|expert_6|drug|bacteria
+34092293|expert_6|chemical|bacteria
+34092293|expert_6|chemical|DDF
+37927130|expert_6|DDF|human
+37927130|expert_6|dietary supplement|DDF
+37927130|expert_6|chemical|anatomical location
+37927130|expert_6|DDF|DDF
+37927130|expert_6|microbiome|DDF
+37927130|expert_6|anatomical location|animal
+37927130|expert_6|bacteria|DDF
+37927130|expert_6|DDF|animal
+35432226|expert_3|DDF|human
+35432226|expert_3|microbiome|DDF
+36757367|expert_4|DDF|DDF
+36757367|expert_4|microbiome|DDF
+36493975|expert_6|DDF|anatomical location
+36493975|expert_6|drug|DDF
+36493975|expert_6|microbiome|anatomical location
+36493975|expert_6|DDF|DDF
+36493975|expert_6|anatomical location|animal
+37213508|expert_6|microbiome|DDF
+33046051|expert_7|microbiome|human
+33046051|expert_7|DDF|human
+33046051|expert_7|microbiome|biomedical technique
+33046051|expert_7|microbiome|DDF
+38204948|expert_1|DDF|DDF
+38204948|expert_1|DDF|human
+38204948|expert_1|dietary supplement|DDF
+31952911|expert_2|microbiome|human
+31952911|expert_2|DDF|bacteria
+31952911|expert_2|microbiome|DDF
+29023380|expert_5|chemical|anatomical location
+28572752|expert_1|DDF|human
+28572752|expert_1|human|biomedical technique
+28572752|expert_1|microbiome|DDF
+36346385|expert_7|DDF|anatomical location
+36346385|expert_7|microbiome|animal
+36346385|expert_7|animal|biomedical technique
+36346385|expert_7|dietary supplement|DDF
+36346385|expert_7|dietary supplement|microbiome
+36346385|expert_7|DDF|microbiome
+36346385|expert_7|DDF|DDF
+36346385|expert_7|microbiome|DDF
+36346385|expert_7|anatomical location|animal
+36346385|expert_7|DDF|animal
+32459708|expert_6|microbiome|DDF
+33177907|expert_5|DDF|DDF
+33177907|expert_5|DDF|human
+33177907|expert_5|microbiome|DDF
+38089822|expert_7|bacteria|DDF
+38089822|expert_7|DDF|DDF
+38089822|expert_7|microbiome|DDF
+31646148|expert_6|bacteria|DDF
+31646148|expert_6|chemical|DDF
+31646148|expert_6|microbiome|DDF
+23981537|expert_3|DDF|microbiome
+23981537|expert_3|chemical|DDF
+37657622|expert_3|DDF|human
+37657622|expert_3|microbiome|human
+37657622|expert_3|DDF|bacteria
+37657622|expert_3|human|biomedical technique
+37657622|expert_3|microbiome|DDF
+36760344|expert_2|human|biomedical technique
+36760344|expert_2|microbiome|biomedical technique
+33722869|expert_6|DDF|human
+33722869|expert_6|microbiome|human
+33722869|expert_6|microbiome|anatomical location
+33722869|expert_6|DDF|DDF
+33722869|expert_6|microbiome|DDF
+34776854|expert_3|microbiome|human
+34776854|expert_3|microbiome|biomedical technique
+34776854|expert_3|DDF|microbiome
+34776854|expert_3|human|biomedical technique
+34776854|expert_3|microbiome|DDF
+34776854|expert_3|bacteria|microbiome
+28976454|expert_4|dietary supplement|DDF
+28976454|expert_4|DDF|microbiome
+28976454|expert_4|DDF|DDF
+28976454|expert_4|DDF|bacteria
+28976454|expert_4|microbiome|DDF
+31053995|expert_4|chemical|DDF
+31053995|expert_4|human|biomedical technique
+31053995|expert_4|chemical|animal
+31053995|expert_4|DDF|chemical
+38576868|expert_3|microbiome|DDF
+37511699|expert_1|drug|microbiome
+37511699|expert_1|microbiome|DDF
+37464164|expert_2|microbiome|anatomical location
+37464164|expert_2|microbiome|biomedical technique
+37464164|expert_2|microbiome|DDF
+37368331|expert_7|microbiome|human
+37368331|expert_7|DDF|DDF
+37368331|expert_7|DDF|human
+37368331|expert_7|microbiome|DDF
+37396336|expert_3|animal|biomedical technique
+36517709|expert_6|chemical|microbiome
+36517709|expert_6|chemical|anatomical location
+36517709|expert_6|chemical|gene
+36517709|expert_6|chemical|chemical
+36517709|expert_6|chemical|bacteria
+37978477|expert_6|chemical|DDF
+37978477|expert_6|microbiome|biomedical technique
+37978477|expert_6|microbiome|DDF
+33713734|expert_5|DDF|human
+33713734|expert_5|microbiome|human
+33713734|expert_5|microbiome|biomedical technique
+33713734|expert_5|DDF|bacteria
+33713734|expert_5|bacteria|human
+33713734|expert_5|human|biomedical technique
+33713734|expert_5|microbiome|DDF
+33713734|expert_5|bacteria|DDF
+33713734|expert_5|bacteria|microbiome
+34830610|expert_5|DDF|DDF
+34830610|expert_5|dietary supplement|DDF
+34830610|expert_5|microbiome|DDF
+29843470|expert_1|DDF|DDF
+29843470|expert_1|DDF|human
+29843470|expert_1|microbiome|DDF
+32469834|expert_5|DDF|DDF
+32469834|expert_5|DDF|human
+32469834|expert_5|microbiome|DDF
+37960197|expert_7|bacteria|DDF
+37960197|expert_7|chemical|DDF
+37960197|expert_7|bacteria|microbiome
+37960197|expert_7|microbiome|DDF
+30707176|expert_5|DDF|human
+30707176|expert_5|microbiome|human
+30707176|expert_5|bacteria|human
+30707176|expert_5|human|biomedical technique
+30707176|expert_5|microbiome|DDF
+30707176|expert_5|bacteria|DDF
+30707176|expert_5|bacteria|microbiome
+38139446|expert_6|DDF|human
+38139446|expert_6|microbiome|human
+38139446|expert_6|human|biomedical technique
+38139446|expert_6|microbiome|DDF
+38139446|expert_6|bacteria|DDF
+38139446|expert_6|bacteria|microbiome
+37209162|expert_4|dietary supplement|DDF
+37209162|expert_4|chemical|anatomical location
+37209162|expert_4|dietary supplement|microbiome
+37209162|expert_4|DDF|DDF
+37209162|expert_4|microbiome|DDF
+37209162|expert_4|DDF|animal
+37209162|expert_4|bacteria|chemical
+36738999|expert_6|dietary supplement|DDF
+36738999|expert_6|chemical|anatomical location
+36738999|expert_6|DDF|bacteria
+36738999|expert_6|DDF|DDF
+36738999|expert_6|DDF|animal
+37627638|expert_4|DDF|human
+37627638|expert_4|dietary supplement|bacteria
+37627638|expert_4|microbiome|biomedical technique
+37627638|expert_4|human|biomedical technique
+37627638|expert_4|DDF|animal
+37627638|expert_4|bacteria|microbiome
+30394313|expert_4|anatomical location|human
+30394313|expert_4|DDF|human
+30394313|expert_4|microbiome|human
+30394313|expert_4|chemical|human
+30394313|expert_4|DDF|chemical
+30394313|expert_4|DDF|microbiome
+30394313|expert_4|DDF|bacteria
+30394313|expert_4|bacteria|human
+30394313|expert_4|human|biomedical technique
+30394313|expert_4|microbiome|DDF
+30394313|expert_4|chemical|DDF
+34393849|expert_5|DDF|human
+34393849|expert_5|microbiome|human
+34393849|expert_5|microbiome|biomedical technique
+34393849|expert_5|DDF|DDF
+34393849|expert_5|human|biomedical technique
+34393849|expert_5|microbiome|DDF
+34393849|expert_5|bacteria|DDF
+34393849|expert_5|bacteria|microbiome
+37606895|expert_3|DDF|DDF
+37606895|expert_3|DDF|human
+38508549|expert_2|DDF|human
+38508549|expert_2|dietary supplement|DDF
+38508549|expert_2|dietary supplement|microbiome
+38508549|expert_2|DDF|DDF
+38508549|expert_2|chemical|microbiome
+36564391|expert_3|microbiome|DDF
+37095530|expert_6|microbiome|DDF
+35083314|expert_6|microbiome|human
+35083314|expert_6|DDF|DDF
+35083314|expert_6|microbiome|biomedical technique
+37377497|expert_1|dietary supplement|DDF
+37377497|expert_1|DDF|human
+37377497|expert_1|DDF|DDF
+37207228|expert_4|DDF|human
+37207228|expert_4|chemical|DDF
+37207228|expert_4|microbiome|DDF
+38707924|expert_3|dietary supplement|DDF
+30584306|expert_5|DDF|human
+30584306|expert_5|microbiome|human
+30584306|expert_5|human|biomedical technique
+30584306|expert_5|microbiome|DDF
+30584306|expert_5|bacteria|DDF
+30584306|expert_5|bacteria|chemical
+30584306|expert_5|bacteria|microbiome
+26927355|expert_1|food|DDF
+26927355|expert_1|microbiome|human
+26927355|expert_1|human|biomedical technique
+26927355|expert_1|microbiome|DDF
+26927355|expert_1|chemical|microbiome
+26927355|expert_1|chemical|DDF
+38409102|expert_1|anatomical location|animal
+38409102|expert_1|animal|biomedical technique
+38409102|expert_1|DDF|human
+38409102|expert_1|DDF|animal
+38318337|expert_3|microbiome|biomedical technique
+33105830|expert_2|DDF|anatomical location
+33105830|expert_2|dietary supplement|DDF
+33105830|expert_2|microbiome|DDF
+33105830|expert_2|DDF|DDF
+33212907|expert_2|dietary supplement|microbiome
+33212907|expert_2|dietary supplement|DDF
+33212907|expert_2|DDF|human
+36698474|expert_7|chemical|DDF
+37481569|expert_2|DDF|human
+37481569|expert_2|microbiome|human
+37481569|expert_2|DDF|bacteria
+37481569|expert_2|bacteria|human
+37481569|expert_2|DDF|DDF
+37481569|expert_2|human|biomedical technique
+37481569|expert_2|microbiome|DDF
+30818031|expert_2|DDF|human
+30818031|expert_2|microbiome|human
+30818031|expert_2|DDF|bacteria
+30818031|expert_2|microbiome|DDF
+30818031|expert_2|bacteria|DDF
+30818031|expert_2|bacteria|microbiome
+37168424|expert_1|DDF|human
+37168424|expert_1|microbiome|human
+37168424|expert_1|microbiome|biomedical technique
+37168424|expert_1|human|biomedical technique
+37168424|expert_1|bacteria|DDF
+37168424|expert_1|bacteria|microbiome

@@ -1,0 +1,231 @@
+pmid|annotator|subject_label|predicate|object_label
+36532064|expert_7|DDF|target|human
+36532064|expert_7|microbiome|located in|human
+36532064|expert_7|chemical|located in|anatomical location
+36532064|expert_7|microbiome|located in|anatomical location
+36532064|expert_7|microbiome|is linked to|DDF
+36532064|expert_7|microbiome|compared to|microbiome
+37212075|expert_5|bacteria|located in|human
+37212075|expert_5|human|used by|biomedical technique
+37212075|expert_5|microbiome|located in|human
+37212075|expert_5|DDF|is a|DDF
+37212075|expert_5|microbiome|used by|biomedical technique
+37212075|expert_5|microbiome|is linked to|DDF
+37212075|expert_5|microbiome|compared to|microbiome
+37577447|expert_5|microbiome|compared to|microbiome
+37577447|expert_5|DDF|target|human
+37577447|expert_5|microbiome|located in|human
+37577447|expert_5|microbiome|is linked to|DDF
+38203207|expert_5|bacteria|influence|DDF
+38203207|expert_5|chemical|impact|microbiome
+38203207|expert_5|chemical|produced by|microbiome
+38203207|expert_5|microbiome|located in|anatomical location
+38203207|expert_5|DDF|is a|DDF
+38203207|expert_5|microbiome|is linked to|DDF
+38203207|expert_5|bacteria|part of|microbiome
+31530799|expert_2|chemical|produced by|microbiome
+31530799|expert_2|microbiome|located in|animal
+31530799|expert_2|microbiome|is linked to|DDF
+31530799|expert_2|bacteria|part of|microbiome
+38525261|expert_6|dietary supplement|administered|human
+38525261|expert_6|dietary supplement|impact|microbiome
+38525261|expert_6|chemical|produced by|microbiome
+36978911|expert_5|DDF|affect|DDF
+36978911|expert_5|dietary supplement|impact|bacteria
+36978911|expert_5|chemical|produced by|microbiome
+36978911|expert_5|chemical|located in|anatomical location
+36978911|expert_5|microbiome|located in|anatomical location
+36978911|expert_5|DDF|is a|DDF
+36978911|expert_5|chemical|influence|DDF
+36978911|expert_5|chemical|part of|chemical
+31610228|expert_5|DDF|target|human
+31610228|expert_5|DDF|affect|DDF
+31610228|expert_5|DDF|change abundance|microbiome
+31610228|expert_5|microbiome|located in|human
+31610228|expert_5|bacteria|change expression|gene
+31610228|expert_5|microbiome|is linked to|DDF
+31610228|expert_5|chemical|influence|DDF
+34560239|expert_5|microbiome|located in|animal
+34560239|expert_5|chemical|impact|microbiome
+34560239|expert_5|bacteria|change expression|gene
+34560239|expert_5|anatomical location|located in|animal
+34560239|expert_5|bacteria|interact|chemical
+34560239|expert_5|bacteria|located in|animal
+30900006|expert_2|drug|impact|microbiome
+30900006|expert_2|drug|change expression|gene
+30900006|expert_2|microbiome|located in|animal
+30900006|expert_2|animal|used by|biomedical technique
+30309367|expert_5|DDF|strike|anatomical location
+30309367|expert_5|dietary supplement|influence|DDF
+30309367|expert_5|DDF|affect|DDF
+30309367|expert_5|microbiome|is linked to|DDF
+32041265|expert_7|DDF|target|human
+32041265|expert_7|DDF|strike|anatomical location
+32041265|expert_7|DDF|affect|DDF
+32041265|expert_7|microbiome|located in|human
+32041265|expert_7|chemical|located in|anatomical location
+32041265|expert_7|chemical|located in|human
+32041265|expert_7|microbiome|is linked to|DDF
+26923630|expert_7|DDF|interact|chemical
+26923630|expert_7|DDF|affect|DDF
+26923630|expert_7|DDF|strike|anatomical location
+26923630|expert_7|drug|administered|animal
+26923630|expert_7|chemical|located in|anatomical location
+26923630|expert_7|anatomical location|located in|animal
+26923630|expert_7|chemical|influence|DDF
+26923630|expert_7|DDF|target|animal
+25869281|expert_7|DDF|strike|anatomical location
+25869281|expert_7|dietary supplement|impact|microbiome
+25869281|expert_7|drug|change effect|DDF
+25869281|expert_7|chemical|located in|anatomical location
+25869281|expert_7|dietary supplement|influence|DDF
+25869281|expert_7|drug|impact|microbiome
+25869281|expert_7|anatomical location|located in|animal
+25869281|expert_7|animal|used by|biomedical technique
+25869281|expert_7|DDF|target|animal
+33271426|expert_7|DDF|strike|anatomical location
+33271426|expert_7|microbiome|is linked to|DDF
+37403161|expert_5|DDF|interact|chemical
+37403161|expert_5|DDF|strike|anatomical location
+37403161|expert_5|DDF|affect|DDF
+37403161|expert_5|drug|change effect|DDF
+37403161|expert_5|drug|impact|bacteria
+37403161|expert_5|anatomical location|located in|animal
+37403161|expert_5|microbiome|used by|biomedical technique
+37403161|expert_5|microbiome|is linked to|DDF
+37403161|expert_5|chemical|influence|DDF
+37403161|expert_5|DDF|target|animal
+37403161|expert_5|drug|interact|chemical
+37403161|expert_5|bacteria|located in|animal
+38613087|expert_5|dietary supplement|influence|DDF
+38613087|expert_5|DDF|is a|DDF
+38613087|expert_5|DDF|strike|anatomical location
+38613087|expert_5|DDF|affect|DDF
+33968794|expert_7|DDF|strike|anatomical location
+33968794|expert_7|DDF|affect|DDF
+33968794|expert_7|microbiome|is linked to|DDF
+32999308|expert_7|DDF|target|human
+32999308|expert_7|chemical|impact|bacteria
+32999308|expert_7|DDF|affect|DDF
+32999308|expert_7|DDF|strike|anatomical location
+32999308|expert_7|chemical|located in|animal
+32999308|expert_7|chemical|impact|microbiome
+32999308|expert_7|anatomical location|located in|animal
+32999308|expert_7|chemical|influence|DDF
+34480631|expert_7|microbiome|located in|animal
+34480631|expert_7|drug|administered|animal
+34480631|expert_7|drug|change effect|DDF
+34480631|expert_7|anatomical location|located in|animal
+34480631|expert_7|drug|impact|microbiome
+34480631|expert_7|DDF|target|animal
+34480631|expert_7|drug|interact|chemical
+32438623|expert_7|DDF|target|human
+32438623|expert_7|human|used by|biomedical technique
+32438623|expert_7|microbiome|used by|biomedical technique
+32438623|expert_7|food|administered|human
+32438623|expert_7|food|impact|bacteria
+31662903|expert_7|DDF|target|human
+31662903|expert_7|food|impact|bacteria
+31662903|expert_7|DDF|change abundance|microbiome
+31662903|expert_7|food|administered|human
+31662903|expert_7|microbiome|located in|human
+31662903|expert_7|microbiome|used by|biomedical technique
+31662903|expert_7|chemical|influence|DDF
+31662903|expert_7|food|impact|microbiome
+30405455|expert_7|DDF|target|human
+30405455|expert_7|DDF|affect|DDF
+30405455|expert_7|drug|administered|animal
+30405455|expert_7|chemical|located in|human
+30405455|expert_7|chemical|influence|DDF
+34290352|expert_2|drug|impact|microbiome
+34290352|expert_2|drug|administered|human
+34290352|expert_2|microbiome|located in|human
+34290352|expert_2|microbiome|is linked to|DDF
+37676767|expert_5|DDF|change abundance|bacteria
+37676767|expert_5|DDF|affect|DDF
+37676767|expert_5|chemical|impact|bacteria
+37676767|expert_5|chemical|impact|microbiome
+37676767|expert_5|DDF|is a|DDF
+37676767|expert_5|chemical|influence|DDF
+37676767|expert_5|chemical|part of|chemical
+25911232|expert_2|DDF|target|animal
+25911232|expert_2|DDF|is a|DDF
+25911232|expert_2|microbiome|is linked to|DDF
+33195226|expert_4|DDF|change abundance|bacteria
+33195226|expert_4|DDF|affect|DDF
+33195226|expert_4|bacteria|influence|DDF
+33195226|expert_4|DDF|is a|DDF
+33195226|expert_4|animal|used by|biomedical technique
+33195226|expert_4|DDF|target|animal
+28716445|expert_2|DDF|target|human
+28716445|expert_2|DDF|is a|DDF
+28716445|expert_2|dietary supplement|impact|microbiome
+28716445|expert_2|microbiome|is linked to|DDF
+32389857|expert_2|DDF|change abundance|microbiome
+32389857|expert_2|drug|impact|microbiome
+32389857|expert_2|DDF|is a|DDF
+33777957|expert_2|DDF|change abundance|microbiome
+33777957|expert_2|DDF|is a|DDF
+33777957|expert_2|microbiome|located in|animal
+33777957|expert_2|microbiome|is linked to|DDF
+34205336|expert_5|DDF|affect|DDF
+34205336|expert_5|chemical|impact|microbiome
+34205336|expert_5|chemical|located in|anatomical location
+34205336|expert_5|DDF|is a|DDF
+34205336|expert_5|microbiome|is linked to|DDF
+28556833|expert_5|chemical|impact|bacteria
+28556833|expert_5|microbiome|located in|animal
+28556833|expert_5|chemical|located in|animal
+28556833|expert_5|chemical|impact|microbiome
+28556833|expert_5|drug|change effect|DDF
+28556833|expert_5|chemical|located in|anatomical location
+28556833|expert_5|anatomical location|located in|animal
+28556833|expert_5|DDF|is a|DDF
+28556833|expert_5|microbiome|used by|biomedical technique
+28556833|expert_5|animal|used by|biomedical technique
+28556833|expert_5|chemical|influence|DDF
+28556833|expert_5|DDF|target|animal
+28556833|expert_5|anatomical location|located in|human
+28556833|expert_5|chemical|interact|chemical
+35674870|expert_5|DDF|target|human
+35674870|expert_5|DDF|affect|DDF
+35674870|expert_5|drug|change effect|DDF
+35674870|expert_5|DDF|is a|DDF
+35674870|expert_5|microbiome|is linked to|DDF
+37071196|expert_5|DDF|target|human
+37071196|expert_5|DDF|affect|DDF
+37071196|expert_5|human|used by|biomedical technique
+37071196|expert_5|bacteria|influence|DDF
+37071196|expert_5|microbiome|located in|human
+37071196|expert_5|DDF|is a|DDF
+37071196|expert_5|microbiome|used by|biomedical technique
+37071196|expert_5|microbiome|is linked to|DDF
+37071196|expert_5|bacteria|part of|microbiome
+37849234|expert_5|DDF|target|human
+37849234|expert_5|DDF|affect|DDF
+37849234|expert_5|DDF|change abundance|microbiome
+37849234|expert_5|chemical|located in|animal
+37849234|expert_5|microbiome|located in|human
+37849234|expert_5|DDF|is a|DDF
+37849234|expert_5|microbiome|is linked to|DDF
+33963281|expert_6|DDF|target|human
+33963281|expert_6|DDF|affect|DDF
+33963281|expert_6|microbiome|located in|animal
+33963281|expert_6|DDF|is a|DDF
+33963281|expert_6|microbiome|is linked to|DDF
+33963281|expert_6|DDF|target|animal
+36804535|expert_3|DDF|target|human
+36804535|expert_3|DDF|affect|DDF
+36804535|expert_3|drug|change effect|DDF
+36804535|expert_3|animal|used by|biomedical technique
+36804535|expert_3|DDF|target|animal
+34174901|expert_6|DDF|affect|DDF
+34174901|expert_6|microbiome|located in|animal
+34174901|expert_6|drug|change effect|DDF
+34174901|expert_6|drug|impact|microbiome
+34174901|expert_6|DDF|target|animal
+33327540|expert_5|DDF|target|human
+33327540|expert_5|drug|change effect|DDF
+33327540|expert_5|food|influence|DDF
+25940667|expert_4|drug|change effect|DDF
+25940667|expert_4|microbiome|is linked to|DDF

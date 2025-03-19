@@ -1,0 +1,3178 @@
+pmid	annotator	subject_label	predicate	object_label
+36479494	student_A	dietary supplement	influence	DDF
+36479494	student_A	dietary supplement	impact	microbiome
+
+
+38891970	student_A	DDF	target	human
+
+
+33381005	student_A	drug	change effect	DDF
+33381005	student_A	bacteria	part of	microbiome
+33381005	student_A	microbiome	is linked to	DDF
+33381005	student_A	animal	used by	biomedical technique
+33381005	student_A	drug	impact	microbiome
+33381005	student_A	DDF	target	animal
+
+
+38173790	student_A	microbiome	located in	anatomical location
+38173790	student_A	dietary supplement	influence	DDF
+38173790	student_A	microbiome	is linked to	DDF
+38173790	student_A	DDF	target	human
+
+
+35263739	student_A	DDF	target	human
+35263739	student_A	DDF	change abundance	microbiome
+35263739	student_A	microbiome	located in	anatomical location
+35263739	student_A	microbiome	is linked to	DDF
+35263739	student_A	bacteria	part of	microbiome
+
+
+36406865	student_A	DDF	target	human
+36406865	student_A	bacteria	located in	human
+36406865	student_A	bacteria	influence	DDF
+36406865	student_A	microbiome	located in	human
+36406865	student_A	microbiome	is linked to	DDF
+
+
+33099131	student_A	DDF	target	human
+33099131	student_A	human	used by	biomedical technique
+33099131	student_A	bacteria	influence	DDF
+33099131	student_A	microbiome	located in	human
+33099131	student_A	microbiome	used by	biomedical technique
+
+
+32941730	student_B	DDF	target	animal
+32941730	student_B	bacteria	located in	animal
+32941730	student_B	animal	used by	biomedical technique
+
+
+32733812	student_A	bacteria	part of	microbiome
+32733812	student_A	microbiome	is linked to	DDF
+32733812	student_A	chemical	influence	DDF
+
+
+39237483	student_B	DDF	target	human
+39237483	student_B	DDF	change abundance	microbiome
+39237483	student_B	bacteria	influence	DDF
+39237483	student_B	microbiome	located in	human
+39237483	student_B	microbiome	used by	biomedical technique
+39237483	student_B	microbiome	is linked to	DDF
+39237483	student_B	bacteria	part of	microbiome
+
+
+34769091	student_A	chemical	located in	anatomical location
+
+
+35411052	student_A	DDF	change abundance	bacteria
+35411052	student_A	chemical	located in	human
+35411052	student_A	microbiome	is linked to	DDF
+35411052	student_A	chemical	influence	DDF
+35411052	student_A	bacteria	interact	chemical
+
+
+32733199	student_A	microbiome	is linked to	DDF
+
+
+31576631	student_A	DDF	affect	DDF
+31576631	student_A	microbiome	located in	animal
+31576631	student_A	chemical	impact	microbiome
+31576631	student_A	chemical	located in	anatomical location
+31576631	student_A	microbiome	located in	anatomical location
+31576631	student_A	anatomical location	located in	animal
+31576631	student_A	animal	used by	biomedical technique
+31576631	student_A	chemical	influence	DDF
+31576631	student_A	DDF	target	animal
+
+
+33327916	student_B	microbiome	located in	anatomical location
+33327916	student_B	dietary supplement	impact	microbiome
+33327916	student_B	dietary supplement	influence	DDF
+33327916	student_B	microbiome	is linked to	DDF
+
+
+33643026	student_A	DDF	target	human
+33643026	student_A	DDF	change abundance	bacteria
+33643026	student_A	DDF	interact	chemical
+33643026	student_A	DDF	affect	DDF
+33643026	student_A	microbiome	located in	human
+33643026	student_A	chemical	produced by	microbiome
+33643026	student_A	microbiome	is linked to	DDF
+
+
+33070123	student_A	food	influence	DDF
+33070123	student_A	DDF	change abundance	microbiome
+33070123	student_A	dietary supplement	impact	microbiome
+33070123	student_A	dietary supplement	influence	DDF
+33070123	student_A	microbiome	is linked to	DDF
+33070123	student_A	chemical	influence	DDF
+33070123	student_A	drug	impact	microbiome
+33070123	student_A	food	impact	microbiome
+
+
+35931717	student_A	bacteria	influence	DDF
+35931717	student_A	DDF	affect	DDF
+35931717	student_A	microbiome	is linked to	DDF
+
+
+35052575	student_A	chemical	impact	microbiome
+
+
+35730414	student_A	DDF	target	human
+35730414	student_A	DDF	affect	DDF
+35730414	student_A	food	influence	DDF
+35730414	student_A	DDF	change abundance	microbiome
+35730414	student_A	dietary supplement	influence	DDF
+35730414	student_A	microbiome	is linked to	DDF
+
+
+36613586	student_B	bacteria	influence	DDF
+36613586	student_B	microbiome	located in	anatomical location
+36613586	student_B	dietary supplement	influence	DDF
+36613586	student_B	bacteria	part of	microbiome
+
+
+38914414	student_A	dietary supplement	influence	DDF
+38914414	student_A	microbiome	is linked to	DDF
+
+
+35362965	student_A	bacteria	influence	DDF
+35362965	student_A	anatomical location	located in	human
+
+
+32557853	student_A	DDF	target	human
+32557853	student_A	DDF	change abundance	bacteria
+32557853	student_A	human	used by	biomedical technique
+32557853	student_A	microbiome	located in	human
+32557853	student_A	microbiome	used by	biomedical technique
+32557853	student_A	microbiome	is linked to	DDF
+32557853	student_A	chemical	influence	DDF
+
+
+
+
+35666299	student_B	DDF	target	human
+35666299	student_B	chemical	impact	microbiome
+35666299	student_B	anatomical location	located in	animal
+35666299	student_B	microbiome	located in	anatomical location
+35666299	student_B	bacteria	part of	microbiome
+35666299	student_B	microbiome	is linked to	DDF
+35666299	student_B	chemical	influence	DDF
+35666299	student_B	chemical	change expression	gene
+
+
+38868440	student_A	DDF	target	human
+38868440	student_A	DDF	affect	DDF
+
+
+39247907	student_A	DDF	change abundance	bacteria
+39247907	student_A	microbiome	located in	animal
+39247907	student_A	DDF	change abundance	microbiome
+39247907	student_A	microbiome	is linked to	DDF
+39247907	student_A	DDF	target	animal
+
+
+36289839	student_B	DDF	target	human
+36289839	student_B	microbiome	located in	human
+36289839	student_B	chemical	produced by	microbiome
+36289839	student_B	microbiome	located in	anatomical location
+36289839	student_B	microbiome	is linked to	DDF
+36289839	student_B	anatomical location	located in	human
+
+
+38975363	student_A	bacteria	influence	DDF
+38975363	student_A	microbiome	is linked to	DDF
+
+
+39375584	student_A	DDF	target	human
+39375584	student_A	food	impact	bacteria
+39375584	student_A	food	influence	DDF
+39375584	student_A	microbiome	located in	human
+39375584	student_A	dietary supplement	influence	DDF
+39375584	student_A	microbiome	used by	biomedical technique
+39375584	student_A	food	impact	microbiome
+
+
+36155528	student_A	DDF	strike	anatomical location
+36155528	student_A	microbiome	located in	animal
+36155528	student_A	DDF	change abundance	microbiome
+36155528	student_A	microbiome	used by	biomedical technique
+36155528	student_A	microbiome	is linked to	DDF
+36155528	student_A	bacteria	part of	microbiome
+
+
+36087572	student_A	DDF	target	human
+36087572	student_A	DDF	affect	DDF
+36087572	student_A	human	used by	biomedical technique
+36087572	student_A	DDF	change abundance	microbiome
+36087572	student_A	dietary supplement	impact	microbiome
+36087572	student_A	microbiome	located in	human
+36087572	student_A	dietary supplement	influence	DDF
+
+
+33704660	student_A	DDF	target	human
+33704660	student_A	microbiome	is linked to	DDF
+
+
+32266160	student_A	DDF	target	human
+32266160	student_A	microbiome	located in	human
+32266160	student_A	microbiome	is linked to	DDF
+
+
+35917710	student_A	chemical	located in	anatomical location
+35917710	student_A	DDF	strike	anatomical location
+35917710	student_A	chemical	influence	DDF
+
+
+32088434	student_A	DDF	affect	DDF
+32088434	student_A	microbiome	located in	animal
+32088434	student_A	chemical	impact	microbiome
+32088434	student_A	chemical	produced by	microbiome
+32088434	student_A	chemical	influence	DDF
+32088434	student_A	DDF	target	animal
+
+
+35352107	student_A	bacteria	influence	DDF
+35352107	student_A	dietary supplement	impact	microbiome
+35352107	student_A	chemical	produced by	microbiome
+35352107	student_A	microbiome	located in	human
+35352107	student_A	dietary supplement	influence	DDF
+35352107	student_A	microbiome	is linked to	DDF
+35352107	student_A	bacteria	part of	microbiome
+35352107	student_A	anatomical location	located in	human
+
+
+39452233	student_A	dietary supplement	influence	DDF
+
+
+36458229	student_B	microbiome	is linked to	DDF
+
+
+35956395	student_B	DDF	target	human
+35956395	student_B	microbiome	located in	human
+35956395	student_B	chemical	influence	DDF
+
+
+39291634	student_B	dietary supplement	influence	DDF
+39291634	student_B	human	used by	biomedical technique
+39291634	student_B	microbiome	is linked to	DDF
+39291634	student_B	DDF	target	human
+
+
+32643435	student_A	DDF	target	human
+32643435	student_A	microbiome	is linked to	DDF
+
+
+33803607	student_B	food	impact	bacteria
+33803607	student_B	food	influence	DDF
+
+
+32735929	student_B	DDF	affect	DDF
+32735929	student_B	dietary supplement	impact	microbiome
+32735929	student_B	dietary supplement	influence	DDF
+32735929	student_B	microbiome	located in	anatomical location
+32735929	student_B	microbiome	is linked to	DDF
+
+
+35594949	student_A	DDF	target	human
+35594949	student_A	DDF	affect	DDF
+35594949	student_A	microbiome	located in	animal
+35594949	student_A	bacteria	influence	DDF
+35594949	student_A	chemical	impact	microbiome
+35594949	student_A	drug	change effect	DDF
+35594949	student_A	chemical	influence	DDF
+35594949	student_A	bacteria	part of	microbiome
+35594949	student_A	microbiome	is linked to	DDF
+35594949	student_A	animal	used by	biomedical technique
+35594949	student_A	drug	impact	microbiome
+35594949	student_A	DDF	target	animal
+
+
+34128115	student_B	human	used by	biomedical technique
+34128115	student_B	drug	change effect	DDF
+34128115	student_B	microbiome	used by	biomedical technique
+34128115	student_B	microbiome	is linked to	DDF
+34128115	student_B	drug	impact	microbiome
+
+
+36263629	student_A	DDF	target	human
+36263629	student_A	human	used by	biomedical technique
+36263629	student_A	chemical	influence	DDF
+
+
+38959253	student_A	DDF	target	human
+38959253	student_A	bacteria	located in	human
+38959253	student_A	bacteria	influence	DDF
+38959253	student_A	microbiome	located in	human
+38959253	student_A	microbiome	located in	anatomical location
+38959253	student_A	microbiome	is linked to	DDF
+38959253	student_A	chemical	influence	DDF
+
+
+35812394	student_B	dietary supplement	influence	DDF
+35812394	student_B	DDF	interact	chemical
+
+
+32066253	student_A	DDF	strike	anatomical location
+32066253	student_A	microbiome	located in	animal
+32066253	student_A	bacteria	influence	DDF
+32066253	student_A	dietary supplement	impact	microbiome
+32066253	student_A	dietary supplement	influence	DDF
+32066253	student_A	microbiome	is linked to	DDF
+32066253	student_A	bacteria	part of	microbiome
+32066253	student_A	DDF	target	animal
+32066253	student_A	bacteria	located in	animal
+
+
+33153085	student_B	microbiome	located in	anatomical location
+33153085	student_B	DDF	interact	chemical
+33153085	student_B	microbiome	is linked to	DDF
+
+
+39063241	student_A	DDF	target	human
+39063241	student_A	DDF	affect	DDF
+39063241	student_A	bacteria	influence	DDF
+39063241	student_A	drug	change effect	DDF
+39063241	student_A	drug	administered	human
+39063241	student_A	microbiome	is linked to	DDF
+39063241	student_A	chemical	influence	DDF
+
+
+32282304	student_A	microbiome	located in	anatomical location
+32282304	student_A	microbiome	is linked to	DDF
+
+
+32039674	student_A	bacteria	interact	chemical
+32039674	student_A	dietary supplement	impact	microbiome
+32039674	student_A	chemical	impact	bacteria
+
+
+34413194	student_A	bacteria	influence	DDF
+34413194	student_A	microbiome	is linked to	DDF
+
+
+35309241	student_B	DDF	target	human
+35309241	student_B	chemical	influence	DDF
+
+
+32516966	student_A	microbiome	located in	human
+32516966	student_A	microbiome	located in	anatomical location
+32516966	student_A	microbiome	used by	biomedical technique
+32516966	student_A	microbiome	is linked to	DDF
+32516966	student_A	anatomical location	located in	human
+
+
+35276981	student_A	dietary supplement	influence	DDF
+
+
+32473843	student_B	bacteria	influence	DDF
+32473843	student_B	DDF	affect	DDF
+32473843	student_B	microbiome	is linked to	DDF
+32473843	student_B	chemical	influence	DDF
+
+
+32819577	student_B	microbiome	located in	animal
+32819577	student_B	bacteria	located in	human
+32819577	student_B	DDF	change abundance	microbiome
+32819577	student_B	bacteria	influence	DDF
+32819577	student_B	microbiome	is linked to	DDF
+32819577	student_B	animal	used by	biomedical technique
+32819577	student_B	DDF	target	animal
+32819577	student_B	bacteria	located in	animal
+
+
+35650202	student_A	DDF	target	human
+35650202	student_A	DDF	affect	DDF
+35650202	student_A	microbiome	located in	animal
+35650202	student_A	human	used by	biomedical technique
+35650202	student_A	DDF	change abundance	microbiome
+35650202	student_A	chemical	impact	microbiome
+35650202	student_A	microbiome	located in	human
+35650202	student_A	anatomical location	located in	animal
+35650202	student_A	microbiome	is linked to	DDF
+35650202	student_A	animal	used by	biomedical technique
+35650202	student_A	DDF	target	animal
+
+
+35002935	student_B	DDF	target	human
+35002935	student_B	bacteria	influence	DDF
+35002935	student_B	food	influence	DDF
+
+
+33417221	student_A	DDF	target	human
+
+
+34112355	student_A	DDF	interact	chemical
+34112355	student_A	chemical	impact	microbiome
+34112355	student_A	chemical	influence	DDF
+
+
+38922485	student_B	microbiome	located in	animal
+38922485	student_B	dietary supplement	impact	microbiome
+38922485	student_B	drug	change effect	DDF
+38922485	student_B	drug	impact	bacteria
+38922485	student_B	drug	impact	microbiome
+38922485	student_B	bacteria	part of	microbiome
+38922485	student_B	dietary supplement	influence	DDF
+38922485	student_B	animal	used by	biomedical technique
+38922485	student_B	microbiome	is linked to	DDF
+38922485	student_B	DDF	target	animal
+
+
+39267834	student_B	DDF	change abundance	microbiome
+39267834	student_B	DDF	target	human
+39267834	student_B	DDF	change abundance	bacteria
+39267834	student_B	microbiome	used by	biomedical technique
+
+
+36104346	student_A	DDF	target	animal
+36104346	student_A	DDF	target	human
+36104346	student_A	microbiome	located in	animal
+36104346	student_A	human	used by	biomedical technique
+
+
+32946938	student_A	DDF	target	human
+32946938	student_A	DDF	change abundance	bacteria
+32946938	student_A	chemical	impact	bacteria
+32946938	student_A	bacteria	influence	DDF
+32946938	student_A	chemical	located in	anatomical location
+32946938	student_A	chemical	located in	human
+32946938	student_A	chemical	influence	DDF
+
+
+35308282	student_A	DDF	target	human
+
+
+36494405	student_A	bacteria	influence	DDF
+36494405	student_A	drug	impact	bacteria
+36494405	student_A	chemical	influence	DDF
+
+
+35304983	student_B	dietary supplement	impact	bacteria
+35304983	student_B	chemical	produced by	microbiome
+35304983	student_B	dietary supplement	influence	DDF
+35304983	student_B	microbiome	is linked to	DDF
+35304983	student_B	chemical	influence	DDF
+
+
+38866914	student_A	DDF	target	human
+38866914	student_A	chemical	impact	microbiome
+38866914	student_A	chemical	impact	bacteria
+38866914	student_A	chemical	influence	DDF
+
+
+35275534	student_B	bacteria	influence	DDF
+35275534	student_B	microbiome	is linked to	DDF
+35275534	student_B	chemical	influence	DDF
+
+
+35967810	student_B	food	impact	bacteria
+35967810	student_B	food	influence	DDF
+35967810	student_B	dietary supplement	impact	microbiome
+35967810	student_B	microbiome	located in	anatomical location
+35967810	student_B	food	impact	microbiome
+
+
+35085752	student_A	DDF	target	human
+35085752	student_A	DDF	strike	anatomical location
+35085752	student_A	drug	change effect	DDF
+35085752	student_A	microbiome	located in	anatomical location
+35085752	student_A	drug	impact	microbiome
+35085752	student_A	drug	interact	chemical
+
+
+36370535	student_B	DDF	target	human
+36370535	student_B	microbiome	is linked to	DDF
+
+
+36648872	student_B	DDF	target	human
+36648872	student_B	drug	change effect	DDF
+36648872	student_B	microbiome	located in	human
+36648872	student_B	dietary supplement	influence	DDF
+36648872	student_B	microbiome	is linked to	DDF
+36648872	student_B	chemical	influence	DDF
+36648872	student_B	drug	impact	microbiome
+
+
+38979127	student_A	DDF	target	human
+38979127	student_A	human	used by	biomedical technique
+38979127	student_A	microbiome	located in	human
+38979127	student_A	microbiome	used by	biomedical technique
+38979127	student_A	microbiome	is linked to	DDF
+
+
+31843492	student_A	DDF	target	human
+31843492	student_A	DDF	change abundance	microbiome
+31843492	student_A	drug	change effect	DDF
+31843492	student_A	microbiome	located in	human
+31843492	student_A	chemical	influence	DDF
+31843492	student_A	anatomical location	located in	animal
+31843492	student_A	microbiome	is linked to	DDF
+31843492	student_A	bacteria	part of	microbiome
+31843492	student_A	drug	impact	microbiome
+31843492	student_A	animal	used by	biomedical technique
+
+
+36144449	student_A	DDF	change abundance	bacteria
+36144449	student_A	dietary supplement	impact	microbiome
+36144449	student_A	drug	change effect	DDF
+36144449	student_A	dietary supplement	influence	DDF
+36144449	student_A	chemical	influence	DDF
+36144449	student_A	chemical	part of	chemical
+36144449	student_A	chemical	interact	chemical
+
+
+35463646	student_A	drug	impact	microbiome
+35463646	student_A	drug	change expression	gene
+35463646	student_A	drug	change effect	DDF
+35463646	student_A	microbiome	located in	human
+
+
+36037991	student_B	microbiome	located in	animal
+36037991	student_B	microbiome	change expression	gene
+36037991	student_B	DDF	change abundance	microbiome
+36037991	student_B	chemical	impact	microbiome
+36037991	student_B	drug	change effect	DDF
+36037991	student_B	chemical	influence	DDF
+36037991	student_B	anatomical location	located in	animal
+36037991	student_B	microbiome	used by	biomedical technique
+36037991	student_B	microbiome	is linked to	DDF
+36037991	student_B	animal	used by	biomedical technique
+36037991	student_B	DDF	target	animal
+
+
+35144237	student_A	dietary supplement	impact	bacteria
+35144237	student_A	bacteria	influence	DDF
+35144237	student_A	dietary supplement	impact	microbiome
+35144237	student_A	dietary supplement	influence	DDF
+35144237	student_A	microbiome	is linked to	DDF
+
+
+39271063	student_A	bacteria	interact	chemical
+39271063	student_A	DDF	target	human
+39271063	student_A	bacteria	influence	DDF
+39271063	student_A	DDF	affect	DDF
+
+
+34839011	student_A	dietary supplement	influence	DDF
+34839011	student_A	microbiome	is linked to	DDF
+
+
+35449203	student_A	DDF	target	human
+35449203	student_A	DDF	affect	DDF
+35449203	student_A	human	used by	biomedical technique
+35449203	student_A	microbiome	located in	human
+35449203	student_A	chemical	produced by	microbiome
+35449203	student_A	chemical	located in	human
+35449203	student_A	chemical	influence	DDF
+
+
+35886849	student_A	DDF	affect	DDF
+35886849	student_A	microbiome	is linked to	DDF
+
+
+33417973	student_A	DDF	interact	chemical
+33417973	student_A	DDF	strike	anatomical location
+33417973	student_A	chemical	located in	anatomical location
+33417973	student_A	microbiome	is linked to	DDF
+33417973	student_A	chemical	influence	DDF
+
+
+36329546	student_A	dietary supplement	influence	DDF
+36329546	student_A	food	influence	DDF
+36329546	student_A	microbiome	is linked to	DDF
+
+
+38737108	student_A	chemical	interact	chemical
+38737108	student_A	bacteria	change expression	gene
+38737108	student_A	chemical	influence	DDF
+
+
+35779869	student_A	microbiome	is linked to	DDF
+
+
+35873830	student_A	dietary supplement	influence	DDF
+35873830	student_A	drug	change effect	DDF
+
+
+35302147	student_B	DDF	change abundance	bacteria
+35302147	student_B	microbiome	located in	animal
+35302147	student_B	bacteria	influence	DDF
+35302147	student_B	dietary supplement	influence	DDF
+35302147	student_B	microbiome	is linked to	DDF
+35302147	student_B	chemical	influence	DDF
+35302147	student_B	DDF	target	animal
+
+
+36160716	student_A	microbiome	located in	anatomical location
+36160716	student_A	drug	change effect	DDF
+
+
+34795270	student_A	dietary supplement	influence	DDF
+34795270	student_A	dietary supplement	impact	microbiome
+
+
+35704960	student_A	DDF	target	human
+35704960	student_A	human	used by	biomedical technique
+35704960	student_A	drug	change effect	DDF
+35704960	student_A	dietary supplement	influence	DDF
+35704960	student_A	microbiome	used by	biomedical technique
+35704960	student_A	chemical	influence	DDF
+
+
+39134099	student_A	DDF	interact	chemical
+39134099	student_A	DDF	change abundance	microbiome
+39134099	student_A	chemical	impact	microbiome
+39134099	student_A	drug	change effect	DDF
+39134099	student_A	DDF	is a	DDF
+39134099	student_A	animal	used by	biomedical technique
+39134099	student_A	microbiome	is linked to	DDF
+39134099	student_A	drug	impact	microbiome
+
+
+35889348	student_B	DDF	target	human
+35889348	student_B	chemical	impact	microbiome
+35889348	student_B	chemical	interact	chemical
+35889348	student_B	chemical	influence	DDF
+
+
+35806985	student_B	DDF	target	human
+35806985	student_B	microbiome	is linked to	DDF
+
+
+36422338	student_B	dietary supplement	impact	bacteria
+36422338	student_B	chemical	impact	microbiome
+36422338	student_B	dietary supplement	impact	microbiome
+36422338	student_B	dietary supplement	influence	DDF
+36422338	student_B	microbiome	located in	anatomical location
+36422338	student_B	microbiome	is linked to	DDF
+36422338	student_B	anatomical location	located in	human
+
+
+34783227	student_A	chemical	impact	microbiome
+34783227	student_A	chemical	impact	bacteria
+
+
+32712266	student_A	DDF	affect	DDF
+32712266	student_A	drug	administered	animal
+32712266	student_A	drug	change effect	DDF
+32712266	student_A	chemical	influence	DDF
+32712266	student_A	animal	used by	biomedical technique
+32712266	student_A	microbiome	is linked to	DDF
+32712266	student_A	DDF	target	animal
+
+
+39187187	student_A	DDF	target	human
+39187187	student_A	microbiome	located in	animal
+39187187	student_A	microbiome	located in	human
+39187187	student_A	microbiome	used by	biomedical technique
+39187187	student_A	animal	used by	biomedical technique
+39187187	student_A	microbiome	is linked to	DDF
+39187187	student_A	DDF	target	animal
+
+
+35788394	student_A	chemical	impact	bacteria
+35788394	student_A	microbiome	located in	animal
+35788394	student_A	chemical	impact	microbiome
+35788394	student_A	chemical	influence	DDF
+35788394	student_A	microbiome	is linked to	DDF
+35788394	student_A	bacteria	part of	microbiome
+35788394	student_A	DDF	target	animal
+
+
+38960582	student_A	DDF	target	human
+38960582	student_A	drug	change effect	DDF
+38960582	student_A	chemical	produced by	microbiome
+38960582	student_A	chemical	influence	DDF
+38960582	student_A	microbiome	is linked to	DDF
+38960582	student_A	bacteria	part of	microbiome
+38960582	student_A	DDF	target	animal
+
+
+36558556	student_B	human	used by	biomedical technique
+36558556	student_B	chemical	produced by	microbiome
+36558556	student_B	microbiome	located in	human
+36558556	student_B	bacteria	part of	microbiome
+36558556	student_B	microbiome	compared to	microbiome
+
+
+35956326	student_A	DDF	change abundance	microbiome
+35956326	student_A	DDF	affect	DDF
+35956326	student_A	microbiome	is linked to	DDF
+
+
+39139979	student_A	DDF	target	human
+39139979	student_A	food	impact	microbiome
+39139979	student_A	food	impact	bacteria
+
+
+35562885	student_B	DDF	target	human
+35562885	student_B	DDF	change abundance	microbiome
+35562885	student_B	microbiome	located in	human
+35562885	student_B	dietary supplement	influence	DDF
+35562885	student_B	microbiome	is linked to	DDF
+
+
+33293403	student_A	DDF	target	human
+33293403	student_A	DDF	change abundance	bacteria
+33293403	student_A	DDF	affect	DDF
+33293403	student_A	bacteria	located in	human
+33293403	student_A	DDF	strike	anatomical location
+33293403	student_A	human	used by	biomedical technique
+33293403	student_A	bacteria	influence	DDF
+33293403	student_A	microbiome	located in	human
+33293403	student_A	chemical	located in	anatomical location
+33293403	student_A	microbiome	is linked to	DDF
+33293403	student_A	chemical	influence	DDF
+
+
+38792361	student_B	dietary supplement	influence	DDF
+38792361	student_B	dietary supplement	impact	microbiome
+38792361	student_B	microbiome	is linked to	DDF
+
+
+33459114	student_A	DDF	affect	DDF
+33459114	student_A	microbiome	is linked to	DDF
+
+
+36278467	student_B	drug	impact	bacteria
+36278467	student_B	drug	change effect	DDF
+
+
+38960388	student_A	bacteria	influence	DDF
+38960388	student_A	chemical	influence	DDF
+
+
+36467550	student_A	chemical	impact	microbiome
+36467550	student_A	dietary supplement	impact	microbiome
+36467550	student_A	dietary supplement	influence	DDF
+36467550	student_A	anatomical location	located in	animal
+36467550	student_A	animal	used by	biomedical technique
+36467550	student_A	dietary supplement	change expression	gene
+36467550	student_A	bacteria	interact	chemical
+
+
+35127957	student_A	chemical	change expression	gene
+35127957	student_A	chemical	impact	microbiome
+35127957	student_A	chemical	influence	DDF
+35127957	student_A	chemical	part of	chemical
+35127957	student_A	chemical	interact	chemical
+
+
+35563197	student_A	drug	impact	microbiome
+35563197	student_A	DDF	interact	chemical
+35563197	student_A	drug	change effect	DDF
+35563197	student_A	chemical	interact	chemical
+
+
+35279596	student_B	DDF	change abundance	bacteria
+35279596	student_B	drug	change expression	gene
+35279596	student_B	microbiome	located in	animal
+35279596	student_B	drug	change effect	DDF
+35279596	student_B	drug	impact	bacteria
+35279596	student_B	drug	impact	microbiome
+35279596	student_B	microbiome	is linked to	DDF
+35279596	student_B	bacteria	part of	microbiome
+35279596	student_B	DDF	target	animal
+
+
+
+
+35370947	student_A	microbiome	located in	human
+35370947	student_A	microbiome	is linked to	DDF
+
+
+36058421	student_B	DDF	target	human
+36058421	student_B	DDF	affect	DDF
+36058421	student_B	human	used by	biomedical technique
+36058421	student_B	microbiome	located in	human
+36058421	student_B	microbiome	is linked to	DDF
+36058421	student_B	chemical	influence	DDF
+
+
+38903788	student_A	human	used by	biomedical technique
+38903788	student_A	microbiome	located in	human
+38903788	student_A	microbiome	located in	anatomical location
+38903788	student_A	microbiome	used by	biomedical technique
+38903788	student_A	bacteria	part of	microbiome
+38903788	student_A	anatomical location	located in	human
+
+
+36191374	student_A	DDF	target	human
+36191374	student_A	microbiome	located in	animal
+36191374	student_A	chemical	impact	microbiome
+36191374	student_A	bacteria	part of	microbiome
+36191374	student_A	microbiome	is linked to	DDF
+36191374	student_A	animal	used by	biomedical technique
+36191374	student_A	DDF	target	animal
+
+
+35091889	student_A	drug	change expression	gene
+35091889	student_A	drug	change effect	DDF
+35091889	student_A	drug	impact	bacteria
+35091889	student_A	drug	impact	microbiome
+35091889	student_A	microbiome	is linked to	DDF
+35091889	student_A	animal	used by	biomedical technique
+35091889	student_A	DDF	target	animal
+
+
+39158758	student_B	DDF	change abundance	bacteria
+39158758	student_B	drug	change effect	DDF
+39158758	student_B	anatomical location	located in	animal
+39158758	student_B	animal	used by	biomedical technique
+39158758	student_B	microbiome	is linked to	DDF
+39158758	student_B	DDF	target	animal
+
+
+36552604	student_A	food	impact	microbiome
+36552604	student_A	food	influence	DDF
+36552604	student_A	microbiome	is linked to	DDF
+
+
+39295905	student_A	bacteria	influence	DDF
+39295905	student_A	DDF	change abundance	bacteria
+39295905	student_A	DDF	target	human
+
+
+32865266	student_A	DDF	target	human
+32865266	student_A	bacteria	located in	human
+32865266	student_A	microbiome	located in	human
+32865266	student_A	microbiome	is linked to	DDF
+
+
+36099873	student_B	DDF	change abundance	microbiome
+36099873	student_B	DDF	change abundance	bacteria
+36099873	student_B	microbiome	is linked to	DDF
+
+
+37515687	student_A	bacteria	influence	DDF
+37515687	student_A	chemical	produced by	microbiome
+37515687	student_A	chemical	impact	bacteria
+37515687	student_A	microbiome	is linked to	DDF
+
+
+35611932	student_A	DDF	target	human
+35611932	student_A	human	used by	biomedical technique
+35611932	student_A	drug	change effect	DDF
+35611932	student_A	chemical	produced by	microbiome
+35611932	student_A	microbiome	located in	human
+35611932	student_A	chemical	influence	DDF
+
+
+36280322	student_A	DDF	interact	chemical
+36280322	student_A	DDF	strike	anatomical location
+36280322	student_A	DDF	affect	DDF
+36280322	student_A	bacteria	influence	DDF
+36280322	student_A	drug	change effect	DDF
+36280322	student_A	chemical	located in	anatomical location
+36280322	student_A	microbiome	is linked to	DDF
+36280322	student_A	chemical	influence	DDF
+
+
+35337376	student_A	DDF	target	human
+35337376	student_A	DDF	affect	DDF
+35337376	student_A	microbiome	is linked to	DDF
+
+
+35631252	student_B	drug	impact	microbiome
+35631252	student_B	drug	change effect	DDF
+35631252	student_B	microbiome	is linked to	DDF
+
+
+36516809	student_B	DDF	target	human
+36516809	student_B	human	used by	biomedical technique
+36516809	student_B	drug	change effect	DDF
+36516809	student_B	chemical	produced by	microbiome
+36516809	student_B	chemical	located in	anatomical location
+36516809	student_B	microbiome	is linked to	DDF
+36516809	student_B	chemical	influence	DDF
+
+
+35246670	student_A	DDF	change abundance	microbiome
+35246670	student_A	DDF	target	human
+35246670	student_A	DDF	affect	DDF
+35246670	student_A	chemical	influence	DDF
+
+
+35840611	student_A	microbiome	located in	anatomical location
+35840611	student_A	dietary supplement	administered	human
+35840611	student_A	microbiome	used by	biomedical technique
+35840611	student_A	microbiome	located in	human
+
+
+39065244	student_A	DDF	change abundance	microbiome
+39065244	student_A	microbiome	located in	anatomical location
+39065244	student_A	microbiome	is linked to	DDF
+39065244	student_A	bacteria	part of	microbiome
+
+
+35013099	student_B	DDF	target	human
+35013099	student_B	microbiome	is linked to	DDF
+35013099	student_B	human	used by	biomedical technique
+
+
+35923300	student_B	DDF	target	human
+
+
+39339649	student_A	DDF	target	human
+39339649	student_A	dietary supplement	administered	human
+39339649	student_A	microbiome	change expression	gene
+39339649	student_A	microbiome	located in	human
+39339649	student_A	chemical	produced by	microbiome
+39339649	student_A	dietary supplement	influence	DDF
+39339649	student_A	bacteria	part of	microbiome
+39339649	student_A	chemical	influence	DDF
+
+
+36228569	student_A	dietary supplement	influence	DDF
+36228569	student_A	bacteria	influence	DDF
+36228569	student_A	microbiome	located in	human
+
+
+34785689	student_B	DDF	target	human
+34785689	student_B	chemical	impact	microbiome
+34785689	student_B	microbiome	used by	biomedical technique
+34785689	student_B	human	used by	biomedical technique
+
+
+35194166	student_B	DDF	target	human
+35194166	student_B	DDF	change abundance	bacteria
+35194166	student_B	microbiome	is linked to	DDF
+
+
+33279302	student_A	microbiome	used by	biomedical technique
+33279302	student_A	microbiome	is linked to	DDF
+
+
+
+
+32112917	student_A	DDF	affect	DDF
+32112917	student_A	chemical	influence	DDF
+
+
+35276927	student_A	dietary supplement	influence	DDF
+35276927	student_A	microbiome	is linked to	DDF
+
+
+36034698	student_B	chemical	impact	bacteria
+36034698	student_B	chemical	impact	microbiome
+36034698	student_B	chemical	influence	DDF
+36034698	student_B	animal	used by	biomedical technique
+36034698	student_B	microbiome	is linked to	DDF
+36034698	student_B	bacteria	interact	chemical
+
+
+32032654	student_A	DDF	target	human
+32032654	student_A	DDF	change abundance	bacteria
+32032654	student_A	microbiome	located in	human
+32032654	student_A	microbiome	is linked to	DDF
+32032654	student_A	bacteria	part of	microbiome
+32032654	student_A	anatomical location	located in	human
+
+
+35286767	student_A	dietary supplement	influence	DDF
+35286767	student_A	dietary supplement	administered	human
+35286767	student_A	microbiome	is linked to	DDF
+35286767	student_A	DDF	target	human
+
+
+35257836	student_A	DDF	interact	chemical
+35257836	student_A	chemical	located in	anatomical location
+
+
+32154946	student_A	DDF	target	human
+32154946	student_A	DDF	interact	chemical
+32154946	student_A	chemical	produced by	microbiome
+32154946	student_A	chemical	influence	DDF
+
+
+34430117	student_B	DDF	strike	anatomical location
+34430117	student_B	food	influence	DDF
+34430117	student_B	chemical	located in	anatomical location
+34430117	student_B	dietary supplement	influence	DDF
+34430117	student_B	microbiome	is linked to	DDF
+34430117	student_B	chemical	influence	DDF
+
+
+37492530	student_A	bacteria	influence	DDF
+37492530	student_A	chemical	impact	bacteria
+37492530	student_A	bacteria	part of	microbiome
+
+
+39360283	student_A	DDF	target	human
+39360283	student_A	dietary supplement	influence	DDF
+39360283	student_A	human	used by	biomedical technique
+
+
+34012926	student_B	DDF	change abundance	bacteria
+34012926	student_B	chemical	impact	bacteria
+34012926	student_B	bacteria	located in	human
+34012926	student_B	bacteria	influence	DDF
+34012926	student_B	bacteria	interact	bacteria
+34012926	student_B	bacteria	part of	microbiome
+34012926	student_B	bacteria	interact	chemical
+
+
+38806681	student_A	DDF	target	animal
+
+
+34371014	student_A	DDF	target	human
+34371014	student_A	human	used by	biomedical technique
+34371014	student_A	microbiome	located in	human
+34371014	student_A	microbiome	located in	anatomical location
+34371014	student_A	microbiome	used by	biomedical technique
+34371014	student_A	microbiome	is linked to	DDF
+34371014	student_A	chemical	influence	DDF
+34371014	student_A	anatomical location	located in	human
+
+
+38852801	student_A	bacteria	influence	DDF
+38852801	student_A	chemical	located in	anatomical location
+38852801	student_A	dietary supplement	influence	DDF
+38852801	student_A	microbiome	is linked to	DDF
+38852801	student_A	bacteria	part of	microbiome
+38852801	student_A	bacteria	located in	animal
+
+
+34032647	student_B	chemical	impact	bacteria
+34032647	student_B	chemical	produced by	microbiome
+34032647	student_B	chemical	located in	anatomical location
+34032647	student_B	microbiome	is linked to	DDF
+34032647	student_B	chemical	influence	DDF
+
+
+31790727	student_A	DDF	change abundance	microbiome
+31790727	student_A	drug	change effect	DDF
+31790727	student_A	anatomical location	located in	animal
+31790727	student_A	drug	impact	microbiome
+31790727	student_A	microbiome	is linked to	DDF
+31790727	student_A	DDF	target	animal
+
+
+35275538	student_A	DDF	target	human
+35275538	student_A	DDF	affect	DDF
+35275538	student_A	bacteria	influence	DDF
+35275538	student_A	microbiome	located in	human
+35275538	student_A	bacteria	part of	microbiome
+
+
+35741624	student_A	human	used by	biomedical technique
+
+
+
+
+39426041	student_A	DDF	target	human
+39426041	student_A	DDF	change abundance	bacteria
+39426041	student_A	DDF	affect	DDF
+39426041	student_A	bacteria	influence	DDF
+39426041	student_A	microbiome	located in	human
+39426041	student_A	microbiome	is linked to	DDF
+39426041	student_A	bacteria	interact	chemical
+39426041	student_A	chemical	part of	chemical
+
+
+36240098	student_B	DDF	target	human
+36240098	student_B	drug	change expression	gene
+36240098	student_B	microbiome	change expression	gene
+36240098	student_B	human	used by	biomedical technique
+36240098	student_B	bacteria	influence	DDF
+36240098	student_B	drug	change effect	DDF
+36240098	student_B	bacteria	change expression	gene
+36240098	student_B	drug	impact	bacteria
+36240098	student_B	microbiome	is linked to	DDF
+36240098	student_B	bacteria	part of	microbiome
+
+
+35400445	student_B	DDF	affect	DDF
+35400445	student_B	bacteria	interact	chemical
+35400445	student_B	DDF	target	animal
+35400445	student_B	chemical	interact	chemical
+35400445	student_B	dietary supplement	impact	bacteria
+35400445	student_B	bacteria	influence	DDF
+35400445	student_B	dietary supplement	impact	microbiome
+35400445	student_B	drug	change effect	DDF
+35400445	student_B	chemical	located in	anatomical location
+35400445	student_B	microbiome	located in	anatomical location
+35400445	student_B	chemical	influence	DDF
+35400445	student_B	drug	impact	microbiome
+35400445	student_B	DDF	change abundance	bacteria
+35400445	student_B	DDF	strike	anatomical location
+35400445	student_B	chemical	impact	bacteria
+35400445	student_B	chemical	impact	microbiome
+35400445	student_B	chemical	produced by	microbiome
+35400445	student_B	dietary supplement	influence	DDF
+35400445	student_B	bacteria	interact	bacteria
+35400445	student_B	microbiome	is linked to	DDF
+
+
+35731901	student_A	DDF	change abundance	microbiome
+35731901	student_A	chemical	influence	DDF
+
+
+35405323	student_A	DDF	affect	DDF
+
+
+39078446	student_A	dietary supplement	influence	DDF
+
+
+39110402	student_A	microbiome	is linked to	DDF
+
+
+32290475	student_A	DDF	target	human
+32290475	student_A	DDF	interact	chemical
+32290475	student_A	chemical	impact	bacteria
+32290475	student_A	drug	change effect	DDF
+32290475	student_A	microbiome	located in	human
+32290475	student_A	chemical	located in	anatomical location
+32290475	student_A	bacteria	part of	microbiome
+32290475	student_A	microbiome	is linked to	DDF
+32290475	student_A	chemical	influence	DDF
+32290475	student_A	bacteria	interact	chemical
+
+
+32089785	student_A	DDF	target	human
+32089785	student_A	DDF	affect	DDF
+32089785	student_A	bacteria	influence	DDF
+32089785	student_A	microbiome	located in	human
+32089785	student_A	microbiome	located in	anatomical location
+32089785	student_A	bacteria	part of	microbiome
+32089785	student_A	microbiome	is linked to	DDF
+32089785	student_A	chemical	influence	DDF
+
+
+39121711	student_A	DDF	target	human
+39121711	student_A	bacteria	influence	DDF
+39121711	student_A	DDF	change abundance	bacteria
+39121711	student_A	microbiome	is linked to	DDF
+
+
+39335452	student_B	anatomical location	located in	human
+39335452	student_B	microbiome	used by	biomedical technique
+39335452	student_B	microbiome	located in	human
+39335452	student_B	bacteria	part of	microbiome
+
+
+32252363	student_A	chemical	located in	anatomical location
+32252363	student_A	chemical	impact	microbiome
+32252363	student_A	chemical	influence	DDF
+
+
+35743087	student_B	DDF	target	human
+35743087	student_B	microbiome	located in	human
+35743087	student_B	microbiome	is linked to	DDF
+
+
+36293176	student_A	DDF	target	human
+36293176	student_A	DDF	affect	DDF
+36293176	student_A	DDF	change abundance	microbiome
+36293176	student_A	drug	change effect	DDF
+36293176	student_A	dietary supplement	influence	DDF
+36293176	student_A	microbiome	is linked to	DDF
+36293176	student_A	drug	impact	microbiome
+
+
+38901183	student_A	chemical	impact	bacteria
+38901183	student_A	bacteria	influence	DDF
+38901183	student_A	chemical	impact	microbiome
+38901183	student_A	chemical	located in	anatomical location
+38901183	student_A	microbiome	located in	anatomical location
+38901183	student_A	microbiome	is linked to	DDF
+38901183	student_A	chemical	influence	DDF
+
+
+35607987	student_A	DDF	target	human
+35607987	student_A	DDF	affect	DDF
+35607987	student_A	chemical	produced by	microbiome
+35607987	student_A	human	used by	biomedical technique
+
+
+34909657	student_A	DDF	affect	DDF
+
+
+38732043	student_B	dietary supplement	influence	DDF
+38732043	student_B	chemical	influence	DDF
+38732043	student_B	microbiome	located in	anatomical location
+38732043	student_B	chemical	located in	anatomical location
+
+
+35157987	student_A	DDF	target	animal
+35157987	student_A	drug	change effect	DDF
+
+
+34243604	student_A	chemical	located in	anatomical location
+34243604	student_A	DDF	interact	chemical
+34243604	student_A	chemical	produced by	microbiome
+34243604	student_A	chemical	influence	DDF
+
+
+38801922	student_B	DDF	change abundance	microbiome
+38801922	student_B	bacteria	influence	DDF
+38801922	student_B	microbiome	used by	biomedical technique
+38801922	student_B	microbiome	is linked to	DDF
+38801922	student_B	bacteria	part of	microbiome
+
+
+33262001	student_B	DDF	affect	DDF
+33262001	student_B	microbiome	located in	human
+33262001	student_B	chemical	influence	DDF
+
+
+32105745	student_A	chemical	impact	bacteria
+32105745	student_A	DDF	affect	DDF
+32105745	student_A	chemical	impact	microbiome
+32105745	student_A	drug	change effect	DDF
+32105745	student_A	drug	impact	bacteria
+32105745	student_A	anatomical location	located in	animal
+32105745	student_A	bacteria	part of	microbiome
+32105745	student_A	drug	impact	microbiome
+32105745	student_A	chemical	influence	DDF
+32105745	student_A	DDF	target	animal
+
+
+32768944	student_A	DDF	strike	anatomical location
+32768944	student_A	microbiome	located in	animal
+32768944	student_A	chemical	located in	animal
+32768944	student_A	chemical	impact	microbiome
+32768944	student_A	microbiome	located in	anatomical location
+32768944	student_A	microbiome	is linked to	DDF
+32768944	student_A	chemical	influence	DDF
+
+
+37960284	student_A	DDF	affect	DDF
+37960284	student_A	microbiome	is linked to	DDF
+
+
+34370175	student_A	microbiome	located in	anatomical location
+34370175	student_A	dietary supplement	influence	DDF
+34370175	student_A	microbiome	is linked to	DDF
+
+
+35308288	student_B	anatomical location	located in	animal
+35308288	student_B	chemical	impact	microbiome
+35308288	student_B	dietary supplement	impact	microbiome
+35308288	student_B	chemical	influence	DDF
+
+
+36402501	student_A	microbiome	is linked to	DDF
+
+
+38963982	student_A	drug	impact	microbiome
+38963982	student_A	DDF	target	animal
+38963982	student_A	drug	change expression	gene
+38963982	student_A	drug	change effect	DDF
+
+
+39458270	student_A	DDF	target	human
+39458270	student_A	DDF	change abundance	microbiome
+39458270	student_A	bacteria	influence	DDF
+39458270	student_A	microbiome	used by	biomedical technique
+39458270	student_A	microbiome	is linked to	DDF
+
+
+34530073	student_A	DDF	target	human
+34530073	student_A	DDF	change abundance	bacteria
+34530073	student_A	human	used by	biomedical technique
+34530073	student_A	microbiome	located in	human
+34530073	student_A	chemical	produced by	microbiome
+34530073	student_A	bacteria	part of	microbiome
+34530073	student_A	microbiome	used by	biomedical technique
+34530073	student_A	microbiome	is linked to	DDF
+34530073	student_A	chemical	influence	DDF
+
+
+34569965	student_B	DDF	change abundance	microbiome
+34569965	student_B	microbiome	located in	human
+34569965	student_B	microbiome	located in	animal
+34569965	student_B	microbiome	is linked to	DDF
+
+
+36363733	student_B	DDF	target	human
+36363733	student_B	chemical	impact	microbiome
+36363733	student_B	dietary supplement	impact	microbiome
+36363733	student_B	dietary supplement	influence	DDF
+36363733	student_B	anatomical location	located in	human
+
+
+35819136	student_B	drug	impact	microbiome
+35819136	student_B	DDF	target	human
+35819136	student_B	drug	change effect	DDF
+35819136	student_B	chemical	produced by	microbiome
+
+
+35572129	student_A	DDF	target	animal
+35572129	student_A	DDF	target	human
+35572129	student_A	DDF	change abundance	microbiome
+35572129	student_A	chemical	influence	DDF
+
+
+39092201	student_B	DDF	strike	anatomical location
+39092201	student_B	chemical	located in	anatomical location
+39092201	student_B	microbiome	located in	anatomical location
+39092201	student_B	microbiome	is linked to	DDF
+39092201	student_B	chemical	influence	DDF
+39092201	student_B	animal	used by	biomedical technique
+
+
+33194809	student_A	drug	impact	microbiome
+33194809	student_A	drug	change effect	DDF
+33194809	student_A	microbiome	is linked to	DDF
+33194809	student_A	chemical	located in	anatomical location
+
+
+33050862	student_B	dietary supplement	influence	DDF
+33050862	student_B	dietary supplement	impact	microbiome
+33050862	student_B	microbiome	is linked to	DDF
+33050862	student_B	DDF	target	human
+
+
+
+
+38999739	student_A	DDF	target	human
+38999739	student_A	DDF	change abundance	bacteria
+38999739	student_A	bacteria	influence	DDF
+38999739	student_A	dietary supplement	impact	microbiome
+38999739	student_A	drug	change effect	DDF
+38999739	student_A	dietary supplement	influence	DDF
+38999739	student_A	microbiome	is linked to	DDF
+
+
+36168204	student_A	DDF	change abundance	microbiome
+36168204	student_A	bacteria	influence	DDF
+36168204	student_A	DDF	strike	anatomical location
+36168204	student_A	bacteria	interact	drug
+
+
+35076890	student_A	DDF	change abundance	microbiome
+35076890	student_A	DDF	target	human
+35076890	student_A	microbiome	located in	human
+
+
+32317956	student_A	chemical	impact	bacteria
+32317956	student_A	food	influence	DDF
+32317956	student_A	chemical	impact	microbiome
+32317956	student_A	chemical	located in	anatomical location
+32317956	student_A	chemical	influence	DDF
+32317956	student_A	bacteria	part of	microbiome
+
+
+33418492	student_B	DDF	target	human
+33418492	student_B	DDF	interact	chemical
+33418492	student_B	DDF	affect	DDF
+33418492	student_B	human	used by	biomedical technique
+33418492	student_B	chemical	influence	DDF
+
+
+34669122	student_A	DDF	is a	DDF
+34669122	student_A	DDF	affect	DDF
+34669122	student_A	drug	change effect	DDF
+34669122	student_A	chemical	influence	DDF
+
+
+35432048	student_B	dietary supplement	influence	DDF
+35432048	student_B	microbiome	is linked to	DDF
+
+
+36365032	student_B	DDF	target	human
+36365032	student_B	microbiome	located in	human
+36365032	student_B	human	used by	biomedical technique
+
+
+35981685	student_B	DDF	target	human
+35981685	student_B	microbiome	located in	animal
+35981685	student_B	anatomical location	located in	animal
+35981685	student_B	microbiome	is linked to	DDF
+35981685	student_B	DDF	target	animal
+
+
+36244970	student_A	DDF	target	human
+36244970	student_A	bacteria	influence	DDF
+36244970	student_A	microbiome	located in	human
+36244970	student_A	chemical	influence	DDF
+36244970	student_A	microbiome	used by	biomedical technique
+36244970	student_A	microbiome	is linked to	DDF
+36244970	student_A	bacteria	part of	microbiome
+
+
+
+
+33889128	student_B	DDF	target	human
+33889128	student_B	microbiome	located in	anatomical location
+33889128	student_B	human	used by	biomedical technique
+
+
+39260135	student_B	DDF	affect	DDF
+39260135	student_B	DDF	change abundance	microbiome
+39260135	student_B	chemical	impact	microbiome
+39260135	student_B	dietary supplement	impact	microbiome
+39260135	student_B	drug	change effect	DDF
+39260135	student_B	microbiome	located in	anatomical location
+39260135	student_B	dietary supplement	influence	DDF
+39260135	student_B	microbiome	is linked to	DDF
+39260135	student_B	chemical	influence	DDF
+39260135	student_B	drug	impact	microbiome
+
+
+33064969	student_A	microbiome	located in	animal
+33064969	student_A	bacteria	influence	DDF
+33064969	student_A	microbiome	located in	human
+33064969	student_A	microbiome	is linked to	DDF
+33064969	student_A	DDF	target	animal
+
+
+38984896	student_A	DDF	target	human
+38984896	student_A	microbiome	is linked to	DDF
+
+
+32157731	student_A	microbiome	located in	animal
+32157731	student_A	bacteria	influence	DDF
+32157731	student_A	chemical	located in	animal
+32157731	student_A	chemical	impact	microbiome
+32157731	student_A	drug	change effect	DDF
+32157731	student_A	chemical	influence	DDF
+32157731	student_A	drug	impact	microbiome
+32157731	student_A	dietary supplement	influence	DDF
+32157731	student_A	animal	used by	biomedical technique
+32157731	student_A	food	administered	human
+32157731	student_A	DDF	target	animal
+32157731	student_A	chemical	change expression	gene
+
+
+36958817	student_A	DDF	target	human
+36958817	student_A	DDF	strike	anatomical location
+36958817	student_A	DDF	change abundance	microbiome
+36958817	student_A	chemical	produced by	microbiome
+36958817	student_A	chemical	influence	DDF
+
+
+36466655	student_A	chemical	impact	bacteria
+36466655	student_A	dietary supplement	impact	bacteria
+36466655	student_A	bacteria	influence	DDF
+36466655	student_A	chemical	produced by	microbiome
+36466655	student_A	chemical	located in	anatomical location
+36466655	student_A	dietary supplement	influence	DDF
+36466655	student_A	microbiome	is linked to	DDF
+36466655	student_A	bacteria	part of	microbiome
+36466655	student_A	anatomical location	located in	human
+
+
+35526743	student_B	DDF	target	human
+35526743	student_B	chemical	produced by	microbiome
+35526743	student_B	microbiome	located in	human
+35526743	student_B	chemical	located in	anatomical location
+35526743	student_B	microbiome	is linked to	DDF
+35526743	student_B	anatomical location	located in	human
+
+
+39371767	student_A	dietary supplement	influence	DDF
+39371767	student_A	microbiome	is linked to	DDF
+
+
+35151796	student_B	DDF	target	animal
+35151796	student_B	anatomical location	located in	animal
+35151796	student_B	microbiome	located in	animal
+35151796	student_B	microbiome	is linked to	DDF
+
+
+38097625	student_A	DDF	target	human
+38097625	student_A	chemical	impact	bacteria
+38097625	student_A	human	used by	biomedical technique
+38097625	student_A	chemical	impact	microbiome
+38097625	student_A	chemical	produced by	microbiome
+38097625	student_A	microbiome	is linked to	DDF
+
+
+39203714	student_A	DDF	affect	DDF
+39203714	student_A	DDF	change abundance	microbiome
+39203714	student_A	dietary supplement	influence	DDF
+39203714	student_A	chemical	influence	DDF
+39203714	student_A	chemical	part of	chemical
+
+
+35837118	student_A	human	used by	biomedical technique
+35837118	student_A	DDF	change abundance	microbiome
+35837118	student_A	microbiome	used by	biomedical technique
+35837118	student_A	microbiome	is linked to	DDF
+35837118	student_A	chemical	influence	DDF
+
+
+36615279	student_A	chemical	impact	microbiome
+36615279	student_A	chemical	interact	chemical
+36615279	student_A	chemical	influence	DDF
+
+
+35303781	student_A	microbiome	is linked to	DDF
+
+
+37179826	student_A	DDF	affect	DDF
+
+
+39346901	student_A	bacteria	influence	DDF
+39346901	student_A	drug	change effect	DDF
+39346901	student_A	dietary supplement	influence	DDF
+39346901	student_A	microbiome	is linked to	DDF
+39346901	student_A	animal	used by	biomedical technique
+
+
+34475403	student_A	DDF	change abundance	bacteria
+34475403	student_A	DDF	interact	chemical
+34475403	student_A	microbiome	located in	animal
+34475403	student_A	chemical	produced by	microbiome
+34475403	student_A	chemical	influence	DDF
+34475403	student_A	bacteria	part of	microbiome
+34475403	student_A	microbiome	used by	biomedical technique
+34475403	student_A	microbiome	is linked to	DDF
+34475403	student_A	animal	used by	biomedical technique
+34475403	student_A	DDF	target	animal
+
+
+36687704	student_A	dietary supplement	influence	DDF
+36687704	student_A	DDF	interact	chemical
+36687704	student_A	dietary supplement	impact	microbiome
+36687704	student_A	chemical	located in	anatomical location
+
+
+
+
+38931307	student_A	DDF	target	human
+38931307	student_A	chemical	impact	bacteria
+38931307	student_A	microbiome	located in	animal
+38931307	student_A	chemical	impact	microbiome
+38931307	student_A	chemical	produced by	microbiome
+38931307	student_A	microbiome	is linked to	DDF
+38931307	student_A	chemical	influence	DDF
+38931307	student_A	DDF	target	animal
+
+
+38896988	student_A	DDF	target	animal
+38896988	student_A	DDF	affect	DDF
+38896988	student_A	chemical	located in	anatomical location
+
+
+35599496	student_A	drug	change expression	gene
+35599496	student_A	DDF	affect	DDF
+35599496	student_A	microbiome	located in	animal
+35599496	student_A	microbiome	change expression	gene
+35599496	student_A	DDF	is a	DDF
+35599496	student_A	drug	impact	microbiome
+35599496	student_A	microbiome	is linked to	DDF
+35599496	student_A	DDF	target	animal
+
+
+33571701	student_A	dietary supplement	influence	DDF
+33571701	student_A	DDF	affect	DDF
+
+
+33092396	student_A	DDF	target	human
+33092396	student_A	anatomical location	located in	human
+33092396	student_A	DDF	affect	DDF
+33092396	student_A	dietary supplement	influence	DDF
+
+
+35203645	student_B	DDF	affect	DDF
+35203645	student_B	chemical	impact	microbiome
+35203645	student_B	chemical	located in	anatomical location
+35203645	student_B	chemical	influence	DDF
+35203645	student_B	bacteria	part of	microbiome
+
+
+39126817	student_A	dietary supplement	influence	DDF
+39126817	student_A	dietary supplement	impact	microbiome
+
+
+39203794	student_A	DDF	target	human
+39203794	student_A	DDF	affect	DDF
+39203794	student_A	human	used by	biomedical technique
+39203794	student_A	DDF	change abundance	microbiome
+39203794	student_A	bacteria	influence	DDF
+39203794	student_A	microbiome	located in	human
+39203794	student_A	bacteria	interact	bacteria
+39203794	student_A	microbiome	used by	biomedical technique
+39203794	student_A	microbiome	is linked to	DDF
+39203794	student_A	bacteria	interact	chemical
+
+
+
+
+36364961	student_B	dietary supplement	influence	DDF
+36364961	student_B	dietary supplement	impact	microbiome
+36364961	student_B	microbiome	is linked to	DDF
+
+
+35157946	student_A	DDF	change abundance	microbiome
+35157946	student_A	DDF	target	human
+35157946	student_A	microbiome	is linked to	DDF
+
+
+33662500	student_A	food	impact	microbiome
+33662500	student_A	food	impact	bacteria
+33662500	student_A	animal	used by	biomedical technique
+
+
+34571840	student_A	bacteria	influence	DDF
+34571840	student_A	DDF	affect	DDF
+34571840	student_A	microbiome	is linked to	DDF
+
+
+31737957	student_A	DDF	target	human
+31737957	student_A	DDF	affect	DDF
+31737957	student_A	drug	change effect	DDF
+31737957	student_A	microbiome	is linked to	DDF
+31737957	student_A	drug	impact	microbiome
+
+
+35937875	student_A	DDF	target	human
+35937875	student_A	drug	change effect	DDF
+35937875	student_A	microbiome	located in	human
+35937875	student_A	chemical	produced by	microbiome
+35937875	student_A	microbiome	used by	biomedical technique
+35937875	student_A	microbiome	is linked to	DDF
+35937875	student_A	bacteria	part of	microbiome
+35937875	student_A	drug	impact	microbiome
+
+
+36543925	student_A	DDF	target	human
+36543925	student_A	microbiome	located in	animal
+36543925	student_A	microbiome	change expression	gene
+36543925	student_A	dietary supplement	change expression	gene
+36543925	student_A	bacteria	influence	DDF
+36543925	student_A	drug	change effect	DDF
+36543925	student_A	microbiome	located in	human
+36543925	student_A	chemical	located in	anatomical location
+36543925	student_A	microbiome	is linked to	DDF
+36543925	student_A	bacteria	part of	microbiome
+36543925	student_A	DDF	target	animal
+
+
+39360304	student_A	DDF	affect	DDF
+39360304	student_A	microbiome	located in	animal
+39360304	student_A	DDF	change abundance	microbiome
+39360304	student_A	microbiome	used by	biomedical technique
+39360304	student_A	animal	used by	biomedical technique
+39360304	student_A	DDF	target	animal
+
+
+39456245	student_A	microbiome	located in	human
+39456245	student_A	human	used by	biomedical technique
+
+
+32987244	student_A	DDF	affect	DDF
+32987244	student_A	food	influence	DDF
+32987244	student_A	chemical	influence	DDF
+
+
+38974216	student_B	DDF	change abundance	microbiome
+38974216	student_B	microbiome	is linked to	DDF
+38974216	student_B	chemical	influence	DDF
+
+
+32710966	student_A	DDF	strike	anatomical location
+32710966	student_A	chemical	located in	anatomical location
+32710966	student_A	anatomical location	located in	animal
+32710966	student_A	chemical	influence	DDF
+32710966	student_A	chemical	interact	chemical
+
+
+34896331	student_A	DDF	interact	chemical
+34896331	student_A	microbiome	is linked to	DDF
+34896331	student_A	chemical	produced by	microbiome
+34896331	student_A	chemical	influence	DDF
+
+
+38928361	student_B	DDF	target	human
+38928361	student_B	DDF	affect	DDF
+38928361	student_B	drug	change effect	DDF
+38928361	student_B	microbiome	located in	anatomical location
+38928361	student_B	microbiome	is linked to	DDF
+
+
+39331265	student_A	DDF	change abundance	microbiome
+39331265	student_A	chemical	impact	microbiome
+39331265	student_A	chemical	produced by	microbiome
+39331265	student_A	microbiome	is linked to	DDF
+39331265	student_A	chemical	influence	DDF
+39331265	student_A	chemical	change expression	gene
+
+
+36075637	student_B	DDF	affect	DDF
+
+
+33573273	student_A	chemical	impact	bacteria
+33573273	student_A	chemical	produced by	microbiome
+33573273	student_A	chemical	located in	anatomical location
+
+
+31854093	student_B	DDF	strike	anatomical location
+31854093	student_B	DDF	affect	DDF
+31854093	student_B	bacteria	influence	DDF
+31854093	student_B	anatomical location	located in	animal
+31854093	student_B	animal	used by	biomedical technique
+31854093	student_B	chemical	influence	DDF
+
+
+
+
+35464431	student_A	DDF	affect	DDF
+35464431	student_A	microbiome	located in	anatomical location
+35464431	student_A	dietary supplement	influence	DDF
+35464431	student_A	microbiome	is linked to	DDF
+35464431	student_A	DDF	target	animal
+
+
+32894625	student_A	DDF	target	human
+32894625	student_A	DDF	affect	DDF
+
+
+34835406	student_A	dietary supplement	impact	microbiome
+34835406	student_A	microbiome	used by	biomedical technique
+34835406	student_A	microbiome	is linked to	DDF
+
+
+36569929	student_A	DDF	change abundance	microbiome
+36569929	student_A	DDF	affect	DDF
+36569929	student_A	microbiome	is linked to	DDF
+36569929	student_A	chemical	influence	DDF
+
+
+35041424	student_A	food	influence	DDF
+35041424	student_A	microbiome	is linked to	DDF
+
+
+37490970	student_A	DDF	target	human
+37490970	student_A	bacteria	influence	DDF
+37490970	student_A	microbiome	located in	human
+37490970	student_A	microbiome	is linked to	DDF
+37490970	student_A	chemical	influence	DDF
+
+
+35844606	student_B	microbiome	located in	anatomical location
+35844606	student_B	microbiome	is linked to	DDF
+
+
+33935107	student_A	chemical	produced by	microbiome
+
+
+35879588	student_A	DDF	target	human
+35879588	student_A	dietary supplement	influence	DDF
+35879588	student_A	microbiome	located in	human
+35879588	student_A	microbiome	is linked to	DDF
+
+
+32244373	student_B	chemical	impact	microbiome
+32244373	student_B	DDF	affect	DDF
+32244373	student_B	food	influence	DDF
+
+
+39339804	student_B	food	impact	bacteria
+39339804	student_B	DDF	affect	DDF
+39339804	student_B	dietary supplement	impact	bacteria
+39339804	student_B	dietary supplement	impact	microbiome
+39339804	student_B	microbiome	located in	human
+39339804	student_B	microbiome	located in	anatomical location
+39339804	student_B	bacteria	part of	microbiome
+39339804	student_B	microbiome	compared to	microbiome
+39339804	student_B	food	impact	microbiome
+
+
+38776563	student_A	DDF	target	human
+38776563	student_A	microbiome	located in	anatomical location
+38776563	student_A	DDF	affect	DDF
+38776563	student_A	microbiome	is linked to	DDF
+
+
+39106786	student_A	microbiome	is linked to	DDF
+
+
+33549028	student_A	microbiome	located in	anatomical location
+33549028	student_A	microbiome	is linked to	DDF
+
+
+32247371	student_A	DDF	target	human
+32247371	student_A	microbiome	located in	human
+32247371	student_A	drug	change effect	DDF
+32247371	student_A	microbiome	is linked to	DDF
+
+
+39089603	student_A	DDF	target	human
+39089603	student_A	DDF	affect	DDF
+39089603	student_A	bacteria	influence	DDF
+39089603	student_A	microbiome	used by	biomedical technique
+39089603	student_A	microbiome	is linked to	DDF
+
+
+34402617	student_A	microbiome	used by	biomedical technique
+
+
+33390888	student_A	dietary supplement	influence	DDF
+33390888	student_A	drug	change effect	DDF
+
+
+33138351	student_A	microbiome	is linked to	DDF
+33138351	student_A	chemical	influence	DDF
+
+
+38848976	student_B	microbiome	change expression	gene
+38848976	student_B	drug	change effect	DDF
+38848976	student_B	bacteria	change expression	gene
+38848976	student_B	microbiome	used by	biomedical technique
+38848976	student_B	microbiome	is linked to	DDF
+38848976	student_B	bacteria	part of	microbiome
+38848976	student_B	chemical	change expression	gene
+
+
+39364125	student_B	DDF	target	human
+39364125	student_B	DDF	change abundance	bacteria
+39364125	student_B	DDF	affect	DDF
+39364125	student_B	DDF	change abundance	microbiome
+39364125	student_B	microbiome	located in	human
+39364125	student_B	microbiome	located in	anatomical location
+39364125	student_B	microbiome	is linked to	DDF
+
+
+39337263	student_A	DDF	change abundance	microbiome
+39337263	student_A	DDF	target	human
+39337263	student_A	DDF	affect	DDF
+39337263	student_A	microbiome	is linked to	DDF
+
+
+35245613	student_A	DDF	target	human
+35245613	student_A	bacteria	influence	DDF
+35245613	student_A	DDF	strike	anatomical location
+35245613	student_A	microbiome	is linked to	DDF
+
+
+35367961	student_A	microbiome	is linked to	DDF
+
+
+35444255	student_B	DDF	target	human
+35444255	student_B	human	used by	biomedical technique
+35444255	student_B	DDF	change abundance	microbiome
+35444255	student_B	chemical	produced by	microbiome
+35444255	student_B	microbiome	used by	biomedical technique
+35444255	student_B	microbiome	is linked to	DDF
+35444255	student_B	bacteria	part of	microbiome
+
+
+38057970	student_A	DDF	target	human
+
+
+31968211	student_A	microbiome	located in	anatomical location
+31968211	student_A	microbiome	located in	human
+31968211	student_A	microbiome	is linked to	DDF
+31968211	student_A	anatomical location	located in	human
+
+
+34358037	student_A	bacteria	influence	DDF
+34358037	student_A	DDF	affect	DDF
+34358037	student_A	microbiome	is linked to	DDF
+
+
+36235622	student_A	bacteria	influence	DDF
+36235622	student_A	DDF	affect	DDF
+36235622	student_A	dietary supplement	influence	DDF
+
+
+35207483	student_B	dietary supplement	influence	DDF
+35207483	student_B	drug	change effect	DDF
+
+
+31931152	student_A	DDF	target	human
+31931152	student_A	dietary supplement	influence	DDF
+31931152	student_A	microbiome	is linked to	DDF
+
+
+39360531	student_A	DDF	target	human
+39360531	student_A	chemical	influence	DDF
+
+
+39386896	student_B	DDF	target	human
+39386896	student_B	DDF	change abundance	bacteria
+39386896	student_B	microbiome	located in	human
+39386896	student_B	chemical	located in	anatomical location
+39386896	student_B	microbiome	located in	anatomical location
+39386896	student_B	microbiome	used by	biomedical technique
+39386896	student_B	microbiome	is linked to	DDF
+
+
+33338469	student_B	DDF	strike	anatomical location
+33338469	student_B	chemical	impact	bacteria
+33338469	student_B	bacteria	influence	DDF
+33338469	student_B	chemical	influence	DDF
+33338469	student_B	bacteria	interact	chemical
+33338469	student_B	chemical	part of	chemical
+33338469	student_B	chemical	interact	chemical
+
+
+35603160	student_A	DDF	target	human
+35603160	student_A	DDF	change abundance	bacteria
+35603160	student_A	DDF	affect	DDF
+35603160	student_A	human	used by	biomedical technique
+35603160	student_A	chemical	influence	DDF
+35603160	student_A	bacteria	part of	microbiome
+
+
+39027446	student_A	DDF	change abundance	bacteria
+39027446	student_A	DDF	interact	chemical
+39027446	student_A	DDF	target	human
+39027446	student_A	DDF	affect	DDF
+39027446	student_A	DDF	change abundance	microbiome
+39027446	student_A	bacteria	influence	DDF
+39027446	student_A	drug	change effect	DDF
+39027446	student_A	chemical	produced by	microbiome
+39027446	student_A	dietary supplement	influence	DDF
+39027446	student_A	bacteria	interact	bacteria
+39027446	student_A	microbiome	is linked to	DDF
+39027446	student_A	chemical	part of	chemical
+39027446	student_A	chemical	interact	chemical
+
+
+38735387	student_A	DDF	affect	DDF
+38735387	student_A	drug	change effect	DDF
+38735387	student_A	bacteria	change expression	gene
+
+
+36362150	student_A	DDF	affect	DDF
+36362150	student_A	DDF	change abundance	microbiome
+36362150	student_A	bacteria	influence	DDF
+36362150	student_A	chemical	located in	anatomical location
+36362150	student_A	microbiome	is linked to	DDF
+
+
+38863592	student_A	DDF	target	human
+38863592	student_A	food	influence	DDF
+38863592	student_A	microbiome	located in	human
+38863592	student_A	dietary supplement	influence	DDF
+38863592	student_A	food	impact	microbiome
+
+
+35715396	student_A	DDF	target	human
+35715396	student_A	microbiome	used by	biomedical technique
+35715396	student_A	microbiome	located in	human
+35715396	student_A	bacteria	located in	human
+
+
+35508109	student_B	microbiome	located in	animal
+35508109	student_B	microbiome	change expression	gene
+35508109	student_B	dietary supplement	influence	DDF
+35508109	student_B	animal	used by	biomedical technique
+35508109	student_B	DDF	target	animal
+
+
+35342048	student_A	DDF	change abundance	microbiome
+35342048	student_A	DDF	target	human
+35342048	student_A	chemical	impact	microbiome
+35342048	student_A	microbiome	used by	biomedical technique
+
+
+31654753	student_A	DDF	affect	DDF
+31654753	student_A	microbiome	is linked to	DDF
+
+
+38959280	student_A	DDF	target	human
+38959280	student_A	anatomical location	located in	human
+38959280	student_A	microbiome	is linked to	DDF
+
+
+36593694	student_B	DDF	change abundance	bacteria
+36593694	student_B	DDF	affect	DDF
+36593694	student_B	DDF	strike	anatomical location
+36593694	student_B	DDF	change abundance	microbiome
+36593694	student_B	bacteria	influence	DDF
+36593694	student_B	chemical	located in	anatomical location
+36593694	student_B	DDF	is a	DDF
+36593694	student_B	bacteria	interact	bacteria
+36593694	student_B	microbiome	is linked to	DDF
+36593694	student_B	bacteria	part of	microbiome
+36593694	student_B	bacteria	interact	chemical
+
+
+39029984	student_A	DDF	target	human
+39029984	student_A	DDF	affect	DDF
+39029984	student_A	chemical	impact	microbiome
+39029984	student_A	drug	change effect	DDF
+39029984	student_A	microbiome	located in	anatomical location
+39029984	student_A	chemical	influence	DDF
+
+
+34768765	student_A	DDF	target	human
+34768765	student_A	DDF	affect	DDF
+34768765	student_A	bacteria	located in	human
+34768765	student_A	human	used by	biomedical technique
+34768765	student_A	bacteria	influence	DDF
+34768765	student_A	drug	change effect	DDF
+34768765	student_A	anatomical location	located in	animal
+34768765	student_A	microbiome	is linked to	DDF
+34768765	student_A	DDF	target	animal
+34768765	student_A	bacteria	located in	animal
+
+
+38815661	student_B	DDF	target	human
+38815661	student_B	microbiome	located in	human
+38815661	student_B	microbiome	used by	biomedical technique
+38815661	student_B	microbiome	is linked to	DDF
+38815661	student_B	bacteria	part of	microbiome
+
+
+38827186	student_A	microbiome	is linked to	DDF
+
+
+38869657	student_B	DDF	target	human
+38869657	student_B	bacteria	located in	human
+38869657	student_B	chemical	impact	microbiome
+38869657	student_B	microbiome	located in	human
+38869657	student_B	drug	administered	human
+38869657	student_B	chemical	produced by	microbiome
+38869657	student_B	drug	impact	microbiome
+38869657	student_B	chemical	located in	human
+38869657	student_B	microbiome	used by	biomedical technique
+38869657	student_B	bacteria	interact	chemical
+
+
+39417049	student_A	DDF	change abundance	microbiome
+39417049	student_A	microbiome	is linked to	DDF
+
+
+35713539	student_A	DDF	target	human
+
+
+34982206	student_A	chemical	influence	DDF
+34982206	student_A	chemical	located in	human
+34982206	student_A	drug	change effect	DDF
+34982206	student_A	drug	administered	human
+
+
+35779628	student_A	DDF	affect	DDF
+35779628	student_A	drug	change effect	DDF
+35779628	student_A	drug	administered	animal
+35779628	student_A	drug	administered	human
+
+
+36039924	student_A	dietary supplement	influence	DDF
+
+
+35103734	student_A	chemical	located in	animal
+35103734	student_A	chemical	impact	microbiome
+35103734	student_A	chemical	located in	anatomical location
+35103734	student_A	DDF	is a	DDF
+35103734	student_A	bacteria	part of	microbiome
+35103734	student_A	chemical	part of	chemical
+35103734	student_A	chemical	influence	DDF
+35103734	student_A	chemical	change expression	gene
+35103734	student_A	chemical	interact	chemical
+
+
+35831877	student_B	DDF	change abundance	microbiome
+35831877	student_B	microbiome	is linked to	DDF
+
+
+35044528	student_B	microbiome	is linked to	DDF
+
+
+
+
+38857554	student_A	DDF	target	human
+38857554	student_A	dietary supplement	influence	DDF
+38857554	student_A	anatomical location	located in	animal
+38857554	student_A	chemical	influence	DDF
+38857554	student_A	DDF	target	animal
+
+
+31829756	student_A	DDF	affect	DDF
+31829756	student_A	microbiome	is linked to	DDF
+31829756	student_A	chemical	influence	DDF
+
+
+32844199	student_A	DDF	target	human
+32844199	student_A	microbiome	change expression	gene
+32844199	student_A	microbiome	is linked to	DDF
+32844199	student_A	human	used by	biomedical technique
+
+
+39476179	student_A	DDF	change abundance	microbiome
+39476179	student_A	drug	impact	microbiome
+39476179	student_A	dietary supplement	impact	microbiome
+39476179	student_A	microbiome	is linked to	DDF
+
+
+38908788	student_A	DDF	target	human
+38908788	student_A	DDF	change abundance	bacteria
+38908788	student_A	DDF	change abundance	microbiome
+38908788	student_A	microbiome	located in	human
+38908788	student_A	microbiome	used by	biomedical technique
+38908788	student_A	microbiome	is linked to	DDF
+38908788	student_A	chemical	influence	DDF
+
+
+32827699	student_A	bacteria	influence	DDF
+32827699	student_A	anatomical location	located in	animal
+32827699	student_A	microbiome	used by	biomedical technique
+32827699	student_A	microbiome	is linked to	DDF
+32827699	student_A	chemical	influence	DDF
+32827699	student_A	DDF	target	animal
+32827699	student_A	animal	used by	biomedical technique
+
+
+38892645	student_A	DDF	target	human
+38892645	student_A	dietary supplement	administered	human
+38892645	student_A	DDF	affect	DDF
+38892645	student_A	dietary supplement	impact	microbiome
+38892645	student_A	microbiome	located in	human
+38892645	student_A	dietary supplement	influence	DDF
+
+
+36408101	student_B	microbiome	located in	anatomical location
+36408101	student_B	chemical	influence	DDF
+
+
+35600818	student_B	DDF	change abundance	bacteria
+35600818	student_B	drug	change effect	DDF
+35600818	student_B	drug	impact	bacteria
+35600818	student_B	drug	impact	microbiome
+35600818	student_B	animal	used by	biomedical technique
+35600818	student_B	microbiome	is linked to	DDF
+35600818	student_B	DDF	target	animal
+
+
+36421902	student_B	DDF	target	human
+36421902	student_B	DDF	interact	chemical
+36421902	student_B	human	used by	biomedical technique
+36421902	student_B	microbiome	is linked to	DDF
+36421902	student_B	chemical	influence	DDF
+
+
+31684843	student_A	dietary supplement	influence	DDF
+31684843	student_A	DDF	affect	DDF
+31684843	student_A	food	influence	DDF
+
+
+34566874	student_B	DDF	target	human
+34566874	student_B	drug	change effect	DDF
+34566874	student_B	microbiome	located in	human
+
+
+35453597	student_B	DDF	target	human
+35453597	student_B	DDF	change abundance	microbiome
+35453597	student_B	drug	change effect	DDF
+35453597	student_B	microbiome	is linked to	DDF
+35453597	student_B	anatomical location	located in	human
+
+
+35822696	student_A	DDF	change abundance	microbiome
+35822696	student_A	bacteria	influence	DDF
+35822696	student_A	microbiome	is linked to	DDF
+
+
+32035595	student_B	dietary supplement	influence	DDF
+32035595	student_B	chemical	influence	DDF
+
+
+35349746	student_A	microbiome	located in	anatomical location
+35349746	student_A	DDF	affect	DDF
+
+
+36686268	student_A	bacteria	influence	DDF
+36686268	student_A	microbiome	is linked to	DDF
+
+
+39303815	student_B	chemical	impact	microbiome
+39303815	student_B	drug	change effect	DDF
+39303815	student_B	chemical	produced by	microbiome
+39303815	student_B	chemical	located in	anatomical location
+39303815	student_B	drug	impact	bacteria
+39303815	student_B	microbiome	is linked to	DDF
+39303815	student_B	animal	used by	biomedical technique
+39303815	student_B	DDF	target	animal
+
+
+32934117	student_A	DDF	target	human
+32934117	student_A	DDF	interact	chemical
+32934117	student_A	DDF	affect	DDF
+32934117	student_A	human	used by	biomedical technique
+32934117	student_A	bacteria	influence	DDF
+32934117	student_A	chemical	produced by	microbiome
+32934117	student_A	microbiome	is linked to	DDF
+32934117	student_A	chemical	influence	DDF
+
+
+34682763	student_A	drug	impact	microbiome
+34682763	student_A	dietary supplement	impact	microbiome
+34682763	student_A	microbiome	is linked to	DDF
+34682763	student_A	bacteria	part of	microbiome
+
+
+32323181	student_A	microbiome	located in	anatomical location
+32323181	student_A	chemical	produced by	microbiome
+32323181	student_A	DDF	affect	DDF
+32323181	student_A	microbiome	is linked to	DDF
+
+
+35299696	student_A	microbiome	is linked to	DDF
+
+
+39458509	student_A	DDF	change abundance	microbiome
+39458509	student_A	dietary supplement	influence	DDF
+39458509	student_A	dietary supplement	impact	microbiome
+39458509	student_A	microbiome	is linked to	DDF
+
+
+
+
+32357258	student_A	DDF	target	human
+32357258	student_A	DDF	interact	chemical
+32357258	student_A	DDF	affect	DDF
+32357258	student_A	human	used by	biomedical technique
+32357258	student_A	chemical	produced by	microbiome
+32357258	student_A	microbiome	is linked to	DDF
+32357258	student_A	chemical	influence	DDF
+
+
+35076270	student_A	DDF	change abundance	microbiome
+35076270	student_A	drug	change expression	gene
+35076270	student_A	drug	change effect	DDF
+
+
+31340904	student_A	chemical	impact	bacteria
+31340904	student_A	DDF	affect	DDF
+31340904	student_A	bacteria	influence	DDF
+31340904	student_A	dietary supplement	influence	DDF
+31340904	student_A	microbiome	is linked to	DDF
+
+
+35959396	student_A	bacteria	interact	chemical
+35959396	student_A	bacteria	influence	DDF
+
+
+36145184	student_B	dietary supplement	influence	DDF
+36145184	student_B	chemical	impact	microbiome
+36145184	student_B	chemical	influence	DDF
+
+
+38968876	student_A	DDF	change abundance	microbiome
+38968876	student_A	bacteria	part of	microbiome
+
+
+32325848	student_B	bacteria	located in	human
+32325848	student_B	microbiome	is linked to	DDF
+
+
+
+
+39163908	student_B	dietary supplement	impact	bacteria
+39163908	student_B	human	used by	biomedical technique
+39163908	student_B	bacteria	influence	DDF
+39163908	student_B	chemical	impact	microbiome
+39163908	student_B	dietary supplement	impact	microbiome
+39163908	student_B	dietary supplement	influence	DDF
+39163908	student_B	bacteria	part of	microbiome
+
+
+35067061	student_B	microbiome	located in	animal
+35067061	student_B	bacteria	influence	DDF
+35067061	student_B	bacteria	change expression	gene
+35067061	student_B	anatomical location	located in	animal
+35067061	student_B	bacteria	interact	chemical
+35067061	student_B	bacteria	part of	microbiome
+35067061	student_B	DDF	target	animal
+
+
+32161568	student_B	DDF	target	human
+32161568	student_B	DDF	change abundance	bacteria
+32161568	student_B	DDF	affect	DDF
+32161568	student_B	bacteria	located in	human
+32161568	student_B	human	used by	biomedical technique
+32161568	student_B	bacteria	influence	DDF
+32161568	student_B	microbiome	located in	human
+32161568	student_B	chemical	located in	human
+32161568	student_B	microbiome	is linked to	DDF
+
+
+33499229	student_A	DDF	target	human
+33499229	student_A	DDF	change abundance	bacteria
+33499229	student_A	microbiome	located in	human
+33499229	student_A	chemical	produced by	microbiome
+33499229	student_A	microbiome	is linked to	DDF
+33499229	student_A	bacteria	part of	microbiome
+
+
+35491707	student_A	DDF	change abundance	microbiome
+35491707	student_A	dietary supplement	influence	DDF
+
+
+34907601	student_B	DDF	target	human
+34907601	student_B	microbiome	located in	animal
+34907601	student_B	dietary supplement	impact	microbiome
+34907601	student_B	dietary supplement	influence	DDF
+34907601	student_B	bacteria	part of	microbiome
+34907601	student_B	microbiome	used by	biomedical technique
+34907601	student_B	dietary supplement	change expression	gene
+34907601	student_B	DDF	target	animal
+
+
+38756585	student_B	DDF	target	human
+38756585	student_B	DDF	affect	DDF
+38756585	student_B	DDF	change abundance	bacteria
+38756585	student_B	human	used by	biomedical technique
+
+
+34025392	student_A	DDF	target	human
+34025392	student_A	DDF	strike	anatomical location
+34025392	student_A	DDF	affect	DDF
+34025392	student_A	dietary supplement	influence	DDF
+34025392	student_A	DDF	target	animal
+
+
+31552496	student_A	dietary supplement	impact	microbiome
+31552496	student_A	drug	change effect	DDF
+31552496	student_A	microbiome	is linked to	DDF
+31552496	student_A	chemical	influence	DDF
+
+
+35849305	student_A	DDF	target	human
+35849305	student_A	bacteria	influence	DDF
+35849305	student_A	dietary supplement	impact	microbiome
+35849305	student_A	dietary supplement	influence	DDF
+35849305	student_A	microbiome	is linked to	DDF
+
+
+38732060	student_A	dietary supplement	administered	human
+38732060	student_A	dietary supplement	influence	DDF
+38732060	student_A	microbiome	located in	anatomical location
+38732060	student_A	dietary supplement	impact	microbiome
+
+
+35399732	student_B	DDF	target	human
+35399732	student_B	bacteria	influence	DDF
+35399732	student_B	microbiome	located in	human
+
+
+34274348	student_A	microbiome	located in	anatomical location
+34274348	student_A	chemical	impact	microbiome
+34274348	student_A	chemical	produced by	microbiome
+
+
+39317918	student_A	microbiome	located in	anatomical location
+
+
+32247376	student_A	DDF	affect	DDF
+32247376	student_A	microbiome	is linked to	DDF
+
+
+36613486	student_B	DDF	target	human
+36613486	student_B	anatomical location	located in	human
+36613486	student_B	chemical	produced by	microbiome
+36613486	student_B	microbiome	located in	human
+
+
+38889540	student_B	DDF	target	human
+38889540	student_B	DDF	change abundance	microbiome
+38889540	student_B	dietary supplement	impact	microbiome
+38889540	student_B	microbiome	located in	human
+38889540	student_B	anatomical location	located in	human
+
+
+
+
+36421473	student_A	microbiome	located in	anatomical location
+36421473	student_A	bacteria	part of	microbiome
+36421473	student_A	microbiome	is linked to	DDF
+36421473	student_A	chemical	influence	DDF
+
+
+33860738	student_A	DDF	target	human
+33860738	student_A	DDF	affect	DDF
+
+
+39378456	student_A	drug	impact	microbiome
+39378456	student_A	dietary supplement	influence	DDF
+39378456	student_A	dietary supplement	impact	microbiome
+39378456	student_A	microbiome	is linked to	DDF
+
+
+39125364	student_A	dietary supplement	influence	DDF
+39125364	student_A	dietary supplement	administered	human
+39125364	student_A	microbiome	is linked to	DDF
+39125364	student_A	DDF	target	human
+
+
+35711580	student_B	DDF	target	human
+35711580	student_B	human	used by	biomedical technique
+35711580	student_B	microbiome	located in	human
+35711580	student_B	chemical	located in	anatomical location
+35711580	student_B	microbiome	is linked to	DDF
+
+
+35742813	student_B	drug	change expression	gene
+35742813	student_B	drug	administered	animal
+35742813	student_B	drug	change effect	DDF
+35742813	student_B	anatomical location	located in	animal
+35742813	student_B	dietary supplement	influence	DDF
+35742813	student_B	microbiome	is linked to	DDF
+
+
+37389240	student_A	DDF	target	human
+37389240	student_A	DDF	strike	anatomical location
+37389240	student_A	DDF	affect	DDF
+37389240	student_A	DDF	change abundance	bacteria
+
+
+
+
+36359864	student_A	DDF	target	human
+36359864	student_A	microbiome	located in	animal
+36359864	student_A	drug	administered	animal
+36359864	student_A	drug	change effect	DDF
+36359864	student_A	microbiome	located in	human
+36359864	student_A	drug	administered	human
+36359864	student_A	drug	impact	bacteria
+36359864	student_A	microbiome	is linked to	DDF
+36359864	student_A	chemical	influence	DDF
+36359864	student_A	drug	impact	microbiome
+36359864	student_A	drug	interact	chemical
+36359864	student_A	chemical	interact	chemical
+
+
+35016506	student_A	DDF	target	animal
+35016506	student_A	food	change expression	gene
+35016506	student_A	food	influence	DDF
+35016506	student_A	microbiome	is linked to	DDF
+
+
+33148438	student_A	chemical	located in	animal
+33148438	student_A	dietary supplement	influence	DDF
+33148438	student_A	microbiome	used by	biomedical technique
+33148438	student_A	microbiome	is linked to	DDF
+33148438	student_A	animal	used by	biomedical technique
+33148438	student_A	DDF	target	animal
+
+
+38803488	student_A	bacteria	change expression	gene
+38803488	student_A	microbiome	is linked to	DDF
+38803488	student_A	chemical	influence	DDF
+
+
+35115853	student_A	DDF	change abundance	microbiome
+35115853	student_A	microbiome	located in	animal
+
+
+34347266	student_B	DDF	target	animal
+34347266	student_B	anatomical location	located in	animal
+34347266	student_B	microbiome	is linked to	DDF
+34347266	student_B	chemical	influence	DDF
+
+
+37529095	student_A	bacteria	located in	animal
+37529095	student_A	DDF	affect	DDF
+
+
+35422756	student_A	DDF	interact	chemical
+35422756	student_A	DDF	affect	DDF
+35422756	student_A	DDF	strike	anatomical location
+35422756	student_A	chemical	located in	anatomical location
+35422756	student_A	bacteria	part of	microbiome
+35422756	student_A	chemical	influence	DDF
+
+
+34954497	student_A	DDF	target	human
+34954497	student_A	microbiome	is linked to	DDF
+34954497	student_A	microbiome	located in	human
+34954497	student_A	bacteria	part of	microbiome
+
+
+37346870	student_A	DDF	target	animal
+37346870	student_A	DDF	target	human
+37346870	student_A	microbiome	is linked to	DDF
+
+
+36558531	student_A	chemical	impact	bacteria
+36558531	student_A	bacteria	influence	DDF
+36558531	student_A	chemical	produced by	microbiome
+36558531	student_A	microbiome	is linked to	DDF
+36558531	student_A	chemical	influence	DDF
+36558531	student_A	bacteria	interact	chemical
+36558531	student_A	chemical	interact	chemical
+
+
+33633723	student_A	DDF	target	human
+33633723	student_A	bacteria	located in	human
+33633723	student_A	bacteria	influence	DDF
+33633723	student_A	microbiome	located in	anatomical location
+33633723	student_A	microbiome	is linked to	DDF
+
+
+36934020	student_B	DDF	change abundance	bacteria
+36934020	student_B	DDF	strike	anatomical location
+36934020	student_B	DDF	affect	DDF
+36934020	student_B	chemical	impact	bacteria
+36934020	student_B	microbiome	used by	biomedical technique
+36934020	student_B	chemical	influence	DDF
+36934020	student_B	bacteria	located in	animal
+36934020	student_B	chemical	interact	chemical
+
+
+35433746	student_A	microbiome	located in	anatomical location
+35433746	student_A	dietary supplement	influence	DDF
+35433746	student_A	microbiome	is linked to	DDF
+
+
+31606537	student_A	chemical	impact	bacteria
+31606537	student_A	chemical	impact	microbiome
+31606537	student_A	drug	change effect	DDF
+31606537	student_A	drug	impact	bacteria
+31606537	student_A	drug	impact	microbiome
+31606537	student_A	bacteria	part of	microbiome
+31606537	student_A	chemical	influence	DDF
+31606537	student_A	DDF	target	animal
+
+
+38892525	student_B	food	impact	microbiome
+38892525	student_B	chemical	produced by	microbiome
+38892525	student_B	food	influence	DDF
+38892525	student_B	microbiome	is linked to	DDF
+
+
+35631301	student_B	DDF	target	human
+35631301	student_B	chemical	impact	microbiome
+35631301	student_B	drug	change effect	DDF
+35631301	student_B	microbiome	located in	human
+35631301	student_B	chemical	produced by	microbiome
+35631301	student_B	chemical	located in	anatomical location
+35631301	student_B	dietary supplement	influence	DDF
+35631301	student_B	chemical	influence	DDF
+35631301	student_B	anatomical location	located in	human
+
+
+38972900	student_A	DDF	target	animal
+38972900	student_A	DDF	affect	DDF
+
+
+31837645	student_A	DDF	affect	DDF
+31837645	student_A	food	influence	DDF
+31837645	student_A	dietary supplement	impact	microbiome
+31837645	student_A	dietary supplement	influence	DDF
+31837645	student_A	microbiome	located in	anatomical location
+31837645	student_A	microbiome	is linked to	DDF
+31837645	student_A	food	impact	microbiome
+
+
+36183483	student_A	microbiome	used by	biomedical technique
+36183483	student_A	microbiome	located in	human
+36183483	student_A	bacteria	part of	microbiome
+
+
+35243260	student_A	chemical	located in	animal
+35243260	student_A	microbiome	is linked to	DDF
+
+
+39195546	student_A	DDF	target	human
+39195546	student_A	DDF	interact	chemical
+39195546	student_A	bacteria	located in	human
+39195546	student_A	DDF	change abundance	microbiome
+39195546	student_A	microbiome	located in	human
+39195546	student_A	chemical	produced by	microbiome
+39195546	student_A	microbiome	located in	anatomical location
+39195546	student_A	chemical	located in	human
+39195546	student_A	anatomical location	located in	human
+
+
+38944290	student_B	DDF	change abundance	bacteria
+38944290	student_B	microbiome	located in	animal
+38944290	student_B	microbiome	change expression	gene
+38944290	student_B	DDF	change abundance	microbiome
+38944290	student_B	anatomical location	located in	animal
+38944290	student_B	DDF	target	animal
+
+
+32926778	student_A	microbiome	located in	animal
+32926778	student_A	bacteria	part of	microbiome
+32926778	student_A	microbiome	is linked to	DDF
+32926778	student_A	chemical	influence	DDF
+32926778	student_A	DDF	target	animal
+32926778	student_A	chemical	interact	chemical
+
+
+39121264	student_A	chemical	impact	microbiome
+
+
+36478577	student_B	DDF	change abundance	microbiome
+36478577	student_B	dietary supplement	influence	DDF
+36478577	student_B	chemical	impact	microbiome
+36478577	student_B	dietary supplement	impact	microbiome
+
+
+34996385	student_A	DDF	is a	DDF
+34996385	student_A	drug	interact	chemical
+34996385	student_A	chemical	produced by	microbiome
+34996385	student_A	human	used by	biomedical technique
+
+
+32871960	student_A	DDF	target	human
+32871960	student_A	microbiome	located in	human
+32871960	student_A	microbiome	used by	biomedical technique
+32871960	student_A	microbiome	is linked to	DDF
+
+
+39021622	student_A	DDF	target	human
+39021622	student_A	microbiome	located in	human
+39021622	student_A	microbiome	located in	anatomical location
+39021622	student_A	dietary supplement	influence	DDF
+39021622	student_A	microbiome	is linked to	DDF
+
+
+34996879	student_A	DDF	target	human
+34996879	student_A	bacteria	located in	human
+34996879	student_A	DDF	change abundance	microbiome
+34996879	student_A	chemical	impact	microbiome
+34996879	student_A	chemical	located in	human
+34996879	student_A	microbiome	used by	biomedical technique
+34996879	student_A	chemical	influence	DDF
+34996879	student_A	bacteria	interact	chemical
+
+
+35600753	student_B	DDF	target	human
+35600753	student_B	microbiome	located in	animal
+35600753	student_B	drug	change effect	DDF
+35600753	student_B	microbiome	located in	human
+35600753	student_B	dietary supplement	influence	DDF
+35600753	student_B	microbiome	is linked to	DDF
+35600753	student_B	drug	impact	microbiome
+35600753	student_B	DDF	target	animal
+
+
+35127723	student_A	DDF	affect	DDF
+35127723	student_A	drug	change effect	DDF
+35127723	student_A	chemical	located in	anatomical location
+
+
+36088985	student_A	microbiome	located in	animal
+36088985	student_A	drug	change effect	DDF
+36088985	student_A	anatomical location	located in	animal
+36088985	student_A	drug	impact	microbiome
+36088985	student_A	chemical	influence	DDF
+36088985	student_A	DDF	target	animal
+
+
+36078738	student_A	dietary supplement	impact	bacteria
+36078738	student_A	dietary supplement	impact	microbiome
+36078738	student_A	drug	change effect	DDF
+36078738	student_A	dietary supplement	influence	DDF
+36078738	student_A	microbiome	located in	anatomical location
+
+
+38748594	student_A	DDF	target	human
+38748594	student_A	microbiome	located in	human
+38748594	student_A	microbiome	is linked to	DDF
+
+
+35654260	student_B	DDF	target	human
+35654260	student_B	DDF	change abundance	microbiome
+35654260	student_B	microbiome	located in	human
+35654260	student_B	microbiome	is linked to	DDF
+35654260	student_B	chemical	influence	DDF
+35654260	student_B	anatomical location	located in	human
+
+
+35432038	student_A	DDF	change abundance	microbiome
+35432038	student_A	microbiome	located in	anatomical location
+35432038	student_A	microbiome	is linked to	DDF
+
+
+38847603	student_B	chemical	impact	microbiome
+38847603	student_B	dietary supplement	impact	microbiome
+38847603	student_B	microbiome	located in	human
+38847603	student_B	dietary supplement	influence	DDF
+38847603	student_B	microbiome	is linked to	DDF
+
+
+35317694	student_B	dietary supplement	influence	DDF
+35317694	student_B	dietary supplement	impact	microbiome
+35317694	student_B	dietary supplement	impact	bacteria
+35317694	student_B	microbiome	is linked to	DDF
+
+
+36001607	student_A	chemical	impact	microbiome
+36001607	student_A	DDF	affect	DDF
+36001607	student_A	microbiome	used by	biomedical technique
+
+
+35981631	student_A	microbiome	located in	animal
+35981631	student_A	chemical	impact	microbiome
+35981631	student_A	drug	change effect	DDF
+35981631	student_A	chemical	produced by	microbiome
+35981631	student_A	drug	impact	microbiome
+35981631	student_A	bacteria	part of	microbiome
+35981631	student_A	microbiome	used by	biomedical technique
+35981631	student_A	animal	used by	biomedical technique
+35981631	student_A	chemical	influence	DDF
+35981631	student_A	DDF	target	animal
+
+
+36158270	student_A	DDF	target	human
+36158270	student_A	DDF	change abundance	microbiome
+36158270	student_A	microbiome	located in	human
+36158270	student_A	microbiome	used by	biomedical technique
+36158270	student_A	microbiome	is linked to	DDF
+36158270	student_A	bacteria	part of	microbiome
+
+
+36619768	student_A	DDF	target	human
+36619768	student_A	DDF	affect	DDF
+36619768	student_A	DDF	change abundance	microbiome
+36619768	student_A	drug	change effect	DDF
+36619768	student_A	microbiome	is linked to	DDF
+
+
+35135531	student_B	DDF	target	human
+35135531	student_B	human	used by	biomedical technique
+35135531	student_B	DDF	change abundance	microbiome
+35135531	student_B	chemical	impact	microbiome
+35135531	student_B	dietary supplement	impact	microbiome
+35135531	student_B	drug	change effect	DDF
+35135531	student_B	microbiome	located in	human
+35135531	student_B	dietary supplement	influence	DDF
+35135531	student_B	microbiome	is linked to	DDF
+35135531	student_B	chemical	influence	DDF
+35135531	student_B	anatomical location	located in	human
+35135531	student_B	chemical	change expression	gene
+
+
+
+
+36959989	student_A	DDF	target	human
+36959989	student_A	DDF	affect	DDF
+36959989	student_A	bacteria	influence	DDF
+36959989	student_A	drug	change effect	DDF
+36959989	student_A	dietary supplement	influence	DDF
+36959989	student_A	microbiome	located in	anatomical location
+36959989	student_A	microbiome	is linked to	DDF
+
+
+33362788	student_A	DDF	interact	chemical
+33362788	student_A	chemical	influence	DDF
+
+
+34938619	student_A	DDF	affect	DDF
+
+
+35272713	student_B	drug	change expression	gene
+35272713	student_B	microbiome	located in	animal
+35272713	student_B	drug	change effect	DDF
+35272713	student_B	drug	impact	bacteria
+35272713	student_B	drug	impact	microbiome
+35272713	student_B	microbiome	is linked to	DDF
+35272713	student_B	bacteria	part of	microbiome
+35272713	student_B	DDF	target	animal
+
+
+35889175	student_A	chemical	impact	microbiome
+35889175	student_A	microbiome	is linked to	DDF
+35889175	student_A	chemical	influence	DDF
+
+
+36551872	student_A	dietary supplement	impact	microbiome
+36551872	student_A	DDF	affect	DDF
+36551872	student_A	microbiome	is linked to	DDF
+36551872	student_A	chemical	influence	DDF
+
+
+32103766	student_A	microbiome	located in	anatomical location
+32103766	student_A	microbiome	located in	human
+32103766	student_A	microbiome	is linked to	DDF
+32103766	student_A	bacteria	part of	microbiome
+
+
+33617267	student_A	chemical	located in	animal
+33617267	student_A	chemical	impact	microbiome
+33617267	student_A	dietary supplement	impact	microbiome
+33617267	student_A	dietary supplement	influence	DDF
+33617267	student_A	animal	used by	biomedical technique
+33617267	student_A	chemical	influence	DDF
+33617267	student_A	chemical	change expression	gene
+
+
+36093196	student_B	dietary supplement	influence	DDF
+36093196	student_B	dietary supplement	impact	microbiome
+36093196	student_B	microbiome	located in	human
+36093196	student_B	DDF	target	human
+
+
+36334596	student_B	microbiome	located in	anatomical location
+
+
+
+
+39287570	student_A	DDF	target	human
+39287570	student_A	microbiome	used by	biomedical technique
+39287570	student_A	microbiome	located in	human
+
+
+38582194	student_A	DDF	target	human
+38582194	student_A	microbiome	is linked to	DDF
+
+
+36358286	student_A	microbiome	located in	animal
+36358286	student_A	bacteria	influence	DDF
+36358286	student_A	animal	used by	biomedical technique
+36358286	student_A	bacteria	part of	microbiome
+36358286	student_A	microbiome	is linked to	DDF
+36358286	student_A	DDF	target	animal
+
+
+32226375	student_B	microbiome	is linked to	DDF
+
+
+39375215	student_A	microbiome	is linked to	DDF
+
+
+37798034	student_A	DDF	target	human
+37798034	student_A	drug	change effect	DDF
+37798034	student_A	microbiome	is linked to	DDF
+37798034	student_A	human	used by	biomedical technique
+
+
+35650236	student_B	DDF	target	human
+35650236	student_B	bacteria	influence	DDF
+35650236	student_B	chemical	produced by	microbiome
+35650236	student_B	microbiome	used by	biomedical technique
+35650236	student_B	microbiome	is linked to	DDF
+
+
+34911958	student_A	drug	interact	chemical
+34911958	student_A	drug	change effect	DDF
+34911958	student_A	bacteria	interact	drug
+34911958	student_A	chemical	influence	DDF
+
+
+35799798	student_B	DDF	target	human
+35799798	student_B	microbiome	used by	biomedical technique
+35799798	student_B	microbiome	located in	human
+
+
+39392025	student_A	bacteria	influence	DDF
+
+
+34750307	student_A	dietary supplement	influence	DDF
+34750307	student_A	microbiome	is linked to	DDF
+
+
+36355135	student_A	microbiome	located in	anatomical location
+36355135	student_A	microbiome	is linked to	DDF
+
+
+34719435	student_A	bacteria	influence	DDF
+34719435	student_A	drug	change effect	DDF
+34719435	student_A	microbiome	is linked to	DDF
+
+
+33470765	student_A	DDF	target	animal
+33470765	student_A	chemical	located in	anatomical location
+33470765	student_A	anatomical location	located in	animal
+33470765	student_A	chemical	influence	DDF
+
+
+36226922	student_A	dietary supplement	influence	DDF
+36226922	student_A	chemical	located in	anatomical location
+36226922	student_A	chemical	impact	bacteria
+36226922	student_A	chemical	influence	DDF
+
+
+
+
+39199404	student_B	DDF	target	human
+39199404	student_B	microbiome	located in	animal
+39199404	student_B	microbiome	is linked to	DDF
+39199404	student_B	chemical	influence	DDF
+39199404	student_B	DDF	target	animal
+
+
+35829770	student_A	DDF	is a	DDF
+35829770	student_A	chemical	produced by	microbiome
+35829770	student_A	microbiome	is linked to	DDF
+
+
+34948234	student_A	DDF	target	human
+34948234	student_A	DDF	affect	DDF
+34948234	student_A	microbiome	located in	human
+34948234	student_A	chemical	located in	anatomical location
+34948234	student_A	chemical	produced by	microbiome
+34948234	student_A	microbiome	located in	anatomical location
+34948234	student_A	microbiome	is linked to	DDF
+34948234	student_A	anatomical location	located in	human
+
+
+33404072	student_A	bacteria	influence	DDF
+33404072	student_A	microbiome	is linked to	DDF
+33404072	student_A	bacteria	part of	microbiome
+
+
+33291597	student_A	DDF	affect	DDF
+33291597	student_A	DDF	change abundance	microbiome
+33291597	student_A	chemical	impact	microbiome
+33291597	student_A	chemical	located in	anatomical location
+33291597	student_A	dietary supplement	influence	DDF
+33291597	student_A	chemical	influence	DDF
+
+
+38892694	student_B	DDF	target	human
+38892694	student_B	chemical	produced by	microbiome
+38892694	student_B	microbiome	located in	human
+38892694	student_B	bacteria	part of	microbiome
+38892694	student_B	drug	impact	microbiome
+
+
+39015337	student_A	DDF	target	human
+39015337	student_A	bacteria	located in	human
+39015337	student_A	human	used by	biomedical technique
+39015337	student_A	microbiome	located in	human
+39015337	student_A	microbiome	used by	biomedical technique
+39015337	student_A	microbiome	is linked to	DDF
+
+
+32739365	student_A	DDF	target	animal
+32739365	student_A	dietary supplement	influence	DDF
+32739365	student_A	anatomical location	located in	animal
+32739365	student_A	dietary supplement	impact	microbiome
+
+
+
+
+36191590	student_A	DDF	target	human
+36191590	student_A	bacteria	located in	human
+36191590	student_A	microbiome	located in	human
+36191590	student_A	microbiome	used by	biomedical technique
+36191590	student_A	microbiome	is linked to	DDF
+
+
+39033825	student_A	bacteria	change expression	gene
+39033825	student_A	bacteria	part of	microbiome
+39033825	student_A	microbiome	change expression	gene
+39033825	student_A	microbiome	is linked to	DDF
+
+
+34386321	student_A	drug	impact	microbiome
+34386321	student_A	microbiome	located in	anatomical location
+
+
+33106549	student_A	DDF	target	human
+33106549	student_A	DDF	affect	DDF
+33106549	student_A	microbiome	located in	animal
+33106549	student_A	chemical	influence	DDF
+33106549	student_A	bacteria	part of	microbiome
+33106549	student_A	DDF	target	animal
+
+
+36455673	student_B	DDF	affect	DDF
+36455673	student_B	microbiome	located in	animal
+36455673	student_B	DDF	change abundance	microbiome
+36455673	student_B	chemical	impact	microbiome
+36455673	student_B	chemical	located in	anatomical location
+36455673	student_B	DDF	is a	DDF
+36455673	student_B	microbiome	is linked to	DDF
+36455673	student_B	chemical	influence	DDF
+36455673	student_B	DDF	target	animal
+36455673	student_B	chemical	interact	chemical
+
+
+35225349	student_A	DDF	target	human
+35225349	student_A	DDF	change abundance	bacteria
+35225349	student_A	DDF	strike	anatomical location
+35225349	student_A	DDF	affect	DDF
+35225349	student_A	human	used by	biomedical technique
+35225349	student_A	DDF	change abundance	microbiome
+35225349	student_A	microbiome	located in	human
+35225349	student_A	microbiome	is linked to	DDF
+
+
+35897024	student_A	DDF	target	human
+
+
+39217732	student_A	DDF	target	human
+39217732	student_A	DDF	change abundance	bacteria
+39217732	student_A	microbiome	is linked to	DDF
+39217732	student_A	bacteria	part of	microbiome
+
+
+36742204	student_A	dietary supplement	influence	DDF
+36742204	student_A	DDF	strike	anatomical location
+36742204	student_A	microbiome	is linked to	DDF
+
+
+35445772	student_A	bacteria	interact	chemical
+35445772	student_A	microbiome	is linked to	DDF
+35445772	student_A	chemical	influence	DDF
+
+
+33400024	student_A	DDF	target	human
+33400024	student_A	chemical	influence	DDF
+33400024	student_A	bacteria	influence	DDF
+33400024	student_A	chemical	located in	anatomical location
+
+
+36140263	student_B	DDF	change abundance	bacteria
+36140263	student_B	microbiome	change expression	gene
+36140263	student_B	human	used by	biomedical technique
+36140263	student_B	DDF	change abundance	microbiome
+36140263	student_B	microbiome	located in	human
+36140263	student_B	chemical	produced by	microbiome
+36140263	student_B	microbiome	used by	biomedical technique
+36140263	student_B	microbiome	is linked to	DDF
+36140263	student_B	bacteria	part of	microbiome
+36140263	student_B	chemical	change expression	gene
+
+
+36558405	student_A	DDF	change abundance	bacteria
+36558405	student_A	DDF	target	human
+36558405	student_A	DDF	change abundance	microbiome
+36558405	student_A	chemical	produced by	microbiome
+36558405	student_A	microbiome	located in	anatomical location
+36558405	student_A	microbiome	is linked to	DDF
+36558405	student_A	bacteria	part of	microbiome
+
+
+35684340	student_A	microbiome	located in	anatomical location
+35684340	student_A	dietary supplement	influence	DDF
+35684340	student_A	bacteria	part of	microbiome
+35684340	student_A	microbiome	is linked to	DDF
+35684340	student_A	chemical	influence	DDF
+
+
+35924055	student_A	chemical	located in	animal
+35924055	student_A	DDF	strike	anatomical location
+35924055	student_A	chemical	change expression	gene
+35924055	student_A	chemical	influence	DDF
+
+
+35035709	student_A	DDF	target	human
+35035709	student_A	human	used by	biomedical technique
+35035709	student_A	DDF	change abundance	microbiome
+35035709	student_A	microbiome	used by	biomedical technique
+35035709	student_A	microbiome	is linked to	DDF
+
+
+32916966	student_A	microbiome	is linked to	DDF
+
+
+36881358	student_A	DDF	target	human
+36881358	student_A	DDF	change abundance	bacteria
+36881358	student_A	bacteria	located in	human
+36881358	student_A	DDF	change abundance	microbiome
+36881358	student_A	bacteria	influence	DDF
+36881358	student_A	bacteria	part of	microbiome
+
+
+38879123	student_A	DDF	target	human
+38879123	student_A	bacteria	influence	DDF
+38879123	student_A	microbiome	is linked to	DDF
+
+
+38875919	student_A	DDF	target	human
+38875919	student_A	microbiome	located in	human
+38875919	student_A	microbiome	is linked to	DDF
+
+
+36432461	student_A	DDF	target	human
+36432461	student_A	food	influence	DDF
+36432461	student_A	dietary supplement	impact	microbiome
+36432461	student_A	microbiome	located in	human
+36432461	student_A	dietary supplement	influence	DDF
+36432461	student_A	microbiome	is linked to	DDF
+
+
+33719004	student_B	DDF	interact	chemical
+33719004	student_B	DDF	change abundance	microbiome
+33719004	student_B	chemical	located in	anatomical location
+33719004	student_B	chemical	influence	DDF
+33719004	student_B	DDF	target	animal
+
+
+34829716	student_A	dietary supplement	impact	microbiome
+34829716	student_A	food	influence	DDF
+
+
+36120376	student_A	microbiome	located in	animal
+36120376	student_A	drug	change effect	DDF
+36120376	student_A	anatomical location	located in	animal
+36120376	student_A	drug	impact	bacteria
+36120376	student_A	animal	used by	biomedical technique
+36120376	student_A	bacteria	part of	microbiome
+
+
+36048886	student_A	DDF	target	human
+36048886	student_A	dietary supplement	administered	human
+36048886	student_A	microbiome	located in	human
+
+
+38983862	student_A	DDF	target	human
+38983862	student_A	DDF	affect	DDF
+38983862	student_A	human	used by	biomedical technique
+38983862	student_A	microbiome	is linked to	DDF
+38983862	student_A	anatomical location	located in	human
+
+
+36126853	student_B	microbiome	located in	animal
+36126853	student_B	microbiome	is linked to	DDF
+
+
+33557583	student_A	chemical	change expression	gene
+33557583	student_A	microbiome	used by	biomedical technique
+33557583	student_A	microbiome	change expression	gene
+
+
+33185912	student_A	DDF	target	human
+33185912	student_A	human	used by	biomedical technique
+33185912	student_A	drug	change effect	DDF
+33185912	student_A	drug	administered	human
+33185912	student_A	microbiome	is linked to	DDF
+33185912	student_A	drug	impact	microbiome
+
+
+39313515	student_A	DDF	affect	DDF
+39313515	student_A	chemical	impact	microbiome
+39313515	student_A	drug	change effect	DDF
+39313515	student_A	chemical	located in	anatomical location
+39313515	student_A	chemical	influence	DDF
+39313515	student_A	DDF	target	animal
+39313515	student_A	chemical	interact	chemical
+
+
+35677440	student_A	DDF	target	human
+35677440	student_A	microbiome	is linked to	DDF
+
+
+34440599	student_A	DDF	target	human
+34440599	student_A	microbiome	located in	anatomical location
+34440599	student_A	microbiome	is linked to	DDF
+
+
+33352217	student_A	microbiome	compared to	microbiome
+33352217	student_A	microbiome	is linked to	DDF
+
+
+35565888	student_A	microbiome	located in	anatomical location
+35565888	student_A	chemical	produced by	microbiome
+35565888	student_A	chemical	impact	microbiome
+35565888	student_A	microbiome	is linked to	DDF
+
+
+35852145	student_A	chemical	impact	bacteria
+35852145	student_A	human	used by	biomedical technique
+35852145	student_A	microbiome	located in	human
+35852145	student_A	bacteria	interact	bacteria
+35852145	student_A	microbiome	is linked to	DDF
+
+
+36200207	student_A	DDF	interact	chemical
+36200207	student_A	DDF	affect	DDF
+36200207	student_A	chemical	impact	microbiome
+36200207	student_A	dietary supplement	impact	microbiome
+36200207	student_A	chemical	located in	anatomical location
+36200207	student_A	dietary supplement	influence	DDF
+36200207	student_A	microbiome	located in	anatomical location
+36200207	student_A	microbiome	is linked to	DDF
+36200207	student_A	chemical	influence	DDF
+
+
+37798868	student_A	chemical	impact	microbiome
+37798868	student_A	chemical	produced by	microbiome
+37798868	student_A	microbiome	used by	biomedical technique
+37798868	student_A	microbiome	is linked to	DDF
+37798868	student_A	chemical	influence	DDF
+
+

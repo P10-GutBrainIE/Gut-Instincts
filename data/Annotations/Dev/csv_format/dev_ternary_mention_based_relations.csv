@@ -1,0 +1,561 @@
+pmid|annotator|subject_text_span|subject_label|predicate|object_text_span|object_label
+36532064|expert_7|brain microbiota|microbiome|compared to|gut microbiome|microbiome
+36532064|expert_7|bacterial proteins|chemical|located in|human brain|anatomical location
+36532064|expert_7|gut microbiota|microbiome|is linked to|CNS autoimmunity|DDF
+36532064|expert_7|Alzheimer disease|DDF|target|patients|human
+36532064|expert_7|BrainBiota|microbiome|is linked to|CNS autoimmune inflammation|DDF
+36532064|expert_7|neurological diseases|DDF|target|patients|human
+36532064|expert_7|multiple sclerosis|DDF|target|patients|human
+36532064|expert_7|Parkinson's disease|DDF|target|patients|human
+36532064|expert_7|brain microbiota|microbiome|located in|human brain|anatomical location
+36532064|expert_7|BrainBiota|microbiome|located in|human brain|anatomical location
+36532064|expert_7|gut microbiota|microbiome|located in|patients|human
+36532064|expert_7|BrainBiota|microbiome|compared to|gut microbiome|microbiome
+37212075|expert_5|IgA-Biome|microbiome|located in|AR and TD patients|human
+37212075|expert_5|IgA-coated and -uncoated bacteria|bacteria|located in|AR and TD patients|human
+37212075|expert_5|AR and TD patients|human|used by|amplification and sequencing of the V4 region of the 16 S rDNA gene|biomedical technique
+37212075|expert_5|IgA-Biome|microbiome|used by|Flow cytometry|biomedical technique
+37212075|expert_5|Parkinson's disease|DDF|is a|heterogeneous neurodegenerative disorder|DDF
+37212075|expert_5|IgA-Biome|microbiome|is linked to|akinetic rigid (AR) or tremor dominant (TD) Parkinson's disease clinical subtypes|DDF
+37212075|expert_5|gut microbiota|microbiome|is linked to|Parkinson's disease|DDF
+37212075|expert_5|gut microbiota|microbiome|compared to|IgA-Biome|microbiome
+37212075|expert_5|IgA-Biome|microbiome|used by|amplification and sequencing of the V4 region of the 16 S rDNA gene|biomedical technique
+37212075|expert_5|gut microbiota|microbiome|is linked to|heterogeneous neurodegenerative disorder|DDF
+37212075|expert_5|AR and TD patients|human|used by|Flow cytometry|biomedical technique
+37577447|expert_5|oral and gut microbiota|microbiome|located in|HC|human
+37577447|expert_5|oral-gut microbiota|microbiome|is linked to|AD|DDF
+37577447|expert_5|oral and gut microbiota|microbiome|located in|persons|human
+37577447|expert_5|intestinal microbiota|microbiome|located in|persons|human
+37577447|expert_5|alcohol dependence|DDF|target|male patients|human
+37577447|expert_5|oral and gut microbiota|microbiome|located in|male patients|human
+37577447|expert_5|oral and gut microbiota|microbiome|is linked to|alcohol dependence|DDF
+37577447|expert_5|oral and gut microbiota|microbiome|located in|healthy controls|human
+37577447|expert_5|AD|DDF|target|persons|human
+37577447|expert_5|oral microbiota|microbiome|located in|persons|human
+37577447|expert_5|AD|DDF|target|male patients|human
+37577447|expert_5|oral and gut microbiota|microbiome|is linked to|AD|DDF
+37577447|expert_5|oral microbiota|microbiome|compared to|intestinal microbiota|microbiome
+37577447|expert_5|oral microbiota|microbiome|is linked to|AD|DDF
+38203207|expert_5|DA|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|histamine|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|changing gut bacteria|bacteria|part of|gut microbiome|microbiome
+38203207|expert_5|short-chain fatty acids|chemical|produced by|gut microbiota|microbiome
+38203207|expert_5|SCFAs|chemical|produced by|gut microbiota|microbiome
+38203207|expert_5|5-HT|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|Bacteria in the gut microbiome|bacteria|part of|gut microbiota|microbiome
+38203207|expert_5|gut microbiome|microbiome|is linked to|neuropsychiatric disorders|DDF
+38203207|expert_5|serotonin|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|depression|DDF|is a|neuropsychiatric disorders|DDF
+38203207|expert_5|GABA|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|dopamine|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|autism|DDF|is a|neuropsychiatric disorders|DDF
+38203207|expert_5|schizophrenia|DDF|is a|neuropsychiatric disorders|DDF
+38203207|expert_5|gut microbiota|microbiome|located in|gut|anatomical location
+38203207|expert_5|NE|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|norepinephrine|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|γ-aminobutyric acid|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|gut microbiome|microbiome|is linked to|mental disorders|DDF
+38203207|expert_5|glutamate|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|Glu|chemical|impact|gut microbiota|microbiome
+38203207|expert_5|gut microbiome|microbiome|located in|gut|anatomical location
+38203207|expert_5|bile acids|chemical|produced by|gut microbiota|microbiome
+38203207|expert_5|changing gut bacteria|bacteria|influence|neuropsychiatric disorders|DDF
+31530799|expert_2|gut microbiota|microbiome|located in|non-LH (resilient) rats|animal
+31530799|expert_2|gut microbiota|microbiome|located in|control rats|animal
+31530799|expert_2|Lactobacillus|bacteria|part of|gut microbiota|microbiome
+31530799|expert_2|gut microbiota|microbiome|located in|LH (susceptible) rats|animal
+31530799|expert_2|Anaerofustis|bacteria|part of|gut microbiota|microbiome
+31530799|expert_2|Lactobacillales|bacteria|part of|gut microbiota|microbiome
+31530799|expert_2|Lactobacillaceae|bacteria|part of|gut microbiota|microbiome
+31530799|expert_2|gut microbiota|microbiome|is linked to|stress-related disorders|DDF
+31530799|expert_2|short-chain fatty acids|chemical|produced by|gut microbiota|microbiome
+31530799|expert_2|Clostridium cluster III|bacteria|part of|gut microbiota|microbiome
+38525261|expert_6|dietary fiber|dietary supplement|administered|healthy individuals|human
+38525261|expert_6|dietary fiber|dietary supplement|impact|gut microbiota|microbiome
+38525261|expert_6|microbial metabolites|chemical|produced by|gut microbiota|microbiome
+36978911|expert_5|Flavonoids|chemical|influence|Neurodegenerative Pathology|DDF
+36978911|expert_5|AD|DDF|is a|neurological disorders|DDF
+36978911|expert_5|neurological disorders|DDF|affect|impaired motor function|DDF
+36978911|expert_5|dietary flavonoid components|chemical|located in|gut|anatomical location
+36978911|expert_5|bioactive flavonoid metabolites|chemical|produced by|gut microbiome|microbiome
+36978911|expert_5|neurological disorders|DDF|affect|anxiety|DDF
+36978911|expert_5|neutraceutical supplementation|dietary supplement|impact|harmful pathogenic organisms|bacteria
+36978911|expert_5|neurological disorders|DDF|affect|depression|DDF
+36978911|expert_5|neurological disorders|DDF|affect|long-term cognitive decline|DDF
+36978911|expert_5|PD|DDF|is a|neurological disorders|DDF
+36978911|expert_5|Flavonoids|chemical|part of|pharmacologically active compounds|chemical
+36978911|expert_5|native flavonoids|chemical|influence|neurological disorders|DDF
+36978911|expert_5|therapeutic metabolites|chemical|located in|gut|anatomical location
+36978911|expert_5|Native flavonoids|chemical|influence|inflammation in tissues|DDF
+36978911|expert_5|therapeutic metabolites|chemical|located in|vagus nerve|anatomical location
+36978911|expert_5|Flavonoid Metabolites|chemical|influence|Neurodegenerative Pathology|DDF
+36978911|expert_5|neutraceutical supplementation|dietary supplement|impact|bacterial symbiont species|bacteria
+36978911|expert_5|bipolar disorder|DDF|is a|neurological disorders|DDF
+36978911|expert_5|Neurodegenerative Pathology|DDF|affect|Disorders of Cognitive Decline|DDF
+36978911|expert_5|gut microbiome|microbiome|located in|gut|anatomical location
+36978911|expert_5|dietary flavonoid components|chemical|influence|neurological disorders|DDF
+36978911|expert_5|autism|DDF|is a|neurological disorders|DDF
+31610228|expert_5|anti-inflammatory cytokines|chemical|influence|increased systemic inflammatory activity|DDF
+31610228|expert_5|alcohol overconsumption|DDF|target|men|human
+31610228|expert_5|alcohol overconsumption|DDF|affect|psychiatric symptoms|DDF
+31610228|expert_5|Proteobacteria|bacteria|change expression|TNF-α|gene
+31610228|expert_5|chronic alcohol overconsumption|DDF|change abundance|gut microbiota|microbiome
+31610228|expert_5|increased systemic inflammatory activity|DDF|target|Patients|human
+31610228|expert_5|pro-inflammatory cytokines|chemical|influence|increased systemic inflammatory activity|DDF
+31610228|expert_5|alcohol overconsumption|DDF|target|patients|human
+31610228|expert_5|Alcohol-related morbidity|DDF|affect|immune dysregulation|DDF
+31610228|expert_5|chronic alcohol overconsumption|DDF|target|patients|human
+31610228|expert_5|psychiatric symptoms|DDF|target|Patients|human
+31610228|expert_5|Proteobacteria|bacteria|change expression|IL-8|gene
+31610228|expert_5|gut microbiota|microbiome|is linked to|chronic alcohol overconsumption|DDF
+31610228|expert_5|chronic alcohol overconsumption|DDF|target|hospital inpatients|human
+31610228|expert_5|gut microbiota|microbiome|located in|hospital inpatients|human
+31610228|expert_5|gut microbiota|microbiome|located in|patients|human
+31610228|expert_5|Alcohol-related morbidity|DDF|change abundance|gut microbiota|microbiome
+31610228|expert_5|alcohol overconsumption|DDF|target|Patients|human
+34560239|expert_5|colon|anatomical location|located in|adult mice|animal
+34560239|expert_5|striatum|anatomical location|located in|adult mice|animal
+34560239|expert_5|gut microbiome|microbiome|located in|MPTP-induced Parkinson's disease mice|animal
+34560239|expert_5|gut microbiota|microbiome|located in|adult mice|animal
+34560239|expert_5|colon|anatomical location|located in|MPTP-induced Parkinson's disease mice|animal
+34560239|expert_5|gut microbiota|microbiome|located in|mice|animal
+34560239|expert_5|genus Faecalicatena|bacteria|located in|MPTP-treated group|animal
+34560239|expert_5|genus Faecalicatena|bacteria|located in|control group|animal
+34560239|expert_5|1-methyl-4-phenyl-1,2,3,6-tetrahydropyridine|chemical|impact|gut microbiota|microbiome
+34560239|expert_5|genus Faecalicatena|bacteria|change expression|TH|gene
+34560239|expert_5|genus Faecalicatena|bacteria|interact|propionic acid|chemical
+34560239|expert_5|MPTP|chemical|impact|gut microbiota|microbiome
+34560239|expert_5|striatum|anatomical location|located in|MPTP-induced Parkinson's disease mice|animal
+30900006|expert_2|BALB/c and C57BL/6 mice|animal|used by|fecal 16S rRNA gene sequencing|biomedical technique
+30900006|expert_2|broad-spectrum antibiotics|drug|change expression|barrier regulating genes|gene
+30900006|expert_2|broad-spectrum antibiotic treatment|drug|impact|gut microbiota|microbiome
+30900006|expert_2|gut microbiota|microbiome|located in|BALB/c and C57BL/6 mice|animal
+30309367|expert_5|visceral pain|DDF|strike|higher order brain structures|anatomical location
+30309367|expert_5|probiotics|dietary supplement|influence|hypersensitivity to visceral pain stimuli|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|nociception to pain|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|abdominal pain|DDF
+30309367|expert_5|probiotics|dietary supplement|influence|visceral pain disorders|DDF
+30309367|expert_5|Visceral pain|DDF|affect|renal colic|DDF
+30309367|expert_5|gastrointestinal disorders|DDF|affect|abdominal pain|DDF
+30309367|expert_5|prebiotics|dietary supplement|influence|hypersensitivity to visceral pain stimuli|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|visceral pain disorders|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|visceral hypersensitivity|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|visceral nociception|DDF
+30309367|expert_5|visceral pain|DDF|strike|spinal cord|anatomical location
+30309367|expert_5|prebiotics|dietary supplement|influence|visceral pain disorders|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|visceral pain sensation|DDF
+30309367|expert_5|Visceral pain|DDF|affect|indigestion|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|gastrointestinal disorders|DDF
+30309367|expert_5|gut microbiota|microbiome|is linked to|Visceral pain|DDF
+32041265|expert_7|short fatty acids|chemical|located in|PD patients|human
+32041265|expert_7|gut microbiome|microbiome|is linked to|Parkinson's disease|DDF
+32041265|expert_7|Parkinson's disease|DDF|affect|PD associated microbiome changes|DDF
+32041265|expert_7|Parkinson's disease|DDF|target|patients|human
+32041265|expert_7|Intestinal Microbiome|microbiome|is linked to|Parkinson's Disease|DDF
+32041265|expert_7|PD|DDF|target|patients|human
+32041265|expert_7|Motor Symptoms|DDF|affect|Parkinson's Disease|DDF
+32041265|expert_7|gut microbiome|microbiome|is linked to|neurodegenerative disorders|DDF
+32041265|expert_7|Parkinson's disease|DDF|target|PD patients|human
+32041265|expert_7|PD|DDF|target|PD patients|human
+32041265|expert_7|PD|DDF|strike|gut|anatomical location
+32041265|expert_7|gut microbiome|microbiome|located in|HC|human
+32041265|expert_7|gut microbiome|microbiome|is linked to|chronic diseases|DDF
+32041265|expert_7|alpha-synuclein|chemical|located in|gut|anatomical location
+32041265|expert_7|gut microbiome|microbiome|is linked to|PD|DDF
+32041265|expert_7|Intestinal Microbiome|microbiome|is linked to|Motor Symptoms|DDF
+32041265|expert_7|PD|DDF|affect|PD associated microbiome changes|DDF
+32041265|expert_7|Parkinson's disease|DDF|strike|gut|anatomical location
+32041265|expert_7|gut microbiome|microbiome|located in|healthy controls|human
+32041265|expert_7|gut microbiome|microbiome|located in|PD patients|human
+26923630|expert_7|circulating metabolites|chemical|influence|dysregulation of cerebral signaling molecules|DDF
+26923630|expert_7|circulating metabolites|chemical|influence|cognitive impairment|DDF
+26923630|expert_7|antibiotics|drug|administered|adult mice|animal
+26923630|expert_7|cerebral neuropeptide Y system|chemical|influence|dysregulation of cerebral signaling molecules|DDF
+26923630|expert_7|cerebral neuropeptide Y system|chemical|influence|cognitive impairment|DDF
+26923630|expert_7|cognitive deficit|DDF|interact|cognition-relevant signaling molecules|chemical
+26923630|expert_7|brain|anatomical location|located in|germ-free mice|animal
+26923630|expert_7|vancomycin|drug|administered|antibiotic-treated mice|animal
+26923630|expert_7|colon|anatomical location|located in|adult mice|animal
+26923630|expert_7|antibiotic-induced gut dysbiosis|DDF|affect|cognitive impairment|DDF
+26923630|expert_7|bacitracin|drug|administered|antibiotic-treated mice|animal
+26923630|expert_7|neuronal signaling molecules|chemical|located in|brain areas|anatomical location
+26923630|expert_7|antibiotics|drug|administered|antibiotic-treated mice|animal
+26923630|expert_7|antibiotic-induced gut dysbiosis|DDF|affect|dysregulation of cerebral signaling molecules|DDF
+26923630|expert_7|meropenem|drug|administered|antibiotic-treated mice|animal
+26923630|expert_7|gut dysbiosis|DDF|affect|alterations of lipid species and converted microbe-derived molecules|DDF
+26923630|expert_7|alterations in blood-brain barrier|DDF|target|germ-free mice|animal
+26923630|expert_7|Cognitive impairment|DDF|affect|antibiotic-induced gut dysbiosis|DDF
+26923630|expert_7|neomycin|drug|administered|antibiotic-treated mice|animal
+26923630|expert_7|depletion of bacteria-derived metabolites|DDF|strike|colon|anatomical location
+26923630|expert_7|ampicillin|drug|administered|antibiotic-treated mice|animal
+26923630|expert_7|gut dysbiosis|DDF|affect|depletion of bacteria-derived metabolites|DDF
+26923630|expert_7|brain areas|anatomical location|located in|adult mice|animal
+26923630|expert_7|cognitive deficit|DDF|target|antibiotic-treated mice|animal
+26923630|expert_7|antibiotic-induced gut dysbiosis|DDF|target|adult mice|animal
+25869281|expert_7|NS9|dietary supplement|impact|gut microbiota|microbiome
+25869281|expert_7|Lactobacillus fermentum NS9|dietary supplement|impact|gut microbiota|microbiome
+25869281|expert_7|NS9|dietary supplement|influence|ampicillin-induced impairment|DDF
+25869281|expert_7|ampicillin-induced inflammation|DDF|strike|colon|anatomical location
+25869281|expert_7|broad range antibiotics|drug|impact|gut microbiota|microbiome
+25869281|expert_7|probiotic application|dietary supplement|impact|gut microbiota|microbiome
+25869281|expert_7|Lactobacillus fermentum strain NS9|dietary supplement|impact|gut microbiota|microbiome
+25869281|expert_7|NS9|dietary supplement|influence|antibiotic induced physiological and psychological abnormalities|DDF
+25869281|expert_7|hippocampus|anatomical location|located in|ampillicin+NS9 treated group|animal
+25869281|expert_7|Lactobacillus fermentum strain NS9|dietary supplement|influence|antibiotic induced physiological and psychological abnormalities|DDF
+25869281|expert_7|Lactobacillus fermentum NS9|dietary supplement|influence|antibiotic induced physiological and psychological abnormalities|DDF
+25869281|expert_7|NS9|dietary supplement|influence|physiological and psychological abnormalities|DDF
+25869281|expert_7|ampicillin-treated rats|animal|used by|elevated plus maze|biomedical technique
+25869281|expert_7|NS9|dietary supplement|influence|ampicillin-induced inflammation|DDF
+25869281|expert_7|Lactobacillus fermentum strain NS9|dietary supplement|influence|ampicillin-induced inflammation|DDF
+25869281|expert_7|Lactobacillus fermentum NS9|dietary supplement|influence|anxiety-like behaviour|DDF
+25869281|expert_7|probiotics|dietary supplement|influence|mental disorders|DDF
+25869281|expert_7|Lactobacillus fermentum NS9|dietary supplement|influence|ampicillin-induced inflammation|DDF
+25869281|expert_7|antibiotic induced physiological and psychological abnormalities|DDF|target|rats|animal
+25869281|expert_7|NS9|dietary supplement|influence|anxiety-like behaviour|DDF
+25869281|expert_7|Lactobacillus fermentum strain NS9|dietary supplement|influence|anxiety-like behaviour|DDF
+25869281|expert_7|ampicillin|drug|change effect|physiological and psychological abnormalities|DDF
+25869281|expert_7|mineralocorticoid and N-methyl-D-aspartate receptors|chemical|located in|hippocampus|anatomical location
+25869281|expert_7|ampicillin-treated rats|animal|used by|Morris water maze|biomedical technique
+33271426|expert_7|gut microbiota|microbiome|is linked to|generalised anxiety disorder|DDF
+33271426|expert_7|gut microbiota|microbiome|is linked to|anxiety disorders|DDF
+33271426|expert_7|gut microbiota|microbiome|is linked to|depression|DDF
+33271426|expert_7|gut microbiota|microbiome|is linked to|anxiety|DDF
+33271426|expert_7|peripheral inflammation|DDF|strike|brain|anatomical location
+33271426|expert_7|gut microbiota|microbiome|is linked to|depressive disorders|DDF
+37403161|expert_5|Alistipes|bacteria|located in|young TG rats|animal
+37403161|expert_5|gut (commensal) microbiome|microbiome|is linked to|PD|DDF
+37403161|expert_5|alpha-Synuclein (α-Syn) protein|chemical|influence|PD|DDF
+37403161|expert_5|antibiotics|drug|change effect|gut microbiome dysbiosis|DDF
+37403161|expert_5|increase of succinate levels in feces and serum|DDF|affect|robust alteration in metabolite production|DDF
+37403161|expert_5|decreased Na<sup>+</sup> current|DDF|target|older TG animals|animal
+37403161|expert_5|intestinal inflammation|DDF|target|older TG animals|animal
+37403161|expert_5|Lactobacillus|bacteria|located in|young TG rats|animal
+37403161|expert_5|gut microbiome dysbiosis|DDF|interact|gut metabolites|chemical
+37403161|expert_5|olfactory bulbs|anatomical location|located in|TG rats|animal
+37403161|expert_5|gut (commensal) microbiome|microbiome|used by|16S rRNA and shotgun sequencing|biomedical technique
+37403161|expert_5|enteric nervous system of the colon|anatomical location|located in|TG rats|animal
+37403161|expert_5|robust alteration in metabolite production|DDF|target|older TG animals|animal
+37403161|expert_5|forebrain|anatomical location|located in|TG rats|animal
+37403161|expert_5|Alistipes|bacteria|located in|ageing TG rats|animal
+37403161|expert_5|antibiotics|drug|change effect|PD pathology|DDF
+37403161|expert_5|intestinal inflammation|DDF|strike|intestinal epithelial layer|anatomical location
+37403161|expert_5|short-term antibiotic cocktail treatment|drug|interact|short-chain fatty acids|chemical
+37403161|expert_5|alpha-Synuclein (α-Syn) protein|chemical|influence|sporadic Parkinson's disease|DDF
+37403161|expert_5|short-term antibiotic cocktail treatment|drug|impact|gut bacteria|bacteria
+37403161|expert_5|Lactobacillus|bacteria|located in|ageing TG rats|animal
+38613087|expert_5|depression|DDF|is a|neurological and psychiatric disorders|DDF
+38613087|expert_5|psychobiotics interventions|dietary supplement|influence|depression|DDF
+38613087|expert_5|Dysbiosis|DDF|strike|gut|anatomical location
+38613087|expert_5|Psychobiotics|dietary supplement|influence|depressive disorders|DDF
+38613087|expert_5|probiotics|dietary supplement|influence|mental health issues|DDF
+38613087|expert_5|probiotics|dietary supplement|influence|depression|DDF
+38613087|expert_5|depressive disorders|DDF|is a|mental health issues|DDF
+38613087|expert_5|psychobiotics interventions|dietary supplement|influence|depressive disorders|DDF
+38613087|expert_5|Psychobiotics|dietary supplement|influence|Depression|DDF
+38613087|expert_5|probiotics|dietary supplement|influence|depressive disorders|DDF
+38613087|expert_5|psychobiotics|dietary supplement|influence|depressive disorders|DDF
+38613087|expert_5|Dysbiosis|DDF|affect|alterations in microbial composition and function|DDF
+38613087|expert_5|microbiota alterations|DDF|affect|neurological and psychiatric disorders|DDF
+38613087|expert_5|psychobiotics|dietary supplement|influence|depression|DDF
+33968794|expert_7|dysbiosis|DDF|affect|Parkinson's disease|DDF
+33968794|expert_7|gut microbiome|microbiome|is linked to|central nervous system diseases|DDF
+33968794|expert_7|Intestinal dysbiosis|DDF|affect|barrier destruction|DDF
+33968794|expert_7|Intestinal Dysbiosis|DDF|affect|Parkinson's Disease|DDF
+33968794|expert_7|Intestinal dysbiosis|DDF|affect|oxidative stress|DDF
+33968794|expert_7|intestinal dysbiosis|DDF|affect|Parkinson's disease|DDF
+33968794|expert_7|Intestinal dysbiosis|DDF|affect|inflammation|DDF
+33968794|expert_7|Parkinson's disease|DDF|strike|gut|anatomical location
+33968794|expert_7|Intestinal Dysbiosis|DDF|affect|Parkinson's disease|DDF
+33968794|expert_7|dysbiosis|DDF|affect|Parkinson's Disease|DDF
+32999308|expert_7|DJ-1|chemical|impact|gut microbiome|microbiome
+32999308|expert_7|fecal calprotectin|chemical|located in|DJ-1 knock-out (DJ-1<sup>-/-</sup>) mice|animal
+32999308|expert_7|inflammation|DDF|strike|gut|anatomical location
+32999308|expert_7|malonate|chemical|located in|DJ-1<sup>-/-</sup> mice|animal
+32999308|expert_7|DJ-1|chemical|impact|Alistipes|bacteria
+32999308|expert_7|inflammation|DDF|affect|PD|DDF
+32999308|expert_7|Parkinson's disease|DDF|target|patients|human
+32999308|expert_7|DJ-1|chemical|influence|PD|DDF
+32999308|expert_7|constipation|DDF|affect|PD|DDF
+32999308|expert_7|DJ-1|chemical|impact|Rikenella|bacteria
+32999308|expert_7|Park7|chemical|impact|gut microbiome|microbiome
+32999308|expert_7|midbrain|anatomical location|located in|DJ-1<sup>-/-</sup> mice|animal
+32999308|expert_7|PD|DDF|target|patients|human
+32999308|expert_7|constipation|DDF|target|patients|human
+32999308|expert_7|inflammation|DDF|affect|PD pathology|DDF
+32999308|expert_7|Park7|chemical|impact|Rikenella|bacteria
+32999308|expert_7|constipation|DDF|affect|Parkinson's disease|DDF
+32999308|expert_7|DJ-1|chemical|influence|inflammation|DDF
+32999308|expert_7|Park7|chemical|impact|Alistipes|bacteria
+32999308|expert_7|Park7|chemical|influence|PD|DDF
+32999308|expert_7|DJ-1|chemical|influence|Parkinson's disease|DDF
+32999308|expert_7|inflammation|DDF|affect|Parkinson's disease|DDF
+32999308|expert_7|Park7|chemical|influence|inflammation|DDF
+32999308|expert_7|MCP-1 inflammatory proteins|chemical|located in|DJ-1 knock-out (DJ-1<sup>-/-</sup>) mice|animal
+34480631|expert_7|colony stimulating factor 1 receptor inhibitor PLX5622|drug|change effect|Microglial depletion and abnormalities|DDF
+34480631|expert_7|PLX5622|drug|administered|mice|animal
+34480631|expert_7|Microglial depletion and abnormalities|DDF|target|mice|animal
+34480631|expert_7|PLX5622|drug|impact|gut microbiota|microbiome
+34480631|expert_7|PFC|anatomical location|located in|adult mice|animal
+34480631|expert_7|intestine microbiota|microbiome|located in|PLX5622-treated group|animal
+34480631|expert_7|hippocampus|anatomical location|located in|adult mice|animal
+34480631|expert_7|PLX5622|drug|impact|intestine microbiota|microbiome
+34480631|expert_7|gut microbiota|microbiome|located in|adult mice|animal
+34480631|expert_7|PLX5622|drug|administered|adult mice|animal
+34480631|expert_7|PLX5622|drug|interact|lactic acid|chemical
+34480631|expert_7|prefrontal cortex|anatomical location|located in|adult mice|animal
+34480631|expert_7|brain|anatomical location|located in|adult mice|animal
+34480631|expert_7|colony stimulating factor 1 receptor inhibitor PLX5622|drug|administered|mice|animal
+32438623|expert_7|Human Gut Microbiome|microbiome|used by|16S rRNA gene sequencing|biomedical technique
+32438623|expert_7|anxiety|DDF|target|participants|human
+32438623|expert_7|unpasteurised milk|food|administered|participants|human
+32438623|expert_7|unpasteurised milk|food|impact|Lactobacillus|bacteria
+32438623|expert_7|participants|human|used by|16S rRNA gene sequencing|biomedical technique
+32438623|expert_7|dairy products|food|administered|participants|human
+32438623|expert_7|dairy products|food|impact|Lactobacillus|bacteria
+31662903|expert_7|faecal microbiota|microbiome|used by|GA-map® dysbiosis test|biomedical technique
+31662903|expert_7|NNSs|food|impact|bacterial groups|bacteria
+31662903|expert_7|NNSs|food|impact|faecal microbiota|microbiome
+31662903|expert_7|Faecal Microbiota|microbiome|located in|Morbidly Obese Subjects|human
+31662903|expert_7|Butyric acid|chemical|influence|insulin resistance|DDF
+31662903|expert_7|faecal microbiota|microbiome|located in|subjects|human
+31662903|expert_7|faecal microbiota|microbiome|located in|women|human
+31662903|expert_7|nonnutritive sweeteners|food|impact|faecal microbiota|microbiome
+31662903|expert_7|faecal microbiota|microbiome|located in|men|human
+31662903|expert_7|Obesity|DDF|change abundance|gut microbiota|microbiome
+31662903|expert_7|NNSs|food|administered|obese adults|human
+31662903|expert_7|morbid obesity|DDF|target|subjects|human
+31662903|expert_7|Butyric acid|chemical|influence|dyslipidaemia|DDF
+30405455|expert_7|leptin|chemical|influence|Major Depressive Disorder|DDF
+30405455|expert_7|ghrelin|chemical|influence|Major Depressive Disorder|DDF
+30405455|expert_7|antibiotics|drug|administered|mice|animal
+30405455|expert_7|ghrelin|chemical|located in|depressed population|human
+30405455|expert_7|mental illness|DDF|target|patients|human
+30405455|expert_7|co-morbid metabolic syndrome|DDF|affect|depression|DDF
+30405455|expert_7|major depressive disorder|DDF|target|patients|human
+30405455|expert_7|leptin|chemical|located in|depressed population|human
+30405455|expert_7|depression|DDF|target|depressed population|human
+34290352|expert_2|gut microbiota|microbiome|located in|controls|human
+34290352|expert_2|gut microbiota|microbiome|located in|MDD patients|human
+34290352|expert_2|SSRIs treatment|drug|impact|gut microbiota|microbiome
+34290352|expert_2|gut microbiota|microbiome|is linked to|depression|DDF
+34290352|expert_2|antidepressant treatment|drug|impact|intestinal microbiota|microbiome
+34290352|expert_2|escitalopram|drug|administered|MDD group|human
+34290352|expert_2|intestinal flora|microbiome|located in|depressed patients|human
+34290352|expert_2|gut microbiota|microbiome|located in|patients|human
+34290352|expert_2|intestinal microbiota|microbiome|located in|depressed patients|human
+37676767|expert_5|dopaminergic neuron loss|DDF|affect|PD|DDF
+37676767|expert_5|bacterial curli|chemical|influence|intestinal and brain pathologies|DDF
+37676767|expert_5|bacterial curli|chemical|part of|protein|chemical
+37676767|expert_5|alpha-synuclein (αSyn) inclusions|DDF|affect|Parkinson's disease|DDF
+37676767|expert_5|PD|DDF|is a|neurological disorder|DDF
+37676767|expert_5|Diet-driven gut dysbiosis|DDF|is a|Lifestyle and microbial dysbiosis|DDF
+37676767|expert_5|microbiome-borne curli|chemical|influence|Parkinson's disease|DDF
+37676767|expert_5|dopaminergic neuron loss|DDF|affect|Parkinson's disease|DDF
+37676767|expert_5|motor dysfunction|DDF|affect|PD|DDF
+37676767|expert_5|microbiome-borne curli|chemical|impact|gut bacterial populations|bacteria
+37676767|expert_5|Fiber deprivation|DDF|affect|Parkinson's disease|DDF
+37676767|expert_5|enteric neurons|chemical|influence|reduced barrier function|DDF
+37676767|expert_5|Lifestyle and microbial dysbiosis|DDF|affect|PD|DDF
+37676767|expert_5|alpha-synuclein (αSyn) inclusions|DDF|affect|PD|DDF
+37676767|expert_5|Fiber deprivation|DDF|change abundance|gut bacterial populations|bacteria
+37676767|expert_5|motor dysfunction|DDF|affect|Parkinson's disease|DDF
+37676767|expert_5|enteric neurons|chemical|influence|Diet-driven gut dysbiosis|DDF
+37676767|expert_5|Parkinson's disease|DDF|is a|neurological disorder|DDF
+37676767|expert_5|bacterial curli|chemical|impact|gut microbiome|microbiome
+37676767|expert_5|reduced barrier function|DDF|affect|Lifestyle and microbial dysbiosis|DDF
+37676767|expert_5|Lifestyle and microbial dysbiosis|DDF|affect|Parkinson's disease|DDF
+25911232|expert_2|pathogenic bacterial infections|DDF|target|animals|animal
+25911232|expert_2|autism|DDF|is a|neuropsychiatric diseases|DDF
+25911232|expert_2|gut microbiota|microbiome|is linked to|obesity|DDF
+25911232|expert_2|schizophrenia|DDF|is a|neuropsychiatric diseases|DDF
+25911232|expert_2|affective disorders|DDF|is a|neuropsychiatric diseases|DDF
+33195226|expert_4|SZ|DDF|change abundance|<i>Erysipelotrichaceae</i> family|bacteria
+33195226|expert_4|Erysipelotrichales|bacteria|influence|SZ|DDF
+33195226|expert_4|gut dysbiosis|DDF|affect|SZ|DDF
+33195226|expert_4|brain dysfunction|DDF|affect|SZ|DDF
+33195226|expert_4|SZ|DDF|change abundance|<i>Allobaculum</i> genus|bacteria
+33195226|expert_4|mGlu5 knockout (KO) and wild-type (WT) mice|animal|used by|16S rRNA sequencing|biomedical technique
+33195226|expert_4|Gut Dysbiosis|DDF|affect|Schizophrenia|DDF
+33195226|expert_4|Clostridiales|bacteria|influence|SZ|DDF
+33195226|expert_4|Schizophrenia|DDF|is a|psychiatric disorder|DDF
+33195226|expert_4|SZ|DDF|target|metabotropic glutamate receptor 5 (mGlu5) knockout mice|animal
+33195226|expert_4|SZ|DDF|is a|psychiatric disorder|DDF
+33195226|expert_4|Bacteroidales|bacteria|influence|SZ|DDF
+28716445|expert_2|probiotics|dietary supplement|impact|gut microbiota|microbiome
+28716445|expert_2|Gut microbiota|microbiome|is linked to|psychiatric illnesses|DDF
+28716445|expert_2|psychiatric illnesses|DDF|target|patients|human
+28716445|expert_2|Gut Microbiome|microbiome|is linked to|Psychiatric Conditions|DDF
+28716445|expert_2|anorexia nervosa|DDF|is a|psychiatric conditions|DDF
+28716445|expert_2|depression|DDF|is a|psychiatric conditions|DDF
+32389857|expert_2|dysbiosis|DDF|change abundance|gut microbiota|microbiome
+32389857|expert_2|Parkinson's disease|DDF|is a|neurodegenerative diseases|DDF
+32389857|expert_2|Alzheimer's disease|DDF|is a|neurodegenerative diseases|DDF
+32389857|expert_2|dysbiosis|DDF|change abundance|intestinal flora|microbiome
+32389857|expert_2|neuropsychiatric drugs|drug|impact|human gut microbiota|microbiome
+33777957|expert_2|Anxiety|DDF|is a|mental illnesses|DDF
+33777957|expert_2|Gut Microbiota|microbiome|is linked to|Anxiety|DDF
+33777957|expert_2|Gut Microbiota|microbiome|is linked to|Depression|DDF
+33777957|expert_2|anxiety|DDF|change abundance|gut microbiota|microbiome
+33777957|expert_2|gut microbiota|microbiome|is linked to|depression|DDF
+33777957|expert_2|gut microbiota|microbiome|is linked to|anxiety|DDF
+33777957|expert_2|depression|DDF|change abundance|gut microbiota|microbiome
+33777957|expert_2|gut microbiota|microbiome|located in|germ-free rodents|animal
+33777957|expert_2|depression|DDF|is a|mental illnesses|DDF
+34205336|expert_5|gut microbiome|microbiome|is linked to|microbiome dysbiosis|DDF
+34205336|expert_5|neurons|chemical|located in|brain|anatomical location
+34205336|expert_5|neurons|chemical|impact|gut microbiome|microbiome
+34205336|expert_5|gut microbiota|microbiome|is linked to|microbiome dysbiosis|DDF
+34205336|expert_5|Parkinson's disease|DDF|is a|neurodegenerative diseases|DDF
+34205336|expert_5|Alzheimer's disease|DDF|is a|neurodegenerative diseases|DDF
+34205336|expert_5|neurodegenerative diseases|DDF|affect|microbiome dysbiosis|DDF
+34205336|expert_5|neurons|chemical|impact|Gut Microbiota|microbiome
+34205336|expert_5|Gut Microbiota|microbiome|is linked to|Neurological Disorders|DDF
+28556833|expert_5|IL-6 receptor|chemical|impact|gut microbiota|microbiome
+28556833|expert_5|postsynaptic density protein 95|chemical|located in|brain regions|anatomical location
+28556833|expert_5|Depression|DDF|is a|chronic psychiatric disease|DDF
+28556833|expert_5|synaptic proteins|chemical|located in|brain regions|anatomical location
+28556833|expert_5|social defeat stress|DDF|target|susceptible mice|animal
+28556833|expert_5|depression|DDF|target|susceptible mice|animal
+28556833|expert_5|periphery|anatomical location|located in|depressed patients|human
+28556833|expert_5|brain regions|anatomical location|located in|susceptible mice|animal
+28556833|expert_5|α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptor 1|chemical|located in|brain regions|anatomical location
+28556833|expert_5|antidepressants|drug|change effect|depression|DDF
+28556833|expert_5|susceptible mice|animal|used by|16S ribosomal RNA gene sequencing|biomedical technique
+28556833|expert_5|MR16-1|chemical|influence|social defeat stress|DDF
+28556833|expert_5|MR16-1|chemical|interact|α-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptor 1|chemical
+28556833|expert_5|IL-6 receptor|chemical|located in|periphery|anatomical location
+28556833|expert_5|interleukin-6 receptor|chemical|located in|periphery|anatomical location
+28556833|expert_5|MR16-1|chemical|located in|susceptible mice|animal
+28556833|expert_5|gut microbiota|microbiome|used by|16S ribosomal RNA gene sequencing|biomedical technique
+28556833|expert_5|MR16-1|chemical|interact|postsynaptic density protein 95|chemical
+28556833|expert_5|gut microbiota|microbiome|located in|susceptible mice|animal
+28556833|expert_5|MR16-1|chemical|interact|synaptic proteins|chemical
+28556833|expert_5|MR16-1|chemical|impact|Oscillospira|bacteria
+35674870|expert_5|neuroinflammation|DDF|affect|neurodegeneration|DDF
+35674870|expert_5|protein aggregation|DDF|affect|PD|DDF
+35674870|expert_5|mitochondrial damage|DDF|affect|Cell autonomous alterations|DDF
+35674870|expert_5|neuroinflammation|DDF|target|affected patients|human
+35674870|expert_5|Neuroinflammation|DDF|affect|impaired proteostasis|DDF
+35674870|expert_5|anti-inflammatory agents|drug|change effect|PD|DDF
+35674870|expert_5|mitochondrial damage|DDF|affect|PD|DDF
+35674870|expert_5|protein aggregation|DDF|is a|Cell autonomous alterations|DDF
+35674870|expert_5|inflammation|DDF|affect|PD|DDF
+35674870|expert_5|Neuroinflammation|DDF|affect|mitochondrial dysfunction|DDF
+35674870|expert_5|PD|DDF|target|PD patient cohorts|human
+35674870|expert_5|neurodegeneration|DDF|affect|neuroinflammation|DDF
+35674870|expert_5|neuroinflammation|DDF|affect|PD|DDF
+35674870|expert_5|Neuroinflammation|DDF|affect|Parkinson's Disease|DDF
+35674870|expert_5|gut microbiome|microbiome|is linked to|neuroinflammation|DDF
+35674870|expert_5|inflammation|DDF|target|PD patient cohorts|human
+35674870|expert_5|Neurodegeneration|DDF|affect|Parkinson's Disease|DDF
+35674870|expert_5|Neuroinflammation|DDF|affect|Parkinson's disease (PD) etiology|DDF
+35674870|expert_5|Cell autonomous alterations|DDF|affect|PD|DDF
+35674870|expert_5|PD|DDF|target|affected patients|human
+35674870|expert_5|gut microbiome|microbiome|is linked to|PD|DDF
+37071196|expert_5|gut microbiota|microbiome|is linked to|mental health problems|DDF
+37071196|expert_5|social anxiety|DDF|target|14-year-olds|human
+37071196|expert_5|Faecalibacterium|bacteria|influence|externalizing behavior|DDF
+37071196|expert_5|Prevotella 9|bacteria|influence|externalizing behavior|DDF
+37071196|expert_5|Ruminococcus|bacteria|part of|gut microbiota|microbiome
+37071196|expert_5|gut microbiota|microbiome|used by|16S ribosomal RNA gene amplicon sequencing|biomedical technique
+37071196|expert_5|gut microbiota|microbiome|located in|children|human
+37071196|expert_5|Faecalibacterium|bacteria|influence|social anxiety|DDF
+37071196|expert_5|Prevotella|bacteria|part of|gut microbiota|microbiome
+37071196|expert_5|Bacteroides|bacteria|part of|gut microbiota|microbiome
+37071196|expert_5|Prevotella|bacteria|influence|more externalizing behavior|DDF
+37071196|expert_5|social anxiety|DDF|target|children|human
+37071196|expert_5|social anxiety|DDF|is a|mental health problems|DDF
+37071196|expert_5|gut microbiota|microbiome|is linked to|internalizing and externalizing difficulties|DDF
+37071196|expert_5|internalizing and externalizing difficulties|DDF|target|children|human
+37071196|expert_5|children|human|used by|16S ribosomal RNA gene amplicon sequencing|biomedical technique
+37071196|expert_5|Prevotella 9|bacteria|influence|social anxiety|DDF
+37071196|expert_5|gut microbiota|microbiome|is linked to|social anxiety|DDF
+37071196|expert_5|internalizing and externalizing difficulties|DDF|affect|mental health problems|DDF
+37849234|expert_5|faecal microbiota|microbiome|located in|Alzheimer's patients|human
+37849234|expert_5|gut microbiota|microbiome|is linked to|Alzheimer's disease|DDF
+37849234|expert_5|Alzheimer's patient gut microbiota|microbiome|located in|Alzheimer's patients|human
+37849234|expert_5|Alzheimer's symptoms|DDF|target|Alzheimer's patients|human
+37849234|expert_5|Alzheimer's disease|DDF|is a|complex neurodegenerative disorder|DDF
+37849234|expert_5|gut microbiota alterations|DDF|change abundance|Alzheimer's patient gut microbiota|microbiome
+37849234|expert_5|gut microbiota|microbiome|is linked to|Alzheimer's|DDF
+37849234|expert_5|Alzheimer's patient gut microbiota|microbiome|is linked to|Alzheimer's symptoms|DDF
+37849234|expert_5|rat caecal and hippocampal metabolome|chemical|located in|microbiota-depleted young adult rats|animal
+37849234|expert_5|decline in cognitive function and mental health|DDF|affect|Alzheimer's disease|DDF
+37849234|expert_5|deficits in cognition|DDF|target|Alzheimer's patients|human
+37849234|expert_5|Alzheimer's disease|DDF|target|Alzheimer's patients|human
+37849234|expert_5|faecal microbiota|microbiome|located in|age-matched healthy controls|human
+33963281|expert_6|cognitive deficits|DDF|affect|sleep loss|DDF
+33963281|expert_6|inflammatory response|DDF|affect|sleep deprivation|DDF
+33963281|expert_6|SD|DDF|affect|cognitive impairment|DDF
+33963281|expert_6|chronic inflammatory states|DDF|affect|SD|DDF
+33963281|expert_6|cognitive impairment|DDF|target|humans|human
+33963281|expert_6|gut dysbiosis|DDF|affect|SD|DDF
+33963281|expert_6|inflammatory response|DDF|affect|SD|DDF
+33963281|expert_6|gut microbiota|microbiome|is linked to|inflammatory response|DDF
+33963281|expert_6|Gut microbiota|microbiome|is linked to|inflammatory response|DDF
+33963281|expert_6|SD-induced gut dysbiosis|DDF|target|humans|human
+33963281|expert_6|cognitive function|DDF|target|recipient mice|animal
+33963281|expert_6|gut microbiota|microbiome|is linked to|inflammatory and psychiatric diseases|DDF
+33963281|expert_6|Sleep deprivation|DDF|affect|cognitive impairment|DDF
+33963281|expert_6|Gut microbiota|microbiome|is linked to|cognitive impairment|DDF
+33963281|expert_6|gut microbiota|microbiome|is linked to|chronic inflammatory states|DDF
+33963281|expert_6|gut microbiota|microbiome|is linked to|cognitive impairment|DDF
+33963281|expert_6|SD microbiota|microbiome|is linked to|neuroinflammation|DDF
+33963281|expert_6|cognitive impairment|DDF|affect|sleep deprivation|DDF
+33963281|expert_6|SD microbiota|microbiome|located in|Mice|animal
+33963281|expert_6|SD|DDF|affect|dysregulation of inflammatory responses|DDF
+33963281|expert_6|cognitive impairment|DDF|affect|SD|DDF
+33963281|expert_6|gut dysbiosis|DDF|affect|cognitive deficits|DDF
+33963281|expert_6|SD microbiota|microbiome|located in|GF mice|animal
+33963281|expert_6|inflammatory and psychiatric diseases|DDF|affect|neuroinflammation|DDF
+33963281|expert_6|SD|DDF|target|germ-free (GF) mice|animal
+33963281|expert_6|inflammatory responses|DDF|target|humans|human
+33963281|expert_6|SD|DDF|is a|sleep loss|DDF
+33963281|expert_6|neuroinflammation|DDF|target|Mice|animal
+33963281|expert_6|Sleep deprivation|DDF|affect|dysregulation of inflammatory responses|DDF
+36804535|expert_3|reduced bone mineral density|DDF|target|susceptible mice|animal
+36804535|expert_3|depression|DDF|target|Patients|human
+36804535|expert_3|arketamine|drug|change effect|reduced BMD|DDF
+36804535|expert_3|decreased femoral neck cortical (and total) BMD|DDF|target|CSDS susceptible mice|animal
+36804535|expert_3|reduced cortical (and total) BMD|DDF|target|CSDS susceptible mice|animal
+36804535|expert_3|reduced BMD|DDF|target|ovariectomized mice|animal
+36804535|expert_3|arketamine|drug|change effect|decreased femoral neck cortical (and total) BMD|DDF
+36804535|expert_3|susceptible mice|animal|used by|chronic social defeat stress|biomedical technique
+36804535|expert_3|arketamine|drug|change effect|reduced bone mineral density|DDF
+36804535|expert_3|reduced bone mineral density|DDF|target|Patients|human
+36804535|expert_3|arketamine|drug|change effect|anhedonia-like behavior|DDF
+36804535|expert_3|arketamine|drug|change effect|reduced cortical (and total) BMD|DDF
+36804535|expert_3|arketamine|drug|change effect|low BMD|DDF
+36804535|expert_3|reduced BMD|DDF|target|CSDS susceptible mice|animal
+36804535|expert_3|anhedonia-like behavior|DDF|target|CSDS susceptible mice|animal
+36804535|expert_3|low BMD|DDF|target|depressed patients|human
+36804535|expert_3|reduced BMD|DDF|target|chronic social defeat stress (CSDS) susceptible mice|animal
+36804535|expert_3|depression|DDF|affect|reduced bone mineral density|DDF
+34174901|expert_6|minocycline|drug|change effect|inflammation and anxiety-like behavior|DDF
+34174901|expert_6|gut dysbiosis|DDF|affect|anxiety-like behavior|DDF
+34174901|expert_6|minocycline's antibiotic|drug|impact|gut microbiota|microbiome
+34174901|expert_6|spinal cord injury|DDF|affect|anxiety-like behavior|DDF
+34174901|expert_6|minocycline|drug|change effect|central nervous system injuries|DDF
+34174901|expert_6|cervical contusion injury|DDF|target|female Lewis rats|animal
+34174901|expert_6|minocycline|drug|change effect|central nervous system diseases|DDF
+34174901|expert_6|minocycline|drug|change effect|spinal cord injury-induced|DDF
+34174901|expert_6|minocycline|drug|change effect|spinal cord injury|DDF
+34174901|expert_6|inflammation and anxiety-like behavior|DDF|affect|SCI|DDF
+34174901|expert_6|minocycline's antibiotic|drug|change effect|immune suppression|DDF
+34174901|expert_6|minocycline|drug|change effect|anxiety-like behavior|DDF
+34174901|expert_6|gut microbiota|microbiome|located in|rats|animal
+33327540|expert_5|CBT|drug|change effect|Anxiety disorders|DDF
+33327540|expert_5|LCHF|food|influence|anxiety disorders|DDF
+33327540|expert_5|Anxiety disorders|DDF|target|patients|human
+33327540|expert_5|Low-carbohydrate high-fat diets|food|influence|anxiety disorders|DDF
+33327540|expert_5|benzodiazepines|drug|change effect|anxiety disorders|DDF
+33327540|expert_5|monoaminergic antidepressants|drug|change effect|anxiety disorders|DDF
+33327540|expert_5|benzodiazepines|drug|change effect|Anxiety disorders|DDF
+33327540|expert_5|monoaminergic antidepressants|drug|change effect|Anxiety disorders|DDF
+33327540|expert_5|anxiety disorders|DDF|target|patients|human
+33327540|expert_5|CBT|drug|change effect|anxiety disorders|DDF
+25940667|expert_4|vaccines|drug|change effect|chronic, non-communicable, inflammatory diseases|DDF
+25940667|expert_4|blood microbiome|microbiome|is linked to|non-communicable diseases|DDF
+25940667|expert_4|vaccines|drug|change effect|inflammatory diseases|DDF
+25940667|expert_4|bactericidal antibiotics|drug|change effect|chronic, non-communicable, inflammatory diseases|DDF
+25940667|expert_4|bactericidal antibiotics|drug|change effect|inflammatory diseases|DDF

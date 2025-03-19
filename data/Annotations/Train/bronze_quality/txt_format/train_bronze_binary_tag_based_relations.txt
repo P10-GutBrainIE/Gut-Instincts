@@ -1,0 +1,4541 @@
+pmid	annotator	subject_label	object_label
+37065853	distant	DDF	anatomical location
+37065853	distant	DDF	DDF
+
+
+33249563	distant	microbiome	DDF
+33249563	distant	DDF	human
+33249563	distant	human	biomedical technique
+
+
+33045322	distant	DDF	DDF
+
+
+36550632	distant	DDF	anatomical location
+36550632	distant	microbiome	DDF
+36550632	distant	DDF	human
+36550632	distant	dietary supplement	DDF
+36550632	distant	DDF	DDF
+36550632	distant	microbiome	animal
+36550632	distant	DDF	animal
+36550632	distant	dietary supplement	microbiome
+
+
+30248988	distant	chemical	DDF
+30248988	distant	dietary supplement	DDF
+30248988	distant	human	statistical technique
+
+
+36624505	distant	DDF	human
+
+
+37630649	distant	DDF	microbiome
+37630649	distant	microbiome	human
+37630649	distant	DDF	anatomical location
+37630649	distant	microbiome	DDF
+37630649	distant	DDF	human
+37630649	distant	dietary supplement	DDF
+37630649	distant	DDF	DDF
+
+
+37294054	distant	gene	DDF
+37294054	distant	gene	animal
+37294054	distant	microbiome	animal
+37294054	distant	anatomical location	animal
+
+
+36945049	distant	DDF	human
+36945049	distant	human	human
+36945049	distant	microbiome	biomedical technique
+36945049	distant	human	biomedical technique
+
+
+33920695	distant	chemical	anatomical location
+
+
+36400152	distant	microbiome	DDF
+36400152	distant	DDF	human
+36400152	distant	microbiome	statistical technique
+36400152	distant	human	biomedical technique
+
+
+38273106	distant	chemical	DDF
+38273106	distant	chemical	animal
+38273106	distant	microbiome	human
+38273106	distant	anatomical location	biomedical technique
+38273106	distant	microbiome	DDF
+38273106	distant	DDF	human
+38273106	distant	human	biomedical technique
+38273106	distant	microbiome	animal
+38273106	distant	anatomical location	animal
+38273106	distant	DDF	animal
+38273106	distant	microbiome	biomedical technique
+
+
+38606523	distant	chemical	DDF
+38606523	distant	microbiome	DDF
+38606523	distant	dietary supplement	DDF
+38606523	distant	DDF	DDF
+38606523	distant	chemical	microbiome
+38606523	distant	human	human
+
+
+37062706	distant	dietary supplement	DDF
+
+
+29147024	distant	drug	animal
+29147024	distant	drug	bacteria
+29147024	distant	drug	microbiome
+29147024	distant	microbiome	animal
+29147024	distant	drug	human
+29147024	distant	bacteria	animal
+29147024	distant	drug	drug
+29147024	distant	drug	DDF
+
+
+35723531	distant	chemical	DDF
+35723531	distant	microbiome	human
+35723531	distant	anatomical location	biomedical technique
+35723531	distant	microbiome	DDF
+35723531	distant	DDF	human
+35723531	distant	human	biomedical technique
+35723531	distant	DDF	DDF
+
+
+37298527	distant	bacteria	microbiome
+37298527	distant	DDF	DDF
+37298527	distant	microbiome	DDF
+
+
+
+
+38024855	distant	chemical	DDF
+38024855	distant	microbiome	DDF
+38024855	distant	dietary supplement	DDF
+38024855	distant	DDF	animal
+38024855	distant	bacteria	chemical
+
+
+36093695	distant	chemical	DDF
+36093695	distant	microbiome	human
+36093695	distant	microbiome	DDF
+36093695	distant	DDF	human
+36093695	distant	human	biomedical technique
+36093695	distant	dietary supplement	bacteria
+36093695	distant	dietary supplement	microbiome
+36093695	distant	microbiome	biomedical technique
+
+
+33955443	distant	microbiome	DDF
+33955443	distant	drug	DDF
+33955443	distant	dietary supplement	DDF
+33955443	distant	DDF	DDF
+
+
+36910501	distant	microbiome	DDF
+36910501	distant	DDF	human
+36910501	distant	microbiome	biomedical technique
+
+
+31214110	distant	microbiome	DDF
+31214110	distant	microbiome	human
+31214110	distant	chemical	anatomical location
+31214110	distant	DDF	DDF
+
+
+26438800	distant	microbiome	DDF
+26438800	distant	DDF	DDF
+
+
+34895297	distant	chemical	DDF
+34895297	distant	DDF	human
+34895297	distant	food	human
+34895297	distant	food	DDF
+
+
+37174495	distant	DDF	bacteria
+37174495	distant	microbiome	DDF
+37174495	distant	DDF	human
+37174495	distant	microbiome	animal
+37174495	distant	DDF	animal
+
+
+37354486	distant	DDF	microbiome
+37354486	distant	microbiome	human
+37354486	distant	microbiome	DDF
+37354486	distant	DDF	human
+37354486	distant	chemical	anatomical location
+
+
+35583791	distant	microbiome	DDF
+35583791	distant	dietary supplement	DDF
+35583791	distant	chemical	DDF
+
+
+35024387	distant	DDF	human
+35024387	distant	human	biomedical technique
+
+
+37804926	distant	chemical	DDF
+37804926	distant	DDF	microbiome
+37804926	distant	dietary supplement	human
+37804926	distant	DDF	human
+37804926	distant	dietary supplement	DDF
+
+
+38117827	distant	microbiome	human
+38117827	distant	microbiome	DDF
+38117827	distant	DDF	human
+38117827	distant	bacteria	human
+38117827	distant	human	biomedical technique
+38117827	distant	chemical	human
+38117827	distant	microbiome	microbiome
+38117827	distant	microbiome	biomedical technique
+
+
+35855338	distant	microbiome	DDF
+35855338	distant	food	DDF
+
+
+31709198	distant	microbiome	DDF
+31709198	distant	DDF	human
+31709198	distant	microbiome	human
+
+
+38353184	distant	microbiome	DDF
+38353184	distant	dietary supplement	DDF
+38353184	distant	drug	microbiome
+38353184	distant	DDF	DDF
+38353184	distant	drug	DDF
+
+
+37307822	distant	microbiome	DDF
+37307822	distant	DDF	human
+37307822	distant	DDF	microbiome
+37307822	distant	DDF	DDF
+
+
+33921293	distant	DDF	human
+33921293	distant	human	biomedical technique
+
+
+36244525	distant	microbiome	chemical
+36244525	distant	drug	human
+36244525	distant	drug	microbiome
+
+
+31380217	distant	DDF	bacteria
+31380217	distant	microbiome	human
+31380217	distant	microbiome	drug
+31380217	distant	microbiome	DDF
+31380217	distant	DDF	human
+31380217	distant	human	gene
+
+
+29358918	distant	DDF	bacteria
+29358918	distant	DDF	anatomical location
+29358918	distant	microbiome	DDF
+29358918	distant	DDF	DDF
+29358918	distant	DDF	animal
+29358918	distant	drug	DDF
+
+
+37892465	distant	chemical	DDF
+37892465	distant	microbiome	DDF
+37892465	distant	DDF	human
+37892465	distant	bacteria	DDF
+37892465	distant	DDF	DDF
+
+
+38406183	distant	microbiome	anatomical location
+
+
+26497477	distant	microbiome	DDF
+26497477	distant	DDF	human
+26497477	distant	drug	DDF
+26497477	distant	dietary supplement	DDF
+
+
+36442206	distant	microbiome	DDF
+36442206	distant	DDF	human
+36442206	distant	human	biomedical technique
+
+
+37914097	distant	DDF	bacteria
+37914097	distant	DDF	microbiome
+37914097	distant	drug	animal
+37914097	distant	microbiome	DDF
+37914097	distant	DDF	DDF
+37914097	distant	microbiome	animal
+37914097	distant	animal	biomedical technique
+37914097	distant	anatomical location	animal
+37914097	distant	DDF	animal
+37914097	distant	microbiome	biomedical technique
+
+
+32989186	distant	dietary supplement	human
+32989186	distant	microbiome	DDF
+32989186	distant	DDF	human
+32989186	distant	dietary supplement	DDF
+32989186	distant	bacteria	DDF
+32989186	distant	human	biomedical technique
+32989186	distant	microbiome	chemical
+32989186	distant	drug	human
+32989186	distant	dietary supplement	bacteria
+
+
+31405122	distant	dietary supplement	human
+31405122	distant	bacteria	human
+31405122	distant	DDF	human
+31405122	distant	dietary supplement	drug
+31405122	distant	dietary supplement	DDF
+31405122	distant	bacteria	DDF
+31405122	distant	drug	drug
+31405122	distant	drug	DDF
+
+
+28624847	distant	microbiome	DDF
+28624847	distant	drug	microbiome
+
+
+31479418	distant	anatomical location	animal
+31479418	distant	DDF	anatomical location
+31479418	distant	chemical	anatomical location
+31479418	distant	DDF	DDF
+
+
+38260072	distant	DDF	bacteria
+38260072	distant	DDF	microbiome
+38260072	distant	DDF	human
+38260072	distant	dietary supplement	DDF
+38260072	distant	microbiome	biomedical technique
+
+
+32279681	distant	microbiome	DDF
+32279681	distant	DDF	human
+32279681	distant	dietary supplement	DDF
+32279681	distant	human	biomedical technique
+32279681	distant	DDF	DDF
+32279681	distant	dietary supplement	microbiome
+
+
+36650644	distant	dietary supplement	DDF
+36650644	distant	microbiome	animal
+36650644	distant	dietary supplement	animal
+36650644	distant	chemical	anatomical location
+36650644	distant	DDF	animal
+
+
+34201752	distant	microbiome	human
+34201752	distant	microbiome	DDF
+34201752	distant	DDF	human
+34201752	distant	DDF	DDF
+34201752	distant	microbiome	dietary supplement
+34201752	distant	dietary supplement	microbiome
+
+
+34033061	distant	microbiome	DDF
+34033061	distant	DDF	human
+34033061	distant	microbiome	human
+
+
+33421542	distant	DDF	DDF
+
+
+37304433	distant	microbiome	human
+37304433	distant	DDF	human
+37304433	distant	human	biomedical technique
+37304433	distant	DDF	DDF
+37304433	distant	microbiome	biomedical technique
+
+
+33094505	distant	DDF	human
+33094505	distant	animal	biomedical technique
+33094505	distant	DDF	DDF
+33094505	distant	DDF	animal
+
+
+37375679	distant	DDF	anatomical location
+37375679	distant	microbiome	DDF
+37375679	distant	DDF	human
+37375679	distant	dietary supplement	DDF
+37375679	distant	DDF	DDF
+37375679	distant	dietary supplement	microbiome
+
+
+35610236	distant	dietary supplement	human
+35610236	distant	microbiome	DDF
+35610236	distant	DDF	human
+35610236	distant	dietary supplement	DDF
+35610236	distant	drug	microbiome
+35610236	distant	DDF	DDF
+35610236	distant	human	biomedical technique
+35610236	distant	drug	DDF
+35610236	distant	dietary supplement	bacteria
+35610236	distant	dietary supplement	microbiome
+
+
+29213271	distant	DDF	anatomical location
+
+
+38075261	distant	chemical	DDF
+38075261	distant	DDF	human
+38075261	distant	DDF	DDF
+
+
+38417224	distant	chemical	DDF
+38417224	distant	DDF	microbiome
+38417224	distant	DDF	anatomical location
+38417224	distant	microbiome	DDF
+38417224	distant	DDF	human
+38417224	distant	human	biomedical technique
+38417224	distant	DDF	chemical
+38417224	distant	microbiome	biomedical technique
+
+
+36284437	distant	DDF	bacteria
+36284437	distant	microbiome	human
+36284437	distant	microbiome	DDF
+36284437	distant	DDF	human
+36284437	distant	bacteria	DDF
+36284437	distant	DDF	DDF
+36284437	distant	DDF	animal
+
+
+33508544	distant	anatomical location	biomedical technique
+33508544	distant	gene	biomedical technique
+33508544	distant	microbiome	DDF
+33508544	distant	microbiome	animal
+33508544	distant	DDF	animal
+
+
+36017855	distant	dietary supplement	DDF
+36017855	distant	chemical	anatomical location
+
+
+37692658	distant	microbiome	human
+37692658	distant	microbiome	DDF
+37692658	distant	DDF	human
+37692658	distant	dietary supplement	DDF
+37692658	distant	dietary supplement	microbiome
+
+
+31440136	distant	chemical	DDF
+31440136	distant	microbiome	DDF
+31440136	distant	DDF	human
+31440136	distant	human	biomedical technique
+31440136	distant	chemical	microbiome
+31440136	distant	animal	biomedical technique
+31440136	distant	bacteria	animal
+
+
+
+
+34946184	distant	microbiome	DDF
+34946184	distant	dietary supplement	DDF
+34946184	distant	chemical	DDF
+34946184	distant	bacteria	DDF
+
+
+37399128	distant	DDF	bacteria
+37399128	distant	DDF	microbiome
+37399128	distant	microbiome	human
+37399128	distant	microbiome	DDF
+37399128	distant	DDF	human
+37399128	distant	bacteria	human
+
+
+30705252	distant	microbiome	DDF
+30705252	distant	DDF	human
+30705252	distant	animal	statistical technique
+30705252	distant	DDF	DDF
+30705252	distant	microbiome	animal
+30705252	distant	animal	biomedical technique
+30705252	distant	DDF	animal
+30705252	distant	microbiome	biomedical technique
+
+
+36984872	distant	chemical	DDF
+36984872	distant	DDF	human
+36984872	distant	DDF	DDF
+
+
+36815026	distant	dietary supplement	drug
+36815026	distant	DDF	human
+36815026	distant	dietary supplement	DDF
+
+
+31890161	distant	chemical	DDF
+31890161	distant	DDF	DDF
+
+
+26633823	distant	drug	animal
+26633823	distant	microbiome	DDF
+26633823	distant	DDF	human
+26633823	distant	drug	microbiome
+26633823	distant	microbiome	animal
+26633823	distant	chemical	microbiome
+26633823	distant	drug	DDF
+
+
+37794974	distant	chemical	DDF
+37794974	distant	DDF	human
+37794974	distant	microbiome	human
+
+
+
+
+37774944	distant	DDF	human
+37774944	distant	dietary supplement	DDF
+37774944	distant	DDF	DDF
+
+
+35513230	distant	chemical	DDF
+35513230	distant	microbiome	DDF
+35513230	distant	bacteria	DDF
+35513230	distant	DDF	DDF
+
+
+
+
+28121994	distant	DDF	human
+
+
+31784958	distant	chemical	DDF
+31784958	distant	DDF	DDF
+
+
+37130861	distant	DDF	bacteria
+37130861	distant	microbiome	human
+37130861	distant	microbiome	DDF
+37130861	distant	DDF	human
+37130861	distant	DDF	DDF
+
+
+29138692	distant	bacteria	DDF
+
+
+38275646	distant	microbiome	DDF
+38275646	distant	drug	DDF
+38275646	distant	drug	bacteria
+38275646	distant	DDF	DDF
+
+
+37323145	distant	microbiome	DDF
+37323145	distant	DDF	human
+37323145	distant	microbiome	biomedical technique
+
+
+36674517	distant	microbiome	DDF
+36674517	distant	anatomical location	DDF
+
+
+37064156	distant	microbiome	DDF
+37064156	distant	microbiome	statistical technique
+37064156	distant	DDF	DDF
+
+
+35743072	distant	chemical	DDF
+35743072	distant	DDF	human
+35743072	distant	DDF	DDF
+35743072	distant	gene	DDF
+35743072	distant	chemical	microbiome
+
+
+31317505	distant	microbiome	DDF
+31317505	distant	drug	DDF
+31317505	distant	chemical	DDF
+
+
+34346706	distant	DDF	microbiome
+34346706	distant	microbiome	human
+34346706	distant	microbiome	DDF
+34346706	distant	DDF	human
+34346706	distant	human	biomedical technique
+34346706	distant	DDF	DDF
+34346706	distant	chemical	microbiome
+34346706	distant	human	human
+34346706	distant	microbiome	chemical
+34346706	distant	chemical	biomedical technique
+34346706	distant	microbiome	biomedical technique
+
+
+36216843	distant	DDF	human
+36216843	distant	human	biomedical technique
+36216843	distant	drug	human
+36216843	distant	DDF	DDF
+
+
+30207256	distant	microbiome	DDF
+
+
+32791113	distant	microbiome	DDF
+
+
+34489756	distant	DDF	human
+34489756	distant	DDF	DDF
+
+
+38410510	distant	microbiome	DDF
+38410510	distant	DDF	human
+38410510	distant	DDF	DDF
+38410510	distant	biomedical technique	DDF
+
+
+36943505	distant	DDF	human
+36943505	distant	food	DDF
+36943505	distant	microbiome	DDF
+36943505	distant	DDF	DDF
+
+
+36334762	distant	DDF	DDF
+36334762	distant	microbiome	anatomical location
+36334762	distant	biomedical technique	DDF
+
+
+37110302	distant	DDF	microbiome
+37110302	distant	DDF	anatomical location
+37110302	distant	microbiome	DDF
+37110302	distant	DDF	human
+37110302	distant	drug	microbiome
+37110302	distant	DDF	DDF
+37110302	distant	chemical	anatomical location
+37110302	distant	DDF	animal
+
+
+37343494	distant	microbiome	DDF
+37343494	distant	DDF	human
+37343494	distant	microbiome	anatomical location
+37343494	distant	DDF	DDF
+
+
+33307114	distant	DDF	human
+33307114	distant	food	DDF
+33307114	distant	DDF	DDF
+33307114	distant	food	microbiome
+33307114	distant	dietary supplement	microbiome
+
+
+38426291	distant	DDF	human
+38426291	distant	DDF	DDF
+
+
+31505196	distant	chemical	DDF
+31505196	distant	DDF	anatomical location
+31505196	distant	DDF	human
+31505196	distant	gene	anatomical location
+31505196	distant	DDF	DDF
+31505196	distant	gene	DDF
+31505196	distant	animal	biomedical technique
+31505196	distant	chemical	anatomical location
+
+
+33334010	distant	DDF	human
+33334010	distant	food	DDF
+33334010	distant	DDF	DDF
+
+
+34691318	distant	chemical	DDF
+34691318	distant	anatomical location	biomedical technique
+34691318	distant	microbiome	DDF
+34691318	distant	food	DDF
+34691318	distant	dietary supplement	DDF
+34691318	distant	dietary supplement	microbiome
+
+
+36881113	distant	chemical	DDF
+36881113	distant	DDF	microbiome
+36881113	distant	DDF	DDF
+36881113	distant	DDF	animal
+
+
+34329424	distant	microbiome	human
+34329424	distant	dietary supplement	DDF
+34329424	distant	DDF	anatomical location
+
+
+37414494	distant	DDF	anatomical location
+37414494	distant	DDF	human
+37414494	distant	drug	microbiome
+37414494	distant	DDF	DDF
+37414494	distant	drug	drug
+37414494	distant	DDF	animal
+37414494	distant	drug	DDF
+
+
+30513869	distant	chemical	DDF
+30513869	distant	microbiome	DDF
+30513869	distant	dietary supplement	DDF
+30513869	distant	chemical	microbiome
+30513869	distant	dietary supplement	microbiome
+
+
+37121952	distant	microbiome	DDF
+37121952	distant	chemical	DDF
+
+
+29031410	distant	microbiome	DDF
+
+
+29243233	distant	DDF	human
+
+
+28783713	distant	DDF	bacteria
+28783713	distant	DDF	microbiome
+28783713	distant	microbiome	DDF
+28783713	distant	microbiome	animal
+28783713	distant	animal	biomedical technique
+
+
+38421192	distant	microbiome	DDF
+38421192	distant	dietary supplement	DDF
+38421192	distant	DDF	DDF
+38421192	distant	animal	biomedical technique
+38421192	distant	DDF	animal
+38421192	distant	dietary supplement	bacteria
+
+
+38540341	distant	chemical	DDF
+38540341	distant	drug	microbiome
+38540341	distant	microbiome	animal
+38540341	distant	chemical	microbiome
+38540341	distant	DDF	animal
+38540341	distant	gene	chemical
+
+
+37943628	distant	microbiome	human
+37943628	distant	human	biomedical technique
+
+
+28610994	distant	chemical	DDF
+28610994	distant	microbiome	DDF
+28610994	distant	microbiome	animal
+28610994	distant	chemical	microbiome
+28610994	distant	DDF	animal
+
+
+28806201	distant	DDF	human
+28806201	distant	dietary supplement	DDF
+
+
+37836527	distant	DDF	human
+37836527	distant	microbiome	human
+37836527	distant	food	microbiome
+37836527	distant	DDF	DDF
+
+
+37777156	distant	microbiome	DDF
+37777156	distant	chemical	DDF
+37777156	distant	chemical	anatomical location
+37777156	distant	DDF	DDF
+
+
+38488556	distant	chemical	DDF
+38488556	distant	microbiome	DDF
+38488556	distant	food	DDF
+38488556	distant	DDF	DDF
+38488556	distant	chemical	anatomical location
+
+
+37604976	distant	microbiome	human
+37604976	distant	DDF	human
+37604976	distant	DDF	DDF
+37604976	distant	animal	biomedical technique
+37604976	distant	bacteria	animal
+37604976	distant	DDF	animal
+
+
+34650532	distant	microbiome	human
+34650532	distant	DDF	human
+34650532	distant	bacteria	DDF
+34650532	distant	human	biomedical technique
+34650532	distant	DDF	DDF
+34650532	distant	microbiome	biomedical technique
+
+
+30838027	distant	DDF	bacteria
+30838027	distant	microbiome	human
+30838027	distant	microbiome	DDF
+30838027	distant	DDF	human
+30838027	distant	microbiome	anatomical location
+
+
+35708472	distant	DDF	microbiome
+35708472	distant	DDF	anatomical location
+35708472	distant	microbiome	DDF
+35708472	distant	DDF	human
+35708472	distant	DDF	DDF
+
+
+38562309	distant	DDF	human
+38562309	distant	DDF	DDF
+
+
+37088645	distant	human	biomedical technique
+
+
+34576191	distant	microbiome	anatomical location
+
+
+33517890	distant	chemical	DDF
+33517890	distant	bacteria	microbiome
+33517890	distant	chemical	chemical
+33517890	distant	microbiome	DDF
+33517890	distant	chemical	bacteria
+33517890	distant	DDF	DDF
+33517890	distant	microbiome	animal
+33517890	distant	bacteria	animal
+33517890	distant	DDF	animal
+
+
+30680947	distant	animal	animal
+30680947	distant	microbiome	DDF
+30680947	distant	animal	statistical technique
+30680947	distant	microbiome	animal
+30680947	distant	animal	biomedical technique
+30680947	distant	bacteria	animal
+30680947	distant	DDF	animal
+
+
+33497754	distant	microbiome	biomedical technique
+33497754	distant	microbiome	anatomical location
+33497754	distant	DDF	DDF
+
+
+35181072	distant	microbiome	DDF
+35181072	distant	bacteria	anatomical location
+35181072	distant	dietary supplement	microbiome
+35181072	distant	DDF	DDF
+
+
+37879416	distant	DDF	human
+37879416	distant	DDF	DDF
+37879416	distant	chemical	anatomical location
+37879416	distant	DDF	animal
+
+
+32398374	distant	microbiome	human
+32398374	distant	anatomical location	human
+32398374	distant	DDF	human
+32398374	distant	chemical	human
+32398374	distant	drug	human
+32398374	distant	chemical	anatomical location
+32398374	distant	DDF	animal
+32398374	distant	drug	DDF
+
+
+32763534	distant	microbiome	DDF
+32763534	distant	DDF	human
+32763534	distant	microbiome	human
+
+
+38650872	distant	chemical	DDF
+38650872	distant	biomedical technique	DDF
+38650872	distant	microbiome	DDF
+38650872	distant	DDF	human
+38650872	distant	DDF	DDF
+
+
+34690981	distant	microbiome	DDF
+
+
+30466372	distant	anatomical location	biomedical technique
+30466372	distant	food	animal
+30466372	distant	microbiome	animal
+30466372	distant	food	microbiome
+30466372	distant	microbiome	biomedical technique
+
+
+30523432	distant	microbiome	DDF
+30523432	distant	DDF	human
+30523432	distant	human	statistical technique
+
+
+29802603	distant	microbiome	DDF
+29802603	distant	DDF	human
+29802603	distant	anatomical location	DDF
+29802603	distant	DDF	DDF
+
+
+31628992	distant	microbiome	DDF
+31628992	distant	DDF	DDF
+
+
+
+
+30544486	distant	microbiome	DDF
+30544486	distant	DDF	human
+30544486	distant	bacteria	DDF
+30544486	distant	microbiome	biomedical technique
+
+
+30991255	distant	microbiome	DDF
+30991255	distant	DDF	human
+30991255	distant	dietary supplement	DDF
+30991255	distant	human	biomedical technique
+
+
+32506238	distant	microbiome	DDF
+32506238	distant	DDF	DDF
+
+
+34980288	distant	microbiome	human
+34980288	distant	microbiome	DDF
+34980288	distant	DDF	human
+34980288	distant	dietary supplement	DDF
+34980288	distant	drug	microbiome
+34980288	distant	bacteria	DDF
+34980288	distant	DDF	animal
+34980288	distant	drug	DDF
+34980288	distant	dietary supplement	bacteria
+34980288	distant	dietary supplement	microbiome
+
+
+38663221	distant	microbiome	human
+38663221	distant	microbiome	drug
+38663221	distant	drug	microbiome
+38663221	distant	DDF	DDF
+38663221	distant	drug	DDF
+
+
+38045052	distant	chemical	DDF
+38045052	distant	microbiome	DDF
+38045052	distant	dietary supplement	DDF
+38045052	distant	DDF	DDF
+38045052	distant	microbiome	animal
+38045052	distant	DDF	animal
+38045052	distant	drug	DDF
+
+
+28593878	distant	microbiome	DDF
+28593878	distant	dietary supplement	DDF
+28593878	distant	DDF	DDF
+
+
+25772005	distant	microbiome	animal
+25772005	distant	bacteria	DDF
+
+
+33067643	distant	microbiome	DDF
+33067643	distant	DDF	human
+33067643	distant	microbiome	human
+33067643	distant	human	biomedical technique
+
+
+38479554	distant	DDF	animal
+38479554	distant	microbiome	animal
+38479554	distant	bacteria	animal
+38479554	distant	chemical	anatomical location
+38479554	distant	microbiome	biomedical technique
+
+
+31745471	distant	microbiome	DDF
+31745471	distant	DDF	human
+31745471	distant	bacteria	DDF
+31745471	distant	DDF	DDF
+
+
+37744899	distant	DDF	bacteria
+37744899	distant	microbiome	human
+37744899	distant	microbiome	DDF
+37744899	distant	DDF	human
+37744899	distant	drug	microbiome
+37744899	distant	bacteria	DDF
+37744899	distant	drug	human
+37744899	distant	bacteria	chemical
+37744899	distant	drug	DDF
+
+
+30271330	distant	microbiome	DDF
+30271330	distant	microbiome	anatomical location
+
+
+37664615	distant	chemical	DDF
+37664615	distant	DDF	human
+37664615	distant	chemical	bacteria
+
+
+38327077	distant	DDF	microbiome
+38327077	distant	microbiome	DDF
+38327077	distant	DDF	human
+38327077	distant	human	biomedical technique
+38327077	distant	microbiome	biomedical technique
+
+
+37741061	distant	chemical	animal
+37741061	distant	drug	animal
+37741061	distant	DDF	anatomical location
+37741061	distant	DDF	DDF
+37741061	distant	microbiome	animal
+37741061	distant	DDF	animal
+37741061	distant	microbiome	biomedical technique
+
+
+33206326	distant	chemical	DDF
+33206326	distant	dietary supplement	human
+33206326	distant	DDF	human
+33206326	distant	dietary supplement	DDF
+33206326	distant	bacteria	DDF
+33206326	distant	DDF	DDF
+
+
+37157885	distant	chemical	DDF
+37157885	distant	DDF	anatomical location
+37157885	distant	DDF	human
+37157885	distant	chemical	bacteria
+37157885	distant	DDF	DDF
+37157885	distant	chemical	anatomical location
+
+
+32918633	distant	DDF	microbiome
+32918633	distant	microbiome	human
+32918633	distant	microbiome	DDF
+32918633	distant	dietary supplement	DDF
+32918633	distant	microbiome	animal
+32918633	distant	dietary supplement	microbiome
+
+
+29542066	distant	microbiome	DDF
+29542066	distant	DDF	microbiome
+29542066	distant	DDF	anatomical location
+29542066	distant	chemical	anatomical location
+
+
+37108739	distant	microbiome	DDF
+37108739	distant	DDF	DDF
+
+
+32459513	distant	microbiome	DDF
+32459513	distant	DDF	human
+32459513	distant	DDF	DDF
+32459513	distant	chemical	microbiome
+32459513	distant	dietary supplement	microbiome
+
+
+36400238	distant	chemical	DDF
+36400238	distant	chemical	microbiome
+36400238	distant	microbiome	DDF
+
+
+36990371	distant	food	microbiome
+
+
+38003647	distant	DDF	bacteria
+38003647	distant	microbiome	human
+38003647	distant	microbiome	DDF
+38003647	distant	DDF	human
+38003647	distant	bacteria	DDF
+
+
+36804416	distant	microbiome	DDF
+36804416	distant	DDF	microbiome
+36804416	distant	DDF	DDF
+
+
+35163103	distant	microbiome	DDF
+35163103	distant	DDF	human
+35163103	distant	DDF	DDF
+
+
+29867531	distant	microbiome	chemical
+29867531	distant	chemical	anatomical location
+
+
+36283312	distant	chemical	DDF
+36283312	distant	drug	animal
+36283312	distant	DDF	human
+36283312	distant	drug	microbiome
+36283312	distant	DDF	DDF
+36283312	distant	drug	DDF
+
+
+34034646	distant	microbiome	biomedical technique
+
+
+33671569	distant	microbiome	DDF
+33671569	distant	DDF	microbiome
+
+
+34050205	distant	chemical	animal
+34050205	distant	drug	microbiome
+34050205	distant	DDF	DDF
+34050205	distant	microbiome	animal
+34050205	distant	anatomical location	animal
+34050205	distant	microbiome	anatomical location
+
+
+33490703	distant	dietary supplement	DDF
+33490703	distant	dietary supplement	human
+
+
+30781628	distant	microbiome	DDF
+30781628	distant	DDF	DDF
+
+
+34338703	distant	DDF	human
+34338703	distant	microbiome	human
+34338703	distant	dietary supplement	microbiome
+
+
+35307514	distant	microbiome	DDF
+35307514	distant	DDF	human
+35307514	distant	microbiome	human
+35307514	distant	DDF	DDF
+
+
+34888340	distant	DDF	human
+34888340	distant	DDF	DDF
+
+
+35032636	distant	DDF	microbiome
+35032636	distant	DDF	anatomical location
+35032636	distant	anatomical location	DDF
+35032636	distant	DDF	DDF
+35032636	distant	chemical	anatomical location
+
+
+38014294	distant	chemical	bacteria
+38014294	distant	drug	microbiome
+38014294	distant	microbiome	biomedical technique
+
+
+
+
+37597865	distant	DDF	human
+37597865	distant	DDF	microbiome
+37597865	distant	human	biomedical technique
+
+
+38565567	distant	chemical	DDF
+38565567	distant	microbiome	DDF
+38565567	distant	DDF	DDF
+38565567	distant	chemical	microbiome
+38565567	distant	chemical	anatomical location
+
+
+37016046	distant	drug	animal
+37016046	distant	dietary supplement	DDF
+37016046	distant	bacteria	DDF
+37016046	distant	microbiome	animal
+37016046	distant	dietary supplement	animal
+37016046	distant	animal	DDF
+
+
+32224141	distant	drug	animal
+32224141	distant	DDF	human
+32224141	distant	drug	DDF
+32224141	distant	drug	human
+
+
+35185631	distant	microbiome	DDF
+
+
+34617139	distant	chemical	DDF
+34617139	distant	DDF	microbiome
+34617139	distant	chemical	animal
+34617139	distant	microbiome	DDF
+34617139	distant	dietary supplement	DDF
+34617139	distant	bacteria	DDF
+34617139	distant	DDF	DDF
+34617139	distant	microbiome	animal
+34617139	distant	chemical	microbiome
+34617139	distant	bacteria	animal
+34617139	distant	DDF	animal
+34617139	distant	bacteria	chemical
+34617139	distant	microbiome	biomedical technique
+
+
+34357070	distant	dietary supplement	human
+34357070	distant	DDF	human
+34357070	distant	dietary supplement	DDF
+34357070	distant	bacteria	DDF
+34357070	distant	DDF	DDF
+34357070	distant	human	human
+
+
+32056905	distant	bacteria	microbiome
+32056905	distant	microbiome	DDF
+32056905	distant	DDF	human
+32056905	distant	human	biomedical technique
+32056905	distant	microbiome	biomedical technique
+
+
+36430144	distant	microbiome	DDF
+36430144	distant	DDF	bacteria
+36430144	distant	DDF	DDF
+
+
+36769029	distant	food	DDF
+36769029	distant	dietary supplement	DDF
+36769029	distant	DDF	DDF
+
+
+37557965	distant	microbiome	DDF
+37557965	distant	bacteria	DDF
+37557965	distant	biomedical technique	DDF
+
+
+37761988	distant	microbiome	DDF
+37761988	distant	DDF	human
+37761988	distant	DDF	DDF
+
+
+36972851	distant	chemical	DDF
+36972851	distant	microbiome	DDF
+36972851	distant	microbiome	animal
+36972851	distant	chemical	anatomical location
+36972851	distant	DDF	animal
+36972851	distant	bacteria	animal
+36972851	distant	microbiome	anatomical location
+
+
+34965376	distant	microbiome	DDF
+34965376	distant	DDF	human
+34965376	distant	chemical	DDF
+
+
+25415497	distant	microbiome	DDF
+25415497	distant	food	DDF
+25415497	distant	dietary supplement	DDF
+25415497	distant	DDF	DDF
+
+
+36542917	distant	microbiome	DDF
+36542917	distant	bacteria	DDF
+36542917	distant	DDF	DDF
+
+
+34835436	distant	microbiome	DDF
+34835436	distant	dietary supplement	DDF
+34835436	distant	dietary supplement	microbiome
+
+
+34830242	distant	drug	DDF
+34830242	distant	DDF	DDF
+
+
+37994886	distant	microbiome	DDF
+37994886	distant	microbiome	anatomical location
+
+
+30223263	distant	microbiome	DDF
+30223263	distant	DDF	human
+30223263	distant	dietary supplement	microbiome
+30223263	distant	DDF	DDF
+
+
+25567038	distant	microbiome	DDF
+25567038	distant	DDF	human
+25567038	distant	dietary supplement	DDF
+25567038	distant	DDF	DDF
+
+
+31609697	distant	chemical	DDF
+31609697	distant	DDF	anatomical location
+31609697	distant	anatomical location	human
+31609697	distant	DDF	human
+31609697	distant	anatomical location	DDF
+31609697	distant	DDF	DDF
+31609697	distant	chemical	anatomical location
+
+
+31870331	distant	microbiome	human
+31870331	distant	microbiome	DDF
+31870331	distant	DDF	human
+31870331	distant	dietary supplement	DDF
+31870331	distant	human	biomedical technique
+31870331	distant	dietary supplement	microbiome
+
+
+32046750	distant	dietary supplement	human
+32046750	distant	microbiome	DDF
+32046750	distant	DDF	human
+32046750	distant	dietary supplement	DDF
+32046750	distant	DDF	DDF
+32046750	distant	dietary supplement	microbiome
+
+
+37237983	distant	DDF	human
+37237983	distant	DDF	DDF
+
+
+37548294	distant	microbiome	DDF
+37548294	distant	DDF	human
+37548294	distant	microbiome	human
+
+
+34079079	distant	microbiome	DDF
+34079079	distant	microbiome	human
+
+
+38488514	distant	chemical	DDF
+38488514	distant	chemical	chemical
+38488514	distant	microbiome	DDF
+38488514	distant	DDF	human
+38488514	distant	microbiome	animal
+38488514	distant	chemical	microbiome
+38488514	distant	chemical	anatomical location
+38488514	distant	DDF	animal
+38488514	distant	anatomical location	animal
+
+
+32456274	distant	chemical	DDF
+32456274	distant	DDF	anatomical location
+
+
+36875518	distant	DDF	bacteria
+36875518	distant	DDF	microbiome
+36875518	distant	microbiome	human
+36875518	distant	DDF	human
+36875518	distant	human	bacteria
+36875518	distant	human	microbiome
+36875518	distant	human	biomedical technique
+36875518	distant	DDF	DDF
+36875518	distant	microbiome	statistical technique
+36875518	distant	microbiome	biomedical technique
+
+
+34042025	distant	microbiome	DDF
+34042025	distant	DDF	chemical
+
+
+31952509	distant	chemical	DDF
+31952509	distant	chemical	chemical
+31952509	distant	microbiome	DDF
+31952509	distant	bacteria	DDF
+31952509	distant	DDF	DDF
+
+
+36843420	distant	microbiome	DDF
+36843420	distant	DDF	human
+36843420	distant	chemical	DDF
+36843420	distant	DDF	DDF
+
+
+37447374	distant	gene	microbiome
+37447374	distant	microbiome	animal
+37447374	distant	animal	biomedical technique
+37447374	distant	chemical	anatomical location
+37447374	distant	microbiome	biomedical technique
+
+
+38722169	distant	DDF	human
+38722169	distant	drug	DDF
+38722169	distant	DDF	DDF
+
+
+37004759	distant	chemical	DDF
+37004759	distant	microbiome	biomedical technique
+
+
+38693730	distant	microbiome	DDF
+38693730	distant	DDF	human
+38693730	distant	dietary supplement	DDF
+38693730	distant	DDF	DDF
+38693730	distant	DDF	dietary supplement
+
+
+36235760	distant	microbiome	DDF
+36235760	distant	DDF	DDF
+
+
+33407119	distant	microbiome	human
+33407119	distant	human	bacteria
+
+
+27793226	distant	DDF	human
+27793226	distant	DDF	DDF
+
+
+38004795	distant	microbiome	DDF
+38004795	distant	DDF	DDF
+
+
+36571897	distant	chemical	animal
+36571897	distant	drug	animal
+36571897	distant	microbiome	human
+36571897	distant	DDF	animal
+36571897	distant	DDF	human
+36571897	distant	DDF	DDF
+36571897	distant	chemical	human
+36571897	distant	drug	human
+36571897	distant	drug	drug
+36571897	distant	DDF	chemical
+36571897	distant	drug	DDF
+
+
+34550085	distant	microbiome	DDF
+34550085	distant	DDF	human
+34550085	distant	dietary supplement	DDF
+34550085	distant	dietary supplement	human
+
+
+34589731	distant	microbiome	animal
+34589731	distant	chemical	microbiome
+34589731	distant	animal	biomedical technique
+34589731	distant	DDF	animal
+
+
+37569349	distant	microbiome	DDF
+37569349	distant	dietary supplement	DDF
+37569349	distant	DDF	DDF
+
+
+35393656	distant	microbiome	DDF
+35393656	distant	bacteria	DDF
+35393656	distant	DDF	DDF
+
+
+32485204	distant	dietary supplement	DDF
+32485204	distant	bacteria	DDF
+32485204	distant	dietary supplement	animal
+32485204	distant	DDF	animal
+32485204	distant	dietary supplement	bacteria
+
+
+37007475	distant	DDF	microbiome
+37007475	distant	microbiome	human
+37007475	distant	microbiome	DDF
+37007475	distant	DDF	human
+37007475	distant	drug	microbiome
+37007475	distant	DDF	DDF
+37007475	distant	microbiome	biomedical technique
+
+
+37951975	distant	microbiome	human
+37951975	distant	dietary supplement	human
+37951975	distant	DDF	human
+37951975	distant	dietary supplement	DDF
+37951975	distant	human	biomedical technique
+37951975	distant	DDF	DDF
+37951975	distant	dietary supplement	microbiome
+
+
+38648770	distant	microbiome	DDF
+38648770	distant	DDF	microbiome
+38648770	distant	DDF	bacteria
+38648770	distant	DDF	human
+
+
+25847918	distant	bacteria	microbiome
+25847918	distant	DDF	human
+25847918	distant	DDF	DDF
+25847918	distant	animal	microbiome
+25847918	distant	chemical	microbiome
+25847918	distant	chemical	anatomical location
+25847918	distant	anatomical location	animal
+
+
+36502554	distant	microbiome	DDF
+36502554	distant	DDF	human
+36502554	distant	drug	DDF
+36502554	distant	drug	microbiome
+
+
+38627687	distant	DDF	human
+38627687	distant	chemical	microbiome
+38627687	distant	human	biomedical technique
+
+
+35057561	distant	microbiome	DDF
+35057561	distant	DDF	microbiome
+35057561	distant	DDF	DDF
+
+
+34440563	distant	chemical	DDF
+34440563	distant	DDF	human
+34440563	distant	drug	DDF
+34440563	distant	DDF	DDF
+
+
+36937822	distant	chemical	DDF
+36937822	distant	DDF	human
+36937822	distant	chemical	human
+36937822	distant	DDF	DDF
+
+
+37956855	distant	chemical	animal
+37956855	distant	drug	animal
+37956855	distant	microbiome	human
+37956855	distant	bacteria	human
+37956855	distant	DDF	human
+37956855	distant	drug	bacteria
+37956855	distant	drug	human
+37956855	distant	chemical	anatomical location
+37956855	distant	DDF	animal
+37956855	distant	anatomical location	animal
+37956855	distant	drug	DDF
+
+
+38589422	distant	microbiome	human
+38589422	distant	microbiome	DDF
+38589422	distant	DDF	human
+38589422	distant	DDF	DDF
+38589422	distant	microbiome	animal
+38589422	distant	anatomical location	animal
+38589422	distant	DDF	animal
+38589422	distant	microbiome	biomedical technique
+
+
+37709081	distant	chemical	DDF
+37709081	distant	DDF	DDF
+37709081	distant	gene	DDF
+37709081	distant	DDF	animal
+
+
+38332676	distant	drug	animal
+38332676	distant	drug	microbiome
+38332676	distant	DDF	DDF
+38332676	distant	anatomical location	animal
+38332676	distant	DDF	animal
+38332676	distant	drug	DDF
+38332676	distant	microbiome	biomedical technique
+
+
+34829694	distant	microbiome	DDF
+34829694	distant	dietary supplement	DDF
+34829694	distant	DDF	DDF
+34829694	distant	animal	biomedical technique
+34829694	distant	dietary supplement	animal
+34829694	distant	DDF	animal
+34829694	distant	dietary supplement	microbiome
+34829694	distant	microbiome	biomedical technique
+
+
+36593394	distant	DDF	human
+36593394	distant	microbiome	drug
+36593394	distant	biomedical technique	human
+
+
+37690584	distant	microbiome	animal
+37690584	distant	dietary supplement	DDF
+37690584	distant	chemical	DDF
+37690584	distant	DDF	DDF
+
+
+33919680	distant	microbiome	anatomical location
+
+
+38582087	distant	chemical	DDF
+38582087	distant	DDF	human
+38582087	distant	chemical	bacteria
+38582087	distant	bacteria	DDF
+38582087	distant	DDF	animal
+
+
+35711028	distant	microbiome	DDF
+35711028	distant	DDF	human
+35711028	distant	DDF	DDF
+
+
+28195358	distant	anatomical location	biomedical technique
+28195358	distant	microbiome	DDF
+28195358	distant	DDF	human
+28195358	distant	human	biomedical technique
+28195358	distant	DDF	DDF
+
+
+32149335	distant	microbiome	DDF
+32149335	distant	microbiome	anatomical location
+
+
+37199590	distant	microbiome	human
+37199590	distant	microbiome	DDF
+37199590	distant	DDF	human
+37199590	distant	DDF	DDF
+37199590	distant	microbiome	animal
+
+
+35656540	distant	microbiome	DDF
+35656540	distant	DDF	human
+35656540	distant	DDF	DDF
+
+
+38248533	distant	DDF	microbiome
+38248533	distant	microbiome	human
+38248533	distant	DDF	human
+38248533	distant	human	biomedical technique
+38248533	distant	microbiome	biomedical technique
+
+
+33067279	distant	DDF	human
+33067279	distant	dietary supplement	DDF
+33067279	distant	dietary supplement	human
+
+
+33005892	distant	microbiome	human
+33005892	distant	microbiome	DDF
+33005892	distant	DDF	human
+33005892	distant	DDF	DDF
+33005892	distant	human	biomedical technique
+33005892	distant	DDF	animal
+33005892	distant	microbiome	biomedical technique
+33005892	distant	microbiome	anatomical location
+
+
+35189807	distant	drug	chemical
+35189807	distant	drug	microbiome
+35189807	distant	DDF	DDF
+35189807	distant	anatomical location	animal
+35189807	distant	chemical	anatomical location
+35189807	distant	drug	DDF
+
+
+34841505	distant	DDF	human
+34841505	distant	human	biomedical technique
+34841505	distant	DDF	DDF
+
+
+34280457	distant	chemical	DDF
+34280457	distant	DDF	microbiome
+34280457	distant	microbiome	human
+34280457	distant	microbiome	DDF
+34280457	distant	microbiome	animal
+34280457	distant	chemical	microbiome
+34280457	distant	dietary supplement	microbiome
+
+
+28536926	distant	DDF	bacteria
+28536926	distant	microbiome	human
+28536926	distant	microbiome	DDF
+28536926	distant	DDF	human
+28536926	distant	human	biomedical technique
+
+
+37375029	distant	microbiome	DDF
+37375029	distant	dietary supplement	DDF
+37375029	distant	DDF	DDF
+
+
+37046334	distant	microbiome	human
+37046334	distant	DDF	anatomical location
+37046334	distant	biomedical technique	DDF
+37046334	distant	anatomical location	human
+37046334	distant	DDF	human
+37046334	distant	drug	microbiome
+37046334	distant	human	biomedical technique
+37046334	distant	drug	human
+37046334	distant	dietary supplement	microbiome
+
+
+34650506	distant	microbiome	DDF
+34650506	distant	DDF	DDF
+
+
+38350544	distant	chemical	DDF
+38350544	distant	chemical	microbiome
+
+
+37989444	distant	chemical	DDF
+37989444	distant	DDF	microbiome
+37989444	distant	gene	chemical
+
+
+34376593	distant	microbiome	DDF
+34376593	distant	bacteria	DDF
+34376593	distant	dietary supplement	DDF
+34376593	distant	microbiome	anatomical location
+
+
+33422641	distant	DDF	animal
+33422641	distant	microbiome	animal
+33422641	distant	anatomical location	animal
+33422641	distant	chemical	anatomical location
+33422641	distant	drug	DDF
+
+
+35443740	distant	microbiome	DDF
+35443740	distant	DDF	DDF
+
+
+37239020	distant	chemical	DDF
+37239020	distant	microbiome	human
+37239020	distant	DDF	human
+37239020	distant	gene	human
+37239020	distant	DDF	DDF
+
+
+38458803	distant	DDF	human
+
+
+32093762	distant	human	biomedical technique
+
+
+38176929	distant	chemical	DDF
+38176929	distant	microbiome	human
+38176929	distant	microbiome	DDF
+38176929	distant	DDF	human
+38176929	distant	DDF	DDF
+38176929	distant	microbiome	anatomical location
+
+
+33428888	distant	chemical	DDF
+33428888	distant	DDF	DDF
+
+
+38436218	distant	chemical	microbiome
+
+
+29276734	distant	microbiome	DDF
+
+
+38700338	distant	DDF	bacteria
+38700338	distant	DDF	microbiome
+38700338	distant	microbiome	human
+38700338	distant	DDF	human
+38700338	distant	human	biomedical technique
+38700338	distant	DDF	DDF
+
+
+35477134	distant	drug	animal
+35477134	distant	dietary supplement	DDF
+35477134	distant	drug	microbiome
+35477134	distant	microbiome	animal
+35477134	distant	DDF	animal
+35477134	distant	microbiome	biomedical technique
+
+
+32982910	distant	microbiome	DDF
+32982910	distant	DDF	DDF
+
+
+32566740	distant	DDF	bacteria
+32566740	distant	DDF	microbiome
+32566740	distant	DDF	anatomical location
+32566740	distant	microbiome	DDF
+32566740	distant	DDF	DDF
+
+
+31273718	distant	microbiome	DDF
+31273718	distant	DDF	human
+31273718	distant	DDF	DDF
+
+
+
+
+31812830	distant	microbiome	DDF
+
+
+30532687	distant	microbiome	DDF
+30532687	distant	DDF	DDF
+
+
+37228982	distant	microbiome	animal
+37228982	distant	DDF	human
+37228982	distant	dietary supplement	DDF
+
+
+34589003	distant	DDF	bacteria
+34589003	distant	microbiome	DDF
+34589003	distant	DDF	human
+34589003	distant	human	biomedical technique
+34589003	distant	DDF	gene
+34589003	distant	microbiome	biomedical technique
+
+
+37659269	distant	chemical	DDF
+37659269	distant	chemical	animal
+37659269	distant	microbiome	DDF
+37659269	distant	DDF	human
+37659269	distant	DDF	DDF
+37659269	distant	microbiome	animal
+37659269	distant	animal	biomedical technique
+37659269	distant	DDF	animal
+
+
+37181872	distant	microbiome	DDF
+37181872	distant	DDF	microbiome
+
+
+26810963	distant	dietary supplement	human
+26810963	distant	DDF	human
+26810963	distant	food	DDF
+26810963	distant	dietary supplement	DDF
+26810963	distant	dietary supplement	microbiome
+
+
+37619773	distant	microbiome	DDF
+37619773	distant	DDF	human
+37619773	distant	chemical	human
+37619773	distant	chemical	DDF
+
+
+31341063	distant	anatomical location	biomedical technique
+31341063	distant	gene	anatomical location
+31341063	distant	microbiome	animal
+31341063	distant	animal	biomedical technique
+31341063	distant	chemical	anatomical location
+31341063	distant	anatomical location	animal
+31341063	distant	gene	animal
+
+
+36389228	distant	microbiome	DDF
+36389228	distant	DDF	human
+36389228	distant	microbiome	anatomical location
+36389228	distant	DDF	DDF
+
+
+36750613	distant	DDF	bacteria
+36750613	distant	biomedical technique	human
+36750613	distant	microbiome	human
+36750613	distant	DDF	anatomical location
+36750613	distant	microbiome	DDF
+36750613	distant	DDF	human
+36750613	distant	bacteria	human
+36750613	distant	human	human
+
+
+34853754	distant	microbiome	DDF
+34853754	distant	DDF	human
+34853754	distant	DDF	DDF
+
+
+36877601	distant	chemical	DDF
+36877601	distant	microbiome	DDF
+36877601	distant	DDF	DDF
+36877601	distant	chemical	microbiome
+36877601	distant	dietary supplement	animal
+36877601	distant	dietary supplement	microbiome
+
+
+26590418	distant	microbiome	human
+26590418	distant	DDF	DDF
+
+
+38613114	distant	DDF	DDF
+
+
+36672595	distant	chemical	DDF
+36672595	distant	chemical	microbiome
+36672595	distant	DDF	DDF
+
+
+33669008	distant	microbiome	DDF
+33669008	distant	DDF	human
+33669008	distant	chemical	DDF
+
+
+32799901	distant	bacteria	DDF
+32799901	distant	microbiome	animal
+32799901	distant	chemical	anatomical location
+32799901	distant	DDF	animal
+32799901	distant	anatomical location	animal
+32799901	distant	microbiome	biomedical technique
+
+
+33087991	distant	microbiome	DDF
+33087991	distant	DDF	human
+
+
+
+
+38007616	distant	drug	DDF
+38007616	distant	dietary supplement	DDF
+38007616	distant	DDF	DDF
+
+
+31931033	distant	microbiome	DDF
+31931033	distant	food	animal
+31931033	distant	dietary supplement	DDF
+31931033	distant	bacteria	biomedical technique
+31931033	distant	bacteria	DDF
+31931033	distant	DDF	DDF
+31931033	distant	dietary supplement	animal
+31931033	distant	animal	biomedical technique
+31931033	distant	DDF	animal
+31931033	distant	gene	animal
+31931033	distant	dietary supplement	bacteria
+
+
+33717189	distant	microbiome	DDF
+33717189	distant	chemical	bacteria
+33717189	distant	chemical	DDF
+33717189	distant	DDF	DDF
+
+
+30611275	distant	dietary supplement	human
+
+
+37836654	distant	chemical	DDF
+37836654	distant	microbiome	human
+37836654	distant	microbiome	DDF
+37836654	distant	DDF	human
+37836654	distant	dietary supplement	DDF
+37836654	distant	DDF	DDF
+37836654	distant	microbiome	animal
+37836654	distant	DDF	animal
+
+
+26092111	distant	microbiome	DDF
+26092111	distant	bacteria	DDF
+26092111	distant	DDF	DDF
+
+
+34171417	distant	microbiome	DDF
+34171417	distant	bacteria	DDF
+
+
+33918462	distant	microbiome	DDF
+33918462	distant	microbiome	biomedical technique
+
+
+38390241	distant	chemical	DDF
+38390241	distant	chemical	microbiome
+38390241	distant	DDF	DDF
+38390241	distant	microbiome	DDF
+
+
+32534583	distant	DDF	human
+32534583	distant	DDF	DDF
+
+
+36871911	distant	DDF	human
+
+
+37927277	distant	chemical	DDF
+
+
+35055364	distant	microbiome	DDF
+35055364	distant	DDF	human
+35055364	distant	DDF	DDF
+
+
+
+
+38317780	distant	microbiome	animal
+38317780	distant	anatomical location	animal
+
+
+37218177	distant	DDF	microbiome
+37218177	distant	microbiome	human
+37218177	distant	dietary supplement	human
+37218177	distant	DDF	human
+37218177	distant	dietary supplement	DDF
+37218177	distant	dietary supplement	microbiome
+
+
+36466165	distant	microbiome	DDF
+
+
+31859119	distant	DDF	microbiome
+31859119	distant	microbiome	drug
+31859119	distant	microbiome	DDF
+31859119	distant	DDF	human
+31859119	distant	drug	microbiome
+31859119	distant	DDF	DDF
+31859119	distant	drug	DDF
+
+
+33252574	distant	microbiome	DDF
+33252574	distant	dietary supplement	microbiome
+33252574	distant	DDF	DDF
+
+
+37391847	distant	microbiome	DDF
+37391847	distant	DDF	microbiome
+37391847	distant	human	statistical technique
+37391847	distant	human	biomedical technique
+
+
+37686747	distant	dietary supplement	DDF
+37686747	distant	dietary supplement	microbiome
+37686747	distant	DDF	DDF
+
+
+34869080	distant	DDF	bacteria
+34869080	distant	DDF	microbiome
+34869080	distant	microbiome	DDF
+34869080	distant	DDF	human
+34869080	distant	human	biomedical technique
+34869080	distant	DDF	DDF
+34869080	distant	microbiome	statistical technique
+34869080	distant	microbiome	biomedical technique
+
+
+37962812	distant	DDF	microbiome
+37962812	distant	microbiome	human
+37962812	distant	DDF	human
+37962812	distant	dietary supplement	DDF
+37962812	distant	drug	microbiome
+37962812	distant	human	human
+
+
+38357211	distant	microbiome	DDF
+38357211	distant	DDF	animal
+38357211	distant	microbiome	animal
+38357211	distant	DDF	DDF
+
+
+32032668	distant	DDF	human
+32032668	distant	anatomical location	DDF
+
+
+31356838	distant	DDF	human
+31356838	distant	DDF	DDF
+
+
+38381349	distant	DDF	human
+38381349	distant	microbiome	biomedical technique
+38381349	distant	dietary supplement	human
+38381349	distant	bacteria	DDF
+
+
+
+
+38660662	distant	microbiome	DDF
+38660662	distant	bacteria	DDF
+
+
+38226944	distant	microbiome	DDF
+38226944	distant	DDF	microbiome
+38226944	distant	microbiome	human
+38226944	distant	DDF	DDF
+
+
+38106100	distant	microbiome	DDF
+38106100	distant	bacteria	DDF
+
+
+38020771	distant	microbiome	DDF
+38020771	distant	DDF	human
+38020771	distant	dietary supplement	microbiome
+38020771	distant	human	biomedical technique
+
+
+33488420	distant	microbiome	DDF
+
+
+37340511	distant	DDF	microbiome
+37340511	distant	microbiome	human
+37340511	distant	microbiome	DDF
+37340511	distant	DDF	human
+37340511	distant	dietary supplement	DDF
+37340511	distant	DDF	DDF
+
+
+30499231	distant	DDF	human
+30499231	distant	dietary supplement	DDF
+30499231	distant	dietary supplement	human
+30499231	distant	DDF	DDF
+
+
+32062351	distant	DDF	bacteria
+32062351	distant	drug	bacteria
+32062351	distant	drug	microbiome
+32062351	distant	bacteria	DDF
+
+
+30894059	distant	DDF	bacteria
+30894059	distant	DDF	microbiome
+30894059	distant	microbiome	human
+30894059	distant	microbiome	DDF
+30894059	distant	DDF	human
+30894059	distant	DDF	DDF
+30894059	distant	human	biomedical technique
+
+
+37049619	distant	microbiome	human
+37049619	distant	microbiome	DDF
+37049619	distant	DDF	human
+37049619	distant	bacteria	human
+37049619	distant	human	biomedical technique
+37049619	distant	DDF	DDF
+
+
+36650572	distant	microbiome	DDF
+36650572	distant	DDF	DDF
+
+
+38649365	distant	microbiome	human
+38649365	distant	microbiome	DDF
+38649365	distant	DDF	human
+38649365	distant	human	biomedical technique
+38649365	distant	food	microbiome
+38649365	distant	food	human
+38649365	distant	microbiome	biomedical technique
+
+
+31954994	distant	DDF	human
+31954994	distant	drug	DDF
+31954994	distant	chemical	anatomical location
+31954994	distant	DDF	DDF
+
+
+36376318	distant	microbiome	DDF
+36376318	distant	human	statistical technique
+36376318	distant	DDF	anatomical location
+36376318	distant	human	biomedical technique
+
+
+35145822	distant	microbiome	DDF
+35145822	distant	DDF	human
+35145822	distant	food	DDF
+35145822	distant	DDF	DDF
+35145822	distant	human	DDF
+
+
+31275138	distant	DDF	anatomical location
+31275138	distant	DDF	human
+31275138	distant	DDF	DDF
+31275138	distant	chemical	anatomical location
+31275138	distant	DDF	animal
+
+
+36786865	distant	drug	animal
+36786865	distant	DDF	human
+36786865	distant	DDF	DDF
+36786865	distant	drug	human
+36786865	distant	DDF	animal
+36786865	distant	drug	DDF
+
+
+34876830	distant	microbiome	DDF
+34876830	distant	dietary supplement	DDF
+34876830	distant	DDF	DDF
+
+
+30415609	distant	food	DDF
+30415609	distant	microbiome	anatomical location
+30415609	distant	DDF	DDF
+
+
+34053243	distant	microbiome	DDF
+34053243	distant	DDF	human
+34053243	distant	DDF	DDF
+
+
+37150361	distant	microbiome	DDF
+
+
+34474339	distant	chemical	DDF
+34474339	distant	DDF	microbiome
+34474339	distant	microbiome	DDF
+34474339	distant	DDF	human
+34474339	distant	DDF	DDF
+34474339	distant	microbiome	animal
+34474339	distant	DDF	animal
+
+
+34238926	distant	microbiome	DDF
+34238926	distant	DDF	human
+34238926	distant	DDF	bacteria
+
+
+35111696	distant	microbiome	DDF
+35111696	distant	chemical	microbiome
+35111696	distant	chemical	DDF
+35111696	distant	DDF	DDF
+
+
+36803912	distant	DDF	DDF
+
+
+36969812	distant	chemical	animal
+36969812	distant	chemical	chemical
+36969812	distant	microbiome	animal
+36969812	distant	chemical	microbiome
+36969812	distant	chemical	anatomical location
+36969812	distant	food	microbiome
+
+
+30718848	distant	microbiome	DDF
+30718848	distant	DDF	bacteria
+30718848	distant	drug	bacteria
+
+
+33171595	distant	microbiome	DDF
+33171595	distant	chemical	microbiome
+33171595	distant	dietary supplement	human
+33171595	distant	microbiome	biomedical technique
+
+
+
+
+
+
+30525951	distant	DDF	human
+30525951	distant	dietary supplement	human
+30525951	distant	bacteria	DDF
+
+
+28680792	distant	DDF	human
+28680792	distant	DDF	microbiome
+28680792	distant	microbiome	biomedical technique
+
+
+36278360	distant	chemical	DDF
+36278360	distant	DDF	microbiome
+36278360	distant	microbiome	human
+36278360	distant	microbiome	DDF
+36278360	distant	DDF	human
+
+
+37069399	distant	DDF	bacteria
+37069399	distant	microbiome	human
+37069399	distant	microbiome	DDF
+37069399	distant	DDF	human
+37069399	distant	DDF	DDF
+37069399	distant	microbiome	animal
+37069399	distant	human	biomedical technique
+37069399	distant	chemical	microbiome
+37069399	distant	microbiome	biomedical technique
+
+
+38405047	distant	microbiome	DDF
+38405047	distant	DDF	human
+38405047	distant	microbiome	human
+38405047	distant	DDF	DDF
+
+
+35110993	distant	microbiome	DDF
+35110993	distant	DDF	human
+35110993	distant	dietary supplement	DDF
+35110993	distant	DDF	DDF
+35110993	distant	dietary supplement	microbiome
+
+
+33521857	distant	microbiome	animal
+33521857	distant	DDF	human
+33521857	distant	microbiome	DDF
+
+
+33487078	distant	microbiome	DDF
+33487078	distant	food	DDF
+33487078	distant	chemical	DDF
+
+
+31124390	distant	biomedical technique	DDF
+31124390	distant	microbiome	DDF
+31124390	distant	drug	microbiome
+31124390	distant	microbiome	animal
+31124390	distant	DDF	animal
+
+
+36693863	distant	microbiome	DDF
+36693863	distant	microbiome	biomedical technique
+
+
+31390549	distant	microbiome	DDF
+31390549	distant	drug	DDF
+
+
+36549572	distant	microbiome	DDF
+36549572	distant	DDF	human
+
+
+37981054	distant	microbiome	DDF
+37981054	distant	DDF	DDF
+
+
+37498481	distant	microbiome	DDF
+
+
+25634609	distant	microbiome	DDF
+
+
+37690779	distant	microbiome	human
+37690779	distant	drug	bacteria
+37690779	distant	dietary supplement	DDF
+37690779	distant	dietary supplement	bacteria
+37690779	distant	dietary supplement	microbiome
+
+
+29407287	distant	microbiome	DDF
+29407287	distant	DDF	DDF
+
+
+28368029	distant	bacteria	microbiome
+28368029	distant	microbiome	DDF
+28368029	distant	DDF	human
+28368029	distant	bacteria	DDF
+28368029	distant	microbiome	animal
+28368029	distant	animal	biomedical technique
+28368029	distant	bacteria	animal
+28368029	distant	DDF	animal
+
+
+37852343	distant	chemical	DDF
+37852343	distant	DDF	anatomical location
+37852343	distant	DDF	human
+37852343	distant	DDF	DDF
+37852343	distant	chemical	anatomical location
+37852343	distant	drug	DDF
+
+
+36583066	distant	drug	microbiome
+36583066	distant	gene	anatomical location
+
+
+33657381	distant	chemical	DDF
+33657381	distant	biomedical technique	human
+33657381	distant	microbiome	human
+33657381	distant	DDF	human
+33657381	distant	DDF	DDF
+
+
+34348619	distant	DDF	human
+34348619	distant	DDF	DDF
+
+
+36601680	distant	dietary supplement	DDF
+36601680	distant	dietary supplement	bacteria
+36601680	distant	DDF	DDF
+
+
+26242295	distant	biomedical technique	human
+26242295	distant	dietary supplement	human
+26242295	distant	DDF	human
+26242295	distant	DDF	DDF
+26242295	distant	chemical	human
+
+
+35645785	distant	microbiome	human
+35645785	distant	microbiome	DDF
+35645785	distant	DDF	human
+35645785	distant	human	biomedical technique
+35645785	distant	microbiome	biomedical technique
+
+
+30794085	distant	microbiome	DDF
+30794085	distant	DDF	human
+30794085	distant	microbiome	human
+30794085	distant	human	bacteria
+
+
+31722195	distant	chemical	DDF
+31722195	distant	DDF	human
+31722195	distant	human	human
+
+
+38351227	distant	microbiome	DDF
+38351227	distant	bacteria	DDF
+38351227	distant	DDF	DDF
+
+
+37771782	distant	chemical	DDF
+37771782	distant	anatomical location	biomedical technique
+37771782	distant	microbiome	DDF
+37771782	distant	dietary supplement	DDF
+37771782	distant	DDF	DDF
+37771782	distant	dietary supplement	microbiome
+
+
+37513676	distant	chemical	DDF
+37513676	distant	microbiome	DDF
+37513676	distant	food	DDF
+37513676	distant	DDF	human
+37513676	distant	dietary supplement	DDF
+37513676	distant	DDF	DDF
+37513676	distant	chemical	microbiome
+37513676	distant	food	microbiome
+37513676	distant	dietary supplement	bacteria
+37513676	distant	dietary supplement	microbiome
+
+
+37759312	distant	microbiome	DDF
+37759312	distant	DDF	human
+37759312	distant	microbiome	human
+37759312	distant	bacteria	DDF
+
+
+38582855	distant	microbiome	DDF
+38582855	distant	DDF	human
+
+
+38421082	distant	microbiome	DDF
+38421082	distant	bacteria	anatomical location
+38421082	distant	anatomical location	DDF
+38421082	distant	human	biomedical technique
+
+
+33389842	distant	DDF	human
+33389842	distant	DDF	anatomical location
+33389842	distant	DDF	DDF
+
+
+37233680	distant	dietary supplement	human
+37233680	distant	microbiome	DDF
+37233680	distant	DDF	human
+37233680	distant	dietary supplement	DDF
+37233680	distant	human	biomedical technique
+37233680	distant	DDF	DDF
+
+
+36209779	distant	microbiome	DDF
+36209779	distant	DDF	microbiome
+36209779	distant	DDF	human
+36209779	distant	human	microbiome
+
+
+37925207	distant	microbiome	DDF
+
+
+35572407	distant	microbiome	DDF
+35572407	distant	chemical	DDF
+35572407	distant	microbiome	anatomical location
+35572407	distant	DDF	DDF
+
+
+32899236	distant	microbiome	DDF
+32899236	distant	DDF	human
+32899236	distant	drug	DDF
+32899236	distant	dietary supplement	bacteria
+
+
+31998605	distant	chemical	microbiome
+
+
+31215725	distant	DDF	human
+31215725	distant	drug	DDF
+31215725	distant	drug	human
+31215725	distant	DDF	DDF
+
+
+36406749	distant	DDF	anatomical location
+36406749	distant	microbiome	DDF
+36406749	distant	DDF	human
+36406749	distant	DDF	DDF
+36406749	distant	microbiome	dietary supplement
+
+
+36986226	distant	microbiome	DDF
+36986226	distant	DDF	DDF
+
+
+
+
+34518605	distant	microbiome	human
+34518605	distant	microbiome	DDF
+34518605	distant	DDF	human
+34518605	distant	human	biomedical technique
+34518605	distant	drug	human
+34518605	distant	microbiome	anatomical location
+34518605	distant	microbiome	biomedical technique
+
+
+38694913	distant	chemical	DDF
+38694913	distant	chemical	bacteria
+38694913	distant	bacteria	biomedical technique
+38694913	distant	bacteria	DDF
+38694913	distant	DDF	DDF
+
+
+32130662	distant	microbiome	DDF
+32130662	distant	DDF	DDF
+
+
+36516898	distant	microbiome	drug
+36516898	distant	microbiome	DDF
+36516898	distant	DDF	human
+36516898	distant	DDF	DDF
+36516898	distant	drug	DDF
+
+
+37808915	distant	DDF	bacteria
+37808915	distant	microbiome	human
+37808915	distant	microbiome	DDF
+37808915	distant	DDF	human
+37808915	distant	human	bacteria
+37808915	distant	human	biomedical technique
+
+
+34488774	distant	chemical	DDF
+34488774	distant	chemical	human
+34488774	distant	chemical	anatomical location
+
+
+36353491	distant	bacteria	DDF
+36353491	distant	microbiome	anatomical location
+36353491	distant	DDF	DDF
+
+
+31327219	distant	DDF	human
+31327219	distant	human	biomedical technique
+31327219	distant	DDF	anatomical location
+31327219	distant	DDF	DDF
+
+
+38203294	distant	chemical	DDF
+38203294	distant	food	DDF
+38203294	distant	dietary supplement	DDF
+38203294	distant	DDF	DDF
+38203294	distant	chemical	anatomical location
+
+
+35996352	distant	DDF	human
+35996352	distant	dietary supplement	DDF
+35996352	distant	dietary supplement	chemical
+35996352	distant	dietary supplement	human
+
+
+33005148	distant	microbiome	DDF
+33005148	distant	microbiome	animal
+33005148	distant	animal	biomedical technique
+33005148	distant	DDF	animal
+33005148	distant	drug	DDF
+
+
+37232729	distant	microbiome	DDF
+37232729	distant	dietary supplement	human
+
+
+33035575	distant	DDF	human
+33035575	distant	drug	DDF
+33035575	distant	drug	microbiome
+
+
+38170072	distant	microbiome	DDF
+
+
+33287416	distant	chemical	DDF
+33287416	distant	microbiome	DDF
+33287416	distant	DDF	human
+33287416	distant	food	DDF
+33287416	distant	dietary supplement	DDF
+33287416	distant	chemical	microbiome
+
+
+30890906	distant	gene	microbiome
+30890906	distant	microbiome	DDF
+30890906	distant	DDF	human
+30890906	distant	DDF	DDF
+30890906	distant	gene	DDF
+
+
+32504503	distant	microbiome	DDF
+32504503	distant	DDF	DDF
+
+
+37867494	distant	microbiome	DDF
+
+
+35892042	distant	microbiome	human
+
+
+35345829	distant	chemical	DDF
+35345829	distant	chemical	animal
+35345829	distant	microbiome	DDF
+35345829	distant	DDF	human
+35345829	distant	dietary supplement	DDF
+35345829	distant	DDF	DDF
+35345829	distant	dietary supplement	chemical
+35345829	distant	DDF	animal
+35345829	distant	dietary supplement	microbiome
+35345829	distant	microbiome	biomedical technique
+
+
+35582476	distant	microbiome	DDF
+
+
+36231182	distant	microbiome	DDF
+36231182	distant	DDF	human
+36231182	distant	DDF	DDF
+
+
+
+
+35966709	distant	microbiome	DDF
+35966709	distant	DDF	human
+35966709	distant	microbiome	anatomical location
+35966709	distant	DDF	DDF
+
+
+34654024	distant	microbiome	human
+34654024	distant	microbiome	DDF
+34654024	distant	DDF	human
+34654024	distant	statistical technique	DDF
+34654024	distant	DDF	chemical
+
+
+
+
+35456813	distant	microbiome	DDF
+35456813	distant	DDF	human
+35456813	distant	microbiome	human
+
+
+36139496	distant	anatomical location	biomedical technique
+36139496	distant	dietary supplement	bacteria
+36139496	distant	dietary supplement	human
+36139496	distant	human	biomedical technique
+
+
+35050172	distant	microbiome	human
+35050172	distant	chemical	anatomical location
+35050172	distant	DDF	DDF
+
+
+36570854	distant	microbiome	DDF
+36570854	distant	DDF	human
+36570854	distant	drug	DDF
+
+
+37118092	distant	chemical	DDF
+37118092	distant	chemical	animal
+37118092	distant	chemical	chemical
+37118092	distant	animal	animal
+37118092	distant	microbiome	animal
+37118092	distant	DDF	animal
+
+
+36440396	distant	microbiome	DDF
+
+
+36579574	distant	DDF	bacteria
+36579574	distant	microbiome	human
+36579574	distant	microbiome	DDF
+36579574	distant	DDF	human
+36579574	distant	bacteria	human
+36579574	distant	microbiome	biomedical technique
+
+
+36079050	distant	chemical	DDF
+36079050	distant	DDF	human
+
+
+36056826	distant	microbiome	DDF
+36056826	distant	DDF	DDF
+
+
+35466109	distant	DDF	microbiome
+35466109	distant	chemical	animal
+35466109	distant	DDF	anatomical location
+35466109	distant	chemical	anatomical location
+35466109	distant	anatomical location	animal
+35466109	distant	chemical	gene
+
+
+36356994	distant	DDF	microbiome
+36356994	distant	microbiome	human
+36356994	distant	dietary supplement	human
+36356994	distant	DDF	human
+36356994	distant	dietary supplement	microbiome
+
+
+36437993	distant	dietary supplement	human
+36437993	distant	human	biomedical technique
+
+
+
+
+35918353	distant	microbiome	chemical
+35918353	distant	animal	biomedical technique
+
+
+35790976	distant	chemical	DDF
+35790976	distant	microbiome	human
+35790976	distant	DDF	human
+35790976	distant	dietary supplement	DDF
+35790976	distant	DDF	DDF
+35790976	distant	human	biomedical technique
+35790976	distant	chemical	microbiome
+35790976	distant	chemical	human
+35790976	distant	drug	human
+35790976	distant	dietary supplement	microbiome
+
+
+36364950	distant	chemical	DDF
+36364950	distant	DDF	human
+36364950	distant	food	chemical
+36364950	distant	human	biomedical technique
+36364950	distant	dietary supplement	chemical
+
+
+39201866	distant	DDF	microbiome
+39201866	distant	microbiome	human
+39201866	distant	microbiome	DDF
+39201866	distant	DDF	human
+39201866	distant	DDF	DDF
+
+
+39461950	distant	microbiome	DDF
+39461950	distant	DDF	bacteria
+39461950	distant	bacteria	DDF
+
+
+39200093	distant	chemical	DDF
+39200093	distant	dietary supplement	human
+39200093	distant	DDF	human
+39200093	distant	dietary supplement	DDF
+39200093	distant	DDF	DDF
+39200093	distant	chemical	microbiome
+39200093	distant	human	DDF
+
+
+39293692	distant	microbiome	animal
+39293692	distant	drug	microbiome
+39293692	distant	DDF	animal
+
+
+39134294	distant	chemical	DDF
+39134294	distant	DDF	human
+39134294	distant	chemical	bacteria
+39134294	distant	DDF	DDF
+39134294	distant	microbiome	animal
+39134294	distant	chemical	anatomical location
+39134294	distant	DDF	animal
+39134294	distant	drug	DDF
+
+
+39316970	distant	microbiome	DDF
+39316970	distant	dietary supplement	DDF
+39316970	distant	bacteria	DDF
+39316970	distant	DDF	DDF
+
+
+39422256	distant	human	biomedical technique
+
+
+31836471	distant	chemical	DDF
+31836471	distant	microbiome	DDF
+31836471	distant	chemical	gene
+31836471	distant	DDF	DDF
+
+
+34500451	distant	chemical	DDF
+34500451	distant	DDF	anatomical location
+34500451	distant	microbiome	DDF
+34500451	distant	DDF	human
+34500451	distant	bacteria	DDF
+34500451	distant	chemical	anatomical location
+
+
+34450312	distant	microbiome	DDF
+34450312	distant	microbiome	anatomical location
+
+
+34784980	distant	DDF	DDF
+34784980	distant	animal	biomedical technique
+34784980	distant	DDF	animal
+34784980	distant	drug	DDF
+34784980	distant	microbiome	anatomical location
+
+
+34942539	distant	microbiome	DDF
+34942539	distant	dietary supplement	bacteria
+34942539	distant	microbiome	anatomical location
+34942539	distant	DDF	DDF
+
+
+33881598	distant	chemical	DDF
+33881598	distant	biomedical technique	DDF
+33881598	distant	microbiome	DDF
+33881598	distant	dietary supplement	DDF
+33881598	distant	DDF	DDF
+33881598	distant	microbiome	anatomical location
+
+
+33905953	distant	microbiome	DDF
+33905953	distant	DDF	microbiome
+33905953	distant	chemical	DDF
+33905953	distant	DDF	DDF
+
+
+33557896	distant	microbiome	DDF
+33557896	distant	microbiome	human
+33557896	distant	chemical	DDF
+33557896	distant	anatomical location	DDF
+
+
+34707612	distant	microbiome	DDF
+34707612	distant	DDF	human
+34707612	distant	microbiome	biomedical technique
+34707612	distant	DDF	DDF
+
+
+33856024	distant	chemical	DDF
+33856024	distant	microbiome	human
+33856024	distant	microbiome	DDF
+33856024	distant	DDF	human
+33856024	distant	DDF	DDF
+
+
+33623004	distant	chemical	bacteria
+33623004	distant	dietary supplement	DDF
+33623004	distant	bacteria	anatomical location
+33623004	distant	dietary supplement	chemical
+33623004	distant	chemical	anatomical location
+33623004	distant	bacteria	animal
+33623004	distant	dietary supplement	microbiome
+
+
+34695538	distant	bacteria	microbiome
+34695538	distant	anatomical location	biomedical technique
+34695538	distant	microbiome	DDF
+34695538	distant	DDF	human
+34695538	distant	anatomical location	human
+34695538	distant	anatomical location	DDF
+34695538	distant	DDF	DDF
+34695538	distant	human	biomedical technique
+
+
+34492236	distant	dietary supplement	DDF
+34492236	distant	dietary supplement	microbiome
+
+
+33649989	distant	microbiome	DDF
+33649989	distant	DDF	microbiome
+33649989	distant	DDF	DDF
+
+
+34536490	distant	chemical	DDF
+34536490	distant	DDF	DDF
+
+
+34589401	distant	chemical	DDF
+34589401	distant	drug	animal
+34589401	distant	DDF	DDF
+34589401	distant	chemical	microbiome
+34589401	distant	DDF	animal
+34589401	distant	drug	DDF
+34589401	distant	microbiome	anatomical location
+
+
+34737076	distant	chemical	DDF
+34737076	distant	microbiome	human
+34737076	distant	DDF	anatomical location
+34737076	distant	microbiome	DDF
+34737076	distant	DDF	human
+34737076	distant	anatomical location	DDF
+
+
+34512244	distant	chemical	DDF
+34512244	distant	DDF	anatomical location
+34512244	distant	microbiome	DDF
+34512244	distant	DDF	human
+34512244	distant	DDF	DDF
+
+
+34094829	distant	drug	animal
+34094829	distant	drug	microbiome
+34094829	distant	DDF	drug
+34094829	distant	chemical	microbiome
+34094829	distant	drug	DDF
+
+
+34977556	distant	DDF	bacteria
+34977556	distant	DDF	microbiome
+34977556	distant	microbiome	human
+34977556	distant	DDF	human
+34977556	distant	dietary supplement	microbiome
+
+
+33804226	distant	DDF	human
+33804226	distant	microbiome	human
+33804226	distant	DDF	DDF
+
+
+33857347	distant	chemical	DDF
+33857347	distant	chemical	chemical
+
+
+33746867	distant	microbiome	human
+33746867	distant	microbiome	DDF
+33746867	distant	DDF	human
+33746867	distant	drug	microbiome
+33746867	distant	bacteria	DDF
+33746867	distant	human	biomedical technique
+33746867	distant	drug	human
+
+
+34934429	distant	chemical	DDF
+34934429	distant	DDF	microbiome
+34934429	distant	microbiome	human
+34934429	distant	microbiome	DDF
+34934429	distant	DDF	human
+34934429	distant	DDF	DDF
+34934429	distant	chemical	anatomical location
+34934429	distant	DDF	animal
+34934429	distant	anatomical location	animal
+
+
+33763767	distant	microbiome	DDF
+33763767	distant	microbiome	human
+33763767	distant	DDF	DDF
+
+
+33337387	distant	microbiome	DDF
+33337387	distant	DDF	human
+
+
+34219519	distant	microbiome	DDF
+34219519	distant	DDF	DDF
+
+
+34032644	distant	bacteria	anatomical location
+
+
+33510784	distant	microbiome	DDF
+33510784	distant	microbiome	human
+33510784	distant	microbiome	microbiome
+33510784	distant	DDF	DDF
+
+
+34360787	distant	chemical	DDF
+34360787	distant	DDF	DDF
+
+
+34381040	distant	microbiome	DDF
+34381040	distant	DDF	DDF
+
+
+34357086	distant	microbiome	DDF
+34357086	distant	DDF	DDF
+
+
+34495955	distant	human	biomedical technique
+34495955	distant	microbiome	human
+34495955	distant	human	statistical technique
+34495955	distant	DDF	DDF
+
+
+34974121	distant	chemical	animal
+34974121	distant	drug	animal
+34974121	distant	microbiome	DDF
+34974121	distant	drug	microbiome
+34974121	distant	DDF	DDF
+34974121	distant	microbiome	animal
+34974121	distant	DDF	animal
+34974121	distant	drug	DDF
+
+
+34893951	distant	microbiome	DDF
+34893951	distant	bacteria	DDF
+34893951	distant	DDF	DDF
+
+
+33985520	distant	DDF	human
+33985520	distant	human	biomedical technique
+33985520	distant	DDF	DDF
+
+
+34053222	distant	microbiome	DDF
+34053222	distant	chemical	chemical
+34053222	distant	chemical	DDF
+
+
+34276644	distant	chemical	DDF
+34276644	distant	microbiome	DDF
+34276644	distant	DDF	human
+34276644	distant	human	biomedical technique
+34276644	distant	DDF	DDF
+
+
+33912026	distant	anatomical location	animal
+33912026	distant	DDF	animal
+
+
+36018501	distant	microbiome	DDF
+36018501	distant	DDF	human
+36018501	distant	DDF	DDF
+36018501	distant	gene	DDF
+36018501	distant	food	anatomical location
+
+
+35890040	distant	bacteria	microbiome
+35890040	distant	microbiome	biomedical technique
+35890040	distant	microbiome	DDF
+
+
+35965446	distant	chemical	DDF
+35965446	distant	DDF	microbiome
+35965446	distant	microbiome	human
+35965446	distant	microbiome	DDF
+35965446	distant	DDF	human
+
+
+35795315	distant	microbiome	DDF
+
+
+36243356	distant	microbiome	human
+36243356	distant	microbiome	DDF
+36243356	distant	DDF	human
+36243356	distant	human	biomedical technique
+36243356	distant	DDF	DDF
+36243356	distant	microbiome	biomedical technique
+
+
+36257595	distant	microbiome	DDF
+36257595	distant	DDF	DDF
+
+
+35807841	distant	chemical	DDF
+35807841	distant	microbiome	human
+35807841	distant	DDF	DDF
+
+
+36034146	distant	microbiome	DDF
+36034146	distant	chemical	microbiome
+36034146	distant	chemical	DDF
+36034146	distant	DDF	DDF
+
+
+37693045	distant	chemical	DDF
+37693045	distant	bacteria	DDF
+37693045	distant	DDF	DDF
+37693045	distant	chemical	microbiome
+37693045	distant	DDF	animal
+
+
+36182642	distant	microbiome	human
+36182642	distant	DDF	human
+36182642	distant	anatomical location	DDF
+36182642	distant	human	biomedical technique
+36182642	distant	DDF	DDF
+
+
+36140158	distant	chemical	DDF
+36140158	distant	bacteria	DDF
+36140158	distant	anatomical location	DDF
+
+
+36458227	distant	microbiome	DDF
+36458227	distant	DDF	DDF
+
+
+36365188	distant	chemical	DDF
+36365188	distant	drug	chemical
+36365188	distant	bacteria	DDF
+36365188	distant	DDF	DDF
+36365188	distant	bacteria	chemical
+36365188	distant	drug	DDF
+
+
+35889124	distant	chemical	DDF
+35889124	distant	DDF	anatomical location
+35889124	distant	microbiome	DDF
+35889124	distant	DDF	human
+35889124	distant	anatomical location	DDF
+35889124	distant	DDF	DDF
+
+
+36013962	distant	DDF	human
+36013962	distant	dietary supplement	DDF
+36013962	distant	DDF	anatomical location
+36013962	distant	DDF	DDF
+
+
+36619150	distant	chemical	DDF
+36619150	distant	chemical	bacteria
+36619150	distant	DDF	DDF
+
+
+36355147	distant	chemical	DDF
+36355147	distant	DDF	microbiome
+36355147	distant	microbiome	DDF
+36355147	distant	DDF	DDF
+36355147	distant	microbiome	anatomical location
+
+
+35895243	distant	DDF	DDF
+35895243	distant	microbiome	animal
+35895243	distant	animal	biomedical technique
+35895243	distant	DDF	animal
+35895243	distant	microbiome	biomedical technique
+
+
+36361826	distant	microbiome	DDF
+36361826	distant	DDF	human
+36361826	distant	chemical	DDF
+36361826	distant	DDF	DDF
+
+
+36439235	distant	chemical	animal
+36439235	distant	dietary supplement	DDF
+36439235	distant	bacteria	DDF
+
+
+36504794	distant	dietary supplement	DDF
+
+
+36570528	distant	microbiome	DDF
+36570528	distant	DDF	human
+36570528	distant	DDF	anatomical location
+36570528	distant	DDF	DDF
+
+
+36358513	distant	DDF	DDF
+
+
+38098067	distant	microbiome	DDF
+38098067	distant	microbiome	drug
+38098067	distant	bacteria	DDF
+38098067	distant	DDF	DDF
+
+
+37404311	distant	chemical	DDF
+
+
+37892440	distant	bacteria	microbiome
+37892440	distant	DDF	bacteria
+37892440	distant	microbiome	human
+37892440	distant	microbiome	DDF
+37892440	distant	DDF	human
+
+
+38088063	distant	microbiome	DDF
+38088063	distant	dietary supplement	DDF
+38088063	distant	anatomical location	DDF
+38088063	distant	DDF	DDF
+
+
+37600019	distant	microbiome	DDF
+37600019	distant	DDF	DDF
+
+
+37913731	distant	chemical	DDF
+37913731	distant	DDF	anatomical location
+37913731	distant	DDF	DDF
+
+
+37823531	distant	microbiome	DDF
+37823531	distant	gene	microbiome
+37823531	distant	chemical	DDF
+37823531	distant	DDF	DDF
+
+
+37967548	distant	microbiome	DDF
+37967548	distant	DDF	human
+37967548	distant	dietary supplement	DDF
+37967548	distant	DDF	DDF
+
+
+37388445	distant	dietary supplement	DDF
+37388445	distant	microbiome	animal
+37388445	distant	dietary supplement	animal
+37388445	distant	DDF	animal
+37388445	distant	dietary supplement	microbiome
+
+
+37423520	distant	anatomical location	biomedical technique
+37423520	distant	microbiome	DDF
+37423520	distant	DDF	human
+37423520	distant	dietary supplement	DDF
+37423520	distant	DDF	DDF
+37423520	distant	animal	biomedical technique
+37423520	distant	microbiome	statistical technique
+37423520	distant	microbiome	biomedical technique
+
+
+37819112	distant	chemical	DDF
+37819112	distant	dietary supplement	DDF
+37819112	distant	DDF	DDF
+37819112	distant	microbiome	animal
+37819112	distant	DDF	animal
+
+
+37736791	distant	chemical	DDF
+37736791	distant	DDF	microbiome
+37736791	distant	microbiome	human
+37736791	distant	DDF	anatomical location
+37736791	distant	microbiome	DDF
+37736791	distant	DDF	human
+37736791	distant	bacteria	human
+37736791	distant	chemical	microbiome
+37736791	distant	chemical	anatomical location
+
+
+37620311	distant	microbiome	DDF
+37620311	distant	DDF	bacteria
+37620311	distant	chemical	DDF
+37620311	distant	DDF	DDF
+
+
+37807941	distant	microbiome	DDF
+37807941	distant	chemical	DDF
+37807941	distant	DDF	DDF
+
+
+37332996	distant	drug	DDF
+
+
+37502423	distant	DDF	bacteria
+37502423	distant	DDF	microbiome
+37502423	distant	microbiome	human
+37502423	distant	microbiome	DDF
+37502423	distant	DDF	human
+37502423	distant	human	biomedical technique
+37502423	distant	microbiome	biomedical technique
+
+
+38237261	distant	DDF	bacteria
+38237261	distant	chemical	DDF
+38237261	distant	chemical	bacteria
+38237261	distant	dietary supplement	DDF
+38237261	distant	DDF	DDF
+38237261	distant	microbiome	animal
+38237261	distant	DDF	animal
+38237261	distant	dietary supplement	microbiome
+
+
+38022117	distant	DDF	human
+38022117	distant	bacteria	anatomical location
+38022117	distant	anatomical location	DDF
+38022117	distant	DDF	DDF
+
+
+37200942	distant	DDF	anatomical location
+37200942	distant	food	DDF
+37200942	distant	dietary supplement	DDF
+37200942	distant	microbiome	animal
+37200942	distant	DDF	animal
+37200942	distant	food	microbiome
+
+
+37323141	distant	microbiome	DDF
+37323141	distant	DDF	DDF
+37323141	distant	chemical	microbiome
+37323141	distant	chemical	anatomical location
+37323141	distant	microbiome	anatomical location
+
+
+36692876	distant	chemical	DDF
+36692876	distant	chemical	chemical
+36692876	distant	dietary supplement	DDF
+
+
+38127816	distant	DDF	anatomical location
+38127816	distant	DDF	DDF
+
+
+37334756	distant	chemical	DDF
+37334756	distant	microbiome	DDF
+37334756	distant	microbiome	animal
+37334756	distant	gene	DDF
+37334756	distant	DDF	animal
+
+
+37049578	distant	bacteria	microbiome
+37049578	distant	chemical	DDF
+37049578	distant	DDF	bacteria
+37049578	distant	DDF	anatomical location
+37049578	distant	microbiome	DDF
+37049578	distant	bacteria	DDF
+37049578	distant	chemical	microbiome
+37049578	distant	bacteria	chemical
+37049578	distant	dietary supplement	chemical
+37049578	distant	bacteria	animal
+37049578	distant	DDF	animal
+37049578	distant	anatomical location	animal
+37049578	distant	bacteria	bacteria
+
+
+36761177	distant	chemical	DDF
+36761177	distant	anatomical location	biomedical technique
+36761177	distant	microbiome	DDF
+36761177	distant	dietary supplement	DDF
+36761177	distant	DDF	DDF
+36761177	distant	microbiome	animal
+36761177	distant	DDF	animal
+
+
+37460569	distant	chemical	DDF
+37460569	distant	microbiome	DDF
+37460569	distant	DDF	human
+37460569	distant	human	biomedical technique
+37460569	distant	microbiome	biomedical technique
+
+
+37754772	distant	microbiome	animal
+37754772	distant	DDF	human
+37754772	distant	microbiome	DDF
+37754772	distant	DDF	DDF
+
+
+37863655	distant	microbiome	DDF
+37863655	distant	DDF	microbiome
+
+
+35830286	distant	microbiome	DDF
+35830286	distant	microbiome	human
+35830286	distant	DDF	DDF
+
+
+36839287	distant	chemical	DDF
+36839287	distant	chemical	animal
+36839287	distant	microbiome	DDF
+36839287	distant	DDF	DDF
+36839287	distant	chemical	microbiome
+36839287	distant	DDF	animal
+
+
+37418977	distant	chemical	DDF
+37418977	distant	chemical	animal
+37418977	distant	microbiome	DDF
+37418977	distant	dietary supplement	DDF
+37418977	distant	drug	microbiome
+37418977	distant	microbiome	animal
+
+
+36901907	distant	DDF	anatomical location
+36901907	distant	microbiome	DDF
+36901907	distant	gene	anatomical location
+36901907	distant	DDF	DDF
+36901907	distant	gene	DDF
+36901907	distant	chemical	anatomical location
+
+
+37470081	distant	bacteria	microbiome
+37470081	distant	microbiome	human
+37470081	distant	dietary supplement	human
+37470081	distant	microbiome	DDF
+37470081	distant	DDF	human
+37470081	distant	dietary supplement	DDF
+37470081	distant	bacteria	DDF
+37470081	distant	DDF	DDF
+37470081	distant	drug	human
+37470081	distant	dietary supplement	microbiome
+
+
+38098666	distant	drug	bacteria
+
+
+37787835	distant	microbiome	DDF
+
+
+37147392	distant	chemical	DDF
+37147392	distant	DDF	anatomical location
+37147392	distant	microbiome	DDF
+37147392	distant	DDF	human
+37147392	distant	DDF	DDF
+37147392	distant	chemical	anatomical location
+37147392	distant	DDF	chemical
+
+
+36719617	distant	microbiome	human
+36719617	distant	microbiome	DDF
+36719617	distant	DDF	human
+36719617	distant	bacteria	human
+36719617	distant	human	biomedical technique
+
+
+37047769	distant	DDF	anatomical location
+37047769	distant	gene	anatomical location
+37047769	distant	bacteria	DDF
+37047769	distant	DDF	DDF
+37047769	distant	anatomical location	animal
+37047769	distant	DDF	animal
+37047769	distant	gene	animal
+
+
+37897083	distant	chemical	DDF
+37897083	distant	microbiome	DDF
+37897083	distant	DDF	DDF
+37897083	distant	chemical	human
+37897083	distant	food	microbiome
+37897083	distant	microbiome	anatomical location
+
+
+37719758	distant	microbiome	DDF
+37719758	distant	drug	DDF
+37719758	distant	DDF	DDF
+
+
+37150399	distant	DDF	bacteria
+37150399	distant	microbiome	DDF
+37150399	distant	DDF	human
+37150399	distant	bacteria	human
+37150399	distant	bacteria	DDF
+37150399	distant	human	biomedical technique
+37150399	distant	DDF	DDF
+
+
+37508017	distant	chemical	DDF
+37508017	distant	DDF	human
+37508017	distant	chemical	chemical
+37508017	distant	DDF	DDF
+
+
+38115597	distant	chemical	DDF
+38115597	distant	chemical	animal
+38115597	distant	chemical	anatomical location
+38115597	distant	microbiome	DDF
+
+
+38287957	distant	microbiome	DDF
+
+
+37191418	distant	microbiome	human
+37191418	distant	microbiome	DDF
+37191418	distant	DDF	human
+37191418	distant	DDF	DDF
+37191418	distant	microbiome	anatomical location
+
+
+37782386	distant	chemical	animal
+37782386	distant	DDF	DDF
+37782386	distant	microbiome	animal
+37782386	distant	chemical	microbiome
+37782386	distant	drug	DDF
+37782386	distant	microbiome	biomedical technique
+
+
+36993742	distant	chemical	DDF
+36993742	distant	bacteria	human
+36993742	distant	DDF	human
+36993742	distant	microbiome	DDF
+36993742	distant	chemical	human
+
+
+38141735	distant	microbiome	DDF
+38141735	distant	chemical	DDF
+38141735	distant	DDF	anatomical location
+
+
+37978405	distant	DDF	DDF
+37978405	distant	animal	biomedical technique
+37978405	distant	bacteria	DDF
+37978405	distant	DDF	animal
+
+
+37850544	distant	DDF	microbiome
+37850544	distant	microbiome	human
+37850544	distant	dietary supplement	human
+37850544	distant	microbiome	DDF
+37850544	distant	dietary supplement	DDF
+37850544	distant	DDF	DDF
+
+
+37375632	distant	microbiome	human
+37375632	distant	microbiome	DDF
+37375632	distant	food	DDF
+37375632	distant	dietary supplement	DDF
+37375632	distant	bacteria	DDF
+37375632	distant	DDF	DDF
+37375632	distant	food	microbiome
+37375632	distant	dietary supplement	microbiome
+
+
+37674043	distant	chemical	DDF
+37674043	distant	drug	animal
+37674043	distant	DDF	anatomical location
+37674043	distant	microbiome	DDF
+37674043	distant	DDF	DDF
+37674043	distant	microbiome	animal
+37674043	distant	animal	biomedical technique
+37674043	distant	anatomical location	animal
+37674043	distant	DDF	animal
+37674043	distant	drug	DDF
+37674043	distant	microbiome	biomedical technique
+
+
+37404573	distant	DDF	DDF
+
+
+37034781	distant	microbiome	DDF
+37034781	distant	dietary supplement	DDF
+37034781	distant	dietary supplement	microbiome
+37034781	distant	DDF	DDF
+
+
+37561259	distant	microbiome	DDF
+37561259	distant	DDF	human
+
+
+36805171	distant	microbiome	DDF
+36805171	distant	dietary supplement	DDF
+36805171	distant	DDF	DDF
+
+
+37647997	distant	DDF	human
+37647997	distant	DDF	DDF
+
+
+37171224	distant	dietary supplement	DDF
+
+
+37630539	distant	chemical	DDF
+37630539	distant	microbiome	human
+37630539	distant	DDF	anatomical location
+37630539	distant	DDF	human
+37630539	distant	DDF	DDF
+37630539	distant	dietary supplement	microbiome
+37630539	distant	microbiome	biomedical technique
+
+
+37267589	distant	food	DDF
+37267589	distant	food	animal
+37267589	distant	chemical	animal
+37267589	distant	microbiome	biomedical technique
+
+
+36676436	distant	microbiome	DDF
+36676436	distant	chemical	microbiome
+36676436	distant	chemical	DDF
+36676436	distant	DDF	DDF
+
+
+37458987	distant	chemical	DDF
+37458987	distant	DDF	human
+37458987	distant	drug	DDF
+37458987	distant	DDF	DDF
+
+
+37755674	distant	chemical	DDF
+37755674	distant	microbiome	DDF
+37755674	distant	DDF	human
+37755674	distant	DDF	chemical
+37755674	distant	microbiome	microbiome
+
+
+37460539	distant	DDF	microbiome
+37460539	distant	microbiome	DDF
+37460539	distant	food	animal
+37460539	distant	dietary supplement	DDF
+37460539	distant	microbiome	animal
+37460539	distant	anatomical location	animal
+37460539	distant	DDF	animal
+37460539	distant	microbiome	biomedical technique
+
+
+37107583	distant	chemical	DDF
+37107583	distant	bacteria	microbiome
+37107583	distant	microbiome	DDF
+37107583	distant	chemical	anatomical location
+37107583	distant	microbiome	anatomical location
+
+
+37589449	distant	microbiome	DDF
+37589449	distant	DDF	microbiome
+37589449	distant	chemical	DDF
+
+
+37496895	distant	DDF	bacteria
+37496895	distant	microbiome	DDF
+37496895	distant	bacteria	DDF
+37496895	distant	DDF	DDF
+37496895	distant	animal	biomedical technique
+37496895	distant	DDF	animal
+
+
+36803806	distant	microbiome	human
+36803806	distant	microbiome	DDF
+36803806	distant	DDF	human
+36803806	distant	anatomical location	human
+36803806	distant	DDF	DDF
+
+
+36671785	distant	microbiome	DDF
+36671785	distant	chemical	microbiome
+36671785	distant	chemical	anatomical location
+36671785	distant	DDF	DDF
+
+
+38146566	distant	chemical	DDF
+38146566	distant	dietary supplement	human
+38146566	distant	microbiome	DDF
+38146566	distant	DDF	human
+38146566	distant	dietary supplement	DDF
+38146566	distant	DDF	DDF
+38146566	distant	dietary supplement	microbiome
+
+
+37298727	distant	microbiome	DDF
+37298727	distant	DDF	animal
+37298727	distant	DDF	DDF
+
+
+37562163	distant	microbiome	DDF
+37562163	distant	food	DDF
+37562163	distant	food	microbiome
+37562163	distant	chemical	DDF
+
+
+37628082	distant	DDF	human
+37628082	distant	dietary supplement	DDF
+37628082	distant	DDF	DDF
+
+
+37747555	distant	chemical	DDF
+37747555	distant	chemical	chemical
+37747555	distant	microbiome	DDF
+37747555	distant	food	DDF
+37747555	distant	DDF	DDF
+37747555	distant	chemical	microbiome
+
+
+37487923	distant	chemical	DDF
+37487923	distant	microbiome	DDF
+37487923	distant	DDF	human
+37487923	distant	DDF	DDF
+37487923	distant	DDF	chemical
+
+
+37851313	distant	microbiome	DDF
+37851313	distant	chemical	DDF
+37851313	distant	DDF	anatomical location
+37851313	distant	DDF	DDF
+
+
+37579835	distant	chemical	DDF
+37579835	distant	microbiome	DDF
+37579835	distant	dietary supplement	DDF
+37579835	distant	DDF	DDF
+37579835	distant	drug	DDF
+
+
+36708421	distant	chemical	animal
+36708421	distant	DDF	anatomical location
+36708421	distant	DDF	DDF
+36708421	distant	microbiome	animal
+36708421	distant	animal	biomedical technique
+36708421	distant	bacteria	animal
+36708421	distant	DDF	animal
+
+
+37102320	distant	chemical	DDF
+37102320	distant	dietary supplement	DDF
+37102320	distant	DDF	DDF
+37102320	distant	microbiome	animal
+37102320	distant	chemical	microbiome
+37102320	distant	animal	biomedical technique
+37102320	distant	bacteria	animal
+37102320	distant	DDF	animal
+
+
+37968765	distant	DDF	bacteria
+37968765	distant	chemical	animal
+37968765	distant	DDF	DDF
+37968765	distant	microbiome	animal
+37968765	distant	chemical	anatomical location
+37968765	distant	DDF	animal
+37968765	distant	anatomical location	animal
+
+
+37562867	distant	DDF	DDF
+
+
+37266763	distant	chemical	DDF
+37266763	distant	chemical	animal
+37266763	distant	DDF	DDF
+
+
+36824263	distant	DDF	human
+36824263	distant	drug	DDF
+36824263	distant	drug	bacteria
+36824263	distant	DDF	DDF
+
+
+38075226	distant	DDF	human
+38075226	distant	dietary supplement	DDF
+38075226	distant	dietary supplement	microbiome
+
+
+37714224	distant	DDF	microbiome
+37714224	distant	microbiome	DDF
+37714224	distant	DDF	DDF
+37714224	distant	microbiome	animal
+37714224	distant	microbiome	chemical
+37714224	distant	microbiome	biomedical technique
+
+
+37416776	distant	chemical	DDF
+
+
+37436588	distant	microbiome	DDF
+
+
+37750713	distant	drug	DDF
+37750713	distant	DDF	DDF
+
+
+37579888	distant	chemical	DDF
+37579888	distant	chemical	bacteria
+37579888	distant	DDF	DDF
+37579888	distant	animal	biomedical technique
+37579888	distant	anatomical location	animal
+37579888	distant	bacteria	animal
+
+
+36983960	distant	bacteria	DDF
+36983960	distant	DDF	DDF
+
+
+37321369	distant	chemical	DDF
+37321369	distant	food	DDF
+37321369	distant	drug	microbiome
+37321369	distant	DDF	DDF
+37321369	distant	microbiome	animal
+37321369	distant	chemical	microbiome
+37321369	distant	DDF	animal
+
+
+37932328	distant	DDF	bacteria
+37932328	distant	DDF	microbiome
+37932328	distant	microbiome	human
+37932328	distant	microbiome	DDF
+37932328	distant	DDF	human
+37932328	distant	bacteria	human
+37932328	distant	drug	microbiome
+37932328	distant	drug	drug
+37932328	distant	drug	DDF
+
+
+37537902	distant	chemical	DDF
+37537902	distant	drug	microbiome
+37537902	distant	chemical	anatomical location
+37537902	distant	DDF	DDF
+
+
+36662412	distant	microbiome	DDF
+36662412	distant	dietary supplement	DDF
+
+
+36880679	distant	drug	DDF
+36880679	distant	dietary supplement	DDF
+36880679	distant	DDF	DDF
+
+
+37703887	distant	anatomical location	human
+37703887	distant	DDF	human
+37703887	distant	microbiome	DDF
+37703887	distant	DDF	DDF
+
+
+38008403	distant	chemical	DDF
+38008403	distant	DDF	microbiome
+38008403	distant	microbiome	DDF
+38008403	distant	DDF	human
+38008403	distant	drug	microbiome
+38008403	distant	DDF	DDF
+38008403	distant	drug	DDF
+
+
+37206220	distant	microbiome	animal
+37206220	distant	DDF	DDF
+37206220	distant	DDF	animal
+
+
+37630602	distant	chemical	DDF
+37630602	distant	chemical	animal
+37630602	distant	microbiome	human
+37630602	distant	bacteria	DDF
+37630602	distant	DDF	DDF
+37630602	distant	DDF	animal
+
+
+37374030	distant	microbiome	DDF
+37374030	distant	DDF	human
+37374030	distant	microbiome	human
+37374030	distant	dietary supplement	DDF
+
+
+37827233	distant	chemical	DDF
+37827233	distant	DDF	DDF
+37827233	distant	DDF	animal
+
+
+36694359	distant	chemical	DDF
+36694359	distant	DDF	human
+36694359	distant	DDF	DDF
+36694359	distant	chemical	human
+36694359	distant	microbiome	biomedical technique
+
+
+37239262	distant	chemical	DDF
+37239262	distant	DDF	animal
+37239262	distant	DDF	DDF
+
+
+
+
+37224894	distant	chemical	DDF
+37224894	distant	chemical	microbiome
+37224894	distant	microbiome	microbiome
+37224894	distant	DDF	DDF
+
+
+37158925	distant	chemical	DDF
+37158925	distant	microbiome	DDF
+37158925	distant	DDF	human
+37158925	distant	DDF	DDF
+37158925	distant	chemical	anatomical location
+
+
+38045857	distant	chemical	DDF
+38045857	distant	chemical	animal
+38045857	distant	animal	biomedical technique
+38045857	distant	DDF	animal
+
+
+36776226	distant	DDF	human
+36776226	distant	DDF	DDF
+
+
+37596429	distant	microbiome	DDF
+37596429	distant	microbiome	animal
+37596429	distant	animal	animal
+37596429	distant	DDF	animal
+
+
+37961318	distant	chemical	DDF
+37961318	distant	microbiome	DDF
+37961318	distant	chemical	microbiome
+37961318	distant	DDF	DDF
+
+
+37895965	distant	anatomical location	human
+37895965	distant	DDF	human
+37895965	distant	DDF	DDF
+
+
+37196855	distant	DDF	microbiome
+37196855	distant	DDF	anatomical location
+37196855	distant	microbiome	DDF
+37196855	distant	DDF	DDF
+37196855	distant	microbiome	animal
+37196855	distant	DDF	animal
+
+
+38106542	distant	DDF	human
+38106542	distant	DDF	DDF
+
+
+36918961	distant	microbiome	DDF
+
+
+38178103	distant	chemical	DDF
+38178103	distant	DDF	microbiome
+38178103	distant	microbiome	DDF
+38178103	distant	chemical	microbiome
+38178103	distant	microbiome	chemical
+
+
+38958636	distant	chemical	DDF
+38958636	distant	anatomical location	human
+38958636	distant	DDF	human
+38958636	distant	microbiome	DDF
+38958636	distant	chemical	bacteria
+38958636	distant	chemical	microbiome
+
+
+39064625	distant	microbiome	DDF
+39064625	distant	food	DDF
+39064625	distant	DDF	human
+
+
+38652236	distant	microbiome	DDF
+
+
+37843219	distant	microbiome	DDF
+37843219	distant	dietary supplement	DDF
+37843219	distant	anatomical location	DDF
+37843219	distant	DDF	DDF
+37843219	distant	microbiome	biomedical technique
+
+
+38867886	distant	microbiome	DDF
+38867886	distant	DDF	human
+38867886	distant	DDF	DDF
+
+
+38570412	distant	DDF	microbiome
+38570412	distant	microbiome	DDF
+38570412	distant	bacteria	DDF
+38570412	distant	DDF	DDF
+38570412	distant	dietary supplement	bacteria
+38570412	distant	microbiome	anatomical location
+
+
+38999791	distant	chemical	microbiome
+38999791	distant	chemical	anatomical location
+
+
+38279293	distant	chemical	DDF
+38279293	distant	DDF	anatomical location
+38279293	distant	chemical	anatomical location
+
+
+39403202	distant	microbiome	DDF
+39403202	distant	microbiome	statistical technique
+39403202	distant	DDF	DDF
+
+
+38587699	distant	chemical	DDF
+38587699	distant	DDF	microbiome
+38587699	distant	microbiome	DDF
+38587699	distant	dietary supplement	DDF
+38587699	distant	DDF	DDF
+38587699	distant	chemical	microbiome
+38587699	distant	dietary supplement	microbiome
+
+
+38852651	distant	microbiome	DDF
+38852651	distant	drug	DDF
+38852651	distant	DDF	DDF
+
+
+38785512	distant	microbiome	DDF
+38785512	distant	dietary supplement	DDF
+38785512	distant	dietary supplement	microbiome
+38785512	distant	DDF	DDF
+
+
+39177611	distant	microbiome	DDF
+39177611	distant	chemical	DDF
+
+
+39168575	distant	chemical	DDF
+39168575	distant	food	DDF
+39168575	distant	DDF	human
+39168575	distant	DDF	DDF
+
+
+38974034	distant	DDF	human
+38974034	distant	microbiome	human
+38974034	distant	DDF	DDF
+
+
+39036341	distant	microbiome	DDF
+39036341	distant	chemical	DDF
+
+
+37307829	distant	microbiome	DDF
+37307829	distant	DDF	DDF
+
+
+39134825	distant	microbiome	DDF
+39134825	distant	DDF	human
+39134825	distant	microbiome	human
+
+
+38989933	distant	microbiome	DDF
+38989933	distant	microbiome	human
+38989933	distant	chemical	DDF
+38989933	distant	DDF	DDF
+
+
+38344171	distant	microbiome	human
+38344171	distant	microbiome	drug
+38344171	distant	microbiome	DDF
+38344171	distant	dietary supplement	DDF
+38344171	distant	drug	microbiome
+38344171	distant	DDF	DDF
+38344171	distant	dietary supplement	microbiome
+
+
+38237031	distant	microbiome	DDF
+38237031	distant	DDF	DDF
+
+
+38848023	distant	chemical	DDF
+38848023	distant	microbiome	human
+38848023	distant	microbiome	DDF
+38848023	distant	DDF	DDF
+38848023	distant	DDF	chemical
+
+
+39113894	distant	microbiome	DDF
+
+
+38409641	distant	chemical	DDF
+38409641	distant	animal	chemical
+38409641	distant	dietary supplement	DDF
+38409641	distant	DDF	DDF
+38409641	distant	animal	biomedical technique
+38409641	distant	DDF	animal
+
+
+38385354	distant	chemical	DDF
+38385354	distant	chemical	chemical
+38385354	distant	bacteria	DDF
+38385354	distant	DDF	DDF
+38385354	distant	chemical	anatomical location
+38385354	distant	DDF	animal
+
+
+38211635	distant	chemical	DDF
+38211635	distant	microbiome	human
+38211635	distant	microbiome	DDF
+38211635	distant	DDF	human
+38211635	distant	bacteria	DDF
+38211635	distant	DDF	animal
+
+
+38755164	distant	chemical	DDF
+38755164	distant	microbiome	DDF
+38755164	distant	gene	DDF
+38755164	distant	chemical	microbiome
+38755164	distant	chemical	anatomical location
+38755164	distant	DDF	animal
+
+
+38518598	distant	chemical	DDF
+38518598	distant	microbiome	DDF
+38518598	distant	DDF	DDF
+38518598	distant	chemical	microbiome
+38518598	distant	chemical	anatomical location
+38518598	distant	DDF	chemical
+
+
+38244807	distant	microbiome	DDF
+38244807	distant	drug	microbiome
+38244807	distant	bacteria	DDF
+38244807	distant	DDF	DDF
+38244807	distant	drug	DDF
+
+
+38435303	distant	chemical	DDF
+38435303	distant	microbiome	DDF
+38435303	distant	microbiome	anatomical location
+38435303	distant	DDF	DDF
+
+
+39019779	distant	microbiome	anatomical location
+39019779	distant	DDF	DDF
+
+
+38875045	distant	DDF	DDF
+
+
+
+
+39459534	distant	DDF	DDF
+
+
+39300699	distant	microbiome	DDF
+39300699	distant	microbiome	anatomical location
+39300699	distant	DDF	DDF
+
+
+39161161	distant	microbiome	human
+39161161	distant	microbiome	DDF
+39161161	distant	DDF	human
+39161161	distant	microbiome	animal
+39161161	distant	DDF	animal
+39161161	distant	microbiome	anatomical location
+39161161	distant	microbiome	biomedical technique
+
+
+38314132	distant	DDF	bacteria
+38314132	distant	DDF	microbiome
+38314132	distant	microbiome	DDF
+38314132	distant	DDF	human
+38314132	distant	dietary supplement	DDF
+38314132	distant	DDF	DDF
+38314132	distant	dietary supplement	microbiome
+
+
+39064171	distant	microbiome	DDF
+39064171	distant	chemical	DDF
+39064171	distant	gene	DDF
+39064171	distant	DDF	DDF
+
+
+38727306	distant	microbiome	DDF
+38727306	distant	microbiome	anatomical location
+38727306	distant	anatomical location	DDF
+38727306	distant	DDF	DDF
+
+
+38817603	distant	microbiome	DDF
+38817603	distant	DDF	DDF
+
+
+38873926	distant	DDF	microbiome
+38873926	distant	microbiome	human
+38873926	distant	microbiome	DDF
+38873926	distant	DDF	human
+38873926	distant	DDF	DDF
+38873926	distant	human	biomedical technique
+38873926	distant	microbiome	biomedical technique
+
+
+38694925	distant	chemical	DDF
+38694925	distant	microbiome	DDF
+38694925	distant	DDF	DDF
+
+
+38449863	distant	microbiome	DDF
+38449863	distant	bacteria	anatomical location
+38449863	distant	chemical	DDF
+38449863	distant	DDF	DDF
+
+
+39334720	distant	microbiome	DDF
+39334720	distant	DDF	DDF
+
+
+38227539	distant	chemical	DDF
+38227539	distant	microbiome	DDF
+38227539	distant	DDF	DDF
+38227539	distant	microbiome	animal
+38227539	distant	DDF	animal
+38227539	distant	drug	DDF
+
+
+38840699	distant	microbiome	DDF
+38840699	distant	food	DDF
+38840699	distant	microbiome	statistical technique
+38840699	distant	microbiome	food
+
+
+38957302	distant	DDF	bacteria
+38957302	distant	microbiome	human
+38957302	distant	microbiome	DDF
+38957302	distant	DDF	human
+38957302	distant	DDF	DDF
+
+
+38773112	distant	DDF	bacteria
+38773112	distant	chemical	DDF
+38773112	distant	microbiome	DDF
+38773112	distant	DDF	human
+38773112	distant	human	biomedical technique
+38773112	distant	microbiome	statistical technique
+38773112	distant	microbiome	biomedical technique
+
+
+39377830	distant	chemical	DDF
+39377830	distant	DDF	microbiome
+39377830	distant	microbiome	DDF
+39377830	distant	DDF	DDF
+
+
+39071627	distant	dietary supplement	DDF
+39071627	distant	DDF	DDF
+
+
+39449004	distant	microbiome	DDF
+39449004	distant	DDF	human
+39449004	distant	chemical	DDF
+39449004	distant	DDF	DDF
+
+
+36200211	distant	chemical	DDF
+36200211	distant	microbiome	DDF
+36200211	distant	DDF	DDF
+
+
+38265387	distant	microbiome	DDF
+38265387	distant	microbiome	human
+38265387	distant	DDF	DDF
+
+
+38965287	distant	chemical	animal
+38965287	distant	dietary supplement	anatomical location
+38965287	distant	microbiome	DDF
+38965287	distant	dietary supplement	DDF
+38965287	distant	animal	biomedical technique
+38965287	distant	dietary supplement	chemical
+38965287	distant	bacteria	animal
+38965287	distant	DDF	animal
+
+
+39042202	distant	chemical	DDF
+39042202	distant	drug	chemical
+39042202	distant	DDF	anatomical location
+39042202	distant	food	DDF
+39042202	distant	DDF	DDF
+39042202	distant	DDF	animal
+39042202	distant	drug	DDF
+
+
+39189380	distant	chemical	DDF
+39189380	distant	DDF	human
+39189380	distant	DDF	DDF
+39189380	distant	DDF	animal
+
+
+38854967	distant	microbiome	DDF
+38854967	distant	DDF	human
+38854967	distant	DDF	microbiome
+38854967	distant	DDF	DDF
+
+
+39070266	distant	DDF	microbiome
+39070266	distant	microbiome	human
+39070266	distant	anatomical location	biomedical technique
+39070266	distant	microbiome	DDF
+39070266	distant	DDF	human
+39070266	distant	DDF	DDF
+39070266	distant	microbiome	animal
+39070266	distant	human	biomedical technique
+39070266	distant	DDF	animal
+39070266	distant	drug	DDF
+
+
+39065820	distant	chemical	DDF
+39065820	distant	DDF	microbiome
+39065820	distant	DDF	DDF
+39065820	distant	microbiome	DDF
+
+
+38515447	distant	microbiome	DDF
+38515447	distant	DDF	DDF
+
+
+39078158	distant	microbiome	DDF
+39078158	distant	DDF	human
+39078158	distant	microbiome	statistical technique
+39078158	distant	DDF	DDF
+
+
+38450172	distant	biomedical technique	DDF
+38450172	distant	microbiome	DDF
+38450172	distant	bacteria	DDF
+38450172	distant	DDF	DDF
+38450172	distant	biomedical technique	chemical
+38450172	distant	DDF	animal
+38450172	distant	microbiome	biomedical technique
+38450172	distant	bacteria	bacteria
+
+
+39417117	distant	chemical	DDF
+39417117	distant	microbiome	DDF
+39417117	distant	chemical	microbiome
+39417117	distant	DDF	DDF
+
+
+39284418	distant	microbiome	DDF
+39284418	distant	DDF	microbiome
+39284418	distant	chemical	DDF
+39284418	distant	microbiome	biomedical technique
+
+
+38898687	distant	bacteria	microbiome
+38898687	distant	chemical	DDF
+38898687	distant	anatomical location	DDF
+38898687	distant	DDF	DDF
+
+
+38774094	distant	biomedical technique	DDF
+38774094	distant	microbiome	DDF
+38774094	distant	DDF	DDF
+38774094	distant	anatomical location	animal
+38774094	distant	DDF	animal
+38774094	distant	chemical	anatomical location
+
+
+38447734	distant	chemical	DDF
+38447734	distant	dietary supplement	DDF
+38447734	distant	DDF	DDF
+38447734	distant	animal	biomedical technique
+38447734	distant	dietary supplement	animal
+38447734	distant	DDF	animal
+
+
+38464323	distant	microbiome	DDF
+38464323	distant	DDF	human
+38464323	distant	microbiome	statistical technique
+38464323	distant	DDF	DDF
+
+
+38499889	distant	microbiome	DDF
+38499889	distant	gene	microbiome
+38499889	distant	gene	DDF
+38499889	distant	DDF	DDF
+
+
+39173756	distant	chemical	DDF
+39173756	distant	chemical	animal
+39173756	distant	chemical	anatomical location
+39173756	distant	DDF	DDF
+
+
+39043489	distant	chemical	DDF
+39043489	distant	DDF	anatomical location
+39043489	distant	microbiome	anatomical location
+39043489	distant	DDF	DDF
+
+
+38399728	distant	DDF	human
+38399728	distant	microbiome	human
+38399728	distant	human	biomedical technique
+38399728	distant	DDF	DDF
+
+
+39155987	distant	DDF	human
+39155987	distant	human	human
+39155987	distant	DDF	microbiome
+39155987	distant	DDF	DDF
+
+
+39266892	distant	chemical	DDF
+39266892	distant	food	DDF
+39266892	distant	microbiome	DDF
+
+
+38287859	distant	chemical	DDF
+38287859	distant	DDF	DDF
+38287859	distant	biomedical technique	DDF
+
+
+39431278	distant	microbiome	human
+39431278	distant	microbiome	DDF
+39431278	distant	DDF	human
+39431278	distant	dietary supplement	DDF
+39431278	distant	microbiome	anatomical location
+
+
+39408276	distant	chemical	DDF
+39408276	distant	chemical	animal
+39408276	distant	DDF	anatomical location
+39408276	distant	microbiome	DDF
+39408276	distant	microbiome	animal
+39408276	distant	chemical	microbiome
+39408276	distant	chemical	anatomical location
+39408276	distant	DDF	animal
+39408276	distant	anatomical location	animal
+
+
+38770370	distant	microbiome	DDF
+38770370	distant	chemical	DDF
+38770370	distant	DDF	DDF
+
+
+38311217	distant	chemical	animal
+38311217	distant	microbiome	DDF
+38311217	distant	dietary supplement	DDF
+38311217	distant	bacteria	DDF
+38311217	distant	DDF	DDF
+38311217	distant	dietary supplement	microbiome
+
+
+38754721	distant	chemical	DDF
+38754721	distant	microbiome	DDF
+38754721	distant	dietary supplement	DDF
+38754721	distant	DDF	DDF
+38754721	distant	chemical	microbiome
+38754721	distant	dietary supplement	microbiome
+
+
+38554664	distant	chemical	DDF
+38554664	distant	chemical	chemical
+38554664	distant	DDF	human
+38554664	distant	human	biomedical technique
+38554664	distant	DDF	DDF
+
+
+38561921	distant	chemical	DDF
+38561921	distant	human	biomedical technique
+38561921	distant	DDF	DDF
+38561921	distant	chemical	biomedical technique
+38561921	distant	microbiome	biomedical technique
+
+
+39062985	distant	chemical	DDF
+39062985	distant	DDF	microbiome
+39062985	distant	microbiome	DDF
+39062985	distant	DDF	human
+39062985	distant	anatomical location	DDF
+39062985	distant	DDF	DDF
+
+
+38490348	distant	chemical	DDF
+38490348	distant	microbiome	DDF
+38490348	distant	dietary supplement	DDF
+38490348	distant	DDF	DDF
+38490348	distant	chemical	microbiome
+
+
+39191336	distant	chemical	microbiome
+39191336	distant	drug	DDF
+39191336	distant	DDF	DDF
+
+
+38939650	distant	chemical	DDF
+38939650	distant	chemical	microbiome
+38939650	distant	dietary supplement	drug
+38939650	distant	DDF	DDF
+
+
+38008941	distant	anatomical location	human
+38008941	distant	DDF	human
+38008941	distant	anatomical location	DDF
+38008941	distant	DDF	DDF
+
+
+38261717	distant	chemical	DDF
+38261717	distant	DDF	human
+38261717	distant	anatomical location	DDF
+38261717	distant	DDF	DDF
+38261717	distant	chemical	anatomical location
+
+
+39175504	distant	microbiome	DDF
+39175504	distant	DDF	human
+39175504	distant	bacteria	anatomical location
+39175504	distant	DDF	DDF
+39175504	distant	gene	DDF
+
+
+38227477	distant	chemical	animal
+38227477	distant	dietary supplement	DDF
+38227477	distant	DDF	DDF
+38227477	distant	animal	biomedical technique
+38227477	distant	dietary supplement	animal
+38227477	distant	DDF	animal
+
+
+38610012	distant	chemical	DDF
+38610012	distant	DDF	DDF
+
+
+38786584	distant	chemical	DDF
+38786584	distant	chemical	chemical
+38786584	distant	chemical	bacteria
+38786584	distant	DDF	DDF
+38786584	distant	microbiome	animal
+
+
+38316462	distant	DDF	human
+38316462	distant	microbiome	human
+38316462	distant	human	drug
+38316462	distant	DDF	DDF
+
+
+39189385	distant	dietary supplement	DDF
+39189385	distant	dietary supplement	microbiome
+39189385	distant	bacteria	DDF
+39189385	distant	DDF	DDF
+
+
+39273435	distant	DDF	human
+39273435	distant	DDF	DDF
+
+
+38569219	distant	microbiome	DDF
+38569219	distant	chemical	DDF
+38569219	distant	chemical	anatomical location
+
+
+39331469	distant	DDF	anatomical location
+39331469	distant	microbiome	DDF
+39331469	distant	DDF	human
+39331469	distant	DDF	DDF
+39331469	distant	DDF	animal
+39331469	distant	drug	DDF
+
+
+39344226	distant	DDF	human
+39344226	distant	DDF	DDF
+
+
+39201684	distant	chemical	DDF
+39201684	distant	DDF	DDF
+
+
+38267447	distant	microbiome	human
+38267447	distant	human	statistical technique
+38267447	distant	microbiome	DDF
+38267447	distant	DDF	human
+38267447	distant	DDF	DDF
+38267447	distant	microbiome	statistical technique
+
+
+38891863	distant	microbiome	DDF
+38891863	distant	chemical	DDF
+38891863	distant	anatomical location	DDF
+38891863	distant	DDF	DDF
+
+
+38741945	distant	DDF	DDF
+
+
+
+
+39002442	distant	chemical	DDF
+39002442	distant	drug	DDF
+39002442	distant	chemical	chemical
+
+
+37855342	distant	microbiome	human
+37855342	distant	DDF	anatomical location
+37855342	distant	DDF	DDF
+
+
+38474254	distant	dietary supplement	DDF
+38474254	distant	bacteria	DDF
+38474254	distant	DDF	DDF
+
+
+39060267	distant	microbiome	DDF
+39060267	distant	DDF	DDF
+
+
+39064687	distant	chemical	DDF
+39064687	distant	dietary supplement	microbiome
+39064687	distant	DDF	DDF
+
+
+39145619	distant	dietary supplement	DDF
+39145619	distant	anatomical location	animal
+39145619	distant	DDF	animal
+
+
+38500273	distant	dietary supplement	DDF
+38500273	distant	anatomical location	anatomical location
+38500273	distant	dietary supplement	microbiome
+38500273	distant	DDF	DDF
+
+
+39021576	distant	chemical	DDF
+39021576	distant	DDF	DDF
+
+
+39309265	distant	bacteria	microbiome
+39309265	distant	DDF	human
+39309265	distant	dietary supplement	DDF
+39309265	distant	bacteria	DDF
+39309265	distant	human	biomedical technique
+39309265	distant	dietary supplement	microbiome
+
+
+38366179	distant	bacteria	microbiome
+38366179	distant	bacteria	animal
+
+
+39143178	distant	microbiome	DDF
+39143178	distant	microbiome	biomedical technique
+
+
+38375842	distant	chemical	DDF
+
+
+39406307	distant	DDF	anatomical location
+39406307	distant	dietary supplement	DDF
+39406307	distant	bacteria	DDF
+39406307	distant	DDF	animal
+39406307	distant	dietary supplement	microbiome
+
+
+38539626	distant	dietary supplement	anatomical location
+38539626	distant	DDF	anatomical location
+38539626	distant	microbiome	DDF
+38539626	distant	dietary supplement	DDF
+38539626	distant	anatomical location	animal
+38539626	distant	DDF	animal
+
+
+39367119	distant	biomedical technique	human
+39367119	distant	dietary supplement	human
+39367119	distant	DDF	human
+39367119	distant	dietary supplement	DDF
+39367119	distant	DDF	DDF
+
+
+38796044	distant	chemical	DDF
+38796044	distant	food	DDF
+38796044	distant	dietary supplement	animal
+
+
+39302939	distant	chemical	animal
+39302939	distant	anatomical location	biomedical technique
+39302939	distant	dietary supplement	DDF
+39302939	distant	animal	biomedical technique
+39302939	distant	anatomical location	animal
+39302939	distant	DDF	animal
+39302939	distant	chemical	anatomical location
+39302939	distant	dietary supplement	bacteria
+
+
+38997651	distant	drug	DDF
+
+
+39310761	distant	chemical	DDF
+39310761	distant	microbiome	DDF
+39310761	distant	chemical	bacteria
+39310761	distant	DDF	DDF
+
+

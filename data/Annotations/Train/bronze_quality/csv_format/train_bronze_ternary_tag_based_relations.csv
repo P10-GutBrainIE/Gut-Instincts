@@ -1,0 +1,3342 @@
+pmid|annotator|subject_label|predicate|object_label
+37065853|distant|DDF|strike|anatomical location
+37065853|distant|DDF|is a|DDF
+37065853|distant|DDF|affect|DDF
+33249563|distant|human|used by|biomedical technique
+33249563|distant|microbiome|is linked to|DDF
+33249563|distant|DDF|target|human
+33045322|distant|DDF|is a|DDF
+33045322|distant|DDF|affect|DDF
+36550632|distant|microbiome|is linked to|DDF
+36550632|distant|dietary supplement|influence|DDF
+36550632|distant|DDF|strike|anatomical location
+36550632|distant|DDF|affect|human
+36550632|distant|DDF|affect|DDF
+36550632|distant|DDF|influence|DDF
+36550632|distant|microbiome|located in|animal
+36550632|distant|dietary supplement|impact|microbiome
+36550632|distant|DDF|target|animal
+30248988|distant|dietary supplement|influence|DDF
+30248988|distant|dietary supplement|change effect|DDF
+30248988|distant|chemical|influence|DDF
+30248988|distant|human|used by|statistical technique
+30248988|distant|chemical|change effect|DDF
+36624505|distant|DDF|target|human
+37630649|distant|microbiome|is linked to|DDF
+37630649|distant|DDF|strike|anatomical location
+37630649|distant|dietary supplement|influence|DDF
+37630649|distant|microbiome|located in|human
+37630649|distant|DDF|change abundance|microbiome
+37630649|distant|DDF|target|human
+37630649|distant|DDF|affect|DDF
+37294054|distant|gene|affect|DDF
+37294054|distant|gene|located in|animal
+37294054|distant|anatomical location|located in|animal
+37294054|distant|microbiome|located in|animal
+36945049|distant|human|target|human
+36945049|distant|human|used by|biomedical technique
+36945049|distant|microbiome|used by|biomedical technique
+36945049|distant|DDF|target|human
+33920695|distant|chemical|located in|anatomical location
+36400152|distant|human|used by|biomedical technique
+36400152|distant|microbiome|used by|statistical technique
+36400152|distant|microbiome|is linked to|DDF
+36400152|distant|DDF|target|human
+38273106|distant|anatomical location|used by|biomedical technique
+38273106|distant|microbiome|is linked to|DDF
+38273106|distant|microbiome|located in|human
+38273106|distant|chemical|influence|DDF
+38273106|distant|DDF|target|human
+38273106|distant|chemical|located in|animal
+38273106|distant|microbiome|located in|animal
+38273106|distant|human|used by|biomedical technique
+38273106|distant|microbiome|used by|biomedical technique
+38273106|distant|DDF|target|animal
+38273106|distant|anatomical location|located in|animal
+38606523|distant|microbiome|is linked to|DDF
+38606523|distant|dietary supplement|influence|DDF
+38606523|distant|chemical|influence|DDF
+38606523|distant|DDF|affect|DDF
+38606523|distant|human|target|human
+38606523|distant|chemical|impact|microbiome
+37062706|distant|dietary supplement|influence|DDF
+29147024|distant|drug|administered|animal
+29147024|distant|drug|change effect|DDF
+29147024|distant|drug|impact|bacteria
+29147024|distant|drug|change effect|drug
+29147024|distant|drug|influence|DDF
+29147024|distant|bacteria|located in|animal
+29147024|distant|drug|located in|animal
+29147024|distant|microbiome|located in|animal
+29147024|distant|drug|administered|human
+29147024|distant|drug|impact|microbiome
+35723531|distant|anatomical location|used by|biomedical technique
+35723531|distant|microbiome|is linked to|DDF
+35723531|distant|microbiome|located in|human
+35723531|distant|chemical|influence|DDF
+35723531|distant|DDF|affect|DDF
+35723531|distant|DDF|target|human
+35723531|distant|chemical|is linked to|DDF
+35723531|distant|human|used by|biomedical technique
+37298527|distant|microbiome|is linked to|DDF
+37298527|distant|DDF|is a|DDF
+37298527|distant|bacteria|part of|microbiome
+37298527|distant|DDF|affect|DDF
+38024855|distant|microbiome|is linked to|DDF
+38024855|distant|bacteria|influence|chemical
+38024855|distant|dietary supplement|influence|DDF
+38024855|distant|chemical|influence|DDF
+38024855|distant|DDF|target|animal
+38024855|distant|chemical|change effect|DDF
+36093695|distant|microbiome|is linked to|DDF
+36093695|distant|microbiome|located in|human
+36093695|distant|chemical|influence|DDF
+36093695|distant|DDF|target|human
+36093695|distant|dietary supplement|impact|bacteria
+36093695|distant|dietary supplement|impact|microbiome
+36093695|distant|human|used by|biomedical technique
+36093695|distant|microbiome|used by|biomedical technique
+33955443|distant|dietary supplement|influence|DDF
+33955443|distant|microbiome|is linked to|DDF
+33955443|distant|drug|influence|DDF
+33955443|distant|DDF|affect|DDF
+36910501|distant|microbiome|used by|biomedical technique
+36910501|distant|microbiome|is linked to|DDF
+36910501|distant|DDF|target|human
+31214110|distant|microbiome|located in|human
+31214110|distant|microbiome|is linked to|DDF
+31214110|distant|chemical|influence|anatomical location
+31214110|distant|DDF|affect|DDF
+26438800|distant|microbiome|is linked to|DDF
+26438800|distant|DDF|is a|DDF
+34895297|distant|chemical|influence|DDF
+34895297|distant|food|influence|DDF
+34895297|distant|DDF|target|human
+34895297|distant|food|administered|human
+37174495|distant|microbiome|is linked to|DDF
+37174495|distant|DDF|change abundance|bacteria
+37174495|distant|DDF|target|human
+37174495|distant|microbiome|located in|animal
+37174495|distant|DDF|target|animal
+37354486|distant|microbiome|is linked to|DDF
+37354486|distant|microbiome|located in|human
+37354486|distant|DDF|change abundance|microbiome
+37354486|distant|DDF|target|human
+37354486|distant|chemical|located in|anatomical location
+35583791|distant|microbiome|affect|DDF
+35583791|distant|microbiome|is linked to|DDF
+35583791|distant|dietary supplement|influence|DDF
+35583791|distant|chemical|influence|DDF
+35024387|distant|human|used by|biomedical technique
+35024387|distant|DDF|target|human
+37804926|distant|dietary supplement|influence|DDF
+37804926|distant|DDF|change abundance|microbiome
+37804926|distant|chemical|influence|DDF
+37804926|distant|DDF|target|human
+37804926|distant|dietary supplement|administered|human
+38117827|distant|microbiome|influence|DDF
+38117827|distant|bacteria|located in|human
+38117827|distant|microbiome|is linked to|DDF
+38117827|distant|microbiome|located in|human
+38117827|distant|DDF|target|human
+38117827|distant|chemical|located in|human
+38117827|distant|human|used by|biomedical technique
+38117827|distant|microbiome|used by|biomedical technique
+38117827|distant|microbiome|impact|microbiome
+35855338|distant|food|influence|DDF
+35855338|distant|microbiome|is linked to|DDF
+31709198|distant|microbiome|located in|human
+31709198|distant|microbiome|is linked to|DDF
+31709198|distant|DDF|target|human
+38353184|distant|microbiome|is linked to|DDF
+38353184|distant|dietary supplement|influence|DDF
+38353184|distant|drug|influence|DDF
+38353184|distant|DDF|affect|DDF
+38353184|distant|DDF|is a|DDF
+38353184|distant|drug|impact|microbiome
+37307822|distant|DDF|change abundance|microbiome
+37307822|distant|microbiome|is linked to|DDF
+37307822|distant|DDF|is a|DDF
+37307822|distant|DDF|target|human
+33921293|distant|human|used by|biomedical technique
+33921293|distant|DDF|target|human
+36244525|distant|drug|administered|human
+36244525|distant|drug|impact|microbiome
+36244525|distant|microbiome|is linked to|chemical
+31380217|distant|microbiome|is linked to|drug
+31380217|distant|microbiome|is linked to|DDF
+31380217|distant|human|used by|gene
+31380217|distant|microbiome|located in|human
+31380217|distant|DDF|change abundance|bacteria
+31380217|distant|DDF|target|human
+29358918|distant|microbiome|is linked to|DDF
+29358918|distant|DDF|strike|anatomical location
+29358918|distant|DDF|change abundance|bacteria
+29358918|distant|drug|influence|DDF
+29358918|distant|DDF|affect|DDF
+29358918|distant|DDF|target|animal
+37892465|distant|microbiome|is linked to|DDF
+37892465|distant|chemical|influence|DDF
+37892465|distant|DDF|target|human
+37892465|distant|DDF|affect|DDF
+37892465|distant|bacteria|influence|DDF
+38406183|distant|microbiome|located in|anatomical location
+26497477|distant|microbiome|is linked to|DDF
+26497477|distant|dietary supplement|influence|DDF
+26497477|distant|DDF|target|human
+26497477|distant|drug|influence|DDF
+36442206|distant|human|used by|biomedical technique
+36442206|distant|microbiome|is linked to|DDF
+36442206|distant|DDF|target|human
+37914097|distant|microbiome|is linked to|DDF
+37914097|distant|drug|administered|animal
+37914097|distant|animal|used by|biomedical technique
+37914097|distant|DDF|affect|DDF
+37914097|distant|microbiome|located in|animal
+37914097|distant|microbiome|used by|biomedical technique
+37914097|distant|DDF|impact|bacteria
+37914097|distant|DDF|target|animal
+37914097|distant|anatomical location|located in|animal
+37914097|distant|DDF|impact|microbiome
+32989186|distant|microbiome|influence|DDF
+32989186|distant|dietary supplement|influence|DDF
+32989186|distant|microbiome|is linked to|chemical
+32989186|distant|DDF|target|human
+32989186|distant|dietary supplement|change effect|DDF
+32989186|distant|dietary supplement|administered|human
+32989186|distant|dietary supplement|impact|bacteria
+32989186|distant|human|used by|biomedical technique
+32989186|distant|bacteria|influence|DDF
+32989186|distant|drug|administered|human
+31405122|distant|dietary supplement|influence|drug
+31405122|distant|dietary supplement|influence|DDF
+31405122|distant|bacteria|administered|human
+31405122|distant|DDF|target|human
+31405122|distant|drug|influence|DDF
+31405122|distant|drug|influence|drug
+31405122|distant|dietary supplement|administered|human
+31405122|distant|bacteria|influence|DDF
+28624847|distant|microbiome|is linked to|DDF
+28624847|distant|drug|impact|microbiome
+31479418|distant|DDF|strike|anatomical location
+31479418|distant|chemical|impact|anatomical location
+31479418|distant|anatomical location|located in|animal
+31479418|distant|DDF|affect|DDF
+38260072|distant|dietary supplement|influence|DDF
+38260072|distant|DDF|change abundance|bacteria
+38260072|distant|DDF|change abundance|microbiome
+38260072|distant|DDF|target|human
+38260072|distant|microbiome|used by|biomedical technique
+32279681|distant|microbiome|is linked to|DDF
+32279681|distant|dietary supplement|influence|DDF
+32279681|distant|DDF|target|human
+32279681|distant|DDF|affect|DDF
+32279681|distant|dietary supplement|impact|microbiome
+32279681|distant|human|used by|biomedical technique
+36650644|distant|dietary supplement|influence|DDF
+36650644|distant|dietary supplement|administered|animal
+36650644|distant|dietary supplement|affect|DDF
+36650644|distant|chemical|located in|anatomical location
+36650644|distant|microbiome|located in|animal
+36650644|distant|DDF|target|animal
+34201752|distant|microbiome|is linked to|DDF
+34201752|distant|microbiome|located in|human
+34201752|distant|microbiome|used by|dietary supplement
+34201752|distant|DDF|target|human
+34201752|distant|DDF|is a|DDF
+34201752|distant|dietary supplement|impact|microbiome
+34033061|distant|microbiome|located in|human
+34033061|distant|microbiome|is linked to|DDF
+34033061|distant|DDF|target|human
+33421542|distant|DDF|is a|DDF
+33421542|distant|DDF|affect|DDF
+37304433|distant|microbiome|target|human
+37304433|distant|microbiome|located in|human
+37304433|distant|DDF|target|human
+37304433|distant|DDF|affect|DDF
+37304433|distant|human|used by|biomedical technique
+37304433|distant|microbiome|used by|biomedical technique
+33094505|distant|DDF|target|animal
+33094505|distant|animal|used by|biomedical technique
+33094505|distant|DDF|target|human
+33094505|distant|DDF|affect|DDF
+37375679|distant|microbiome|is linked to|DDF
+37375679|distant|DDF|strike|anatomical location
+37375679|distant|dietary supplement|influence|DDF
+37375679|distant|DDF|affect|anatomical location
+37375679|distant|DDF|target|human
+37375679|distant|DDF|affect|DDF
+37375679|distant|dietary supplement|impact|microbiome
+35610236|distant|microbiome|is linked to|DDF
+35610236|distant|dietary supplement|influence|DDF
+35610236|distant|dietary supplement|impact|bacteria
+35610236|distant|drug|change effect|DDF
+35610236|distant|DDF|target|human
+35610236|distant|drug|influence|DDF
+35610236|distant|DDF|affect|DDF
+35610236|distant|dietary supplement|administered|human
+35610236|distant|dietary supplement|impact|microbiome
+35610236|distant|human|used by|biomedical technique
+35610236|distant|drug|impact|microbiome
+29213271|distant|DDF|strike|anatomical location
+38075261|distant|chemical|influence|DDF
+38075261|distant|DDF|target|human
+38075261|distant|DDF|affect|DDF
+38417224|distant|microbiome|is linked to|DDF
+38417224|distant|DDF|strike|anatomical location
+38417224|distant|DDF|change abundance|microbiome
+38417224|distant|DDF|target|human
+38417224|distant|chemical|influence|DDF
+38417224|distant|DDF|interact|chemical
+38417224|distant|human|used by|biomedical technique
+38417224|distant|microbiome|used by|biomedical technique
+36284437|distant|microbiome|is linked to|DDF
+36284437|distant|microbiome|located in|human
+36284437|distant|DDF|change abundance|bacteria
+36284437|distant|DDF|target|human
+36284437|distant|DDF|affect|DDF
+36284437|distant|bacteria|influence|DDF
+36284437|distant|DDF|target|animal
+33508544|distant|anatomical location|used by|biomedical technique
+33508544|distant|microbiome|is linked to|DDF
+33508544|distant|DDF|target|animal
+33508544|distant|microbiome|located in|animal
+33508544|distant|gene|used by|biomedical technique
+36017855|distant|chemical|located in|anatomical location
+36017855|distant|dietary supplement|influence|DDF
+37692658|distant|microbiome|is linked to|DDF
+37692658|distant|dietary supplement|influence|DDF
+37692658|distant|microbiome|located in|human
+37692658|distant|DDF|target|human
+37692658|distant|dietary supplement|impact|microbiome
+31440136|distant|microbiome|is linked to|DDF
+31440136|distant|animal|used by|biomedical technique
+31440136|distant|chemical|influence|DDF
+31440136|distant|DDF|target|human
+31440136|distant|bacteria|located in|animal
+31440136|distant|chemical|impact|microbiome
+31440136|distant|human|used by|biomedical technique
+34946184|distant|bacteria|influence|DDF
+34946184|distant|microbiome|is linked to|DDF
+34946184|distant|dietary supplement|influence|DDF
+34946184|distant|chemical|influence|DDF
+37399128|distant|bacteria|located in|human
+37399128|distant|microbiome|is linked to|DDF
+37399128|distant|microbiome|located in|human
+37399128|distant|DDF|change abundance|bacteria
+37399128|distant|DDF|change abundance|microbiome
+37399128|distant|DDF|target|human
+30705252|distant|microbiome|is linked to|DDF
+30705252|distant|DDF|target|animal
+30705252|distant|animal|used by|biomedical technique
+30705252|distant|DDF|target|human
+30705252|distant|DDF|affect|DDF
+30705252|distant|microbiome|located in|animal
+30705252|distant|microbiome|used by|biomedical technique
+30705252|distant|animal|used by|statistical technique
+36984872|distant|DDF|affect|DDF
+36984872|distant|DDF|is a|DDF
+36984872|distant|chemical|influence|DDF
+36984872|distant|DDF|target|human
+36815026|distant|dietary supplement|influence|drug
+36815026|distant|dietary supplement|influence|DDF
+36815026|distant|DDF|target|human
+31890161|distant|chemical|influence|DDF
+31890161|distant|DDF|influence|DDF
+31890161|distant|DDF|affect|DDF
+26633823|distant|microbiome|is linked to|DDF
+26633823|distant|drug|administered|animal
+26633823|distant|drug|change effect|DDF
+26633823|distant|microbiome|is linked to|animal
+26633823|distant|DDF|target|human
+26633823|distant|drug|influence|DDF
+26633823|distant|chemical|impact|microbiome
+26633823|distant|microbiome|located in|animal
+26633823|distant|drug|impact|microbiome
+37794974|distant|microbiome|located in|human
+37794974|distant|chemical|influence|DDF
+37794974|distant|DDF|target|human
+37774944|distant|dietary supplement|influence|DDF
+37774944|distant|DDF|is a|DDF
+37774944|distant|DDF|target|human
+37774944|distant|DDF|affect|DDF
+35513230|distant|microbiome|is linked to|DDF
+35513230|distant|chemical|influence|DDF
+35513230|distant|DDF|affect|DDF
+35513230|distant|chemical|is linked to|DDF
+35513230|distant|bacteria|influence|DDF
+28121994|distant|DDF|target|human
+31784958|distant|chemical|influence|DDF
+31784958|distant|DDF|affect|DDF
+37130861|distant|microbiome|is linked to|DDF
+37130861|distant|microbiome|located in|human
+37130861|distant|DDF|change abundance|bacteria
+37130861|distant|DDF|target|human
+37130861|distant|DDF|affect|DDF
+29138692|distant|bacteria|influence|DDF
+38275646|distant|microbiome|is linked to|DDF
+38275646|distant|drug|change effect|DDF
+38275646|distant|drug|affect|DDF
+38275646|distant|DDF|affect|DDF
+38275646|distant|drug|influence|DDF
+38275646|distant|drug|impact|bacteria
+37323145|distant|microbiome|is linked to|biomedical technique
+37323145|distant|microbiome|is linked to|DDF
+37323145|distant|DDF|target|human
+36674517|distant|anatomical location|is linked to|DDF
+36674517|distant|microbiome|is linked to|DDF
+37064156|distant|microbiome|is linked to|statistical technique
+37064156|distant|microbiome|is linked to|DDF
+37064156|distant|DDF|is a|DDF
+35743072|distant|chemical|influence|DDF
+35743072|distant|DDF|target|human
+35743072|distant|DDF|affect|DDF
+35743072|distant|chemical|impact|microbiome
+35743072|distant|gene|influence|DDF
+31317505|distant|microbiome|is linked to|DDF
+31317505|distant|chemical|influence|DDF
+31317505|distant|drug|influence|DDF
+34346706|distant|microbiome|is linked to|DDF
+34346706|distant|microbiome|located in|human
+34346706|distant|chemical|produced by|microbiome
+34346706|distant|microbiome|is linked to|chemical
+34346706|distant|DDF|target|human
+34346706|distant|DDF|affect|DDF
+34346706|distant|human|target|human
+34346706|distant|chemical|used by|biomedical technique
+34346706|distant|DDF|change abundance|microbiome
+34346706|distant|DDF|is a|DDF
+34346706|distant|human|used by|biomedical technique
+34346706|distant|microbiome|used by|biomedical technique
+36216843|distant|human|used by|biomedical technique
+36216843|distant|drug|target|human
+36216843|distant|DDF|target|human
+36216843|distant|DDF|affect|DDF
+30207256|distant|microbiome|is linked to|DDF
+32791113|distant|microbiome|is linked to|DDF
+34489756|distant|DDF|target|human
+34489756|distant|DDF|affect|DDF
+38410510|distant|microbiome|is linked to|DDF
+38410510|distant|DDF|is a|DDF
+38410510|distant|biomedical technique|is linked to|DDF
+38410510|distant|DDF|target|human
+36943505|distant|food|influence|DDF
+36943505|distant|microbiome|is linked to|DDF
+36943505|distant|DDF|is a|DDF
+36943505|distant|DDF|target|human
+36334762|distant|DDF|is a|DDF
+36334762|distant|biomedical technique|affect|DDF
+36334762|distant|microbiome|located in|anatomical location
+37110302|distant|microbiome|is linked to|DDF
+37110302|distant|DDF|strike|anatomical location
+37110302|distant|drug|impact|microbiome
+37110302|distant|DDF|change abundance|microbiome
+37110302|distant|DDF|target|human
+37110302|distant|DDF|affect|DDF
+37110302|distant|chemical|located in|anatomical location
+37110302|distant|DDF|target|animal
+37343494|distant|microbiome|influence|DDF
+37343494|distant|microbiome|is linked to|DDF
+37343494|distant|DDF|target|human
+37343494|distant|DDF|is a|DDF
+37343494|distant|microbiome|is linked to|anatomical location
+33307114|distant|food|influence|DDF
+33307114|distant|DDF|target|human
+33307114|distant|DDF|is a|DDF
+33307114|distant|food|impact|microbiome
+33307114|distant|dietary supplement|impact|microbiome
+38426291|distant|DDF|is a|DDF
+38426291|distant|DDF|target|human
+38426291|distant|DDF|affect|DDF
+31505196|distant|DDF|strike|anatomical location
+31505196|distant|animal|used by|biomedical technique
+31505196|distant|DDF|target|human
+31505196|distant|DDF|affect|DDF
+31505196|distant|chemical|influence|DDF
+31505196|distant|gene|located in|anatomical location
+31505196|distant|chemical|located in|anatomical location
+31505196|distant|gene|influence|DDF
+33334010|distant|food|influence|DDF
+33334010|distant|DDF|is a|DDF
+33334010|distant|DDF|target|human
+33334010|distant|DDF|affect|DDF
+34691318|distant|anatomical location|used by|biomedical technique
+34691318|distant|food|influence|DDF
+34691318|distant|microbiome|is linked to|DDF
+34691318|distant|dietary supplement|influence|DDF
+34691318|distant|dietary supplement|change effect|DDF
+34691318|distant|chemical|influence|DDF
+34691318|distant|dietary supplement|impact|microbiome
+36881113|distant|DDF|change abundance|microbiome
+36881113|distant|chemical|influence|DDF
+36881113|distant|DDF|is a|DDF
+36881113|distant|DDF|target|animal
+36881113|distant|chemical|change effect|DDF
+34329424|distant|microbiome|located in|human
+34329424|distant|dietary supplement|influence|DDF
+34329424|distant|DDF|strike|anatomical location
+37414494|distant|DDF|strike|anatomical location
+37414494|distant|drug|change effect|DDF
+37414494|distant|drug|impact|microbiome
+37414494|distant|DDF|target|human
+37414494|distant|DDF|affect|DDF
+37414494|distant|drug|influence|DDF
+37414494|distant|drug|influence|drug
+37414494|distant|DDF|target|animal
+30513869|distant|microbiome|is linked to|DDF
+30513869|distant|dietary supplement|influence|DDF
+30513869|distant|chemical|influence|DDF
+30513869|distant|chemical|impact|microbiome
+30513869|distant|dietary supplement|impact|microbiome
+37121952|distant|microbiome|is linked to|DDF
+37121952|distant|chemical|influence|DDF
+29031410|distant|microbiome|is linked to|DDF
+29243233|distant|DDF|target|human
+28783713|distant|microbiome|is linked to|DDF
+28783713|distant|DDF|change abundance|bacteria
+28783713|distant|DDF|change abundance|microbiome
+28783713|distant|animal|used by|biomedical technique
+28783713|distant|microbiome|located in|animal
+28783713|distant|DDF|impact|microbiome
+38421192|distant|microbiome|is linked to|DDF
+38421192|distant|dietary supplement|influence|DDF
+38421192|distant|animal|used by|biomedical technique
+38421192|distant|DDF|influence|DDF
+38421192|distant|dietary supplement|impact|bacteria
+38421192|distant|DDF|target|animal
+38540341|distant|drug|impact|microbiome
+38540341|distant|chemical|influence|DDF
+38540341|distant|chemical|impact|microbiome
+38540341|distant|microbiome|located in|animal
+38540341|distant|DDF|target|animal
+38540341|distant|gene|interact|chemical
+38540341|distant|chemical|change effect|DDF
+37943628|distant|microbiome|located in|human
+37943628|distant|human|used by|biomedical technique
+28610994|distant|microbiome|is linked to|DDF
+28610994|distant|chemical|influence|DDF
+28610994|distant|chemical|impact|microbiome
+28610994|distant|microbiome|located in|animal
+28610994|distant|DDF|target|animal
+28806201|distant|dietary supplement|influence|DDF
+28806201|distant|DDF|target|human
+37836527|distant|microbiome|located in|human
+37836527|distant|DDF|is a|DDF
+37836527|distant|DDF|target|human
+37836527|distant|food|impact|microbiome
+37777156|distant|chemical|strike|anatomical location
+37777156|distant|microbiome|is linked to|DDF
+37777156|distant|DDF|is a|DDF
+37777156|distant|chemical|influence|DDF
+38488556|distant|food|influence|DDF
+38488556|distant|microbiome|is linked to|DDF
+38488556|distant|chemical|influence|DDF
+38488556|distant|chemical|located in|anatomical location
+38488556|distant|DDF|is a|DDF
+37604976|distant|microbiome|located in|human
+37604976|distant|animal|used by|biomedical technique
+37604976|distant|DDF|target|human
+37604976|distant|DDF|affect|DDF
+37604976|distant|bacteria|located in|animal
+37604976|distant|DDF|target|animal
+34650532|distant|microbiome|located in|human
+34650532|distant|DDF|target|human
+34650532|distant|DDF|affect|DDF
+34650532|distant|bacteria|influence|DDF
+34650532|distant|human|used by|biomedical technique
+34650532|distant|microbiome|used by|biomedical technique
+34650532|distant|microbiome|is linked to|human
+30838027|distant|microbiome|is linked to|DDF
+30838027|distant|microbiome|located in|anatomical location
+30838027|distant|microbiome|located in|human
+30838027|distant|DDF|change abundance|bacteria
+30838027|distant|DDF|target|human
+35708472|distant|microbiome|is linked to|DDF
+35708472|distant|DDF|strike|anatomical location
+35708472|distant|DDF|change abundance|microbiome
+35708472|distant|DDF|target|human
+35708472|distant|DDF|affect|DDF
+35708472|distant|DDF|is a|DDF
+38562309|distant|DDF|target|human
+38562309|distant|DDF|affect|DDF
+37088645|distant|human|used by|biomedical technique
+34576191|distant|microbiome|located in|anatomical location
+33517890|distant|microbiome|is linked to|DDF
+33517890|distant|chemical|influence|DDF
+33517890|distant|chemical|impact|bacteria
+33517890|distant|bacteria|located in|animal
+33517890|distant|DDF|is a|DDF
+33517890|distant|bacteria|part of|microbiome
+33517890|distant|microbiome|located in|animal
+33517890|distant|chemical|influence|chemical
+33517890|distant|bacteria|located in|microbiome
+33517890|distant|DDF|target|animal
+33517890|distant|chemical|change effect|DDF
+30680947|distant|microbiome|is linked to|DDF
+30680947|distant|animal|located in|animal
+30680947|distant|DDF|target|animal
+30680947|distant|animal|used by|biomedical technique
+30680947|distant|bacteria|located in|animal
+30680947|distant|microbiome|located in|animal
+30680947|distant|animal|used by|statistical technique
+33497754|distant|microbiome|used by|biomedical technique
+33497754|distant|microbiome|located in|anatomical location
+33497754|distant|DDF|affect|DDF
+35181072|distant|dietary supplement|impact|microbiome
+35181072|distant|microbiome|is linked to|DDF
+35181072|distant|bacteria|located in|anatomical location
+35181072|distant|DDF|affect|DDF
+37879416|distant|chemical|located in|anatomical location
+37879416|distant|DDF|target|animal
+37879416|distant|DDF|target|human
+37879416|distant|DDF|affect|DDF
+32398374|distant|microbiome|located in|human
+32398374|distant|DDF|target|human
+32398374|distant|anatomical location|located in|human
+32398374|distant|chemical|located in|human
+32398374|distant|drug|influence|DDF
+32398374|distant|chemical|located in|anatomical location
+32398374|distant|drug|administered|human
+32398374|distant|DDF|target|animal
+32763534|distant|microbiome|located in|human
+32763534|distant|microbiome|is linked to|DDF
+32763534|distant|DDF|target|human
+38650872|distant|microbiome|is linked to|DDF
+38650872|distant|chemical|influence|DDF
+38650872|distant|DDF|target|human
+38650872|distant|biomedical technique|influence|DDF
+38650872|distant|DDF|is a|DDF
+34690981|distant|microbiome|is linked to|DDF
+30466372|distant|anatomical location|used by|biomedical technique
+30466372|distant|food|impact|microbiome
+30466372|distant|food|administered|animal
+30466372|distant|microbiome|located in|animal
+30466372|distant|microbiome|used by|biomedical technique
+30523432|distant|microbiome|is linked to|DDF
+30523432|distant|DDF|target|human
+30523432|distant|human|used by|statistical technique
+29802603|distant|anatomical location|is linked to|DDF
+29802603|distant|microbiome|is linked to|DDF
+29802603|distant|DDF|target|human
+29802603|distant|DDF|affect|DDF
+31628992|distant|microbiome|is linked to|DDF
+31628992|distant|DDF|is a|DDF
+31628992|distant|DDF|affect|DDF
+30544486|distant|microbiome|used by|biomedical technique
+30544486|distant|microbiome|is linked to|DDF
+30544486|distant|bacteria|influence|DDF
+30544486|distant|DDF|target|human
+30991255|distant|human|used by|biomedical technique
+30991255|distant|microbiome|is linked to|DDF
+30991255|distant|dietary supplement|influence|DDF
+30991255|distant|DDF|target|human
+32506238|distant|microbiome|is linked to|DDF
+32506238|distant|DDF|affect|DDF
+34980288|distant|microbiome|is linked to|DDF
+34980288|distant|dietary supplement|influence|DDF
+34980288|distant|microbiome|located in|human
+34980288|distant|drug|impact|microbiome
+34980288|distant|DDF|target|human
+34980288|distant|drug|influence|DDF
+34980288|distant|dietary supplement|impact|bacteria
+34980288|distant|dietary supplement|impact|microbiome
+34980288|distant|bacteria|influence|DDF
+34980288|distant|DDF|target|animal
+38663221|distant|microbiome|is linked to|drug
+38663221|distant|microbiome|used by|drug
+38663221|distant|microbiome|located in|human
+38663221|distant|drug|influence|DDF
+38663221|distant|DDF|is a|DDF
+38663221|distant|drug|impact|microbiome
+38045052|distant|microbiome|is linked to|DDF
+38045052|distant|dietary supplement|influence|DDF
+38045052|distant|drug|change effect|DDF
+38045052|distant|chemical|influence|DDF
+38045052|distant|drug|influence|DDF
+38045052|distant|drug|affect|DDF
+38045052|distant|DDF|is a|DDF
+38045052|distant|microbiome|located in|animal
+38045052|distant|DDF|target|animal
+28593878|distant|microbiome|affect|DDF
+28593878|distant|microbiome|is linked to|DDF
+28593878|distant|dietary supplement|influence|DDF
+28593878|distant|DDF|affect|DDF
+25772005|distant|bacteria|is linked to|DDF
+25772005|distant|microbiome|located in|animal
+33067643|distant|human|used by|biomedical technique
+33067643|distant|microbiome|located in|human
+33067643|distant|microbiome|is linked to|DDF
+33067643|distant|DDF|target|human
+38479554|distant|bacteria|located in|animal
+38479554|distant|chemical|located in|anatomical location
+38479554|distant|microbiome|located in|animal
+38479554|distant|microbiome|used by|biomedical technique
+38479554|distant|DDF|target|animal
+31745471|distant|bacteria|influence|DDF
+31745471|distant|microbiome|is linked to|DDF
+31745471|distant|DDF|is a|DDF
+31745471|distant|DDF|target|human
+37744899|distant|microbiome|is linked to|DDF
+37744899|distant|drug|change effect|human
+37744899|distant|microbiome|located in|human
+37744899|distant|drug|change effect|DDF
+37744899|distant|DDF|change abundance|bacteria
+37744899|distant|DDF|target|human
+37744899|distant|drug|influence|DDF
+37744899|distant|bacteria|interact|chemical
+37744899|distant|bacteria|influence|DDF
+37744899|distant|drug|impact|microbiome
+30271330|distant|microbiome|is linked to|DDF
+30271330|distant|microbiome|located in|anatomical location
+37664615|distant|chemical|impact|bacteria
+37664615|distant|chemical|influence|DDF
+37664615|distant|DDF|target|human
+38327077|distant|microbiome|is linked to|DDF
+38327077|distant|DDF|change abundance|microbiome
+38327077|distant|DDF|target|human
+38327077|distant|human|used by|biomedical technique
+38327077|distant|microbiome|used by|biomedical technique
+37741061|distant|DDF|strike|anatomical location
+37741061|distant|DDF|affect|DDF
+37741061|distant|chemical|target|animal
+37741061|distant|drug|target|animal
+37741061|distant|microbiome|located in|animal
+37741061|distant|microbiome|used by|biomedical technique
+37741061|distant|DDF|target|animal
+33206326|distant|dietary supplement|influence|DDF
+33206326|distant|DDF|target|human
+33206326|distant|chemical|influence|DDF
+33206326|distant|DDF|is a|DDF
+33206326|distant|dietary supplement|administered|human
+33206326|distant|bacteria|influence|DDF
+37157885|distant|DDF|strike|anatomical location
+37157885|distant|chemical|influence|DDF
+37157885|distant|DDF|affect|DDF
+37157885|distant|chemical|impact|bacteria
+37157885|distant|DDF|target|human
+37157885|distant|chemical|located in|anatomical location
+32918633|distant|microbiome|is linked to|DDF
+32918633|distant|dietary supplement|influence|DDF
+32918633|distant|microbiome|located in|human
+32918633|distant|DDF|change abundance|microbiome
+32918633|distant|microbiome|located in|animal
+32918633|distant|dietary supplement|impact|microbiome
+29542066|distant|chemical|located in|anatomical location
+29542066|distant|microbiome|is linked to|DDF
+29542066|distant|DDF|strike|anatomical location
+29542066|distant|DDF|change abundance|microbiome
+37108739|distant|microbiome|is linked to|DDF
+37108739|distant|DDF|affect|DDF
+32459513|distant|microbiome|is linked to|DDF
+32459513|distant|DDF|target|human
+32459513|distant|DDF|affect|DDF
+32459513|distant|chemical|impact|microbiome
+32459513|distant|dietary supplement|impact|microbiome
+36400238|distant|chemical|impact|microbiome
+36400238|distant|microbiome|is linked to|DDF
+36400238|distant|chemical|influence|DDF
+36990371|distant|food|impact|microbiome
+38003647|distant|microbiome|is linked to|DDF
+38003647|distant|microbiome|located in|human
+38003647|distant|DDF|change abundance|bacteria
+38003647|distant|DDF|target|human
+38003647|distant|bacteria|influence|DDF
+36804416|distant|DDF|is a|DDF
+36804416|distant|microbiome|is linked to|DDF
+36804416|distant|DDF|change abundance|microbiome
+36804416|distant|DDF|affect|DDF
+35163103|distant|microbiome|is linked to|DDF
+35163103|distant|DDF|is a|DDF
+35163103|distant|DDF|target|human
+29867531|distant|chemical|located in|anatomical location
+29867531|distant|microbiome|is linked to|chemical
+36283312|distant|drug|administered|animal
+36283312|distant|drug|change effect|DDF
+36283312|distant|chemical|influence|DDF
+36283312|distant|drug|influence|DDF
+36283312|distant|DDF|target|human
+36283312|distant|drug|affect|DDF
+36283312|distant|DDF|is a|DDF
+36283312|distant|drug|located in|animal
+36283312|distant|drug|impact|microbiome
+34034646|distant|microbiome|used by|biomedical technique
+33671569|distant|microbiome|is linked to|DDF
+33671569|distant|DDF|change abundance|microbiome
+34050205|distant|microbiome|located in|anatomical location
+34050205|distant|anatomical location|located in|animal
+34050205|distant|DDF|is a|DDF
+34050205|distant|microbiome|located in|animal
+34050205|distant|drug|impact|microbiome
+34050205|distant|chemical|located in|animal
+33490703|distant|dietary supplement|influence|DDF
+33490703|distant|dietary supplement|administered|human
+30781628|distant|microbiome|is linked to|DDF
+30781628|distant|DDF|is a|DDF
+34338703|distant|dietary supplement|impact|microbiome
+34338703|distant|microbiome|located in|human
+34338703|distant|DDF|target|human
+35307514|distant|microbiome|is linked to|DDF
+35307514|distant|microbiome|located in|human
+35307514|distant|DDF|is linked to|DDF
+35307514|distant|DDF|target|human
+35307514|distant|DDF|affect|DDF
+35307514|distant|DDF|is a|DDF
+34888340|distant|DDF|is a|DDF
+34888340|distant|DDF|target|human
+35032636|distant|DDF|strike|anatomical location
+35032636|distant|DDF|change abundance|microbiome
+35032636|distant|DDF|affect|DDF
+35032636|distant|chemical|located in|anatomical location
+35032636|distant|DDF|is a|DDF
+35032636|distant|anatomical location|is linked to|DDF
+38014294|distant|chemical|impact|bacteria
+38014294|distant|microbiome|used by|biomedical technique
+38014294|distant|drug|impact|microbiome
+37597865|distant|human|used by|biomedical technique
+37597865|distant|DDF|change abundance|microbiome
+37597865|distant|DDF|target|human
+38565567|distant|chemical|influence|microbiome
+38565567|distant|microbiome|is linked to|DDF
+38565567|distant|chemical|influence|DDF
+38565567|distant|chemical|impact|microbiome
+38565567|distant|chemical|located in|anatomical location
+38565567|distant|DDF|is a|DDF
+37016046|distant|dietary supplement|influence|DDF
+37016046|distant|dietary supplement|administered|animal
+37016046|distant|drug|administered|animal
+37016046|distant|dietary supplement|change effect|DDF
+37016046|distant|microbiome|located in|animal
+37016046|distant|animal|used by|DDF
+37016046|distant|bacteria|influence|DDF
+32224141|distant|drug|administered|animal
+32224141|distant|drug|change effect|DDF
+32224141|distant|DDF|target|human
+32224141|distant|drug|influence|DDF
+32224141|distant|drug|administered|human
+35185631|distant|microbiome|is linked to|DDF
+34617139|distant|bacteria|influence|animal
+34617139|distant|dietary supplement|influence|DDF
+34617139|distant|bacteria|influence|chemical
+34617139|distant|microbiome|affect|DDF
+34617139|distant|chemical|produced by|microbiome
+34617139|distant|DDF|change abundance|microbiome
+34617139|distant|chemical|influence|DDF
+34617139|distant|chemical|administered|animal
+34617139|distant|DDF|is a|DDF
+34617139|distant|microbiome|used by|biomedical technique
+34617139|distant|microbiome|located in|animal
+34617139|distant|chemical|influence|animal
+34617139|distant|bacteria|influence|DDF
+34617139|distant|DDF|target|animal
+34357070|distant|dietary supplement|influence|DDF
+34357070|distant|DDF|affect|human
+34357070|distant|DDF|target|human
+34357070|distant|DDF|affect|DDF
+34357070|distant|human|target|human
+34357070|distant|dietary supplement|administered|human
+34357070|distant|bacteria|influence|DDF
+34357070|distant|bacteria|is linked to|DDF
+32056905|distant|microbiome|is linked to|DDF
+32056905|distant|DDF|target|human
+32056905|distant|bacteria|part of|microbiome
+32056905|distant|human|used by|biomedical technique
+32056905|distant|microbiome|used by|biomedical technique
+36430144|distant|microbiome|is linked to|DDF
+36430144|distant|DDF|change abundance|bacteria
+36430144|distant|DDF|is a|DDF
+36430144|distant|DDF|affect|DDF
+36769029|distant|food|influence|DDF
+36769029|distant|dietary supplement|influence|DDF
+36769029|distant|DDF|is a|DDF
+37557965|distant|biomedical technique|influence|DDF
+37557965|distant|bacteria|influence|DDF
+37557965|distant|microbiome|is linked to|DDF
+37761988|distant|microbiome|is linked to|DDF
+37761988|distant|DDF|target|human
+37761988|distant|DDF|affect|DDF
+36972851|distant|microbiome|is linked to|DDF
+36972851|distant|microbiome|located in|anatomical location
+36972851|distant|chemical|influence|DDF
+36972851|distant|bacteria|located in|animal
+36972851|distant|chemical|located in|anatomical location
+36972851|distant|microbiome|located in|animal
+36972851|distant|DDF|target|animal
+34965376|distant|chemical|influence|DDF
+34965376|distant|microbiome|is linked to|DDF
+34965376|distant|DDF|target|human
+25415497|distant|food|influence|DDF
+25415497|distant|microbiome|is linked to|DDF
+25415497|distant|dietary supplement|influence|DDF
+25415497|distant|DDF|affect|DDF
+36542917|distant|microbiome|is linked to|DDF
+36542917|distant|DDF|affect|DDF
+36542917|distant|DDF|is a|DDF
+36542917|distant|bacteria|influence|DDF
+36542917|distant|bacteria|is linked to|DDF
+34835436|distant|dietary supplement|impact|microbiome
+34835436|distant|microbiome|is linked to|DDF
+34835436|distant|dietary supplement|influence|DDF
+34830242|distant|drug|influence|DDF
+34830242|distant|DDF|affect|DDF
+37994886|distant|microbiome|is linked to|DDF
+37994886|distant|microbiome|located in|anatomical location
+30223263|distant|dietary supplement|impact|microbiome
+30223263|distant|microbiome|is linked to|DDF
+30223263|distant|DDF|target|human
+30223263|distant|DDF|affect|DDF
+25567038|distant|microbiome|is linked to|DDF
+25567038|distant|dietary supplement|influence|DDF
+25567038|distant|DDF|is a|DDF
+25567038|distant|DDF|target|human
+31609697|distant|DDF|strike|anatomical location
+31609697|distant|chemical|influence|anatomical location
+31609697|distant|chemical|influence|DDF
+31609697|distant|DDF|target|human
+31609697|distant|DDF|affect|DDF
+31609697|distant|anatomical location|located in|human
+31609697|distant|chemical|located in|anatomical location
+31609697|distant|anatomical location|is linked to|DDF
+31870331|distant|microbiome|is linked to|DDF
+31870331|distant|dietary supplement|influence|DDF
+31870331|distant|microbiome|located in|human
+31870331|distant|dietary supplement|change effect|DDF
+31870331|distant|DDF|target|human
+31870331|distant|dietary supplement|impact|microbiome
+31870331|distant|human|used by|biomedical technique
+32046750|distant|microbiome|is linked to|DDF
+32046750|distant|dietary supplement|influence|DDF
+32046750|distant|DDF|target|human
+32046750|distant|DDF|affect|DDF
+32046750|distant|dietary supplement|administered|human
+32046750|distant|dietary supplement|impact|microbiome
+37237983|distant|DDF|target|human
+37237983|distant|DDF|affect|DDF
+37548294|distant|microbiome|located in|human
+37548294|distant|microbiome|is linked to|DDF
+37548294|distant|DDF|target|human
+34079079|distant|microbiome|located in|human
+34079079|distant|microbiome|is linked to|DDF
+38488514|distant|microbiome|is linked to|DDF
+38488514|distant|chemical|produced by|microbiome
+38488514|distant|chemical|influence|DDF
+38488514|distant|DDF|target|human
+38488514|distant|chemical|impact|microbiome
+38488514|distant|chemical|located in|anatomical location
+38488514|distant|microbiome|located in|animal
+38488514|distant|chemical|influence|chemical
+38488514|distant|DDF|target|animal
+38488514|distant|anatomical location|located in|animal
+38488514|distant|chemical|change effect|DDF
+32456274|distant|DDF|strike|anatomical location
+32456274|distant|chemical|influence|DDF
+36875518|distant|microbiome|located in|human
+36875518|distant|microbiome|used by|statistical technique
+36875518|distant|human|change abundance|bacteria
+36875518|distant|human|change abundance|microbiome
+36875518|distant|DDF|change abundance|bacteria
+36875518|distant|DDF|target|human
+36875518|distant|DDF|affect|DDF
+36875518|distant|DDF|change abundance|microbiome
+36875518|distant|DDF|influence|DDF
+36875518|distant|human|used by|biomedical technique
+36875518|distant|microbiome|used by|biomedical technique
+34042025|distant|DDF|affect|chemical
+34042025|distant|microbiome|is linked to|DDF
+31952509|distant|microbiome|is linked to|DDF
+31952509|distant|chemical|influence|DDF
+31952509|distant|DDF|is a|DDF
+31952509|distant|chemical|influence|chemical
+31952509|distant|bacteria|influence|DDF
+36843420|distant|chemical|influence|DDF
+36843420|distant|microbiome|is linked to|DDF
+36843420|distant|DDF|target|human
+36843420|distant|DDF|affect|DDF
+37447374|distant|gene|impact|microbiome
+37447374|distant|animal|used by|biomedical technique
+37447374|distant|chemical|located in|anatomical location
+37447374|distant|microbiome|located in|animal
+37447374|distant|microbiome|used by|biomedical technique
+38722169|distant|drug|influence|DDF
+38722169|distant|DDF|target|human
+38722169|distant|DDF|affect|DDF
+37004759|distant|microbiome|used by|biomedical technique
+37004759|distant|chemical|influence|DDF
+38693730|distant|microbiome|is linked to|DDF
+38693730|distant|dietary supplement|influence|DDF
+38693730|distant|DDF|target|human
+38693730|distant|DDF|influence|DDF
+38693730|distant|DDF|influence|dietary supplement
+36235760|distant|microbiome|is linked to|DDF
+36235760|distant|DDF|is a|DDF
+33407119|distant|microbiome|located in|human
+33407119|distant|human|change abundance|bacteria
+27793226|distant|DDF|target|human
+27793226|distant|DDF|affect|DDF
+38004795|distant|microbiome|is linked to|DDF
+38004795|distant|DDF|affect|DDF
+36571897|distant|drug|administered|animal
+36571897|distant|drug|change effect|DDF
+36571897|distant|microbiome|located in|human
+36571897|distant|drug|change effect|drug
+36571897|distant|drug|influence|DDF
+36571897|distant|DDF|target|human
+36571897|distant|DDF|affect|DDF
+36571897|distant|DDF|interact|chemical
+36571897|distant|chemical|located in|human
+36571897|distant|drug|administered|human
+36571897|distant|DDF|target|animal
+36571897|distant|chemical|located in|animal
+34550085|distant|microbiome|is linked to|DDF
+34550085|distant|dietary supplement|influence|DDF
+34550085|distant|DDF|target|human
+34550085|distant|dietary supplement|administered|human
+34589731|distant|chemical|produced by|microbiome
+34589731|distant|DDF|target|animal
+34589731|distant|animal|used by|biomedical technique
+34589731|distant|microbiome|located in|animal
+37569349|distant|microbiome|is linked to|DDF
+37569349|distant|dietary supplement|influence|DDF
+37569349|distant|DDF|is a|DDF
+37569349|distant|DDF|affect|DDF
+35393656|distant|bacteria|influence|DDF
+35393656|distant|microbiome|is linked to|DDF
+35393656|distant|DDF|affect|DDF
+32485204|distant|dietary supplement|influence|DDF
+32485204|distant|dietary supplement|administered|animal
+32485204|distant|dietary supplement|impact|bacteria
+32485204|distant|bacteria|influence|DDF
+32485204|distant|DDF|target|animal
+37007475|distant|microbiome|is linked to|DDF
+37007475|distant|microbiome|located in|human
+37007475|distant|DDF|change abundance|microbiome
+37007475|distant|DDF|target|human
+37007475|distant|DDF|affect|DDF
+37007475|distant|microbiome|used by|biomedical technique
+37007475|distant|drug|impact|microbiome
+37951975|distant|dietary supplement|influence|DDF
+37951975|distant|microbiome|located in|human
+37951975|distant|DDF|target|human
+37951975|distant|DDF|is a|DDF
+37951975|distant|dietary supplement|administered|human
+37951975|distant|dietary supplement|impact|microbiome
+37951975|distant|human|used by|biomedical technique
+38648770|distant|microbiome|influence|DDF
+38648770|distant|microbiome|is linked to|DDF
+38648770|distant|DDF|change abundance|bacteria
+38648770|distant|DDF|change abundance|microbiome
+38648770|distant|DDF|target|human
+25847918|distant|chemical|produced by|microbiome
+25847918|distant|DDF|target|human
+25847918|distant|DDF|affect|DDF
+25847918|distant|chemical|produced by|anatomical location
+25847918|distant|chemical|impact|microbiome
+25847918|distant|chemical|located in|anatomical location
+25847918|distant|animal|produced by|microbiome
+25847918|distant|DDF|is a|DDF
+25847918|distant|bacteria|produced by|microbiome
+25847918|distant|anatomical location|located in|animal
+36502554|distant|microbiome|is linked to|DDF
+36502554|distant|drug|impact|microbiome
+36502554|distant|DDF|target|human
+36502554|distant|drug|influence|DDF
+38627687|distant|chemical|impact|microbiome
+38627687|distant|human|used by|biomedical technique
+38627687|distant|DDF|target|human
+35057561|distant|microbiome|is linked to|DDF
+35057561|distant|DDF|change abundance|microbiome
+35057561|distant|DDF|affect|DDF
+34440563|distant|chemical|influence|DDF
+34440563|distant|drug|influence|DDF
+34440563|distant|DDF|target|human
+34440563|distant|DDF|affect|DDF
+36937822|distant|chemical|administered|human
+36937822|distant|chemical|influence|DDF
+36937822|distant|DDF|target|human
+36937822|distant|DDF|affect|DDF
+37956855|distant|bacteria|located in|human
+37956855|distant|anatomical location|located in|animal
+37956855|distant|drug|impact|bacteria
+37956855|distant|drug|change effect|DDF
+37956855|distant|microbiome|located in|human
+37956855|distant|DDF|target|human
+37956855|distant|drug|influence|DDF
+37956855|distant|chemical|located in|anatomical location
+37956855|distant|drug|target|animal
+37956855|distant|drug|administered|human
+37956855|distant|DDF|target|animal
+37956855|distant|chemical|located in|animal
+38589422|distant|microbiome|influence|DDF
+38589422|distant|microbiome|is linked to|DDF
+38589422|distant|microbiome|located in|human
+38589422|distant|DDF|target|human
+38589422|distant|DDF|affect|DDF
+38589422|distant|DDF|is a|DDF
+38589422|distant|microbiome|located in|animal
+38589422|distant|microbiome|used by|biomedical technique
+38589422|distant|DDF|target|animal
+38589422|distant|anatomical location|located in|animal
+37709081|distant|gene|influence|DDF
+37709081|distant|DDF|target|animal
+37709081|distant|DDF|is a|DDF
+37709081|distant|chemical|influence|DDF
+38332676|distant|drug|administered|animal
+38332676|distant|DDF|target|animal
+38332676|distant|DDF|affect|DDF
+38332676|distant|drug|influence|DDF
+38332676|distant|microbiome|used by|biomedical technique
+38332676|distant|drug|impact|microbiome
+38332676|distant|anatomical location|located in|animal
+34829694|distant|microbiome|is linked to|DDF
+34829694|distant|dietary supplement|influence|DDF
+34829694|distant|dietary supplement|administered|animal
+34829694|distant|dietary supplement|change effect|DDF
+34829694|distant|animal|used by|biomedical technique
+34829694|distant|DDF|affect|DDF
+34829694|distant|dietary supplement|impact|microbiome
+34829694|distant|microbiome|used by|biomedical technique
+34829694|distant|DDF|target|animal
+36593394|distant|microbiome|is linked to|drug
+36593394|distant|biomedical technique|target|human
+36593394|distant|DDF|target|human
+37690584|distant|chemical|influence|DDF
+37690584|distant|dietary supplement|influence|DDF
+37690584|distant|microbiome|located in|animal
+37690584|distant|DDF|affect|DDF
+33919680|distant|microbiome|located in|anatomical location
+38582087|distant|chemical|influence|DDF
+38582087|distant|DDF|target|human
+38582087|distant|chemical|impact|bacteria
+38582087|distant|bacteria|influence|DDF
+38582087|distant|DDF|target|animal
+35711028|distant|microbiome|is linked to|DDF
+35711028|distant|DDF|is a|DDF
+35711028|distant|DDF|target|human
+35711028|distant|DDF|affect|DDF
+28195358|distant|anatomical location|used by|biomedical technique
+28195358|distant|microbiome|is linked to|DDF
+28195358|distant|DDF|target|human
+28195358|distant|DDF|affect|DDF
+28195358|distant|human|used by|biomedical technique
+32149335|distant|microbiome|is linked to|DDF
+32149335|distant|microbiome|located in|anatomical location
+37199590|distant|microbiome|is linked to|DDF
+37199590|distant|microbiome|located in|human
+37199590|distant|DDF|target|human
+37199590|distant|DDF|affect|DDF
+37199590|distant|microbiome|located in|animal
+35656540|distant|microbiome|is linked to|DDF
+35656540|distant|DDF|target|human
+35656540|distant|DDF|affect|DDF
+38248533|distant|microbiome|located in|human
+38248533|distant|DDF|target|human
+38248533|distant|human|used by|biomedical technique
+38248533|distant|microbiome|used by|biomedical technique
+38248533|distant|DDF|impact|microbiome
+33067279|distant|dietary supplement|influence|DDF
+33067279|distant|dietary supplement|change effect|DDF
+33067279|distant|DDF|target|human
+33067279|distant|dietary supplement|administered|human
+33005892|distant|microbiome|is linked to|DDF
+33005892|distant|microbiome|located in|anatomical location
+33005892|distant|microbiome|located in|human
+33005892|distant|DDF|target|human
+33005892|distant|DDF|affect|DDF
+33005892|distant|human|used by|biomedical technique
+33005892|distant|microbiome|used by|biomedical technique
+33005892|distant|DDF|target|animal
+35189807|distant|drug|influence|DDF
+35189807|distant|chemical|located in|anatomical location
+35189807|distant|DDF|is a|DDF
+35189807|distant|drug|influence|chemical
+35189807|distant|drug|impact|microbiome
+35189807|distant|anatomical location|located in|animal
+34841505|distant|human|used by|biomedical technique
+34841505|distant|DDF|target|human
+34841505|distant|DDF|affect|DDF
+34280457|distant|microbiome|is linked to|DDF
+34280457|distant|microbiome|located in|human
+34280457|distant|DDF|change abundance|microbiome
+34280457|distant|chemical|influence|DDF
+34280457|distant|chemical|impact|microbiome
+34280457|distant|microbiome|located in|animal
+34280457|distant|dietary supplement|impact|microbiome
+28536926|distant|microbiome|is linked to|DDF
+28536926|distant|microbiome|located in|human
+28536926|distant|DDF|change abundance|bacteria
+28536926|distant|DDF|target|human
+28536926|distant|human|used by|biomedical technique
+28536926|distant|microbiome|is linked to|human
+37375029|distant|microbiome|is linked to|DDF
+37375029|distant|dietary supplement|influence|DDF
+37375029|distant|DDF|affect|DDF
+37375029|distant|DDF|is a|DDF
+37375029|distant|dietary supplement|is linked to|DDF
+37046334|distant|drug|target|human
+37046334|distant|microbiome|located in|human
+37046334|distant|DDF|target|anatomical location
+37046334|distant|DDF|target|human
+37046334|distant|biomedical technique|influence|DDF
+37046334|distant|dietary supplement|impact|microbiome
+37046334|distant|human|used by|biomedical technique
+37046334|distant|drug|administered|human
+37046334|distant|drug|impact|microbiome
+37046334|distant|anatomical location|target|human
+34650506|distant|microbiome|influence|DDF
+34650506|distant|microbiome|is linked to|DDF
+34650506|distant|DDF|is a|DDF
+34650506|distant|DDF|affect|DDF
+38350544|distant|chemical|impact|microbiome
+38350544|distant|chemical|influence|DDF
+37989444|distant|gene|influence|chemical
+37989444|distant|DDF|change abundance|microbiome
+37989444|distant|chemical|influence|DDF
+34376593|distant|bacteria|influence|DDF
+34376593|distant|microbiome|is linked to|DDF
+34376593|distant|dietary supplement|influence|DDF
+34376593|distant|microbiome|located in|anatomical location
+33422641|distant|drug|change effect|DDF
+33422641|distant|chemical|located in|anatomical location
+33422641|distant|microbiome|located in|animal
+33422641|distant|DDF|target|animal
+33422641|distant|anatomical location|located in|animal
+35443740|distant|microbiome|is linked to|DDF
+35443740|distant|DDF|is a|DDF
+35443740|distant|DDF|affect|DDF
+37239020|distant|gene|administered|human
+37239020|distant|microbiome|located in|human
+37239020|distant|DDF|target|human
+37239020|distant|chemical|influence|DDF
+37239020|distant|DDF|affect|DDF
+38458803|distant|DDF|target|human
+32093762|distant|human|used by|biomedical technique
+38176929|distant|microbiome|is linked to|DDF
+38176929|distant|microbiome|located in|anatomical location
+38176929|distant|microbiome|located in|human
+38176929|distant|chemical|influence|DDF
+38176929|distant|DDF|target|human
+38176929|distant|DDF|affect|DDF
+38176929|distant|DDF|is a|DDF
+33428888|distant|DDF|is a|DDF
+33428888|distant|chemical|influence|DDF
+38436218|distant|chemical|located in|microbiome
+29276734|distant|microbiome|is linked to|DDF
+38700338|distant|microbiome|located in|human
+38700338|distant|DDF|change abundance|bacteria
+38700338|distant|DDF|change abundance|microbiome
+38700338|distant|DDF|target|human
+38700338|distant|DDF|affect|DDF
+38700338|distant|DDF|change effect|DDF
+38700338|distant|human|used by|biomedical technique
+35477134|distant|drug|impact|microbiome
+35477134|distant|dietary supplement|change effect|DDF
+35477134|distant|drug|impact|animal
+35477134|distant|microbiome|located in|animal
+35477134|distant|microbiome|used by|biomedical technique
+35477134|distant|DDF|target|animal
+32982910|distant|microbiome|is linked to|DDF
+32982910|distant|DDF|affect|DDF
+32566740|distant|microbiome|is linked to|DDF
+32566740|distant|DDF|strike|anatomical location
+32566740|distant|DDF|change abundance|bacteria
+32566740|distant|DDF|change abundance|microbiome
+32566740|distant|DDF|affect|DDF
+31273718|distant|microbiome|is linked to|DDF
+31273718|distant|DDF|is a|DDF
+31273718|distant|DDF|target|human
+31273718|distant|DDF|affect|DDF
+31812830|distant|microbiome|is linked to|DDF
+30532687|distant|microbiome|is linked to|DDF
+30532687|distant|DDF|affect|DDF
+37228982|distant|dietary supplement|influence|DDF
+37228982|distant|DDF|target|human
+37228982|distant|microbiome|located in|animal
+34589003|distant|DDF|change abundance|gene
+34589003|distant|microbiome|is linked to|DDF
+34589003|distant|DDF|change abundance|bacteria
+34589003|distant|DDF|target|human
+34589003|distant|human|used by|biomedical technique
+34589003|distant|microbiome|used by|biomedical technique
+37659269|distant|microbiome|is linked to|DDF
+37659269|distant|animal|used by|biomedical technique
+37659269|distant|DDF|target|human
+37659269|distant|DDF|affect|DDF
+37659269|distant|chemical|influence|DDF
+37659269|distant|microbiome|located in|animal
+37659269|distant|DDF|target|animal
+37659269|distant|chemical|located in|animal
+37181872|distant|microbiome|is linked to|DDF
+37181872|distant|DDF|change abundance|microbiome
+26810963|distant|food|influence|DDF
+26810963|distant|dietary supplement|influence|DDF
+26810963|distant|DDF|target|human
+26810963|distant|dietary supplement|administered|human
+26810963|distant|dietary supplement|impact|microbiome
+37619773|distant|microbiome|is linked to|DDF
+37619773|distant|chemical|affect|DDF
+37619773|distant|DDF|target|human
+37619773|distant|chemical|influence|DDF
+37619773|distant|chemical|located in|human
+31341063|distant|anatomical location|used by|biomedical technique
+31341063|distant|animal|used by|biomedical technique
+31341063|distant|gene|located in|anatomical location
+31341063|distant|chemical|located in|anatomical location
+31341063|distant|microbiome|located in|animal
+31341063|distant|gene|located in|animal
+31341063|distant|anatomical location|located in|animal
+36389228|distant|DDF|is a|DDF
+36389228|distant|microbiome|is linked to|DDF
+36389228|distant|microbiome|located in|anatomical location
+36389228|distant|DDF|target|human
+36750613|distant|bacteria|located in|human
+36750613|distant|microbiome|is linked to|DDF
+36750613|distant|DDF|strike|anatomical location
+36750613|distant|biomedical technique|target|human
+36750613|distant|microbiome|located in|human
+36750613|distant|DDF|change abundance|bacteria
+36750613|distant|DDF|target|human
+36750613|distant|human|target|human
+34853754|distant|microbiome|is linked to|DDF
+34853754|distant|DDF|affect|human
+34853754|distant|DDF|target|human
+34853754|distant|DDF|affect|DDF
+34853754|distant|DDF|is a|DDF
+36877601|distant|microbiome|is linked to|DDF
+36877601|distant|dietary supplement|administered|animal
+36877601|distant|chemical|influence|DDF
+36877601|distant|DDF|affect|DDF
+36877601|distant|chemical|impact|microbiome
+36877601|distant|dietary supplement|impact|microbiome
+26590418|distant|microbiome|located in|human
+26590418|distant|DDF|affect|DDF
+38613114|distant|DDF|affect|DDF
+36672595|distant|chemical|produced by|microbiome
+36672595|distant|chemical|influence|DDF
+36672595|distant|DDF|affect|DDF
+36672595|distant|chemical|impact|microbiome
+36672595|distant|DDF|is a|DDF
+33669008|distant|microbiome|is linked to|DDF
+33669008|distant|chemical|influence|DDF
+33669008|distant|DDF|target|human
+32799901|distant|chemical|located in|anatomical location
+32799901|distant|microbiome|used by|biomedical technique
+32799901|distant|microbiome|located in|animal
+32799901|distant|bacteria|influence|DDF
+32799901|distant|DDF|target|animal
+32799901|distant|anatomical location|located in|animal
+33087991|distant|microbiome|is linked to|DDF
+33087991|distant|DDF|target|human
+38007616|distant|drug|influence|DDF
+38007616|distant|dietary supplement|influence|DDF
+38007616|distant|DDF|affect|DDF
+31931033|distant|microbiome|is linked to|DDF
+31931033|distant|dietary supplement|influence|DDF
+31931033|distant|dietary supplement|administered|animal
+31931033|distant|gene|located in|animal
+31931033|distant|dietary supplement|change effect|DDF
+31931033|distant|animal|used by|biomedical technique
+31931033|distant|food|administered|animal
+31931033|distant|DDF|is a|DDF
+31931033|distant|dietary supplement|impact|bacteria
+31931033|distant|bacteria|influence|DDF
+31931033|distant|bacteria|used by|biomedical technique
+31931033|distant|DDF|target|animal
+33717189|distant|microbiome|influence|DDF
+33717189|distant|DDF|is linked to|DDF
+33717189|distant|chemical|influence|DDF
+33717189|distant|chemical|impact|bacteria
+33717189|distant|DDF|influence|DDF
+30611275|distant|dietary supplement|administered|human
+37836654|distant|microbiome|is linked to|DDF
+37836654|distant|dietary supplement|influence|DDF
+37836654|distant|microbiome|located in|human
+37836654|distant|chemical|influence|DDF
+37836654|distant|DDF|target|human
+37836654|distant|DDF|is a|DDF
+37836654|distant|microbiome|located in|animal
+37836654|distant|DDF|target|animal
+26092111|distant|bacteria|influence|DDF
+26092111|distant|microbiome|is linked to|DDF
+26092111|distant|DDF|influence|DDF
+26092111|distant|DDF|affect|DDF
+34171417|distant|bacteria|influence|DDF
+34171417|distant|microbiome|is linked to|DDF
+33918462|distant|microbiome|is linked to|biomedical technique
+33918462|distant|microbiome|is linked to|DDF
+38390241|distant|chemical|impact|microbiome
+38390241|distant|microbiome|is linked to|DDF
+38390241|distant|DDF|is a|DDF
+38390241|distant|chemical|influence|DDF
+32534583|distant|DDF|is a|DDF
+32534583|distant|DDF|target|human
+32534583|distant|DDF|affect|DDF
+36871911|distant|DDF|target|human
+37927277|distant|chemical|influence|DDF
+35055364|distant|microbiome|is linked to|DDF
+35055364|distant|DDF|is a|DDF
+35055364|distant|DDF|target|human
+38317780|distant|anatomical location|located in|animal
+38317780|distant|microbiome|located in|animal
+37218177|distant|dietary supplement|influence|DDF
+37218177|distant|DDF|target|microbiome
+37218177|distant|microbiome|located in|human
+37218177|distant|DDF|target|human
+37218177|distant|dietary supplement|administered|human
+37218177|distant|dietary supplement|impact|microbiome
+36466165|distant|microbiome|influence|DDF
+36466165|distant|microbiome|is linked to|DDF
+31859119|distant|microbiome|used by|drug
+31859119|distant|microbiome|is linked to|DDF
+31859119|distant|drug|change effect|DDF
+31859119|distant|DDF|change abundance|microbiome
+31859119|distant|DDF|target|human
+31859119|distant|DDF|affect|DDF
+31859119|distant|drug|influence|DDF
+31859119|distant|DDF|influence|DDF
+31859119|distant|drug|impact|microbiome
+33252574|distant|dietary supplement|impact|microbiome
+33252574|distant|microbiome|is linked to|DDF
+33252574|distant|DDF|is a|DDF
+37391847|distant|human|used by|biomedical technique
+37391847|distant|microbiome|is linked to|DDF
+37391847|distant|DDF|change abundance|microbiome
+37391847|distant|human|used by|statistical technique
+37686747|distant|dietary supplement|impact|microbiome
+37686747|distant|dietary supplement|influence|DDF
+37686747|distant|DDF|affect|DDF
+34869080|distant|microbiome|is linked to|DDF
+34869080|distant|microbiome|used by|statistical technique
+34869080|distant|DDF|change abundance|bacteria
+34869080|distant|DDF|change abundance|microbiome
+34869080|distant|DDF|target|human
+34869080|distant|DDF|affect|DDF
+34869080|distant|human|used by|biomedical technique
+34869080|distant|microbiome|used by|biomedical technique
+37962812|distant|dietary supplement|influence|DDF
+37962812|distant|microbiome|located in|human
+37962812|distant|DDF|change abundance|microbiome
+37962812|distant|DDF|target|human
+37962812|distant|human|target|human
+37962812|distant|drug|impact|microbiome
+38357211|distant|microbiome|is linked to|DDF
+38357211|distant|DDF|affect|DDF
+38357211|distant|DDF|is a|DDF
+38357211|distant|microbiome|located in|animal
+38357211|distant|DDF|target|animal
+32032668|distant|anatomical location|is linked to|DDF
+32032668|distant|DDF|target|human
+31356838|distant|DDF|target|human
+31356838|distant|DDF|affect|DDF
+38381349|distant|bacteria|influence|DDF
+38381349|distant|microbiome|used by|biomedical technique
+38381349|distant|DDF|target|human
+38381349|distant|dietary supplement|administered|human
+38660662|distant|bacteria|influence|DDF
+38660662|distant|microbiome|is linked to|DDF
+38226944|distant|microbiome|located in|human
+38226944|distant|microbiome|is linked to|DDF
+38226944|distant|DDF|change abundance|microbiome
+38226944|distant|DDF|affect|DDF
+38106100|distant|microbiome|is linked to|DDF
+38106100|distant|bacteria|is linked to|DDF
+38020771|distant|dietary supplement|impact|microbiome
+38020771|distant|human|used by|biomedical technique
+38020771|distant|microbiome|is linked to|DDF
+38020771|distant|DDF|target|human
+33488420|distant|microbiome|is linked to|DDF
+37340511|distant|microbiome|is linked to|DDF
+37340511|distant|dietary supplement|influence|DDF
+37340511|distant|microbiome|located in|human
+37340511|distant|DDF|change abundance|microbiome
+37340511|distant|DDF|target|human
+37340511|distant|DDF|affect|DDF
+37340511|distant|DDF|is a|DDF
+30499231|distant|dietary supplement|influence|DDF
+30499231|distant|DDF|target|human
+30499231|distant|DDF|affect|DDF
+30499231|distant|DDF|is a|DDF
+30499231|distant|dietary supplement|administered|human
+32062351|distant|bacteria|influence|DDF
+32062351|distant|drug|impact|bacteria
+32062351|distant|DDF|change abundance|bacteria
+32062351|distant|drug|impact|microbiome
+30894059|distant|microbiome|is linked to|DDF
+30894059|distant|microbiome|located in|human
+30894059|distant|DDF|change abundance|bacteria
+30894059|distant|DDF|change abundance|microbiome
+30894059|distant|DDF|target|human
+30894059|distant|DDF|affect|DDF
+30894059|distant|human|used by|biomedical technique
+37049619|distant|bacteria|located in|human
+37049619|distant|microbiome|is linked to|DDF
+37049619|distant|microbiome|located in|human
+37049619|distant|DDF|target|human
+37049619|distant|bacteria|target|human
+37049619|distant|DDF|is a|DDF
+37049619|distant|human|used by|biomedical technique
+36650572|distant|microbiome|is linked to|DDF
+36650572|distant|DDF|affect|DDF
+38649365|distant|microbiome|is linked to|DDF
+38649365|distant|food|administered|human
+38649365|distant|microbiome|located in|human
+38649365|distant|DDF|target|human
+38649365|distant|food|impact|microbiome
+38649365|distant|human|used by|biomedical technique
+38649365|distant|microbiome|used by|biomedical technique
+31954994|distant|DDF|target|human
+31954994|distant|drug|influence|DDF
+31954994|distant|DDF|affect|DDF
+31954994|distant|chemical|located in|anatomical location
+31954994|distant|DDF|is a|DDF
+36376318|distant|human|used by|biomedical technique
+36376318|distant|microbiome|is linked to|DDF
+36376318|distant|DDF|strike|anatomical location
+36376318|distant|human|used by|statistical technique
+35145822|distant|food|influence|DDF
+35145822|distant|microbiome|is linked to|DDF
+35145822|distant|DDF|target|human
+35145822|distant|DDF|affect|DDF
+35145822|distant|human|influence|DDF
+31275138|distant|DDF|strike|anatomical location
+31275138|distant|DDF|target|human
+31275138|distant|DDF|affect|DDF
+31275138|distant|chemical|located in|anatomical location
+31275138|distant|DDF|is a|DDF
+31275138|distant|DDF|target|animal
+36786865|distant|drug|administered|animal
+36786865|distant|drug|change effect|DDF
+36786865|distant|DDF|target|human
+36786865|distant|DDF|affect|DDF
+36786865|distant|drug|influence|DDF
+36786865|distant|drug|affect|DDF
+36786865|distant|drug|administered|human
+36786865|distant|DDF|target|animal
+34876830|distant|DDF|is linked to|DDF
+34876830|distant|microbiome|is linked to|DDF
+34876830|distant|dietary supplement|influence|DDF
+34876830|distant|DDF|affect|DDF
+30415609|distant|food|influence|DDF
+30415609|distant|microbiome|located in|anatomical location
+30415609|distant|DDF|affect|DDF
+34053243|distant|microbiome|is linked to|DDF
+34053243|distant|DDF|is a|DDF
+34053243|distant|DDF|target|human
+34053243|distant|DDF|affect|DDF
+37150361|distant|microbiome|is linked to|DDF
+34474339|distant|microbiome|is linked to|DDF
+34474339|distant|DDF|change abundance|microbiome
+34474339|distant|DDF|target|human
+34474339|distant|chemical|influence|DDF
+34474339|distant|DDF|affect|DDF
+34474339|distant|microbiome|located in|animal
+34474339|distant|DDF|target|animal
+34238926|distant|microbiome|is linked to|DDF
+34238926|distant|DDF|change abundance|bacteria
+34238926|distant|DDF|target|human
+35111696|distant|chemical|impact|microbiome
+35111696|distant|microbiome|is linked to|DDF
+35111696|distant|chemical|influence|DDF
+35111696|distant|DDF|affect|DDF
+36803912|distant|DDF|is a|DDF
+36969812|distant|chemical|produced by|microbiome
+36969812|distant|microbiome|located in|animal
+36969812|distant|chemical|administered|animal
+36969812|distant|chemical|impact|microbiome
+36969812|distant|chemical|located in|anatomical location
+36969812|distant|food|impact|microbiome
+36969812|distant|chemical|influence|chemical
+30718848|distant|drug|impact|bacteria
+30718848|distant|microbiome|is linked to|DDF
+30718848|distant|DDF|change abundance|bacteria
+33171595|distant|chemical|impact|microbiome
+33171595|distant|microbiome|used by|biomedical technique
+33171595|distant|microbiome|is linked to|DDF
+33171595|distant|dietary supplement|administered|human
+30525951|distant|bacteria|influence|DDF
+30525951|distant|DDF|target|human
+30525951|distant|dietary supplement|administered|human
+28680792|distant|microbiome|used by|biomedical technique
+28680792|distant|DDF|change abundance|microbiome
+28680792|distant|DDF|target|human
+36278360|distant|microbiome|is linked to|DDF
+36278360|distant|chemical|affect|DDF
+36278360|distant|microbiome|located in|human
+36278360|distant|DDF|change abundance|microbiome
+36278360|distant|DDF|target|human
+37069399|distant|microbiome|is linked to|DDF
+37069399|distant|microbiome|target|human
+37069399|distant|microbiome|located in|human
+37069399|distant|DDF|change abundance|bacteria
+37069399|distant|DDF|target|human
+37069399|distant|chemical|impact|microbiome
+37069399|distant|DDF|is a|DDF
+37069399|distant|microbiome|located in|animal
+37069399|distant|human|used by|biomedical technique
+37069399|distant|microbiome|used by|biomedical technique
+38405047|distant|microbiome|located in|human
+38405047|distant|microbiome|is linked to|DDF
+38405047|distant|DDF|target|human
+38405047|distant|DDF|affect|DDF
+35110993|distant|microbiome|is linked to|DDF
+35110993|distant|dietary supplement|influence|DDF
+35110993|distant|DDF|target|human
+35110993|distant|DDF|affect|DDF
+35110993|distant|dietary supplement|influence|microbiome
+33521857|distant|microbiome|is linked to|DDF
+33521857|distant|DDF|target|human
+33521857|distant|microbiome|located in|animal
+33487078|distant|food|influence|DDF
+33487078|distant|microbiome|is linked to|DDF
+33487078|distant|chemical|influence|DDF
+31124390|distant|microbiome|is linked to|DDF
+31124390|distant|drug|impact|microbiome
+31124390|distant|biomedical technique|influence|DDF
+31124390|distant|microbiome|located in|animal
+31124390|distant|DDF|target|animal
+36693863|distant|microbiome|used by|biomedical technique
+36693863|distant|microbiome|is linked to|DDF
+31390549|distant|microbiome|is linked to|DDF
+31390549|distant|drug|influence|DDF
+36549572|distant|microbiome|is linked to|DDF
+36549572|distant|DDF|target|human
+37981054|distant|microbiome|is linked to|DDF
+37981054|distant|DDF|affect|DDF
+37498481|distant|microbiome|is linked to|DDF
+25634609|distant|microbiome|is linked to|DDF
+37690779|distant|dietary supplement|influence|DDF
+37690779|distant|microbiome|located in|human
+37690779|distant|dietary supplement|change effect|DDF
+37690779|distant|dietary supplement|impact|bacteria
+37690779|distant|dietary supplement|impact|microbiome
+37690779|distant|drug|impact|bacteria
+29407287|distant|microbiome|is linked to|DDF
+29407287|distant|DDF|is a|DDF
+29407287|distant|DDF|affect|DDF
+28368029|distant|microbiome|is linked to|DDF
+28368029|distant|animal|used by|biomedical technique
+28368029|distant|DDF|target|human
+28368029|distant|bacteria|located in|animal
+28368029|distant|bacteria|part of|microbiome
+28368029|distant|microbiome|located in|animal
+28368029|distant|bacteria|influence|DDF
+28368029|distant|DDF|target|animal
+37852343|distant|DDF|strike|anatomical location
+37852343|distant|chemical|influence|DDF
+37852343|distant|DDF|target|human
+37852343|distant|drug|influence|DDF
+37852343|distant|DDF|affect|DDF
+37852343|distant|chemical|located in|anatomical location
+37852343|distant|DDF|is a|DDF
+36583066|distant|gene|located in|anatomical location
+36583066|distant|drug|impact|microbiome
+33657381|distant|microbiome|located in|human
+33657381|distant|biomedical technique|target|human
+33657381|distant|chemical|influence|DDF
+33657381|distant|DDF|target|human
+33657381|distant|DDF|affect|DDF
+34348619|distant|DDF|target|human
+34348619|distant|DDF|affect|DDF
+36601680|distant|dietary supplement|impact|bacteria
+36601680|distant|dietary supplement|influence|DDF
+36601680|distant|DDF|is a|DDF
+36601680|distant|DDF|affect|DDF
+26242295|distant|chemical|target|human
+26242295|distant|biomedical technique|target|human
+26242295|distant|DDF|target|human
+26242295|distant|DDF|affect|DDF
+26242295|distant|dietary supplement|administered|human
+35645785|distant|microbiome|is linked to|DDF
+35645785|distant|microbiome|located in|human
+35645785|distant|DDF|target|human
+35645785|distant|human|used by|biomedical technique
+35645785|distant|microbiome|used by|biomedical technique
+30794085|distant|microbiome|located in|human
+30794085|distant|microbiome|is linked to|DDF
+30794085|distant|human|change abundance|bacteria
+30794085|distant|DDF|target|human
+31722195|distant|chemical|influence|DDF
+31722195|distant|human|used by|human
+31722195|distant|DDF|target|human
+38351227|distant|bacteria|influence|DDF
+38351227|distant|microbiome|is linked to|DDF
+38351227|distant|DDF|affect|DDF
+37771782|distant|anatomical location|used by|biomedical technique
+37771782|distant|microbiome|is linked to|DDF
+37771782|distant|dietary supplement|influence|DDF
+37771782|distant|chemical|influence|DDF
+37771782|distant|DDF|affect|DDF
+37771782|distant|dietary supplement|impact|microbiome
+37513676|distant|food|influence|DDF
+37513676|distant|microbiome|is linked to|DDF
+37513676|distant|dietary supplement|influence|DDF
+37513676|distant|food|impact|microbiome
+37513676|distant|DDF|target|human
+37513676|distant|DDF|affect|DDF
+37513676|distant|chemical|influence|DDF
+37513676|distant|chemical|impact|microbiome
+37513676|distant|dietary supplement|impact|bacteria
+37513676|distant|dietary supplement|impact|microbiome
+37759312|distant|microbiome|located in|human
+37759312|distant|microbiome|is linked to|DDF
+37759312|distant|bacteria|is linked to|DDF
+37759312|distant|DDF|target|human
+38582855|distant|microbiome|is linked to|DDF
+38582855|distant|DDF|target|human
+38421082|distant|human|used by|biomedical technique
+38421082|distant|anatomical location|is linked to|DDF
+38421082|distant|microbiome|is linked to|DDF
+38421082|distant|bacteria|located in|anatomical location
+33389842|distant|DDF|strike|anatomical location
+33389842|distant|DDF|target|human
+33389842|distant|DDF|affect|DDF
+37233680|distant|microbiome|is linked to|DDF
+37233680|distant|dietary supplement|influence|DDF
+37233680|distant|DDF|target|human
+37233680|distant|DDF|affect|DDF
+37233680|distant|dietary supplement|administered|human
+37233680|distant|human|used by|biomedical technique
+36209779|distant|microbiome|is linked to|DDF
+36209779|distant|human|change abundance|microbiome
+36209779|distant|DDF|change abundance|microbiome
+36209779|distant|DDF|target|human
+37925207|distant|microbiome|is linked to|DDF
+35572407|distant|microbiome|is linked to|DDF
+35572407|distant|microbiome|located in|anatomical location
+35572407|distant|chemical|influence|DDF
+35572407|distant|DDF|affect|DDF
+32899236|distant|dietary supplement|impact|bacteria
+32899236|distant|microbiome|is linked to|DDF
+32899236|distant|DDF|target|human
+32899236|distant|drug|influence|DDF
+31998605|distant|chemical|impact|microbiome
+31215725|distant|drug|change effect|DDF
+31215725|distant|DDF|target|human
+31215725|distant|drug|influence|DDF
+31215725|distant|DDF|is a|DDF
+31215725|distant|drug|administered|human
+36406749|distant|microbiome|is linked to|DDF
+36406749|distant|DDF|strike|anatomical location
+36406749|distant|microbiome|used by|dietary supplement
+36406749|distant|DDF|target|human
+36406749|distant|DDF|is a|DDF
+36986226|distant|microbiome|is linked to|DDF
+36986226|distant|DDF|affect|DDF
+34518605|distant|microbiome|is linked to|DDF
+34518605|distant|drug|target|human
+34518605|distant|microbiome|target|human
+34518605|distant|microbiome|located in|human
+34518605|distant|DDF|target|human
+34518605|distant|human|used by|biomedical technique
+34518605|distant|microbiome|is linked to|anatomical location
+34518605|distant|microbiome|used by|biomedical technique
+38694913|distant|chemical|influence|DDF
+38694913|distant|chemical|impact|bacteria
+38694913|distant|bacteria|is linked to|biomedical technique
+38694913|distant|DDF|is a|DDF
+38694913|distant|bacteria|influence|DDF
+38694913|distant|bacteria|is linked to|DDF
+32130662|distant|DDF|is linked to|DDF
+32130662|distant|microbiome|is linked to|DDF
+32130662|distant|DDF|affect|DDF
+36516898|distant|microbiome|is linked to|drug
+36516898|distant|microbiome|is linked to|DDF
+36516898|distant|DDF|target|human
+36516898|distant|DDF|affect|DDF
+36516898|distant|drug|affect|DDF
+36516898|distant|DDF|is a|DDF
+37808915|distant|microbiome|is linked to|DDF
+37808915|distant|microbiome|located in|human
+37808915|distant|human|change abundance|bacteria
+37808915|distant|DDF|change abundance|bacteria
+37808915|distant|DDF|target|human
+37808915|distant|human|used by|biomedical technique
+34488774|distant|chemical|located in|anatomical location
+34488774|distant|chemical|influence|DDF
+34488774|distant|chemical|located in|human
+36353491|distant|bacteria|influence|DDF
+36353491|distant|microbiome|located in|anatomical location
+36353491|distant|DDF|affect|DDF
+31327219|distant|DDF|strike|anatomical location
+31327219|distant|DDF|target|human
+31327219|distant|DDF|affect|DDF
+31327219|distant|DDF|located in|human
+31327219|distant|human|used by|biomedical technique
+38203294|distant|food|influence|DDF
+38203294|distant|dietary supplement|influence|DDF
+38203294|distant|chemical|influence|DDF
+38203294|distant|DDF|affect|DDF
+38203294|distant|chemical|located in|anatomical location
+38203294|distant|DDF|is a|DDF
+35996352|distant|DDF|target|human
+35996352|distant|dietary supplement|influence|DDF
+35996352|distant|dietary supplement|influence|chemical
+35996352|distant|dietary supplement|administered|human
+33005148|distant|microbiome|is linked to|DDF
+33005148|distant|animal|used by|biomedical technique
+33005148|distant|drug|influence|DDF
+33005148|distant|microbiome|located in|animal
+33005148|distant|DDF|target|animal
+37232729|distant|dietary supplement|target|human
+37232729|distant|microbiome|is linked to|DDF
+33035575|distant|drug|influence|microbiome
+33035575|distant|DDF|target|human
+33035575|distant|drug|influence|DDF
+38170072|distant|microbiome|is linked to|DDF
+33287416|distant|microbiome|influence|DDF
+33287416|distant|food|influence|DDF
+33287416|distant|microbiome|is linked to|DDF
+33287416|distant|dietary supplement|influence|DDF
+33287416|distant|chemical|influence|DDF
+33287416|distant|DDF|target|human
+33287416|distant|chemical|impact|microbiome
+30890906|distant|microbiome|is linked to|DDF
+30890906|distant|gene|influence|microbiome
+30890906|distant|DDF|target|human
+30890906|distant|gene|influence|DDF
+30890906|distant|DDF|is a|DDF
+32504503|distant|microbiome|is linked to|DDF
+32504503|distant|DDF|is a|DDF
+32504503|distant|DDF|affect|DDF
+37867494|distant|microbiome|is linked to|DDF
+35892042|distant|microbiome|located in|human
+35345829|distant|microbiome|is linked to|DDF
+35345829|distant|dietary supplement|influence|DDF
+35345829|distant|DDF|target|human
+35345829|distant|DDF|affect|DDF
+35345829|distant|chemical|influence|DDF
+35345829|distant|chemical|administered|animal
+35345829|distant|dietary supplement|influence|chemical
+35345829|distant|dietary supplement|impact|microbiome
+35345829|distant|microbiome|used by|biomedical technique
+35345829|distant|DDF|target|animal
+35582476|distant|microbiome|is linked to|DDF
+36231182|distant|microbiome|is linked to|DDF
+36231182|distant|DDF|is a|DDF
+36231182|distant|DDF|target|human
+35966709|distant|microbiome|is linked to|DDF
+35966709|distant|microbiome|located in|anatomical location
+35966709|distant|DDF|target|human
+35966709|distant|DDF|affect|DDF
+35966709|distant|DDF|is a|DDF
+34654024|distant|microbiome|is linked to|DDF
+34654024|distant|microbiome|located in|human
+34654024|distant|DDF|target|human
+34654024|distant|statistical technique|affect|DDF
+34654024|distant|DDF|interact|chemical
+35456813|distant|microbiome|located in|human
+35456813|distant|microbiome|is linked to|DDF
+35456813|distant|DDF|target|human
+36139496|distant|anatomical location|used by|biomedical technique
+36139496|distant|human|used by|biomedical technique
+36139496|distant|dietary supplement|administered|human
+36139496|distant|dietary supplement|impact|bacteria
+35050172|distant|microbiome|located in|human
+35050172|distant|chemical|located in|anatomical location
+35050172|distant|DDF|is a|DDF
+35050172|distant|DDF|affect|DDF
+36570854|distant|microbiome|is linked to|DDF
+36570854|distant|DDF|target|human
+36570854|distant|drug|influence|DDF
+37118092|distant|chemical|influence|DDF
+37118092|distant|chemical|administered|animal
+37118092|distant|chemical|target|animal
+37118092|distant|microbiome|located in|animal
+37118092|distant|chemical|influence|chemical
+37118092|distant|DDF|target|animal
+37118092|distant|animal|used by|animal
+36440396|distant|microbiome|is linked to|DDF
+36579574|distant|bacteria|located in|human
+36579574|distant|microbiome|is linked to|DDF
+36579574|distant|microbiome|located in|human
+36579574|distant|DDF|change abundance|bacteria
+36579574|distant|DDF|target|human
+36579574|distant|microbiome|used by|biomedical technique
+36079050|distant|chemical|influence|DDF
+36079050|distant|DDF|target|human
+36056826|distant|microbiome|is linked to|DDF
+36056826|distant|DDF|is a|DDF
+35466109|distant|DDF|strike|microbiome
+35466109|distant|DDF|strike|anatomical location
+35466109|distant|chemical|administered|animal
+35466109|distant|chemical|located in|animal
+35466109|distant|chemical|located in|anatomical location
+35466109|distant|chemical|influence|gene
+35466109|distant|chemical|impact|anatomical location
+35466109|distant|anatomical location|located in|animal
+36356994|distant|microbiome|located in|human
+36356994|distant|DDF|change abundance|microbiome
+36356994|distant|DDF|target|human
+36356994|distant|dietary supplement|administered|human
+36356994|distant|dietary supplement|impact|microbiome
+36437993|distant|human|used by|biomedical technique
+36437993|distant|dietary supplement|administered|human
+35918353|distant|animal|used by|biomedical technique
+35918353|distant|microbiome|used by|chemical
+35790976|distant|chemical|administered|human
+35790976|distant|dietary supplement|influence|DDF
+35790976|distant|microbiome|located in|human
+35790976|distant|chemical|influence|DDF
+35790976|distant|DDF|target|human
+35790976|distant|chemical|impact|microbiome
+35790976|distant|DDF|is a|DDF
+35790976|distant|dietary supplement|impact|microbiome
+35790976|distant|human|used by|biomedical technique
+35790976|distant|drug|administered|human
+36364950|distant|food|influence|chemical
+36364950|distant|dietary supplement|influence|chemical
+36364950|distant|chemical|influence|DDF
+36364950|distant|DDF|target|human
+36364950|distant|human|used by|biomedical technique
+39201866|distant|microbiome|is linked to|DDF
+39201866|distant|microbiome|located in|human
+39201866|distant|DDF|change abundance|microbiome
+39201866|distant|DDF|target|human
+39201866|distant|DDF|affect|DDF
+39201866|distant|DDF|is a|DDF
+39461950|distant|bacteria|influence|DDF
+39461950|distant|microbiome|is linked to|DDF
+39461950|distant|DDF|change abundance|bacteria
+39200093|distant|chemical|change abundance|microbiome
+39200093|distant|dietary supplement|influence|DDF
+39200093|distant|chemical|influence|DDF
+39200093|distant|DDF|target|human
+39200093|distant|DDF|affect|DDF
+39200093|distant|chemical|impact|microbiome
+39200093|distant|dietary supplement|administered|human
+39200093|distant|human|influence|DDF
+39200093|distant|dietary supplement|influence|human
+39293692|distant|DDF|target|animal
+39293692|distant|drug|impact|microbiome
+39293692|distant|microbiome|located in|animal
+39134294|distant|chemical|influence|DDF
+39134294|distant|DDF|target|human
+39134294|distant|chemical|impact|bacteria
+39134294|distant|DDF|affect|DDF
+39134294|distant|drug|influence|DDF
+39134294|distant|chemical|located in|anatomical location
+39134294|distant|microbiome|located in|animal
+39134294|distant|DDF|target|animal
+39316970|distant|microbiome|is linked to|DDF
+39316970|distant|dietary supplement|influence|DDF
+39316970|distant|DDF|affect|DDF
+39316970|distant|DDF|is a|DDF
+39316970|distant|bacteria|influence|DDF
+39422256|distant|human|used by|biomedical technique
+31836471|distant|chemical|influence|gene
+31836471|distant|microbiome|is linked to|DDF
+31836471|distant|chemical|influence|DDF
+31836471|distant|DDF|affect|DDF
+34500451|distant|bacteria|affect|DDF
+34500451|distant|microbiome|is linked to|DDF
+34500451|distant|DDF|strike|anatomical location
+34500451|distant|chemical|influence|DDF
+34500451|distant|DDF|target|human
+34500451|distant|chemical|located in|anatomical location
+34450312|distant|microbiome|is linked to|DDF
+34450312|distant|microbiome|located in|anatomical location
+34784980|distant|microbiome|located in|anatomical location
+34784980|distant|drug|change effect|DDF
+34784980|distant|animal|used by|biomedical technique
+34784980|distant|DDF|affect|DDF
+34784980|distant|drug|influence|DDF
+34784980|distant|DDF|is a|DDF
+34784980|distant|DDF|target|animal
+34942539|distant|dietary supplement|impact|bacteria
+34942539|distant|microbiome|is linked to|DDF
+34942539|distant|microbiome|located in|anatomical location
+34942539|distant|DDF|affect|DDF
+33881598|distant|microbiome|is linked to|DDF
+33881598|distant|chemical|affect|DDF
+33881598|distant|dietary supplement|influence|DDF
+33881598|distant|microbiome|located in|anatomical location
+33881598|distant|biomedical technique|affect|DDF
+33881598|distant|DDF|affect|DDF
+33905953|distant|microbiome|is linked to|DDF
+33905953|distant|DDF|change abundance|microbiome
+33905953|distant|chemical|influence|DDF
+33905953|distant|DDF|affect|DDF
+33905953|distant|DDF|is a|DDF
+33557896|distant|anatomical location|is linked to|DDF
+33557896|distant|microbiome|located in|human
+33557896|distant|microbiome|is linked to|DDF
+33557896|distant|chemical|influence|DDF
+34707612|distant|microbiome|used by|biomedical technique
+34707612|distant|microbiome|is linked to|DDF
+34707612|distant|DDF|is a|DDF
+34707612|distant|DDF|target|human
+33856024|distant|microbiome|is linked to|DDF
+33856024|distant|microbiome|located in|human
+33856024|distant|DDF|target|human
+33856024|distant|DDF|affect|DDF
+33856024|distant|chemical|influence|DDF
+33856024|distant|DDF|is a|DDF
+33623004|distant|dietary supplement|influence|DDF
+33623004|distant|dietary supplement|influence|chemical
+33623004|distant|chemical|impact|bacteria
+33623004|distant|bacteria|located in|animal
+33623004|distant|chemical|located in|anatomical location
+33623004|distant|dietary supplement|impact|microbiome
+33623004|distant|bacteria|located in|anatomical location
+34695538|distant|anatomical location|used by|biomedical technique
+34695538|distant|microbiome|is linked to|DDF
+34695538|distant|DDF|target|human
+34695538|distant|DDF|affect|DDF
+34695538|distant|anatomical location|located in|human
+34695538|distant|DDF|is a|DDF
+34695538|distant|bacteria|part of|microbiome
+34695538|distant|human|used by|biomedical technique
+34695538|distant|anatomical location|is linked to|DDF
+34492236|distant|dietary supplement|impact|microbiome
+34492236|distant|dietary supplement|influence|DDF
+33649989|distant|DDF|change abundance|microbiome
+33649989|distant|microbiome|is linked to|DDF
+33649989|distant|DDF|is a|DDF
+33649989|distant|DDF|affect|DDF
+34536490|distant|chemical|influence|DDF
+34536490|distant|DDF|affect|DDF
+34589401|distant|microbiome|located in|anatomical location
+34589401|distant|drug|administered|animal
+34589401|distant|chemical|produced by|microbiome
+34589401|distant|chemical|influence|DDF
+34589401|distant|drug|influence|DDF
+34589401|distant|chemical|impact|microbiome
+34589401|distant|DDF|is a|DDF
+34589401|distant|DDF|target|animal
+34737076|distant|microbiome|is linked to|DDF
+34737076|distant|DDF|strike|anatomical location
+34737076|distant|microbiome|located in|human
+34737076|distant|chemical|influence|DDF
+34737076|distant|DDF|target|human
+34737076|distant|anatomical location|is linked to|DDF
+34512244|distant|microbiome|is linked to|DDF
+34512244|distant|DDF|strike|anatomical location
+34512244|distant|chemical|influence|DDF
+34512244|distant|DDF|target|human
+34512244|distant|DDF|affect|DDF
+34512244|distant|DDF|is a|DDF
+34094829|distant|drug|produced by|microbiome
+34094829|distant|chemical|produced by|microbiome
+34094829|distant|drug|influence|DDF
+34094829|distant|DDF|affect|drug
+34094829|distant|drug|located in|animal
+34977556|distant|microbiome|located in|human
+34977556|distant|DDF|change abundance|bacteria
+34977556|distant|DDF|change abundance|microbiome
+34977556|distant|DDF|target|human
+34977556|distant|dietary supplement|impact|microbiome
+33804226|distant|microbiome|located in|human
+33804226|distant|DDF|is a|DDF
+33804226|distant|DDF|target|human
+33857347|distant|chemical|influence|chemical
+33857347|distant|chemical|affect|DDF
+33857347|distant|chemical|influence|DDF
+33746867|distant|microbiome|is linked to|DDF
+33746867|distant|drug|target|human
+33746867|distant|DDF|target|human
+33746867|distant|human|used by|biomedical technique
+33746867|distant|bacteria|influence|DDF
+33746867|distant|drug|impact|microbiome
+33746867|distant|microbiome|is linked to|human
+34934429|distant|microbiome|influence|DDF
+34934429|distant|microbiome|is linked to|DDF
+34934429|distant|microbiome|located in|human
+34934429|distant|DDF|is linked to|DDF
+34934429|distant|DDF|change abundance|microbiome
+34934429|distant|DDF|target|human
+34934429|distant|chemical|influence|DDF
+34934429|distant|chemical|located in|anatomical location
+34934429|distant|DDF|target|animal
+34934429|distant|anatomical location|located in|animal
+34934429|distant|chemical|change effect|DDF
+33763767|distant|microbiome|located in|human
+33763767|distant|microbiome|is linked to|DDF
+33763767|distant|DDF|is a|DDF
+33763767|distant|DDF|affect|DDF
+33337387|distant|microbiome|is linked to|DDF
+33337387|distant|DDF|target|human
+34219519|distant|microbiome|is linked to|DDF
+34219519|distant|DDF|affect|DDF
+34032644|distant|bacteria|located in|anatomical location
+33510784|distant|microbiome|is linked to|DDF
+33510784|distant|microbiome|located in|human
+33510784|distant|DDF|affect|DDF
+33510784|distant|DDF|is a|DDF
+33510784|distant|microbiome|compared to|microbiome
+34360787|distant|chemical|influence|DDF
+34360787|distant|DDF|affect|DDF
+34381040|distant|microbiome|is linked to|DDF
+34381040|distant|DDF|affect|DDF
+34357086|distant|microbiome|is linked to|DDF
+34357086|distant|DDF|affect|DDF
+34495955|distant|microbiome|located in|human
+34495955|distant|human|used by|biomedical technique
+34495955|distant|human|used by|statistical technique
+34495955|distant|DDF|affect|DDF
+34974121|distant|microbiome|is linked to|DDF
+34974121|distant|drug|administered|animal
+34974121|distant|drug|change effect|DDF
+34974121|distant|DDF|target|animal
+34974121|distant|DDF|affect|DDF
+34974121|distant|chemical|administered|animal
+34974121|distant|microbiome|located in|animal
+34974121|distant|drug|impact|microbiome
+34893951|distant|bacteria|is linked to|DDF
+34893951|distant|microbiome|is linked to|DDF
+34893951|distant|DDF|is a|DDF
+33985520|distant|human|used by|biomedical technique
+33985520|distant|DDF|is a|DDF
+33985520|distant|DDF|target|human
+34053222|distant|chemical|impact|chemical
+34053222|distant|microbiome|is linked to|DDF
+34053222|distant|chemical|influence|DDF
+34276644|distant|microbiome|is linked to|DDF
+34276644|distant|chemical|influence|DDF
+34276644|distant|DDF|target|human
+34276644|distant|DDF|affect|DDF
+34276644|distant|human|used by|biomedical technique
+33912026|distant|DDF|target|animal
+33912026|distant|anatomical location|located in|animal
+36018501|distant|microbiome|is linked to|DDF
+36018501|distant|gene|affect|DDF
+36018501|distant|DDF|target|human
+36018501|distant|DDF|affect|DDF
+36018501|distant|DDF|is a|DDF
+36018501|distant|food|located in|anatomical location
+35890040|distant|microbiome|is linked to|biomedical technique
+35890040|distant|microbiome|is linked to|DDF
+35890040|distant|bacteria|part of|microbiome
+35965446|distant|microbiome|is linked to|DDF
+35965446|distant|microbiome|located in|human
+35965446|distant|DDF|change abundance|microbiome
+35965446|distant|chemical|influence|DDF
+35965446|distant|DDF|target|human
+35795315|distant|microbiome|is linked to|DDF
+36243356|distant|microbiome|is linked to|DDF
+36243356|distant|microbiome|located in|human
+36243356|distant|DDF|is linked to|DDF
+36243356|distant|DDF|target|human
+36243356|distant|DDF|affect|DDF
+36243356|distant|DDF|is a|DDF
+36243356|distant|human|used by|biomedical technique
+36243356|distant|microbiome|used by|biomedical technique
+36257595|distant|microbiome|is linked to|DDF
+36257595|distant|DDF|is a|DDF
+35807841|distant|microbiome|located in|human
+35807841|distant|DDF|is a|DDF
+35807841|distant|chemical|influence|DDF
+36034146|distant|chemical|impact|microbiome
+36034146|distant|microbiome|is linked to|DDF
+36034146|distant|chemical|influence|DDF
+36034146|distant|DDF|affect|DDF
+37693045|distant|chemical|influence|microbiome
+37693045|distant|chemical|influence|DDF
+37693045|distant|DDF|affect|DDF
+37693045|distant|chemical|impact|microbiome
+37693045|distant|bacteria|influence|DDF
+37693045|distant|DDF|target|animal
+36182642|distant|microbiome|located in|human
+36182642|distant|DDF|target|human
+36182642|distant|DDF|is a|DDF
+36182642|distant|human|used by|biomedical technique
+36182642|distant|anatomical location|is linked to|DDF
+36140158|distant|bacteria|influence|DDF
+36140158|distant|anatomical location|is linked to|DDF
+36140158|distant|chemical|influence|DDF
+36458227|distant|microbiome|influence|DDF
+36458227|distant|microbiome|is linked to|DDF
+36458227|distant|DDF|affect|DDF
+36365188|distant|bacteria|influence|chemical
+36365188|distant|drug|change effect|DDF
+36365188|distant|chemical|influence|DDF
+36365188|distant|drug|influence|DDF
+36365188|distant|drug|change effect|chemical
+36365188|distant|DDF|is a|DDF
+36365188|distant|drug|influence|chemical
+36365188|distant|bacteria|influence|DDF
+35889124|distant|microbiome|is linked to|DDF
+35889124|distant|DDF|strike|anatomical location
+35889124|distant|chemical|influence|DDF
+35889124|distant|DDF|affect|DDF
+35889124|distant|DDF|target|human
+35889124|distant|anatomical location|is linked to|DDF
+36013962|distant|dietary supplement|influence|DDF
+36013962|distant|DDF|strike|anatomical location
+36013962|distant|DDF|target|human
+36013962|distant|DDF|affect|DDF
+36013962|distant|DDF|change abundance|anatomical location
+36619150|distant|chemical|impact|bacteria
+36619150|distant|chemical|influence|DDF
+36619150|distant|DDF|affect|DDF
+36355147|distant|microbiome|is linked to|DDF
+36355147|distant|microbiome|located in|anatomical location
+36355147|distant|DDF|change abundance|microbiome
+36355147|distant|chemical|influence|DDF
+36355147|distant|DDF|affect|DDF
+36355147|distant|DDF|is a|DDF
+35895243|distant|animal|used by|biomedical technique
+35895243|distant|DDF|affect|DDF
+35895243|distant|microbiome|located in|animal
+35895243|distant|microbiome|used by|biomedical technique
+35895243|distant|DDF|target|animal
+36361826|distant|microbiome|is linked to|DDF
+36361826|distant|chemical|influence|DDF
+36361826|distant|DDF|target|human
+36361826|distant|DDF|affect|DDF
+36361826|distant|DDF|is a|DDF
+36439235|distant|bacteria|influence|DDF
+36439235|distant|dietary supplement|influence|DDF
+36439235|distant|chemical|administered|animal
+36504794|distant|dietary supplement|influence|DDF
+36570528|distant|microbiome|is linked to|DDF
+36570528|distant|DDF|strike|anatomical location
+36570528|distant|microbiome|affect|DDF
+36570528|distant|DDF|target|human
+36570528|distant|DDF|is a|DDF
+36358513|distant|DDF|affect|DDF
+38098067|distant|microbiome|is linked to|drug
+38098067|distant|bacteria|influence|DDF
+38098067|distant|microbiome|is linked to|DDF
+38098067|distant|DDF|is a|DDF
+37404311|distant|chemical|influence|DDF
+37892440|distant|microbiome|is linked to|DDF
+37892440|distant|microbiome|located in|human
+37892440|distant|DDF|change abundance|bacteria
+37892440|distant|DDF|target|human
+37892440|distant|bacteria|part of|microbiome
+38088063|distant|anatomical location|influence|DDF
+38088063|distant|microbiome|is linked to|DDF
+38088063|distant|dietary supplement|influence|DDF
+38088063|distant|DDF|affect|DDF
+37600019|distant|microbiome|influence|DDF
+37600019|distant|microbiome|is linked to|DDF
+37600019|distant|DDF|is a|DDF
+37600019|distant|DDF|affect|DDF
+37913731|distant|DDF|strike|anatomical location
+37913731|distant|DDF|is a|DDF
+37913731|distant|chemical|influence|DDF
+37913731|distant|DDF|affect|DDF
+37823531|distant|gene|impact|microbiome
+37823531|distant|microbiome|is linked to|DDF
+37823531|distant|DDF|is a|DDF
+37823531|distant|chemical|influence|DDF
+37967548|distant|microbiome|is linked to|DDF
+37967548|distant|dietary supplement|influence|DDF
+37967548|distant|DDF|target|human
+37967548|distant|DDF|affect|DDF
+37388445|distant|dietary supplement|influence|DDF
+37388445|distant|dietary supplement|administered|animal
+37388445|distant|dietary supplement|influence|animal
+37388445|distant|microbiome|located in|animal
+37388445|distant|dietary supplement|impact|microbiome
+37388445|distant|DDF|target|animal
+37423520|distant|anatomical location|used by|biomedical technique
+37423520|distant|microbiome|is linked to|DDF
+37423520|distant|dietary supplement|influence|DDF
+37423520|distant|microbiome|used by|statistical technique
+37423520|distant|animal|used by|biomedical technique
+37423520|distant|DDF|target|human
+37423520|distant|DDF|is a|DDF
+37423520|distant|microbiome|used by|biomedical technique
+37819112|distant|dietary supplement|influence|DDF
+37819112|distant|chemical|influence|DDF
+37819112|distant|DDF|affect|DDF
+37819112|distant|DDF|is a|DDF
+37819112|distant|microbiome|located in|animal
+37819112|distant|DDF|target|animal
+37736791|distant|bacteria|located in|human
+37736791|distant|microbiome|is linked to|DDF
+37736791|distant|DDF|strike|anatomical location
+37736791|distant|microbiome|located in|human
+37736791|distant|DDF|change abundance|microbiome
+37736791|distant|DDF|target|human
+37736791|distant|chemical|influence|DDF
+37736791|distant|chemical|impact|microbiome
+37736791|distant|chemical|located in|anatomical location
+37620311|distant|microbiome|is linked to|DDF
+37620311|distant|DDF|change abundance|bacteria
+37620311|distant|DDF|influence|DDF
+37620311|distant|chemical|influence|DDF
+37807941|distant|microbiome|is linked to|DDF
+37807941|distant|DDF|influence|DDF
+37807941|distant|chemical|influence|DDF
+37332996|distant|drug|influence|DDF
+37502423|distant|microbiome|is linked to|DDF
+37502423|distant|microbiome|located in|human
+37502423|distant|DDF|change abundance|bacteria
+37502423|distant|DDF|change abundance|microbiome
+37502423|distant|DDF|target|human
+37502423|distant|human|used by|biomedical technique
+37502423|distant|microbiome|used by|biomedical technique
+38237261|distant|dietary supplement|influence|DDF
+38237261|distant|chemical|affect|DDF
+38237261|distant|DDF|change abundance|bacteria
+38237261|distant|chemical|influence|DDF
+38237261|distant|DDF|affect|DDF
+38237261|distant|chemical|impact|bacteria
+38237261|distant|DDF|is a|DDF
+38237261|distant|microbiome|located in|animal
+38237261|distant|dietary supplement|impact|microbiome
+38237261|distant|DDF|target|animal
+38022117|distant|DDF|target|human
+38022117|distant|anatomical location|affect|DDF
+38022117|distant|bacteria|located in|anatomical location
+38022117|distant|DDF|affect|DDF
+37200942|distant|food|influence|DDF
+37200942|distant|dietary supplement|influence|DDF
+37200942|distant|DDF|strike|anatomical location
+37200942|distant|dietary supplement|affect|DDF
+37200942|distant|food|impact|microbiome
+37200942|distant|microbiome|located in|animal
+37200942|distant|DDF|target|animal
+37323141|distant|microbiome|is linked to|DDF
+37323141|distant|microbiome|located in|anatomical location
+37323141|distant|chemical|impact|microbiome
+37323141|distant|chemical|located in|anatomical location
+37323141|distant|DDF|is a|DDF
+36692876|distant|chemical|influence|chemical
+36692876|distant|dietary supplement|influence|DDF
+36692876|distant|chemical|affect|DDF
+36692876|distant|chemical|influence|DDF
+38127816|distant|DDF|strike|anatomical location
+38127816|distant|DDF|affect|DDF
+37334756|distant|microbiome|is linked to|DDF
+37334756|distant|chemical|affect|DDF
+37334756|distant|chemical|influence|DDF
+37334756|distant|gene|influence|DDF
+37334756|distant|microbiome|located in|animal
+37334756|distant|DDF|target|animal
+37049578|distant|bacteria|influence|animal
+37049578|distant|microbiome|is linked to|DDF
+37049578|distant|DDF|strike|anatomical location
+37049578|distant|DDF|change abundance|bacteria
+37049578|distant|chemical|influence|DDF
+37049578|distant|dietary supplement|influence|chemical
+37049578|distant|chemical|impact|microbiome
+37049578|distant|bacteria|interact|chemical
+37049578|distant|bacteria|impact|bacteria
+37049578|distant|bacteria|part of|microbiome
+37049578|distant|bacteria|influence|DDF
+37049578|distant|DDF|target|animal
+37049578|distant|anatomical location|located in|animal
+36761177|distant|anatomical location|used by|biomedical technique
+36761177|distant|microbiome|is linked to|DDF
+36761177|distant|dietary supplement|influence|DDF
+36761177|distant|chemical|influence|DDF
+36761177|distant|DDF|affect|DDF
+36761177|distant|microbiome|located in|animal
+36761177|distant|DDF|target|animal
+37460569|distant|microbiome|is linked to|DDF
+37460569|distant|chemical|influence|DDF
+37460569|distant|DDF|target|human
+37460569|distant|human|used by|biomedical technique
+37460569|distant|microbiome|used by|biomedical technique
+37754772|distant|microbiome|is linked to|DDF
+37754772|distant|DDF|is linked to|DDF
+37754772|distant|DDF|target|human
+37754772|distant|DDF|affect|DDF
+37754772|distant|DDF|is a|DDF
+37754772|distant|microbiome|target|animal
+37863655|distant|microbiome|is linked to|DDF
+37863655|distant|DDF|change abundance|microbiome
+35830286|distant|microbiome|located in|human
+35830286|distant|microbiome|is linked to|DDF
+35830286|distant|DDF|is a|DDF
+35830286|distant|DDF|affect|DDF
+36839287|distant|microbiome|is linked to|DDF
+36839287|distant|chemical|influence|DDF
+36839287|distant|chemical|administered|animal
+36839287|distant|chemical|impact|microbiome
+36839287|distant|DDF|is a|DDF
+36839287|distant|chemical|is linked to|DDF
+36839287|distant|DDF|target|animal
+37418977|distant|microbiome|is linked to|DDF
+37418977|distant|dietary supplement|influence|DDF
+37418977|distant|chemical|influence|DDF
+37418977|distant|chemical|administered|animal
+37418977|distant|microbiome|located in|animal
+37418977|distant|drug|impact|microbiome
+36901907|distant|microbiome|is linked to|DDF
+36901907|distant|DDF|strike|anatomical location
+36901907|distant|gene|strike|anatomical location
+36901907|distant|DDF|affect|DDF
+36901907|distant|gene|located in|anatomical location
+36901907|distant|chemical|located in|anatomical location
+36901907|distant|gene|influence|DDF
+36901907|distant|DDF|is a|DDF
+37470081|distant|microbiome|is linked to|DDF
+37470081|distant|dietary supplement|influence|DDF
+37470081|distant|microbiome|located in|human
+37470081|distant|dietary supplement|change effect|DDF
+37470081|distant|DDF|target|human
+37470081|distant|DDF|affect|DDF
+37470081|distant|DDF|is a|DDF
+37470081|distant|dietary supplement|administered|human
+37470081|distant|dietary supplement|impact|microbiome
+37470081|distant|bacteria|influence|DDF
+37470081|distant|drug|administered|human
+37470081|distant|bacteria|impact|microbiome
+38098666|distant|drug|impact|bacteria
+37787835|distant|microbiome|is linked to|DDF
+37147392|distant|microbiome|is linked to|DDF
+37147392|distant|DDF|strike|anatomical location
+37147392|distant|DDF|target|human
+37147392|distant|DDF|affect|DDF
+37147392|distant|chemical|influence|DDF
+37147392|distant|DDF|interact|chemical
+37147392|distant|chemical|located in|anatomical location
+37147392|distant|DDF|change abundance|anatomical location
+37147392|distant|DDF|is a|DDF
+36719617|distant|bacteria|located in|human
+36719617|distant|microbiome|is linked to|DDF
+36719617|distant|microbiome|target|human
+36719617|distant|microbiome|affect|DDF
+36719617|distant|microbiome|located in|human
+36719617|distant|DDF|target|human
+36719617|distant|human|used by|biomedical technique
+37047769|distant|DDF|strike|anatomical location
+37047769|distant|gene|located in|animal
+37047769|distant|DDF|affect|DDF
+37047769|distant|gene|located in|anatomical location
+37047769|distant|DDF|is a|DDF
+37047769|distant|bacteria|influence|DDF
+37047769|distant|DDF|target|animal
+37047769|distant|anatomical location|located in|animal
+37897083|distant|chemical|administered|human
+37897083|distant|microbiome|is linked to|DDF
+37897083|distant|microbiome|located in|anatomical location
+37897083|distant|DDF|is linked to|DDF
+37897083|distant|chemical|influence|DDF
+37897083|distant|DDF|affect|DDF
+37897083|distant|food|impact|microbiome
+37719758|distant|microbiome|is linked to|DDF
+37719758|distant|DDF|affect|DDF
+37719758|distant|drug|affect|DDF
+37150399|distant|bacteria|located in|human
+37150399|distant|microbiome|is linked to|DDF
+37150399|distant|DDF|change abundance|bacteria
+37150399|distant|DDF|target|human
+37150399|distant|DDF|affect|DDF
+37150399|distant|human|used by|biomedical technique
+37150399|distant|bacteria|influence|DDF
+37508017|distant|chemical|influence|chemical
+37508017|distant|DDF|is a|DDF
+37508017|distant|chemical|influence|DDF
+37508017|distant|DDF|target|human
+38115597|distant|chemical|located in|anatomical location
+38115597|distant|microbiome|is linked to|DDF
+38115597|distant|chemical|located in|animal
+38115597|distant|chemical|influence|DDF
+38287957|distant|microbiome|is linked to|DDF
+37191418|distant|microbiome|is linked to|DDF
+37191418|distant|microbiome|located in|anatomical location
+37191418|distant|microbiome|located in|human
+37191418|distant|DDF|target|human
+37191418|distant|DDF|is a|DDF
+37782386|distant|microbiome|is linked to|animal
+37782386|distant|drug|influence|DDF
+37782386|distant|DDF|affect|DDF
+37782386|distant|chemical|impact|microbiome
+37782386|distant|chemical|influence|animal
+37782386|distant|microbiome|used by|biomedical technique
+36993742|distant|bacteria|located in|human
+36993742|distant|microbiome|is linked to|DDF
+36993742|distant|chemical|influence|DDF
+36993742|distant|chemical|located in|human
+36993742|distant|DDF|target|human
+38141735|distant|microbiome|influence|DDF
+38141735|distant|microbiome|is linked to|DDF
+38141735|distant|DDF|strike|anatomical location
+38141735|distant|chemical|influence|DDF
+37978405|distant|bacteria|affect|DDF
+37978405|distant|animal|used by|biomedical technique
+37978405|distant|DDF|affect|DDF
+37978405|distant|DDF|is a|DDF
+37978405|distant|bacteria|influence|DDF
+37978405|distant|DDF|target|animal
+37850544|distant|microbiome|is linked to|DDF
+37850544|distant|dietary supplement|influence|DDF
+37850544|distant|microbiome|located in|human
+37850544|distant|DDF|change abundance|microbiome
+37850544|distant|DDF|affect|DDF
+37850544|distant|dietary supplement|administered|human
+37375632|distant|food|influence|DDF
+37375632|distant|microbiome|is linked to|DDF
+37375632|distant|dietary supplement|influence|DDF
+37375632|distant|microbiome|located in|human
+37375632|distant|dietary supplement|affect|DDF
+37375632|distant|DDF|affect|DDF
+37375632|distant|food|impact|microbiome
+37375632|distant|dietary supplement|impact|microbiome
+37375632|distant|bacteria|influence|DDF
+37674043|distant|microbiome|is linked to|DDF
+37674043|distant|DDF|strike|anatomical location
+37674043|distant|drug|administered|animal
+37674043|distant|animal|used by|biomedical technique
+37674043|distant|chemical|influence|DDF
+37674043|distant|DDF|affect|DDF
+37674043|distant|anatomical location|target|animal
+37674043|distant|drug|influence|DDF
+37674043|distant|microbiome|located in|animal
+37674043|distant|microbiome|used by|biomedical technique
+37674043|distant|DDF|target|animal
+37674043|distant|anatomical location|located in|animal
+37404573|distant|DDF|is a|DDF
+37404573|distant|DDF|affect|DDF
+37034781|distant|dietary supplement|impact|microbiome
+37034781|distant|microbiome|is linked to|DDF
+37034781|distant|dietary supplement|influence|DDF
+37034781|distant|DDF|affect|DDF
+37561259|distant|microbiome|is linked to|DDF
+37561259|distant|DDF|target|human
+36805171|distant|microbiome|influence|DDF
+36805171|distant|microbiome|is linked to|DDF
+36805171|distant|dietary supplement|influence|DDF
+36805171|distant|DDF|affect|DDF
+36805171|distant|DDF|is a|DDF
+37647997|distant|DDF|is a|DDF
+37647997|distant|DDF|target|human
+37171224|distant|dietary supplement|influence|DDF
+37630539|distant|DDF|strike|anatomical location
+37630539|distant|microbiome|located in|human
+37630539|distant|DDF|target|human
+37630539|distant|DDF|affect|DDF
+37630539|distant|chemical|influence|DDF
+37630539|distant|DDF|is a|DDF
+37630539|distant|dietary supplement|influence|microbiome
+37630539|distant|dietary supplement|impact|microbiome
+37630539|distant|microbiome|used by|biomedical technique
+37267589|distant|microbiome|used by|biomedical technique
+37267589|distant|chemical|located in|animal
+37267589|distant|food|influence|DDF
+37267589|distant|food|administered|animal
+36676436|distant|chemical|influence|microbiome
+36676436|distant|microbiome|is linked to|DDF
+36676436|distant|chemical|affect|DDF
+36676436|distant|microbiome|affect|DDF
+36676436|distant|chemical|influence|DDF
+36676436|distant|chemical|impact|microbiome
+36676436|distant|DDF|is a|DDF
+37458987|distant|chemical|influence|DDF
+37458987|distant|drug|influence|DDF
+37458987|distant|DDF|target|human
+37458987|distant|DDF|affect|DDF
+37458987|distant|DDF|is a|DDF
+37755674|distant|microbiome|influence|DDF
+37755674|distant|microbiome|is linked to|DDF
+37755674|distant|chemical|influence|DDF
+37755674|distant|DDF|target|human
+37755674|distant|DDF|interact|chemical
+37755674|distant|microbiome|impact|microbiome
+37460539|distant|microbiome|is linked to|DDF
+37460539|distant|dietary supplement|influence|DDF
+37460539|distant|DDF|change abundance|microbiome
+37460539|distant|dietary supplement|change effect|DDF
+37460539|distant|food|administered|animal
+37460539|distant|microbiome|located in|animal
+37460539|distant|microbiome|used by|biomedical technique
+37460539|distant|DDF|target|animal
+37460539|distant|anatomical location|located in|animal
+37107583|distant|microbiome|is linked to|DDF
+37107583|distant|microbiome|located in|anatomical location
+37107583|distant|chemical|influence|DDF
+37107583|distant|chemical|located in|anatomical location
+37107583|distant|bacteria|part of|microbiome
+37107583|distant|chemical|is linked to|DDF
+37589449|distant|microbiome|is linked to|DDF
+37589449|distant|DDF|change abundance|microbiome
+37589449|distant|chemical|influence|DDF
+37496895|distant|microbiome|is linked to|DDF
+37496895|distant|DDF|change abundance|bacteria
+37496895|distant|animal|used by|biomedical technique
+37496895|distant|DDF|is a|DDF
+37496895|distant|bacteria|influence|DDF
+37496895|distant|DDF|target|animal
+36803806|distant|microbiome|is linked to|DDF
+36803806|distant|microbiome|located in|human
+36803806|distant|DDF|target|human
+36803806|distant|anatomical location|located in|human
+36803806|distant|DDF|affect|DDF
+36671785|distant|microbiome|is linked to|DDF
+36671785|distant|DDF|affect|DDF
+36671785|distant|chemical|impact|microbiome
+36671785|distant|chemical|located in|anatomical location
+36671785|distant|DDF|is a|DDF
+38146566|distant|microbiome|is linked to|DDF
+38146566|distant|dietary supplement|influence|DDF
+38146566|distant|dietary supplement|change effect|DDF
+38146566|distant|chemical|influence|DDF
+38146566|distant|DDF|target|human
+38146566|distant|DDF|affect|DDF
+38146566|distant|DDF|is a|DDF
+38146566|distant|dietary supplement|administered|human
+38146566|distant|dietary supplement|impact|microbiome
+38146566|distant|chemical|change effect|DDF
+37298727|distant|microbiome|is linked to|DDF
+37298727|distant|DDF|target|animal
+37298727|distant|DDF|affect|DDF
+37562163|distant|food|influence|DDF
+37562163|distant|microbiome|is linked to|DDF
+37562163|distant|chemical|influence|DDF
+37562163|distant|food|impact|microbiome
+37628082|distant|dietary supplement|influence|DDF
+37628082|distant|DDF|target|human
+37628082|distant|DDF|affect|DDF
+37747555|distant|food|influence|DDF
+37747555|distant|microbiome|is linked to|DDF
+37747555|distant|chemical|influence|DDF
+37747555|distant|chemical|impact|microbiome
+37747555|distant|DDF|is a|DDF
+37747555|distant|DDF|influence|DDF
+37747555|distant|chemical|influence|chemical
+37487923|distant|microbiome|is linked to|DDF
+37487923|distant|chemical|influence|DDF
+37487923|distant|DDF|affect|DDF
+37487923|distant|DDF|target|human
+37487923|distant|DDF|interact|chemical
+37851313|distant|microbiome|is linked to|DDF
+37851313|distant|DDF|strike|anatomical location
+37851313|distant|chemical|influence|DDF
+37851313|distant|DDF|affect|DDF
+37851313|distant|DDF|is a|DDF
+37579835|distant|microbiome|is linked to|DDF
+37579835|distant|dietary supplement|influence|DDF
+37579835|distant|chemical|influence|DDF
+37579835|distant|drug|influence|DDF
+37579835|distant|DDF|is a|DDF
+37579835|distant|chemical|is linked to|DDF
+36708421|distant|DDF|strike|anatomical location
+36708421|distant|animal|used by|biomedical technique
+36708421|distant|DDF|affect|DDF
+36708421|distant|chemical|administered|animal
+36708421|distant|bacteria|located in|animal
+36708421|distant|DDF|is a|DDF
+36708421|distant|microbiome|located in|animal
+36708421|distant|DDF|target|animal
+37102320|distant|dietary supplement|influence|DDF
+37102320|distant|animal|used by|biomedical technique
+37102320|distant|chemical|influence|DDF
+37102320|distant|DDF|affect|DDF
+37102320|distant|bacteria|located in|animal
+37102320|distant|chemical|impact|microbiome
+37102320|distant|DDF|is a|DDF
+37102320|distant|microbiome|located in|animal
+37102320|distant|DDF|target|animal
+37102320|distant|chemical|change effect|DDF
+37968765|distant|anatomical location|located in|animal
+37968765|distant|DDF|is linked to|DDF
+37968765|distant|DDF|change abundance|bacteria
+37968765|distant|DDF|affect|DDF
+37968765|distant|chemical|located in|anatomical location
+37968765|distant|microbiome|located in|animal
+37968765|distant|DDF|target|animal
+37968765|distant|chemical|located in|animal
+37562867|distant|DDF|affect|DDF
+37266763|distant|chemical|administered|animal
+37266763|distant|chemical|influence|DDF
+37266763|distant|DDF|affect|DDF
+36824263|distant|drug|change effect|DDF
+36824263|distant|DDF|target|human
+36824263|distant|drug|influence|DDF
+36824263|distant|DDF|is a|DDF
+36824263|distant|drug|impact|bacteria
+38075226|distant|dietary supplement|impact|microbiome
+38075226|distant|dietary supplement|produced by|microbiome
+38075226|distant|dietary supplement|influence|DDF
+38075226|distant|DDF|target|human
+37714224|distant|microbiome|is linked to|DDF
+37714224|distant|microbiome|is linked to|chemical
+37714224|distant|DDF|change abundance|microbiome
+37714224|distant|DDF|is a|DDF
+37714224|distant|microbiome|located in|animal
+37714224|distant|microbiome|is linked to|biomedical technique
+37714224|distant|microbiome|used by|biomedical technique
+37416776|distant|chemical|influence|DDF
+37436588|distant|microbiome|is linked to|DDF
+37750713|distant|DDF|is a|DDF
+37750713|distant|drug|influence|DDF
+37579888|distant|animal|used by|biomedical technique
+37579888|distant|chemical|influence|DDF
+37579888|distant|DDF|affect|DDF
+37579888|distant|chemical|impact|bacteria
+37579888|distant|bacteria|located in|animal
+37579888|distant|DDF|is a|DDF
+37579888|distant|anatomical location|located in|animal
+37579888|distant|chemical|change effect|DDF
+36983960|distant|bacteria|influence|DDF
+36983960|distant|bacteria|is linked to|DDF
+36983960|distant|DDF|affect|DDF
+37321369|distant|food|influence|DDF
+37321369|distant|chemical|produced by|microbiome
+37321369|distant|drug|impact|microbiome
+37321369|distant|chemical|influence|DDF
+37321369|distant|chemical|impact|microbiome
+37321369|distant|DDF|is a|DDF
+37321369|distant|microbiome|located in|animal
+37321369|distant|DDF|target|animal
+37932328|distant|bacteria|located in|human
+37932328|distant|microbiome|is linked to|DDF
+37932328|distant|microbiome|located in|human
+37932328|distant|drug|change effect|DDF
+37932328|distant|DDF|change abundance|bacteria
+37932328|distant|DDF|change abundance|microbiome
+37932328|distant|drug|change effect|drug
+37932328|distant|DDF|target|human
+37932328|distant|drug|impact|microbiome
+37537902|distant|chemical|influence|DDF
+37537902|distant|DDF|affect|DDF
+37537902|distant|chemical|located in|anatomical location
+37537902|distant|DDF|is a|DDF
+37537902|distant|drug|impact|microbiome
+36662412|distant|microbiome|is linked to|DDF
+36662412|distant|dietary supplement|influence|DDF
+36880679|distant|drug|influence|DDF
+36880679|distant|dietary supplement|influence|DDF
+36880679|distant|DDF|affect|DDF
+37703887|distant|microbiome|is linked to|DDF
+37703887|distant|DDF|target|human
+37703887|distant|anatomical location|located in|human
+37703887|distant|DDF|affect|DDF
+37703887|distant|DDF|is a|DDF
+38008403|distant|microbiome|is linked to|DDF
+38008403|distant|DDF|change abundance|microbiome
+38008403|distant|chemical|influence|DDF
+38008403|distant|DDF|affect|DDF
+38008403|distant|drug|influence|DDF
+38008403|distant|DDF|target|human
+38008403|distant|DDF|is a|DDF
+38008403|distant|drug|impact|microbiome
+37206220|distant|DDF|is a|DDF
+37206220|distant|DDF|target|animal
+37206220|distant|microbiome|target|animal
+37630602|distant|chemical|affect|DDF
+37630602|distant|microbiome|target|human
+37630602|distant|microbiome|located in|human
+37630602|distant|chemical|influence|DDF
+37630602|distant|DDF|affect|DDF
+37630602|distant|chemical|located in|animal
+37630602|distant|DDF|target|animal
+37630602|distant|bacteria|is linked to|DDF
+37374030|distant|microbiome|located in|human
+37374030|distant|microbiome|is linked to|DDF
+37374030|distant|dietary supplement|influence|DDF
+37374030|distant|DDF|target|human
+37827233|distant|DDF|target|animal
+37827233|distant|DDF|is a|DDF
+37827233|distant|chemical|influence|DDF
+37827233|distant|DDF|affect|DDF
+36694359|distant|chemical|influence|DDF
+36694359|distant|chemical|located in|human
+36694359|distant|DDF|target|human
+36694359|distant|DDF|affect|DDF
+36694359|distant|microbiome|used by|biomedical technique
+37239262|distant|DDF|target|animal
+37239262|distant|chemical|affect|DDF
+37239262|distant|chemical|influence|DDF
+37239262|distant|DDF|affect|DDF
+37224894|distant|chemical|impact|microbiome
+37224894|distant|microbiome|produced by|microbiome
+37224894|distant|DDF|is a|DDF
+37224894|distant|chemical|influence|DDF
+37158925|distant|microbiome|is linked to|DDF
+37158925|distant|chemical|influence|DDF
+37158925|distant|DDF|target|human
+37158925|distant|DDF|affect|DDF
+37158925|distant|chemical|located in|anatomical location
+37158925|distant|DDF|is a|DDF
+38045857|distant|chemical|located in|animal
+38045857|distant|DDF|target|animal
+38045857|distant|animal|used by|biomedical technique
+38045857|distant|chemical|influence|DDF
+36776226|distant|DDF|target|human
+36776226|distant|DDF|affect|DDF
+37596429|distant|microbiome|is linked to|DDF
+37596429|distant|microbiome|used by|DDF
+37596429|distant|microbiome|located in|animal
+37596429|distant|animal|target|animal
+37596429|distant|DDF|target|animal
+37961318|distant|microbiome|is linked to|DDF
+37961318|distant|chemical|is linked to|microbiome
+37961318|distant|chemical|influence|DDF
+37961318|distant|DDF|affect|DDF
+37961318|distant|DDF|is a|DDF
+37961318|distant|chemical|is linked to|DDF
+37895965|distant|DDF|is a|DDF
+37895965|distant|DDF|target|human
+37895965|distant|anatomical location|located in|human
+37196855|distant|microbiome|is linked to|DDF
+37196855|distant|DDF|strike|anatomical location
+37196855|distant|DDF|change abundance|microbiome
+37196855|distant|DDF|affect|DDF
+37196855|distant|DDF|is a|DDF
+37196855|distant|microbiome|located in|animal
+37196855|distant|DDF|target|animal
+38106542|distant|DDF|is a|DDF
+38106542|distant|DDF|target|human
+36918961|distant|microbiome|is linked to|DDF
+38178103|distant|chemical|influence|microbiome
+38178103|distant|microbiome|influence|DDF
+38178103|distant|chemical|change abundance|microbiome
+38178103|distant|microbiome|is linked to|DDF
+38178103|distant|microbiome|is linked to|chemical
+38178103|distant|chemical|influence|DDF
+38178103|distant|DDF|change abundance|microbiome
+38178103|distant|chemical|impact|microbiome
+38958636|distant|microbiome|is linked to|DDF
+38958636|distant|chemical|influence|DDF
+38958636|distant|anatomical location|located in|human
+38958636|distant|DDF|target|human
+38958636|distant|chemical|impact|microbiome
+38958636|distant|chemical|impact|bacteria
+39064625|distant|food|influence|DDF
+39064625|distant|microbiome|is linked to|DDF
+39064625|distant|DDF|target|human
+38652236|distant|microbiome|is linked to|DDF
+37843219|distant|microbiome|is linked to|DDF
+37843219|distant|dietary supplement|influence|DDF
+37843219|distant|anatomical location|influence|DDF
+37843219|distant|DDF|affect|DDF
+37843219|distant|DDF|is a|DDF
+37843219|distant|microbiome|is linked to|biomedical technique
+38867886|distant|microbiome|is linked to|DDF
+38867886|distant|DDF|is a|DDF
+38867886|distant|DDF|target|human
+38867886|distant|DDF|affect|DDF
+38570412|distant|microbiome|is linked to|DDF
+38570412|distant|microbiome|located in|anatomical location
+38570412|distant|DDF|affect|DDF
+38570412|distant|dietary supplement|influence|bacteria
+38570412|distant|dietary supplement|impact|bacteria
+38570412|distant|bacteria|influence|DDF
+38570412|distant|DDF|impact|microbiome
+38999791|distant|chemical|impact|microbiome
+38999791|distant|chemical|located in|anatomical location
+38279293|distant|chemical|located in|anatomical location
+38279293|distant|DDF|strike|anatomical location
+38279293|distant|chemical|influence|DDF
+39403202|distant|microbiome|is linked to|statistical technique
+39403202|distant|microbiome|used by|statistical technique
+39403202|distant|microbiome|is linked to|DDF
+39403202|distant|DDF|is a|DDF
+38587699|distant|microbiome|is linked to|DDF
+38587699|distant|dietary supplement|influence|DDF
+38587699|distant|DDF|change abundance|microbiome
+38587699|distant|chemical|influence|DDF
+38587699|distant|DDF|affect|DDF
+38587699|distant|chemical|impact|microbiome
+38587699|distant|DDF|is a|DDF
+38587699|distant|dietary supplement|impact|microbiome
+38852651|distant|microbiome|is linked to|DDF
+38852651|distant|drug|influence|DDF
+38852651|distant|DDF|affect|DDF
+38785512|distant|dietary supplement|impact|microbiome
+38785512|distant|microbiome|is linked to|DDF
+38785512|distant|dietary supplement|influence|DDF
+38785512|distant|DDF|affect|DDF
+39177611|distant|microbiome|is linked to|DDF
+39177611|distant|chemical|influence|DDF
+39168575|distant|food|influence|DDF
+39168575|distant|DDF|target|human
+39168575|distant|chemical|influence|DDF
+39168575|distant|DDF|affect|DDF
+39168575|distant|DDF|is a|DDF
+38974034|distant|microbiome|located in|human
+38974034|distant|DDF|is a|DDF
+38974034|distant|DDF|target|human
+38974034|distant|DDF|affect|DDF
+39036341|distant|microbiome|is linked to|DDF
+39036341|distant|chemical|influence|DDF
+37307829|distant|DDF|is linked to|DDF
+37307829|distant|microbiome|is linked to|DDF
+37307829|distant|DDF|affect|DDF
+39134825|distant|microbiome|located in|human
+39134825|distant|microbiome|is linked to|DDF
+39134825|distant|DDF|target|human
+38989933|distant|microbiome|located in|human
+38989933|distant|microbiome|is linked to|DDF
+38989933|distant|chemical|influence|DDF
+38989933|distant|DDF|affect|DDF
+38344171|distant|microbiome|is linked to|drug
+38344171|distant|microbiome|is linked to|DDF
+38344171|distant|dietary supplement|influence|DDF
+38344171|distant|microbiome|located in|human
+38344171|distant|DDF|is a|DDF
+38344171|distant|dietary supplement|impact|microbiome
+38344171|distant|drug|impact|microbiome
+38237031|distant|microbiome|is linked to|DDF
+38237031|distant|DDF|is a|DDF
+38848023|distant|microbiome|is linked to|DDF
+38848023|distant|microbiome|located in|human
+38848023|distant|chemical|influence|DDF
+38848023|distant|DDF|affect|DDF
+38848023|distant|DDF|interact|chemical
+38848023|distant|DDF|is a|DDF
+39113894|distant|microbiome|is linked to|DDF
+38409641|distant|animal|used by|chemical
+38409641|distant|dietary supplement|influence|DDF
+38409641|distant|animal|used by|biomedical technique
+38409641|distant|DDF|affect|DDF
+38409641|distant|DDF|target|animal
+38409641|distant|chemical|change effect|DDF
+38385354|distant|chemical|impact|chemical
+38385354|distant|chemical|influence|DDF
+38385354|distant|chemical|located in|anatomical location
+38385354|distant|DDF|is a|DDF
+38385354|distant|bacteria|influence|DDF
+38385354|distant|DDF|target|animal
+38385354|distant|chemical|change effect|DDF
+38211635|distant|microbiome|is linked to|DDF
+38211635|distant|microbiome|located in|human
+38211635|distant|DDF|target|human
+38211635|distant|chemical|influence|DDF
+38211635|distant|bacteria|influence|DDF
+38211635|distant|DDF|target|animal
+38755164|distant|microbiome|is linked to|DDF
+38755164|distant|chemical|influence|DDF
+38755164|distant|chemical|impact|microbiome
+38755164|distant|chemical|located in|anatomical location
+38755164|distant|gene|influence|DDF
+38755164|distant|DDF|target|animal
+38518598|distant|microbiome|is linked to|DDF
+38518598|distant|DDF|is linked to|DDF
+38518598|distant|chemical|influence|DDF
+38518598|distant|DDF|affect|DDF
+38518598|distant|chemical|impact|microbiome
+38518598|distant|chemical|located in|anatomical location
+38518598|distant|DDF|interact|chemical
+38244807|distant|microbiome|is linked to|DDF
+38244807|distant|drug|influence|DDF
+38244807|distant|DDF|affect|DDF
+38244807|distant|bacteria|influence|DDF
+38244807|distant|drug|impact|microbiome
+38435303|distant|microbiome|is linked to|DDF
+38435303|distant|microbiome|located in|anatomical location
+38435303|distant|chemical|influence|DDF
+38435303|distant|DDF|affect|DDF
+38435303|distant|DDF|is a|DDF
+39019779|distant|DDF|is a|DDF
+39019779|distant|microbiome|located in|anatomical location
+39019779|distant|DDF|affect|DDF
+38875045|distant|DDF|affect|DDF
+39459534|distant|DDF|is a|DDF
+39300699|distant|DDF|is a|DDF
+39300699|distant|microbiome|is linked to|DDF
+39300699|distant|microbiome|located in|anatomical location
+39161161|distant|microbiome|is linked to|DDF
+39161161|distant|microbiome|located in|anatomical location
+39161161|distant|microbiome|located in|human
+39161161|distant|microbiome|is linked to|animal
+39161161|distant|DDF|target|human
+39161161|distant|microbiome|located in|animal
+39161161|distant|microbiome|used by|biomedical technique
+39161161|distant|DDF|target|animal
+38314132|distant|microbiome|is linked to|DDF
+38314132|distant|dietary supplement|influence|DDF
+38314132|distant|DDF|change abundance|bacteria
+38314132|distant|DDF|change abundance|microbiome
+38314132|distant|DDF|target|human
+38314132|distant|DDF|affect|DDF
+38314132|distant|DDF|is a|DDF
+38314132|distant|dietary supplement|impact|microbiome
+39064171|distant|microbiome|is linked to|DDF
+39064171|distant|gene|influence|DDF
+39064171|distant|DDF|is a|DDF
+39064171|distant|chemical|influence|DDF
+38727306|distant|DDF|is a|DDF
+38727306|distant|anatomical location|is linked to|DDF
+38727306|distant|microbiome|is linked to|DDF
+38727306|distant|microbiome|located in|anatomical location
+38817603|distant|microbiome|is linked to|DDF
+38817603|distant|DDF|affect|DDF
+38873926|distant|microbiome|is linked to|DDF
+38873926|distant|microbiome|located in|human
+38873926|distant|DDF|change abundance|microbiome
+38873926|distant|DDF|target|human
+38873926|distant|DDF|affect|DDF
+38873926|distant|human|used by|biomedical technique
+38873926|distant|microbiome|used by|biomedical technique
+38694925|distant|microbiome|is linked to|DDF
+38694925|distant|DDF|is a|DDF
+38694925|distant|chemical|influence|DDF
+38449863|distant|chemical|influence|DDF
+38449863|distant|microbiome|is linked to|DDF
+38449863|distant|bacteria|located in|anatomical location
+38449863|distant|DDF|affect|DDF
+39334720|distant|microbiome|is linked to|DDF
+39334720|distant|DDF|is a|DDF
+39334720|distant|DDF|affect|DDF
+38227539|distant|microbiome|is linked to|DDF
+38227539|distant|chemical|influence|DDF
+38227539|distant|DDF|affect|DDF
+38227539|distant|drug|affect|DDF
+38227539|distant|drug|influence|DDF
+38227539|distant|DDF|is a|DDF
+38227539|distant|microbiome|located in|animal
+38227539|distant|DDF|target|animal
+38840699|distant|microbiome|is linked to|food
+38840699|distant|microbiome|used by|statistical technique
+38840699|distant|food|influence|DDF
+38840699|distant|microbiome|is linked to|DDF
+38957302|distant|microbiome|is linked to|DDF
+38957302|distant|microbiome|located in|human
+38957302|distant|DDF|change abundance|bacteria
+38957302|distant|DDF|target|human
+38957302|distant|DDF|is a|DDF
+38773112|distant|microbiome|is linked to|DDF
+38773112|distant|microbiome|used by|statistical technique
+38773112|distant|DDF|change abundance|bacteria
+38773112|distant|DDF|target|human
+38773112|distant|chemical|influence|DDF
+38773112|distant|human|used by|biomedical technique
+38773112|distant|microbiome|used by|biomedical technique
+39377830|distant|microbiome|is linked to|DDF
+39377830|distant|DDF|change abundance|microbiome
+39377830|distant|chemical|influence|DDF
+39377830|distant|DDF|affect|DDF
+39377830|distant|DDF|is a|DDF
+39071627|distant|dietary supplement|influence|DDF
+39071627|distant|DDF|affect|DDF
+39449004|distant|microbiome|influence|DDF
+39449004|distant|microbiome|is linked to|DDF
+39449004|distant|microbiome|affect|DDF
+39449004|distant|DDF|target|human
+39449004|distant|DDF|affect|DDF
+39449004|distant|chemical|influence|DDF
+36200211|distant|microbiome|is linked to|DDF
+36200211|distant|DDF|is a|DDF
+36200211|distant|chemical|influence|DDF
+36200211|distant|DDF|affect|DDF
+38265387|distant|microbiome|located in|human
+38265387|distant|microbiome|is linked to|DDF
+38265387|distant|DDF|is a|DDF
+38265387|distant|DDF|affect|DDF
+38965287|distant|microbiome|is linked to|DDF
+38965287|distant|dietary supplement|influence|DDF
+38965287|distant|animal|used by|biomedical technique
+38965287|distant|dietary supplement|change effect|DDF
+38965287|distant|dietary supplement|interact|chemical
+38965287|distant|dietary supplement|influence|chemical
+38965287|distant|chemical|target|animal
+38965287|distant|bacteria|administered|animal
+38965287|distant|dietary supplement|impact|anatomical location
+38965287|distant|DDF|target|animal
+39042202|distant|food|influence|DDF
+39042202|distant|DDF|strike|anatomical location
+39042202|distant|chemical|influence|DDF
+39042202|distant|DDF|affect|DDF
+39042202|distant|drug|influence|DDF
+39042202|distant|drug|impact|chemical
+39042202|distant|DDF|target|animal
+39189380|distant|chemical|influence|DDF
+39189380|distant|DDF|affect|DDF
+39189380|distant|DDF|target|human
+39189380|distant|DDF|is a|DDF
+39189380|distant|DDF|target|animal
+39189380|distant|chemical|change effect|DDF
+38854967|distant|microbiome|is linked to|DDF
+38854967|distant|DDF|change abundance|microbiome
+38854967|distant|DDF|target|human
+38854967|distant|DDF|is a|human
+38854967|distant|DDF|is a|DDF
+39070266|distant|anatomical location|used by|biomedical technique
+39070266|distant|microbiome|is linked to|DDF
+39070266|distant|microbiome|located in|human
+39070266|distant|DDF|change abundance|microbiome
+39070266|distant|DDF|target|human
+39070266|distant|DDF|affect|DDF
+39070266|distant|drug|influence|DDF
+39070266|distant|microbiome|located in|animal
+39070266|distant|human|used by|biomedical technique
+39070266|distant|DDF|target|animal
+39065820|distant|microbiome|is linked to|DDF
+39065820|distant|DDF|change abundance|microbiome
+39065820|distant|chemical|influence|DDF
+39065820|distant|DDF|is a|DDF
+39065820|distant|chemical|change effect|DDF
+38515447|distant|microbiome|is linked to|DDF
+38515447|distant|DDF|is a|DDF
+39078158|distant|microbiome|used by|statistical technique
+39078158|distant|microbiome|is linked to|DDF
+39078158|distant|DDF|target|DDF
+39078158|distant|DDF|target|human
+38450172|distant|microbiome|is linked to|DDF
+38450172|distant|bacteria|is linked to|bacteria
+38450172|distant|biomedical technique|influence|DDF
+38450172|distant|biomedical technique|influence|chemical
+38450172|distant|DDF|is a|DDF
+38450172|distant|microbiome|used by|biomedical technique
+38450172|distant|DDF|target|animal
+38450172|distant|bacteria|is linked to|DDF
+39417117|distant|chemical|influence|microbiome
+39417117|distant|microbiome|is linked to|DDF
+39417117|distant|chemical|influence|DDF
+39417117|distant|DDF|affect|DDF
+39417117|distant|chemical|impact|microbiome
+39284418|distant|microbiome|used by|biomedical technique
+39284418|distant|microbiome|is linked to|DDF
+39284418|distant|DDF|change abundance|microbiome
+39284418|distant|chemical|influence|DDF
+38898687|distant|chemical|influence|DDF
+38898687|distant|anatomical location|is linked to|DDF
+38898687|distant|bacteria|part of|microbiome
+38898687|distant|DDF|affect|DDF
+38774094|distant|microbiome|is linked to|DDF
+38774094|distant|biomedical technique|change effect|DDF
+38774094|distant|DDF|affect|DDF
+38774094|distant|biomedical technique|influence|DDF
+38774094|distant|chemical|located in|anatomical location
+38774094|distant|DDF|is a|DDF
+38774094|distant|DDF|target|animal
+38774094|distant|anatomical location|located in|animal
+38447734|distant|dietary supplement|influence|DDF
+38447734|distant|dietary supplement|administered|animal
+38447734|distant|animal|used by|biomedical technique
+38447734|distant|chemical|influence|DDF
+38447734|distant|DDF|influence|DDF
+38447734|distant|DDF|target|animal
+38447734|distant|chemical|change effect|DDF
+38464323|distant|microbiome|used by|statistical technique
+38464323|distant|microbiome|is linked to|DDF
+38464323|distant|DDF|target|DDF
+38464323|distant|DDF|target|human
+38499889|distant|gene|impact|microbiome
+38499889|distant|microbiome|influence|DDF
+38499889|distant|microbiome|is linked to|DDF
+38499889|distant|gene|affect|DDF
+38499889|distant|DDF|affect|DDF
+38499889|distant|gene|influence|DDF
+38499889|distant|DDF|is a|DDF
+39173756|distant|chemical|affect|DDF
+39173756|distant|chemical|influence|DDF
+39173756|distant|chemical|located in|anatomical location
+39173756|distant|DDF|is a|DDF
+39173756|distant|chemical|located in|animal
+39043489|distant|DDF|strike|anatomical location
+39043489|distant|microbiome|located in|anatomical location
+39043489|distant|chemical|influence|DDF
+39043489|distant|DDF|affect|DDF
+38399728|distant|microbiome|located in|human
+38399728|distant|human|used by|biomedical technique
+38399728|distant|DDF|target|human
+38399728|distant|DDF|affect|DDF
+39155987|distant|DDF|affect|human
+39155987|distant|DDF|change abundance|microbiome
+39155987|distant|DDF|target|human
+39155987|distant|DDF|affect|DDF
+39155987|distant|human|target|human
+39155987|distant|DDF|is a|DDF
+39266892|distant|food|influence|DDF
+39266892|distant|microbiome|is linked to|DDF
+39266892|distant|food|change effect|DDF
+39266892|distant|chemical|influence|DDF
+38287859|distant|biomedical technique|affect|DDF
+38287859|distant|DDF|is a|DDF
+38287859|distant|chemical|influence|DDF
+39431278|distant|microbiome|is linked to|DDF
+39431278|distant|dietary supplement|influence|DDF
+39431278|distant|microbiome|located in|anatomical location
+39431278|distant|microbiome|located in|human
+39431278|distant|DDF|target|human
+39408276|distant|microbiome|is linked to|DDF
+39408276|distant|DDF|strike|anatomical location
+39408276|distant|chemical|influence|DDF
+39408276|distant|chemical|administered|animal
+39408276|distant|chemical|impact|microbiome
+39408276|distant|chemical|located in|anatomical location
+39408276|distant|microbiome|located in|animal
+39408276|distant|DDF|target|animal
+39408276|distant|anatomical location|located in|animal
+38770370|distant|microbiome|is linked to|DDF
+38770370|distant|DDF|is a|DDF
+38770370|distant|chemical|influence|DDF
+38770370|distant|DDF|affect|DDF
+38311217|distant|microbiome|is linked to|DDF
+38311217|distant|dietary supplement|influence|DDF
+38311217|distant|DDF|affect|DDF
+38311217|distant|chemical|administered|animal
+38311217|distant|dietary supplement|impact|microbiome
+38311217|distant|bacteria|influence|DDF
+38754721|distant|microbiome|is linked to|DDF
+38754721|distant|dietary supplement|influence|DDF
+38754721|distant|chemical|influence|DDF
+38754721|distant|chemical|impact|microbiome
+38754721|distant|DDF|is a|DDF
+38754721|distant|dietary supplement|impact|microbiome
+38554664|distant|chemical|influence|DDF
+38554664|distant|DDF|target|human
+38554664|distant|DDF|affect|DDF
+38554664|distant|chemical|influence|chemical
+38554664|distant|human|used by|biomedical technique
+38561921|distant|chemical|affect|DDF
+38561921|distant|chemical|used by|biomedical technique
+38561921|distant|DDF|affect|DDF
+38561921|distant|chemical|is linked to|DDF
+38561921|distant|human|used by|biomedical technique
+38561921|distant|microbiome|used by|biomedical technique
+39062985|distant|microbiome|is linked to|DDF
+39062985|distant|DDF|change abundance|microbiome
+39062985|distant|DDF|target|human
+39062985|distant|DDF|affect|DDF
+39062985|distant|chemical|influence|DDF
+39062985|distant|DDF|is a|DDF
+39062985|distant|anatomical location|is linked to|DDF
+38490348|distant|microbiome|is linked to|DDF
+38490348|distant|dietary supplement|influence|DDF
+38490348|distant|chemical|produced by|microbiome
+38490348|distant|chemical|influence|DDF
+38490348|distant|DDF|affect|DDF
+38490348|distant|chemical|impact|microbiome
+39191336|distant|chemical|impact|microbiome
+39191336|distant|DDF|is a|DDF
+39191336|distant|drug|influence|DDF
+38939650|distant|dietary supplement|influence|drug
+38939650|distant|chemical|influence|DDF
+38939650|distant|DDF|affect|DDF
+38939650|distant|chemical|impact|microbiome
+38939650|distant|DDF|is a|DDF
+38008941|distant|DDF|target|human
+38008941|distant|anatomical location|located in|human
+38008941|distant|DDF|affect|DDF
+38008941|distant|DDF|is a|DDF
+38008941|distant|anatomical location|is linked to|DDF
+38261717|distant|chemical|influence|anatomical location
+38261717|distant|chemical|influence|DDF
+38261717|distant|DDF|target|human
+38261717|distant|DDF|affect|DDF
+38261717|distant|DDF|is a|DDF
+38261717|distant|anatomical location|is linked to|DDF
+39175504|distant|microbiome|is linked to|DDF
+39175504|distant|DDF|target|human
+39175504|distant|DDF|affect|DDF
+39175504|distant|gene|influence|DDF
+39175504|distant|bacteria|located in|anatomical location
+38227477|distant|dietary supplement|impact|DDF
+38227477|distant|dietary supplement|affect|DDF
+38227477|distant|animal|used by|biomedical technique
+38227477|distant|chemical|administered|animal
+38227477|distant|DDF|affect|DDF
+38227477|distant|DDF|is a|DDF
+38227477|distant|dietary supplement|target|animal
+38227477|distant|DDF|target|animal
+38610012|distant|DDF|is a|DDF
+38610012|distant|chemical|influence|DDF
+38786584|distant|chemical|influence|DDF
+38786584|distant|DDF|affect|DDF
+38786584|distant|chemical|impact|bacteria
+38786584|distant|DDF|is a|DDF
+38786584|distant|microbiome|located in|animal
+38786584|distant|chemical|influence|chemical
+38316462|distant|human|used by|drug
+38316462|distant|microbiome|located in|human
+38316462|distant|DDF|target|human
+38316462|distant|DDF|affect|DDF
+39189385|distant|dietary supplement|impact|microbiome
+39189385|distant|bacteria|influence|DDF
+39189385|distant|dietary supplement|influence|DDF
+39189385|distant|DDF|affect|DDF
+39273435|distant|DDF|is linked to|DDF
+39273435|distant|DDF|target|human
+39273435|distant|DDF|affect|DDF
+38569219|distant|chemical|located in|anatomical location
+38569219|distant|microbiome|is linked to|DDF
+38569219|distant|chemical|influence|DDF
+39331469|distant|microbiome|is linked to|DDF
+39331469|distant|DDF|strike|anatomical location
+39331469|distant|DDF|target|human
+39331469|distant|DDF|affect|DDF
+39331469|distant|drug|influence|DDF
+39331469|distant|DDF|is a|DDF
+39331469|distant|DDF|target|animal
+39344226|distant|DDF|influence|DDF
+39344226|distant|DDF|is a|DDF
+39344226|distant|DDF|target|human
+39344226|distant|DDF|affect|DDF
+39201684|distant|DDF|is linked to|DDF
+39201684|distant|DDF|is a|DDF
+39201684|distant|chemical|influence|DDF
+39201684|distant|DDF|affect|DDF
+38267447|distant|microbiome|is linked to|DDF
+38267447|distant|microbiome|is linked to|statistical technique
+38267447|distant|microbiome|located in|human
+38267447|distant|DDF|target|human
+38267447|distant|human|used by|statistical technique
+38267447|distant|DDF|affect|DDF
+38891863|distant|microbiome|influence|DDF
+38891863|distant|microbiome|affect|DDF
+38891863|distant|chemical|influence|DDF
+38891863|distant|DDF|affect|DDF
+38891863|distant|anatomical location|is linked to|DDF
+38741945|distant|DDF|is a|DDF
+38741945|distant|DDF|affect|DDF
+39002442|distant|chemical|influence|chemical
+39002442|distant|chemical|impact|chemical
+39002442|distant|chemical|influence|DDF
+39002442|distant|drug|influence|DDF
+37855342|distant|microbiome|located in|human
+37855342|distant|DDF|strike|anatomical location
+37855342|distant|DDF|is a|DDF
+38474254|distant|bacteria|influence|DDF
+38474254|distant|dietary supplement|influence|DDF
+38474254|distant|DDF|affect|DDF
+39060267|distant|microbiome|is linked to|DDF
+39060267|distant|DDF|affect|DDF
+39064687|distant|dietary supplement|impact|microbiome
+39064687|distant|DDF|is a|DDF
+39064687|distant|chemical|influence|DDF
+39064687|distant|DDF|affect|DDF
+39145619|distant|DDF|target|animal
+39145619|distant|dietary supplement|influence|DDF
+39145619|distant|anatomical location|located in|animal
+38500273|distant|dietary supplement|influence|DDF
+38500273|distant|DDF|is linked to|DDF
+38500273|distant|anatomical location|located in|anatomical location
+38500273|distant|DDF|affect|DDF
+38500273|distant|dietary supplement|impact|microbiome
+39021576|distant|chemical|influence|DDF
+39021576|distant|DDF|affect|DDF
+39309265|distant|dietary supplement|influence|DDF
+39309265|distant|DDF|target|human
+39309265|distant|dietary supplement|impact|microbiome
+39309265|distant|human|used by|biomedical technique
+39309265|distant|bacteria|influence|DDF
+39309265|distant|bacteria|impact|microbiome
+38366179|distant|bacteria|located in|animal
+38366179|distant|bacteria|part of|microbiome
+39143178|distant|microbiome|used by|biomedical technique
+39143178|distant|microbiome|is linked to|DDF
+38375842|distant|chemical|influence|DDF
+39406307|distant|dietary supplement|influence|DDF
+39406307|distant|DDF|strike|anatomical location
+39406307|distant|dietary supplement|impact|microbiome
+39406307|distant|bacteria|influence|DDF
+39406307|distant|DDF|target|animal
+38539626|distant|microbiome|is linked to|DDF
+38539626|distant|dietary supplement|influence|DDF
+38539626|distant|DDF|strike|anatomical location
+38539626|distant|dietary supplement|located in|anatomical location
+38539626|distant|DDF|target|animal
+38539626|distant|anatomical location|located in|animal
+39367119|distant|dietary supplement|influence|DDF
+39367119|distant|biomedical technique|target|human
+39367119|distant|dietary supplement|change effect|DDF
+39367119|distant|DDF|target|human
+39367119|distant|DDF|affect|DDF
+39367119|distant|dietary supplement|administered|human
+38796044|distant|food|influence|DDF
+38796044|distant|dietary supplement|influence|animal
+38796044|distant|chemical|influence|DDF
+39302939|distant|anatomical location|used by|biomedical technique
+39302939|distant|dietary supplement|influence|DDF
+39302939|distant|dietary supplement|change effect|DDF
+39302939|distant|animal|used by|biomedical technique
+39302939|distant|chemical|administered|animal
+39302939|distant|chemical|located in|anatomical location
+39302939|distant|dietary supplement|impact|bacteria
+39302939|distant|DDF|target|animal
+39302939|distant|anatomical location|located in|animal
+38997651|distant|drug|change effect|DDF
+38997651|distant|drug|influence|DDF
+39310761|distant|microbiome|is linked to|DDF
+39310761|distant|chemical|is linked to|bacteria
+39310761|distant|DDF|is linked to|DDF
+39310761|distant|chemical|influence|DDF
+39310761|distant|DDF|affect|DDF
+39310761|distant|DDF|is a|DDF

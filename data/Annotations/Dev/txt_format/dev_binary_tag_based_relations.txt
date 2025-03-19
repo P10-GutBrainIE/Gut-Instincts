@@ -1,0 +1,301 @@
+pmid	annotator	subject_label	object_label
+36532064	expert_7	DDF	human
+36532064	expert_7	microbiome	human
+36532064	expert_7	chemical	anatomical location
+36532064	expert_7	microbiome	anatomical location
+36532064	expert_7	microbiome	DDF
+36532064	expert_7	microbiome	microbiome
+
+
+37212075	expert_5	microbiome	human
+37212075	expert_5	microbiome	biomedical technique
+37212075	expert_5	DDF	DDF
+37212075	expert_5	bacteria	human
+37212075	expert_5	human	biomedical technique
+37212075	expert_5	microbiome	DDF
+37212075	expert_5	microbiome	microbiome
+
+
+37577447	expert_5	microbiome	human
+37577447	expert_5	DDF	human
+37577447	expert_5	microbiome	microbiome
+37577447	expert_5	microbiome	DDF
+
+
+38203207	expert_5	microbiome	anatomical location
+38203207	expert_5	DDF	DDF
+38203207	expert_5	microbiome	DDF
+38203207	expert_5	bacteria	DDF
+38203207	expert_5	chemical	microbiome
+38203207	expert_5	bacteria	microbiome
+
+
+31530799	expert_2	microbiome	animal
+31530799	expert_2	chemical	microbiome
+31530799	expert_2	bacteria	microbiome
+31530799	expert_2	microbiome	DDF
+
+
+38525261	expert_6	dietary supplement	microbiome
+38525261	expert_6	chemical	microbiome
+38525261	expert_6	dietary supplement	human
+
+
+36978911	expert_5	dietary supplement	bacteria
+36978911	expert_5	chemical	anatomical location
+36978911	expert_5	microbiome	anatomical location
+36978911	expert_5	DDF	DDF
+36978911	expert_5	chemical	chemical
+36978911	expert_5	chemical	microbiome
+36978911	expert_5	chemical	DDF
+
+
+31610228	expert_5	DDF	human
+31610228	expert_5	microbiome	human
+31610228	expert_5	chemical	DDF
+31610228	expert_5	DDF	microbiome
+31610228	expert_5	DDF	DDF
+31610228	expert_5	microbiome	DDF
+31610228	expert_5	bacteria	gene
+
+
+34560239	expert_5	microbiome	animal
+34560239	expert_5	bacteria	animal
+34560239	expert_5	anatomical location	animal
+34560239	expert_5	chemical	microbiome
+34560239	expert_5	bacteria	gene
+34560239	expert_5	bacteria	chemical
+
+
+30900006	expert_2	microbiome	animal
+30900006	expert_2	animal	biomedical technique
+30900006	expert_2	drug	microbiome
+30900006	expert_2	drug	gene
+
+
+30309367	expert_5	DDF	anatomical location
+30309367	expert_5	DDF	DDF
+30309367	expert_5	dietary supplement	DDF
+30309367	expert_5	microbiome	DDF
+
+
+32041265	expert_7	DDF	anatomical location
+32041265	expert_7	DDF	human
+32041265	expert_7	microbiome	human
+32041265	expert_7	chemical	anatomical location
+32041265	expert_7	chemical	human
+32041265	expert_7	DDF	DDF
+32041265	expert_7	microbiome	DDF
+
+
+26923630	expert_7	DDF	anatomical location
+26923630	expert_7	drug	animal
+26923630	expert_7	chemical	anatomical location
+26923630	expert_7	DDF	chemical
+26923630	expert_7	DDF	DDF
+26923630	expert_7	anatomical location	animal
+26923630	expert_7	DDF	animal
+26923630	expert_7	chemical	DDF
+
+
+25869281	expert_7	DDF	anatomical location
+25869281	expert_7	animal	biomedical technique
+25869281	expert_7	drug	DDF
+25869281	expert_7	dietary supplement	DDF
+25869281	expert_7	chemical	anatomical location
+25869281	expert_7	dietary supplement	microbiome
+25869281	expert_7	anatomical location	animal
+25869281	expert_7	DDF	animal
+25869281	expert_7	drug	microbiome
+
+
+33271426	expert_7	DDF	anatomical location
+33271426	expert_7	microbiome	DDF
+
+
+37403161	expert_5	DDF	anatomical location
+37403161	expert_5	drug	DDF
+37403161	expert_5	bacteria	animal
+37403161	expert_5	microbiome	biomedical technique
+37403161	expert_5	drug	bacteria
+37403161	expert_5	DDF	chemical
+37403161	expert_5	DDF	DDF
+37403161	expert_5	drug	chemical
+37403161	expert_5	microbiome	DDF
+37403161	expert_5	anatomical location	animal
+37403161	expert_5	DDF	animal
+37403161	expert_5	chemical	DDF
+
+
+38613087	expert_5	DDF	anatomical location
+38613087	expert_5	dietary supplement	DDF
+38613087	expert_5	DDF	DDF
+
+
+33968794	expert_7	DDF	anatomical location
+33968794	expert_7	DDF	DDF
+33968794	expert_7	microbiome	DDF
+
+
+32999308	expert_7	DDF	anatomical location
+32999308	expert_7	DDF	human
+32999308	expert_7	chemical	animal
+32999308	expert_7	DDF	DDF
+32999308	expert_7	chemical	bacteria
+32999308	expert_7	anatomical location	animal
+32999308	expert_7	chemical	microbiome
+32999308	expert_7	chemical	DDF
+
+
+34480631	expert_7	microbiome	animal
+34480631	expert_7	drug	animal
+34480631	expert_7	anatomical location	animal
+34480631	expert_7	drug	DDF
+34480631	expert_7	DDF	animal
+34480631	expert_7	drug	chemical
+34480631	expert_7	drug	microbiome
+
+
+32438623	expert_7	DDF	human
+32438623	expert_7	food	bacteria
+32438623	expert_7	microbiome	biomedical technique
+32438623	expert_7	human	biomedical technique
+32438623	expert_7	food	human
+
+
+31662903	expert_7	DDF	human
+31662903	expert_7	food	bacteria
+31662903	expert_7	microbiome	human
+31662903	expert_7	food	microbiome
+31662903	expert_7	microbiome	biomedical technique
+31662903	expert_7	DDF	microbiome
+31662903	expert_7	food	human
+31662903	expert_7	chemical	DDF
+
+
+30405455	expert_7	drug	animal
+30405455	expert_7	DDF	human
+30405455	expert_7	chemical	human
+30405455	expert_7	DDF	DDF
+30405455	expert_7	chemical	DDF
+
+
+34290352	expert_2	microbiome	human
+34290352	expert_2	drug	human
+34290352	expert_2	drug	microbiome
+34290352	expert_2	microbiome	DDF
+
+
+37676767	expert_5	chemical	microbiome
+37676767	expert_5	DDF	bacteria
+37676767	expert_5	DDF	DDF
+37676767	expert_5	chemical	chemical
+37676767	expert_5	chemical	bacteria
+37676767	expert_5	chemical	DDF
+
+
+25911232	expert_2	DDF	DDF
+25911232	expert_2	DDF	animal
+25911232	expert_2	microbiome	DDF
+
+
+33195226	expert_4	animal	biomedical technique
+33195226	expert_4	DDF	bacteria
+33195226	expert_4	DDF	DDF
+33195226	expert_4	bacteria	DDF
+33195226	expert_4	DDF	animal
+
+
+28716445	expert_2	dietary supplement	microbiome
+28716445	expert_2	DDF	DDF
+28716445	expert_2	DDF	human
+28716445	expert_2	microbiome	DDF
+
+
+32389857	expert_2	DDF	microbiome
+32389857	expert_2	DDF	DDF
+32389857	expert_2	drug	microbiome
+
+
+33777957	expert_2	microbiome	animal
+33777957	expert_2	DDF	microbiome
+33777957	expert_2	DDF	DDF
+33777957	expert_2	microbiome	DDF
+
+
+34205336	expert_5	chemical	anatomical location
+34205336	expert_5	chemical	microbiome
+34205336	expert_5	DDF	DDF
+34205336	expert_5	microbiome	DDF
+
+
+28556833	expert_5	microbiome	animal
+28556833	expert_5	anatomical location	human
+28556833	expert_5	animal	biomedical technique
+28556833	expert_5	anatomical location	animal
+28556833	expert_5	chemical	animal
+28556833	expert_5	chemical	microbiome
+28556833	expert_5	chemical	anatomical location
+28556833	expert_5	microbiome	biomedical technique
+28556833	expert_5	DDF	DDF
+28556833	expert_5	chemical	bacteria
+28556833	expert_5	drug	DDF
+28556833	expert_5	chemical	chemical
+28556833	expert_5	DDF	animal
+28556833	expert_5	chemical	DDF
+
+
+35674870	expert_5	drug	DDF
+35674870	expert_5	DDF	DDF
+35674870	expert_5	DDF	human
+35674870	expert_5	microbiome	DDF
+
+
+37071196	expert_5	DDF	human
+37071196	expert_5	microbiome	human
+37071196	expert_5	microbiome	biomedical technique
+37071196	expert_5	DDF	DDF
+37071196	expert_5	human	biomedical technique
+37071196	expert_5	microbiome	DDF
+37071196	expert_5	bacteria	DDF
+37071196	expert_5	bacteria	microbiome
+
+
+37849234	expert_5	DDF	human
+37849234	expert_5	chemical	animal
+37849234	expert_5	microbiome	human
+37849234	expert_5	DDF	microbiome
+37849234	expert_5	DDF	DDF
+37849234	expert_5	microbiome	DDF
+
+
+33963281	expert_6	microbiome	animal
+33963281	expert_6	DDF	human
+33963281	expert_6	DDF	DDF
+33963281	expert_6	microbiome	DDF
+33963281	expert_6	DDF	animal
+
+
+36804535	expert_3	animal	biomedical technique
+36804535	expert_3	DDF	human
+36804535	expert_3	DDF	DDF
+36804535	expert_3	drug	DDF
+36804535	expert_3	DDF	animal
+
+
+34174901	expert_6	microbiome	animal
+34174901	expert_6	DDF	DDF
+34174901	expert_6	drug	DDF
+34174901	expert_6	DDF	animal
+34174901	expert_6	drug	microbiome
+
+
+33327540	expert_5	drug	DDF
+33327540	expert_5	food	DDF
+33327540	expert_5	DDF	human
+
+
+25940667	expert_4	drug	DDF
+25940667	expert_4	microbiome	DDF
+
+
