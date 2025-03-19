@@ -25,7 +25,7 @@ def load_bio_labels(
 	return bio_labels, label2id, id2label
 
 
-def load_data(file_path: str):
+def load_pkl_data(file_path: str):
 	"""
 	Load the data from the specified file path.
 
@@ -38,3 +38,18 @@ def load_data(file_path: str):
 	with open(file_path, "rb") as f:
 		data = pickle.load(f)
 	return np.array(data)
+
+
+def load_json_data(file_path: str):
+	"""
+	Load the data from the specified file path.
+
+	Args:
+		file_path (str): Path to the file.
+
+	Returns:
+		dict: Dictionary of the data.
+	"""
+	with open(file_path, "r") as f:
+		data = json.load(f)
+	return data

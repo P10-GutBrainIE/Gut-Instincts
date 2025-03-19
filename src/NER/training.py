@@ -8,7 +8,7 @@ from transformers import (
 	TrainingArguments,
 	Trainer,
 )
-from utils.utils import load_bio_labels, load_data
+from utils.utils import load_bio_labels, load_pkl_data
 from dotenv import load_dotenv
 from huggingface_hub import login
 
@@ -18,8 +18,8 @@ login(HUGGING_FACE_TOKEN)
 
 label_list, label2id, id2label = load_bio_labels()
 
-training_data = load_data(os.path.join("data_preprocessed", "training.pkl"))
-validation_data = load_data(os.path.join("data_preprocessed", "validation.pkl"))
+training_data = load_pkl_data(os.path.join("data_preprocessed", "training.pkl"))
+validation_data = load_pkl_data(os.path.join("data_preprocessed", "validation.pkl"))
 
 model = AutoModelForTokenClassification.from_pretrained(
 	"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", num_labels=27, id2label=id2label, label2id=label2id
