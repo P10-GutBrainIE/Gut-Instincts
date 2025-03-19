@@ -1,18 +1,18 @@
 import json
 
 # DEFINE HERE THE PATH(S) TO YOUR PREDICTIONS
-PREDICTIONS_PATH_6_1 = "org_T61_BaselineRun_NuNerZero.json"
+PREDICTIONS_PATH_6_1 = "inference_results.json"
 PREDICTIONS_PATH_6_2 = "org_T621_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"
 
 # DEFINE HERE FOR WHICH SUBTASK(S) YOU WANT TO EVAL YOUR PREDICTIONS
 eval_6_1_NER = True
-eval_6_2_binary_tag_RE = True
-eval_6_3_ternary_tag_RE = True
-eval_6_4_ternary_mention_RE = True
+eval_6_2_binary_tag_RE = False
+eval_6_3_ternary_tag_RE = False
+eval_6_4_ternary_mention_RE = False
 
-GROUND_TRUTH_PATH = "../Annotations/Dev/json_format/dev.json"
+GROUND_TRUTH_PATH = "data/Annotations/Dev/json_format/dev.json"
 try:
 	with open(GROUND_TRUTH_PATH, "r", encoding="utf-8") as file:
 		ground_truth = json.load(file)
@@ -76,7 +76,7 @@ def eval_submission_6_1_NER(path):
 			text_span = str(entity["text_span"])
 			label = str(entity["label"])
 
-			entry = (start_idx, end_idx, location, text_span, label)
+			entry = (start_idx, end_idx, location, text_span.lower(), label)
 			ground_truth_NER[pmid].append(entry)
 
 			if label not in count_annotated_entities_per_label:

@@ -58,12 +58,13 @@ class Preprocessor:
 		entities = content.get("entities", [])
 
 		for section, text in [("title", title), ("abstract", abstract)]:
-			tokens, bio_tag_ids, input_ids = self._tokenize_with_bio(text, entities, section)
+			tokens, bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(text, entities, section)
 			processed.append(
 				{
 					"words": tokens,
 					"labels": bio_tag_ids,
 					"input_ids": input_ids,
+					"attention_mask": attention_mask,
 				}
 			)
 		return processed
@@ -111,7 +112,7 @@ class Preprocessor:
 				bio_tag_ids.append(-100)
 			else:
 				bio_tag_ids.append(self.label2id.get(tag, 0))
-		return tokens, bio_tag_ids, encoding["input_ids"]
+		return tokens, bio_tag_ids, encoding["input_ids"], encoding["attention_mask"]
 
 	def _train_val_split(self, processed_papers):
 		"""
