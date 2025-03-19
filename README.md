@@ -11,6 +11,7 @@ The training data includes highly curated datasets manually annotated by experts
 - [Setup](#setup)
   - [Virtual Environment](#virtual-environment)
   - [Installing Dependencies](#installing-dependencies)
+  - [Adding Hugging Face Token](#adding-hugging-face-token)
   - [Code Formatting](#code-formatting)
 - [Structure](#structure)
 - [License](#license)
@@ -43,6 +44,11 @@ deactivate
 To install the necessary dependencies for the project, run:
 ```
 pip install -r requirements.txt
+```
+### Adding Hugging Face Token
+To use the Hugging Face API, you need to add your Hugging Face token to a `.env` file in the root directory of the project. Create a `.env` file and add the following line:
+```
+HUGGING_FACE_TOKEN=your_hugging_face_token
 ```
 ### Code Formatting
 The project is set up to use Ruff as the formatter and linter. Install the Ruff extension in VS Code, and use the shorcut `Alt + Shift + F` to run the formatter in a specfiic file.

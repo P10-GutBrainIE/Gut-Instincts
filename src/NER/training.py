@@ -9,14 +9,17 @@ from transformers import (
 	Trainer,
 )
 from utils.utils import load_bio_labels, load_data
+from dotenv import load_dotenv
 from huggingface_hub import login
 
-login("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")
+load_dotenv()
+HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
+login(HUGGING_FACE_TOKEN)
 
 label_list, label2id, id2label = load_bio_labels()
 
-training_data = load_data(os.path.join("data", "preprocessed", "train.pkl"))
-validation_data = load_data(os.path.join("data", "preprocessed", "val.pkl"))
+training_data = load_data(os.path.join("data_preprocessed", "training.pkl"))
+validation_data = load_data(os.path.join("data_preprocessed", "validation.pkl"))
 
 model = AutoModelForTokenClassification.from_pretrained(
 	"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", num_labels=27, id2label=id2label, label2id=label2id
@@ -36,11 +39,11 @@ def compute_metrics(p):
 	predictions = np.argmax(predictions, axis=2)
 
 	true_predictions = [
-		[label_list[p] for (p, l) in zip(prediction, label) if l != -100]
+		[label_list[p] for (p, la) in zip(prediction, label) if la != -100]
 		for prediction, label in zip(predictions, labels)
 	]
 	true_labels = [
-		[label_list[l] for (p, l) in zip(prediction, label) if l != -100]
+		[label_list[la] for (_, la) in zip(prediction, label) if la != -100]
 		for prediction, label in zip(predictions, labels)
 	]
 
