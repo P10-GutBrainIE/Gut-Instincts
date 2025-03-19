@@ -1,11 +1,23 @@
 [project]
-name = "nlp_tutorials"
+name = "Gut-Instincts"
+readme = "README.md"
 version = "0.0.0"
-dependencies = ["numpy==1.26.4", "ruff==0.9.6"]
+dependencies = [
+    "ruff==0.9.6",
+    "transformers==4.49.0",
+    "datasets=3.4.1",
+    "evaluate==0.4.3",
+    "seqeval==1.2.2",
+    "accelerate==1.5.2",
+    "torch==2.6.0",
+]
 
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.package-data]
+packages = ["data"]
 
 [tool.ruff.format]
 quote-style = "double"
