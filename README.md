@@ -41,9 +41,9 @@ To deactivate the environment, use the following command:
 deactivate
 ```
 ### Installing Dependencies
-To install the necessary dependencies for the project, run:
+To install the necessary dependencies for the project (as specified in pyproject.toml), run:
 ```
-pip install -r requirements.txt
+pip install -e .
 ```
 ### Adding Hugging Face Token
 To use the Hugging Face API, you need to add your Hugging Face token to a `.env` file in the root directory of the project. Create a `.env` file and add the following line:

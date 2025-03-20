@@ -1,8 +1,0 @@
-ruff==0.9.6
-transformers==4.49.0
-datasets==3.4.1
-evaluate==0.4.3
-seqeval==1.2.2
-accelerate==1.5.2
-torch==2.6.0
-python-dotenv==1.0.1

@@ -1,3 +1,29 @@
+[project]
+name = "Gut-Instincts"
+readme = "README.md"
+version = "0.0.0"
+dependencies = [
+    "ruff==0.9.6",
+    "python-dotenv==1.0.1",
+    "transformers==4.49.0",
+    "datasets==3.4.1",
+    "evaluate==0.4.3",
+    "seqeval==1.2.2",
+    "accelerate==1.5.2",
+    "torch==2.6.0",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "tab"
+docstring-code-format = true
+docstring-code-line-length = 120
+
+[tool.ruff]
 exclude = [
     ".bzr",
     ".direnv",
@@ -29,13 +55,7 @@ exclude = [
 line-length = 120
 indent-width = 4
 
-[format]
-quote-style = "double"
-indent-style = "tab"
-docstring-code-format = true
-docstring-code-line-length = 120
-
-[lint]
+[tool.ruff.lint]
 select = ["E4", "E7", "E9", "F"]
 ignore = []
 fixable = ["ALL"]
