@@ -1,6 +1,7 @@
 data/
 data_preprocessed/
 data_inference_results/
+plots/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
