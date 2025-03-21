@@ -49,54 +49,60 @@ def compare_classes(inference_data, test_data):
 
 def plot_confusion_matrix(y_test, y_pred, target_names):
 	"""
-	Plot a confusion matrix with blue gradient for correct predictions (diagonal)
-	and red gradient for wrong predictions (off-diagonal).
+	Plot a confusion matrix with a blue gradient for correct predictions (diagonal)
+	and a red gradient for wrong predictions (off-diagonal), with improved aesthetics.
 
 	Args:
 	    y_test (list): List of true labels.
 	    y_pred (list): List of predicted labels.
 	    target_names (list): List of target names for the labels.
 	"""
-	cm = confusion_matrix(y_test, y_pred, labels=target_names)
+	cm = confusion_matrix(y_test, y_pred, labels=target_names, normalize="pred")
 	mask_diag = np.eye(cm.shape[0], dtype=bool)
 	mask_off_diag = ~mask_diag
 
-	fig, ax = plt.subplots(figsize=(10, 10))
+	_, ax = plt.subplots(figsize=(10, 10))
 
 	sns.heatmap(
 		cm,
 		mask=mask_diag,
-		annot=False,
-		fmt="d",
+		annot=True,
 		cmap="Reds",
 		cbar=False,
 		ax=ax,
 		xticklabels=target_names,
 		yticklabels=target_names,
+		linewidths=1,
+		linecolor="gray",
+		square=True,
 	)
 
 	sns.heatmap(
 		cm,
 		mask=mask_off_diag,
-		annot=False,
-		fmt="d",
+		annot=True,
 		cmap="Blues",
-		cbar=True,
+		cbar=False,
 		ax=ax,
 		xticklabels=target_names,
 		yticklabels=target_names,
+		linewidths=1,
+		linecolor="gray",
+		square=True,
 	)
 
-	for i in range(cm.shape[0]):
-		for j in range(cm.shape[1]):
-			ax.text(j + 0.5, i + 0.5, format(cm[i, j], "d"), ha="center", va="center", color="black")
+	ax.set_xlabel("Predicted Label", fontsize=18)
+	ax.set_ylabel("True Label", fontsize=18)
 
-	ax.set_xlabel("Predicted Label")
-	ax.set_ylabel("True Label")
+	ax.tick_params(axis="both", which="major", labelsize=14)
+	plt.xticks(rotation=45, ha="right", fontsize=14)
+	plt.yticks(rotation=0, fontsize=14)
+
 	plt.tight_layout()
 
+	# Save the figure
 	os.makedirs("plots", exist_ok=True)
-	plt.savefig(os.path.join("plots", "confusion_matrix.png"))
+	plt.savefig(os.path.join("plots", "confusion_matrix.png"), dpi=300)
 	plt.close()
 
 
