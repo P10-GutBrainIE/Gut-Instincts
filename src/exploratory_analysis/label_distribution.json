@@ -1,6 +1,6 @@
 {
     "label_distribution": {
-        "bronze": {
+        "Bronze": {
             "DDF": 8424,
             "Chemical": 2726,
             "Microbiome": 2301,
@@ -15,7 +15,7 @@
             "Gene": 245,
             "Food": 194
         },
-        "silver": {
+        "Silver": {
             "DDF": 5584,
             "Chemical": 1871,
             "Microbiome": 1599,
@@ -30,7 +30,7 @@
             "Statistical Technique": 258,
             "Food": 162
         },
-        "gold": {
+        "Gold": {
             "DDF": 2027,
             "Chemical": 621,
             "Microbiome": 574,
@@ -45,7 +45,7 @@
             "Gene": 64,
             "Food": 0
         },
-        "platinum": {
+        "Platinum": {
             "DDF": 1232,
             "Chemical": 421,
             "Bacteria": 416,

@@ -27,6 +27,11 @@ def analyze_text_length_distribution(file_paths):
 		print(f"{quality} title length: {min_title_length} - {mean_title_length} - {max_title_length}")
 		print(f"{quality} abstract length: {min_abstract_length} - {mean_abstract_length} - {max_abstract_length}")
 
+		temp = np.where(np.array(text_lengths["silver"]["abstract"]) > 512)
+		print(temp)
+
+	text_lengths["silver"]["abstract"][425] = 0
+
 	data = []
 	for quality, lengths in text_lengths.items():
 		for text_type in ["title", "abstract"]:

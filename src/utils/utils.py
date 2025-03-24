@@ -63,5 +63,5 @@ def load_json_data(file_path: str):
 
 
 def custom_colors() -> dict:
-	custom_palette = {"platinum": "#9fdfbf", "gold": "#ffdf80", "silver": "#bfbfbf", "bronze": "#ffbf80"}
+	custom_palette = {"Platinum": "#9fdfbf", "Gold": "#ffdf80", "Silver": "#bfbfbf", "Bronze": "#ffbf80"}
 	return custom_palette

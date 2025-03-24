@@ -15,12 +15,12 @@ def label_distribution_stacked_bar_plot(label_distribution: dict):
 
 	df_pivot["Total"] = df_pivot.sum(axis=1)
 	df_pivot = df_pivot.sort_values(by="Total", ascending=False).drop(columns="Total")
-	df_pivot = df_pivot[["bronze", "silver", "gold", "platinum"]]
+	df_pivot = df_pivot[["Bronze", "Silver", "Gold", "Platinum"]]
 
 	df_pivot.plot(
 		kind="bar",
 		stacked=True,
-		figsize=(16, 9),
+		figsize=(10, 8),
 		color=[custom_colors()[col] for col in df_pivot.columns],
 		linewidth=0.5,
 		edgecolor="grey",
