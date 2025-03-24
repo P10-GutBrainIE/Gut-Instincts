@@ -3,6 +3,12 @@ import json
 import logging
 from transformers import pipeline, AutoTokenizer
 from utils.utils import load_json_data
+from dotenv import load_dotenv
+from huggingface_hub import login
+
+load_dotenv()
+HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
+login(HUGGING_FACE_TOKEN)
 
 
 class NERInference:
