@@ -35,7 +35,7 @@ def count_text_length(file_paths):
 				data.append({"Quality": quality.capitalize(), "Text Type": text_type, "Length": length})
 		df = pd.DataFrame(data)
 
-	sns.set_theme(style="ticks")
+	sns.set_theme(style="whitegrid")
 	_, axes = plt.subplots(2, 1, figsize=(16, 9))
 
 	sns.violinplot(
@@ -43,7 +43,9 @@ def count_text_length(file_paths):
 		y="Length",
 		data=df[df["Text Type"] == "title"],
 		ax=axes[0],
-		inner_kws=dict(box_width=15, whis_width=2),
+		inner_kws=dict(box_width=10, whis_width=2),
+		palette="Set3",
+		hue="Quality",
 	)
 	axes[0].set_title("Title Length by Quality")
 	axes[0].set_xlabel("")
@@ -54,7 +56,9 @@ def count_text_length(file_paths):
 		y="Length",
 		data=df[df["Text Type"] == "abstract"],
 		ax=axes[1],
-		inner="box",
+		inner_kws=dict(box_width=10, whis_width=2),
+		palette="Set3",
+		hue="Quality",
 	)
 	axes[1].set_title("Abstract Length by Quality")
 	axes[1].set_xlabel("")
