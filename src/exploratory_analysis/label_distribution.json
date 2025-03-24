@@ -1,0 +1,64 @@
+{
+    "label_distribution": {
+        "bronze": {
+            "DDF": 8424,
+            "Chemical": 2726,
+            "Microbiome": 2301,
+            "Human": 1683,
+            "Bacteria": 1349,
+            "Anatomical Location": 1142,
+            "Animal": 864,
+            "Dietary Supplement": 789,
+            "Biomedical Technique": 784,
+            "Drug": 583,
+            "Statistical Technique": 336,
+            "Gene": 245,
+            "Food": 194
+        },
+        "silver": {
+            "DDF": 5584,
+            "Chemical": 1871,
+            "Microbiome": 1599,
+            "Human": 1199,
+            "Bacteria": 1129,
+            "Anatomical Location": 856,
+            "Dietary Supplement": 660,
+            "Biomedical Technique": 655,
+            "Drug": 500,
+            "Animal": 483,
+            "Gene": 319,
+            "Statistical Technique": 258,
+            "Food": 162
+        },
+        "gold": {
+            "DDF": 2027,
+            "Chemical": 621,
+            "Microbiome": 574,
+            "Human": 474,
+            "Bacteria": 281,
+            "Anatomical Location": 262,
+            "Animal": 226,
+            "Dietary Supplement": 185,
+            "Biomedical Technique": 183,
+            "Statistical Technique": 119,
+            "Drug": 118,
+            "Gene": 64,
+            "Food": 0
+        },
+        "platinum": {
+            "DDF": 1232,
+            "Chemical": 421,
+            "Bacteria": 416,
+            "Human": 401,
+            "Microbiome": 379,
+            "Dietary Supplement": 210,
+            "Biomedical Technique": 150,
+            "Anatomical Location": 149,
+            "Animal": 101,
+            "Gene": 64,
+            "Drug": 50,
+            "Statistical Technique": 45,
+            "Food": 20
+        }
+    }
+}

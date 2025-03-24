@@ -5,7 +5,7 @@ import numpy as np
 
 
 def load_bio_labels(
-	bio_labels_path: str = os.path.join("src", "preprocessing", "bio_labels.json"),
+	file_path: str = os.path.join("src", "preprocessing", "bio_labels.json"),
 ) -> tuple[dict, dict]:
 	"""
 	Load the BIO labels from the specified path.
@@ -16,13 +16,20 @@ def load_bio_labels(
 	Returns:
 		tuple[dict, dict]: Tuple containing the BIO labels, the label2id dictionary and id2label dictionary.
 	"""
-	with open(bio_labels_path) as f:
+	with open(file_path) as f:
 		data = json.load(f)
 		bio_labels = data["bio_labels"]
 		label2id = {label: i for i, label in enumerate(bio_labels)}
 		id2label = {i: label for i, label in enumerate(bio_labels)}
 
 	return bio_labels, label2id, id2label
+
+
+def label_distribution(file_path: str = os.path.join("src", "exploratory_analysis", "label_distribution.json")):
+	with open(file_path) as f:
+		data = json.load(f)
+		label_distribution = data["label_distribution"]
+	return label_distribution
 
 
 def load_pkl_data(file_path: str):
@@ -53,3 +60,8 @@ def load_json_data(file_path: str):
 	with open(file_path, "r") as f:
 		data = json.load(f)
 	return data
+
+
+def custom_colors() -> dict:
+	custom_palette = {"platinum": "#9fdfbf", "gold": "#ffdf80", "silver": "#bfbfbf", "bronze": "#ffbf80"}
+	return custom_palette
