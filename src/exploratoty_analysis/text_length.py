@@ -6,7 +6,7 @@ import seaborn as sns
 import pandas as pd
 
 
-def count_text_length(file_paths):
+def analyze_text_length_distribution(file_paths):
 	text_lengths = {quality: {"title": [], "abstract": []} for quality in file_paths.keys()}
 
 	for quality, file_path in file_paths.items():
@@ -28,7 +28,6 @@ def count_text_length(file_paths):
 		print(f"{quality} abstract length: {min_abstract_length} - {mean_abstract_length} - {max_abstract_length}")
 
 	data = []
-
 	for quality, lengths in text_lengths.items():
 		for text_type in ["title", "abstract"]:
 			for length in lengths[text_type]:
@@ -79,4 +78,4 @@ if __name__ == "__main__":
 		"bronze": os.path.join(shared_path, "bronze_quality", "json_format", "train_bronze.json"),
 	}
 
-	count_text_length(file_paths)
+	analyze_text_length_distribution(file_paths)
