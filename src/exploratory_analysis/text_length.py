@@ -1,6 +1,7 @@
 import json
 import os
 import matplotlib.pyplot as plt
+from matplotlib.patches import Patch
 import numpy as np
 import seaborn as sns
 import pandas as pd
@@ -17,57 +18,56 @@ def analyze_text_length_distribution(file_paths):
 				text_lengths[quality]["title"].append(len(content["metadata"]["title"].split(" ")))
 				text_lengths[quality]["abstract"].append(len(content["metadata"]["abstract"].split(" ")))
 
-	for quality, _ in text_lengths.items():
-		mean_title_length = np.mean(text_lengths[quality]["title"])
-		mean_abstract_length = np.mean(text_lengths[quality]["abstract"])
-		max_title_length = np.max(text_lengths[quality]["title"])
-		max_abstract_length = np.max(text_lengths[quality]["abstract"])
-		min_title_length = np.min(text_lengths[quality]["title"])
-		min_abstract_length = np.min(text_lengths[quality]["abstract"])
-		print(f"{quality} title length: {min_title_length} - {mean_title_length} - {max_title_length}")
-		print(f"{quality} abstract length: {min_abstract_length} - {mean_abstract_length} - {max_abstract_length}")
-
-		temp = np.where(np.array(text_lengths["silver"]["abstract"]) > 512)
-		print(temp)
-
-	text_lengths["silver"]["abstract"][425] = 0
-
 	data = []
 	for quality, lengths in text_lengths.items():
 		for text_type in ["title", "abstract"]:
 			for length in lengths[text_type]:
-				data.append({"Quality": quality.capitalize(), "Text Type": text_type, "Length": length})
+				data.append({"quality": quality.capitalize(), "text type": text_type, "length": length})
 		df = pd.DataFrame(data)
 
-	sns.set_theme(style="whitegrid")
-	_, axes = plt.subplots(2, 1, figsize=(16, 9))
+	df = df[df["length"] <= 900]
+
+	sns.set_theme(style="ticks")
+	_, axes = plt.subplots(2, 1, figsize=(14, 7))
+
+	palette = sns.color_palette()
 
 	sns.violinplot(
-		x="Quality",
-		y="Length",
-		data=df[df["Text Type"] == "title"],
+		x="quality",
+		y="length",
+		data=df[df["text type"] == "title"],
 		ax=axes[0],
-		inner_kws=dict(box_width=10, whis_width=2),
-		palette="Set3",
-		hue="Quality",
+		inner="box",
+		palette=palette,
+		hue="quality",
 	)
-	axes[0].set_title("Title Length by Quality")
 	axes[0].set_xlabel("")
-	axes[0].set_ylabel("Word Count")
+	axes[0].set_xticklabels([])
+	axes[0].set_ylabel("Word Count", fontsize=14)
+	axes[0].set_title("Titles", fontsize=14)
+
+	unique_qualities = df["quality"].unique()
+	handles = [Patch(color=palette[i], label=quality) for i, quality in enumerate(unique_qualities)]
+	handles.reverse()
+	axes[0].legend(handles=handles, title="Quality", fontsize=12, title_fontsize=14, loc="upper right")
 
 	sns.violinplot(
-		x="Quality",
-		y="Length",
-		data=df[df["Text Type"] == "abstract"],
+		x="quality",
+		y="length",
+		data=df[df["text type"] == "abstract"],
 		ax=axes[1],
-		inner_kws=dict(box_width=10, whis_width=2),
-		palette="Set3",
-		hue="Quality",
+		inner="box",
+		palette=palette,
+		hue="quality",
 	)
-	axes[1].set_title("Abstract Length by Quality")
 	axes[1].set_xlabel("")
-	axes[1].set_ylabel("Word Count")
+	axes[1].set_xticklabels([])
+	axes[1].set_ylabel("Word Count", fontsize=14)
+	axes[1].set_title("Abstracts", fontsize=14)
 
+	plt.xticks(fontsize=12)
+	plt.yticks(fontsize=12)
+	sns.despine()
 	plt.tight_layout()
 
 	os.makedirs("plots", exist_ok=True)
