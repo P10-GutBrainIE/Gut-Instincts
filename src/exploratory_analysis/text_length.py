@@ -2,7 +2,6 @@ import json
 import os
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
-import numpy as np
 import seaborn as sns
 import pandas as pd
 
