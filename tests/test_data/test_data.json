@@ -1,0 +1,39 @@
+{
+    "paper_id": {
+        "metadata": {
+            "title": "<h1>This is a <b><i>nested</i> tag sentence</b></h1>",
+            "abstract": "My <b>name</b> is <i>John</i><sup>2</sup>"
+        },
+        "entities": [
+            {
+                "start_idx": 14,
+                "end_idx": 51,
+                "location": "title",
+                "text_span": "<b><i>nested</i> tag sentence</b></h1>",
+                "label": "test"
+            },
+            {
+                "start_idx": 18,
+                "end_idx": 40,
+                "location": "abstract",
+                "text_span": "<i>John</><sup>2</sup>",
+                "label": "test"
+            }
+        ]
+    },
+    "paper_id_no_html": {
+        "metadata": {
+            "title": "This is a plain text title.",
+            "abstract": "This is a plain text abstract."
+        },
+        "entities": [
+            {
+                "start_idx": 10,
+                "end_idx": 14,
+                "location": "title",
+                "text_span": "plain",
+                "label": "plain"
+            }
+        ]
+    }
+}

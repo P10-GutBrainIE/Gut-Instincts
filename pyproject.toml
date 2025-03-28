@@ -4,6 +4,7 @@ readme = "README.md"
 version = "0.0.0"
 requires-python = ">= 3.12"
 dependencies = [
+    "pytest==8.3.5",
     "ruff==0.9.6",
     "python-dotenv==1.0.1",
     "transformers==4.49.0",
