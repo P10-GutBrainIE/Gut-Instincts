@@ -7,6 +7,7 @@ dependencies = [
     "pytest==8.3.5",
     "ruff==0.9.6",
     "python-dotenv==1.0.1",
+    "mlflow==2.21.2",
     "transformers==4.49.0",
     "datasets==3.4.1",
     "evaluate==0.4.3",

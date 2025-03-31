@@ -100,7 +100,6 @@ def plot_confusion_matrix(y_test, y_pred, target_names):
 
 	plt.tight_layout()
 
-	# Save the figure
 	os.makedirs("plots", exist_ok=True)
 	plt.savefig(os.path.join("plots", "confusion_matrix.png"), dpi=300)
 	plt.close()
