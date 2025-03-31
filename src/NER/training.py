@@ -8,6 +8,9 @@ from transformers import (
 	TrainingArguments,
 	Trainer,
 )
+from NER.model import BertForTokenClassificationWithPOS
+#from src.NER.model import BertForTokenClassificationWithPOS
+#from src.NER.model import BertForTokenClassificationWithPOS
 from utils.utils import load_bio_labels, load_pkl_data
 from dotenv import load_dotenv
 from huggingface_hub import login
@@ -21,9 +24,14 @@ label_list, label2id, id2label = load_bio_labels()
 training_data = load_pkl_data(os.path.join("data_preprocessed", "training.pkl"))
 validation_data = load_pkl_data(os.path.join("data_preprocessed", "validation.pkl"))
 
-model = AutoModelForTokenClassification.from_pretrained(
-	"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", num_labels=27, id2label=id2label, label2id=label2id
-)
+model = BertForTokenClassificationWithPOS(
+	model_name="microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+	num_labels=27,
+	num_pos_tags=17,
+) 
+# model = AutoModelForTokenClassification.from_pretrained(
+# "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", num_labels=27, id2label=id2label, label2id=label2id
+# )
 
 tokenizer = AutoTokenizer.from_pretrained(
 	"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
@@ -32,7 +40,6 @@ tokenizer = AutoTokenizer.from_pretrained(
 data_collator = DataCollatorForTokenClassification(tokenizer)
 
 seqeval = evaluate.load("seqeval")
-
 
 def compute_metrics(p):
 	predictions, labels = p

@@ -2,14 +2,14 @@ import os
 import pandas as pd
 import json
 
-shared_path = os.path.join("Data", "Annotations", "Train")
+shared_path = os.path.join("data", "Annotations", "Train")
 
 files = [
 	os.path.join(shared_path, "bronze_quality", "json_format", "train_bronze.json"),
 	os.path.join(shared_path, "silver_quality", "json_format", "train_silver.json"),
 	os.path.join(shared_path, "gold_quality", "json_format", "train_gold.json"),
 	os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"),
-	os.path.join("data", "annotations", "dev", "json_format", "dev.json"),
+	os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 ]
 
 

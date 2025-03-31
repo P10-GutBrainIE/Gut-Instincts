@@ -1,7 +1,9 @@
 data/
 data_preprocessed/
 data_inference_results/
+GutBrainIE_NER_v0/
 plots/
+entities/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
