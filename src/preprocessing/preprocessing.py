@@ -2,8 +2,12 @@ import json
 import os
 import pickle
 import random
+import logging
 from transformers import AutoTokenizer
 from utils.utils import load_bio_labels
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
 
 
 class Preprocessor:
@@ -43,6 +47,9 @@ class Preprocessor:
 		self.max_length = max_length
 		self.train_val_split = train_val_split
 		_, self.label2id, _ = load_bio_labels()
+		logger.info(
+			f"Preprocessor initialized with max_length={self.max_length}, train_val_split={self.train_val_split}"
+		)
 
 	def process_files(self):
 		"""
@@ -51,8 +58,10 @@ class Preprocessor:
 		This method reads the JSON files, processes each paper's content, splits the data into training and validation sets,
 		and saves the processed data to pickle files.
 		"""
+		logger.info("Starting to process files...")
 		processed_papers = []
 		for file_path in self.file_paths:
+			logger.info(f"Processing file: {file_path}")
 			with open(file_path, "r", encoding="utf-8") as f:
 				file_data = json.load(f)
 
@@ -63,6 +72,7 @@ class Preprocessor:
 
 			processed_papers.append(all_data)
 
+		logger.info("Files processed")
 		training_data, validation_data = self._train_val_split(processed_papers)
 
 		self._save_to_pickle(training_data, validation_data)
@@ -84,6 +94,7 @@ class Preprocessor:
 		entities = content.get("entities", [])
 
 		for section, text in [("title", title), ("abstract", abstract)]:
+			logger.debug(f"Processing {section} with length {len(text)}")
 			tokens, bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(text, entities, section)
 			processed.append(
 				{
@@ -107,6 +118,7 @@ class Preprocessor:
 		Returns:
 		    tuple: A tuple containing tokens, BIO tag IDs, input IDs, and attention mask.
 		"""
+		logger.debug(f"Tokenizing {section} text with {len(entities)} entities.")
 		encoding = self.tokenizer(
 			text, return_offsets_mapping=True, truncation=True, max_length=self.max_length, padding="max_length"
 		)
@@ -157,6 +169,7 @@ class Preprocessor:
 		Returns:
 		    tuple: A tuple containing training data and validation data.
 		"""
+		logger.info("Splitting data into training and validation sets...")
 		training_data = []
 		validation_data = []
 
@@ -166,6 +179,9 @@ class Preprocessor:
 			training_data.extend(data[:split_index])
 			validation_data.extend(data[split_index:])
 
+		logger.info(
+			f"Data split complete. Training data size: {len(training_data)}, Validation data size: {len(validation_data)}"
+		)
 		return training_data, validation_data
 
 	def _save_to_pickle(self, training_data, validation_data):
@@ -176,27 +192,29 @@ class Preprocessor:
 		    training_data (list[dict]): List of training data.
 		    validation_data (list[dict]): List of validation data.
 		"""
+		logger.info(f"Saving processed data to {self.save_path}...")
 		os.makedirs(self.save_path, exist_ok=True)
 
 		with open(os.path.join(self.save_path, "training.pkl"), "wb") as f:
 			pickle.dump(training_data, f)
+			logger.info("Training data saved to training.pkl")
+
 		with open(os.path.join(self.save_path, "validation.pkl"), "wb") as f:
 			pickle.dump(validation_data, f)
+			logger.info("Validation data saved to validation.pkl")
 
 
 if __name__ == "__main__":
-	shared_path = os.path.join("data", "Annotations", "Train")
+	shared_path = "data_preprocessed"
 	file_paths = [
-		os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"),
-		os.path.join(shared_path, "gold_quality", "json_format", "train_gold.json"),
-		os.path.join(shared_path, "silver_quality", "json_format", "train_silver.json"),
+		os.path.join(shared_path, "platinum_html_removed.json"),
+		os.path.join(shared_path, "gold_html_removed.json"),
+		os.path.join(shared_path, "silver_html_removed.json"),
 	]
 
 	tokenizer = AutoTokenizer.from_pretrained(
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
 
-	preprocessor = Preprocessor(
-		file_paths, os.path.join("data_preprocessed"), tokenizer, max_length=512, train_val_split=0.9
-	)
+	preprocessor = Preprocessor(file_paths, os.path.join("data_preprocessed"), tokenizer)
 	preprocessor.process_files()
