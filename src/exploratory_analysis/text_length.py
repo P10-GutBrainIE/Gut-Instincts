@@ -59,7 +59,7 @@ def text_length_histogram(file_paths: str, save_path: str = os.path.join("plots"
 		axes[0, i].set_ylabel("")
 		axes[0, i].set_xlim(title_xlim)
 		axes[0, i].set_xticks(np.arange(0, title_data.max(), step=10))
-	fig.text(0.47, 0.985, "Titles", ha="center", va="center", fontsize=16)
+	fig.text(0.46, 0.985, "Titles", ha="center", va="center", fontsize=16)
 
 	unique_qualities = df["quality"].unique()
 	handles = [Patch(color=palette[i], label=quality.capitalize()) for i, quality in enumerate(unique_qualities)]
@@ -88,10 +88,10 @@ def text_length_histogram(file_paths: str, save_path: str = os.path.join("plots"
 		axes[1, i].set_xlim(abstract_xlim)
 		axes[1, i].set_xticks(np.arange(0, title_data.max(), step=100))
 	plt.subplots_adjust(hspace=5)
-	fig.text(0.47, 0.485, "Abstracts", ha="center", va="center", fontsize=16)
+	fig.text(0.46, 0.485, "Abstracts", ha="center", va="center", fontsize=16)
 
-	plt.figtext(0.47, 0.0, "Word Count", ha="center", fontsize=14)
-	plt.figtext(0.006, 0.47, "Frequency", ha="center", rotation=90, fontsize=14)
+	plt.figtext(0.46, 0.0, "Word Count", ha="center", fontsize=14)
+	plt.figtext(0.006, 0.46, "Frequency", ha="center", rotation=90, fontsize=14)
 
 	sns.despine()
 	plt.tight_layout(pad=1.3)
