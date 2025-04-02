@@ -29,7 +29,7 @@ def label_distribution_stacked_bar_plot(label_distribution: dict):
 
 	palette = sns.color_palette("magma", n_colors=4, desat=0.7)
 
-	plt.figure(figsize=(14, 7), dpi=300)
+	plt.figure(figsize=(14, 7))
 	for i, quality in enumerate(qualities):
 		counts = df_pivot[quality].values
 		plt.bar(x, counts, bottom=bottom, color=palette[i], edgecolor="black", linewidth=0.5, label=quality)
@@ -55,7 +55,7 @@ def label_distribution_stacked_bar_plot(label_distribution: dict):
 
 	sns.despine()
 	plt.tight_layout()
-	plt.savefig(os.path.join("plots", "label_distribution_stacked_bar_plot.png"))
+	plt.savefig(os.path.join("plots", "label_distribution_stacked_bar_plot.png"), dpi=300)
 
 
 if __name__ == "__main__":
