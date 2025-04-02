@@ -2,77 +2,113 @@ import json
 import os
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
-import numpy as np
-import seaborn as sns
 import pandas as pd
+import seaborn as sns
 
 
-def entities_per_document(file_paths: str, save_path: str = os.path.join("plots", "entities_per_document.png")):
-	densities_per_quality = {quality: [] for quality in file_paths.keys()}
-
+def extract_data(file_paths: str) -> pd.DataFrame:
+	data = []
 	for quality, file_path in file_paths.items():
 		with open(file_path, "r", encoding="utf-8") as f:
 			file_data = json.load(f)
 
-			highest_density = 0
-			for paper_id, content in file_data.items():
-				paper_length = len(content["metadata"]["title"].split(" ")) + len(
-					content["metadata"]["abstract"].split(" ")
+			for _, content in file_data.items():
+				data.append(
+					{
+						"quality": quality.capitalize(),
+						"entities": len(content["entities"]),
+						"relations": len(content["relations"]),
+						"paper_length": len(content["metadata"]["title"].split(" "))
+						+ len(content["metadata"]["abstract"].split(" ")),
+					}
 				)
-				densities_per_quality[quality].append(len(content["relations"]) / paper_length)
 
-				temp = len(content["relations"]) / paper_length
-				if temp > highest_density:
-					highest_density = temp
-					paper = paper_id
-
-			print(f"{quality}: {highest_density} ({paper})")
-
-	data = []
-	for quality, densities in densities_per_quality.items():
-		for density in densities:
-			data.append({"quality": quality, "density": density})
 	df = pd.DataFrame(data)
 
+	# df = df[df["paper_length"] <= 900]
+	# df = df[df["relations"] <= 60]
+	return df
+
+
+def entities_per_document(df: pd.DataFrame, save_path: str = os.path.join("plots", "entities_per_document.png")):
 	sns.set_theme(style="ticks")
-	fig, axes = plt.subplots(1, 4, figsize=(14, 7))
+	_, axes = plt.subplots(2, 1, figsize=(14, 7))
+	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.7)[::-1]
 
-	palette = sns.color_palette("magma", n_colors=4, desat=0.7)[::-1]
-
-	densities_data = df["density"]
-	x_limits = (densities_data.min(), densities_data.max())
-
-	for i, quality in enumerate(list(densities_per_quality.keys())):
-		outliers = df[(df["quality"] == quality)][(df["density"] < 0.005)]
-		print(f"{quality}: {len(outliers)}")
-		sns.histplot(
-			data=df[df["quality"] == quality],
-			x="density",
-			hue="quality",
-			palette=palette[i : i + 1],
-			ax=axes[i],
-			bins=25,
-			legend=False,
-			alpha=1,
-			edgecolor="black",
-			linewidth=0.5,
-		)
-		axes[i].set_xlabel("")
-		axes[i].set_ylabel("")
-		axes[i].set_xlim(x_limits)
-
-	fig.legend(
-		labels=[s.capitalize() for s in list(densities_per_quality.keys())],
-		title="Quality",
-		loc="upper right",
-		fontsize=12,
-		title_fontsize=14,
+	sns.scatterplot(
+		x=df["paper_length"],
+		y=df["entities"],
+		hue=df["quality"],
+		palette=palette,
+		alpha=1,
+		edgecolor="black",
+		linewidth=0.5,
+		ax=axes[0],
+		legend=False,
 	)
+	sns.regplot(
+		data=df,
+		x="paper_length",
+		y="entities",
+		scatter=False,
+		color="blue",
+		ax=axes[0],
+		line_kws={"linewidth": 1, "alpha": 1},
+	)
+	axes[0].set_xlabel("Paper length (in words)", fontsize=14)
+	axes[0].set_ylabel("Number of entities", fontsize=14)
+
+	sns.scatterplot(
+		x=df["paper_length"],
+		y=df["relations"],
+		hue=df["quality"],
+		palette=palette,
+		alpha=1,
+		edgecolor="black",
+		linewidth=0.5,
+		ax=axes[1],
+		legend=False,
+	)
+	sns.regplot(
+		data=df,
+		x="paper_length",
+		y="relations",
+		scatter=False,
+		color="blue",
+		ax=axes[1],
+		line_kws={"linewidth": 1, "alpha": 1},
+	)
+	axes[1].set_xlabel("Paper length (in words)", fontsize=14)
+	axes[1].set_ylabel("Number of relations", fontsize=14)
+
+	unique_qualities = df["quality"].unique()
+	handles = [Patch(color=palette[i], label=quality) for i, quality in enumerate(unique_qualities)]
+	handles.reverse()
+	axes[0].legend(handles=handles, title="Quality", loc="upper right", fontsize=12, title_fontsize=14)
 
 	sns.despine()
 	plt.tight_layout(pad=1.3)
 	os.makedirs("plots", exist_ok=True)
 	plt.savefig(save_path, dpi=300)
+	plt.close()
+
+
+def create_pairplot(df: pd.DataFrame, save_path: str = os.path.join("plots", "pairplot.png")):
+	"""
+	Create a pairplot for the variables 'entities', 'relations', and 'paper_length'.
+	Colors the points by the 'quality' column.
+	"""
+	sns.set_theme(style="ticks")
+	plt.figure(figsize=(14, 7))
+	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.7)[::-1]
+
+	sns.pairplot(
+		df, hue="quality", palette=palette, vars=["entities", "relations", "paper_length"], markers=["o", "s", "D"]
+	)
+
+	os.makedirs("plots", exist_ok=True)
+	plt.savefig(save_path, dpi=300)
+	plt.close()
 
 
 if __name__ == "__main__":
@@ -84,4 +120,6 @@ if __name__ == "__main__":
 		"bronze": os.path.join(shared_path, "bronze_quality", "json_format", "train_bronze.json"),
 	}
 
-	entities_per_document(file_paths)
+	data = extract_data(file_paths)
+	entities_per_document(df=data)
+	create_pairplot(df=data)
