@@ -3,10 +3,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
-from utils.utils import load_json_data
+from utils.utils import load_json_data, load_labels
 
 
-def compare_classes(inference_data, test_data):
+def compare_classes(test_data, inference_data):
 	"""
 	Compare the entities between data and test_data based on start_idx and end_idx.
 
@@ -50,7 +50,7 @@ def compare_classes(inference_data, test_data):
 def plot_confusion_matrix(y_test, y_pred, target_names):
 	"""
 	Plot a confusion matrix with a blue gradient for correct predictions (diagonal)
-	and a red gradient for wrong predictions (off-diagonal), with improved aesthetics.
+	and a red gradient for wrong predictions (off-diagonal).
 
 	Args:
 	    y_test (list): List of true labels.
@@ -109,21 +109,8 @@ if __name__ == "__main__":
 	inference_results = load_json_data(os.path.join("data_inference_results", "ner.json"))
 	test_data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 
-	true_labels, pred_labels = compare_classes(inference_results, test_data)
-	target_names = [
-		"O",
-		"anatomical location",
-		"animal",
-		"biomedical technique",
-		"bacteria",
-		"chemical",
-		"dietary supplement",
-		"DDF",
-		"drug",
-		"food",
-		"gene",
-		"human",
-		"microbiome",
-		"statistical technique",
-	]
-	plot_confusion_matrix(true_labels, pred_labels, target_names)
+	true_labels, pred_labels = compare_classes(
+		test_data=test_data,
+		inference_data=inference_results,
+	)
+	plot_confusion_matrix(y_test=true_labels, y_pred=pred_labels, target_names=load_labels())

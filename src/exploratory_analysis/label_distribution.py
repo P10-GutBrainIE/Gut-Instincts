@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
-from utils.utils import label_distribution
+from utils.utils import load_label_distribution
 
 
 def label_distribution_stacked_bar_plot(label_distribution: dict):
@@ -59,4 +59,4 @@ def label_distribution_stacked_bar_plot(label_distribution: dict):
 
 
 if __name__ == "__main__":
-	label_distribution_stacked_bar_plot(label_distribution())
+	label_distribution_stacked_bar_plot(load_label_distribution())

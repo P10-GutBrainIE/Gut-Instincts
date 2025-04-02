@@ -7,7 +7,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 
-def remove_html(file_paths_dict: list[dict], replacement_char: str = "$", save_data: bool = False):
+def remove_html(
+	file_paths_dict: list[dict], replacement_char: str = "$", save_data: bool = False
+) -> None | dict[str, list]:
 	"""
 	Remove HTML tags and adjust entity text span indices.
 
@@ -35,7 +37,7 @@ def remove_html(file_paths_dict: list[dict], replacement_char: str = "$", save_d
 	                      If False, the processed data is returned as a dictionary. Default is False.
 
 	Returns:
-	    dict or None: If save_data is False, returns a dictionary where each key corresponds to the file identifier and
+	    dict[str, list] or None: If save_data is False, returns a dictionary where each key corresponds to the file identifier and
 	                  the value is the processed JSON content. If save_data is True, the processed files are saved
 	                  to disk and the function returns None.
 	"""

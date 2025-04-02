@@ -1,5 +1,6 @@
-data/
-
+data/Annotations
+data/Articles
+data_preprocssed/
 data_inference_results/
 plots/
 mlruns/
