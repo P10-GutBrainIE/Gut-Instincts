@@ -50,13 +50,13 @@ def n_gram_per_label(file_paths: str, n: int = 1, top_k: int = 3) -> pd.DataFram
 	return df
 
 
-def plot_n_gram(df: pd.DataFrame, save_path: str = os.path.join("plots", "unigram_per_label.png")) -> None:
+def plot_n_gram(df: pd.DataFrame, save_path: str = os.path.join("plots", "unigram_per_label.pdf")) -> None:
 	"""
 	Plot a bar chart of n-grams per label.
 
 	Args:
 	    df (pd.DataFrame): DataFrame containing n-grams, their labels, and their counts.
-	    save_path (str): Path to save the plot. Defaults to "plots/unigram_per_label.png".
+	    save_path (str): Path to save the plot. Defaults to "plots/unigram_per_label.pdf".
 	"""
 	sns.set_theme(style="ticks")
 	plt.figure(figsize=(14, 7))
@@ -103,7 +103,7 @@ def plot_n_gram(df: pd.DataFrame, save_path: str = os.path.join("plots", "unigra
 	plt.tight_layout()
 
 	os.makedirs("plots", exist_ok=True)
-	plt.savefig(save_path, dpi=300)
+	plt.savefig(save_path, format="pdf")
 	plt.close()
 
 
@@ -111,7 +111,7 @@ def plot_n_gram_sublpots(
 	unigram: pd.DataFrame,
 	bigram: pd.DataFrame,
 	trigram: pd.DataFrame,
-	save_path: str = os.path.join("plots", "n_gram_subplot.png"),
+	save_path: str = os.path.join("plots", "n_gram_subplot.pdf"),
 ) -> None:
 	"""
 	Plot bar charts of n-grams per label (unigram, bigram, trigram) on separate subplots.
@@ -120,7 +120,7 @@ def plot_n_gram_sublpots(
 	    unigram (pd.DataFrame): DataFrame containing unigram n-grams.
 	    bigram (pd.DataFrame): DataFrame containing bigram n-grams.
 	    trigram (pd.DataFrame): DataFrame containing trigram n-grams.
-	    save_path (str): Path to save the plot. Defaults to "plots/n_gram_subplot.png".
+	    save_path (str): Path to save the plot. Defaults to "plots/n_gram_subplot.pdf".
 	"""
 	sns.set_theme(style="ticks")
 	_, axes = plt.subplots(3, 1, figsize=(14, 21))
@@ -174,7 +174,7 @@ def plot_n_gram_sublpots(
 	plt.tight_layout()
 
 	os.makedirs("plots", exist_ok=True)
-	plt.savefig(save_path, dpi=300)
+	plt.savefig(save_path, format="pdf")
 	plt.close()
 
 
@@ -190,9 +190,9 @@ if __name__ == "__main__":
 	unigram = n_gram_per_label(file_paths=file_paths, n=1, top_k=3)
 	bigram = n_gram_per_label(file_paths=file_paths, n=2, top_k=3)
 	trigram = n_gram_per_label(file_paths=file_paths, n=3, top_k=3)
-	plot_n_gram(df=unigram, save_path=os.path.join("plots", "unigram_per_label.png"))
-	plot_n_gram(df=bigram, save_path=os.path.join("plots", "bigram_per_label.png"))
-	plot_n_gram(df=trigram, save_path=os.path.join("plots", "trigram_per_label.png"))
+	plot_n_gram(df=unigram, save_path=os.path.join("plots", "unigram_per_label.pdf"))
+	plot_n_gram(df=bigram, save_path=os.path.join("plots", "bigram_per_label.pdf"))
+	plot_n_gram(df=trigram, save_path=os.path.join("plots", "trigram_per_label.pdf"))
 	plot_n_gram_sublpots(
-		unigram=unigram, bigram=bigram, trigram=trigram, save_path=os.path.join("plots", "n_gram_subplot.png")
+		unigram=unigram, bigram=bigram, trigram=trigram, save_path=os.path.join("plots", "n_gram_subplot.pdf")
 	)
