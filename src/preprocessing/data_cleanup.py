@@ -23,6 +23,24 @@ def remove_documents_under_threshold(path, threshold, type):
     print(f"Filtered dataset saved to {output_path}")
 
 
+def clean_bronze_text_spans():
+    """
+    Manually cleans bronze entities with c
+
+    Args:
+        path (string): File path to the dataset
+        threshold (int): Minimum number of entities or relations required
+        type (string): Should be either "entities" or "relations"
+    """
+    return
+
+
+def remove_bronze_text_spans():
+    return
+
+
+
+
 if __name__ == "__main__":
     bronze_path = os.path.join("data", "Annotations", "Train", "bronze_quality", "json_format", "train_bronze.json")
     remove_documents_under_threshold(bronze_path, 1, "relations")

@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-
+# Should be expanded to also update text_spans in relations and ternary_mention_based_relations
 def remove_html(
 	file_paths_dict: list[dict], replacement_char: str = "$", save_data: bool = False
 ) -> None | dict[str, list]:
