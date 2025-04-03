@@ -25,7 +25,7 @@ def load_bio_labels(
 	return bio_labels, label2id, id2label
 
 
-def load_labels(file_path: str = os.path.join("data", "metadata", "labels.json")) -> list[str]:
+def load_entity_labels(file_path: str = os.path.join("data", "metadata", "entity_labels.json")) -> list[str]:
 	"""
 	Load the labels from the specified path.
 
@@ -41,7 +41,7 @@ def load_labels(file_path: str = os.path.join("data", "metadata", "labels.json")
 	return labels
 
 
-def load_label_distribution(file_path: str = os.path.join("data", "metadata", "label_distribution.json")) -> dict:
+def load_label_distribution(file_path: str = os.path.join("data", "metadata", "entity_label_distribution.json")) -> dict:
 	"""
 	Load the label distribution from the specified path.
 

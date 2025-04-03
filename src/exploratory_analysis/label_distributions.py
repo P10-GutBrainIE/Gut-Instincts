@@ -6,7 +6,9 @@ import seaborn as sns
 from utils.utils import load_label_distribution
 
 
-def label_distribution_stacked_bar_plot(label_distribution: dict):
+def label_distribution_stacked_bar_plot(
+	label_distribution: dict, save_path: str = os.path.join("plots", "label_distribution_stacked_bar_plot.png")
+):
 	data = []
 	for quality, labels in label_distribution.items():
 		for label, count in labels.items():
@@ -55,8 +57,17 @@ def label_distribution_stacked_bar_plot(label_distribution: dict):
 
 	sns.despine()
 	plt.tight_layout()
-	plt.savefig(os.path.join("plots", "label_distribution_stacked_bar_plot.png"), dpi=300)
+	plt.savefig(save_path, dpi=300)
 
 
 if __name__ == "__main__":
-	label_distribution_stacked_bar_plot(load_label_distribution())
+	label_distribution_stacked_bar_plot(
+		label_distribution=load_label_distribution(),
+		save_path=os.path.join("plots", "entity_label_distribution.png"),
+	)
+	label_distribution_stacked_bar_plot(
+		label_distribution=load_label_distribution(
+			file_path=os.path.join("data", "metadata", "relation_label_distribution.json"),
+		),
+		save_path=os.path.join("plots", "relation_label_distribution.png"),
+	)

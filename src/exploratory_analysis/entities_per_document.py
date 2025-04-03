@@ -25,7 +25,7 @@ def extract_data(file_paths: str) -> pd.DataFrame:
 
 	df = pd.DataFrame(data)
 
-	# df = df[df["paper_length"] <= 900]
+	df = df[df["paper_length"] <= 900]
 	# df = df[df["relations"] <= 60]
 	return df
 
@@ -46,15 +46,15 @@ def entities_per_document(df: pd.DataFrame, save_path: str = os.path.join("plots
 		ax=axes[0],
 		legend=False,
 	)
-	sns.regplot(
-		data=df,
-		x="paper_length",
-		y="entities",
-		scatter=False,
-		color="blue",
-		ax=axes[0],
-		line_kws={"linewidth": 1, "alpha": 1},
-	)
+	# sns.regplot(
+	# 	data=df,
+	# 	x="paper_length",
+	# 	y="entities",
+	# 	scatter=False,
+	# 	color="blue",
+	# 	ax=axes[0],
+	# 	line_kws={"linewidth": 1, "alpha": 1},
+	# )
 	axes[0].set_xlabel("Paper length (in words)", fontsize=14)
 	axes[0].set_ylabel("Number of entities", fontsize=14)
 
@@ -69,15 +69,15 @@ def entities_per_document(df: pd.DataFrame, save_path: str = os.path.join("plots
 		ax=axes[1],
 		legend=False,
 	)
-	sns.regplot(
-		data=df,
-		x="paper_length",
-		y="relations",
-		scatter=False,
-		color="blue",
-		ax=axes[1],
-		line_kws={"linewidth": 1, "alpha": 1},
-	)
+	# sns.regplot(
+	# 	data=df,
+	# 	x="paper_length",
+	# 	y="relations",
+	# 	scatter=False,
+	# 	color="blue",
+	# 	ax=axes[1],
+	# 	line_kws={"linewidth": 1, "alpha": 1},
+	# )
 	axes[1].set_xlabel("Paper length (in words)", fontsize=14)
 	axes[1].set_ylabel("Number of relations", fontsize=14)
 

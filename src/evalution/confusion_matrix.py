@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
-from utils.utils import load_json_data, load_labels
+from utils.utils import load_json_data, load_entity_labels
 
 
 def compare_classes(test_data, inference_data):
@@ -113,4 +113,4 @@ if __name__ == "__main__":
 		test_data=test_data,
 		inference_data=inference_results,
 	)
-	plot_confusion_matrix(y_test=true_labels, y_pred=pred_labels, target_names=load_labels())
+	plot_confusion_matrix(y_test=true_labels, y_pred=pred_labels, target_names=load_entity_labels())
