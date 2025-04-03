@@ -30,7 +30,7 @@ def text_length_histogram(file_paths: str, save_path: str = os.path.join("plots"
 	sns.set_theme(style="ticks")
 	fig, axes = plt.subplots(2, 4, figsize=(14, 7))
 
-	palette = sns.color_palette("magma", n_colors=4, desat=0.8)[::-1]
+	palette = sns.color_palette("magma", n_colors=4, desat=1)[::-1]
 
 	qualities = ["platinum", "gold", "silver", "bronze"]
 
@@ -62,7 +62,10 @@ def text_length_histogram(file_paths: str, save_path: str = os.path.join("plots"
 	fig.text(0.46, 0.985, "Titles", ha="center", va="center", fontsize=16)
 
 	unique_qualities = df["quality"].unique()
-	handles = [Patch(color=palette[i], label=quality.capitalize()) for i, quality in enumerate(unique_qualities)]
+	handles = [
+		Patch(facecolor=palette[i], label=quality.capitalize(), linewidth=0.5, edgecolor="black")
+		for i, quality in enumerate(unique_qualities)
+	]
 	handles.reverse()
 	axes[0, 3].legend(
 		handles=handles, title="Quality", bbox_to_anchor=(1, 1), loc="upper left", fontsize=12, title_fontsize=14
@@ -122,7 +125,7 @@ def text_length_violinplot(file_paths: str, save_path: str = os.path.join("plots
 	sns.set_theme(style="ticks")
 	_, axes = plt.subplots(2, 1, figsize=(14, 7))
 
-	palette = sns.color_palette("magma", n_colors=4, desat=0.8)[::-1]
+	palette = sns.color_palette("magma", n_colors=4, desat=1)[::-1]
 
 	sns.violinplot(
 		x="quality",
@@ -139,7 +142,10 @@ def text_length_violinplot(file_paths: str, save_path: str = os.path.join("plots
 	axes[0].set_title("Titles", fontsize=14)
 
 	unique_qualities = df["quality"].unique()
-	handles = [Patch(color=palette[i], label=quality) for i, quality in enumerate(unique_qualities)]
+	handles = [
+		Patch(facecolor=palette[i], label=quality, linewidth=0.5, edgecolor="black")
+		for i, quality in enumerate(unique_qualities)
+	]
 	handles.reverse()
 	axes[0].legend(handles=handles, title="Quality", fontsize=12, title_fontsize=14, loc="upper right")
 

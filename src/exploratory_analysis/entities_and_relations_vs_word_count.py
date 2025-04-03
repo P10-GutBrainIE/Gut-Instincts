@@ -34,7 +34,7 @@ def entities_and_relations_vs_word_count(
 ):
 	sns.set_theme(style="ticks")
 	_, axes = plt.subplots(1, 2, figsize=(14, 7))
-	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.8)[::-1]
+	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=1)[::-1]
 
 	sns.scatterplot(
 		x=df["paper_length"],
@@ -65,7 +65,10 @@ def entities_and_relations_vs_word_count(
 	axes[1].set_ylabel("Number of Relations", fontsize=14)
 
 	unique_qualities = df["quality"].unique()
-	handles = [Patch(color=palette[i], label=quality) for i, quality in enumerate(unique_qualities)]
+	handles = [
+		Patch(facecolor=palette[i], label=quality, edgecolor="black", linewidth=0.5)
+		for i, quality in enumerate(unique_qualities)
+	]
 	handles.reverse()
 	axes[1].legend(handles=handles, title="Quality", loc="upper right", fontsize=12, title_fontsize=14)
 
@@ -83,7 +86,7 @@ def create_pairplot(df: pd.DataFrame, save_path: str = os.path.join("plots", "pa
 	"""
 	sns.set_theme(style="ticks")
 	plt.figure(figsize=(14, 7))
-	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.8)[::-1]
+	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=1)[::-1]
 
 	sns.pairplot(
 		df, hue="quality", palette=palette, vars=["entities", "relations", "paper_length"], markers=["o", "s", "D"]

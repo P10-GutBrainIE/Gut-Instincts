@@ -1,7 +1,6 @@
 import json
 import os
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 import pandas as pd
 import seaborn as sns
 
@@ -25,6 +24,7 @@ def n_gram_per_label(file_paths: str, n: int = 1, top_k: int = 3) -> pd.DataFram
 			for _, content in file_data.items():
 				for entity in content["entities"]:
 					words = entity["text_span"].split(" ")
+					words = [word.lower() for word in words]
 					for i in range(len(words) - n + 1):
 						ngram = " ".join(words[i : i + n])
 						data.append(
@@ -64,7 +64,7 @@ def plot_n_gram(df: pd.DataFrame, save_path: str = os.path.join("plots", "unigra
 	df["ngram_unique"] = df["ngram"] + "___" + df["label"]
 	df["label"] = df["label"].apply(lambda x: x.title() if x != "DDF" else x)
 
-	palette = sns.color_palette("magma", n_colors=df["label"].nunique(), desat=0.8)
+	palette = sns.color_palette("magma", n_colors=df["label"].nunique(), desat=1)
 
 	ax = sns.barplot(
 		x="ngram_unique",
@@ -129,7 +129,7 @@ def plot_n_gram_sublpots(
 		df["ngram_unique"] = df["ngram"] + "___" + df["label"]
 		df["label"] = df["label"].apply(lambda x: x.title() if x != "DDF" else x)
 
-		palette = sns.color_palette("magma", n_colors=df["label"].nunique(), desat=0.8)
+		palette = sns.color_palette("magma", n_colors=df["label"].nunique(), desat=1)
 
 		ax = axes[i]
 		ax = sns.barplot(
