@@ -1,6 +1,105 @@
 {
-    "remove": {
-        "34346706": {}
-    },
-    "clean": {}
+    "remove": {},
+    "clean": {
+        "35275534": [
+            {
+                "start_idx": 1395,
+                "end_idx": 1412,
+                "location": "abstract",
+                "text_span": "Ruminococcusgnavus",
+                "label": "bacteria",
+                "correct_start_idx": 1395,
+                "correct_end_idx": 1417,
+                "correct_text_span": "Ruminococcusgnavusgroup"
+            }
+        ],
+        "38963982": [
+            {
+                "start_idx": 92,
+                "end_idx": 94,
+                "location": "title",
+                "text_span": "TAM",
+                "label": "gene",
+                "correct_start_idx": 92,
+                "correct_end_idx": 95,
+                "correct_text_span": "TAMs"
+            },
+            {
+                "start_idx": 435,
+                "end_idx": 451,
+                "location": "abstract",
+                "text_span": "Intestinal tissue",
+                "label": "anatomical location",
+                "correct_start_idx": 435,
+                "correct_end_idx": 452,
+                "correct_text_span": "Intestinal tissues"
+            }
+        ],
+        "38959280": [
+            {
+                "start_idx": 74,
+                "end_idx": 76,
+                "location": "abstract",
+                "text_span": "SGM",
+                "label": "DDF",
+                "correct_start_idx": 74,
+                "correct_end_idx": 76,
+                "correct_text_span": "SGMs"
+            },
+            {
+                "start_idx": 695,
+                "end_idx": 697,
+                "location": "abstract",
+                "text_span": "SGM",
+                "label": "DDF",
+                "correct_start_idx": 695,
+                "correct_end_idx": 698,
+                "correct_text_span": "SGMs"
+            },
+            {
+                "start_idx": 266,
+                "end_idx": 287,
+                "location": "abstract",
+                "text_span": "cisgender heterosexual",
+                "label": "human",
+                "correct_start_idx": 266,
+                "correct_end_idx": 288,
+                "correct_text_span": "cisgender heterosexuals"
+            },
+            {
+                "start_idx": 713,
+                "end_idx": 734,
+                "location": "abstract",
+                "text_span": "cisgender-heterosexual",
+                "label": "human",
+                "correct_start_idx": 713,
+                "correct_end_idx": 735,
+                "correct_text_span": "cisgender-heterosexuals"
+            }
+        ],
+        "38968876": [
+            {
+                "start_idx": 764,
+                "end_idx": 770,
+                "location": "abstract",
+                "text_span": "patient",
+                "label": "human",
+                "correct_start_idx": 764,
+                "correct_end_idx": 771,
+                "correct_text_span": "patients"
+            }
+        ],
+        "38892525": [
+            {
+                "start_idx": 1397,
+                "end_idx": 1407,
+                "location": "abstract",
+                "text_span": "IBS symptom",
+                "label": "DDF",
+                "correct_start_idx": 1397,
+                "correct_end_idx": 1408,
+                "correct_text_span": "IBS symptoms"
+            }
+        ]
+    }
 }

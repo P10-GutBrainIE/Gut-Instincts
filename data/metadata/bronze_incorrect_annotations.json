@@ -69,6 +69,13 @@
             "location": "abstract",
             "text_span": "chronic,",
             "label": "DDF"
+        }],
+        "39316970": [{
+            "start_idx": 1416,
+            "end_idx": 1423,
+            "location": "abstract",
+            "text_span": ". minuta",
+            "label": "dietary supplement"
         }]     
     },
 
@@ -112,7 +119,26 @@
             "correct_text_span": "phosphatidylinositol-4,5-bisphosphate 3-kinase",
             "correct_start_idx": 324,
             "correct_end_idx": 369
+        }],
+        "33488420": [{
+            "start_idx": 1296,
+            "end_idx": 1302,
+            "location": "abstract",
+            "text_span": ". Cryan",
+            "label": "human",
+            "correct_text_span": "John F. Cryan",
+            "correct_start_idx": 1290,
+            "correct_end_idx": 1302
+        }],
+        "34589731": [{
+            "start_idx": 624,
+            "end_idx": 647,
+            "location": "abstract",
+            "text_span": ") and sham-operated mice",
+            "label": "animal",
+            "correct_text_span": "sham-operated mice",
+            "correct_start_idx": 630,
+            "correct_end_idx": 647
         }]
-
     }
 }
