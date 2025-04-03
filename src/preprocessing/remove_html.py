@@ -6,6 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
+
 # Should be expanded to also update text_spans in relations and ternary_mention_based_relations
 def remove_html(
 	file_paths_dict: list[dict], replacement_char: str = "$", save_data: bool = False
@@ -120,6 +121,8 @@ if __name__ == "__main__":
 		{"platinum": os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json")},
 		{"gold": os.path.join(shared_path, "gold_quality", "json_format", "train_gold.json")},
 		{"silver": os.path.join(shared_path, "silver_quality", "json_format", "train_silver.json")},
+		{"bronze": os.path.join(shared_path, "bronze_quality", "json_format", "train_bronze.json")},
+		{"dev": os.path.join("data", "Annotations", "Dev", "json_format", "dev.json")},
 	]
 
 	remove_html(file_paths_dict, save_data=True)
