@@ -1,6 +1,7 @@
 import json
 import os
 import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
 import pandas as pd
 import seaborn as sns
 
@@ -60,24 +61,119 @@ def plot_n_gram(df: pd.DataFrame, save_path: str = os.path.join("plots", "unigra
 	sns.set_theme(style="ticks")
 	plt.figure(figsize=(14, 7))
 
-	palette = sns.color_palette("magma", n_colors=df["label"].nunique(), desat=0.7)
-	sns.barplot(
-		x="ngram",
+	df["ngram_unique"] = df["ngram"] + "___" + df["label"]
+	df["label"] = df["label"].apply(lambda x: x.title() if x != "DDF" else x)
+
+	palette = sns.color_palette("magma", n_colors=df["label"].nunique(), desat=0.8)
+
+	ax = sns.barplot(
+		x="ngram_unique",
 		y="count",
 		hue="label",
 		data=df,
 		palette=palette,
-		dodge=False,
+		alpha=1,
+		edgecolor="black",
+		linewidth=0.5,
 	)
 
-	plt.xticks(rotation=45, ha="right", fontsize=12)
-	plt.xlabel("Unigram per Label", fontsize=14)
+	plt.xticks(ticks=df["ngram_unique"], labels=df["ngram"], rotation=45, ha="right", fontsize=12)
+	plt.xlabel("")
 	plt.ylabel("Count", fontsize=14)
-	plt.legend(title="Label", loc="upper right", title_fontsize=14, fontsize=12)
+
+	unique_labels = list(df["label"].unique())
+	hatch_mapping = {label: "///" if i % 2 == 1 else "" for i, label in enumerate(unique_labels)}
+
+	patch_idx = 0
+	for label in unique_labels:
+		n_bars = df[df["label"] == label].shape[0]
+		hatch = hatch_mapping[label]
+		for _ in range(n_bars):
+			if patch_idx < len(ax.patches):
+				ax.patches[patch_idx].set_hatch(hatch)
+				patch_idx += 1
+
+	leg = plt.legend(title="Label", loc="upper right", title_fontsize=14, fontsize=12)
+	for handle, text in zip(leg.legend_handles, leg.get_texts()):
+		label_text = text.get_text()
+		hatch = hatch_mapping.get(label_text, "")
+		handle.set_hatch(hatch)
+
 	sns.despine()
+	plt.tight_layout()
 
 	os.makedirs("plots", exist_ok=True)
+	plt.savefig(save_path, dpi=300)
+	plt.close()
+
+
+def plot_n_gram_sublpots(
+	unigram: pd.DataFrame,
+	bigram: pd.DataFrame,
+	trigram: pd.DataFrame,
+	save_path: str = os.path.join("plots", "n_gram_subplot.png"),
+) -> None:
+	"""
+	Plot bar charts of n-grams per label (unigram, bigram, trigram) on separate subplots.
+
+	Args:
+	    unigram (pd.DataFrame): DataFrame containing unigram n-grams.
+	    bigram (pd.DataFrame): DataFrame containing bigram n-grams.
+	    trigram (pd.DataFrame): DataFrame containing trigram n-grams.
+	    save_path (str): Path to save the plot. Defaults to "plots/n_gram_subplot.png".
+	"""
+	sns.set_theme(style="ticks")
+	_, axes = plt.subplots(3, 1, figsize=(14, 21))
+
+	for i, df in enumerate([unigram, bigram, trigram]):
+		df["ngram_unique"] = df["ngram"] + "___" + df["label"]
+		df["label"] = df["label"].apply(lambda x: x.title() if x != "DDF" else x)
+
+		palette = sns.color_palette("magma", n_colors=df["label"].nunique(), desat=0.8)
+
+		ax = axes[i]
+		ax = sns.barplot(
+			x="ngram_unique",
+			y="count",
+			hue="label",
+			data=df,
+			palette=palette,
+			alpha=1,
+			edgecolor="black",
+			linewidth=0.5,
+			ax=ax,
+		)
+
+		ax.set_xlabel("")
+		ax.set_ylabel("Count", fontsize=14)
+		ax.set_xticklabels(df["ngram"], rotation=45, ha="right", fontsize=12)
+		ax.set_title(f"{['Unigram', 'Bigram', 'Trigram'][i]} per Label", fontsize=16)
+
+		unique_labels = list(df["label"].unique())
+		hatch_mapping = {label: "///" if i % 2 == 1 else "" for i, label in enumerate(unique_labels)}
+
+		patch_idx = 0
+		for label in unique_labels:
+			n_bars = df[df["label"] == label].shape[0]
+			hatch = hatch_mapping[label]
+			for _ in range(n_bars):
+				if patch_idx < len(ax.patches):
+					ax.patches[patch_idx].set_hatch(hatch)
+					patch_idx += 1
+
+		ax.legend_.remove()
+
+		if i == 0:
+			leg = ax.legend(title="Label", loc="upper right", title_fontsize=14, fontsize=12)
+			for handle, text in zip(leg.legend_handles, leg.get_texts()):
+				label_text = text.get_text()
+				hatch = hatch_mapping.get(label_text, "")
+				handle.set_hatch(hatch)
+
+	sns.despine()
 	plt.tight_layout()
+
+	os.makedirs("plots", exist_ok=True)
 	plt.savefig(save_path, dpi=300)
 	plt.close()
 
@@ -92,4 +188,11 @@ if __name__ == "__main__":
 	]
 
 	unigram = n_gram_per_label(file_paths=file_paths, n=1, top_k=3)
+	bigram = n_gram_per_label(file_paths=file_paths, n=2, top_k=3)
+	trigram = n_gram_per_label(file_paths=file_paths, n=3, top_k=3)
 	plot_n_gram(df=unigram, save_path=os.path.join("plots", "unigram_per_label.png"))
+	plot_n_gram(df=bigram, save_path=os.path.join("plots", "bigram_per_label.png"))
+	plot_n_gram(df=trigram, save_path=os.path.join("plots", "trigram_per_label.png"))
+	plot_n_gram_sublpots(
+		unigram=unigram, bigram=bigram, trigram=trigram, save_path=os.path.join("plots", "n_gram_subplot.png")
+	)

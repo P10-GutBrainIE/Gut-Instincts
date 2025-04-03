@@ -29,7 +29,7 @@ def label_distribution_stacked_bar_plot(
 	x = np.arange(len(labels))
 	bottom = np.zeros(len(labels))
 
-	palette = sns.color_palette("magma", n_colors=4, desat=0.7)
+	palette = sns.color_palette("magma", n_colors=4, desat=0.8)
 
 	plt.figure(figsize=(14, 7))
 	for i, quality in enumerate(qualities):

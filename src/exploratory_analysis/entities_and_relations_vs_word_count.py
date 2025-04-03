@@ -34,7 +34,7 @@ def entities_and_relations_vs_word_count(
 ):
 	sns.set_theme(style="ticks")
 	_, axes = plt.subplots(1, 2, figsize=(14, 7))
-	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.7)[::-1]
+	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.8)[::-1]
 
 	sns.scatterplot(
 		x=df["paper_length"],
@@ -83,7 +83,7 @@ def create_pairplot(df: pd.DataFrame, save_path: str = os.path.join("plots", "pa
 	"""
 	sns.set_theme(style="ticks")
 	plt.figure(figsize=(14, 7))
-	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.7)[::-1]
+	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.8)[::-1]
 
 	sns.pairplot(
 		df, hue="quality", palette=palette, vars=["entities", "relations", "paper_length"], markers=["o", "s", "D"]

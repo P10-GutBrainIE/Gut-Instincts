@@ -30,7 +30,7 @@ def text_length_histogram(file_paths: str, save_path: str = os.path.join("plots"
 	sns.set_theme(style="ticks")
 	fig, axes = plt.subplots(2, 4, figsize=(14, 7))
 
-	palette = sns.color_palette("magma", n_colors=4, desat=0.7)[::-1]
+	palette = sns.color_palette("magma", n_colors=4, desat=0.8)[::-1]
 
 	qualities = ["platinum", "gold", "silver", "bronze"]
 
@@ -122,7 +122,7 @@ def text_length_violinplot(file_paths: str, save_path: str = os.path.join("plots
 	sns.set_theme(style="ticks")
 	_, axes = plt.subplots(2, 1, figsize=(14, 7))
 
-	palette = sns.color_palette("magma", n_colors=4, desat=0.7)[::-1]
+	palette = sns.color_palette("magma", n_colors=4, desat=0.8)[::-1]
 
 	sns.violinplot(
 		x="quality",
