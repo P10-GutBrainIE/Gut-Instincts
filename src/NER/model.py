@@ -1,35 +1,44 @@
+import torch
 from torch import nn
-from transformers import AutoModel
+from transformers import AutoModel, AutoConfig
 
-class BertForTokenClassificationWithPOS(nn.Module):
-    def __init__(self, model_name: str, num_labels: int, num_pos_tags: int):
+class BertWithPOS(nn.Module):
+    def __init__(self, model_name_or_path, num_pos_tags, num_labels):
         super().__init__()
-        self.bert = AutoModel.from_pretrained(model_name)
-        self.dropout = nn.Dropout(0.1)
 
-        # POS tag embedding
-        self.pos_embedding = nn.Embedding(num_pos_tags, self.bert.config.hidden_size)
+        self.bert = AutoModel.from_pretrained(model_name_or_path)
+        self.hidden_size = self.bert.config.hidden_size
 
-        # Classification layer for NER
-        self.classifier = nn.Linear(self.bert.config.hidden_size, num_labels)
+        # POS embedding layer
+        self.pos_embeddings = nn.Embedding(num_pos_tags, self.hidden_size)
+
+        # Classifier head
+        self.classifier = nn.Linear(self.hidden_size, num_labels)
+
+        # Dropout
+        self.dropout = nn.Dropout(self.bert.config.hidden_dropout_prob)
 
     def forward(self, input_ids, attention_mask=None, pos_tag_ids=None, labels=None):
-        # Get outputs from BERT
-        outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        sequence_output = outputs.last_hidden_state  # (batch_size, seq_len, hidden_dim)
+        outputs = self.bert(
+            input_ids=input_ids,
+            attention_mask=attention_mask,
+            return_dict=True,
+        )
+        sequence_output = outputs.last_hidden_state  # [batch, seq_len, hidden]
 
-        # Add POS embeddings
         if pos_tag_ids is not None:
-            pos_embeddings = self.pos_embedding(pos_tag_ids)
-            sequence_output = sequence_output + pos_embeddings
+            pos_embeds = self.pos_embeddings(pos_tag_ids)
+            sequence_output = sequence_output + pos_embeds  # or torch.cat(...)
 
-        # Dropout and classification
         sequence_output = self.dropout(sequence_output)
         logits = self.classifier(sequence_output)
 
         loss = None
         if labels is not None:
-            loss_fct = nn.CrossEntropyLoss(ignore_index=-100)
-            loss = loss_fct(logits.view(-1, logits.shape[-1]), labels.view(-1))
+            loss_fct = nn.CrossEntropyLoss()
+            active_loss = attention_mask.view(-1) == 1
+            active_logits = logits.view(-1, logits.shape[-1])[active_loss]
+            active_labels = labels.view(-1)[active_loss]
+            loss = loss_fct(active_logits, active_labels)
 
         return {"loss": loss, "logits": logits} if loss is not None else {"logits": logits}
