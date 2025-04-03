@@ -126,6 +126,13 @@ def plot_n_gram_sublpots(
 	_, axes = plt.subplots(3, 1, figsize=(14, 21))
 
 	for i, df in enumerate([unigram, bigram, trigram]):
+		if i == 0:
+			label_order = df["label"].tolist()
+			label_order_dict = {label: idx for idx, label in enumerate(label_order)}
+		else:
+			df["order"] = df["label"].map(label_order_dict)
+			df = df.sort_values("order").drop(columns="order")
+
 		df["ngram_unique"] = df["ngram"] + "___" + df["label"]
 		df["label"] = df["label"].apply(lambda x: x.title() if x != "DDF" else x)
 
