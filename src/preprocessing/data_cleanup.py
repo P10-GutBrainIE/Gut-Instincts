@@ -58,7 +58,7 @@ def clean_incorrect_text_spans(
 
 	Args:
 	    data (dict): Dataset loaded as a dictionary.
-        corrections (dict): Dictionary containing corrections for incorrect text spans.
+	corrections (dict): Dictionary containing corrections for incorrect text spans.
 	    check_ternary_relations (bool, optional): Whether to update text spans in ternary mention-based relations. Defaults to False.
 	    save_data (bool, optional): Whether to save the cleaned dataset to a file. If False, returns the updated dataset. Defaults to False.
 
@@ -138,7 +138,7 @@ def remove_incorrect_text_spans(
 
 	Args:
 	    data (dict): Dataset loaded as a dictionary.
-        incorrect_annotations (dict): Dictionary containing the annotations to be removed.
+	incorrect_annotations (dict): Dictionary containing the annotations to be removed.
 	    check_ternary_relations (bool, optional): If True, ternary mention-based relations will also be checked and cleaned. Defaults to False.
 	    save_data (bool, optional): If True, the cleaned dataset will be saved in the 'data_preprocessed' directory. Defaults to False.
 
@@ -208,22 +208,18 @@ if __name__ == "__main__":
 	bronze_corrections_path = os.path.join("data", "metadata", "bronze_incorrect_annotations.json")
 	silver_corrections_path = os.path.join("data", "metadata", "silver_incorrect_annotations.json")
 
-	
-	#Bronze cleanup pipeline example
+	# Bronze cleaning pipeline example
 	bronze_data = load_json_data(bronze_path)
 	bronze_corrections = load_json_data(bronze_corrections_path)
-
 	bronze_data = remove_incorrect_text_spans(bronze_data, bronze_corrections.get("remove", {}), check_ternary_relations=True)
 	bronze_data = clean_incorrect_text_spans(bronze_data, bronze_corrections.get("clean", {}), check_ternary_relations=True)
 	bronze_data = remove_documents_over_or_under_threshold(bronze_data, 1, "relations", "under")
 	save_json_data(bronze_data, "cleaned_bronze_data.json")
 
-	#Silver cleanup pipeline example
+	# Silver cleaning pipeline example
 	silver_data = load_json_data(silver_path)
 	silver_corrections = load_json_data(silver_corrections_path)
 
 	silver_data = clean_incorrect_text_spans(silver_data, silver_corrections.get("clean", {}))
 	silver_data = remove_documents_over_or_under_threshold(silver_data, 200, "relations", remove_if="over")
 	save_json_data(silver_data, "cleaned_silver_data.json")
-
-
