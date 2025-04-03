@@ -902,7 +902,7 @@
             "author": "Lingming Hu; Zhaojun Ni; Kangqing Zhao; Xiangxue Li; Xuejiao Gao; Yulin Kang; Zhoulong Yu; Ying Qin; Jingwen Zhao; Wenjuan Peng; Lin Lu; Hongqiang Sun",
             "journal": "Frontiers in microbiology",
             "year": "2023",
-            "abstract": "The relationship between oral and gut microbiota in alcohol dependence (AD) is not well understood, particularly the effects of oral microbiota on the intestinal microbiota. The current study aimed to explore the association between oral and gut microbiota in AD to clarify whether oral microbiota could ectopically colonize into the gut. 16S rRNA sequence libraries were used to compare oral and gut microbial profiles in persons with AD and healthy controls (HC). Source Tracker and NetShift were used to identify bacteria responsible for ectopic colonization and indicate the driver function of ectopic colonization bacteria. The \u03b1-diversity of oral microbiota and intestinal microbiota was significantly decreased in persons with AD (all $#p$# $#p$# <\u20090.05). Results highlight the connection between oral-gut microbiota in AD and suggest novel potential mechanistic possibilities.",
+            "abstract": "The relationship between oral and gut microbiota in alcohol dependence (AD) is not well understood, particularly the effects of oral microbiota on the intestinal microbiota. The current study aimed to explore the association between oral and gut microbiota in AD to clarify whether oral microbiota could ectopically colonize into the gut. 16S rRNA sequence libraries were used to compare oral and gut microbial profiles in persons with AD and healthy controls (HC). Source Tracker and NetShift were used to identify bacteria responsible for ectopic colonization and indicate the driver function of ectopic colonization bacteria. The \u03b1-diversity of oral microbiota and intestinal microbiota was significantly decreased in persons with AD (all p p <\u20090.05). Results highlight the connection between oral-gut microbiota in AD and suggest novel potential mechanistic possibilities.",
             "annotator": "expert_5"
         },
         "entities": [
@@ -1054,92 +1054,92 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 756,
-                "end_idx": 784,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "Principal coordinate analysis",
                 "label": "statistical technique"
             },
             {
-                "start_idx": 823,
-                "end_idx": 845,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "oral and gut microbiota",
                 "label": "microbiome"
             },
             {
-                "start_idx": 850,
-                "end_idx": 856,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "persons",
                 "label": "human"
             },
             {
-                "start_idx": 863,
-                "end_idx": 864,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "AD",
                 "label": "DDF"
             },
             {
-                "start_idx": 879,
-                "end_idx": 884,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "HC",
                 "label": "human"
             },
             {
-                "start_idx": 950,
-                "end_idx": 956,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "persons",
                 "label": "human"
             },
             {
-                "start_idx": 963,
-                "end_idx": 964,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "AD",
                 "label": "DDF"
             },
             {
-                "start_idx": 995,
-                "end_idx": 996,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "HC",
                 "label": "human"
             },
             {
-                "start_idx": 1025,
-                "end_idx": 1039,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "oral microbiota",
                 "label": "microbiome"
             },
             {
-                "start_idx": 1081,
-                "end_idx": 1082,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "AD",
                 "label": "DDF"
             },
             {
-                "start_idx": 1125,
-                "end_idx": 1126,
+                "start_idx": 744,
+                "end_idx": 743,
                 "location": "abstract",
                 "text_span": "AD",
                 "label": "DDF"
             },
             {
-                "start_idx": 1330,
-                "end_idx": 1348,
+                "start_idx": 796,
+                "end_idx": 814,
                 "location": "abstract",
                 "text_span": "oral-gut microbiota",
                 "label": "microbiome"
             },
             {
-                "start_idx": 1353,
-                "end_idx": 1354,
+                "start_idx": 819,
+                "end_idx": 820,
                 "location": "abstract",
                 "text_span": "AD",
                 "label": "DDF"
@@ -3944,7 +3944,7 @@
             "author": "Steinar Traae Bj\u00f8rkhaug; Sudan Prasad Neupane; J\u00f8rgen G Bramness; H\u00e5vard Aanes; Viggo Skar; Asle W Medhus; J\u00f8rgen Valeur",
             "journal": "Alcohol (Fayetteville, N.Y.)",
             "year": "2020",
-            "abstract": "Alcohol-related morbidity may involve changes in the gut microbiota and immune dysregulation. We have previously demonstrated alterations in gut microbiota composition and functions in patients with alcohol overconsumption, and now aimed to investigate possible associations between cytokine levels, gut microbiota, and clinical symptoms. We included hospital inpatients with a history of chronic alcohol overconsumption. For comparison, we included control patients with a low alcohol intake. Cytokine levels (TGF-\u03b21, TNF-\u03b1, IL-10, IL-8, IL-6, IFN-\u03b3, MCP-1, IL-1RA, IL-1\u03b2, and IL-17) were determined using a customized V-plex assay. We then examined associations of cytokine levels with the abundance of Proteobacteria and Faecalibacterium, percentage of the short-chain fatty acid butyrate, psychiatric symptoms (Hospital Anxiety and Depression Scale), and biochemical liver variables. We included 28 patients with alcohol overconsumption (79% men), and 25 control patients (72% men). Patients with alcohol overconsumption had higher levels of IL-6 (p\u00a0=\u00a00.002), IFN-\u03b3 (p\u00a0=\u00a00.018), and MCP-1 (p\u00a0=\u00a00.006), and lower levels of TGF-\u03b21 (p\u00a0=\u00a00.017) compared with control patients. Inverse correlations were found between Proteobacteria abundance and TNF-\u03b1 (R$#s$#\u00a0=\u00a0-0.55, p\u00a0=\u00a00.02) and IL-8 (R$#s$#\u00a0=\u00a0-0.58, p\u00a0=\u00a00.014), and between Faecalibacterium and MCP-1 levels (R$#s$#\u00a0=\u00a0-0.56, p\u00a0=\u00a00.02) in the control patients, but not in patients with alcohol overconsumption. Patients with alcohol overconsumption reported more psychiatric symptoms, and these symptoms were inversely correlated with IL-10 levels. There were positive correlations between several of the assessed cytokines and biochemical liver variables, and negative correlations between cytokine levels and albumin. Patients with alcohol overconsumption had a cytokine profile suggestive of increased systemic inflammatory activity, with higher levels of pro-inflammatory cytokines (IL-6, IFN-\u03b3, and MCP-1) and lower levels of anti-inflammatory cytokines (TGF-\u03b21). The findings may represent a link between alcohol use and alcohol-related morbidity.",
+            "abstract": "Alcohol-related morbidity may involve changes in the gut microbiota and immune dysregulation. We have previously demonstrated alterations in gut microbiota composition and functions in patients with alcohol overconsumption, and now aimed to investigate possible associations between cytokine levels, gut microbiota, and clinical symptoms. We included hospital inpatients with a history of chronic alcohol overconsumption. For comparison, we included control patients with a low alcohol intake. Cytokine levels (TGF-\u03b21, TNF-\u03b1, IL-10, IL-8, IL-6, IFN-\u03b3, MCP-1, IL-1RA, IL-1\u03b2, and IL-17) were determined using a customized V-plex assay. We then examined associations of cytokine levels with the abundance of Proteobacteria and Faecalibacterium, percentage of the short-chain fatty acid butyrate, psychiatric symptoms (Hospital Anxiety and Depression Scale), and biochemical liver variables. We included 28 patients with alcohol overconsumption (79% men), and 25 control patients (72% men). Patients with alcohol overconsumption had higher levels of IL-6 (p\u00a0=\u00a00.002), IFN-\u03b3 (p\u00a0=\u00a00.018), and MCP-1 (p\u00a0=\u00a00.006), and lower levels of TGF-\u03b21 (p\u00a0=\u00a00.017) compared with control patients. Inverse correlations were found between Proteobacteria abundance and TNF-\u03b1 (Rs\u00a0=\u00a0-0.55, p\u00a0=\u00a00.02) and IL-8 (Rs\u00a0=\u00a0-0.58, p\u00a0=\u00a00.014), and between Faecalibacterium and MCP-1 levels (Rs\u00a0=\u00a0-0.56, p\u00a0=\u00a00.02) in the control patients, but not in patients with alcohol overconsumption. Patients with alcohol overconsumption reported more psychiatric symptoms, and these symptoms were inversely correlated with IL-10 levels. There were positive correlations between several of the assessed cytokines and biochemical liver variables, and negative correlations between cytokine levels and albumin. Patients with alcohol overconsumption had a cytokine profile suggestive of increased systemic inflammatory activity, with higher levels of pro-inflammatory cytokines (IL-6, IFN-\u03b3, and MCP-1) and lower levels of anti-inflammatory cytokines (TGF-\u03b21). The findings may represent a link between alcohol use and alcohol-related morbidity.",
             "annotator": "expert_5"
         },
         "entities": [
@@ -4236,141 +4236,141 @@
                 "label": "gene"
             },
             {
-                "start_idx": 1287,
-                "end_idx": 1289,
+                "start_idx": 1279,
+                "end_idx": 1282,
                 "location": "abstract",
                 "text_span": "IL-8",
                 "label": "gene"
             },
             {
-                "start_idx": 1339,
-                "end_idx": 1354,
+                "start_idx": 1321,
+                "end_idx": 1336,
                 "location": "abstract",
                 "text_span": "Faecalibacterium",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1412,
-                "end_idx": 1427,
+                "start_idx": 1385,
+                "end_idx": 1400,
                 "location": "abstract",
                 "text_span": "control patients",
                 "label": "human"
             },
             {
-                "start_idx": 1441,
-                "end_idx": 1448,
+                "start_idx": 1414,
+                "end_idx": 1421,
                 "location": "abstract",
                 "text_span": "patients",
                 "label": "human"
             },
             {
-                "start_idx": 1455,
-                "end_idx": 1477,
+                "start_idx": 1428,
+                "end_idx": 1450,
                 "location": "abstract",
                 "text_span": "alcohol overconsumption",
                 "label": "DDF"
             },
             {
-                "start_idx": 1480,
-                "end_idx": 1487,
+                "start_idx": 1453,
+                "end_idx": 1460,
                 "location": "abstract",
                 "text_span": "Patients",
                 "label": "human"
             },
             {
-                "start_idx": 1494,
-                "end_idx": 1516,
+                "start_idx": 1467,
+                "end_idx": 1489,
                 "location": "abstract",
                 "text_span": "alcohol overconsumption",
                 "label": "DDF"
             },
             {
-                "start_idx": 1532,
-                "end_idx": 1551,
+                "start_idx": 1505,
+                "end_idx": 1524,
                 "location": "abstract",
                 "text_span": "psychiatric symptoms",
                 "label": "DDF"
             },
             {
-                "start_idx": 1683,
-                "end_idx": 1691,
+                "start_idx": 1656,
+                "end_idx": 1664,
                 "location": "abstract",
                 "text_span": "cytokines",
                 "label": "chemical"
             },
             {
-                "start_idx": 1780,
-                "end_idx": 1786,
+                "start_idx": 1753,
+                "end_idx": 1759,
                 "location": "abstract",
                 "text_span": "albumin",
                 "label": "chemical"
             },
             {
-                "start_idx": 1789,
-                "end_idx": 1796,
+                "start_idx": 1762,
+                "end_idx": 1769,
                 "location": "abstract",
                 "text_span": "Patients",
                 "label": "human"
             },
             {
-                "start_idx": 1803,
-                "end_idx": 1825,
+                "start_idx": 1776,
+                "end_idx": 1798,
                 "location": "abstract",
                 "text_span": "alcohol overconsumption",
                 "label": "DDF"
             },
             {
-                "start_idx": 1864,
-                "end_idx": 1903,
+                "start_idx": 1837,
+                "end_idx": 1876,
                 "location": "abstract",
                 "text_span": "increased systemic inflammatory activity",
                 "label": "DDF"
             },
             {
-                "start_idx": 1928,
-                "end_idx": 1953,
+                "start_idx": 1901,
+                "end_idx": 1926,
                 "location": "abstract",
                 "text_span": "pro-inflammatory cytokines",
                 "label": "chemical"
             },
             {
-                "start_idx": 1956,
-                "end_idx": 1959,
+                "start_idx": 1929,
+                "end_idx": 1932,
                 "location": "abstract",
                 "text_span": "IL-6",
                 "label": "gene"
             },
             {
-                "start_idx": 1962,
-                "end_idx": 1966,
+                "start_idx": 1935,
+                "end_idx": 1939,
                 "location": "abstract",
                 "text_span": "IFN-\u03b3",
                 "label": "gene"
             },
             {
-                "start_idx": 1973,
-                "end_idx": 1977,
+                "start_idx": 1946,
+                "end_idx": 1950,
                 "location": "abstract",
                 "text_span": "MCP-1",
                 "label": "gene"
             },
             {
-                "start_idx": 2000,
-                "end_idx": 2026,
+                "start_idx": 1973,
+                "end_idx": 1999,
                 "location": "abstract",
                 "text_span": "anti-inflammatory cytokines",
                 "label": "chemical"
             },
             {
-                "start_idx": 2029,
-                "end_idx": 2034,
+                "start_idx": 2002,
+                "end_idx": 2007,
                 "location": "abstract",
                 "text_span": "TGF-\u03b21",
                 "label": "gene"
             },
             {
-                "start_idx": 2096,
-                "end_idx": 2126,
+                "start_idx": 2069,
+                "end_idx": 2093,
                 "location": "abstract",
                 "text_span": "alcohol-related morbidity",
                 "label": "DDF"
@@ -6359,7 +6359,7 @@
             "author": "Tobias Hegelmaier; Marco Lebbing; Alexander Duscha; Laura Tomaske; Lars T\u00f6nges; Jacob Bak Holm; Henrik Bj\u00f8rn Nielsen; S\u00f6ren G Gatermann; Horst Przuntek; Aiden Haghikia",
             "journal": "Cells",
             "year": "2020",
-            "abstract": "The impact of the gut microbiome is being increasingly appreciated in health and in various chronic diseases, among them neurodegenerative disorders such as Parkinson's disease (PD). In the pathogenesis of PD, the role of the gut has been previously established. In conjunction with a better understanding of the intestinal microbiome, a link to the misfolding and spread of alpha-synuclein via inflammatory processes within the gut is discussed. In a case-control study, we assessed the gut microbiome of 54 PD patients and 32 healthy controls (HC). Additionally, we tested in this proof-of-concept study whether dietary intervention alone or additional physical colon cleaning may lead to changes of the gut microbiome in PD. 16 PD patients underwent a well-controlled balanced, ovo-lacto vegetarian diet intervention including short fatty acids for 14 days. 10 of those patients received additional treatment with daily fecal enema over 8 days. Stool samples were collected before and after 14 days of intervention. In comparison to HC, we could confirm previously reported PD associated microbiome changes. The UDPRS III significantly improved and the levodopa-equivalent daily dose decreased after vegetarian diet and fecal enema in a one-year follow-up. Additionally, we observed a significant association between the gut microbiome diversity and the UPDRS III and the abundance of $#Ruminococcaceae$#. Additionally, the abundance of $#Clostridiaceae$# was significantly reduced after enema. Dietary intervention and bowel cleansing may provide an additional non-pharmacologic therapeutic option for PD patients.",
+            "abstract": "The impact of the gut microbiome is being increasingly appreciated in health and in various chronic diseases, among them neurodegenerative disorders such as Parkinson's disease (PD). In the pathogenesis of PD, the role of the gut has been previously established. In conjunction with a better understanding of the intestinal microbiome, a link to the misfolding and spread of alpha-synuclein via inflammatory processes within the gut is discussed. In a case-control study, we assessed the gut microbiome of 54 PD patients and 32 healthy controls (HC). Additionally, we tested in this proof-of-concept study whether dietary intervention alone or additional physical colon cleaning may lead to changes of the gut microbiome in PD. 16 PD patients underwent a well-controlled balanced, ovo-lacto vegetarian diet intervention including short fatty acids for 14 days. 10 of those patients received additional treatment with daily fecal enema over 8 days. Stool samples were collected before and after 14 days of intervention. In comparison to HC, we could confirm previously reported PD associated microbiome changes. The UDPRS III significantly improved and the levodopa-equivalent daily dose decreased after vegetarian diet and fecal enema in a one-year follow-up. Additionally, we observed a significant association between the gut microbiome diversity and the UPDRS III and the abundance of Ruminococcaceae. Additionally, the abundance of Clostridiaceae was significantly reduced after enema. Dietary intervention and bowel cleansing may provide an additional non-pharmacologic therapeutic option for PD patients.",
             "annotator": "expert_7"
         },
         "entities": [
@@ -6546,29 +6546,29 @@
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 1390,
-                "end_idx": 1403,
+                "start_idx": 1388,
+                "end_idx": 1402,
                 "location": "abstract",
                 "text_span": "Ruminococcaceae",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1443,
-                "end_idx": 1455,
+                "start_idx": 1436,
+                "end_idx": 1449,
                 "location": "abstract",
                 "text_span": "Clostridiaceae",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1493,
-                "end_idx": 1497,
+                "start_idx": 1483,
+                "end_idx": 1487,
                 "location": "abstract",
                 "text_span": "enema",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 1608,
-                "end_idx": 1622,
+                "start_idx": 1598,
+                "end_idx": 1608,
                 "location": "abstract",
                 "text_span": "PD patients",
                 "label": "human"
@@ -9198,7 +9198,7 @@
             "author": "Yogesh Singh; Christoph Trautwein; Joan Romani; Madhuri S Salker; Peter H Neckel; Isabel Fraccaroli; Mahkameh Abeditashi; Nils Woerner; Jakob Admard; Achal Dhariwal; Morten K D Dueholm; Karl-Herbert Sch\u00e4fer; Florian Lang; Daniel E Otzen; Hilal A Lashuel; Olaf Riess; Nicolas Casadei",
             "journal": "Molecular neurodegeneration",
             "year": "2023",
-            "abstract": "Braak's hypothesis states that sporadic Parkinson's disease (PD) follows a specific progression of pathology from the peripheral to the central nervous system, and this progression can be monitored by detecting the\u00a0accumulation of alpha-Synuclein (\u03b1-Syn) protein. Consequently, there is\u00a0growing interest in understanding how the gut (commensal) microbiome can regulate \u03b1-Syn accumulation, as this could potentially lead to PD. We used 16S rRNA and shotgun sequencing to characterise microbial diversity. $#1$#H-NMR was employed to understand the metabolite\u00a0production and intestinal inflammation estimated using ELISA and RNA-sequencing from feces and the\u00a0intestinal epithelial layer respectively. The\u00a0Na$#+$# channel current and gut permeability were measured using an\u00a0Ussing chamber. Immunohistochemistry and immunofluorescence imaging were applied to detect the\u00a0\u03b1-Syn protein. LC-MS/MS was used for characterization of proteins from metabolite treated neuronal cells. Finally, Metascape and Ingenuity Pathway Analysis (IPA) bioinformatics tools were used for identification of dysregulated pathways. We studied a transgenic (TG) rat model overexpressing the human SNCA gene and found that a progressive gut microbial composition alteration characterized by the reduction of Firmicutes to Bacteroidetes ratio could be detected in the young TG rats. Interestingly, this ratio then increased with ageing. The\u00a0dynamics of Lactobacillus and Alistipes were monitored and reduced Lactobacillus and increased Alistipes abundance was discerned in ageing TG rats. Additionally, the SNCA gene overexpression resulted in gut \u03b1-Syn protein expression and increased with advanced age. Further, older TG animals had increased intestinal inflammation, decreased Na$#+$# current and a robust alteration in metabolite production characterized by the increase of succinate levels in feces and serum. Manipulation of the gut bacteria by short-term antibiotic cocktail\u00a0treatment revealed a complete loss of short-chain fatty acids and a\u00a0reduction in succinate levels. Although antibiotic\u00a0cocktail treatment did not change \u03b1-Syn expression in the enteric nervous system of the colon, however, reduced \u03b1-Syn expression was detected in the olfactory bulbs (forebrain) of the TG rats. Our data emphasize that the gut microbiome dysbiosis synchronous with ageing leads to a specific alteration of gut metabolites and can be modulated by antibiotics which may affect PD pathology.",
+            "abstract": "Braak's hypothesis states that sporadic Parkinson's disease (PD) follows a specific progression of pathology from the peripheral to the central nervous system, and this progression can be monitored by detecting the\u00a0accumulation of alpha-Synuclein (\u03b1-Syn) protein. Consequently, there is\u00a0growing interest in understanding how the gut (commensal) microbiome can regulate \u03b1-Syn accumulation, as this could potentially lead to PD. We used 16S rRNA and shotgun sequencing to characterise microbial diversity. 1H-NMR was employed to understand the metabolite\u00a0production and intestinal inflammation estimated using ELISA and RNA-sequencing from feces and the\u00a0intestinal epithelial layer respectively. The\u00a0Na+ channel current and gut permeability were measured using an\u00a0Ussing chamber. Immunohistochemistry and immunofluorescence imaging were applied to detect the\u00a0\u03b1-Syn protein. LC-MS/MS was used for characterization of proteins from metabolite treated neuronal cells. Finally, Metascape and Ingenuity Pathway Analysis (IPA) bioinformatics tools were used for identification of dysregulated pathways. We studied a transgenic (TG) rat model overexpressing the human SNCA gene and found that a progressive gut microbial composition alteration characterized by the reduction of Firmicutes to Bacteroidetes ratio could be detected in the young TG rats. Interestingly, this ratio then increased with ageing. The\u00a0dynamics of Lactobacillus and Alistipes were monitored and reduced Lactobacillus and increased Alistipes abundance was discerned in ageing TG rats. Additionally, the SNCA gene overexpression resulted in gut \u03b1-Syn protein expression and increased with advanced age. Further, older TG animals had increased intestinal inflammation, decreased Na+ current and a robust alteration in metabolite production characterized by the increase of succinate levels in feces and serum. Manipulation of the gut bacteria by short-term antibiotic cocktail\u00a0treatment revealed a complete loss of short-chain fatty acids and a\u00a0reduction in succinate levels. Although antibiotic\u00a0cocktail treatment did not change \u03b1-Syn expression in the enteric nervous system of the colon, however, reduced \u03b1-Syn expression was detected in the olfactory bulbs (forebrain) of the TG rats. Our data emphasize that the gut microbiome dysbiosis synchronous with ageing leads to a specific alteration of gut metabolites and can be modulated by antibiotics which may affect PD pathology.",
             "annotator": "expert_5"
         },
         "entities": [
@@ -9273,239 +9273,239 @@
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 503,
-                "end_idx": 518,
+                "start_idx": 504,
+                "end_idx": 509,
                 "location": "abstract",
-                "text_span": "$#1$#H-NMR",
+                "text_span": "1H-NMR",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 577,
-                "end_idx": 599,
+                "start_idx": 568,
+                "end_idx": 590,
                 "location": "abstract",
                 "text_span": "intestinal inflammation",
                 "label": "DDF"
             },
             {
-                "start_idx": 617,
-                "end_idx": 621,
+                "start_idx": 608,
+                "end_idx": 612,
                 "location": "abstract",
                 "text_span": "ELISA",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 627,
-                "end_idx": 640,
+                "start_idx": 618,
+                "end_idx": 631,
                 "location": "abstract",
                 "text_span": "RNA-sequencing",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 661,
-                "end_idx": 687,
+                "start_idx": 652,
+                "end_idx": 678,
                 "location": "abstract",
                 "text_span": "intestinal epithelial layer",
                 "label": "anatomical location"
             },
             {
-                "start_idx": 780,
-                "end_idx": 793,
+                "start_idx": 762,
+                "end_idx": 775,
                 "location": "abstract",
                 "text_span": "Ussing chamber",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 796,
-                "end_idx": 815,
+                "start_idx": 778,
+                "end_idx": 797,
                 "location": "abstract",
                 "text_span": "Immunohistochemistry",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 821,
-                "end_idx": 846,
+                "start_idx": 803,
+                "end_idx": 828,
                 "location": "abstract",
                 "text_span": "immunofluorescence imaging",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 875,
-                "end_idx": 887,
+                "start_idx": 857,
+                "end_idx": 869,
                 "location": "abstract",
                 "text_span": "\u03b1-Syn protein",
                 "label": "chemical"
             },
             {
-                "start_idx": 890,
-                "end_idx": 897,
+                "start_idx": 872,
+                "end_idx": 879,
                 "location": "abstract",
                 "text_span": "LC-MS/MS",
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 932,
-                "end_idx": 939,
+                "start_idx": 914,
+                "end_idx": 921,
                 "location": "abstract",
                 "text_span": "proteins",
                 "label": "chemical"
             },
             {
-                "start_idx": 1090,
-                "end_idx": 1110,
+                "start_idx": 1072,
+                "end_idx": 1092,
                 "location": "abstract",
                 "text_span": "dysregulated pathways",
                 "label": "DDF"
             },
             {
-                "start_idx": 1171,
-                "end_idx": 1185,
+                "start_idx": 1153,
+                "end_idx": 1167,
                 "location": "abstract",
                 "text_span": "human SNCA gene",
                 "label": "gene"
             },
             {
-                "start_idx": 1346,
-                "end_idx": 1358,
+                "start_idx": 1328,
+                "end_idx": 1340,
                 "location": "abstract",
                 "text_span": "young TG rats",
                 "label": "animal"
             },
             {
-                "start_idx": 1431,
-                "end_idx": 1443,
+                "start_idx": 1413,
+                "end_idx": 1425,
                 "location": "abstract",
                 "text_span": "Lactobacillus",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1449,
-                "end_idx": 1457,
+                "start_idx": 1431,
+                "end_idx": 1439,
                 "location": "abstract",
                 "text_span": "Alistipes",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1551,
-                "end_idx": 1564,
+                "start_idx": 1533,
+                "end_idx": 1546,
                 "location": "abstract",
                 "text_span": "ageing TG rats",
                 "label": "animal"
             },
             {
-                "start_idx": 1693,
-                "end_idx": 1708,
+                "start_idx": 1675,
+                "end_idx": 1690,
                 "location": "abstract",
                 "text_span": "older TG animals",
                 "label": "animal"
             },
             {
-                "start_idx": 1724,
-                "end_idx": 1746,
+                "start_idx": 1706,
+                "end_idx": 1728,
                 "location": "abstract",
                 "text_span": "intestinal inflammation",
                 "label": "DDF"
             },
             {
-                "start_idx": 1748,
-                "end_idx": 1778,
+                "start_idx": 1731,
+                "end_idx": 1751,
                 "location": "abstract",
-                "text_span": "decreased Na$#+$# current",
+                "text_span": "decreased Na+ current",
                 "label": "DDF"
             },
             {
-                "start_idx": 1786,
-                "end_idx": 1827,
+                "start_idx": 1759,
+                "end_idx": 1800,
                 "location": "abstract",
                 "text_span": "robust alteration in metabolite production",
                 "label": "DDF"
             },
             {
-                "start_idx": 1850,
-                "end_idx": 1896,
+                "start_idx": 1823,
+                "end_idx": 1869,
                 "location": "abstract",
                 "text_span": "increase of succinate levels in feces and serum",
                 "label": "DDF"
             },
             {
-                "start_idx": 1919,
-                "end_idx": 1930,
+                "start_idx": 1892,
+                "end_idx": 1903,
                 "location": "abstract",
                 "text_span": "gut bacteria",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1935,
-                "end_idx": 1974,
+                "start_idx": 1908,
+                "end_idx": 1947,
                 "location": "abstract",
                 "text_span": "short-term antibiotic cocktail\u00a0treatment",
                 "label": "drug"
             },
             {
-                "start_idx": 2004,
-                "end_idx": 2026,
+                "start_idx": 1977,
+                "end_idx": 1999,
                 "location": "abstract",
                 "text_span": "short-chain fatty acids",
                 "label": "chemical"
             },
             {
-                "start_idx": 2074,
-                "end_idx": 2102,
+                "start_idx": 2047,
+                "end_idx": 2075,
                 "location": "abstract",
                 "text_span": "antibiotic\u00a0cocktail treatment",
                 "label": "drug"
             },
             {
-                "start_idx": 2143,
-                "end_idx": 2177,
+                "start_idx": 2116,
+                "end_idx": 2150,
                 "location": "abstract",
                 "text_span": "enteric nervous system of the colon",
                 "label": "anatomical location"
             },
             {
-                "start_idx": 2234,
-                "end_idx": 2248,
+                "start_idx": 2207,
+                "end_idx": 2221,
                 "location": "abstract",
                 "text_span": "olfactory bulbs",
                 "label": "anatomical location"
             },
             {
-                "start_idx": 2251,
-                "end_idx": 2259,
+                "start_idx": 2224,
+                "end_idx": 2232,
                 "location": "abstract",
                 "text_span": "forebrain",
                 "label": "anatomical location"
             },
             {
-                "start_idx": 2269,
-                "end_idx": 2275,
+                "start_idx": 2242,
+                "end_idx": 2248,
                 "location": "abstract",
                 "text_span": "TG rats",
                 "label": "animal"
             },
             {
-                "start_idx": 2306,
-                "end_idx": 2329,
+                "start_idx": 2279,
+                "end_idx": 2302,
                 "location": "abstract",
                 "text_span": "gut microbiome dysbiosis",
                 "label": "DDF"
             },
             {
-                "start_idx": 2389,
-                "end_idx": 2403,
+                "start_idx": 2362,
+                "end_idx": 2376,
                 "location": "abstract",
                 "text_span": "gut metabolites",
                 "label": "chemical"
             },
             {
-                "start_idx": 2429,
-                "end_idx": 2439,
+                "start_idx": 2402,
+                "end_idx": 2412,
                 "location": "abstract",
                 "text_span": "antibiotics",
                 "label": "drug"
             },
             {
-                "start_idx": 2464,
-                "end_idx": 2475,
+                "start_idx": 2431,
+                "end_idx": 2442,
                 "location": "abstract",
                 "text_span": "PD pathology",
                 "label": "DDF"
@@ -10992,7 +10992,7 @@
             "author": "Yogesh Singh; Christoph Trautwein; Achal Dhariwal; Madhuri S Salker; Md Alauddin; Laimdota Zizmare; Lisann Pelzl; Martina Feger; Jakob Admard; Nicolas Casadei; Michael F\u00f6ller; Vivek Pachauri; David S Park; Tak W Mak; Julia-Stefanie Frick; Diethelm Wallwiener; Sara Y Brucker; Florian Lang; Olaf Riess",
             "journal": "Scientific reports",
             "year": "2020",
-            "abstract": "The proper communication between gut and brain is pivotal for the maintenance of health and, dysregulation of the gut-brain axis can lead to several clinical disorders. In Parkinson's disease (PD) 85% of all patients experienced constipation many years before showing any signs of motor phenotypes. For differential diagnosis and preventive treatment, there is an urgent need for the identification of biomarkers indicating early disease stages long before the disease phenotype manifests. DJ-1 is a chaperone protein involved in the protection against PD and genetic mutations in this protein have been shown to cause familial PD. However, how the deficiency of DJ-1 influences the risk of PD remains incompletely understood. In the present study, we provide evidence that DJ-1 is implicated in shaping the gut microbiome including; their metabolite production, inflammation and innate immune cells (ILCs) development. We revealed that deficiency of DJ-1 leads to a significant increase in two specific genera/species, namely Alistipes and Rikenella. In DJ-1 knock-out (DJ-1$#-/-$#) mice the production of fecal calprotectin and MCP-1 inflammatory proteins were elevated. Fecal and serum metabolic profile showed that malonate which influences the immune system was significantly more abundant in DJ-1$#-/-$# mice. DJ-1 appeared also to be involved in ILCs development. Further, inflammatory genes related to PD were augmented in the midbrain of DJ-1$#-/-$# mice. Our data suggest that metabolites and inflammation produced in the gut could be used as biomarkers for PD detection. Perhaps, these metabolites and inflammatory mediators could be involved in triggering inflammation resulting in PD pathology.",
+            "abstract": "The proper communication between gut and brain is pivotal for the maintenance of health and, dysregulation of the gut-brain axis can lead to several clinical disorders. In Parkinson's disease (PD) 85% of all patients experienced constipation many years before showing any signs of motor phenotypes. For differential diagnosis and preventive treatment, there is an urgent need for the identification of biomarkers indicating early disease stages long before the disease phenotype manifests. DJ-1 is a chaperone protein involved in the protection against PD and genetic mutations in this protein have been shown to cause familial PD. However, how the deficiency of DJ-1 influences the risk of PD remains incompletely understood. In the present study, we provide evidence that DJ-1 is implicated in shaping the gut microbiome including; their metabolite production, inflammation and innate immune cells (ILCs) development. We revealed that deficiency of DJ-1 leads to a significant increase in two specific genera/species, namely Alistipes and Rikenella. In DJ-1 knock-out (DJ-1-/-) mice the production of fecal calprotectin and MCP-1 inflammatory proteins were elevated. Fecal and serum metabolic profile showed that malonate which influences the immune system was significantly more abundant in DJ-1-/- mice. DJ-1 appeared also to be involved in ILCs development. Further, inflammatory genes related to PD were augmented in the midbrain of DJ-1-/- mice. Our data suggest that metabolites and inflammation produced in the gut could be used as biomarkers for PD detection. Perhaps, these metabolites and inflammatory mediators could be involved in triggering inflammation resulting in PD pathology.",
             "annotator": "expert_7"
         },
         "entities": [
@@ -11145,98 +11145,98 @@
             },
             {
                 "start_idx": 1055,
-                "end_idx": 1092,
+                "end_idx": 1083,
                 "location": "abstract",
-                "text_span": "DJ-1 knock-out (DJ-1$#-/-$#) mice",
+                "text_span": "DJ-1 knock-out (DJ-1-/-) mice",
                 "label": "animal"
             },
             {
-                "start_idx": 1112,
-                "end_idx": 1129,
+                "start_idx": 1103,
+                "end_idx": 1120,
                 "location": "abstract",
                 "text_span": "fecal calprotectin",
                 "label": "chemical"
             },
             {
-                "start_idx": 1135,
-                "end_idx": 1161,
+                "start_idx": 1126,
+                "end_idx": 1152,
                 "location": "abstract",
                 "text_span": "MCP-1 inflammatory proteins",
                 "label": "chemical"
             },
             {
-                "start_idx": 1224,
-                "end_idx": 1231,
+                "start_idx": 1215,
+                "end_idx": 1222,
                 "location": "abstract",
                 "text_span": "malonate",
                 "label": "chemical"
             },
             {
-                "start_idx": 1302,
-                "end_idx": 1323,
+                "start_idx": 1294,
+                "end_idx": 1305,
                 "location": "abstract",
-                "text_span": "DJ-1$#-/-$# mice",
+                "text_span": "DJ-1-/- mice",
                 "label": "animal"
             },
             {
-                "start_idx": 1326,
-                "end_idx": 1329,
+                "start_idx": 1308,
+                "end_idx": 1311,
                 "location": "abstract",
                 "text_span": "DJ-1",
                 "label": "chemical"
             },
             {
-                "start_idx": 1390,
-                "end_idx": 1407,
+                "start_idx": 1372,
+                "end_idx": 1389,
                 "location": "abstract",
                 "text_span": "inflammatory genes",
                 "label": "gene"
             },
             {
-                "start_idx": 1420,
-                "end_idx": 1421,
+                "start_idx": 1402,
+                "end_idx": 1403,
                 "location": "abstract",
                 "text_span": "PD",
                 "label": "DDF"
             },
             {
-                "start_idx": 1445,
-                "end_idx": 1450,
+                "start_idx": 1427,
+                "end_idx": 1434,
                 "location": "abstract",
                 "text_span": "midbrain",
                 "label": "anatomical location"
             },
             {
-                "start_idx": 1455,
-                "end_idx": 1477,
+                "start_idx": 1439,
+                "end_idx": 1450,
                 "location": "abstract",
-                "text_span": "DJ-1$#-/-$# mice",
+                "text_span": "DJ-1-/- mice",
                 "label": "animal"
             },
             {
-                "start_idx": 1518,
-                "end_idx": 1529,
+                "start_idx": 1491,
+                "end_idx": 1502,
                 "location": "abstract",
                 "text_span": "inflammation",
                 "label": "DDF"
             },
             {
-                "start_idx": 1547,
-                "end_idx": 1549,
+                "start_idx": 1520,
+                "end_idx": 1522,
                 "location": "abstract",
                 "text_span": "gut",
                 "label": "anatomical location"
             },
             {
-                "start_idx": 1683,
-                "end_idx": 1694,
+                "start_idx": 1656,
+                "end_idx": 1667,
                 "location": "abstract",
                 "text_span": "inflammation",
                 "label": "DDF"
             },
             {
-                "start_idx": 1715,
-                "end_idx": 1726,
+                "start_idx": 1682,
+                "end_idx": 1693,
                 "location": "abstract",
                 "text_span": "PD pathology",
                 "label": "DDF"
@@ -12523,11 +12523,11 @@
     },
     "32438623": {
         "metadata": {
-            "title": "Recipe for a Healthy Gut: Intake of Unpasteurised Milk Is Associated with Increased $#Lactobacillus$# Abundance in the Human Gut Microbiome.",
+            "title": "Recipe for a Healthy Gut: Intake of Unpasteurised Milk Is Associated with Increased Lactobacillus Abundance in the Human Gut Microbiome.",
             "author": "Mary I Butler; Thomaz F S Bastiaanssen; Caitriona Long-Smith; Kirsten Berding; Sabrina Morkl; Anne-Marie Cusack; Conall Strain; Kizkitza Busca; Penny Porteous-Allen; Marcus J Claesson; Catherine Stanton; John F Cryan; Darina Allen; Timothy G Dinan",
             "journal": "Nutrients",
             "year": "2020",
-            "abstract": "The gut microbiota plays a role in gut-brain communication and can influence psychological functioning. Diet is one of the major determinants of gut microbiota composition. The impact of unpasteurised dairy products on the microbiota is unknown. In this observational study, we investigated the effect of a dietary change involving intake of unpasteurised dairy on gut microbiome composition and psychological status in participants undertaking a residential 12-week cookery course on an organic farm. Twenty-four participants completed the study. The majority of food consumed during their stay originated from the organic farm itself and included unpasteurised milk and dairy products. At the beginning and end of the course, participants provided faecal samples and completed self-report questionnaires on a variety of parameters including mood, anxiety and sleep. Nutrient intake was monitored with a food frequency questionnaire. Gut microbiota analysis was performed with 16S rRNA gene sequencing. Additionally, faecal short chain fatty acids (SCFAs) were measured. Relative abundance of the genus $#Lactobacillus$# increased significantly between pre- and post-course time points. This increase was associated with participants intake of unpasteurised milk and dairy products. An increase in the faecal SCFA, valerate, was observed along with an increase in the functional richness of the microbiome profile, as determined by measuring the predictive neuroactive potential using a gut-brain module approach. While concerns in relation to safety need to be considered, intake of unpasteurised milk and dairy products appear to be associated with the growth of the probiotic bacterial genus, $#Lactobacillus$#, in the human gut. More research is needed on the effect of dietary changes on gut microbiome composition, in particular in relation to the promotion of bacterial genera, such as $#Lactobacillus$#, which are recognised as being beneficial for a range of physical and mental health outcomes.",
+            "abstract": "The gut microbiota plays a role in gut-brain communication and can influence psychological functioning. Diet is one of the major determinants of gut microbiota composition. The impact of unpasteurised dairy products on the microbiota is unknown. In this observational study, we investigated the effect of a dietary change involving intake of unpasteurised dairy on gut microbiome composition and psychological status in participants undertaking a residential 12-week cookery course on an organic farm. Twenty-four participants completed the study. The majority of food consumed during their stay originated from the organic farm itself and included unpasteurised milk and dairy products. At the beginning and end of the course, participants provided faecal samples and completed self-report questionnaires on a variety of parameters including mood, anxiety and sleep. Nutrient intake was monitored with a food frequency questionnaire. Gut microbiota analysis was performed with 16S rRNA gene sequencing. Additionally, faecal short chain fatty acids (SCFAs) were measured. Relative abundance of the genus Lactobacillus increased significantly between pre- and post-course time points. This increase was associated with participants intake of unpasteurised milk and dairy products. An increase in the faecal SCFA, valerate, was observed along with an increase in the functional richness of the microbiome profile, as determined by measuring the predictive neuroactive potential using a gut-brain module approach. While concerns in relation to safety need to be considered, intake of unpasteurised milk and dairy products appear to be associated with the growth of the probiotic bacterial genus, Lactobacillus, in the human gut. More research is needed on the effect of dietary changes on gut microbiome composition, in particular in relation to the promotion of bacterial genera, such as Lactobacillus, which are recognised as being beneficial for a range of physical and mental health outcomes.",
             "annotator": "expert_7"
         },
         "entities": [
@@ -12546,8 +12546,8 @@
                 "label": "food"
             },
             {
-                "start_idx": 120,
-                "end_idx": 141,
+                "start_idx": 115,
+                "end_idx": 134,
                 "location": "title",
                 "text_span": "Human Gut Microbiome",
                 "label": "microbiome"
@@ -12637,71 +12637,71 @@
                 "label": "chemical"
             },
             {
-                "start_idx": 1106,
-                "end_idx": 1117,
+                "start_idx": 1104,
+                "end_idx": 1116,
                 "location": "abstract",
                 "text_span": "Lactobacillus",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1246,
-                "end_idx": 1263,
+                "start_idx": 1241,
+                "end_idx": 1258,
                 "location": "abstract",
                 "text_span": "unpasteurised milk",
                 "label": "food"
             },
             {
-                "start_idx": 1269,
-                "end_idx": 1282,
+                "start_idx": 1264,
+                "end_idx": 1277,
                 "location": "abstract",
                 "text_span": "dairy products",
                 "label": "food"
             },
             {
-                "start_idx": 1304,
-                "end_idx": 1314,
+                "start_idx": 1299,
+                "end_idx": 1309,
                 "location": "abstract",
                 "text_span": "faecal SCFA",
                 "label": "chemical"
             },
             {
-                "start_idx": 1317,
-                "end_idx": 1324,
+                "start_idx": 1312,
+                "end_idx": 1319,
                 "location": "abstract",
                 "text_span": "valerate",
                 "label": "chemical"
             },
             {
-                "start_idx": 1586,
-                "end_idx": 1603,
+                "start_idx": 1581,
+                "end_idx": 1598,
                 "location": "abstract",
                 "text_span": "unpasteurised milk",
                 "label": "food"
             },
             {
-                "start_idx": 1609,
-                "end_idx": 1622,
+                "start_idx": 1604,
+                "end_idx": 1617,
                 "location": "abstract",
                 "text_span": "dairy products",
                 "label": "food"
             },
             {
-                "start_idx": 1700,
-                "end_idx": 1711,
+                "start_idx": 1693,
+                "end_idx": 1705,
                 "location": "abstract",
                 "text_span": "Lactobacillus",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1725,
-                "end_idx": 1733,
+                "start_idx": 1715,
+                "end_idx": 1723,
                 "location": "abstract",
                 "text_span": "human gut",
                 "label": "anatomical location"
             },
             {
-                "start_idx": 1898,
-                "end_idx": 1909,
+                "start_idx": 1886,
+                "end_idx": 1898,
                 "location": "abstract",
                 "text_span": "Lactobacillus",
                 "label": "bacteria"
@@ -12933,7 +12933,7 @@
             "author": "Per G Farup; Stian Lydersen; J\u00f8rgen Valeur",
             "journal": "Journal of obesity",
             "year": "2019",
-            "abstract": "Obesity has been associated with changes in the gut microbiota and its metabolites. The study explored changes in the faecal microbiota and short-chain fatty acids (SCFA) associated with the diet (including nonnutritive sweeteners (NNSs)) and evaluated metabolic consequences in subjects with morbid obesity. The diet was assessed with a validated food frequency questionnaire. One unit of NNSs was 100\u2009mL beverage with NNSs or 2 tablets/teaspoons of NNSs. The faecal microbiota was assessed with GA-map\u00ae dysbiosis test and SCFA with gas chromatography and flame ionisation detection. Fourteen men and 75 women with a mean age of 44.6 (SD 8.7) years, BMI 41.8 (SD 3.6) kg/m$#2$#, and intake of NNSs 7.5\u2009units/day (SD 3.2; range 0-43) were included. Faecal butyric acid was positively and negatively associated with the intake of starch (partial correlation\u2009=\u20090.264; $#p$#=0.015) and NNSs (partial correlation\u2009=\u2009-0.274; $#p$#=0.011), respectively. NNSs were associated with changes in four out of 39 bacterial groups. Butyric acid has antiobesogenic effects, reduces insulin resistance, and improves dyslipidaemia. Since the weight-reducing effect of NNSs on obese adults trying to lose weight is dubious, it seems imprudent to use NNSs that might counteract the favourable effects of butyric acid.",
+            "abstract": "Obesity has been associated with changes in the gut microbiota and its metabolites. The study explored changes in the faecal microbiota and short-chain fatty acids (SCFA) associated with the diet (including nonnutritive sweeteners (NNSs)) and evaluated metabolic consequences in subjects with morbid obesity. The diet was assessed with a validated food frequency questionnaire. One unit of NNSs was 100\u2009mL beverage with NNSs or 2 tablets/teaspoons of NNSs. The faecal microbiota was assessed with GA-map\u00ae dysbiosis test and SCFA with gas chromatography and flame ionisation detection. Fourteen men and 75 women with a mean age of 44.6 (SD 8.7) years, BMI 41.8 (SD 3.6) kg/m2, and intake of NNSs 7.5\u2009units/day (SD 3.2; range 0-43) were included. Faecal butyric acid was positively and negatively associated with the intake of starch (partial correlation\u2009=\u20090.264; p=0.015) and NNSs (partial correlation\u2009=\u2009-0.274; p=0.011), respectively. NNSs were associated with changes in four out of 39 bacterial groups. Butyric acid has antiobesogenic effects, reduces insulin resistance, and improves dyslipidaemia. Since the weight-reducing effect of NNSs on obese adults trying to lose weight is dubious, it seems imprudent to use NNSs that might counteract the favourable effects of butyric acid.",
             "annotator": "expert_7"
         },
         "entities": [
@@ -13099,92 +13099,92 @@
                 "label": "human"
             },
             {
-                "start_idx": 699,
-                "end_idx": 702,
+                "start_idx": 690,
+                "end_idx": 693,
                 "location": "abstract",
                 "text_span": "NNSs",
                 "label": "food"
             },
             {
-                "start_idx": 754,
-                "end_idx": 772,
+                "start_idx": 745,
+                "end_idx": 763,
                 "location": "abstract",
                 "text_span": "Faecal butyric acid",
                 "label": "chemical"
             },
             {
-                "start_idx": 834,
-                "end_idx": 839,
+                "start_idx": 825,
+                "end_idx": 830,
                 "location": "abstract",
                 "text_span": "starch",
                 "label": "food"
             },
             {
-                "start_idx": 889,
-                "end_idx": 892,
+                "start_idx": 875,
+                "end_idx": 878,
                 "location": "abstract",
                 "text_span": "NNSs",
                 "label": "food"
             },
             {
-                "start_idx": 954,
-                "end_idx": 957,
+                "start_idx": 935,
+                "end_idx": 938,
                 "location": "abstract",
                 "text_span": "NNSs",
                 "label": "food"
             },
             {
-                "start_idx": 1006,
-                "end_idx": 1021,
+                "start_idx": 987,
+                "end_idx": 1002,
                 "location": "abstract",
                 "text_span": "bacterial groups",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1024,
-                "end_idx": 1035,
+                "start_idx": 1005,
+                "end_idx": 1016,
                 "location": "abstract",
                 "text_span": "Butyric acid",
                 "label": "chemical"
             },
             {
-                "start_idx": 1073,
-                "end_idx": 1090,
+                "start_idx": 1054,
+                "end_idx": 1071,
                 "location": "abstract",
                 "text_span": "insulin resistance",
                 "label": "DDF"
             },
             {
-                "start_idx": 1106,
-                "end_idx": 1118,
+                "start_idx": 1087,
+                "end_idx": 1099,
                 "location": "abstract",
                 "text_span": "dyslipidaemia",
                 "label": "DDF"
             },
             {
-                "start_idx": 1157,
-                "end_idx": 1160,
+                "start_idx": 1138,
+                "end_idx": 1141,
                 "location": "abstract",
                 "text_span": "NNSs",
                 "label": "food"
             },
             {
-                "start_idx": 1165,
-                "end_idx": 1176,
+                "start_idx": 1146,
+                "end_idx": 1157,
                 "location": "abstract",
                 "text_span": "obese adults",
                 "label": "human"
             },
             {
-                "start_idx": 1238,
-                "end_idx": 1241,
+                "start_idx": 1219,
+                "end_idx": 1222,
                 "location": "abstract",
                 "text_span": "NNSs",
                 "label": "food"
             },
             {
-                "start_idx": 1297,
-                "end_idx": 1308,
+                "start_idx": 1272,
+                "end_idx": 1283,
                 "location": "abstract",
                 "text_span": "butyric acid",
                 "label": "chemical"
@@ -15259,7 +15259,7 @@
             "author": "Carolina Gubert; Geraldine Kong; Volkan Uzungil; Ariel M Zeleznikow-Johnston; Emma L Burrows; Thibault Renoir; Anthony J Hannan",
             "journal": "Frontiers in cell and developmental biology",
             "year": "2020",
-            "abstract": "Schizophrenia (SZ) is a psychiatric disorder that constitutes one of the top 10 global causes of disability. More recently, a potential pathogenic role for the gut microbial community (microbiota) has been highlighted, with numerous studies describing dysregulated microbial profiles in SZ patients when compared to healthy controls. However, no animal model of SZ has previously recapitulated the gut dysbiosis observed clinically. Since the metabotropic glutamate receptor 5 (mGlu5) knockout mice provide a preclinical model of SZ with strong face and predictive validity, in the present study we performed gut microbiome profiling of mGlu5 knockout (KO) and wild-type (WT) mice by 16S rRNA sequencing of bacterial genomic DNA from fecal samples, analyzing bacterial diversity and taxonomic composition, as well as gastrointestinal parameters as indicators of gut function. We found a significant genotype difference in microbial beta diversity. Analysis of composition of microbiomes (ANCOM) models were performed to evaluate microbiota compositions, which identified a decreased relative abundance of the $#Erysipelotrichaceae$# family and $#Allobaculum$# genus in this mouse model of SZ. We also identified a signature of bacteria discriminating between the genotypes (KO and WT), consisting of the Erysipelotrichales, Bacteroidales, and Clostridiales orders and macroscopic gut differences. We thus uncovered global differential community composition in the gut microbiota profile between mGlu5 KO and WT mice, outlining the first evidence for gut dysbiosis in a genetic animal model of SZ. Our findings suggest that this widely used preclinical model of SZ also has substantial utility for investigations of gut dysbiosis and associated signaling via the microbiota-gut-brain axis, as potential modulators of SZ pathogenesis. Our discovery opens up new avenues to explore gut dysbiosis and its proposed links to brain dysfunction in SZ, as well as novel therapeutic approaches to this devastating disorder.",
+            "abstract": "Schizophrenia (SZ) is a psychiatric disorder that constitutes one of the top 10 global causes of disability. More recently, a potential pathogenic role for the gut microbial community (microbiota) has been highlighted, with numerous studies describing dysregulated microbial profiles in SZ patients when compared to healthy controls. However, no animal model of SZ has previously recapitulated the gut dysbiosis observed clinically. Since the metabotropic glutamate receptor 5 (mGlu5) knockout mice provide a preclinical model of SZ with strong face and predictive validity, in the present study we performed gut microbiome profiling of mGlu5 knockout (KO) and wild-type (WT) mice by 16S rRNA sequencing of bacterial genomic DNA from fecal samples, analyzing bacterial diversity and taxonomic composition, as well as gastrointestinal parameters as indicators of gut function. We found a significant genotype difference in microbial beta diversity. Analysis of composition of microbiomes (ANCOM) models were performed to evaluate microbiota compositions, which identified a decreased relative abundance of the Erysipelotrichaceae family and Allobaculum genus in this mouse model of SZ. We also identified a signature of bacteria discriminating between the genotypes (KO and WT), consisting of the Erysipelotrichales, Bacteroidales, and Clostridiales orders and macroscopic gut differences. We thus uncovered global differential community composition in the gut microbiota profile between mGlu5 KO and WT mice, outlining the first evidence for gut dysbiosis in a genetic animal model of SZ. Our findings suggest that this widely used preclinical model of SZ also has substantial utility for investigations of gut dysbiosis and associated signaling via the microbiota-gut-brain axis, as potential modulators of SZ pathogenesis. Our discovery opens up new avenues to explore gut dysbiosis and its proposed links to brain dysfunction in SZ, as well as novel therapeutic approaches to this devastating disorder.",
             "annotator": "expert_4"
         },
         "entities": [
@@ -15369,106 +15369,106 @@
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 1108,
-                "end_idx": 1139,
+                "start_idx": 1109,
+                "end_idx": 1134,
                 "location": "abstract",
-                "text_span": "$#Erysipelotrichaceae$# family",
+                "text_span": "Erysipelotrichaceae family",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1144,
-                "end_idx": 1166,
+                "start_idx": 1140,
+                "end_idx": 1156,
                 "location": "abstract",
-                "text_span": "$#Allobaculum$# genus",
+                "text_span": "Allobaculum genus",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1191,
-                "end_idx": 1192,
+                "start_idx": 1181,
+                "end_idx": 1182,
                 "location": "abstract",
                 "text_span": "SZ",
                 "label": "DDF"
             },
             {
-                "start_idx": 1306,
-                "end_idx": 1323,
+                "start_idx": 1296,
+                "end_idx": 1313,
                 "location": "abstract",
                 "text_span": "Erysipelotrichales",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1326,
-                "end_idx": 1338,
+                "start_idx": 1316,
+                "end_idx": 1328,
                 "location": "abstract",
                 "text_span": "Bacteroidales",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1345,
-                "end_idx": 1357,
+                "start_idx": 1335,
+                "end_idx": 1347,
                 "location": "abstract",
                 "text_span": "Clostridiales",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1497,
-                "end_idx": 1516,
+                "start_idx": 1487,
+                "end_idx": 1506,
                 "location": "abstract",
                 "text_span": "mGlu5 KO and WT mice",
                 "label": "animal"
             },
             {
-                "start_idx": 1552,
-                "end_idx": 1564,
+                "start_idx": 1542,
+                "end_idx": 1554,
                 "location": "abstract",
                 "text_span": "gut dysbiosis",
                 "label": "DDF"
             },
             {
-                "start_idx": 1595,
-                "end_idx": 1596,
+                "start_idx": 1585,
+                "end_idx": 1586,
                 "location": "abstract",
                 "text_span": "SZ",
                 "label": "DDF"
             },
             {
-                "start_idx": 1663,
-                "end_idx": 1664,
+                "start_idx": 1653,
+                "end_idx": 1654,
                 "location": "abstract",
                 "text_span": "SZ",
                 "label": "DDF"
             },
             {
-                "start_idx": 1717,
-                "end_idx": 1729,
+                "start_idx": 1707,
+                "end_idx": 1719,
                 "location": "abstract",
                 "text_span": "gut dysbiosis",
                 "label": "DDF"
             },
             {
-                "start_idx": 1818,
-                "end_idx": 1819,
+                "start_idx": 1808,
+                "end_idx": 1809,
                 "location": "abstract",
                 "text_span": "SZ",
                 "label": "DDF"
             },
             {
-                "start_idx": 1881,
-                "end_idx": 1893,
+                "start_idx": 1871,
+                "end_idx": 1883,
                 "location": "abstract",
                 "text_span": "gut dysbiosis",
                 "label": "DDF"
             },
             {
-                "start_idx": 1921,
-                "end_idx": 1937,
+                "start_idx": 1911,
+                "end_idx": 1927,
                 "location": "abstract",
                 "text_span": "brain dysfunction",
                 "label": "DDF"
             },
             {
-                "start_idx": 1942,
-                "end_idx": 1943,
+                "start_idx": 1932,
+                "end_idx": 1933,
                 "location": "abstract",
                 "text_span": "SZ",
                 "label": "DDF"
