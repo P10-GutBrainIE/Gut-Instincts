@@ -1,0 +1,118 @@
+{
+    "remove": {
+        "34346706":[{
+            "start_idx": 374,
+            "end_idx": 378,
+            "location": "abstract",
+            "text_span": "- and",
+            "label": "human"
+        }],
+        "33005148":[{
+            "start_idx": 615,
+            "end_idx": 633,
+            "location": "abstract",
+            "text_span": "- and H-CPP) groups",
+            "label": "animal"
+        }],
+        "35610236":[{
+            "start_idx": 414,
+            "end_idx": 414,
+            "location": "abstract",
+            "text_span": ",",
+            "label": "biomedical technique"
+        }],
+        "35790976":[{
+            "start_idx": 815,
+            "end_idx": 815,
+            "location": "abstract",
+            "text_span": ",",
+            "label": "biomedical technique"
+        }],
+        "38385354":[{
+            "start_idx": 45,
+            "end_idx": 61,
+            "location": "abstract",
+            "text_span": ", and progressive",
+            "label": "DDF"
+        }],
+        "34053222":[{
+            "start_idx": 1231,
+            "end_idx": 1231,
+            "location": "abstract",
+            "text_span": "<",
+            "label": "chemical"
+            },
+        {
+            "start_idx": 1235,
+            "end_idx": 1235,
+            "location": "abstract",
+            "text_span": ">",
+            "label": "chemical"
+        }],
+        "38045052":[{
+            "start_idx": 1028,
+            "end_idx": 1048,
+            "location": "abstract",
+            "text_span": ">Sigmar1</i> knockout",
+            "label": "gene"
+        }],
+        "34654024":[{
+            "start_idx": 1613,
+            "end_idx": 1613,
+            "location": "abstract",
+            "text_span": "\"",
+            "label": "human"
+        }],
+        "33649989": [{
+            "start_idx": 30,
+            "end_idx": 37,
+            "location": "abstract",
+            "text_span": "chronic,",
+            "label": "DDF"
+        }]     
+    },
+
+    "clean": {
+        "38488556": [{
+            "start_idx": 652,
+            "end_idx": 669,
+            "location": "abstract",
+            "text_span": ", high-sugar diets",
+            "label": "food",
+            "correct_text_span": "High fat, high-sugar diets",
+            "correct_start_idx": 644,
+            "correct_end_idx":669
+        }],
+        "26810963": [{
+            "start_idx": 1102,
+            "end_idx": 1139,
+            "location": "abstract",
+            "text_span": ", soluble, insoluble, and cereal fiber",
+            "label": "dietary supplement",
+            "correct_text_span": "total, soluble, insoluble, and cereal fiber",
+            "correct_start_idx": 1097,
+            "correct_end_idx":1139
+        }],
+        "36139496": [{
+            "start_idx": 241,
+            "end_idx": 293,
+            "location": "abstract",
+            "text_span": ", placebo-controlled, double-blinded crossover design",
+            "label": "biomedical technique",
+            "correct_text_span": "randomized, placebo-controlled, double-blinded crossover design",
+            "correct_start_idx": 231,
+            "correct_end_idx":293
+        }],
+        "39002442": [{
+            "start_idx": 346,
+            "end_idx": 369,
+            "location": "abstract",
+            "text_span": ",5-bisphosphate 3-kinase",
+            "label": "chemical",
+            "correct_text_span": "phosphatidylinositol-4,5-bisphosphate 3-kinase",
+            "correct_start_idx": 324,
+            "correct_end_idx": 369
+        }]
+
+    }
+}
