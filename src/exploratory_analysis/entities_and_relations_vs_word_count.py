@@ -26,13 +26,14 @@ def extract_data(file_paths: str) -> pd.DataFrame:
 	df = pd.DataFrame(data)
 
 	df = df[df["paper_length"] <= 900]
-	# df = df[df["relations"] <= 60]
 	return df
 
 
-def entities_per_document(df: pd.DataFrame, save_path: str = os.path.join("plots", "entities_per_document.png")):
+def entities_and_relations_vs_word_count(
+	df: pd.DataFrame, save_path: str = os.path.join("plots", "entities_and_relations_vs_word_count.png")
+):
 	sns.set_theme(style="ticks")
-	_, axes = plt.subplots(2, 1, figsize=(14, 7))
+	_, axes = plt.subplots(1, 2, figsize=(14, 7))
 	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=0.7)[::-1]
 
 	sns.scatterplot(
@@ -46,17 +47,8 @@ def entities_per_document(df: pd.DataFrame, save_path: str = os.path.join("plots
 		ax=axes[0],
 		legend=False,
 	)
-	# sns.regplot(
-	# 	data=df,
-	# 	x="paper_length",
-	# 	y="entities",
-	# 	scatter=False,
-	# 	color="blue",
-	# 	ax=axes[0],
-	# 	line_kws={"linewidth": 1, "alpha": 1},
-	# )
-	axes[0].set_xlabel("Paper length (in words)", fontsize=14)
-	axes[0].set_ylabel("Number of entities", fontsize=14)
+	axes[0].set_xlabel("Word Count", fontsize=14)
+	axes[0].set_ylabel("Number of Entities", fontsize=14)
 
 	sns.scatterplot(
 		x=df["paper_length"],
@@ -69,22 +61,13 @@ def entities_per_document(df: pd.DataFrame, save_path: str = os.path.join("plots
 		ax=axes[1],
 		legend=False,
 	)
-	# sns.regplot(
-	# 	data=df,
-	# 	x="paper_length",
-	# 	y="relations",
-	# 	scatter=False,
-	# 	color="blue",
-	# 	ax=axes[1],
-	# 	line_kws={"linewidth": 1, "alpha": 1},
-	# )
-	axes[1].set_xlabel("Paper length (in words)", fontsize=14)
-	axes[1].set_ylabel("Number of relations", fontsize=14)
+	axes[1].set_xlabel("Word Count", fontsize=14)
+	axes[1].set_ylabel("Number of Relations", fontsize=14)
 
 	unique_qualities = df["quality"].unique()
 	handles = [Patch(color=palette[i], label=quality) for i, quality in enumerate(unique_qualities)]
 	handles.reverse()
-	axes[0].legend(handles=handles, title="Quality", loc="upper right", fontsize=12, title_fontsize=14)
+	axes[1].legend(handles=handles, title="Quality", loc="upper right", fontsize=12, title_fontsize=14)
 
 	sns.despine()
 	plt.tight_layout(pad=1.3)
@@ -121,5 +104,4 @@ if __name__ == "__main__":
 	}
 
 	data = extract_data(file_paths)
-	entities_per_document(df=data)
-	create_pairplot(df=data)
+	entities_and_relations_vs_word_count(df=data)
