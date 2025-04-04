@@ -1,8 +1,8 @@
-experiment_name: "biomedBert_finetuning"
-model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+experiment_name: "BioLinkBert-large"
+model_name: "michiyasunaga/BioLinkBERT-large"
 training_data_path: "data_preprocessed/training.pkl"
 validation_data_path: "data_preprocessed/validation.pkl"
 hyperparameters:
-  num_epochs: 1
+  num_epochs: 3
   batch_size: 16
   learning_rate: 0.00002

@@ -1,25 +1,19 @@
 import os
 import json
 import logging
-from transformers import pipeline, AutoTokenizer
-from utils.utils import load_json_data
-from dotenv import load_dotenv
-from huggingface_hub import login
-
-load_dotenv()
-HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
-login(HUGGING_FACE_TOKEN)
+from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
+from utils.utils import load_json_data, load_bio_labels
 
 
 class NERInference:
-	def __init__(self, test_data_path: str, model_name: str, save_path: str):
+	def __init__(self, test_data_path: str, model_name_path: str, save_path: str):
 		self.test_data = load_json_data(test_data_path)
-		tokenizer = AutoTokenizer.from_pretrained(
-			"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
-			use_fast=True,
-			model_max_length=512,
+		label_list, label2id, id2label = load_bio_labels()
+		model = AutoModelForTokenClassification.from_pretrained(
+			model_name_path, num_labels=len(label_list), id2label=id2label, label2id=label2id
 		)
-		self.classifier = pipeline("ner", model=model_name, tokenizer=tokenizer)
+		tokenizer = AutoTokenizer.from_pretrained(model_name_path, use_fast=True)
+		self.classifier = pipeline("ner", model=model, tokenizer=tokenizer)
 		self.save_path = save_path
 
 	def perform_inference(self):
@@ -76,7 +70,7 @@ class NERInference:
 if __name__ == "__main__":
 	ner_inference = NERInference(
 		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name="And3rsen/GutBrainIE_NER_v0",
-		save_path="data_inference_results/ner.json",
+		model_name_path=os.path.join("models", "model_name"),
+		save_path=os.path.join("data_inference_results", "ner.json"),
 	)
 	ner_inference.perform_inference()

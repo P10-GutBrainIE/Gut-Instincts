@@ -16,12 +16,6 @@ from utils.utils import load_bio_labels, load_pkl_data
 
 
 def training(config):
-	if torch.cuda.is_available():
-		print("Device count:", torch.cuda.device_count())
-		print("CUDA is available. GPU:", torch.cuda.get_device_name(0))
-	else:
-		print("CUDA is not available.")
-
 	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
 
 	training_data = load_pkl_data(config["training_data_path"])
@@ -64,7 +58,7 @@ def training(config):
 		per_device_train_batch_size=config["hyperparameters"]["batch_size"],
 		per_device_eval_batch_size=config["hyperparameters"]["batch_size"],
 		num_train_epochs=config["hyperparameters"]["num_epochs"],
-		output_dir=os.path.join("models", config["model_name"]),
+		output_dir=os.path.join("models", config["experiment_name"]),
 		weight_decay=0.01,
 		logging_strategy="epoch",
 		eval_strategy="epoch",
@@ -89,10 +83,19 @@ def training(config):
 
 
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
-	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
-	args = parser.parse_args()
+	if torch.cuda.is_available():
+		print("Device count:", torch.cuda.device_count())
+		print("CUDA is available. GPU:", torch.cuda.get_device_name(0))
 
-	with open(args.config, "r") as file:
-		config = yaml.safe_load(file)
-		training(config)
+		parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
+		parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
+		args = parser.parse_args()
+
+		with open(args.config, "r") as file:
+			config = yaml.safe_load(file)
+			os.makedirs("models", exist_ok=True)
+			training(config)
+
+	else:
+		print("CUDA is not available.")
+		exit()
