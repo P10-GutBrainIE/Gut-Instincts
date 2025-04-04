@@ -2,7 +2,7 @@ import json
 import os
 
 # DEFINE HERE THE PATH(S) TO YOUR PREDICTIONS
-PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", "ner.json")
+PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", "ensemble_logits.json")
 PREDICTIONS_PATH_6_2 = "org_T621_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"

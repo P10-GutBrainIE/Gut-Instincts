@@ -15,7 +15,7 @@ class NERInference:
 	def __init__(self, test_data_path: str, model_name: str, save_path: str):
 		self.test_data = load_json_data(test_data_path)
 		tokenizer = AutoTokenizer.from_pretrained(
-			"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext",
+			model_name,
 			use_fast=True,
 			model_max_length=512,
 		)
@@ -76,7 +76,7 @@ class NERInference:
 if __name__ == "__main__":
 	ner_inference = NERInference(
 		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name="And3rsen/GutBrainIE_NER_v0",
-		save_path="data_inference_results/ner.json",
+		model_name="ihlen/scibert_scivocab_uncased_NER",
+		save_path="data_inference_results/ner-scibert.json",
 	)
 	ner_inference.perform_inference()

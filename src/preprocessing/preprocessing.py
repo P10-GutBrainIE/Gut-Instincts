@@ -205,14 +205,24 @@ class Preprocessor:
 
 
 if __name__ == "__main__":
-	shared_path = "data_preprocessed"
+	import argparse
+
+	parser = argparse.ArgumentParser()
+	parser.add_argument("--model_name", type=str, required=True)
+	args = parser.parse_args()
+
 	file_paths = [
-		os.path.join(shared_path, "platinum_html_removed.json"),
-		os.path.join(shared_path, "gold_html_removed.json"),
-		os.path.join(shared_path, "silver_html_removed.json"),
+		os.path.join("data_preprocessed", "platinum_html_removed.json"),
+		os.path.join("data_preprocessed", "gold_html_removed.json"),
+		os.path.join("data_preprocessed", "silver_html_removed.json"),
 	]
 
-	tokenizer = AutoTokenizer.from_pretrained("michiyasunaga/BioLinkBERT-large", use_fast=True)
+	tokenizer = AutoTokenizer.from_pretrained(args.model_name, use_fast=True)
 
-	preprocessor = Preprocessor(file_paths, os.path.join("data_preprocessed"), tokenizer)
+	# Save preprocessed data in a folder named after the model
+	model_folder_name = args.model_name.split("/")[-1]
+	save_path = os.path.join("data_preprocessed", model_folder_name)
+
+	preprocessor = Preprocessor(file_paths, save_path, tokenizer)
 	preprocessor.process_files()
+
