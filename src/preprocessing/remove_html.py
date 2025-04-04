@@ -65,8 +65,26 @@ def remove_html(
 						entity["text_span"] = re.sub(
 							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), entity["text_span"]
 						)
+					for relation in content["relations"]:
+						relation["subject_text_span"] = re.sub(
+							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), relation["subject_text_span"]
+						)
+						relation["object_text_span"] = re.sub(
+							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), relation["object_text_span"]
+						)
+					for ternary_relation in content["ternary_mention_based_relations"]:
+						ternary_relation["subject_text_span"] = re.sub(
+							r"</?[^>]+>",
+							lambda m: replacement_char * len(m.group(0)),
+							ternary_relation["subject_text_span"],
+						)
+						ternary_relation["object_text_span"] = re.sub(
+							r"</?[^>]+>",
+							lambda m: replacement_char * len(m.group(0)),
+							ternary_relation["object_text_span"],
+						)
 
-				logger.info("Adjusting entity indices...")
+				logger.info("Adjusting entity and relation indices...")
 				for _, content in file_data.items():
 					for text_type in ["title", "abstract"]:
 						replacement_char_counter = 0
@@ -81,7 +99,21 @@ def remove_html(
 										entity["start_idx"] -= replacement_char_counter
 								if i == entity["end_idx"] and entity["location"] == text_type:
 									entity["end_idx"] -= replacement_char_counter
-
+							for relation in content["relations"]:
+								for relation_type in ["subject", "object"]:
+									if (
+										i == relation[f"{relation_type}_start_idx"]
+										and relation[f"{relation_type}_location"] == text_type
+									):
+										if c == "$":
+											relation[f"{relation_type}_start_idx"] -= replacement_char_counter - 1
+										else:
+											relation[f"{relation_type}_start_idx"] -= replacement_char_counter
+									if (
+										i == relation[f"{relation_type}_end_idx"]
+										and relation[f"{relation_type}_location"] == text_type
+									):
+										relation[f"{relation_type}_end_idx"] -= replacement_char_counter
 				logger.info("Cleaning up replacement characters from text fields...")
 				for _, content in file_data.items():
 					for text_type in ["title", "abstract"]:
@@ -91,6 +123,20 @@ def remove_html(
 
 					for entity in content["entities"]:
 						entity["text_span"] = re.sub(rf"{re.escape(replacement_char)}+", "", entity["text_span"])
+					for relation in content["relations"]:
+						relation["subject_text_span"] = re.sub(
+							rf"{re.escape(replacement_char)}+", "", relation["subject_text_span"]
+						)
+						relation["object_text_span"] = re.sub(
+							rf"{re.escape(replacement_char)}+", "", relation["object_text_span"]
+						)
+					for ternary_relation in content["ternary_mention_based_relations"]:
+						ternary_relation["subject_text_span"] = re.sub(
+							rf"{re.escape(replacement_char)}+", "", ternary_relation["subject_text_span"]
+						)
+						ternary_relation["object_text_span"] = re.sub(
+							rf"{re.escape(replacement_char)}+", "", ternary_relation["object_text_span"]
+						)
 
 				all_file_data[key] = file_data
 				logger.info(f"Processing for file {file_path} completed successfully.")
