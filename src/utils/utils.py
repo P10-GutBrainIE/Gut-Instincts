@@ -41,7 +41,9 @@ def load_entity_labels(file_path: str = os.path.join("data", "metadata", "entity
 	return labels
 
 
-def load_label_distribution(file_path: str = os.path.join("data", "metadata", "entity_label_distribution.json")) -> dict:
+def load_label_distribution(
+	file_path: str = os.path.join("data", "metadata", "entity_label_distribution.json"),
+) -> dict:
 	"""
 	Load the label distribution from the specified path.
 
@@ -86,19 +88,20 @@ def load_json_data(file_path: str) -> dict:
 		data = json.load(f)
 	return data
 
+
 def save_json_data(data: dict, output_filename: str):
-    """
-    Save data to a JSON file.
+	"""
+	Save data to a JSON file.
 
-    Args:
-        data (dict): The data to be saved.
-        output_filename (str): The name of the output JSON file.
-    """
-    output_dir = "data_preprocessed"
-    os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, output_filename)
+	Args:
+	    data (dict): The data to be saved.
+	    output_filename (str): The name of the output JSON file.
+	"""
+	output_dir = "data_preprocessed"
+	os.makedirs(output_dir, exist_ok=True)
+	output_path = os.path.join(output_dir, output_filename)
 
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
+	with open(output_path, "w", encoding="utf-8") as f:
+		json.dump(data, f, indent=4, ensure_ascii=False)
 
-    print(f"Data successfully saved to {output_path}")
+	print(f"Data successfully saved to {output_path}")
