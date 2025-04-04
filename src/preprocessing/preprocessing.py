@@ -212,7 +212,9 @@ if __name__ == "__main__":
 		os.path.join(shared_path, "silver_html_removed.json"),
 	]
 
-	tokenizer = AutoTokenizer.from_pretrained("michiyasunaga/BioLinkBERT-large", use_fast=True)
+	tokenizer = AutoTokenizer.from_pretrained(
+		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
+	)
 
 	preprocessor = Preprocessor(file_paths, os.path.join("data_preprocessed"), tokenizer)
 	preprocessor.process_files()

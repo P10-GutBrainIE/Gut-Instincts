@@ -1,6 +1,9 @@
+import argparse
+import yaml
 import os
+import mlflow
 import numpy as np
-import evaluate
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from transformers import (
 	AutoTokenizer,
 	AutoModelForTokenClassification,
@@ -8,69 +11,65 @@ from transformers import (
 	TrainingArguments,
 	Trainer,
 )
-import mlflow
+import torch
 from utils.utils import load_bio_labels, load_pkl_data
-# from dotenv import load_dotenv
-# from huggingface_hub import login
-
-# load_dotenv()
-# HUGGING_FACE_TOKEN = os.getenv("HUGGING_FACE_TOKEN")
-# login(HUGGING_FACE_TOKEN)
-
-label_list, label2id, id2label = load_bio_labels()
-
-training_data = load_pkl_data(os.path.join("data_preprocessed", "training.pkl"))
-validation_data = load_pkl_data(os.path.join("data_preprocessed", "validation.pkl"))
-
-MODEL_NAME = "michiyasunaga/BioLinkBERT-large"
-
-model = AutoModelForTokenClassification.from_pretrained(MODEL_NAME, num_labels=27, id2label=id2label, label2id=label2id)
-
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, use_fast=True)
-
-data_collator = DataCollatorForTokenClassification(tokenizer)
-
-seqeval = evaluate.load("seqeval")
 
 
-def compute_metrics(p):
-	predictions, labels = p
-	predictions = np.argmax(predictions, axis=2)
+def training(config):
+	if torch.cuda.is_available():
+		print("Device count:", torch.cuda.device_count())
+		print("CUDA is available. GPU:", torch.cuda.get_device_name(0))
+	else:
+		print("CUDA is not available.")
 
-	true_predictions = [
-		[label_list[p] for (p, la) in zip(prediction, label) if la != -100]
-		for prediction, label in zip(predictions, labels)
-	]
-	true_labels = [
-		[label_list[la] for (_, la) in zip(prediction, label) if la != -100]
-		for prediction, label in zip(predictions, labels)
-	]
+	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
 
-	results = seqeval.compute(predictions=true_predictions, references=true_labels)
-	return {
-		"precision": results["overall_precision"],
-		"recall": results["overall_recall"],
-		"f1": results["overall_f1"],
-		"accuracy": results["overall_accuracy"],
-	}
+	training_data = load_pkl_data(config["training_data_path"])
+	validation_data = load_pkl_data(config["validation_data_path"])
 
+	label_list, label2id, id2label = load_bio_labels()
+	model = AutoModelForTokenClassification.from_pretrained(
+		config["model_name"], num_labels=len(label_list), id2label=id2label, label2id=label2id
+	)
+	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
+	data_collator = DataCollatorForTokenClassification(tokenizer)
 
-with mlflow.start_run():
-	mlflow.log_param("learning_rate", 2e-5)
-	mlflow.log_param("batch_size", 16)
-	mlflow.log_param("num_epochs", 5)
-	mlflow.log_param("model_name", MODEL_NAME)
+	def _compute_metrics(p):
+		predictions, labels = p
+		predictions = np.argmax(predictions, axis=2)
+
+		true_predictions = [p for pred, lbl in zip(predictions, labels) for p, la in zip(pred, lbl) if la != -100]
+		true_labels = [la for pred, lbl in zip(predictions, labels) for _, la in zip(pred, lbl) if la != -100]
+
+		precision_micro, recall_micro, f1_micro, _ = precision_recall_fscore_support(
+			true_labels, true_predictions, average="micro"
+		)
+		precision_macro, recall_macro, f1_macro, _ = precision_recall_fscore_support(
+			true_labels, true_predictions, average="macro"
+		)
+		accuracy = accuracy_score(true_labels, true_predictions)
+
+		return {
+			"accuracy": accuracy,
+			"precision_micro": precision_micro,
+			"recall_micro": recall_micro,
+			"f1_micro": f1_micro,
+			"precision_macro": precision_macro,
+			"recall_macro": recall_macro,
+			"f1_macro": f1_macro,
+		}
 
 	training_args = TrainingArguments(
-		output_dir="GutBrainIE_NER_v0",
-		learning_rate=2e-5,
-		per_device_train_batch_size=16,
-		per_device_eval_batch_size=16,
-		num_train_epochs=5,
+		learning_rate=config["hyperparameters"]["learning_rate"],
+		per_device_train_batch_size=config["hyperparameters"]["batch_size"],
+		per_device_eval_batch_size=config["hyperparameters"]["batch_size"],
+		num_train_epochs=config["hyperparameters"]["num_epochs"],
+		output_dir=os.path.join("models", config["model_name"]),
 		weight_decay=0.01,
+		logging_strategy="epoch",
 		eval_strategy="epoch",
 		save_strategy="epoch",
-		load_best_model_at_end=True,
+		metric_for_best_model="f1_micro",
 		push_to_hub=False,
 	)
 
@@ -81,20 +80,19 @@ with mlflow.start_run():
 		eval_dataset=validation_data,
 		processing_class=tokenizer,
 		data_collator=data_collator,
-		compute_metrics=compute_metrics,
+		compute_metrics=_compute_metrics,
 	)
 
 	trainer.train()
 
-	eval_results = trainer.evaluate(validation_data)
-	mlflow.log_metrics(
-		{
-			"eval_loss": eval_results["eval_loss"],
-			"eval_accuracy": eval_results["eval_accuracy"],
-			"eval_f1": eval_results["eval_f1"],
-			"eval_precision": eval_results["eval_precision"],
-			"eval_recall": eval_results["eval_recall"],
-		}
-	)
+	mlflow.end_run()
 
-	mlflow.pytorch.log_model(model, "model")
+
+if __name__ == "__main__":
+	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
+	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
+	args = parser.parse_args()
+
+	with open(args.config, "r") as file:
+		config = yaml.safe_load(file)
+		training(config)
