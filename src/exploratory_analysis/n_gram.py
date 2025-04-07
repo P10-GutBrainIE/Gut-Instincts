@@ -107,7 +107,7 @@ def plot_n_gram(df: pd.DataFrame, save_path: str = os.path.join("plots", "unigra
 	plt.close()
 
 
-def plot_n_gram_sublpots(
+def plot_n_gram_subplots(
 	unigram: pd.DataFrame,
 	bigram: pd.DataFrame,
 	trigram: pd.DataFrame,
@@ -200,6 +200,6 @@ if __name__ == "__main__":
 	plot_n_gram(df=unigram, save_path=os.path.join("plots", "unigram_per_label.pdf"))
 	plot_n_gram(df=bigram, save_path=os.path.join("plots", "bigram_per_label.pdf"))
 	plot_n_gram(df=trigram, save_path=os.path.join("plots", "trigram_per_label.pdf"))
-	plot_n_gram_sublpots(
+	plot_n_gram_subplots(
 		unigram=unigram, bigram=bigram, trigram=trigram, save_path=os.path.join("plots", "n_gram_subplot.pdf")
 	)
