@@ -86,7 +86,9 @@ def training(config):
 		model.train()
 		total_loss = 0
 		for batch in train_loader:
-			batch = {k: v.to(device) for k, v in batch.items()}
+			for k, v in batch.items():
+				if isinstance(v, torch.tensor()):
+					batch[k] = v.to(device)
 			outputs = model(**batch)
 			loss = outputs.loss
 			loss.backward()
