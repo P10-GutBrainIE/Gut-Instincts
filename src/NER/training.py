@@ -43,11 +43,11 @@ def training(config):
 	validation_dataset = CustomDataset(validation_data)
 
 	train_loader = torch.utils.data.DataLoader(
-		training_dataset, batch_size=1, shuffle=True, pin_memory=True
+		training_dataset, batch_size=2, shuffle=True, pin_memory=True
 	)
 
 	for b in train_loader:
-		print(b)
+		print(type(b))
 		exit()
 
 	val_loader = torch.utils.data.DataLoader(
