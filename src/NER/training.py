@@ -41,7 +41,7 @@ def training(config):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
-	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+	device = torch.device("cuda")
 	model.to(device)
 
 	training_dataset = CustomDataset(training_data)
