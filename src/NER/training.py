@@ -21,7 +21,6 @@ class CustomDataset(torch.utils.data.Dataset):
 
 	def __getitem__(self, idx):
 		sample = self.data[idx]
-		sample.pop("words")
 		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long)
 		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long)
 		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long)
