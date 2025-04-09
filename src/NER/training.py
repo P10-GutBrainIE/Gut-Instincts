@@ -87,7 +87,7 @@ def training(config):
 		total_loss = 0
 		for batch in train_loader:
 			for k, v in batch.items():
-				if isinstance(v, torch.tensor()):
+				if isinstance(v, torch.Tensor):
 					batch[k] = v.to(device)
 			outputs = model(**batch)
 			loss = outputs.loss
@@ -105,7 +105,7 @@ def training(config):
 			for batch in val_loader:
 				labels = batch["labels"].cpu().numpy()
 				for k, v in batch.items():
-					if isinstance(v, torch.tensor()):
+					if isinstance(v, torch.Tensor):
 						batch[k] = v.to(device)
 				outputs = model(**batch)
 				logits = outputs.logits.detach().cpu().numpy()
