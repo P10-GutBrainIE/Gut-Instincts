@@ -1,3 +1,4 @@
+import copy
 import json
 import os
 import re
@@ -7,10 +8,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 
-# Should be expanded to also update text_spans in relations and ternary_mention_based_relations
-def remove_html(
-	file_paths_dict: list[dict], replacement_char: str = "$", save_data: bool = False
-) -> None | dict[str, list]:
+def remove_html(data: dict, replacement_char: str = "$", save_filename: str = None) -> None | dict:
 	"""
 	Remove HTML tags and adjust entity text span indices.
 
@@ -42,133 +40,93 @@ def remove_html(
 	                  the value is the processed JSON content. If save_data is True, the processed files are saved
 	                  to disk and the function returns None.
 	"""
-	logger.info("Starting HTML removal and entity adjustment.")
-	all_file_data = {list(file_path.keys())[0]: {} for file_path in file_paths_dict}
+	logger.info("Starting HTML removal...")
+	try:
+		logger.info(f"Replacing HTML with replacement char: {replacement_char}...")
+		for _, content in data.items():
+			for text_type in ["title", "abstract"]:
+				logger.debug(f"Replacing HTML tags in {text_type}...")
+				content["metadata"][text_type] = re.sub(
+					r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), content["metadata"][text_type]
+				)
 
-	for file_path_element in file_paths_dict:
-		key, file_path = file_path_element.popitem()
-		logger.info(f"Processing file: {file_path} with key: {key}")
-
-		try:
-			with open(file_path, "r", encoding="utf-8") as f:
-				file_data = json.load(f)
-				logger.info(f"Loaded data from {file_path}. Processing entities and text fields.")
-
-				for _, content in file_data.items():
-					for text_type in ["title", "abstract"]:
-						logger.debug(f"Replacing HTML tags in {text_type}...")
-						content["metadata"][text_type] = re.sub(
-							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), content["metadata"][text_type]
+			for type in ["entities", "relations", "ternary_mention_based_relations"]:
+				for object in content[type]:
+					if type == "entities":
+						object["text_span"] = re.sub(
+							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), object["text_span"]
+						)
+					else:
+						object["subject_text_span"] = re.sub(
+							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), object["subject_text_span"]
+						)
+						object["object_text_span"] = re.sub(
+							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), object["object_text_span"]
 						)
 
+		logger.info("Adjusting entity and relation indices...")
+		for _, content in data.items():
+			for text_type in ["title", "abstract"]:
+				replacement_char_counter = 0
+				for i, c in enumerate(content["metadata"][text_type]):
+					if c == "$":
+						replacement_char_counter += 1
 					for entity in content["entities"]:
-						entity["text_span"] = re.sub(
-							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), entity["text_span"]
-						)
-					for relation in content["relations"]:
-						relation["subject_text_span"] = re.sub(
-							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), relation["subject_text_span"]
-						)
-						relation["object_text_span"] = re.sub(
-							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), relation["object_text_span"]
-						)
-					for ternary_relation in content["ternary_mention_based_relations"]:
-						ternary_relation["subject_text_span"] = re.sub(
-							r"</?[^>]+>",
-							lambda m: replacement_char * len(m.group(0)),
-							ternary_relation["subject_text_span"],
-						)
-						ternary_relation["object_text_span"] = re.sub(
-							r"</?[^>]+>",
-							lambda m: replacement_char * len(m.group(0)),
-							ternary_relation["object_text_span"],
-						)
-
-				logger.info("Adjusting entity and relation indices...")
-				for _, content in file_data.items():
-					for text_type in ["title", "abstract"]:
-						replacement_char_counter = 0
-						for i, c in enumerate(content["metadata"][text_type]):
+						if i == entity["start_idx"] and entity["location"] == text_type:
 							if c == "$":
-								replacement_char_counter += 1
-							for entity in content["entities"]:
-								if i == entity["start_idx"] and entity["location"] == text_type:
-									if c == "$":
-										entity["start_idx"] -= replacement_char_counter - 1
-									else:
-										entity["start_idx"] -= replacement_char_counter
-								if i == entity["end_idx"] and entity["location"] == text_type:
-									entity["end_idx"] -= replacement_char_counter
-							for relation in content["relations"]:
-								for relation_type in ["subject", "object"]:
-									if (
-										i == relation[f"{relation_type}_start_idx"]
-										and relation[f"{relation_type}_location"] == text_type
-									):
-										if c == "$":
-											relation[f"{relation_type}_start_idx"] -= replacement_char_counter - 1
-										else:
-											relation[f"{relation_type}_start_idx"] -= replacement_char_counter
-									if (
-										i == relation[f"{relation_type}_end_idx"]
-										and relation[f"{relation_type}_location"] == text_type
-									):
-										relation[f"{relation_type}_end_idx"] -= replacement_char_counter
-				logger.info("Cleaning up replacement characters from text fields...")
-				for _, content in file_data.items():
-					for text_type in ["title", "abstract"]:
-						content["metadata"][text_type] = re.sub(
-							rf"{re.escape(replacement_char)}+", "", content["metadata"][text_type]
-						)
-
-					for entity in content["entities"]:
-						entity["text_span"] = re.sub(rf"{re.escape(replacement_char)}+", "", entity["text_span"])
+								entity["start_idx"] -= replacement_char_counter - 1
+							else:
+								entity["start_idx"] -= replacement_char_counter
+						if i == entity["end_idx"] and entity["location"] == text_type:
+							entity["end_idx"] -= replacement_char_counter
 					for relation in content["relations"]:
-						relation["subject_text_span"] = re.sub(
-							rf"{re.escape(replacement_char)}+", "", relation["subject_text_span"]
+						for relation_type in ["subject", "object"]:
+							if (
+								i == relation[f"{relation_type}_start_idx"]
+								and relation[f"{relation_type}_location"] == text_type
+							):
+								if c == "$":
+									relation[f"{relation_type}_start_idx"] -= replacement_char_counter - 1
+								else:
+									relation[f"{relation_type}_start_idx"] -= replacement_char_counter
+							if (
+								i == relation[f"{relation_type}_end_idx"]
+								and relation[f"{relation_type}_location"] == text_type
+							):
+								relation[f"{relation_type}_end_idx"] -= replacement_char_counter
+
+		logger.info("Cleaning up replacement characters from text fields...")
+		for _, content in data.items():
+			for text_type in ["title", "abstract"]:
+				content["metadata"][text_type] = re.sub(
+					rf"{re.escape(replacement_char)}+", "", content["metadata"][text_type]
+				)
+
+			for type in ["entities", "relations", "ternary_mention_based_relations"]:
+				for object in content[type]:
+					if type == "entities":
+						object["text_span"] = re.sub(rf"{re.escape(replacement_char)}+", "", object["text_span"])
+					else:
+						object["subject_text_span"] = re.sub(
+							rf"{re.escape(replacement_char)}+", "", object["subject_text_span"]
 						)
-						relation["object_text_span"] = re.sub(
-							rf"{re.escape(replacement_char)}+", "", relation["object_text_span"]
-						)
-					for ternary_relation in content["ternary_mention_based_relations"]:
-						ternary_relation["subject_text_span"] = re.sub(
-							rf"{re.escape(replacement_char)}+", "", ternary_relation["subject_text_span"]
-						)
-						ternary_relation["object_text_span"] = re.sub(
-							rf"{re.escape(replacement_char)}+", "", ternary_relation["object_text_span"]
+						object["object_text_span"] = re.sub(
+							rf"{re.escape(replacement_char)}+", "", object["object_text_span"]
 						)
 
-				all_file_data[key] = file_data
-				logger.info(f"Processing for file {file_path} completed successfully.")
+	except Exception as e:
+		logger.error(f"Error processing file: {e}")
 
-		except Exception as e:
-			logger.error(f"Error processing file {file_path}: {e}")
-			continue
-
-	if save_data:
+	if save_filename:
 		logger.info("Saving processed data...")
 		os.makedirs("data_preprocessed", exist_ok=True)
-		for key, data in all_file_data.items():
-			output_file_path = os.path.join("data_preprocessed", f"{key}_html_removed.json")
-			try:
-				with open(output_file_path, "w", encoding="utf-8") as f:
-					json.dump(data, f, indent=4)
-				logger.info(f"Data saved to {output_file_path}")
-			except Exception as e:
-				logger.error(f"Error saving file {output_file_path}: {e}")
+		output_file_path = os.path.join("data_preprocessed", f"{save_filename}")
+		try:
+			with open(output_file_path, "w", encoding="utf-8") as f:
+				json.dump(data, f, indent=4)
+			logger.info(f"Data saved to {output_file_path}")
+		except Exception as e:
+			logger.error(f"Error saving file {output_file_path}: {e}")
 	else:
 		logger.info("Returning processed data.")
-		return all_file_data
-
-
-if __name__ == "__main__":
-	shared_path = os.path.join("data", "Annotations", "Train")
-	file_paths_dict = [
-		{"platinum": os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json")},
-		{"gold": os.path.join(shared_path, "gold_quality", "json_format", "train_gold.json")},
-		{"silver": os.path.join(shared_path, "silver_quality", "json_format", "train_silver.json")},
-		{"bronze": os.path.join(shared_path, "bronze_quality", "json_format", "train_bronze.json")},
-		{"dev": os.path.join("data", "Annotations", "Dev", "json_format", "dev.json")},
-	]
-
-	remove_html(file_paths_dict, save_data=True)
+		return data

@@ -84,7 +84,6 @@ def training(config):
 
 		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f}")
 
-		# Validation loop
 		model.eval()
 		all_preds = []
 		all_labels = []
@@ -102,7 +101,6 @@ def training(config):
 
 		mlflow.log_metrics(metrics, step=epoch)
 
-		# Save best model
 		if metrics["f1_micro"] > best_f1:
 			best_f1 = metrics["f1_micro"]
 			output_dir = os.path.join("models", config["experiment_name"])

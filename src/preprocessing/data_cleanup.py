@@ -211,8 +211,12 @@ if __name__ == "__main__":
 	# Bronze cleaning pipeline example
 	bronze_data = load_json_data(bronze_path)
 	bronze_corrections = load_json_data(bronze_corrections_path)
-	bronze_data = remove_incorrect_text_spans(bronze_data, bronze_corrections.get("remove", {}), check_ternary_relations=True)
-	bronze_data = clean_incorrect_text_spans(bronze_data, bronze_corrections.get("clean", {}), check_ternary_relations=True)
+	bronze_data = remove_incorrect_text_spans(
+		bronze_data, bronze_corrections.get("remove", {}), check_ternary_relations=True
+	)
+	bronze_data = clean_incorrect_text_spans(
+		bronze_data, bronze_corrections.get("clean", {}), check_ternary_relations=True
+	)
 	bronze_data = remove_documents_over_or_under_threshold(bronze_data, 1, "relations", "under")
 	save_json_data(bronze_data, "cleaned_bronze_data.json")
 

@@ -19,6 +19,30 @@
                 "text_span": "<i>John</><sup>2</sup>",
                 "label": "test"
             }
+        ],
+        "relations": [
+            {
+                "subject_start_idx": 4,
+                "subject_end_idx": 7,
+                "subject_location": "title",
+                "subject_text_span": "This",
+                "subject_label": "microbiome",
+                "predicate": "is a",
+                "object_start_idx": 31,
+                "object_end_idx": 33,
+                "object_location": "title",
+                "object_text_span": "tag",
+                "object_label": "DDF"
+            }
+        ],
+        "ternary_mention_based_relations": [
+            {
+                "subject_text_span": "This",
+                "subject_label": "microbiome",
+                "predicate": "is a",
+                "object_text_span": "tag",
+                "object_label": "DDF"
+            }
         ]
     },
     "paper_id_no_html": {
@@ -33,6 +57,30 @@
                 "location": "title",
                 "text_span": "plain",
                 "label": "plain"
+            }
+        ],
+        "relations": [
+            {
+                "subject_start_idx": 0,
+                "subject_end_idx": 3,
+                "subject_location": "title",
+                "subject_text_span": "This",
+                "subject_label": "microbiome",
+                "predicate": "is a",
+                "object_start_idx": 10,
+                "object_end_idx": 19,
+                "object_location": "title",
+                "object_text_span": "plain text",
+                "object_label": "DDF"
+            }
+        ],
+        "ternary_mention_based_relations": [
+            {
+                "subject_text_span": "This",
+                "subject_label": "microbiome",
+                "predicate": "is a",
+                "object_text_span": "plain text",
+                "object_label": "DDF"
             }
         ]
     }
