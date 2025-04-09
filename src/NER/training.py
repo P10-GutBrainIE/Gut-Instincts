@@ -48,6 +48,8 @@ def training(config):
 
 	for b in train_loader:
 		print(type(b))
+		print(b.keys())
+		print(len(b.items()))
 		exit()
 
 	val_loader = torch.utils.data.DataLoader(
