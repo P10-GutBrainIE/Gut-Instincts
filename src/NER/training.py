@@ -20,7 +20,11 @@ class CustomDataset(torch.utils.data.Dataset):
 		return len(self.data)
 
 	def __getitem__(self, idx):
-		return self.data[idx]
+		sample = self.data[idx]
+		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long)
+		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long)
+		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long)
+		return sample
 
 
 def training(config):
@@ -42,15 +46,9 @@ def training(config):
 	training_dataset = CustomDataset(training_data)
 	validation_dataset = CustomDataset(validation_data)
 
-	train_loader = torch.utils.data.DataLoader(training_dataset, batch_size=2, shuffle=True, pin_memory=True)
-
-	for b in train_loader:
-		print(type(b))
-		print(b.keys())
-		for i in b.items():
-			print(type(i))
-		exit()
-
+	train_loader = torch.utils.data.DataLoader(
+		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
+	)
 	val_loader = torch.utils.data.DataLoader(
 		validation_dataset,
 		batch_size=config["hyperparameters"]["batch_size"],
@@ -104,7 +102,9 @@ def training(config):
 		with torch.no_grad():
 			for batch in val_loader:
 				labels = batch["labels"].cpu().numpy()
-				batch = {k: v.to(device) for k, v in batch.items()}
+				for k, v in batch.items():
+					if isinstance(v, torch.tensor()):
+						batch[k] = v.to(device)
 				outputs = model(**batch)
 				logits = outputs.logits.detach().cpu().numpy()
 				all_preds.extend(logits)
