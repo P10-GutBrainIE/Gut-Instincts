@@ -26,21 +26,32 @@ class NERInference:
 		result = {}
 		for paper_id, content in self.test_data.items():
 			entity_predictions = []
-
 			try:
 				title_predictions = self.classifier(content["metadata"]["title"])
 				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
-
 				abstract_predictions = self.classifier(content["metadata"]["abstract"])
 				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
-
+			
 				result[paper_id] = {"entities": entity_predictions}
 			except Exception as e:
 				logging.error(f"Error processing paper ID {paper_id}: {e}")
 
+		# low_confidence_results = {
+		# 	paper_id: {
+		# 		"entities": [
+		# 			entity for entity in data["entities"]
+		# 			if entity["score"] < 0.6
+		# 		]
+		# 	}
+		# 	for paper_id, data in result.items()
+		# 	if any(entity["score"] < 0.6 for entity in data["entities"])
+		# }
+
 		os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
 		with open(self.save_path, "w") as f:
 			json.dump(result, f, indent=4)
+		# with open("data_inference_results/kkk.json", "w") as f:
+		# 			json.dump(low_confidence_results, f, indent=4)
 
 	def _merge_entities(self, entities, location):
 		merged = []
@@ -59,6 +70,7 @@ class NERInference:
 					"location": location,
 					"text_span": word,
 					"label": label,
+					"score": float(entity["score"]),
 				}
 			else:
 				if entity["start"] == current_entity["end_idx"] + 1:
@@ -76,7 +88,7 @@ class NERInference:
 if __name__ == "__main__":
 	ner_inference = NERInference(
 		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name="ihlen/scibert_scivocab_uncased_NER",
-		save_path="data_inference_results/ner-scibert.json",
+		model_name="ihlen/BiomedNLP-BiomedBERT-large-uncased-abstract_NER",
+		save_path="data_inference_results/ner.json",
 	)
 	ner_inference.perform_inference()

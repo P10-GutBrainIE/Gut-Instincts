@@ -80,46 +80,33 @@ class LogitEnsembleNER:
 			offset_mapping = encoding["offset_mapping"][0].tolist()
 
 			with torch.no_grad():
-				logits = model(input_ids=input_ids, attention_mask=attention_mask).logits.squeeze(0)
-				probs = softmax(logits, dim=-1).cpu().numpy()
-
-			for i, (start, end) in enumerate(offset_mapping):
-				#if end != 0:
-					#print(f"start: {start}, end: {end} | text: '{text[start:end]}'")
-				if start == end or (start == 0 and end == 0):
-					continue
-				for label_id, score in enumerate(probs[i]):
-					label = self.id2label[label_id]
-					token_span_scores[(start, end)][label].append(score)
-					
-					if location == "abstract" and start == 326 and flag == False:
-						flag = True
-						span_token = text[start:end]
-						top_scores = sorted(
-                            [(self.id2label[lid], float(probs[i][lid])) for lid in range(len(probs[i]))],
-                            key=lambda x: x[1],
-                            reverse=True
-                        )[:5]
-						
-						logging.info(f"🔍 Span [{start}–{end}] ('{span_token}') in abstract — Model: {model.config._name_or_path}")
-						for lbl, sc in top_scores:
-							logging.info(f"{lbl:>15}: {sc:.4f}")
-
-			#print("\nprediction scores: ", token_span_scores[(26, 31)])
-			#exit()
+				logits = model(input_ids=input_ids, attention_mask=attention_mask).logits.squeeze(0).cpu().numpy()
+				for i, (start, end) in enumerate(offset_mapping):
+					if start == end or (start == 0 and end == 0):
+						continue
+					for label_id, logit in enumerate(logits[i]):
+						label = self.id2label[label_id]
+						token_span_scores[(start, end)][label].append(logit)
+				#probs = softmax(logits, dim=-1).cpu().numpy()
 
 		# Average scores across models
 		final_labels = {}
-		print("\n\nFinal labels:")
-		print("token_span_scores:", token_span_scores.keys())
+		#print("\n\nFinal labels:")
+		#print("token_span_scores:", token_span_scores.keys())
 		
 		for span, label_scores in token_span_scores.items():
+			avg_logits = np.array([np.mean(label_scores[label]) for label in self.label_list])
+			probs = softmax(torch.tensor(avg_logits), dim=-1).numpy()
+			best_label_id = int(np.argmax(probs))
+			best_label = self.id2label[best_label_id]
+			final_labels[span] = best_label
+			
 			#print (f"\nspan: {span}, \n  label_scores: {label_scores}")
 
-			avg_scores = {label: np.mean(scores) for label, scores in label_scores.items()}
+			#avg_scores = {label: np.mean(scores) for label, scores in label_scores.items()}
 			#print(f"\nspan: {span}, \n  avg_scores: {avg_scores}")
-			best_label = max(avg_scores.items(), key=lambda x: x[1])[0]
-			final_labels[span] = best_label       
+			#best_label = max(avg_scores.items(), key=lambda x: x[1])[0]
+			#final_labels[span] = best_label       
 		return self._merge_entities(final_labels, text, location)
 
 	def _merge_entities(self, final_labels, text, location):
@@ -144,9 +131,9 @@ class LogitEnsembleNER:
 				current_entity = {
 					"start_idx": start,
 					"end_idx": end - 1,
+					"location": location,
 					"text_span": word,
 					"label": entity_label,
-					"location": location,
 				}
 			else:
 				if start == current_entity["end_idx"] + 1:
