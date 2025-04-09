@@ -40,9 +40,11 @@ def training(config):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
-	for params in model.bert.embeddings.parameters():
-		print(f"\nParameter: {params}")
-		print(f"Requires Grad: {params.requires_grad}")
+	for param in model.bert.embeddings.parameters():
+		param.requires_grad = False
+	for name, param in model.named_parameters():
+		print(name, param.requires_grad)
+		
 	exit()
 
 	device = torch.device("cuda")
