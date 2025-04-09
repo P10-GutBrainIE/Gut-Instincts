@@ -25,7 +25,7 @@ class BIOTokenizer:
 
 	def __init__(
 		self,
-		file_paths: list[str],
+		datasets: list[dict],
 		save_path: str,
 		tokenizer: AutoTokenizer,
 		max_length: int = 512,
@@ -41,7 +41,7 @@ class BIOTokenizer:
 		    max_length (int, optional): Maximum length for tokenization. Defaults to 512.
 		    train_val_split (float, optional): Proportion of data to be used for training. Defaults to 0.9.
 		"""
-		self.file_paths = file_paths
+		self.datasets = datasets
 		self.save_path = save_path
 		self.tokenizer = tokenizer
 		self.max_length = max_length
@@ -60,17 +60,13 @@ class BIOTokenizer:
 		"""
 		logger.info("Starting to process files...")
 		processed_papers = []
-		for file_path in self.file_paths:
-			logger.info(f"Processing file: {file_path}")
-			with open(file_path, "r", encoding="utf-8") as f:
-				file_data = json.load(f)
+		for data in self.datasets:
+			all_data = []
+			for _, content in data.items():
+				processed_data = self._process_paper(content)
+				all_data.extend(processed_data)
 
-				all_data = []
-				for _, content in file_data.items():
-					processed_data = self._process_paper(content)
-					all_data.extend(processed_data)
-
-			processed_papers.append(all_data)
+		processed_papers.append(all_data)
 
 		logger.info("Files processed")
 		training_data, validation_data = self._train_val_split(processed_papers)
@@ -202,19 +198,3 @@ class BIOTokenizer:
 		with open(os.path.join(self.save_path, "validation.pkl"), "wb") as f:
 			pickle.dump(validation_data, f)
 			logger.info("Validation data saved to validation.pkl")
-
-
-if __name__ == "__main__":
-	shared_path = "data_preprocessed"
-	file_paths = [
-		os.path.join(shared_path, "platinum_html_removed.json"),
-		os.path.join(shared_path, "gold_html_removed.json"),
-		os.path.join(shared_path, "silver_html_removed.json"),
-	]
-
-	tokenizer = AutoTokenizer.from_pretrained("michiyasunaga/BioLinkBERT-large", use_fast=True)
-
-	preprocessor = BIOTokenizer(
-		file_paths=file_paths, save_path=os.path.join("data_preprocessed"), tokenizer=tokenizer, train_val_split=0.9
-	)
-	preprocessor.process_files()
