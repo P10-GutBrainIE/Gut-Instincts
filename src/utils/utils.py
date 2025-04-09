@@ -105,6 +105,3 @@ def save_json_data(data: dict, output_filename: str):
 		json.dump(data, f, indent=4, ensure_ascii=False)
 
 	print(f"Data successfully saved to {output_path}")
-
-
-print(load_pkl_data("data_preprocessed/training.pkl"))
