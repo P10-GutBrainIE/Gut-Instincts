@@ -25,7 +25,6 @@ def training(config):
 		config["model_name"], num_labels=len(label_list), id2label=id2label, label2id=label2id
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
-	data_collator = DataCollatorForTokenClassification(tokenizer)
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
@@ -34,13 +33,11 @@ def training(config):
 		training_data,
 		batch_size=config["hyperparameters"]["batch_size"],
 		shuffle=True,
-		collate_fn=data_collator,
 	)
 	val_loader = torch.utils.data.DataLoader(
 		validation_data,
 		batch_size=config["hyperparameters"]["batch_size"],
 		shuffle=False,
-		collate_fn=data_collator,
 	)
 
 	optimizer = torch.optim.AdamW(model.parameters(), lr=config["hyperparameters"]["learning_rate"])
