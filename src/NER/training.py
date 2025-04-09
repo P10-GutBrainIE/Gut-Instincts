@@ -43,6 +43,7 @@ def training(config):
 	for params in model.bert.embeddings.parameters():
 		print(f"\nParameter: {params}")
 		print(f"Requires Grad: {params.requires_grad}")
+	exit()
 
 	device = torch.device("cuda")
 	model.to(device)
