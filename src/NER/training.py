@@ -7,10 +7,20 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from transformers import (
 	AutoTokenizer,
 	AutoModelForTokenClassification,
-	DataCollatorForTokenClassification,
 )
 import torch
 from utils.utils import load_bio_labels, load_pkl_data
+
+
+class CustomDataset(torch.utils.data.Dataset):
+	def __init__(self, data):
+		self.data = data
+
+	def __len__(self):
+		return len(self.data)
+
+	def __getitem__(self, idx):
+		return self.data[idx]
 
 
 def training(config):
@@ -29,13 +39,14 @@ def training(config):
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
 
+	training_dataset = CustomDataset(training_data)
+	validation_dataset = CustomDataset(validation_data)
+
 	train_loader = torch.utils.data.DataLoader(
-		training_data,
-		batch_size=config["hyperparameters"]["batch_size"],
-		shuffle=True,
+		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
 	)
 	val_loader = torch.utils.data.DataLoader(
-		validation_data,
+		validation_dataset,
 		batch_size=config["hyperparameters"]["batch_size"],
 		shuffle=False,
 	)
