@@ -45,6 +45,8 @@ def training(config):
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
 	)
+	print(train_loader[0])
+	exit()
 	val_loader = torch.utils.data.DataLoader(
 		validation_dataset,
 		batch_size=config["hyperparameters"]["batch_size"],
