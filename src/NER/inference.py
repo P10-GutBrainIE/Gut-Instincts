@@ -63,7 +63,8 @@ class NERInference:
 					"label": label,
 				}
 			elif prefix == "I":
-				# Check if the current entity label is of the same type as the previous entity's label
+				# Check if the current entity label is of the same as the previous entity's label
+				# if not the same, then create a new entity
 				if current_entity is not None and current_entity["label"] == label:
 					if token_prediction["start"] == current_entity["end_idx"] + 1:
 						current_entity["text_span"] += word
