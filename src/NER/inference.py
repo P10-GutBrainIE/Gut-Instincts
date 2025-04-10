@@ -78,9 +78,9 @@ if __name__ == "__main__":
 		config = yaml.safe_load(file)
 		os.makedirs("models", exist_ok=True)
 
-		ner_inference = NERInference(
-			os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			model_name_path=os.path.join("models", f"{config['experiment_name'].split('/')[-1]}"),
-			save_path=os.path.join("data_inference_results", "ner1.json"),
-		)
-		ner_inference.perform_inference()
+	ner_inference = NERInference(
+		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+		model_name_path=os.path.join("models", f"{config['experiment_name']}"),
+		save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
+	)
+	ner_inference.perform_inference()
