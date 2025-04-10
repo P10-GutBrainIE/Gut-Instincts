@@ -27,7 +27,7 @@ class CustomDataset(torch.utils.data.Dataset):
 		return sample
 
 
-def training(config):
+def training(config, freeze: bool = False):
 	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
 
 	training_data = load_pkl_data(config["training_data_path"])
@@ -40,12 +40,15 @@ def training(config):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
-	for param in model.bert.embeddings.parameters():
-		param.requires_grad = False
+	# freezes embeddings and bottom 6 encoder layers
+	for name, param in model.base_model.named_parameters():
+		if any(layer in name for layer in [f'encoder.layer.{i}' for i in range(6)]) or 'embeddings' in name:
+			param.requires_grad = False
 	for name, param in model.named_parameters():
-		print(name, param.requires_grad)
-		
+		print(f"{name}: requires_grad={param.requires_grad}")
+
 	exit()
+
 
 	device = torch.device("cuda")
 	model.to(device)
@@ -148,7 +151,7 @@ if __name__ == "__main__":
 		with open(args.config, "r") as file:
 			config = yaml.safe_load(file)
 			os.makedirs("models", exist_ok=True)
-			training(config)
+			training(config, freeze = True) # TODO: add freeze parameter to config file
 
 	else:
 		print("CUDA is not available.")
