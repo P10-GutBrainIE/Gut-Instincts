@@ -44,20 +44,20 @@ class NERInference:
 		with open(self.save_path, "w") as f:
 			json.dump(result, f, indent=4)
 
-	def _merge_entities(self, entities, location):
+	def _merge_entities(self, token_predictions, location):
 		merged = []
 		current_entity = None
 
-		for entity in entities:
-			prefix, label = entity["entity"].split("-", 1)
-			word = entity["word"].replace("##", "")
+		for token_prediction in token_predictions:
+			prefix, label = token_prediction["entity"].split("-", 1)
+			word = token_prediction["word"].replace("##", "")
 
 			if prefix == "B":
 				if current_entity:
 					merged.append(current_entity)
 				current_entity = {
-					"start_idx": entity["start"],
-					"end_idx": entity["end"] - 1,
+					"start_idx": token_prediction["start"],
+					"end_idx": token_prediction["end"] - 1,
 					"location": location,
 					"text_span": word,
 					"label": label,
@@ -65,17 +65,17 @@ class NERInference:
 			elif prefix == "I":
 				# Check if the current entity label is of the same type as the previous entity's label
 				if current_entity is not None and current_entity["label"] == label:
-					if entity["start"] == current_entity["end_idx"] + 1:
+					if token_prediction["start"] == current_entity["end_idx"] + 1:
 						current_entity["text_span"] += word
 					else:
 						current_entity["text_span"] += " " + word
-					current_entity["end_idx"] = entity["end"] - 1
+					current_entity["end_idx"] = token_prediction["end"] - 1
 				else:
 					if current_entity is not None:
 						merged.append(current_entity)
 					current_entity = {
-						"start_idx": entity["start"],
-						"end_idx": entity["end"] - 1,
+						"start_idx": token_prediction["start"],
+						"end_idx": token_prediction["end"] - 1,
 						"location": location,
 						"text_span": word,
 						"label": label,
