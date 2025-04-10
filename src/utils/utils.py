@@ -89,19 +89,17 @@ def load_json_data(file_path: str) -> dict:
 	return data
 
 
-def save_json_data(data: dict, output_filename: str):
+def save_json_data(data: dict, output_path: str):
 	"""
 	Save data to a JSON file.
 
 	Args:
 	    data (dict): The data to be saved.
-	    output_filename (str): The name of the output JSON file.
+	    output_path (str): The path where the data will be saved. If the directory does not exist, it will be created.
 	"""
-	output_dir = "data_preprocessed"
-	os.makedirs(output_dir, exist_ok=True)
-	output_path = os.path.join(output_dir, output_filename)
+	output_dir = os.path.dirname(output_path)
+	if not os.path.exists(output_dir):
+		os.makedirs(output_dir)
 
 	with open(output_path, "w", encoding="utf-8") as f:
 		json.dump(data, f, indent=4, ensure_ascii=False)
-
-	print(f"Data successfully saved to {output_path}")
