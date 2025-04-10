@@ -3,6 +3,7 @@ model_name: "michiyasunaga/BioLinkBERT-large"
 training_data_path: "data_preprocessed/training.pkl"
 validation_data_path: "data_preprocessed/validation.pkl"
 hyperparameters:
-  num_epochs: 3
+  num_epochs: 12
   batch_size: 16
   learning_rate: 0.00002
+  freeze_model: true

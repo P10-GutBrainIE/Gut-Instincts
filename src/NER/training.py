@@ -26,6 +26,15 @@ class CustomDataset(torch.utils.data.Dataset):
 		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long)
 		return sample
 
+def switch_freeze_state_model_parameters(model):
+	# freezes embeddings and bottom 6 encoder layers
+	for name, param in model.base_model.named_parameters():
+		if any(layer in name for layer in [f'encoder.layer.{i}' for i in range(6)]) or 'embeddings' in name:
+			param.requires_grad = not param.requires_grad
+	
+	return model
+	
+
 
 def training(config, freeze: bool = False):
 	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
@@ -40,16 +49,8 @@ def training(config, freeze: bool = False):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
-	print("begin")
-	# freezes embeddings and bottom 6 encoder layers
-	for name, param in model.base_model.named_parameters():
-		if any(layer in name for layer in [f'encoder.layer.{i}' for i in range(6)]) or 'embeddings' in name:
-			param.requires_grad = False
-	for name, param in model.named_parameters():
-		print(f"{name}: requires_grad={param.requires_grad}")
-
-	exit()
-
+	if config["hyperparameters"]["freeze_model"]:
+		model = switch_freeze_state_model_parameters(model)
 
 	device = torch.device("cuda")
 	model.to(device)
@@ -95,6 +96,10 @@ def training(config, freeze: bool = False):
 
 	for epoch in range(num_epochs):
 		model.train()
+				
+		if epoch == num_epochs - 1 and config["hyperparameters"]["freeze_model"]:
+			model = switch_freeze_state_model_parameters(model)
+
 		total_loss = 0
 		for batch in train_loader:
 			for k, v in batch.items():
@@ -152,7 +157,7 @@ if __name__ == "__main__":
 		with open(args.config, "r") as file:
 			config = yaml.safe_load(file)
 			os.makedirs("models", exist_ok=True)
-			training(config, freeze = True) # TODO: add freeze parameter to config file
+			training(config)
 
 	else:
 		print("CUDA is not available.")
