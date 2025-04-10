@@ -80,7 +80,7 @@ if __name__ == "__main__":
 
 		ner_inference = NERInference(
 			os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			model_name_path=os.path.join("models", f"{config['model_name'].split('/')[-1]}", "model.safetensors"),
+			model_name_path=os.path.join("models", f"{config['model_name'].split('/')[-1]}"),
 			save_path=os.path.join("data_inference_results", "ner1.json"),
 		)
 		ner_inference.perform_inference()
