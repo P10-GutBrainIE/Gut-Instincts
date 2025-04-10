@@ -12,7 +12,7 @@ class NERInference:
 		self.test_data = load_json_data(test_data_path)
 		label_list, label2id, id2label = load_bio_labels()
 		model = AutoModelForTokenClassification.from_pretrained(
-			model_name_path, num_labels=len(label_list), id2label=id2label, label2id=label2id
+			model_name_path, num_labels=len(label_list), id2label=id2label, label2id=label2id, use_safetensors=True
 		)
 		tokenizer = AutoTokenizer.from_pretrained(model_name_path, use_fast=True)
 		self.classifier = pipeline("ner", model=model, tokenizer=tokenizer)
