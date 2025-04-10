@@ -1,8 +1,6 @@
 data/Annotations
 data/Articles
-data_inference_results/
 plots/
-mlruns/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
