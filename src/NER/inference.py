@@ -12,9 +12,15 @@ class NERInference:
 		self.test_data = load_json_data(test_data_path)
 		label_list, label2id, id2label = load_bio_labels()
 		model = AutoModelForTokenClassification.from_pretrained(
-			model_name_path, num_labels=len(label_list), id2label=id2label, label2id=label2id, use_safetensors=True
+			model_name_path,
+			num_labels=len(label_list),
+			id2label=id2label,
+			label2id=label2id,
+			use_safetensors=True,
 		)
-		tokenizer = AutoTokenizer.from_pretrained(model_name_path, use_fast=True)
+		tokenizer = AutoTokenizer.from_pretrained(
+			model_name_path, use_fast=True
+		)
 		self.classifier = pipeline("ner", model=model, tokenizer=tokenizer)
 		self.save_path = save_path
 
@@ -43,10 +49,10 @@ class NERInference:
 		current_entity = None
 
 		for entity in entities:
-			label = entity["entity"].split("-")[-1]
+			prefix, label = entity["entity"].split("-", 1)
 			word = entity["word"].replace("##", "")
 
-			if entity["entity"].startswith("B-") or current_entity is None:
+			if prefix == "B":
 				if current_entity:
 					merged.append(current_entity)
 				current_entity = {
@@ -56,12 +62,24 @@ class NERInference:
 					"text_span": word,
 					"label": label,
 				}
-			else:
-				if entity["start"] == current_entity["end_idx"] + 1:
-					current_entity["text_span"] += word
+			elif prefix == "I":
+				# Check if the current entity label is of the same type as the previous entity's label
+				if current_entity is not None and current_entity["label"] == label:
+					if entity["start"] == current_entity["end_idx"] + 1:
+						current_entity["text_span"] += word
+					else:
+						current_entity["text_span"] += " " + word
+					current_entity["end_idx"] = entity["end"] - 1
 				else:
-					current_entity["text_span"] += " " + word
-				current_entity["end_idx"] = entity["end"] - 1
+					if current_entity is not None:
+						merged.append(current_entity)
+					current_entity = {
+						"start_idx": entity["start"],
+						"end_idx": entity["end"] - 1,
+						"location": location,
+						"text_span": word,
+						"label": label,
+					}
 
 		if current_entity:
 			merged.append(current_entity)
