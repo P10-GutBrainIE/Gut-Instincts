@@ -40,6 +40,7 @@ def training(config, freeze: bool = False):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
+	print("begin")
 	# freezes embeddings and bottom 6 encoder layers
 	for name, param in model.base_model.named_parameters():
 		if any(layer in name for layer in [f'encoder.layer.{i}' for i in range(6)]) or 'embeddings' in name:
