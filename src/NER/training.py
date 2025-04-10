@@ -21,19 +21,19 @@ class CustomDataset(torch.utils.data.Dataset):
 
 	def __getitem__(self, idx):
 		sample = self.data[idx]
-		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long)
-		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long)
-		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long)
+		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long).clone().detach()
+		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long).clone().detach()
+		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long).clone().detach()
 		return sample
+
 
 def switch_freeze_state_model_parameters(model):
 	# freezes embeddings and bottom 6 encoder layers
 	for name, param in model.base_model.named_parameters():
-		if any(layer in name for layer in [f'encoder.layer.{i}' for i in range(6)]) or 'embeddings' in name:
+		if any(layer in name for layer in [f"encoder.layer.{i}" for i in range(6)]) or "embeddings" in name:
 			param.requires_grad = not param.requires_grad
-	
+
 	return model
-	
 
 
 def training(config, freeze: bool = False):
@@ -77,10 +77,10 @@ def training(config, freeze: bool = False):
 		true_labels = [la for pred, lbl in zip(predictions, labels) for _, la in zip(pred, lbl) if la != -100]
 
 		precision_micro, recall_micro, f1_micro, _ = precision_recall_fscore_support(
-			true_labels, true_predictions, average="micro"
+			true_labels, true_predictions, average="micro", zero_division=0
 		)
 		precision_macro, recall_macro, f1_macro, _ = precision_recall_fscore_support(
-			true_labels, true_predictions, average="macro"
+			true_labels, true_predictions, average="macro", zero_division=0
 		)
 		accuracy = accuracy_score(true_labels, true_predictions)
 
@@ -96,7 +96,7 @@ def training(config, freeze: bool = False):
 
 	for epoch in range(num_epochs):
 		model.train()
-				
+
 		if epoch == num_epochs - 1 and config["hyperparameters"]["freeze_model"]:
 			model = switch_freeze_state_model_parameters(model)
 
