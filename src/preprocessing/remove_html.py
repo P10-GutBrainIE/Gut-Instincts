@@ -41,10 +41,8 @@ def remove_html(data: dict, replacement_char: str = "$", save_filename: str = No
 	"""
 	logger.info("Starting HTML removal...")
 	try:
-		logger.info(f"Replacing HTML with replacement char: {replacement_char}...")
 		for _, content in data.items():
 			for text_type in ["title", "abstract"]:
-				logger.debug(f"Replacing HTML tags in {text_type}...")
 				content["metadata"][text_type] = re.sub(
 					r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), content["metadata"][text_type]
 				)
@@ -63,7 +61,6 @@ def remove_html(data: dict, replacement_char: str = "$", save_filename: str = No
 							r"</?[^>]+>", lambda m: replacement_char * len(m.group(0)), object["object_text_span"]
 						)
 
-		logger.info("Adjusting entity and relation indices...")
 		for _, content in data.items():
 			for text_type in ["title", "abstract"]:
 				replacement_char_counter = 0
@@ -94,7 +91,6 @@ def remove_html(data: dict, replacement_char: str = "$", save_filename: str = No
 							):
 								relation[f"{relation_type}_end_idx"] -= replacement_char_counter
 
-		logger.info("Cleaning up replacement characters from text fields...")
 		for _, content in data.items():
 			for text_type in ["title", "abstract"]:
 				content["metadata"][text_type] = re.sub(
@@ -117,7 +113,6 @@ def remove_html(data: dict, replacement_char: str = "$", save_filename: str = No
 		logger.error(f"Error processing file: {e}")
 
 	if save_filename:
-		logger.info("Saving processed data...")
 		os.makedirs("data_preprocessed", exist_ok=True)
 		output_file_path = os.path.join("data_preprocessed", f"{save_filename}")
 		try:
