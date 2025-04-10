@@ -9,8 +9,7 @@
 mkdir -p logs
 
 # ---------- BioLinkBERT ----------
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py 
---config training_configs/BioLinkBert-large.yaml > logs/biolink.out 2> logs/biolink.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/BioLinkBert-large.yaml > logs/biolink.out 2> logs/biolink.err
 
 
 
