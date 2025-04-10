@@ -1,6 +1,8 @@
 import os
 import json
 import logging
+import argparse
+import yaml
 from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
 from utils.utils import load_json_data, load_bio_labels
 
@@ -68,9 +70,17 @@ class NERInference:
 
 
 if __name__ == "__main__":
-	ner_inference = NERInference(
-		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name_path=os.path.join("models", "model_name"),
-		save_path=os.path.join("data_inference_results", "ner.json"),
-	)
-	ner_inference.perform_inference()
+	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
+	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
+	args = parser.parse_args()
+
+	with open(args.config, "r") as file:
+		config = yaml.safe_load(file)
+		os.makedirs("models", exist_ok=True)
+
+		ner_inference = NERInference(
+			os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			model_name_path=os.path.join("models", f"{config['model_name'].split('/')[-1]}"),
+			save_path=os.path.join("data_inference_results", "ner1.json"),
+		)
+		ner_inference.perform_inference()
