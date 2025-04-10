@@ -1,6 +1,5 @@
 import os
 import pickle
-import random
 import logging
 from transformers import AutoTokenizer
 from utils.utils import load_bio_labels
@@ -10,67 +9,35 @@ logger = logging.getLogger(__name__)
 
 
 class BIOTokenizer:
-	"""
-	Preprocess the paper titles and abstracts for NER training.
-
-	Attributes:
-	    file_paths (list[str]): List of file paths to the JSON files containing the paper data.
-	    save_path (str): Directory path where the processed data will be saved.
-	    tokenizer (AutoTokenizer): Tokenizer from the transformers library.
-	    max_length (int): Maximum length for tokenization.
-	    train_val_split (float): Proportion of data to be used for training.
-	    label2id (dict): Mapping from BIO labels to their corresponding IDs.
-	"""
-
 	def __init__(
 		self,
 		datasets: list[dict],
-		save_path: str,
+		save_filename: str,
 		tokenizer: AutoTokenizer,
 		max_length: int = 512,
-		train_val_split: float = 0.9,
 	):
-		"""
-		Initialize the Preprocessor with file paths, save path, tokenizer, and other configurations.
-
-		Args:
-		    file_paths (list[str]): List of file paths to the JSON files containing the paper data.
-		    save_path (str): Directory path where the processed data will be saved.
-		    tokenizer (AutoTokenizer): Tokenizer from the transformers library.
-		    max_length (int, optional): Maximum length for tokenization. Defaults to 512.
-		    train_val_split (float, optional): Proportion of data to be used for training. Defaults to 0.9.
-		"""
 		self.datasets = datasets
-		self.save_path = save_path
+		self.save_filename = save_filename
 		self.tokenizer = tokenizer
 		self.max_length = max_length
-		self.train_val_split = train_val_split
 		_, self.label2id, _ = load_bio_labels()
-		logger.info(
-			f"Preprocessor initialized with max_length={self.max_length}, train_val_split={self.train_val_split}"
-		)
 
 	def process_files(self):
 		"""
 		Load JSON files of papers and process each paper.
 
-		This method reads the JSON files, processes each paper's content, splits the data into training and validation sets,
-		and saves the processed data to pickle files.
+		This method reads the JSON files, processes each paper's content, and saves the processed data to a pickle file.
 		"""
 		logger.info("Starting to process files...")
-		processed_papers = []
 		for data in self.datasets:
 			all_data = []
 			for _, content in data.items():
 				processed_data = self._process_paper(content)
 				all_data.extend(processed_data)
 
-		processed_papers.append(all_data)
-
 		logger.info("Files processed")
-		training_data, validation_data = self._train_val_split(processed_papers)
 
-		self._save_to_pickle(training_data, validation_data)
+		self._save_to_pickle(all_data)
 
 	def _process_paper(self, content):
 		"""
@@ -153,32 +120,7 @@ class BIOTokenizer:
 				bio_tag_ids.append(self.label2id.get(tag, 0))
 		return bio_tag_ids, encoding["input_ids"], encoding["attention_mask"]
 
-	def _train_val_split(self, processed_papers):
-		"""
-		Split the data into training and validation sets.
-
-		Args:
-		    processed_papers (list[list[dict]]): List of processed papers.
-
-		Returns:
-		    tuple: A tuple containing training data and validation data.
-		"""
-		logger.info("Splitting data into training and validation sets...")
-		training_data = []
-		validation_data = []
-
-		for data in processed_papers:
-			random.shuffle(data)
-			split_index = int(len(data) * self.train_val_split)
-			training_data.extend(data[:split_index])
-			validation_data.extend(data[split_index:])
-
-		logger.info(
-			f"Data split complete. Training data size: {len(training_data)}, Validation data size: {len(validation_data)}"
-		)
-		return training_data, validation_data
-
-	def _save_to_pickle(self, training_data, validation_data):
+	def _save_to_pickle(self, data):
 		"""
 		Save the processed data to pickle files.
 
@@ -186,13 +128,9 @@ class BIOTokenizer:
 		    training_data (list[dict]): List of training data.
 		    validation_data (list[dict]): List of validation data.
 		"""
-		logger.info(f"Saving processed data to {self.save_path}...")
-		os.makedirs(self.save_path, exist_ok=True)
+		logger.info(f"Saving processed data to data_preprocessed/{self.save_filename}...")
+		os.makedirs("data_preprocessed", exist_ok=True)
 
-		with open(os.path.join(self.save_path, "training.pkl"), "wb") as f:
-			pickle.dump(training_data, f)
-			logger.info("Training data saved to training.pkl")
-
-		with open(os.path.join(self.save_path, "validation.pkl"), "wb") as f:
-			pickle.dump(validation_data, f)
-			logger.info("Validation data saved to validation.pkl")
+		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
+			pickle.dump(data, f)
+			logger.info(f"BIO tokenized data saved to {self.save_filename}. Data size: {len(data)}")
