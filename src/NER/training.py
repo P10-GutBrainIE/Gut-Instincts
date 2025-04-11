@@ -73,6 +73,12 @@ def training(config):
 	)
 
 	optimizer = torch.optim.AdamW(model.parameters(), lr=config["hyperparameters"]["learning_rate"])
+
+	if config["hyperparamters"]["lr_scheduler_factor"]:
+		scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+			optimizer, mode="min", factor=config["hyperparameters"]["learning_rate"], patience=2, verbose=True
+		)
+
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	best_f1 = 0.0
 
@@ -93,6 +99,10 @@ def training(config):
 			loss.backward()
 			optimizer.step()
 			optimizer.zero_grad()
+
+			if config["hyperparamters"]["lr_scheduler_factor"]:
+				scheduler.step(loss)
+
 			total_loss += loss.item()
 
 		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f}")
