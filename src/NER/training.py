@@ -105,7 +105,10 @@ def training(config):
 
 			total_loss += loss.item()
 
-		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f}")
+		current_lr = optimizer.param_groups[0]["lr"]
+		print(
+			f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f} | Learning rate: {current_lr:.6f}"
+		)
 
 		model.eval()
 		all_preds = []
@@ -122,7 +125,9 @@ def training(config):
 				all_labels.extend(labels)
 
 		metrics = compute_metrics(all_preds, all_labels)
-		print(f"Validation metrics (epoch {epoch + 1}): {metrics}")
+		print("Validation metrics:")
+		for key, value in metrics.items():
+			print(f"  {key:<15}: {value:.4f}")
 
 		mlflow.log_metrics(metrics, step=epoch)
 
