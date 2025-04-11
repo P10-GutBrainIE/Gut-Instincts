@@ -2,6 +2,8 @@ data/Annotations
 data/Articles
 plots/
 
+.VSCodeCounter/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
