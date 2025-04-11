@@ -31,6 +31,7 @@ class NERInference:
 
 			try:
 				title_predictions = self.classifier(content["metadata"]["title"])
+				print(f"Title predictions: {title_predictions}")
 				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
 
 				abstract_predictions = self.classifier(content["metadata"]["abstract"])
