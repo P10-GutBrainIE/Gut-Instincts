@@ -56,21 +56,10 @@ class BIOTokenizer:
 		"""
 		processed = []
 
-		if self.concatenate_title_abstract:
-			entities = [
-				{
-					**entity,
-					"start_idx": entity["start_idx"] + len(content["metadata"]["title"]) + 1,
-					"end_idx": entity["end_idx"] + len(content["metadata"]["title"]) + 1,
-				}
-				if entity["location"] == "abstract"
-				else entity
-				for entity in content["entities"]
-			]
+		text_lst, entities_lst = self._extract_entities(content)
 
-			bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(
-				f"{content['metadata']['title']} {content['metadata']['abstract']}", entities
-			)
+		for text, entities in zip(text_lst, entities_lst):
+			bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(text, entities)
 			processed.append(
 				{
 					"labels": bio_tag_ids,
@@ -78,19 +67,32 @@ class BIOTokenizer:
 					"attention_mask": attention_mask,
 				}
 			)
-		else:
-			for section in ["title", "abstract"]:
-				entities = [entity for entity in content["entities"] if entity["location"] == section]
-				bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(content["metadata"][section], entities)
-				processed.append(
-					{
-						"labels": bio_tag_ids,
-						"input_ids": input_ids,
-						"attention_mask": attention_mask,
-					}
-				)
 
 		return processed
+
+	def _extract_entities(self, content):
+		text_lst = []
+		entities_lst = []
+		if self.concatenate_title_abstract:
+			entities_lst.append(
+				[
+					{
+						**entity,
+						"start_idx": entity["start_idx"] + len(content["metadata"]["title"]) + 1,
+						"end_idx": entity["end_idx"] + len(content["metadata"]["title"]) + 1,
+					}
+					if entity["location"] == "abstract"
+					else entity
+					for entity in content["entities"]
+				]
+			)
+			text_lst.append(f"{content['metadata']['title']} {content['metadata']['abstract']}")
+		else:
+			for section in ["title", "abstract"]:
+				entities_lst.append([entity for entity in content["entities"] if entity["location"] == section])
+				text_lst.append(content["metadata"][section])
+
+		return text_lst, entities_lst
 
 	def _tokenize_with_bio(self, text, entities):
 		"""
@@ -153,12 +155,13 @@ if __name__ == "__main__":
 	data = load_json_data(os.path.join("tests", "test_data", "tokenization.json"))
 	# data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 	tokenizer = AutoTokenizer.from_pretrained("michiyasunaga/BioLinkBERT-large", use_fast=True)
-	bio_tokenizer = BIOTokenizer(datasets=[data], tokenizer=tokenizer, max_length=16, concatenate_title_abstract=False)
+	bio_tokenizer = BIOTokenizer(datasets=[data], tokenizer=tokenizer, max_length=32, concatenate_title_abstract=True)
 	processed_data = bio_tokenizer.process_files()
+	print(processed_data)
 
-	print(processed_data[0]["labels"])
+	# print(processed_data[0])
 
 	print(tokenizer.convert_ids_to_tokens(processed_data[0]["input_ids"]))
 
-	_, _, id2label = load_bio_labels()
-	print(id2label)
+	# _, _, id2label = load_bio_labels()
+	# print(id2label)
