@@ -100,7 +100,7 @@ def training(config):
 			optimizer.step()
 			optimizer.zero_grad()
 
-			if config["hyperparamters"]["lr_scheduler_factor"]:
+			if config["hyperparameters"]["lr_scheduler_factor"]:
 				scheduler.step(loss)
 
 			total_loss += loss.item()
