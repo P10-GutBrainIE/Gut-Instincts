@@ -1,4 +1,4 @@
-experiment_name: "Bob2"
+experiment_name: "Bob3"
 model_name: "michiyasunaga/BioLinkBERT-base"
 training_data_path: "data_preprocessed/Bob2/training.pkl"
 validation_data_path: "data_preprocessed/Bob2/validation.pkl"
