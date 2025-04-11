@@ -82,7 +82,7 @@ def training(config):
 			factor=config["hyperparameters"]["lr_scheduler_factor"],
 			patience=2,
 			threshold=0.001,
-			verbose=True,
+			verbose=False,
 		)
 
 	num_epochs = config["hyperparameters"]["num_epochs"]
@@ -110,11 +110,11 @@ def training(config):
 
 		if config["hyperparameters"]["lr_scheduler_factor"]:
 			scheduler.step(total_loss)
-			for param_group in optimizer.param_groups:
-				current_lr = param_group["lr"]
-				print(f"Current learning rate: {current_lr}")
+			current_lr = optimizer.param_groups[0]["lr"]
 
-		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f}")
+		print(
+			f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f} | Learning rate: {current_lr}"
+		)
 
 		model.eval()
 		all_preds = []
