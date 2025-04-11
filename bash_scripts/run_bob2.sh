@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=bob
+#SBATCH --job-name=bob2
 #SBATCH --mem=24G
 #SBATCH --cpus-per-task=15
 #SBATCH --gres=gpu:1
