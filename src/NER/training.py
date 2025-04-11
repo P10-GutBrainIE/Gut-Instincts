@@ -74,7 +74,7 @@ def training(config):
 
 	optimizer = torch.optim.AdamW(model.parameters(), lr=config["hyperparameters"]["learning_rate"])
 
-	if config["hyperparamters"]["lr_scheduler_factor"]:
+	if config["hyperparameters"]["lr_scheduler_factor"]:
 		scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
 			optimizer, mode="min", factor=config["hyperparameters"]["lr_scheduler_factor"], patience=2, verbose=True
 		)

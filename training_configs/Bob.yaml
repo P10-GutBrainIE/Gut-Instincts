@@ -1,7 +1,7 @@
 experiment_name: "Bob"
 model_name: "michiyasunaga/BioLinkBERT-large"
-training_data_path: "data_preprocessed/training.pkl"
-validation_data_path: "data_preprocessed/validation.pkl"
+training_data_path: "data_preprocessed/Bob/training.pkl"
+validation_data_path: "data_preprocessed/Bob/validation.pkl"
 hyperparameters:
   num_epochs: 32
   batch_size: 16
