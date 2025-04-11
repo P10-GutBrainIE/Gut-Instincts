@@ -170,4 +170,4 @@ if __name__ == "__main__":
 		model_name_path=os.path.join("models", f"{config['experiment_name']}"),
 		save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
 	)
-	ner_inference.perform_inference_concatenated()
+	ner_inference.perform_inference()
