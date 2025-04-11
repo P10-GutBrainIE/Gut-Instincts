@@ -1,5 +1,6 @@
 data/Annotations
 data/Articles
+models/
 plots/
 
 .VSCodeCounter/
