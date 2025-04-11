@@ -31,7 +31,6 @@ class NERInference:
 
 			try:
 				title_predictions = self.classifier(content["metadata"]["title"])
-				print(f"Title predictions: {title_predictions}")
 				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
 
 				abstract_predictions = self.classifier(content["metadata"]["abstract"])
@@ -44,6 +43,74 @@ class NERInference:
 		os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
 		with open(self.save_path, "w") as f:
 			json.dump(result, f, indent=4)
+
+	def perform_inference_concatenated(self):
+		result = {}
+		for paper_id, content in self.test_data.items():
+			text = content["metadata"]["title"] + ". " + content["metadata"]["abstract"]
+			entity_predictions = []
+
+			try:
+				text_predictions = self.classifier(text)
+				entity_predictions.extend(self._merge_entities_concatenated(text_predictions, len(content["metadata"]["title"])))
+
+				result[paper_id] = {"entities": entity_predictions}
+			except Exception as e:
+				logging.error(f"Error processing paper ID {paper_id}: {e}")
+
+		os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
+		with open(self.save_path, "w") as f:
+			json.dump(result, f, indent=4)
+
+	def _merge_entities_concatenated(self, token_predictions, title_length):
+		merged = []
+		current_entity = None
+
+		for token_prediction in token_predictions:
+			prefix, label = token_prediction["entity"].split("-", 1)
+			word = token_prediction["word"].replace("##", "")
+
+			start_idx = token_prediction["start"]
+			end_idx = token_prediction["end"] - 1
+			location = "title" if end_idx < title_length else "abstract"
+
+			# Adjust indices for abstract tokens
+			if location == "abstract":
+				start_idx -= title_length + 2
+				end_idx -= title_length + 2
+
+			if prefix == "B":
+				if current_entity:
+					merged.append(current_entity)
+				current_entity = {
+					"start_idx": start_idx,
+					"end_idx": end_idx,
+					"location": location,
+					"text_span": word,
+					"label": label,
+				}
+			elif prefix == "I":
+				if current_entity is not None and current_entity["label"] == label:
+					if start_idx == current_entity["end_idx"] + 1:
+						current_entity["text_span"] += word
+					else:
+						current_entity["text_span"] += " " + word
+					current_entity["end_idx"] = end_idx
+				else:
+					if current_entity:
+						merged.append(current_entity)
+					current_entity = {
+						"start_idx": start_idx,
+						"end_idx": end_idx,
+						"location": location,
+						"text_span": word,
+						"label": label,
+					}
+
+		if current_entity:
+			merged.append(current_entity)
+
+		return merged
 
 	def _merge_entities(self, token_predictions, location):
 		merged = []
@@ -103,4 +170,4 @@ if __name__ == "__main__":
 		model_name_path=os.path.join("models", f"{config['experiment_name']}"),
 		save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
 	)
-	ner_inference.perform_inference()
+	ner_inference.perform_inference_concatenated()
