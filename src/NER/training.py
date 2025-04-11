@@ -106,13 +106,13 @@ def training(config):
 			optimizer.step()
 			optimizer.zero_grad()
 
-			if config["hyperparameters"]["lr_scheduler_factor"]:
-				scheduler.step(loss)
-				for param_group in optimizer.param_groups:
-					current_lr = param_group["lr"]
-					print(f"Current learning rate: {current_lr}")
-
 			total_loss += loss.item()
+
+		if config["hyperparameters"]["lr_scheduler_factor"]:
+			scheduler.step(total_loss)
+			for param_group in optimizer.param_groups:
+				current_lr = param_group["lr"]
+				print(f"Current learning rate: {current_lr}")
 
 		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f}")
 
