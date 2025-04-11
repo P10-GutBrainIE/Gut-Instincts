@@ -2,17 +2,18 @@ import argparse
 import yaml
 import os
 import mlflow
-import numpy as np
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from transformers import (
 	AutoTokenizer,
 	AutoModelForTokenClassification,
 )
 import torch
 from utils.utils import load_bio_labels, load_pkl_data
+from NER.compute_metrics import compute_metrics
 import sys
+
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
+
 
 class CustomDataset(torch.utils.data.Dataset):
 	def __init__(self, data):
@@ -75,29 +76,6 @@ def training(config):
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	best_f1 = 0.0
 
-	def _compute_metrics(predictions, labels):
-		predictions = np.argmax(predictions, axis=2)
-		true_predictions = [p for pred, lbl in zip(predictions, labels) for p, la in zip(pred, lbl) if la != -100]
-		true_labels = [la for pred, lbl in zip(predictions, labels) for _, la in zip(pred, lbl) if la != -100]
-
-		precision_micro, recall_micro, f1_micro, _ = precision_recall_fscore_support(
-			true_labels, true_predictions, average="micro", zero_division=0
-		)
-		precision_macro, recall_macro, f1_macro, _ = precision_recall_fscore_support(
-			true_labels, true_predictions, average="macro", zero_division=0
-		)
-		accuracy = accuracy_score(true_labels, true_predictions)
-
-		return {
-			"accuracy": accuracy,
-			"precision_micro": precision_micro,
-			"recall_micro": recall_micro,
-			"f1_micro": f1_micro,
-			"precision_macro": precision_macro,
-			"recall_macro": recall_macro,
-			"f1_macro": f1_macro,
-		}
-
 	for epoch in range(num_epochs):
 		model.train()
 
@@ -133,7 +111,7 @@ def training(config):
 				all_preds.extend(logits)
 				all_labels.extend(labels)
 
-		metrics = _compute_metrics(all_preds, all_labels)
+		metrics = compute_metrics(all_preds, all_labels)
 		print(f"Validation metrics (epoch {epoch + 1}): {metrics}")
 
 		mlflow.log_metrics(metrics, step=epoch)

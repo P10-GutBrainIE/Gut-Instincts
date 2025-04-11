@@ -47,7 +47,7 @@ class NERInference:
 	def perform_inference_concatenated(self):
 		result = {}
 		for paper_id, content in self.test_data.items():
-			text = content["metadata"]["title"] + ". " + content["metadata"]["abstract"]
+			text = content["metadata"]["title"] + " " + content["metadata"]["abstract"]
 			entity_predictions = []
 
 			try:
@@ -76,8 +76,8 @@ class NERInference:
 
 			# Adjust indices for abstract tokens
 			if location == "abstract":
-				start_idx -= title_length + 2
-				end_idx -= title_length + 2
+				start_idx -= title_length + 1
+				end_idx -= title_length + 1
 
 			if prefix == "B":
 				if current_entity:
