@@ -12,14 +12,14 @@ class BIOTokenizer:
 	def __init__(
 		self,
 		datasets: list[dict],
-		save_filename: str,
 		tokenizer: AutoTokenizer,
+		save_filename: str = None,
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
 	):
 		self.datasets = datasets
-		self.save_filename = save_filename
 		self.tokenizer = tokenizer
+		self.save_filename = save_filename
 		self.max_length = max_length
 		self.concatenate_title_abstract = concatenate_title_abstract
 		_, self.label2id, _ = load_bio_labels()
@@ -39,7 +39,10 @@ class BIOTokenizer:
 
 		logger.info("Files processed")
 
-		self._save_to_pickle(all_data)
+		if self.save_filename:
+			self._save_to_pickle(all_data)
+		else:
+			return data
 
 	def _process_paper(self, content):
 		"""
