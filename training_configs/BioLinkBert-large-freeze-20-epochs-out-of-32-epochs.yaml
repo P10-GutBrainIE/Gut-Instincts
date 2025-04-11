@@ -1,9 +1,9 @@
-experiment_name: "BioLinkBert-large-freeze-8-epochs-out-of-16-epochs"
+experiment_name: "BioLinkBert-large-freeze-20-epochs-out-of-32-epochs"
 model_name: "michiyasunaga/BioLinkBERT-large"
 training_data_path: "data_preprocessed/training.pkl"
 validation_data_path: "data_preprocessed/validation.pkl"
 hyperparameters:
-  num_epochs: 16
+  num_epochs: 32
   batch_size: 16
   learning_rate: 0.00002
-  freeze_epochs: 8
+  freeze_epochs: 20
