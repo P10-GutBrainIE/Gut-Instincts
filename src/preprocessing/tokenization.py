@@ -57,8 +57,8 @@ class BIOTokenizer:
 			entities = [
 				{
 					**entity,
-					"start_idx": entity["start_idx"] + len(content["metadata"]["title"]) + 1,
-					"end_idx": entity["end_idx"] + len(content["metadata"]["title"]) + 1,
+					"start_idx": entity["start_idx"] + len(content["metadata"]["title"]) + 2,
+					"end_idx": entity["end_idx"] + len(content["metadata"]["title"]) + 2,
 				}
 				if entity["location"] == "abstract"
 				else entity
