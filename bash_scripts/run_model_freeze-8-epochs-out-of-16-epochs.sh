@@ -9,4 +9,4 @@
 mkdir -p logs
 
 # ---------- BioLinkBERT-large ----------
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/BioLinkBert-large-freeze-8-epochs-out-of-16-epochs.yaml > logs/biolink-freeze-8-epochs-out-of-16-epochs.out 2> logs/biolink-large-freeze-8-epochs-out-of-16-epochs.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/BioLinkBert-large-freeze-8-epochs-out-of-16-epochs.yaml > logs/biolink-large-freeze-8-epochs-out-of-16-epochs.out 2> logs/biolink-large-freeze-8-epochs-out-of-16-epochs.err
