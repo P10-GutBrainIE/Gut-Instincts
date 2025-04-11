@@ -42,7 +42,7 @@ class BIOTokenizer:
 		if self.save_filename:
 			self._save_to_pickle(all_data)
 		else:
-			return data
+			return all_data
 
 	def _process_paper(self, content):
 		"""
@@ -81,7 +81,7 @@ class BIOTokenizer:
 		else:
 			for section in ["title", "abstract"]:
 				entities = [entity for entity in content["entities"] if entity["location"] == section]
-				bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(content["metadata"][section])
+				bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(content["metadata"][section], entities)
 				processed.append(
 					{
 						"labels": bio_tag_ids,
@@ -145,3 +145,20 @@ class BIOTokenizer:
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"BIO tokenized data saved to {self.save_filename}. Data size: {len(data)}")
+
+
+if __name__ == "__main__":
+	from utils.utils import load_json_data, load_bio_labels
+
+	data = load_json_data(os.path.join("tests", "test_data", "tokenization.json"))
+	# data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
+	tokenizer = AutoTokenizer.from_pretrained("michiyasunaga/BioLinkBERT-large", use_fast=True)
+	bio_tokenizer = BIOTokenizer(datasets=[data], tokenizer=tokenizer, max_length=16, concatenate_title_abstract=False)
+	processed_data = bio_tokenizer.process_files()
+
+	print(processed_data[0]["labels"])
+
+	print(tokenizer.convert_ids_to_tokens(processed_data[0]["input_ids"]))
+
+	_, _, id2label = load_bio_labels()
+	print(id2label)

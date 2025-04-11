@@ -1,0 +1,52 @@
+{
+    "36532064": {
+        "metadata": {
+            "title": "Brain: Dog, cat, and human microbiome - Someweird-endings.",
+            "abstract": "Infectious agents   have been long considered to play a role. "
+        },
+        "entities": [
+            {
+                "start_idx": 7,
+                "end_idx": 9,
+                "location": "title",
+                "text_span": "Dog",
+                "label": "animal"
+            },
+            {
+                "start_idx": 27,
+                "end_idx": 36,
+                "location": "title",
+                "text_span": "microbiome",
+                "label": "microbiome"
+            },
+            {
+                "start_idx": 40,
+                "end_idx": 56,
+                "location": "title",
+                "text_span": "Someweird-endings",
+                "label": "gene"
+            },
+            {
+                "start_idx": 56,
+                "end_idx": 59,
+                "location": "abstract",
+                "text_span": "role",
+                "label": "biomedical technique"
+            },
+            {
+                "start_idx": 11,
+                "end_idx": 16,
+                "location": "abstract",
+                "text_span": "agents",
+                "label": "human"
+            },
+            {
+                "start_idx": 0,
+                "end_idx": 9,
+                "location": "abstract",
+                "text_span": "Infectious",
+                "label": "DDF"
+            }
+        ]
+    }
+}
