@@ -109,7 +109,7 @@ def training(config):
 			total_loss += loss.item()
 
 		if config["hyperparameters"]["lr_scheduler_factor"]:
-			scheduler.step(total_loss)
+			scheduler.step(total_loss / len(train_loader))
 			current_lr = optimizer.param_groups[0]["lr"]
 
 		print(
