@@ -19,7 +19,7 @@ class NERInference:
 			use_safetensors=True,
 		)
 		tokenizer = AutoTokenizer.from_pretrained(
-			model_name_path, use_fast=True
+			model_name_path, use_fast=True, max_length=512, truncation=True
 		)
 		self.classifier = pipeline("ner", model=model, tokenizer=tokenizer)
 		self.save_path = save_path
