@@ -1,5 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=bob2
+#SBATCH --output=bob2.out
+#SBATCH --error=bob2.err
 #SBATCH --mem=24G
 #SBATCH --cpus-per-task=15
 #SBATCH --gres=gpu:1
