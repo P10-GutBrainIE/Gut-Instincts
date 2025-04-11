@@ -1,0 +1,10 @@
+experiment_name: "Bob"
+model_name: "michiyasunaga/BioLinkBERT-large"
+training_data_path: "data_preprocessed/training_concatenated.pkl"
+validation_data_path: "data_preprocessed/validation_concatenated.pkl"
+hyperparameters:
+  num_epochs: 32
+  batch_size: 16
+  learning_rate: 0.0001
+  lr_scheduler_factor: 0.1
+  freeze_epochs: 0
