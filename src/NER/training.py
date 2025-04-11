@@ -108,7 +108,7 @@ def training(config):
 
 			if config["hyperparameters"]["lr_scheduler_factor"]:
 				scheduler.step(loss)
-				current_lr = scheduler.get_lr
+				current_lr = scheduler.get_lr()
 
 			total_loss += loss.item()
 
