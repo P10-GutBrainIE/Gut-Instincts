@@ -81,7 +81,7 @@ def training(config):
 			mode="min",
 			factor=config["hyperparameters"]["lr_scheduler_factor"],
 			patience=2,
-			threshold=0.01,
+			threshold=0.001,
 			verbose=True,
 		)
 
