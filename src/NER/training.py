@@ -10,7 +10,9 @@ from transformers import (
 )
 import torch
 from utils.utils import load_bio_labels, load_pkl_data
-
+import sys
+sys.stdout.reconfigure(line_buffering=True)
+sys.stderr.reconfigure(line_buffering=True)
 
 class CustomDataset(torch.utils.data.Dataset):
 	def __init__(self, data):
