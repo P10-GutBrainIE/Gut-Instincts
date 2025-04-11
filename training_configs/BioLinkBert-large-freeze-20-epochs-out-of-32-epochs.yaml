@@ -1,7 +1,7 @@
 experiment_name: "BioLinkBert-large-freeze-20-epochs-out-of-32-epochs"
 model_name: "michiyasunaga/BioLinkBERT-large"
-training_data_path: "data_preprocessed/training_concatenated.pkl"
-validation_data_path: "data_preprocessed/validation_concatenated.pkl"
+training_data_path: "data_preprocessed/training.pkl"
+validation_data_path: "data_preprocessed/validation.pkl"
 hyperparameters:
   num_epochs: 32
   batch_size: 16
