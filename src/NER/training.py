@@ -77,7 +77,12 @@ def training(config):
 
 	if config["hyperparameters"]["lr_scheduler_factor"]:
 		scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-			optimizer, mode="min", factor=config["hyperparameters"]["lr_scheduler_factor"], patience=2, verbose=True
+			optimizer,
+			mode="min",
+			factor=config["hyperparameters"]["lr_scheduler_factor"],
+			patience=2,
+			threshold=0.01,
+			verbose=True,
 		)
 
 	num_epochs = config["hyperparameters"]["num_epochs"]
