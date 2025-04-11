@@ -28,7 +28,7 @@ class BIOTokenizer:
 		"""
 		Load JSON files of papers and process each paper.
 
-		This method reads the JSON files, processes each paper's content, and saves the processed data to a pickle file.
+		This method reads the JSON files, processes each paper's content, and either returns or saves the processed data to a pickle file.
 		"""
 		logger.info("Starting to process files...")
 		all_data = []
@@ -60,8 +60,8 @@ class BIOTokenizer:
 			entities = [
 				{
 					**entity,
-					"start_idx": entity["start_idx"] + len(content["metadata"]["title"]) + 2,
-					"end_idx": entity["end_idx"] + len(content["metadata"]["title"]) + 2,
+					"start_idx": entity["start_idx"] + len(content["metadata"]["title"]) + 1,
+					"end_idx": entity["end_idx"] + len(content["metadata"]["title"]) + 1,
 				}
 				if entity["location"] == "abstract"
 				else entity
@@ -69,7 +69,7 @@ class BIOTokenizer:
 			]
 
 			bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(
-				f"{content['metadata']['title']}. {content['metadata']['abstract']}", entities
+				f"{content['metadata']['title']} {content['metadata']['abstract']}", entities
 			)
 			processed.append(
 				{
