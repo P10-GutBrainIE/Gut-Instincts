@@ -36,7 +36,7 @@ def switch_freeze_state_model_parameters(model):
 	return model
 
 
-def training(config, freeze: bool = False):
+def training(config):
 	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
 
 	training_data = load_pkl_data(config["training_data_path"])
@@ -49,7 +49,9 @@ def training(config, freeze: bool = False):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
-	if config["hyperparameters"]["freeze_model"]:
+	freeze_epochs = config["hyperparameters"]["freeze_epochs"]
+	if freeze_epochs > 0:
+		print(f"Freezing model parameters for the first {freeze_epochs} epochs")
 		model = switch_freeze_state_model_parameters(model)
 
 	device = torch.device("cuda")
@@ -97,7 +99,8 @@ def training(config, freeze: bool = False):
 	for epoch in range(num_epochs):
 		model.train()
 
-		if epoch == num_epochs - 1 and config["hyperparameters"]["freeze_model"]:
+		if freeze_epochs > 0 and epoch == freeze_epochs:
+			print(f"\nUnfreezing model parameters after {epoch + 1} epochs")
 			model = switch_freeze_state_model_parameters(model)
 
 		total_loss = 0

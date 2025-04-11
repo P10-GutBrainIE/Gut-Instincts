@@ -6,4 +6,4 @@ hyperparameters:
   num_epochs: 12
   batch_size: 16
   learning_rate: 0.00002
-  freeze_model: false
+  freeze_epochs: 5
