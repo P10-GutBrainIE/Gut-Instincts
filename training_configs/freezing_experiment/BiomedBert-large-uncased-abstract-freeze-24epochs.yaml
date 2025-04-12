@@ -5,7 +5,7 @@ validation_data_path: "data_preprocessed/BiomedBert-large-uncased-abstract-freez
 hyperparameters:
   num_epochs: 32
   batch_size: 16
-  learning_rate: 0.0001
+  learning_rate: 0.00002
   lr_scheduler_factor: 0.5
   lr_scheduler_threshold: 0.04
   freeze_epochs: 24
