@@ -181,7 +181,6 @@ if __name__ == "__main__":
 
 	with open(args.config, "r") as file:
 		config = yaml.safe_load(file)
-		os.makedirs("models", exist_ok=True)
 
 	ner_inference = NERInference(
 		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
