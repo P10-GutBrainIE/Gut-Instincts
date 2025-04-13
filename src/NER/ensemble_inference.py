@@ -24,13 +24,16 @@ def load_model_predictions(config):
 
 def majority_vote(predictions):
 	ensemble_results = {}
-	print(f"predictions type: {type(predictions)}")
-	print(f"Number of models: {len(predictions)}")
-	print(f"Number of predictions per model: {predictions[0]}")
+	#print(f"predictions type: {type(predictions)}")
+	#print(f"Number of models: {len(predictions)}")
+	#print(f"predictions per model: {predictions[0]}")
 
-	for paper_id in predictions[0].keys():
-		print(f"Processing paper ID: {paper_id}")
-
+	for paper_id, content in predictions[0].items():
+		#print(f"Processing paper ID: {paper_id}")
+		print(f"paper_id: {paper_id}")
+		print(f"content: {content}")
+		
+        #for entity in content[]
 
 def save_ensemble_results(predictions, save_path):
 	with open(save_path, "w") as file:
