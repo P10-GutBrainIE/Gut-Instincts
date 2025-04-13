@@ -22,9 +22,12 @@ def load_model_predictions(config):
 	return predictions_per_model
 
 
-def majority_vote():
+def majority_vote(predictions):
 	ensemble_results = {}
-	
+	print(f"predictions type: {type(predictions)}")
+	print(f"Number of models: {len(predictions)}")
+	print(f"Number of predictions per model: {predictions[0]}")
+
 	for paper_id in predictions[0].keys():
 		print(f"Processing paper ID: {paper_id}")
 
