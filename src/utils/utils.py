@@ -116,4 +116,4 @@ def print_metrics(metrics):
 	print(f"{'  Metric':<25} {'All':>10} {'No_O':>10}")
 
 	for metric, all_value, no_o_value in zip(metrics["all"].keys(), metrics["all"].values(), metrics["no_o"].values()):
-		print(f"{  metric:<25} {all_value:>10.4f} {no_o_value:>10.4f}")
+		print(f"  {metric:<25} {all_value:>10.4f} {no_o_value:>10.4f}")
