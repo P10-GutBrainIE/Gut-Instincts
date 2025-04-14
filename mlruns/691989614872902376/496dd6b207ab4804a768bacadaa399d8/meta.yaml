@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/496dd6b207ab4804a768bacadaa399d8/artifacts
+end_time: 1744633409025
+entry_point_name: ''
+experiment_id: '691989614872902376'
+lifecycle_stage: active
+run_id: 496dd6b207ab4804a768bacadaa399d8
+run_name: bald-shrew-642
+run_uuid: 496dd6b207ab4804a768bacadaa399d8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744633357686
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

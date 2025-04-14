@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/4a0866dca11e4bbea78972ced37b92bd/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '691989614872902376'
+lifecycle_stage: active
+run_id: 4a0866dca11e4bbea78972ced37b92bd
+run_name: ambitious-dove-224
+run_uuid: 4a0866dca11e4bbea78972ced37b92bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744634237667
+status: 1
+tags: []
+user_id: lran18@student.aau.dk
