@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/d4ae3e7a31ef43528a0ed6c625ef24a5/artifacts
+deleted_time: 1744636076009
 end_time: 1744631926612
 entry_point_name: ''
 experiment_id: '691989614872902376'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: d4ae3e7a31ef43528a0ed6c625ef24a5
 run_name: languid-bat-687
 run_uuid: d4ae3e7a31ef43528a0ed6c625ef24a5

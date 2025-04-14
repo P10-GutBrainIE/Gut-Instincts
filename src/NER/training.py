@@ -112,7 +112,8 @@ def training(config):
 			{
 				"lr": current_lr,
 				"loss": avg_loss,
-			}
+			},
+			step=epoch,
 		)
 
 		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {avg_loss:.4f} | Learning rate: {current_lr:.8f}")

@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/15602fc49ff34eb1bbb277308a249417/artifacts
+deleted_time: 1744636076009
 end_time: 1744632512328
 entry_point_name: ''
 experiment_id: '691989614872902376'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 15602fc49ff34eb1bbb277308a249417
 run_name: bustling-mole-675
 run_uuid: 15602fc49ff34eb1bbb277308a249417
