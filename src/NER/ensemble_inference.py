@@ -60,5 +60,7 @@ if __name__ == "__main__":
 		os.makedirs("models", exist_ok=True)
 
 	predictions = load_model_predictions(config)
+	print("Model predictions loaded.")
 	ensemble_predictions = majority_vote(predictions)
-	# save_ensemble_results(predictions= ensemble_predictions, save_path = os.path.join("data_inference_results", f"{config['experiment_name']}.json"))
+	print("Majority vote completed.")
+	save_ensemble_results(predictions=ensemble_predictions, save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"))
