@@ -7,7 +7,7 @@ from transformers import (
 	AutoModelForTokenClassification,
 )
 import torch
-from utils.utils import load_bio_labels, load_pkl_data, set_experiment_id
+from utils.utils import load_bio_labels, load_pkl_data, set_experiment_id, print_metrics
 from NER.compute_metrics import compute_metrics
 import sys
 
@@ -39,24 +39,8 @@ def switch_freeze_state_model_parameters(model):
 	return model
 
 
-def print_metrics(metrics):
-	print("Validation metrics:\n")
-	all_metrics = metrics.get("all", {})
-	no_o_metrics = metrics.get("no_o", {})
-
-	print(f"{'Metric':<25} {'All':>10} {'No_O':>10}")
-	print("-" * 47)
-
-	for key in sorted(all_metrics.keys()):
-		all_value = all_metrics.get(key, 0.0)
-		no_o_value = no_o_metrics.get(key, 0.0)
-		print(f"{key:<25} {all_value:>10.4f} {no_o_value:>10.4f}")
-
-
 def training(config):
-	mlflow.set_experiment(
-		experiment_name=config["experiment_name"], experiment_id=set_experiment_id(config["experiment_name"])
-	)
+	mlflow.set_experiment(experiment_id=set_experiment_id(config["experiment_name"]))
 	mlflow.start_run()
 
 	training_data = load_pkl_data(config["training_data_path"])
