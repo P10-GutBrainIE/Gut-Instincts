@@ -1,0 +1,9 @@
+experiment_name: "BioLinkBERT-large"
+model_name: "michiyasunaga/BioLinkBERT-large"
+training_data_path: "data_preprocessed/BioLinkBERT-large/training.pkl"
+validation_data_path: "data_preprocessed/BioLinkBERT-large/validation.pkl"
+hyperparameters:
+  num_epochs: 12
+  batch_size: 16
+  learning_rate: 0.00002
+  freeze_epochs: 0

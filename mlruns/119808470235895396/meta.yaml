@@ -1,6 +1,0 @@
-artifact_location: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/119808470235895396
-creation_time: 1744364607599
-experiment_id: '119808470235895396'
-last_update_time: 1744364607599
-lifecycle_stage: active
-name: BioLinkBert-large-freeze-8-epochs-out-of-16-epochs
