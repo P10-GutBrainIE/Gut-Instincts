@@ -40,7 +40,7 @@ def switch_freeze_state_model_parameters(model):
 
 
 def training(config):
-	mlflow.set_experiment(experiment_id=set_experiment_id(config["experiment_name"]))
+	mlflow.set_experiment(experiment_name=config["experiment_name"])
 	mlflow.start_run()
 
 	training_data = load_pkl_data(config["training_data_path"])
