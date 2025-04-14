@@ -16,8 +16,9 @@ sys.stderr.reconfigure(line_buffering=True)
 
 
 class CustomDataset(torch.utils.data.Dataset):
-	def __init__(self, data):
+	def __init__(self, data, is_validation: bool = False):
 		self.data = data
+		self.is_validation = is_validation
 
 	def __len__(self):
 		return len(self.data)
@@ -27,7 +28,10 @@ class CustomDataset(torch.utils.data.Dataset):
 		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long).clone().detach()
 		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long).clone().detach()
 		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long).clone().detach()
-		sample["weight"] = torch.tensor(sample["weight"], dtype=torch.float).clone().detach()
+		if self.is_validation:
+			sample.pop["weight"]
+		else:
+			sample["weight"] = torch.tensor(sample["weight"], dtype=torch.float).clone().detach()
 		return sample
 
 
@@ -63,7 +67,7 @@ def training(config):
 	model.to(device)
 
 	training_dataset = CustomDataset(training_data)
-	validation_dataset = CustomDataset(validation_data)
+	validation_dataset = CustomDataset(validation_data, is_validation=True)
 
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True

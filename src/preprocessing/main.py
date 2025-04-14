@@ -3,7 +3,7 @@ import os
 import yaml
 from transformers import AutoTokenizer
 from preprocessing.remove_html import remove_html
-from preprocessing.data_cleanup import clean_incorrect_text_spans
+from preprocessing.data_cleanup import clean_incorrect_text_spans, remove_incorrect_text_spans
 from preprocessing.tokenization import BIOTokenizer
 from utils.utils import load_json_data
 
@@ -13,19 +13,30 @@ def create_training_dataset(experiment_name: str, model_name: str):
 	platinum_data = load_json_data(os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"))
 	gold_data = load_json_data(os.path.join(shared_path, "gold_quality", "json_format", "train_gold.json"))
 	silver_data = load_json_data(os.path.join(shared_path, "silver_quality", "json_format", "train_silver.json"))
+	bronze_data = load_json_data(os.path.join(shared_path, "bronze_quality", "json_format", "train_bronze.json"))
 
 	silver_data = clean_incorrect_text_spans(
 		data=silver_data,
 		corrections=load_json_data(os.path.join("data", "metadata", "silver_incorrect_annotations.json"))["clean"],
 	)
+	bronze_data = clean_incorrect_text_spans(
+		data=bronze_data,
+		corrections=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))["clean"],
+	)
+	bronze_data = remove_incorrect_text_spans(
+		data=bronze_data,
+		corrections=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))["remove"],
+	)
 
 	platinum_data = remove_html(data=platinum_data)
 	gold_data = remove_html(data=gold_data)
 	silver_data = remove_html(data=silver_data)
+	bronze_data = remove_html(data=bronze_data)
 
 	tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 	bio_tokenizer = BIOTokenizer(
-		datasets=[platinum_data, gold_data, silver_data],
+		datasets=[platinum_data, gold_data, silver_data, bronze_data],
+		dataset_weigths=[1.2, 1.2, 1, 0.5],
 		save_filename=os.path.join(experiment_name, "training.pkl"),
 		tokenizer=tokenizer,
 	)
@@ -39,7 +50,10 @@ def create_validation_dataset(experiment_name: str, model_name: str):
 
 	tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 	bio_tokenizer = BIOTokenizer(
-		datasets=[dev_data], save_filename=os.path.join(experiment_name, "validation.pkl"), tokenizer=tokenizer
+		datasets=[dev_data],
+		dataset_weigths=[1],
+		save_filename=os.path.join(experiment_name, "validation.pkl"),
+		tokenizer=tokenizer,
 	)
 	bio_tokenizer.process_files()
 
