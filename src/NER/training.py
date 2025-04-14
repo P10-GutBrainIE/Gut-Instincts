@@ -151,13 +151,13 @@ def training(config):
 
 		mlflow.log_metrics(metrics, step=epoch)
 
-		if metrics["f1_micro"] > best_f1:
-			best_f1 = metrics["f1_micro"]
+		if metrics["no_o_f1_micro"] > best_f1:
+			best_f1 = metrics["no_o_f1_micro"]
 			output_dir = os.path.join("models", config["experiment_name"])
 			os.makedirs(output_dir, exist_ok=True)
 			model.save_pretrained(output_dir)
 			tokenizer.save_pretrained(output_dir)
-			print(f"New best model saved with F1_micro: {best_f1:.4f}")
+			print(f"New best model saved with F1_micro (ignoring O class): {best_f1:.4f}")
 
 	mlflow.end_run()
 
