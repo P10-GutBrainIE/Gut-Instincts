@@ -25,7 +25,9 @@ def create_training_dataset(experiment_name: str, model_name: str):
 	)
 	bronze_data = remove_incorrect_text_spans(
 		data=bronze_data,
-		incorrect_annotations=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))["remove"],
+		incorrect_annotations=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))[
+			"remove"
+		],
 	)
 
 	platinum_data = remove_html(data=platinum_data)
@@ -66,7 +68,7 @@ if __name__ == "__main__":
 	with open(args.config, "r") as file:
 		config = yaml.safe_load(file)
 
-	os.makedirs(os.path.join("data_preprocessed", config["experiment_name"]))
+	os.makedirs(os.path.join("data_preprocessed", config["experiment_name"]), exist_ok=True)
 
 	create_training_dataset(config["experiment_name"], config["model_name"])
 	create_validation_dataset(config["experiment_name"], config["model_name"])
