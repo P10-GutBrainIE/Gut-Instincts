@@ -6,6 +6,5 @@ hyperparameters:
   num_epochs: 32
   batch_size: 16
   learning_rate: 0.0001
-  lr_scheduler_factor: 0.5
-  lr_scheduler_threshold: 0.04
+  min_learning_rate: 0.000001
   freeze_epochs: 0

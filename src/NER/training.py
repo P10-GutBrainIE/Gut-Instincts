@@ -1,5 +1,4 @@
 import argparse
-import datetime as dt
 import yaml
 import os
 import mlflow
@@ -8,7 +7,7 @@ from transformers import (
 	AutoModelForTokenClassification,
 )
 import torch
-from utils.utils import load_bio_labels, load_pkl_data
+from utils.utils import load_bio_labels, load_pkl_data, set_experiment_id
 from NER.compute_metrics import compute_metrics
 import sys
 
@@ -38,11 +37,6 @@ def switch_freeze_state_model_parameters(model):
 			param.requires_grad = not param.requires_grad
 
 	return model
-
-
-def set_experiment_id(experiment_name):
-	timestamp = dt.datetime.now().strftime("%m%d_%H%M%S")
-	return experiment_name + "_" + timestamp
 
 
 def training(config):
@@ -82,15 +76,11 @@ def training(config):
 	current_lr = config["hyperparameters"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
 
-	if config["hyperparameters"]["lr_scheduler_factor"]:
-		scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
-			optimizer,
-			mode="min",
-			factor=config["hyperparameters"]["lr_scheduler_factor"],
-			patience=1,
-			threshold=config["hyperparameters"]["lr_scheduler_threshold"],
-			verbose=False,
-		)
+	scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
+		optimizer=optimizer,
+		T_max=config["hyperparameters"]["num_epochs"],
+		eta_min=config["hyperparameters"]["min_learning_rate"],
+	)
 
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	best_f1 = 0.0
@@ -115,11 +105,8 @@ def training(config):
 
 			total_loss += loss.item()
 
+		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
-		if config["hyperparameters"]["lr_scheduler_factor"]:
-			scheduler.step(avg_loss)
-			current_lr = optimizer.param_groups[0]["lr"]
-
 		mlflow.log_params(
 			{
 				"lr": current_lr,
@@ -128,6 +115,8 @@ def training(config):
 		)
 
 		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {avg_loss:.4f} | Learning rate: {current_lr}")
+
+		scheduler.step(epoch)
 
 		model.eval()
 		all_preds = []

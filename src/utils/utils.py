@@ -1,3 +1,4 @@
+import datetime as dt
 import json
 import os
 import pickle
@@ -103,3 +104,8 @@ def save_json_data(data: dict, output_path: str):
 
 	with open(output_path, "w", encoding="utf-8") as f:
 		json.dump(data, f, indent=4, ensure_ascii=False)
+
+
+def set_experiment_id(experiment_name):
+	timestamp = dt.datetime.now().strftime("%m%d_%H%M%S")
+	return experiment_name + "_" + timestamp
