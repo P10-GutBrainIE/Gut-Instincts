@@ -5,6 +5,6 @@ validation_data_path: "data_preprocessed/BioLinkBERT-base-weighted/validation.pk
 hyperparameters:
   num_epochs: 12
   batch_size: 16
-  learning_rate: 0.0001
+  learning_rate: 0.00005
   min_learning_rate: 0
   freeze_epochs: 0
