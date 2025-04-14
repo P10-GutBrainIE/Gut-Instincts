@@ -1,4 +1,5 @@
 import argparse
+import datetime as dt
 import yaml
 import os
 import mlflow
@@ -39,8 +40,14 @@ def switch_freeze_state_model_parameters(model):
 	return model
 
 
+def set_experiment_id(experiment_name):
+	timestamp = dt.datetime.now().strftime("%m%d_%H%M%S")
+	return experiment_name + "_" + timestamp
+
+
 def training(config):
 	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
+	os.environ["MLFLOW_EXPERIMENT_ID"] = set_experiment_id(config["experiment_name"])
 
 	training_data = load_pkl_data(config["training_data_path"])
 	validation_data = load_pkl_data(config["validation_data_path"])
@@ -108,13 +115,19 @@ def training(config):
 
 			total_loss += loss.item()
 
+		avg_loss = total_loss / len(train_loader)
 		if config["hyperparameters"]["lr_scheduler_factor"]:
-			scheduler.step(total_loss / len(train_loader))
+			scheduler.step(avg_loss)
 			current_lr = optimizer.param_groups[0]["lr"]
 
-		print(
-			f"Epoch {epoch + 1}/{num_epochs} | Training loss: {total_loss / len(train_loader):.4f} | Learning rate: {current_lr}"
+		mlflow.log_params(
+			{
+				"lr": current_lr,
+				"loss": avg_loss,
+			}
 		)
+
+		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {avg_loss:.4f} | Learning rate: {current_lr}")
 
 		model.eval()
 		all_preds = []
