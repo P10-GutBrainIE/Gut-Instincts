@@ -12,9 +12,9 @@ class BIOTokenizer:
 	def __init__(
 		self,
 		datasets: list[dict],
-		dataset_weigths: list,
 		tokenizer: AutoTokenizer,
 		save_filename: str = None,
+		dataset_weigths: list = None,
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
 	):
@@ -34,10 +34,16 @@ class BIOTokenizer:
 		"""
 		logger.info("Starting to process files...")
 		all_data = []
-		for data, dataset_weight in zip(self.datasets, self.dataset_weigths):
-			for _, content in data.items():
-				processed_data = self._process_paper(content, dataset_weight)
-				all_data.extend(processed_data)
+		if self.dataset_weigths:
+			for data, dataset_weight in zip(self.datasets, self.dataset_weigths):
+				for _, content in data.items():
+					processed_data = self._process_paper(content, dataset_weight)
+					all_data.extend(processed_data)
+		else:
+			for data in self.datasets:
+				for _, content in data.items():
+					processed_data = self._process_paper(content, self.dataset_weigths)
+					all_data.extend(processed_data)
 
 		logger.info("Files processed")
 
@@ -62,14 +68,23 @@ class BIOTokenizer:
 
 		for text, entities in zip(text_lst, entities_lst):
 			bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(text, entities)
-			processed.append(
-				{
-					"labels": bio_tag_ids,
-					"input_ids": input_ids,
-					"attention_mask": attention_mask,
-					"weight": dataset_weight,
-				}
-			)
+			if dataset_weight:
+				processed.append(
+					{
+						"labels": bio_tag_ids,
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+						"weight": dataset_weight,
+					}
+				)
+			else:
+				processed.append(
+					{
+						"labels": bio_tag_ids,
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+					}
+				)
 
 		return processed
 

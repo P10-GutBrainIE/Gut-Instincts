@@ -53,7 +53,6 @@ def create_validation_dataset(experiment_name: str, model_name: str):
 	tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 	bio_tokenizer = BIOTokenizer(
 		datasets=[dev_data],
-		dataset_weigths=[1],
 		save_filename=os.path.join(experiment_name, "validation.pkl"),
 		tokenizer=tokenizer,
 	)

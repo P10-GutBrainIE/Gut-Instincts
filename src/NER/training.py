@@ -28,9 +28,7 @@ class CustomDataset(torch.utils.data.Dataset):
 		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long).clone().detach()
 		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long).clone().detach()
 		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long).clone().detach()
-		if self.is_validation:
-			sample.pop["weight"]
-		else:
+		if not self.is_validation:
 			sample["weight"] = torch.tensor(sample["weight"], dtype=torch.float).clone().detach()
 		return sample
 
@@ -123,9 +121,7 @@ def training(config):
 			optimizer.step()
 			optimizer.zero_grad()
 
-			total_loss += (
-				(mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).sum().item()
-			)
+			total_loss += (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).sum().item()
 
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
