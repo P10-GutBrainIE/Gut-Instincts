@@ -25,11 +25,11 @@ class CustomDataset(torch.utils.data.Dataset):
 
 	def __getitem__(self, idx):
 		sample = self.data[idx]
-		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long).clone().detach()
-		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long).clone().detach()
-		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long).clone().detach()
+		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long)
+		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long)
+		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long)
 		if not self.is_validation:
-			sample["weight"] = torch.tensor(sample["weight"], dtype=torch.float).clone().detach()
+			sample["weight"] = torch.tensor(sample["weight"], dtype=torch.float)
 		return sample
 
 
