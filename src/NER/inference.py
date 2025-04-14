@@ -3,6 +3,7 @@ import json
 import logging
 import argparse
 import yaml
+from tqdm import tqdm
 from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
 from utils.utils import load_json_data, load_bio_labels
 
@@ -26,7 +27,7 @@ class NERInference:
 
 	def perform_inference(self):
 		result = {}
-		for paper_id, content in self.test_data.items():
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing Inference"):
 			entity_predictions = []
 
 			try:
@@ -46,7 +47,7 @@ class NERInference:
 
 	def perform_inference_return_data(self):
 		result = {}
-		for paper_id, content in self.test_data.items():
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing Inference"):
 			entity_predictions = []
 
 			try:
@@ -64,7 +65,7 @@ class NERInference:
 
 	def perform_inference_concatenated(self):
 		result = {}
-		for paper_id, content in self.test_data.items():
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing Inference"):
 			text = content["metadata"]["title"] + " " + content["metadata"]["abstract"]
 			entity_predictions = []
 
