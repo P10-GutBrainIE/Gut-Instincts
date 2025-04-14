@@ -39,6 +39,20 @@ def switch_freeze_state_model_parameters(model):
 	return model
 
 
+def print_metrics(metrics):
+	print("Validation metrics:\n")
+	all_metrics = metrics.get("all", {})
+	no_o_metrics = metrics.get("no_o", {})
+
+	print(f"{'Metric':<25} {'All':>10} {'No_O':>10}")
+	print("-" * 47)
+
+	for key in sorted(all_metrics.keys()):
+		all_value = all_metrics.get(key, 0.0)
+		no_o_value = no_o_metrics.get(key, 0.0)
+		print(f"{key:<25} {all_value:>10.4f} {no_o_value:>10.4f}")
+
+
 def training(config):
 	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
 	os.environ["MLFLOW_EXPERIMENT_ID"] = set_experiment_id(config["experiment_name"])
@@ -133,9 +147,7 @@ def training(config):
 				all_labels.extend(labels)
 
 		metrics = compute_metrics(all_preds, all_labels)
-		print("Validation metrics:")
-		for key, value in metrics.items():
-			print(f"  {key:<15}: {value:.4f}")
+		print_metrics(metrics)
 
 		mlflow.log_metrics(metrics, step=epoch)
 
