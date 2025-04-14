@@ -56,6 +56,10 @@ def training(config):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
+	output_dir = os.path.join("models", config["experiment_name"])
+	os.makedirs(output_dir, exist_ok=True)
+	tokenizer.save_pretrained(output_dir)
+
 	freeze_epochs = config["hyperparameters"]["freeze_epochs"]
 	if freeze_epochs > 0:
 		print(f"Freezing model parameters for the first {freeze_epochs} epochs")
@@ -161,11 +165,15 @@ def training(config):
 
 		if metrics["all"]["F1_micro"] > best_f1:
 			best_f1 = metrics["all"]["F1_micro"]
-			output_dir = os.path.join("models", config["experiment_name"])
-			os.makedirs(output_dir, exist_ok=True)
 			model.save_pretrained(output_dir)
-			tokenizer.save_pretrained(output_dir)
+
 			print(f"New best model saved with F1_micro (ignoring O class): {best_f1:.4f}")
+
+		if epoch == num_epochs - 1:
+			output_dir = os.path.join("models", f"{config['experiment_name']}_last_epoch")
+			os.makedirs(output_dir, exist_ok=True)
+			tokenizer.save_pretrained(output_dir)
+			model.save_pretrained(output_dir)
 
 	mlflow.end_run()
 
