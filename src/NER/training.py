@@ -7,7 +7,7 @@ from transformers import (
 	AutoModelForTokenClassification,
 )
 import torch
-from utils.utils import load_bio_labels, load_pkl_data, set_experiment_id, print_metrics
+from utils.utils import load_bio_labels, load_pkl_data, print_metrics
 from NER.compute_metrics import compute_metrics
 import sys
 
@@ -115,7 +115,7 @@ def training(config):
 			}
 		)
 
-		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {avg_loss:.4f} | Learning rate: {current_lr}")
+		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {avg_loss:.4f} | Learning rate: {current_lr:.8f}")
 
 		scheduler.step(epoch)
 
