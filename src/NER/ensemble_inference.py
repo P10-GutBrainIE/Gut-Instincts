@@ -26,19 +26,19 @@ def load_model_predictions(config):
 
 def majority_vote(predictions):
 	entity_votes = defaultdict(list)
+	ensemble_results = defaultdict(lambda: {"entities": []})
 
+	# Collect votes for all models
 	for model_predictions in predictions:
 		for paper_id, content in model_predictions.items():
 			for entity in content["entities"]:
 				key = (paper_id, entity["start_idx"], entity["end_idx"], entity["location"])
 				entity_votes[key].append((entity["label"], entity["text_span"]))
 
-	ensemble_results = defaultdict(lambda: {"entities": []})
-
 	for (paper_id, start_idx, end_idx, location), votes in entity_votes.items():
 		labels, spans = zip(*votes)
-		majority_label = Counter(labels).most_common(1)[0][0]
 		majority_span = Counter(spans).most_common(1)[0][0]
+		majority_label = Counter(labels).most_common(1)[0][0]
 
 		ensemble_results[paper_id]["entities"].append(
 			{
