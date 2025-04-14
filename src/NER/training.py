@@ -27,6 +27,7 @@ class CustomDataset(torch.utils.data.Dataset):
 		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long).clone().detach()
 		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long).clone().detach()
 		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long).clone().detach()
+		sample["weight"] = torch.tensor(sample["weight"], dtype=torch.float).clone().detach()
 		return sample
 
 
@@ -75,6 +76,7 @@ def training(config):
 
 	current_lr = config["hyperparameters"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
+	loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
 
 	scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
 		optimizer=optimizer,
@@ -97,13 +99,29 @@ def training(config):
 			for k, v in batch.items():
 				if isinstance(v, torch.Tensor):
 					batch[k] = v.to(device)
-			outputs = model(**batch)
-			loss = outputs.loss
-			loss.backward()
+
+			outputs = model(
+				input_ids=batch["input_ids"],
+				attention_mask=batch["attention_mask"],
+				labels=batch["labels"],
+				return_dict=True,
+			)
+			logits = outputs.logits
+			labels = batch["labels"]
+			loss_values = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1))
+			loss_values = loss_values.view(labels.size(0), -1)
+			mask = (labels != -100).float()
+			mean_loss_per_instance = (loss_values * mask).sum(dim=1) / mask.sum(dim=1)
+
+			weighted_loss_avg = (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).mean()
+			weighted_loss_avg.backward()
+
 			optimizer.step()
 			optimizer.zero_grad()
 
-			total_loss += loss.item()
+			total_loss += (
+				(mean_loss_per_instance * batch["instance_weight"].to(mean_loss_per_instance.device)).sum().item()
+			)
 
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
@@ -116,7 +134,9 @@ def training(config):
 			step=epoch,
 		)
 
-		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {avg_loss:.4f} | Learning rate: {current_lr:.8f}")
+		print(
+			f"Epoch {epoch + 1}/{num_epochs} | Training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
+		)
 
 		scheduler.step(epoch)
 
