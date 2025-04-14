@@ -26,12 +26,14 @@ def compute_metrics(predictions, labels):
 			lbls, preds, average="macro", zero_division=0
 		)
 
-		metrics[name]["Accuracy"] = accuracy
-		metrics[name]["Precision_micro"] = precision_micro
-		metrics[name]["Recall_micro"] = recall_micro
-		metrics[name]["F1_micro"] = f1_micro
-		metrics[name]["Precision_macro"] = precision_macro
-		metrics[name]["Recall_macro"] = recall_macro
-		metrics[name]["F1_macro"] = f1_macro
+		metrics[name] = {
+			"Accuracy": accuracy,
+			"Precision_micro": precision_micro,
+			"Recall_micro": recall_micro,
+			"F1_micro": f1_micro,
+			"Precision_macro": precision_macro,
+			"Recall_macro": recall_macro,
+			"F1_macro": f1_macro,
+		}
 
 	return metrics
