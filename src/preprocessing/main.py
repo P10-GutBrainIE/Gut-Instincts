@@ -25,7 +25,7 @@ def create_training_dataset(experiment_name: str, model_name: str):
 	)
 	bronze_data = remove_incorrect_text_spans(
 		data=bronze_data,
-		corrections=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))["remove"],
+		incorrect_annotations=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))["remove"],
 	)
 
 	platinum_data = remove_html(data=platinum_data)
