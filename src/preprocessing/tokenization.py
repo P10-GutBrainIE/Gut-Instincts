@@ -12,12 +12,14 @@ class BIOTokenizer:
 	def __init__(
 		self,
 		datasets: list[dict],
+		dataset_weigths: list,
 		tokenizer: AutoTokenizer,
 		save_filename: str = None,
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
 	):
 		self.datasets = datasets
+		self.dataset_weigths = dataset_weigths
 		self.tokenizer = tokenizer
 		self.save_filename = save_filename
 		self.max_length = max_length
@@ -32,9 +34,9 @@ class BIOTokenizer:
 		"""
 		logger.info("Starting to process files...")
 		all_data = []
-		for data in self.datasets:
+		for data, dataset_weight in zip(self.datasets, self.dataset_weigths):
 			for _, content in data.items():
-				processed_data = self._process_paper(content)
+				processed_data = self._process_paper(content, dataset_weight)
 				all_data.extend(processed_data)
 
 		logger.info("Files processed")
@@ -44,7 +46,7 @@ class BIOTokenizer:
 		else:
 			return all_data
 
-	def _process_paper(self, content):
+	def _process_paper(self, content, dataset_weight):
 		"""
 		Process a single paper's content for both title and abstract.
 
@@ -65,6 +67,7 @@ class BIOTokenizer:
 					"labels": bio_tag_ids,
 					"input_ids": input_ids,
 					"attention_mask": attention_mask,
+					"weight": dataset_weight,
 				}
 			)
 
