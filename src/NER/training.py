@@ -153,6 +153,8 @@ def training(config):
 if __name__ == "__main__":
 	if torch.cuda.is_available():
 		torch.cuda.empty_cache()
+		torch.manual_seed(42)
+		torch.cuda.manual_seed_all(42)
 		print("Device count:", torch.cuda.device_count())
 		print("CUDA is available. GPU:", torch.cuda.get_device_name(0))
 
