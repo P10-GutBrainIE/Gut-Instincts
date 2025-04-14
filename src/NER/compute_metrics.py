@@ -14,6 +14,7 @@ def compute_metrics(predictions, labels):
 	true_labels_no_o = [la for pred, lbl in zip(predictions, labels) for _, la in zip(pred, lbl) if la not in [-100, 0]]
 
 	metrics = {}
+	log_metrics = {}
 	for name, (preds, lbls) in {
 		"all": (true_predictions, true_labels),
 		"no_o": (true_predictions_no_o, true_labels_no_o),
@@ -36,4 +37,16 @@ def compute_metrics(predictions, labels):
 			"F1_macro": f1_macro,
 		}
 
-	return metrics
+		log_metrics.update(
+			{
+				f"{name}_accuracy": accuracy,
+				f"{name}_precision_micro": precision_micro,
+				f"{name}_recall_micro": recall_micro,
+				f"{name}_f1_micro": f1_micro,
+				f"{name}_precision_macro": precision_macro,
+				f"{name}_recall_macro": recall_macro,
+				f"{name}_f1_macro": f1_macro,
+			}
+		)
+
+	return metrics, log_metrics

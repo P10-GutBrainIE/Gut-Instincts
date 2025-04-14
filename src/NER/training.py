@@ -133,13 +133,13 @@ def training(config):
 				all_preds.extend(logits)
 				all_labels.extend(labels)
 
-		metrics = compute_metrics(all_preds, all_labels)
+		metrics, log_metrics = compute_metrics(all_preds, all_labels)
 		print_metrics(metrics)
 
-		mlflow.log_metrics(metrics, step=epoch)
+		mlflow.log_metrics(log_metrics, step=epoch)
 
-		if metrics["no_o_f1_micro"] > best_f1:
-			best_f1 = metrics["no_o_f1_micro"]
+		if metrics["no_o"]["F1_micro"] > best_f1:
+			best_f1 = metrics["no_o"]["F1_micro"]
 			output_dir = os.path.join("models", config["experiment_name"])
 			os.makedirs(output_dir, exist_ok=True)
 			model.save_pretrained(output_dir)
