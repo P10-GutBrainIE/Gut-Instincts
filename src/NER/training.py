@@ -95,7 +95,7 @@ def training(config):
 			model = switch_freeze_state_model_parameters(model)
 
 		total_loss = 0
-		for batch in tqdm(train_loader, desc=f"Epoch {epoch+1}/{num_epochs} Training", leave=False):
+		for batch in tqdm(train_loader, desc=f"Epoch {epoch+1}/{num_epochs}", leave=False):
 			for k, v in batch.items():
 				if isinstance(v, torch.Tensor):
 					batch[k] = v.to(device)
@@ -126,7 +126,7 @@ def training(config):
 		all_preds = []
 		all_labels = []
 		with torch.no_grad():
-			for batch in tqdm(val_loader, desc=f"Epoch {epoch+1}/{num_epochs} Validation", leave=False):
+			for batch in tqdm(val_loader, desc=f"Epoch {epoch+1}/{num_epochs}", leave=False):
 				labels = batch["labels"].cpu().numpy()
 				for k, v in batch.items():
 					if isinstance(v, torch.Tensor):
