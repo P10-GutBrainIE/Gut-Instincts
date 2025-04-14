@@ -3,7 +3,7 @@ model_name: "michiyasunaga/BioLinkBERT-base"
 training_data_path: "data_preprocessed/BioLinkBERT-base/training.pkl"
 validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl"
 hyperparameters:
-  num_epochs: 32
+  num_epochs: 20
   batch_size: 16
   learning_rate: 0.0001
   min_learning_rate: 0.000001
