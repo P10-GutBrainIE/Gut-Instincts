@@ -8,18 +8,18 @@
 
 mkdir -p logs
 
-# ---------- BioLinkBERT-large ----------
+# ---------- BioLinkBERT-base ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/ensemble_inference/BioLinkBert-large.yaml > logs/biolink-large-pre.out 2> logs/biolink-large-pre.err
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/ensemble_inference/BioLinkBert-base.yaml > logs/biolink-base-pre.out 2> logs/biolink-base-pre.err
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/ensemble_inference/BioLinkBert-large.yaml > logs/biolink-large-train.out 2> logs/biolink-large-train.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/ensemble_inference/BioLinkBert-base.yaml > logs/biolink-base-train.out 2> logs/biolink-base-train.err
 
 # inference
-#srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/inference.py --config training_configs/ensemble_inference/BioLinkBert-large.yaml > logs/biolink-large-inf.out 2> logs/biolink-large-inf.err
+#srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/inference.py --config training_configs/ensemble_inference/BioLinkBert-base.yaml > logs/biolink-base-inf.out 2> logs/biolink-base-inf.err
 
 # evaluation
-#srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/evaluation/evaluation.py --config training_configs/ensemble_inference/BioLinkBert-large.yaml > logs/biolink-large-eval.out 2> logs/biolink-large-eval.err
+#srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/evaluation/evaluation.py --config training_configs/ensemble_inference/BioLinkBert-base.yaml > logs/biolink-base-eval.out 2> logs/biolink-base-eval.err
 
 # ---------- BiomedBERT-base-uncased-abstract ----------
 # preprocessing

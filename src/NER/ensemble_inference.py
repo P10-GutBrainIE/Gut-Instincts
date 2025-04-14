@@ -1,5 +1,4 @@
 import os
-import json
 import argparse
 import yaml
 from utils.utils import save_json_data
