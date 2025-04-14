@@ -2,7 +2,7 @@ import os
 import json
 import argparse
 import yaml
-from collections import Counter
+from collections import Counter, defaultdict
 from NER.inference import NERInference
 
 
@@ -24,13 +24,13 @@ def load_model_predictions(config):
 
 
 def majority_vote(predictions):
-	entity_votes = {}
-	ensemble_results = {}
+	entity_votes = defaultdict(list)
+	ensemble_results = defaultdict(list)
 	for model_predictions in predictions:
 		for paper_id, content in model_predictions.items():
 			for entity in content["entities"]:
 				key = (paper_id, entity["start_idx"], entity["end_idx"], entity["location"])
-				entity_votes[key].append(entity["label"], entity["text_span"])
+				entity_votes[key].append((entity["label"], entity["text_span"]))
 				
 	for (paper_id, start_idx, end_idx, location), votes in entity_votes.items():
 		labels, spans = zip(*votes)
