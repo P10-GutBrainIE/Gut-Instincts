@@ -1,0 +1,6 @@
+experiment_name: "inference_ensemble_test"
+model_configs:
+  - "training_configs/ensemble_inference/BioLinkBert-large.yaml"
+  - "training_configs/ensemble_inference/BiomedBert-abstract.yaml"
+  - "training_configs/ensemble_inference/BiomedBert-abstract-fulltext.yaml"
+test_data_path: "data/Annotations/Dev/json_format/dev.json"

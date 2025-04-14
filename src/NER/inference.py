@@ -44,6 +44,24 @@ class NERInference:
 		with open(self.save_path, "w") as f:
 			json.dump(result, f, indent=4)
 
+	def perform_inference_return_data(self):
+		result = {}
+		for paper_id, content in self.test_data.items():
+			entity_predictions = []
+
+			try:
+				title_predictions = self.classifier(content["metadata"]["title"])
+				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
+
+				abstract_predictions = self.classifier(content["metadata"]["abstract"])
+				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
+
+				result[paper_id] = {"entities": entity_predictions}
+			except Exception as e:
+				logging.error(f"Error processing paper ID {paper_id}: {e}")
+
+		return result
+
 	def perform_inference_concatenated(self):
 		result = {}
 		for paper_id, content in self.test_data.items():
@@ -163,7 +181,6 @@ if __name__ == "__main__":
 
 	with open(args.config, "r") as file:
 		config = yaml.safe_load(file)
-		os.makedirs("models", exist_ok=True)
 
 	ner_inference = NERInference(
 		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
