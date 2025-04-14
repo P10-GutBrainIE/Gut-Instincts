@@ -2,6 +2,7 @@ import os
 import json
 import argparse
 import yaml
+from collections import Counter
 from NER.inference import NERInference
 
 
@@ -23,17 +24,20 @@ def load_model_predictions(config):
 
 
 def majority_vote(predictions):
+	entity_votes = {}
 	ensemble_results = {}
-	#print(f"predictions type: {type(predictions)}")
-	#print(f"Number of models: {len(predictions)}")
-	#print(f"predictions per model: {predictions[0]}")
-
-	for paper_id, content in predictions[0].items():
-		#print(f"Processing paper ID: {paper_id}")
-		print(f"paper_id: {paper_id}")
-		print(f"content: {content}")
+	for model_predictions in predictions:
+		for paper_id, content in model_predictions.items():
+			for entity in content["entities"]:
+				key = (paper_id, entity["start_idx"], entity["end_idx"], entity["location"])
+				entity_votes[key].append(entity["label"], entity["text_span"])
+				
+	for (paper_id, start_idx, end_idx, location), votes in entity_votes.items():
+		labels, spans = zip(*votes)
+		majority_label, _ = Counter(labels).most_common(1)[0]
 		
-        #for entity in content[]
+        majority_span = Counter(spans).most_common(1)[0]
+
 
 def save_ensemble_results(predictions, save_path):
 	with open(save_path, "w") as file:
