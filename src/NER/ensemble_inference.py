@@ -25,6 +25,7 @@ def load_model_predictions(config):
 
 
 def majority_vote(predictions):
+	count_1_votes = 0
 	entity_votes = defaultdict(list)
 	ensemble_results = defaultdict(lambda: {"entities": []})
 
@@ -36,6 +37,9 @@ def majority_vote(predictions):
 				entity_votes[key].append((entity["label"], entity["text_span"]))
 
 	for (paper_id, start_idx, end_idx, location), votes in entity_votes.items():
+		if len(votes) == 1:
+			count_1_votes += 1
+
 		labels, spans = zip(*votes)
 		majority_span = Counter(spans).most_common(1)[0][0]
 		majority_label = Counter(labels).most_common(1)[0][0]
@@ -50,6 +54,8 @@ def majority_vote(predictions):
 			}
 		)
 
+
+	print(f"Count of 1-vote entities: {count_1_votes}")
 	return dict(ensemble_results)
 
 
@@ -65,7 +71,6 @@ if __name__ == "__main__":
 	predictions = load_model_predictions(config)
 	print("Model predictions loaded.")
 	ensemble_predictions = majority_vote(predictions)
-
 	print("Majority vote completed.")
 	save_json_data(
 		data=ensemble_predictions,
