@@ -121,7 +121,8 @@ def training(config):
 
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
-		mlflow.log_params(
+
+		mlflow.log_metrics(
 			{
 				"lr": current_lr,
 				"loss": avg_loss,
