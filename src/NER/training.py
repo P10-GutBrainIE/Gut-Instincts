@@ -159,8 +159,8 @@ def training(config):
 
 		mlflow.log_metrics(log_metrics, step=epoch)
 
-		if metrics["no_o"]["F1_micro"] > best_f1:
-			best_f1 = metrics["no_o"]["F1_micro"]
+		if metrics["all"]["F1_micro"] > best_f1:
+			best_f1 = metrics["all"]["F1_micro"]
 			output_dir = os.path.join("models", config["experiment_name"])
 			os.makedirs(output_dir, exist_ok=True)
 			model.save_pretrained(output_dir)
