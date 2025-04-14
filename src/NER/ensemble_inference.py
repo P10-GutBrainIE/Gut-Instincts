@@ -44,6 +44,8 @@ def majority_vote(predictions):
 			"label": majority_label,
         })
 
+	return dict(ensemble_results)
+
 
 def save_ensemble_results(predictions, save_path):
 	with open(save_path, "w") as file:
@@ -62,5 +64,6 @@ if __name__ == "__main__":
 	predictions = load_model_predictions(config)
 	print("Model predictions loaded.")
 	ensemble_predictions = majority_vote(predictions)
+
 	print("Majority vote completed.")
 	save_ensemble_results(predictions=ensemble_predictions, save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"))
