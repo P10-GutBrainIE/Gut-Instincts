@@ -175,6 +175,8 @@ def training(config):
 			tokenizer.save_pretrained(output_dir)
 			model.save_pretrained(output_dir)
 
+			print(f"Model at last epoch saved")
+
 	mlflow.end_run()
 
 
