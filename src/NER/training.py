@@ -54,8 +54,10 @@ def print_metrics(metrics):
 
 
 def training(config):
-	os.environ["MLFLOW_EXPERIMENT_NAME"] = config["experiment_name"]
-	os.environ["MLFLOW_EXPERIMENT_ID"] = set_experiment_id(config["experiment_name"])
+	mlflow.set_experiment(
+		experiment_name=config["experiment_name"], experiment_id=set_experiment_id(config["experiment_name"])
+	)
+	mlflow.start_run()
 
 	training_data = load_pkl_data(config["training_data_path"])
 	validation_data = load_pkl_data(config["validation_data_path"])
