@@ -124,7 +124,7 @@ def training(config):
 			optimizer.zero_grad()
 
 			total_loss += (
-				(mean_loss_per_instance * batch["instance_weight"].to(mean_loss_per_instance.device)).sum().item()
+				(mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).sum().item()
 			)
 
 		current_lr = optimizer.param_groups[0]["lr"]
