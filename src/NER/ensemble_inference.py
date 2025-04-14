@@ -35,8 +35,14 @@ def majority_vote(predictions):
 	for (paper_id, start_idx, end_idx, location), votes in entity_votes.items():
 		labels, spans = zip(*votes)
 		majority_label, _ = Counter(labels).most_common(1)[0]
-		
-        majority_span = Counter(spans).most_common(1)[0]
+		majority_span = Counter(spans).most_common(1)[0]
+		ensemble_results[paper_id].append({
+			"start_idx": start_idx,
+			"end_idx": end_idx,
+			"location": location,
+			"text_span": majority_span,
+			"label": majority_label,
+        })
 
 
 def save_ensemble_results(predictions, save_path):
