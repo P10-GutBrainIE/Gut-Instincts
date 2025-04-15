@@ -34,8 +34,6 @@ def majority_vote(predictions):
 				key = (paper_id, entity["start_idx"], entity["end_idx"], entity["location"])
 				entity_votes[key].append((entity["label"], entity["text_span"]))
 
-	print(entity_votes)
-
 	for (paper_id, start_idx, end_idx, location), votes in entity_votes.items():
 		if len(votes) < 2:
 			continue
