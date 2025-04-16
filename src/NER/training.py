@@ -67,8 +67,10 @@ def training(config):
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
-	loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
 	scheduler = lr_scheduler(config["hyperparameters"]["lr_scheduler"], optimizer)
+
+	if config["weighted_training"]:
+		loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
 
 	best_f1 = 0.0
 
