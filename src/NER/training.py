@@ -92,7 +92,6 @@ def training(config):
 				outputs = model(
 					input_ids=batch["input_ids"],
 					attention_mask=batch["attention_mask"],
-					labels=batch["labels"],
 					return_dict=True,
 				)
 				logits = outputs.logits
