@@ -25,7 +25,7 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler
 
 			epochs_post_warmup = epoch - (lr_scheduler_dict["custom_schedule"][-1][1] + 1)
 
-			if epochs_post_warmup <= lr_scheduler_dict["step_size"]:
+			if epochs_post_warmup < lr_scheduler_dict["step_size"]:
 				return lr_scheduler_dict["custom_schedule"][-1][2]
 			else:
 				return lr_scheduler_dict["gamma"] ** (epochs_post_warmup // lr_scheduler_dict["step_size"])
