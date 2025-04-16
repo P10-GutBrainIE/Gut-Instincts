@@ -122,8 +122,7 @@ def training(config):
 			{
 				"lr": current_lr,
 				"loss": avg_loss,
-			},
-			step=epoch,
+			}
 		)
 
 		print(
@@ -155,7 +154,7 @@ def training(config):
 			best_f1 = metrics["all"]["F1_micro"]
 			model.save_pretrained(output_dir)
 
-			print(f"New best model saved with F1_micro (ignoring O class): {best_f1:.4f}")
+			print(f"New best model saved with All_F1_micro: {best_f1:.4f}")
 
 		if epoch == num_epochs - 1:
 			output_dir = os.path.join("models", f"{config['experiment_name']}_last_epoch")
