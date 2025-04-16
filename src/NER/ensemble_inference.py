@@ -71,7 +71,3 @@ if __name__ == "__main__":
 		data=ensemble_predictions,
 		output_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
 	)
-	# save_ensemble_results(
-	# 	predictions=ensemble_predictions,
-	# 	save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
-	# )
