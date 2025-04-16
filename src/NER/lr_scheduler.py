@@ -23,12 +23,10 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler
 				if start <= epoch <= end:
 					return multiplier
 
-		warmup = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda epoch: custom_schedule(epoch))
-		training = torch.optim.lr_scheduler.StepLR(
-			optimizer, lr_scheduler_dict["step_size"], lr_scheduler_dict["gamma"]
-		)
-		scheduler = torch.optim.lr_scheduler.SequentialLR(
-			optimizer, schedulers=[warmup, training], milestones=[lr_scheduler_dict["custom_schedule"][-1][1]]
-		)
+			epochs_post_warmup = epoch - (lr_scheduler_dict["custom_schedule"][-1][1] + 1)
+
+			return lr_scheduler_dict["gamma"] ** (epochs_post_warmup // lr_scheduler_dict["step_size"])
+
+		scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda epoch: custom_schedule(epoch))
 
 	return scheduler
