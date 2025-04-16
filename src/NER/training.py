@@ -72,7 +72,7 @@ def training(config):
 	if config["weighted_training"]:
 		loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
 
-	best = 0.0
+	best_f1_micro = 0.0
 
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
@@ -153,11 +153,11 @@ def training(config):
 
 		mlflow.log_metrics(log_metrics, step=epoch)
 
-		if metrics["no_o"]["Total"] > best:
-			best = metrics["no_o"]["Total"]
+		if metrics["all"]["F1_micro"] > best_f1_micro:
+			best_f1_micro = metrics["all"]["F1_micro"]
 			model.save_pretrained(output_dir)
 
-			print(f"New best model saved with No_O Total: {best:.4f}")
+			print(f"New best model saved with All F1_micro: {best_f1_micro:.4f}")
 
 		if epoch == num_epochs - 1:
 			output_dir = os.path.join("models", f"{config['experiment_name']}_last_epoch")
