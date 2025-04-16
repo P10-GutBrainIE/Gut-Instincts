@@ -16,7 +16,7 @@ hyperparameters:
     method: "custom"
     learning_rate: 0.00001
     custom_schedule:
-    - (0, 1, 0.00001)
-    - (2, 3, 0.00002)
+    - [0, 1, 0.00001]
+    - [2, 3, 0.00002]
     step_size: 1
     gamma: 0.5
