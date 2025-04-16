@@ -26,6 +26,7 @@ def compute_metrics(predictions, labels):
 		precision_macro, recall_macro, f1_macro, _ = precision_recall_fscore_support(
 			lbls, preds, average="macro", zero_division=0
 		)
+		total = accuracy + precision_micro + recall_micro + f1_micro + precision_macro + recall_macro + f1_macro
 
 		metrics[name] = {
 			"Accuracy": accuracy,
@@ -35,6 +36,7 @@ def compute_metrics(predictions, labels):
 			"Precision_macro": precision_macro,
 			"Recall_macro": recall_macro,
 			"F1_macro": f1_macro,
+			"Total": total,
 		}
 
 		log_metrics.update(

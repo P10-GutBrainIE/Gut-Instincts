@@ -65,7 +65,7 @@ hyperparameters:
     # threshold: Threshold for measuring new optimum, to ignore small improvements.
 
     # For 'custom':
-    # LambdaLR for warmup followed by StepLR.
+    # LambdaLR for warmup and decay.
     # custom_schedule: Used for warmup with a list of 3-tuples (start_epoch, end_epoch, multiplier).
-    # step_size: When to update the LR with a factor of gamma.
+    # step_size: How many epochs (after warmup) before update the LR with a factor of gamma.
     # gamma: The factor to update the the LR with.

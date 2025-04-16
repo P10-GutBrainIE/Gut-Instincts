@@ -153,8 +153,8 @@ def training(config):
 
 		mlflow.log_metrics(log_metrics, step=epoch)
 
-		if metrics["all"]["F1_micro"] > best_f1:
-			best_f1 = metrics["all"]["F1_micro"]
+		if metrics["No_o"]["Total"] > best_f1:
+			best_f1 = metrics["No_o"]["Total"]
 			model.save_pretrained(output_dir)
 
 			print(f"New best model saved with All_F1_micro: {best_f1:.4f}")
