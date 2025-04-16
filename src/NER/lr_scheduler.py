@@ -28,7 +28,7 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler
 			optimizer, lr_scheduler_dict["step_size"], lr_scheduler_dict["gamma"]
 		)
 		scheduler = torch.optim.lr_scheduler.SequentialLR(
-			optimizer, schedulers=[warmup, training], milestones=[lr_scheduler_dict["custom_schedule"][-1][1] + 1]
+			optimizer, schedulers=[warmup, training], milestones=[lr_scheduler_dict["custom_schedule"][-1][1]]
 		)
 
 	return scheduler
