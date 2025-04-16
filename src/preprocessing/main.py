@@ -69,5 +69,5 @@ if __name__ == "__main__":
 
 	os.makedirs(os.path.join("data_preprocessed", config["experiment_name"]), exist_ok=True)
 
-	create_training_dataset(config["experiment_name"], config["model_name"], config["dataset_weights"])
+	create_training_dataset(config["experiment_name"], config["model_name"], config.get(["dataset_weights"]))
 	create_validation_dataset(config["experiment_name"], config["model_name"])
