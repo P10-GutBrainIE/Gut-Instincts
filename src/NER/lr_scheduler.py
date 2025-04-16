@@ -16,9 +16,17 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler
 			patience=lr_scheduler_dict["patience"],
 			threshold=lr_scheduler_dict["threshold"],
 		)
-	elif method == "multistep":
-		scheduler = torch.optim.lr_scheduler.MultiStepLR(
-			optimizer=optimizer, milestones=lr_scheduler_dict["milestones"], gamma=lr_scheduler_dict["gamma"]
+	elif method == "custom":
+
+		def custom_schedule(schedule=lr_scheduler_dict["custom_schedule"]):
+			return lambda epoch: next(multiplier for start, end, multiplier in schedule if start <= epoch <= end)
+
+		warmup = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=custom_schedule())
+		training = torch.optim.lr_scheduler.StepLR(
+			optimizer, lr_scheduler_dict["step_size"], lr_scheduler_dict["gamma"]
+		)
+		scheduler = torch.optim.lr_scheduler.SequentialLR(
+			optimizer, schedulers=[warmup, training], milestones=[lr_scheduler_dict["custom_schedule"][-1][1] + 1]
 		)
 
 	return scheduler

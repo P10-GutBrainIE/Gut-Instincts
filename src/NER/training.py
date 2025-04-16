@@ -78,6 +78,8 @@ def training(config):
 	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
 		model.train()
 
+		scheduler.step(epoch)
+
 		if freeze_epochs > 0 and epoch == freeze_epochs:
 			print(f"\nUnfreezing model parameters after {epoch + 1} epochs")
 			model = switch_freeze_state_model_parameters(model)
@@ -128,8 +130,6 @@ def training(config):
 		print(
 			f"Epoch {epoch + 1}/{num_epochs} | Training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)
-
-		scheduler.step(epoch)
 
 		model.eval()
 		all_preds = []

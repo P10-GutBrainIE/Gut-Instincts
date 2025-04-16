@@ -9,14 +9,14 @@ dataset_weights:
 - 1.0
 - 0.33
 hyperparameters:
-  num_epochs: 20
+  num_epochs: 10
   batch_size: 32
   freeze_epochs: 0
   lr_scheduler:
-    method: "multistep"
-    learning_rate: 0.0001
-    milestones:
-    - 5
-    - 10
-    - 15
-    gamma: 0.1
+    method: "custom"
+    learning_rate: 0.00001
+    custom_schedule:
+    - (0, 1, 0.00001)
+    - (2, 3, 0.00002)
+    step_size: 1
+    gamma: 0.5
