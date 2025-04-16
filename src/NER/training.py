@@ -53,8 +53,8 @@ def training(config):
 	device = torch.device("cuda")
 	model.to(device)
 
-	training_dataset = Dataset(training_data)
-	validation_dataset = Dataset(validation_data, is_validation=True)
+	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
+	validation_dataset = Dataset(validation_data, with_weights=False)
 
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
@@ -72,7 +72,6 @@ def training(config):
 
 	best_f1 = 0.0
 
-
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
 		model.train()
@@ -82,31 +81,38 @@ def training(config):
 			model = switch_freeze_state_model_parameters(model)
 
 		total_loss = 0
-		for batch in tqdm(train_loader, desc=f"Epoch {epoch+1}/{num_epochs}", leave=False):
+		for batch in tqdm(train_loader, desc=f"Epoch {epoch + 1}/{num_epochs}", leave=False):
 			for k, v in batch.items():
 				if isinstance(v, torch.Tensor):
 					batch[k] = v.to(device)
 
-			outputs = model(
-				input_ids=batch["input_ids"],
-				attention_mask=batch["attention_mask"],
-				labels=batch["labels"],
-				return_dict=True,
-			)
-			logits = outputs.logits
-			labels = batch["labels"]
-			loss_values = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1))
-			loss_values = loss_values.view(labels.size(0), -1)
-			mask = (labels != -100).float()
-			mean_loss_per_instance = (loss_values * mask).sum(dim=1) / mask.sum(dim=1)
+			if config["weighted_training"]:
+				outputs = model(
+					input_ids=batch["input_ids"],
+					attention_mask=batch["attention_mask"],
+					labels=batch["labels"],
+					return_dict=True,
+				)
+				logits = outputs.logits
+				labels = batch["labels"]
+				loss_values = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1))
+				loss_values = loss_values.view(labels.size(0), -1)
+				mask = (labels != -100).float()
+				mean_loss_per_instance = (loss_values * mask).sum(dim=1) / mask.sum(dim=1)
 
-			weighted_loss_avg = (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).mean()
-			weighted_loss_avg.backward()
+				weighted_loss_avg = (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).mean()
+				weighted_loss_avg.backward()
+
+				total_loss += (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).sum().item()
+			else:
+				outputs = model(**batch)
+				loss = outputs.loss
+				loss.backward()
+
+				total_loss += loss.item()
 
 			optimizer.step()
 			optimizer.zero_grad()
-
-			total_loss += (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).sum().item()
 
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
@@ -129,7 +135,7 @@ def training(config):
 		all_preds = []
 		all_labels = []
 		with torch.no_grad():
-			for batch in tqdm(val_loader, desc=f"Epoch {epoch+1}/{num_epochs}", leave=False):
+			for batch in tqdm(val_loader, desc=f"Epoch {epoch + 1}/{num_epochs}", leave=False):
 				labels = batch["labels"].cpu().numpy()
 				for k, v in batch.items():
 					if isinstance(v, torch.Tensor):

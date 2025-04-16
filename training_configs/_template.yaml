@@ -14,6 +14,9 @@ training_data_path: "data_preprocessed/BioLinkBERT-base/training.pkl"
 # Path to the preprocessed validation dataset (pickle file expected).
 validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl"
 
+# Boolean for if the training data is weighted or not
+weighted_training: False
+
 # ===========================
 # Training Hyperparameters
 # ===========================
