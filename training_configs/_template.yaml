@@ -17,6 +17,13 @@ validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl"
 # Boolean for if the training data is weighted or not
 weighted_training: False
 
+# Weights for weighted training. Has to correspond to the datasets the number and order of datasets in preprocessing/main.py
+dataset_weights:
+- 1.2
+- 1.2
+- 1.0
+- 0.33
+
 # ===========================
 # Training Hyperparameters
 # ===========================

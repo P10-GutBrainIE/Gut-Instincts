@@ -8,7 +8,7 @@ from preprocessing.tokenization import BIOTokenizer
 from utils.utils import load_json_data
 
 
-def create_training_dataset(experiment_name: str, model_name: str):
+def create_training_dataset(experiment_name: str, model_name: str, dataset_weights: list[float]):
 	shared_path = os.path.join("data", "Annotations", "Train")
 	platinum_data = load_json_data(os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"))
 	gold_data = load_json_data(os.path.join(shared_path, "gold_quality", "json_format", "train_gold.json"))
@@ -38,7 +38,7 @@ def create_training_dataset(experiment_name: str, model_name: str):
 	tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 	bio_tokenizer = BIOTokenizer(
 		datasets=[platinum_data, gold_data, silver_data, bronze_data],
-		dataset_weights=[1.5, 1.5, 1, 0.333],
+		dataset_weights=dataset_weights,
 		save_filename=os.path.join(experiment_name, "training.pkl"),
 		tokenizer=tokenizer,
 	)
@@ -69,5 +69,5 @@ if __name__ == "__main__":
 
 	os.makedirs(os.path.join("data_preprocessed", config["experiment_name"]), exist_ok=True)
 
-	create_training_dataset(config["experiment_name"], config["model_name"])
+	create_training_dataset(config["experiment_name"], config["model_name"], config["dataset_weights"])
 	create_validation_dataset(config["experiment_name"], config["model_name"])
