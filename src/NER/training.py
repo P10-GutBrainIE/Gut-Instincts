@@ -7,10 +7,12 @@ from transformers import (
 	AutoModelForTokenClassification,
 )
 import torch
+from torch.nn.utils.rnn import pad_sequence
 from utils.utils import load_bio_labels, load_pkl_data, print_metrics
 from NER.compute_metrics import compute_metrics
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
+from NER.architectures.bert_linear_crf import BertLinearCRF
 import sys
 from tqdm import tqdm
 
@@ -36,9 +38,11 @@ def training(config):
 
 	label_list, label2id, id2label = load_bio_labels()
 
-	model = AutoModelForTokenClassification.from_pretrained(
-		config["model_name"], num_labels=len(label_list), id2label=id2label, label2id=label2id
-	)
+	# model = AutoModelForTokenClassification.from_pretrained(
+	# 	config["model_name"], num_labels=len(label_list), id2label=id2label, label2id=label2id
+	# )
+
+	model = BertLinearCRF(model_name=config["model_name"], num_labels=len(label_list))
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
 	output_dir = os.path.join("models", config["experiment_name"])
@@ -106,10 +110,16 @@ def training(config):
 
 				total_loss += (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).sum().item()
 			else:
-				outputs = model(**batch)
-				loss = outputs.loss
+				# outputs = model(**batch)
+				# loss = outputs.loss
+				# loss.backward()
+				outputs = model(
+					input_ids=batch["input_ids"],
+					attention_mask=batch["attention_mask"],
+					labels=batch["labels"]
+				)
+				loss = outputs["loss"]
 				loss.backward()
-
 				total_loss += loss.item()
 
 			optimizer.step()
@@ -141,9 +151,18 @@ def training(config):
 				for k, v in batch.items():
 					if isinstance(v, torch.Tensor):
 						batch[k] = v.to(device)
-				outputs = model(**batch)
-				logits = outputs.logits.detach().cpu().numpy()
-				all_preds.extend(logits)
+				#outputs = model(**batch)
+				outputs = model(input_ids=batch["input_ids"], attention_mask=batch["attention_mask"])
+				#logits = outputs.logits.detach().cpu().numpy()
+				logits = outputs["logits"]
+
+				padded_predictions = pad_sequence(
+						[torch.tensor(logit) for logit in logits],
+						batch_first=True,
+						padding_value=-100,
+				)
+
+				all_preds.extend(padded_predictions.cpu().numpy())
 				all_labels.extend(labels)
 
 		metrics, log_metrics = compute_metrics(all_preds, all_labels)

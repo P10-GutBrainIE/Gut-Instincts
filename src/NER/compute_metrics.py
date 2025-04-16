@@ -3,15 +3,20 @@ from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 
 def compute_metrics(predictions, labels):
-	predictions = np.argmax(predictions, axis=2)
+	#predictions = np.argmax(predictions, axis=2)
+	if isinstance(predictions, list):
+		decoded_preds = predictions
+	else:
+		predictions = np.argmax(predictions, axis=2)
+		decoded_preds = predictions.tolist()
 
-	true_predictions = [p for pred, lbl in zip(predictions, labels) for p, la in zip(pred, lbl) if la != -100]
-	true_labels = [la for pred, lbl in zip(predictions, labels) for _, la in zip(pred, lbl) if la != -100]
+	true_predictions = [p for pred, lbl in zip(decoded_preds, labels) for p, la in zip(pred, lbl) if la != -100]
+	true_labels = [la for pred, lbl in zip(decoded_preds, labels) for _, la in zip(pred, lbl) if la != -100]
 
 	true_predictions_no_o = [
-		p for pred, lbl in zip(predictions, labels) for p, la in zip(pred, lbl) if la not in [-100, 0]
+		p for pred, lbl in zip(decoded_preds, labels) for p, la in zip(pred, lbl) if la not in [-100, 0]
 	]
-	true_labels_no_o = [la for pred, lbl in zip(predictions, labels) for _, la in zip(pred, lbl) if la not in [-100, 0]]
+	true_labels_no_o = [la for pred, lbl in zip(decoded_preds, labels) for _, la in zip(pred, lbl) if la not in [-100, 0]]
 
 	metrics = {}
 	log_metrics = {}
