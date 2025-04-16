@@ -1,4 +1,4 @@
-experiment_name: "BioLinkBert-base"
+experiment_name: "BioLinkBert-base_with_freezing"
 model_name: "michiyasunaga/BioLinkBERT-base"
 training_data_path: "data_preprocessed/BioLinkBert-base/training.pkl"
 validation_data_path: "data_preprocessed/BioLinkBert-base/validation.pkl"

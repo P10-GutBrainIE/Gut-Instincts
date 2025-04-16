@@ -1,4 +1,4 @@
-experiment_name: "inference_ensemble_test"
+experiment_name: "inference_ensemble_test_with_freezing"
 model_configs:
   - "training_configs/ensemble_inference/BioLinkBert-base.yaml"
   - "training_configs/ensemble_inference/BiomedBert-abstract.yaml"
