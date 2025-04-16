@@ -65,7 +65,7 @@ hyperparameters:
     # threshold: Threshold for measuring new optimum, to ignore small improvements.
 
     # For 'custom':
-    # LambdaLR for warmup followed by StepLR. Remember to set learning_rate to the same LR and the first LR in the custom schedule.
-    # custom_schedule: Used for warmup with a list of 3-tuples (start_epoch, end_epoch, LR from start to end (start and end included)).
+    # LambdaLR for warmup followed by StepLR.
+    # custom_schedule: Used for warmup with a list of 3-tuples (start_epoch, end_epoch, multiplier).
     # step_size: When to update the LR with a factor of gamma.
     # gamma: The factor to update the the LR with.
