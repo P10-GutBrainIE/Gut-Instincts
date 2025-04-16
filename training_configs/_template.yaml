@@ -47,7 +47,7 @@ hyperparameters:
     # Supported values:
     # - "cosine annealing"     → smooth decay using cosine curve.
     # - "reduce on plateau"    → reduce LR if validation metric stops improving.
-    # - "lambda"               → fully custom LR schedule.
+    # - "custom"               → fully custom LR schedule.
     method: "cosine annealing"
 
     # Initial learning rate at the start of training.
