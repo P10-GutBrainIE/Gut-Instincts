@@ -14,10 +14,12 @@ class BIOTokenizer:
 		datasets: list[dict],
 		tokenizer: AutoTokenizer,
 		save_filename: str = None,
+		dataset_weights: list = None,
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
 	):
 		self.datasets = datasets
+		self.dataset_weights = dataset_weights
 		self.tokenizer = tokenizer
 		self.save_filename = save_filename
 		self.max_length = max_length
@@ -32,10 +34,16 @@ class BIOTokenizer:
 		"""
 		logger.info("Starting to process files...")
 		all_data = []
-		for data in self.datasets:
-			for _, content in data.items():
-				processed_data = self._process_paper(content)
-				all_data.extend(processed_data)
+		if self.dataset_weights:
+			for data, dataset_weight in zip(self.datasets, self.dataset_weights):
+				for _, content in data.items():
+					processed_data = self._process_paper(content, dataset_weight)
+					all_data.extend(processed_data)
+		else:
+			for data in self.datasets:
+				for _, content in data.items():
+					processed_data = self._process_paper(content, self.dataset_weights)
+					all_data.extend(processed_data)
 
 		logger.info("Files processed")
 
@@ -44,7 +52,7 @@ class BIOTokenizer:
 		else:
 			return all_data
 
-	def _process_paper(self, content):
+	def _process_paper(self, content, dataset_weight):
 		"""
 		Process a single paper's content for both title and abstract.
 
@@ -60,13 +68,23 @@ class BIOTokenizer:
 
 		for text, entities in zip(text_lst, entities_lst):
 			bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(text, entities)
-			processed.append(
-				{
-					"labels": bio_tag_ids,
-					"input_ids": input_ids,
-					"attention_mask": attention_mask,
-				}
-			)
+			if dataset_weight:
+				processed.append(
+					{
+						"labels": bio_tag_ids,
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+						"weight": dataset_weight,
+					}
+				)
+			else:
+				processed.append(
+					{
+						"labels": bio_tag_ids,
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+					}
+				)
 
 		return processed
 
@@ -147,21 +165,3 @@ class BIOTokenizer:
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"BIO tokenized data saved to {self.save_filename}. Data size: {len(data)}")
-
-
-if __name__ == "__main__":
-	from utils.utils import load_json_data, load_bio_labels
-
-	data = load_json_data(os.path.join("tests", "test_data", "tokenization.json"))
-	# data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
-	tokenizer = AutoTokenizer.from_pretrained("michiyasunaga/BioLinkBERT-large", use_fast=True)
-	bio_tokenizer = BIOTokenizer(datasets=[data], tokenizer=tokenizer, max_length=32, concatenate_title_abstract=True)
-	processed_data = bio_tokenizer.process_files()
-	print(processed_data)
-
-	# print(processed_data[0])
-
-	print(tokenizer.convert_ids_to_tokens(processed_data[0]["input_ids"]))
-
-	# _, _, id2label = load_bio_labels()
-	# print(id2label)

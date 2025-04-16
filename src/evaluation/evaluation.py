@@ -23,6 +23,7 @@ eval_6_3_ternary_tag_RE = False
 eval_6_4_ternary_mention_RE = False
 
 GROUND_TRUTH_PATH = os.path.join("data", "Annotations", "Dev", "json_format", "dev.json")
+# GROUND_TRUTH_PATH = os.path.join("data_preprocessed", "test_data.json")
 try:
 	with open(GROUND_TRUTH_PATH, "r", encoding="utf-8") as file:
 		ground_truth = json.load(file)

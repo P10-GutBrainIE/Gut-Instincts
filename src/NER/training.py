@@ -9,26 +9,13 @@ from transformers import (
 import torch
 from utils.utils import load_bio_labels, load_pkl_data, print_metrics
 from NER.compute_metrics import compute_metrics
+from NER.dataset import Dataset
+from NER.lr_scheduler import lr_scheduler
 import sys
 from tqdm import tqdm
 
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
-
-
-class CustomDataset(torch.utils.data.Dataset):
-	def __init__(self, data):
-		self.data = data
-
-	def __len__(self):
-		return len(self.data)
-
-	def __getitem__(self, idx):
-		sample = self.data[idx]
-		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long).clone().detach()
-		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long).clone().detach()
-		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long).clone().detach()
-		return sample
 
 
 def switch_freeze_state_model_parameters(model):
@@ -54,6 +41,10 @@ def training(config):
 	)
 	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 
+	output_dir = os.path.join("models", config["experiment_name"])
+	os.makedirs(output_dir, exist_ok=True)
+	tokenizer.save_pretrained(output_dir)
+
 	freeze_epochs = config["hyperparameters"]["freeze_epochs"]
 	if freeze_epochs > 0:
 		print(f"Freezing model parameters for the first {freeze_epochs} epochs")
@@ -62,8 +53,8 @@ def training(config):
 	device = torch.device("cuda")
 	model.to(device)
 
-	training_dataset = CustomDataset(training_data)
-	validation_dataset = CustomDataset(validation_data)
+	training_dataset = Dataset(training_data)
+	validation_dataset = Dataset(validation_data, is_validation=True)
 
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
@@ -74,19 +65,15 @@ def training(config):
 		shuffle=False,
 	)
 
-	current_lr = config["hyperparameters"]["learning_rate"]
+	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
+	loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
+	scheduler = lr_scheduler(config["hyperparameters"]["lr_scheduler"], optimizer)
 
-	scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-		optimizer=optimizer,
-		T_max=config["hyperparameters"]["num_epochs"],
-		eta_min=config["hyperparameters"]["min_learning_rate"],
-	)
-
-	num_epochs = config["hyperparameters"]["num_epochs"]
 	best_f1 = 0.0
 
-	#for epoch in range(num_epochs):
+
+	num_epochs = config["hyperparameters"]["num_epochs"]
 	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
 		model.train()
 
@@ -99,13 +86,27 @@ def training(config):
 			for k, v in batch.items():
 				if isinstance(v, torch.Tensor):
 					batch[k] = v.to(device)
-			outputs = model(**batch)
-			loss = outputs.loss
-			loss.backward()
+
+			outputs = model(
+				input_ids=batch["input_ids"],
+				attention_mask=batch["attention_mask"],
+				labels=batch["labels"],
+				return_dict=True,
+			)
+			logits = outputs.logits
+			labels = batch["labels"]
+			loss_values = loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1))
+			loss_values = loss_values.view(labels.size(0), -1)
+			mask = (labels != -100).float()
+			mean_loss_per_instance = (loss_values * mask).sum(dim=1) / mask.sum(dim=1)
+
+			weighted_loss_avg = (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).mean()
+			weighted_loss_avg.backward()
+
 			optimizer.step()
 			optimizer.zero_grad()
 
-			total_loss += loss.item()
+			total_loss += (mean_loss_per_instance * batch["weight"].to(mean_loss_per_instance.device)).sum().item()
 
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
@@ -118,7 +119,9 @@ def training(config):
 			step=epoch,
 		)
 
-		print(f"Epoch {epoch + 1}/{num_epochs} | Training loss: {avg_loss:.4f} | Learning rate: {current_lr:.8f}")
+		print(
+			f"Epoch {epoch + 1}/{num_epochs} | Training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
+		)
 
 		scheduler.step(epoch)
 
@@ -141,13 +144,19 @@ def training(config):
 
 		mlflow.log_metrics(log_metrics, step=epoch)
 
-		if metrics["no_o"]["F1_micro"] > best_f1:
-			best_f1 = metrics["no_o"]["F1_micro"]
-			output_dir = os.path.join("models", config["experiment_name"])
-			os.makedirs(output_dir, exist_ok=True)
+		if metrics["all"]["F1_micro"] > best_f1:
+			best_f1 = metrics["all"]["F1_micro"]
 			model.save_pretrained(output_dir)
-			tokenizer.save_pretrained(output_dir)
+
 			print(f"New best model saved with F1_micro (ignoring O class): {best_f1:.4f}")
+
+		if epoch == num_epochs - 1:
+			output_dir = os.path.join("models", f"{config['experiment_name']}_last_epoch")
+			os.makedirs(output_dir, exist_ok=True)
+			tokenizer.save_pretrained(output_dir)
+			model.save_pretrained(output_dir)
+
+			print("Model at last epoch saved")
 
 	mlflow.end_run()
 
