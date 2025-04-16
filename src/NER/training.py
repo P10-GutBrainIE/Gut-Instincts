@@ -12,6 +12,7 @@ from NER.compute_metrics import compute_metrics
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
 import sys
+from tqdm import tqdm
 
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
@@ -71,8 +72,9 @@ def training(config):
 
 	best_f1 = 0.0
 
+
 	num_epochs = config["hyperparameters"]["num_epochs"]
-	for epoch in range(num_epochs):
+	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
 		model.train()
 
 		if freeze_epochs > 0 and epoch == freeze_epochs:
@@ -80,7 +82,7 @@ def training(config):
 			model = switch_freeze_state_model_parameters(model)
 
 		total_loss = 0
-		for batch in train_loader:
+		for batch in tqdm(train_loader, desc=f"Epoch {epoch+1}/{num_epochs}", leave=False):
 			for k, v in batch.items():
 				if isinstance(v, torch.Tensor):
 					batch[k] = v.to(device)
@@ -127,7 +129,7 @@ def training(config):
 		all_preds = []
 		all_labels = []
 		with torch.no_grad():
-			for batch in val_loader:
+			for batch in tqdm(val_loader, desc=f"Epoch {epoch+1}/{num_epochs}", leave=False):
 				labels = batch["labels"].cpu().numpy()
 				for k, v in batch.items():
 					if isinstance(v, torch.Tensor):

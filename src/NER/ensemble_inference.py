@@ -1,5 +1,4 @@
 import os
-import json
 import argparse
 import yaml
 from utils.utils import save_json_data
@@ -34,8 +33,6 @@ def majority_vote(predictions):
 			for entity in content["entities"]:
 				key = (paper_id, entity["start_idx"], entity["end_idx"], entity["location"])
 				entity_votes[key].append((entity["label"], entity["text_span"]))
-
-	print(entity_votes)
 
 	for (paper_id, start_idx, end_idx, location), votes in entity_votes.items():
 		if len(votes) < 2:
@@ -74,7 +71,3 @@ if __name__ == "__main__":
 		data=ensemble_predictions,
 		output_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
 	)
-	# save_ensemble_results(
-	# 	predictions=ensemble_predictions,
-	# 	save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
-	# )

@@ -1,4 +1,4 @@
-experiment_name: "BiomedBert-base-uncased-abstract-fulltext"
+experiment_name: "BiomedBert-base-uncased-abstract-fulltext_with_freezing"
 model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
 training_data_path: "data_preprocessed/BiomedBert-base-uncased-abstract-fulltext/training.pkl"
 validation_data_path: "data_preprocessed/BiomedBert-base-uncased-abstract-fulltext/validation.pkl"
@@ -6,6 +6,5 @@ hyperparameters:
   num_epochs: 32
   batch_size: 16
   learning_rate: 0.0001
-  lr_scheduler_factor: 0.5
-  lr_scheduler_threshold: 0.04
-  freeze_epochs: 0
+  min_learning_rate: 0.0000001
+  freeze_epochs: 24

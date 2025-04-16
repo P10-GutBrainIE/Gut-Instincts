@@ -27,7 +27,7 @@ class NERInference:
 
 	def perform_inference(self):
 		result = {}
-		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing Inference"):
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
 			entity_predictions = []
 
 			try:
@@ -47,7 +47,7 @@ class NERInference:
 
 	def perform_inference_return_data(self):
 		result = {}
-		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing Inference"):
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
 			entity_predictions = []
 
 			try:
@@ -65,7 +65,7 @@ class NERInference:
 
 	def perform_inference_concatenated(self):
 		result = {}
-		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing Inference"):
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
 			text = content["metadata"]["title"] + " " + content["metadata"]["abstract"]
 			entity_predictions = []
 
