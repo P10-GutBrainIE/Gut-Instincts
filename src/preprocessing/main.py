@@ -67,7 +67,12 @@ if __name__ == "__main__":
 	with open(args.config, "r") as file:
 		config = yaml.safe_load(file)
 
+	if config["weighted_training"]:
+		dataset_weights = config.get(["dataset_weights"])
+	else:
+		dataset_weights = None
+
 	os.makedirs(os.path.join("data_preprocessed", config["experiment_name"]), exist_ok=True)
 
-	create_training_dataset(config["experiment_name"], config["model_name"], config.get(["dataset_weights"]))
+	create_training_dataset(config["experiment_name"], config["model_name"], dataset_weights)
 	create_validation_dataset(config["experiment_name"], config["model_name"])
