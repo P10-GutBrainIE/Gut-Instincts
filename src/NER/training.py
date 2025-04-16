@@ -9,28 +9,11 @@ from transformers import (
 import torch
 from utils.utils import load_bio_labels, load_pkl_data, print_metrics
 from NER.compute_metrics import compute_metrics
+from NER.dataset import Dataset
 import sys
 
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
-
-
-class CustomDataset(torch.utils.data.Dataset):
-	def __init__(self, data, is_validation: bool = False):
-		self.data = data
-		self.is_validation = is_validation
-
-	def __len__(self):
-		return len(self.data)
-
-	def __getitem__(self, idx):
-		sample = self.data[idx]
-		sample["input_ids"] = torch.tensor(sample["input_ids"], dtype=torch.long)
-		sample["attention_mask"] = torch.tensor(sample["attention_mask"], dtype=torch.long)
-		sample["labels"] = torch.tensor(sample["labels"], dtype=torch.long)
-		if not self.is_validation:
-			sample["weight"] = torch.tensor(sample["weight"], dtype=torch.float)
-		return sample
 
 
 def switch_freeze_state_model_parameters(model):
@@ -68,8 +51,8 @@ def training(config):
 	device = torch.device("cuda")
 	model.to(device)
 
-	training_dataset = CustomDataset(training_data)
-	validation_dataset = CustomDataset(validation_data, is_validation=True)
+	training_dataset = Dataset(training_data)
+	validation_dataset = Dataset(validation_data, is_validation=True)
 
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
