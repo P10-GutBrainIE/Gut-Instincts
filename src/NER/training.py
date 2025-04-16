@@ -10,6 +10,7 @@ import torch
 from utils.utils import load_bio_labels, load_pkl_data, print_metrics
 from NER.compute_metrics import compute_metrics
 from NER.dataset import Dataset
+from NER.lr_scheduler import lr_scheduler
 import sys
 
 sys.stdout.reconfigure(line_buffering=True)
@@ -63,19 +64,14 @@ def training(config):
 		shuffle=False,
 	)
 
-	current_lr = config["hyperparameters"]["learning_rate"]
+	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
 	loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
+	scheduler = lr_scheduler(config["hyperparameters"]["lr_scheduler"], optimizer)
 
-	scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
-		optimizer=optimizer,
-		T_max=config["hyperparameters"]["num_epochs"],
-		eta_min=config["hyperparameters"]["min_learning_rate"],
-	)
-
-	num_epochs = config["hyperparameters"]["num_epochs"]
 	best_f1 = 0.0
 
+	num_epochs = config["hyperparameters"]["num_epochs"]
 	for epoch in range(num_epochs):
 		model.train()
 
