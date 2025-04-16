@@ -10,7 +10,7 @@ dataset_weights:
 - 0.33
 hyperparameters:
   num_epochs: 20
-  batch_size: 32
+  batch_size: 16
   freeze_epochs: 0
   lr_scheduler:
     method: "custom"
