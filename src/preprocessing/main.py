@@ -37,7 +37,7 @@ def create_training_dataset(experiment_name: str, model_name: str, dataset_weigh
 
 	tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 	bio_tokenizer = BIOTokenizer(
-		datasets=[platinum_data, gold_data, silver_data, bronze_data],
+		datasets=[platinum_data, gold_data, silver_data],
 		dataset_weights=dataset_weights,
 		save_filename=os.path.join(experiment_name, "training.pkl"),
 		tokenizer=tokenizer,
