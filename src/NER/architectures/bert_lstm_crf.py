@@ -1,0 +1,48 @@
+import torch
+import torch.nn as nn
+from transformers import AutoModel
+from torchcrf import CRF
+import os
+
+
+class BertLSTMCRF(nn.Module):
+	def __init__(self, model_name, num_labels, lstm_hidden_dim=256, dropout_prob=0.3):
+		super().__init__()
+		self.bert = AutoModel.from_pretrained(model_name)
+		self.dropout = nn.Dropout(dropout_prob)
+		self.lstm = nn.LSTM(
+			input_size=self.bert.config.hidden_size,
+			hidden_size=lstm_hidden_dim,
+			num_layers=1,
+			batch_first=True,
+			bidirectional=True,
+		)
+		self.classifier = nn.Linear(lstm_hidden_dim * 2, num_labels)
+		self.crf = CRF(num_tags=num_labels, batch_first=True)
+
+	def forward(self, input_ids, attention_mask=None, labels=None):
+		outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+		sequence_output = self.dropout(outputs.last_hidden_state)
+		lstm_output, _ = self.lstm(sequence_output)
+		lstm_output = self.dropout(lstm_output)
+		logits = self.classifier(lstm_output)
+
+		mask = attention_mask.bool() if attention_mask is not None else None
+
+		output = {"logits": logits}
+		if labels is not None:
+			output["loss"] = -self.crf(logits, labels, mask=mask, reduction="mean")
+		else:
+			output["decoded_tags"] = self.crf.decode(logits, mask=mask)
+		return output
+
+	def save(self, output_dir):
+		os.makedirs(output_dir, exist_ok=True)
+		torch.save(self.state_dict(), os.path.join(output_dir, "pytorch_model.bin"))
+
+	@classmethod
+	def load(cls, output_dir, model_name, num_labels, lstm_hidden_dim=256, dropout_prob=0.3):
+		model = cls(model_name, num_labels, lstm_hidden_dim, dropout_prob)
+		state_dict = torch.load(os.path.join(output_dir, "pytorch_model.bin"), map_location="cpu")
+		model.load_state_dict(state_dict)
+		return model

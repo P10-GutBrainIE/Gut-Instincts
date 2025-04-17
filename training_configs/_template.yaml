@@ -5,6 +5,9 @@
 # Descriptive name for this experiment run.
 experiment_name: "BioLinkBERT-base"
 
+# Type of model to train.
+model_type: "huggingface"
+
 # The Huggingface model identifier or path to a pre-trained model.
 model_name: "michiyasunaga/BioLinkBERT-base"
 
