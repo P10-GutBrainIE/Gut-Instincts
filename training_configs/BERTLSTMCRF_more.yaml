@@ -1,8 +1,8 @@
-experiment_name: "BERTLSTMCRF"
+experiment_name: "BERTLSTMCRF_more"
 model_type: "bertlstmcrf"
 model_name: "michiyasunaga/BioLinkBERT-base"
-training_data_path: "data_preprocessed/BERTLSTMCRF/training.pkl"
-validation_data_path: "data_preprocessed/BERTLSTMCRF/validation.pkl"
+training_data_path: "data_preprocessed/BERTLSTMCRF_more/training.pkl"
+validation_data_path: "data_preprocessed/BERTLSTMCRF_more/validation.pkl"
 weighted_training: False
 hyperparameters:
   num_epochs: 30
