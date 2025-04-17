@@ -27,7 +27,15 @@ class BertLSTMCRF(nn.Module):
 		lstm_output = self.dropout(lstm_output)
 		logits = self.classifier(lstm_output)
 
-		mask = attention_mask.bool() if attention_mask is not None else None
+		# If labels exist, mask out padding (-100)
+		if labels is not None:
+			# mask: True where labels are not -100 and attention_mask is 1
+			mask = (labels != -100) & (attention_mask.bool() if attention_mask is not None else True)
+			# Replace -100 in labels with a valid value (e.g., 0, it will be ignored by mask)
+			labels = labels.clone()
+			labels[labels == -100] = 0
+		else:
+			mask = attention_mask.bool() if attention_mask is not None else None
 
 		output = {"logits": logits}
 		if labels is not None:
