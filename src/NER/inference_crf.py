@@ -29,7 +29,6 @@ class NERInference:
 				num_labels=len(label_list),
 				id2label=id2label,
 				label2id=label2id,
-				use_safetensors=True,
 			)
 			self.classifier = pipeline(
 				"ner",
@@ -40,7 +39,6 @@ class NERInference:
 			)
 		elif self.model_type == "bertlstmcrf":
 			self.model = BertLSTMCRF(
-				model_name_path,
 				model_name=model_name_path,  # For loading the backbone
 				num_labels=len(label_list),
 				lstm_hidden_dim=256,  # Or load from config
