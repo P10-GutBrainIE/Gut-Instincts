@@ -27,20 +27,19 @@ class BertLSTMCRF(nn.Module):
 		lstm_output = self.dropout(lstm_output)
 		logits = self.classifier(lstm_output)
 
-		# If labels exist, mask out padding (-100)
-		if labels is not None:
-			# mask: True where labels are not -100 and attention_mask is 1
-			mask = (labels != -100) & (attention_mask.bool() if attention_mask is not None else True)
-			# Replace -100 in labels with a valid value (e.g., 0, it will be ignored by mask)
-			labels = labels.clone()
-			labels[labels == -100] = 0
-		else:
-			mask = attention_mask.bool() if attention_mask is not None else None
-
 		output = {"logits": logits}
 		if labels is not None:
+			mask = (labels != -100) & (attention_mask.bool() if attention_mask is not None else True)
+			if not mask[:, 0].all():
+				labels = labels.clone()
+				fix_mask = (labels[:, 0] == -100) & (attention_mask[:, 0] == 1)
+				labels[fix_mask, 0] = 0
+				mask[:, 0] = True
+			labels = labels.clone()
+			labels[labels == -100] = 0
 			output["loss"] = -self.crf(logits, labels, mask=mask, reduction="mean")
 		else:
+			mask = attention_mask.bool() if attention_mask is not None else None
 			output["decoded_tags"] = self.crf.decode(logits, mask=mask)
 		return output
 

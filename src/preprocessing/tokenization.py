@@ -166,3 +166,10 @@ class BIOTokenizer:
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"BIO tokenized data saved to {self.save_filename}. Data size: {len(data)}")
+
+
+if __name__ == "__main__":
+	from utils.utils import load_pkl_data
+
+	data = load_pkl_data("data_preprocessed/BioLinkBERT-base/training_with_html.pkl")
+	print(data[0])
