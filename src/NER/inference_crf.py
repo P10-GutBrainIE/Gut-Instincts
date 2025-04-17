@@ -24,7 +24,7 @@ class NERInference:
 		self.tokenizer = AutoTokenizer.from_pretrained(model_name_path, use_fast=True, max_length=512, truncation=True)
 
 		if self.model_type == "huggingface":
-			model = HFTokenClassifier.from_pretrained(
+			model = HFTokenClassifier(
 				model_name_path,
 				num_labels=len(label_list),
 				id2label=id2label,
@@ -39,7 +39,7 @@ class NERInference:
 				device=0 if torch.cuda.is_available() else -1,
 			)
 		elif self.model_type == "bertlstmcrf":
-			self.model = BertLSTMCRF.from_pretrained(
+			self.model = BertLSTMCRF(
 				model_name_path,
 				model_name=model_name_path,  # For loading the backbone
 				num_labels=len(label_list),
