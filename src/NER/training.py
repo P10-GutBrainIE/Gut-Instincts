@@ -135,7 +135,7 @@ def training(config):
 
 		if epoch == num_epochs - 1:
 			output_dir_last = os.path.join("models", f"{config['experiment_name']}_last_epoch")
-			os.makedirs(output_dir_last, exist_ok=True)  # Only create if saving to a new dir
+			os.makedirs(output_dir_last, exist_ok=True)
 			model.save(output_dir_last)
 			print("Model at last epoch saved")
 

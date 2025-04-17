@@ -2,6 +2,7 @@ import argparse
 import yaml
 import os
 import mlflow
+import numpy as np
 from transformers import (
 	AutoTokenizer,
 	AutoModelForTokenClassification,
@@ -144,7 +145,7 @@ def training(config):
 				all_preds.extend(logits)
 				all_labels.extend(labels)
 
-		metrics, log_metrics = compute_metrics(all_preds, all_labels)
+		metrics, log_metrics = compute_metrics(np.argmax(all_preds, axis=2), all_labels)
 		print_metrics(metrics)
 
 		mlflow.log_metrics(log_metrics, step=epoch)
