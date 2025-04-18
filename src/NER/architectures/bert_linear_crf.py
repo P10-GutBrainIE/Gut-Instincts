@@ -17,15 +17,14 @@ class BertLinearCRF(nn.Module):
 		emissions = self.linear(sequence_output)
 
 		mask = attention_mask.bool()
+		mask[:, 0] = True
 
 		if labels is not None:
 			labels = labels.clone()
-			mask = labels != -100
-			labels[~mask] = 0
-
+			labels[labels == -100] = 0
 			loss = -self.crf(emissions, labels, mask=mask, reduction="mean")
 			return {"loss": loss, "logits": emissions}
 		else:
-			mask = attention_mask.bool()
 			predictions = self.crf.decode(emissions, mask=mask)
-			return {"logits": predictions}
+			trimmed_predictions = [seq[1:len(seq)-1] for seq in predictions]
+			return {"predictions": trimmed_predictions}
