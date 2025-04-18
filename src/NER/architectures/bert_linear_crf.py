@@ -15,7 +15,13 @@ class BertLinearCRF(nn.Module):
         sequence_output = self.dropout(outputs.last_hidden_state)
         emissions = self.linear(sequence_output)
 
+        mask = attention_mask.bool()
+
         if labels is not None:
+            # Set the padding labels to 0 as -100 is out of range for CRF
+            labels = labels.clone()
+            labels[~mask] = 0
+
             loss = -self.crf(emissions, labels, mask=attention_mask.bool(), reduction='mean')
             return {"loss": loss, "logits:": emissions}
         else:
