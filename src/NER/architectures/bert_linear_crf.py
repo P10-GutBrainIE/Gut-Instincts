@@ -27,4 +27,4 @@ class BertLinearCRF(nn.Module):
 		else:
 			predictions = self.crf.decode(emissions, mask=mask)
 			trimmed_predictions = [seq[1:len(seq)-1] for seq in predictions]
-			return {"predictions": trimmed_predictions}
+			return {"logits": trimmed_predictions}
