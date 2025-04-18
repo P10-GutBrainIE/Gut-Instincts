@@ -114,9 +114,7 @@ def training(config):
 				# loss = outputs.loss
 				# loss.backward()
 				outputs = model(
-					input_ids=batch["input_ids"],
-					attention_mask=batch["attention_mask"],
-					labels=batch["labels"]
+					input_ids=batch["input_ids"], attention_mask=batch["attention_mask"], labels=batch["labels"]
 				)
 				loss = outputs["loss"]
 				loss.backward()
@@ -151,15 +149,15 @@ def training(config):
 				for k, v in batch.items():
 					if isinstance(v, torch.Tensor):
 						batch[k] = v.to(device)
-				#outputs = model(**batch)
+				# outputs = model(**batch)
 				outputs = model(input_ids=batch["input_ids"], attention_mask=batch["attention_mask"])
-				#logits = outputs.logits.detach().cpu().numpy()
+				# logits = outputs.logits.detach().cpu().numpy()
 				logits = outputs["logits"]
 
 				padded_predictions = pad_sequence(
-						[torch.tensor(logit) for logit in logits],
-						batch_first=True,
-						padding_value=-100,
+					[torch.tensor(logit) for logit in logits],
+					batch_first=True,
+					padding_value=-100,
 				)
 
 				all_preds.extend(padded_predictions.cpu().numpy())
@@ -172,15 +170,18 @@ def training(config):
 
 		if metrics["all"]["F1_micro"] > best_f1:
 			best_f1 = metrics["all"]["F1_micro"]
-			model.save_pretrained(output_dir)
+
+			torch.save(model.state_dict(), os.path.join(output_dir, "best_model_f1_micro.pth"))
 
 			print(f"New best model saved with F1_micro (ignoring O class): {best_f1:.4f}")
 
 		if epoch == num_epochs - 1:
 			output_dir = os.path.join("models", f"{config['experiment_name']}_last_epoch")
 			os.makedirs(output_dir, exist_ok=True)
+
+			torch.save(model.state_dict(), os.path.join(output_dir, "final_model.pth"))
 			tokenizer.save_pretrained(output_dir)
-			model.save_pretrained(output_dir)
+			
 
 			print("Model at last epoch saved")
 
