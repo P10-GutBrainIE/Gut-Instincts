@@ -11,34 +11,43 @@ from utils.utils import load_json_data, load_bio_labels
 
 class NERInference:
 	def __init__(
-		self, test_data_path: str, model_name_path: str, model_name: str, model_type: str, save_path: str = None
+		self,
+		test_data_path: str,
+		model_name: str,
+		model_type: str,
+		model_name_path: str = None,
+		save_path: str = None,
+		validation_model=None,
 	):
 		self.test_data = load_json_data(test_data_path)
 		label_list, label2id, self.id2label = load_bio_labels()
 		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
-		if model_type == "huggingface":
-			model = AutoModelForTokenClassification.from_pretrained(
-				model_name_path,
-				num_labels=len(label_list),
-				id2label=self.id2label,
-				label2id=label2id,
-				use_safetensors=True,
-			)
-			self.classifier = pipeline("ner", model=model, tokenizer=self.tokenizer)
-		elif model_type == "bertlstmcrf":
-			from NER.architectures.bert_lstm_crf import BertLSTMCRF
-
-			model = BertLSTMCRF(
-				model_name=model_name,
-				num_labels=len(label_list),
-			)
-			state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location="cpu")
-			model.load_state_dict(state_dict)
-			model.eval()
-			self.model = model
+		if validation_model:
+			self.model = validation_model
 		else:
-			raise ValueError("Unknown model_type")
+			if model_type == "huggingface":
+				model = AutoModelForTokenClassification.from_pretrained(
+					model_name_path,
+					num_labels=len(label_list),
+					id2label=self.id2label,
+					label2id=label2id,
+					use_safetensors=True,
+				)
+				self.classifier = pipeline("ner", model=model, tokenizer=self.tokenizer)
+			elif model_type == "bertlstmcrf":
+				from NER.architectures.bert_lstm_crf import BertLSTMCRF
+
+				model = BertLSTMCRF(
+					model_name=model_name,
+					num_labels=len(label_list),
+				)
+				state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location="cpu")
+				model.load_state_dict(state_dict)
+				model.eval()
+				self.model = model
+			else:
+				raise ValueError("Unknown model_type")
 
 		self.save_path = save_path
 

@@ -7,8 +7,8 @@ import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer
 
-from utils.utils import load_bio_labels, load_pkl_data, print_metrics
-from NER.compute_metrics import compute_metrics
+from utils.utils import load_bio_labels, load_pkl_data, print_metrics, print_evaluation_metrics
+from NER.compute_metrics import compute_metrics, compute_evaluation_metrics
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
 
@@ -143,7 +143,11 @@ def training(config):
 				all_labels.extend(labels)
 
 		metrics, log_metrics = compute_metrics(all_preds, all_labels)
+		evaluation_metrics = compute_evaluation_metrics(
+			model=model, model_name=config["model_name"], model_type=config["model_type"]
+		)
 		print_metrics(metrics)
+		print_evaluation_metrics(evaluation_metrics)
 		mlflow.log_metrics(log_metrics, step=epoch)
 
 		if metrics["all"]["F1_micro"] > best_f1_micro:

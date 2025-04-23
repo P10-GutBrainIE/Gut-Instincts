@@ -117,3 +117,11 @@ def print_metrics(metrics):
 
 	for metric, all_value, no_o_value in zip(metrics["all"].keys(), metrics["all"].values(), metrics["no_o"].values()):
 		print(f"  {metric:<25} {all_value:>10.4f} {no_o_value:>10.4f}")
+
+
+def print_evaluation_metrics(metrics):
+	print("Evaluation metrics:")
+	print(f"{'  Metric':<25}")
+
+	for metric, value in zip(metrics.keys(), metrics.values()):
+		print(f"  {metric:<25} {value:>10.4f}")
