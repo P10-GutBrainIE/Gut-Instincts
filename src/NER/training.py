@@ -20,20 +20,28 @@ def build_model(config, label_list, id2label, label2id):
 	if config["model_type"] == "huggingface":
 		from NER.architectures.hf_token_classifier import HFTokenClassifier
 
-		return HFTokenClassifier(
-			model_name=config["model_name"],
-			num_labels=len(label_list),
-			id2label=id2label,
-			label2id=label2id,
-		)
+		if config["weighted_training"]:
+			loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
+			return HFTokenClassifier(
+				model_name=config["model_name"],
+				num_labels=len(label_list),
+				id2label=id2label,
+				label2id=label2id,
+				loss_fn=loss_fn,
+			)
+		else:
+			return HFTokenClassifier(
+				model_name=config["model_name"],
+				num_labels=len(label_list),
+				id2label=id2label,
+				label2id=label2id,
+			)
 	elif config["model_type"] == "bertlstmcrf":
 		from NER.architectures.bert_lstm_crf import BertLSTMCRF
 
 		return BertLSTMCRF(
 			model_name=config["model_name"],
 			num_labels=len(label_list),
-			lstm_hidden_dim=config.get("lstm_hidden_dim", 256),
-			dropout_prob=config.get("dropout_prob", 0.3),
 		)
 	else:
 		raise ValueError("Unknown model_type")
@@ -56,7 +64,7 @@ def training(config):
 
 	training_data = load_pkl_data(config["training_data_path"])
 	validation_data = load_pkl_data(config["validation_data_path"])
-	training_dataset = Dataset(training_data, with_weights=False)
+	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 	validation_dataset = Dataset(validation_data, with_weights=False)
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
@@ -82,11 +90,19 @@ def training(config):
 					batch[k] = v.to(device)
 
 			optimizer.zero_grad()
-			outputs = model(
-				batch["input_ids"],
-				attention_mask=batch.get("attention_mask"),
-				labels=batch.get("labels"),
-			)
+			if config["weighted_traning"]:
+				outputs = model(
+					batch["input_ids"],
+					attention_mask=batch.get("attention_mask"),
+					labels=batch.get("labels"),
+					weight=batch.get("weight"),
+				)
+			else:
+				outputs = model(
+					batch["input_ids"],
+					attention_mask=batch.get("attention_mask"),
+					labels=batch.get("labels"),
+				)
 			loss = outputs["loss"]
 			loss.backward()
 			optimizer.step()
