@@ -21,7 +21,7 @@ class HFTokenClassifier(torch.nn.Module):
 			labels=labels,
 			return_dict=True,
 		)
-		if weight:
+		if weight is not None:
 			logits = outputs.logits
 			loss_values = self.loss_fn(logits.view(-1, logits.size(-1)), labels.view(-1))
 			loss_values = loss_values.view(labels.size(0), -1)
