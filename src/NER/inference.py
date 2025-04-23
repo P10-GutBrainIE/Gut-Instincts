@@ -3,24 +3,42 @@ import json
 import logging
 import argparse
 import yaml
+import torch
 from tqdm import tqdm
-from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
+from transformers import AutoModelForTokenClassification, AutoTokenizer, TokenClassificationPipeline, pipeline
 from utils.utils import load_json_data, load_bio_labels
 
 
 class NERInference:
-	def __init__(self, test_data_path: str, model_name_path: str, save_path: str = None):
+	def __init__(
+		self, test_data_path: str, model_name_path: str, model_name: str, model_type: str, save_path: str = None
+	):
 		self.test_data = load_json_data(test_data_path)
 		label_list, label2id, id2label = load_bio_labels()
-		model = AutoModelForTokenClassification.from_pretrained(
-			model_name_path,
-			num_labels=len(label_list),
-			id2label=id2label,
-			label2id=label2id,
-			use_safetensors=True,
-		)
 		tokenizer = AutoTokenizer.from_pretrained(model_name_path, use_fast=True, max_length=512, truncation=True)
-		self.classifier = pipeline("ner", model=model, tokenizer=tokenizer)
+		if model_type == "huggingface":
+			model = AutoModelForTokenClassification.from_pretrained(
+				model_name_path,
+				num_labels=len(label_list),
+				id2label=id2label,
+				label2id=label2id,
+				use_safetensors=True,
+			)
+			self.classifier = pipeline("ner", model=model, tokenizer=tokenizer)
+		elif model_type == "bertlstmcrf":
+			from NER.architectures.bert_lstm_crf import BertLSTMCRF
+
+			model = BertLSTMCRF(
+				model_name=model_name,
+				num_labels=len(label_list),
+			)
+			state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location="cpu")
+			model.load_state_dict(state_dict)
+			model.eval()
+			self.classifier = TokenClassificationPipeline(model=model, tokenizer=tokenizer)
+		else:
+			raise ValueError("Unknown model_type")
+
 		self.save_path = save_path
 
 	def perform_inference(self):
@@ -97,8 +115,10 @@ if __name__ == "__main__":
 		config = yaml.safe_load(file)
 
 	ner_inference = NERInference(
-		os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 		model_name_path=os.path.join("models", f"{config['experiment_name']}"),
+		model_name=config["model_name"],
+		model_type=config["model_type"],
 		save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
 	)
 	ner_inference.perform_inference()
