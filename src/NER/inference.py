@@ -97,8 +97,11 @@ class NERInference:
 		offsets = result["offset_mapping"][0][1:-1]
 
 		outputs = self.model.predict(result["input_ids"], result["attention_mask"])
-		print(outputs)
-		labels = [self.id2label[id] for id in outputs[0]][1:-1]
+		if isinstance(outputs[0], torch.Tensor):
+			outputs = outputs[0].tolist()
+		else:
+			outputs = outputs[0]
+		labels = [self.id2label[id] for id in outputs][1:-1]
 
 		return [
 			{"entity": label, "word": token, "start": int(start), "end": int(end)}
@@ -132,8 +135,6 @@ class NERInference:
 						current_entity["text_span"] += " " + word
 					current_entity["end_idx"] = token_prediction["end"] - 1
 				else:
-					print(token_prediction)
-					print(current_entity)
 					if current_entity:
 						merged.append(current_entity)
 					current_entity = {
