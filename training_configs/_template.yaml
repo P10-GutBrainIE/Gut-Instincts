@@ -1,60 +1,25 @@
-# ===========================
-# Experiment Configuration Template
-# ===========================
-
-# Descriptive name for this experiment run.
-experiment_name: "BioLinkBERT-base"
-
-# Type of model to train.
-model_type: "huggingface"
-
-# The Huggingface model identifier or path to a pre-trained model.
-model_name: "michiyasunaga/BioLinkBERT-base"
-
-# Path to the preprocessed training dataset (pickle file expected).
-training_data_path: "data_preprocessed/BioLinkBERT-base/training.pkl"
-
-# Path to the preprocessed validation dataset (pickle file expected).
-validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl"
-
-# Boolean for if the training data is weighted or not
-weighted_training: False
-
-# Weights for weighted training. Has to correspond to the datasets the number and order of datasets in preprocessing/main.py
-dataset_weights:
+experiment_name: "BioLinkBERT-base" # Descriptive name for this experiment run.
+model_type: "huggingface" # or "bertlstmcrf" # Type of model to train.
+model_name: "michiyasunaga/BioLinkBERT-base" # The Huggingface model identifier.
+training_data_path: "data_preprocessed/BioLinkBERT-base/training.pkl" # Path to the preprocessed training dataset.
+validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl" # Path to the preprocessed validation dataset.
+weighted_training: False # Boolean for if the training data is weighted or not
+dataset_weights: # Weights for weighted training. Has to correspond to the datasets the number and order of datasets in preprocessing/main.py
 - 1.2
 - 1.2
 - 1.0
 - 0.33
-
-# ===========================
-# Training Hyperparameters
-# ===========================
 hyperparameters:
-  # Total number of full passes over the dataset.
-  num_epochs: 25
-
-  # Number of samples processed in one forward/backward pass.
-  batch_size: 16
-
-  # Number of epochs to freeze part of the model (e.g. embeddings + bottom layers).
-  # This is useful for transfer learning — you can unfreeze later for fine-tuning.
-  freeze_epochs: 0
-
-  # ===========================
-  # Learning Rate Scheduler Settings
-  # ===========================
+  num_epochs: 25 # Total number of full passes over the dataset.
+  batch_size: 16 # Number of samples processed in one forward/backward pass.
+  freeze_epochs: 0 # Number of epochs to freeze part of the model (e.g. embeddings + bottom layers).
   lr_scheduler:
-
-    # Name of the scheduling strategy for adjusting the learning rate.
+    method: "cosine annealing"  # Name of the scheduling strategy for adjusting the learning rate.
     # Supported values:
     # - "cosine annealing"     → smooth decay using cosine curve.
     # - "reduce on plateau"    → reduce LR if validation metric stops improving.
     # - "custom"               → fully custom LR schedule.
-    method: "cosine annealing"
-
-    # Initial learning rate at the start of training.
-    learning_rate: 0.0001
+    learning_rate: 0.0001 # Initial learning rate at the start of training.
 
     # ↓ Fields required by specific methods ↓
 
