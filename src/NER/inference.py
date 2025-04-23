@@ -5,7 +5,7 @@ import argparse
 import yaml
 import torch
 from tqdm import tqdm
-from transformers import AutoModelForTokenClassification, AutoTokenizer, TokenClassificationPipeline, pipeline
+from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
 from utils.utils import load_json_data, load_bio_labels
 
 
@@ -14,13 +14,14 @@ class NERInference:
 		self, test_data_path: str, model_name_path: str, model_name: str, model_type: str, save_path: str = None
 	):
 		self.test_data = load_json_data(test_data_path)
-		label_list, label2id, id2label = load_bio_labels()
+		label_list, label2id, self.id2label = load_bio_labels()
 		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
+		self.model_type = model_type
 		if model_type == "huggingface":
 			model = AutoModelForTokenClassification.from_pretrained(
 				model_name_path,
 				num_labels=len(label_list),
-				id2label=id2label,
+				id2label=self.id2label,
 				label2id=label2id,
 				use_safetensors=True,
 			)
@@ -46,24 +47,31 @@ class NERInference:
 		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
 			entity_predictions = []
 
-			tokens = self.tokenizer(
-				content["metadata"]["title"], return_tensors="pt", truncation=True, is_split_into_words=True
-			)
+			if self.model_type == "huggingface":
+				try:
+					title_predictions = self.classifier(content["metadata"]["title"])
+					entity_predictions.extend(self._merge_entities(title_predictions, "title"))
 
-			with torch.no_grad():
-				outputs = self.model(**tokens)
-				print(outputs)
+					abstract_predictions = self.classifier(content["metadata"]["abstract"])
+					entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
 
-			try:
-				title_predictions = self.classifier()
-				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
+					result[paper_id] = {"entities": entity_predictions}
+				except Exception as e:
+					logging.error(f"Error processing paper ID {paper_id}: {e}")
 
-				abstract_predictions = self.classifier(content["metadata"]["abstract"])
-				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
+			elif self.model_type == "bertlstmcrf":
+				try:
+					title_predictions = self._ner_pipeline(content["metadata"]["title"])
+					entity_predictions.extend(self._merge_entities(title_predictions, "title"))
 
-				result[paper_id] = {"entities": entity_predictions}
-			except Exception as e:
-				logging.error(f"Error processing paper ID {paper_id}: {e}")
+					abstract_predictions = self._ner_pipeline(content["metadata"]["abstract"])
+					entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
+
+					result[paper_id] = {"entities": entity_predictions}
+				except Exception as e:
+					logging.error(f"Error processing paper ID {paper_id}: {e}")
+			else:
+				raise ValueError("Unknown model_type")
 
 		if self.save_path:
 			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
@@ -71,6 +79,24 @@ class NERInference:
 				json.dump(result, f, indent=4)
 		else:
 			return result
+
+	def _ner_pipeline(self, text):
+		result = self.tokenizer(
+			text,
+			return_tensors="pt",
+			return_offsets_mapping=True,
+		)
+		tokens = self.tokenizer.convert_ids_to_tokens(result["input_ids"][0])[1:-1]
+		offsets = result["offset_mapping"][0][1:-1]
+
+		outputs = self.model.predict(result["input_ids"], result["attention_mask"])
+		labels = [self.id2label[id] for id in outputs[0]][1:-1]
+
+		return [
+			{"entity": label, "word": token, "start": int(start), "end": int(end)}
+			for label, token, (start, end) in zip(labels, tokens, offsets)
+			if label != "O"
+		]
 
 	def _merge_entities(self, token_predictions, location):
 		merged = []
@@ -91,14 +117,16 @@ class NERInference:
 					"label": label,
 				}
 			elif prefix == "I":
-				if current_entity is not None and current_entity["label"] == label:
+				if current_entity and current_entity["label"] == label:
 					if token_prediction["start"] == current_entity["end_idx"] + 1:
 						current_entity["text_span"] += word
 					else:
 						current_entity["text_span"] += " " + word
 					current_entity["end_idx"] = token_prediction["end"] - 1
 				else:
-					if current_entity is not None:
+					print(token_prediction)
+					print(current_entity)
+					if current_entity:
 						merged.append(current_entity)
 					current_entity = {
 						"start_idx": token_prediction["start"],
