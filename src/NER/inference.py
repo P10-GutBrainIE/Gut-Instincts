@@ -62,28 +62,22 @@ class NERInference:
 			entity_predictions = []
 
 			if self.model_type == "huggingface" and not self.validation_model:
-				try:
-					title_predictions = self.classifier(content["metadata"]["title"])
-					entity_predictions.extend(self._merge_entities(title_predictions, "title"))
+				title_predictions = self.classifier(content["metadata"]["title"])
+				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
 
-					abstract_predictions = self.classifier(content["metadata"]["abstract"])
-					entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
+				abstract_predictions = self.classifier(content["metadata"]["abstract"])
+				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
 
-					result[paper_id] = {"entities": entity_predictions}
-				except Exception as e:
-					logging.error(f"Error processing paper ID {paper_id}: {e}")
+				result[paper_id] = {"entities": entity_predictions}
 
 			elif self.model_type == "bertlstmcrf" or self.validation_model:
-				try:
-					title_predictions = self._ner_pipeline(content["metadata"]["title"])
-					entity_predictions.extend(self._merge_entities(title_predictions, "title"))
+				title_predictions = self._ner_pipeline(content["metadata"]["title"])
+				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
 
-					abstract_predictions = self._ner_pipeline(content["metadata"]["abstract"])
-					entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
+				abstract_predictions = self._ner_pipeline(content["metadata"]["abstract"])
+				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
 
-					result[paper_id] = {"entities": entity_predictions}
-				except Exception as e:
-					logging.error(f"Error processing paper ID {paper_id}: {e}")
+				result[paper_id] = {"entities": entity_predictions}
 			else:
 				raise ValueError("Unknown model_type")
 
