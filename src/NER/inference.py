@@ -9,7 +9,7 @@ from utils.utils import load_json_data, load_bio_labels
 
 
 class NERInference:
-	def __init__(self, test_data_path: str, model_name_path: str, save_path: str):
+	def __init__(self, test_data_path: str, model_name_path: str, save_path: str = None):
 		self.test_data = load_json_data(test_data_path)
 		label_list, label2id, id2label = load_bio_labels()
 		model = AutoModelForTokenClassification.from_pretrained(
@@ -39,27 +39,12 @@ class NERInference:
 			except Exception as e:
 				logging.error(f"Error processing paper ID {paper_id}: {e}")
 
-		os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
-		with open(self.save_path, "w") as f:
-			json.dump(result, f, indent=4)
-
-	def perform_inference_return_data(self):
-		result = {}
-		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
-			entity_predictions = []
-
-			try:
-				title_predictions = self.classifier(content["metadata"]["title"])
-				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
-
-				abstract_predictions = self.classifier(content["metadata"]["abstract"])
-				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
-
-				result[paper_id] = {"entities": entity_predictions}
-			except Exception as e:
-				logging.error(f"Error processing paper ID {paper_id}: {e}")
-
-		return result
+		if self.save_path:
+			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
+			with open(self.save_path, "w") as f:
+				json.dump(result, f, indent=4)
+		else:
+			return result
 
 	def _merge_entities(self, token_predictions, location):
 		merged = []

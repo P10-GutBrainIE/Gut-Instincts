@@ -151,12 +151,6 @@ def training(config):
 			model.save(output_dir)
 			print(f"New best model saved with All F1_micro: {best_f1_micro:.4f}")
 
-		if epoch == num_epochs - 1:
-			output_dir_last = os.path.join("models", f"{config['experiment_name']}_last_epoch")
-			os.makedirs(output_dir_last, exist_ok=True)
-			model.save(output_dir_last)
-			print("Model at last epoch saved")
-
 	mlflow.end_run()
 
 

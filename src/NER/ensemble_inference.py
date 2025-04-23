@@ -15,10 +15,9 @@ def load_model_predictions(config):
 		ner_inference = NERInference(
 			config["test_data_path"],
 			model_name_path=os.path.join("models", f"{model_config['experiment_name']}"),
-			save_path=os.path.join("data_inference_results", f"{model_config['experiment_name']}.json"),
 		)
 
-		predictions_per_model.append(ner_inference.perform_inference_return_data())
+		predictions_per_model.append(ner_inference.perform_inference())
 
 	return predictions_per_model
 
