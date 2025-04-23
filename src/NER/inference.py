@@ -23,10 +23,11 @@ class NERInference:
 		label_list, label2id, self.id2label = load_bio_labels()
 		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
-		if validation_model:
-			self.model = validation_model
-		else:
-			if model_type == "huggingface":
+
+		if model_type == "huggingface":
+			if validation_model:
+				model = validation_model
+			else:
 				model = AutoModelForTokenClassification.from_pretrained(
 					model_name_path,
 					num_labels=len(label_list),
@@ -34,8 +35,11 @@ class NERInference:
 					label2id=label2id,
 					use_safetensors=True,
 				)
-				self.classifier = pipeline("ner", model=model, tokenizer=self.tokenizer)
-			elif model_type == "bertlstmcrf":
+			self.classifier = pipeline("ner", model=model, tokenizer=self.tokenizer)
+		elif model_type == "bertlstmcrf":
+			if validation_model:
+				model = validation_model
+			else:
 				from NER.architectures.bert_lstm_crf import BertLSTMCRF
 
 				model = BertLSTMCRF(
@@ -45,9 +49,9 @@ class NERInference:
 				state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location="cpu")
 				model.load_state_dict(state_dict)
 				model.eval()
-				self.model = model
-			else:
-				raise ValueError("Unknown model_type")
+			self.model = model
+		else:
+			raise ValueError("Unknown model_type")
 
 		self.save_path = save_path
 
