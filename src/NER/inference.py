@@ -15,7 +15,7 @@ class NERInference:
 	):
 		self.test_data = load_json_data(test_data_path)
 		label_list, label2id, id2label = load_bio_labels()
-		tokenizer = AutoTokenizer.from_pretrained(model_name_path, use_fast=True, max_length=512, truncation=True)
+		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		if model_type == "huggingface":
 			model = AutoModelForTokenClassification.from_pretrained(
 				model_name_path,
@@ -24,7 +24,7 @@ class NERInference:
 				label2id=label2id,
 				use_safetensors=True,
 			)
-			self.classifier = pipeline("ner", model=model, tokenizer=tokenizer)
+			self.classifier = pipeline("ner", model=model, tokenizer=self.tokenizer)
 		elif model_type == "bertlstmcrf":
 			from NER.architectures.bert_lstm_crf import BertLSTMCRF
 
@@ -35,7 +35,7 @@ class NERInference:
 			state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location="cpu")
 			model.load_state_dict(state_dict)
 			model.eval()
-			self.classifier = TokenClassificationPipeline(model=model, tokenizer=tokenizer)
+			self.model = model
 		else:
 			raise ValueError("Unknown model_type")
 
@@ -46,8 +46,16 @@ class NERInference:
 		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
 			entity_predictions = []
 
+			tokens = self.tokenizer(
+				content["metadata"]["title"], return_tensors="pt", truncation=True, is_split_into_words=True
+			)
+
+			with torch.no_grad():
+				outputs = self.model(**tokens)
+				print(outputs)
+
 			try:
-				title_predictions = self.classifier(content["metadata"]["title"])
+				title_predictions = self.classifier()
 				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
 
 				abstract_predictions = self.classifier(content["metadata"]["abstract"])
