@@ -90,7 +90,7 @@ def training(config):
 					batch[k] = v.to(device)
 
 			optimizer.zero_grad()
-			if config["weighted_traning"]:
+			if config["weighted_training"]:
 				outputs = model(
 					batch["input_ids"],
 					attention_mask=batch.get("attention_mask"),
