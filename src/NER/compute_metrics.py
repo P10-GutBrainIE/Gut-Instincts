@@ -55,6 +55,7 @@ def compute_metrics(predictions, labels):
 
 
 def compute_evaluation_metrics(model, model_name, model_type):
+	model.to("cpu")
 	ner_inference = NERInference(
 		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 		model_name=model_name,

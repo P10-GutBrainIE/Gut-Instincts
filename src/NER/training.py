@@ -146,6 +146,7 @@ def training(config):
 		evaluation_metrics = compute_evaluation_metrics(
 			model=model, model_name=config["model_name"], model_type=config["model_type"]
 		)
+		model.to(device)
 		print_metrics(metrics)
 		print_evaluation_metrics(evaluation_metrics)
 		mlflow.log_metrics(log_metrics, step=epoch)
