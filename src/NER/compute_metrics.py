@@ -1,7 +1,7 @@
 import os
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
-from src.NER.inference import NERInference
-from src.utils.utils import load_entity_labels, load_json_data
+from NER.inference import NERInference
+from utils.utils import load_entity_labels, load_json_data
 
 
 def compute_metrics(predictions, labels):
