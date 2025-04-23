@@ -1,10 +1,7 @@
-import numpy as np
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 
 def compute_metrics(predictions, labels):
-	predictions = np.argmax(predictions, axis=2)
-
 	true_predictions = [p for pred, lbl in zip(predictions, labels) for p, la in zip(pred, lbl) if la != -100]
 	true_labels = [la for pred, lbl in zip(predictions, labels) for _, la in zip(pred, lbl) if la != -100]
 

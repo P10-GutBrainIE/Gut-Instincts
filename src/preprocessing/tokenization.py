@@ -35,20 +35,18 @@ class BIOTokenizer:
 		logger.info("Starting to process files...")
 		all_data = []
 
-		qualities = [os.path.basename(p).replace("train_", "").replace(".json", "") for p in self.datasets]
-
 		if self.dataset_weights:
 			for data, dataset_weight in zip(self.datasets, self.dataset_weights):
 				for _, content in data.items():
 					processed_data = self._process_paper(content, dataset_weight)
 					all_data.extend(processed_data)
-			logger.info(f"Datasets: {qualities} with weights: {self.dataset_weights} processed")
+			logger.info(f"Datasets with weights: {self.dataset_weights} processed")
 		else:
 			for data in self.datasets:
 				for _, content in data.items():
 					processed_data = self._process_paper(content, self.dataset_weights)
 					all_data.extend(processed_data)
-			logger.info(f"Datasets: {qualities} processed")
+			logger.info("Datasets processed")
 
 		if self.save_filename:
 			self._save_to_pickle(all_data)
@@ -168,3 +166,10 @@ class BIOTokenizer:
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"BIO tokenized data saved to {self.save_filename}. Data size: {len(data)}")
+
+
+if __name__ == "__main__":
+	from utils.utils import load_pkl_data
+
+	data = load_pkl_data("data_preprocessed/BioLinkBERT-base/training_with_html.pkl")
+	print(data[0])
