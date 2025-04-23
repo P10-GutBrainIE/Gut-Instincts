@@ -1,6 +1,5 @@
 import os
 import json
-import logging
 import argparse
 import yaml
 import torch
@@ -98,6 +97,7 @@ class NERInference:
 		offsets = result["offset_mapping"][0][1:-1]
 
 		outputs = self.model.predict(result["input_ids"], result["attention_mask"])
+		print(outputs)
 		labels = [self.id2label[id] for id in outputs[0]][1:-1]
 
 		return [
