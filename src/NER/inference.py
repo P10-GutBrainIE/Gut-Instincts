@@ -23,10 +23,11 @@ class NERInference:
 		label_list, label2id, self.id2label = load_bio_labels()
 		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
+		self.validation_model = validation_model
 
 		if model_type == "huggingface":
 			if validation_model:
-				model = validation_model
+				self.model = validation_model
 			else:
 				model = AutoModelForTokenClassification.from_pretrained(
 					model_name_path,
@@ -35,7 +36,7 @@ class NERInference:
 					label2id=label2id,
 					use_safetensors=True,
 				)
-			self.classifier = pipeline("ner", model=model, tokenizer=self.tokenizer)
+				self.classifier = pipeline("ner", model=model, tokenizer=self.tokenizer)
 		elif model_type == "bertlstmcrf":
 			if validation_model:
 				model = validation_model
@@ -60,7 +61,7 @@ class NERInference:
 		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
 			entity_predictions = []
 
-			if self.model_type == "huggingface":
+			if self.model_type == "huggingface" and not self.validation_model:
 				try:
 					title_predictions = self.classifier(content["metadata"]["title"])
 					entity_predictions.extend(self._merge_entities(title_predictions, "title"))
@@ -72,7 +73,7 @@ class NERInference:
 				except Exception as e:
 					logging.error(f"Error processing paper ID {paper_id}: {e}")
 
-			elif self.model_type == "bertlstmcrf":
+			elif self.model_type == "bertlstmcrf" or self.validation_model:
 				try:
 					title_predictions = self._ner_pipeline(content["metadata"]["title"])
 					entity_predictions.extend(self._merge_entities(title_predictions, "title"))
