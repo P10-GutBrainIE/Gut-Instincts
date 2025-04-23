@@ -158,7 +158,7 @@ if __name__ == "__main__":
 
 		with open(args.config, "r") as file:
 			config = yaml.safe_load(file)
-			os.makedirs("models", exist_ok=True)  # Top-level dir once
+			os.makedirs("models", exist_ok=True)
 			training(config)
 	else:
 		print("CUDA is not available.")

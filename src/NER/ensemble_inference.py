@@ -27,7 +27,6 @@ def majority_vote(predictions):
 	entity_votes = defaultdict(list)
 	ensemble_results = defaultdict(lambda: {"entities": []})
 
-	# Collect votes for all models
 	for model_predictions in predictions:
 		for paper_id, content in model_predictions.items():
 			for entity in content["entities"]:
