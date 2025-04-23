@@ -128,6 +128,8 @@ def training(config):
 
 		if config["hyperparameters"]["lr_scheduler"]["method"] == "custom":
 			scheduler.step()
+		elif config["hyperparameters"]["lr_scheduler"]["method"] == "reduce on plateau":
+			scheduler.step(avg_loss)
 		else:
 			scheduler.step(epoch)
 
