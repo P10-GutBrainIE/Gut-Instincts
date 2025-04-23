@@ -1,23 +1,22 @@
 import torch
-import torch.nn as nn
 from transformers import AutoModel
 from torchcrf import CRF
 import os
 
 
-class BertLSTMCRF(nn.Module):
+class BertLSTMCRF(torch.torch.nn.Module):
 	def __init__(self, model_name, num_labels, lstm_hidden_dim=256, dropout_prob=0.3):
 		super().__init__()
 		self.bert = AutoModel.from_pretrained(model_name)
-		self.dropout = nn.Dropout(dropout_prob)
-		self.lstm = nn.LSTM(
+		self.dropout = torch.nn.Dropout(dropout_prob)
+		self.lstm = torch.nn.LSTM(
 			input_size=self.bert.config.hidden_size,
 			hidden_size=lstm_hidden_dim,
 			num_layers=1,
 			batch_first=True,
 			bidirectional=True,
 		)
-		self.classifier = nn.Linear(lstm_hidden_dim * 2, num_labels)
+		self.classifier = torch.nn.Linear(lstm_hidden_dim * 2, num_labels)
 		self.crf = CRF(num_tags=num_labels, batch_first=True)
 
 	def forward(self, input_ids, attention_mask=None, labels=None):
@@ -42,6 +41,12 @@ class BertLSTMCRF(nn.Module):
 			mask = attention_mask.bool() if attention_mask is not None else None
 			output["decoded_tags"] = self.crf.decode(logits, mask=mask)
 		return output
+
+	def predict(self, input_ids, attention_mask=None):
+		self.eval()
+		with torch.no_grad():
+			outputs = self.forward(input_ids=input_ids, attention_mask=attention_mask)
+			return outputs["decoded_tags"]
 
 	def save(self, output_dir):
 		os.makedirs(output_dir, exist_ok=True)

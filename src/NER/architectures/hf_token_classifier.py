@@ -1,9 +1,9 @@
 import os
-import torch.nn as nn
+import torch
 from transformers import AutoModelForTokenClassification
 
 
-class HFTokenClassifier(nn.Module):
+class HFTokenClassifier(torch.nn.Module):
 	def __init__(self, model_name, num_labels, id2label=None, label2id=None):
 		super().__init__()
 		self.model = AutoModelForTokenClassification.from_pretrained(
@@ -24,6 +24,18 @@ class HFTokenClassifier(nn.Module):
 			"loss": outputs.loss if labels is not None else None,
 			"logits": outputs.logits,
 		}
+
+	def predict(self, input_ids, attention_mask=None):
+		self.eval()
+		with torch.no_grad():
+			outputs = self.model(
+				input_ids=input_ids,
+				attention_mask=attention_mask,
+				return_dict=True,
+			)
+			logits = outputs.logits
+			predictions = torch.argmax(logits, dim=-1)
+			return predictions
 
 	def save(self, output_dir):
 		os.makedirs(output_dir, exist_ok=True)
