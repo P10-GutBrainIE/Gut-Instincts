@@ -1,7 +1,7 @@
 import argparse
 import os
 import yaml
-from transformers import AutoTokenizer, AlbertTokenizer
+from transformers import AutoTokenizer, AlbertTokenizerFast
 from preprocessing.remove_html import remove_html
 from preprocessing.data_cleanup import clean_incorrect_text_spans, remove_incorrect_text_spans
 from preprocessing.tokenization import BIOTokenizer
@@ -36,7 +36,7 @@ def create_training_dataset(experiment_name: str, model_name: str, dataset_weigh
 	bronze_data = remove_html(data=bronze_data)
 
 	if model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
-		tokenizer = AlbertTokenizer.from_pretrained(model_name)
+		tokenizer = AlbertTokenizerFast.from_pretrained(model_name)
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 	bio_tokenizer = BIOTokenizer(
@@ -54,7 +54,7 @@ def create_validation_dataset(experiment_name: str, model_name: str):
 	dev_data = remove_html(data=dev_data)
 
 	if model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
-		tokenizer = AlbertTokenizer.from_pretrained(model_name)
+		tokenizer = AlbertTokenizerFast.from_pretrained(model_name)
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 	bio_tokenizer = BIOTokenizer(
