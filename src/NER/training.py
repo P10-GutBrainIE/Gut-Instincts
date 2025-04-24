@@ -60,7 +60,11 @@ def training(config):
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
-	tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
+	try:
+		tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
+	except ValueError:
+		print("Fast tokenizer failed, falling back to slow tokenizer.")
+		tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=False)
 	tokenizer.save_pretrained(output_dir)
 
 	training_data = load_pkl_data(config["training_data_path"])
