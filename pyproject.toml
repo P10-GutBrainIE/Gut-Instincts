@@ -14,6 +14,7 @@ dependencies = [
     "seqeval==1.2.2",
     "accelerate==1.5.2",
     "tiktoken==0.9.0",
+    "sentencepiece==0.2.0",
     "torch==2.6.0",
     "pytorch-crf==0.7.2",
     "matplotlib==3.10.1",
