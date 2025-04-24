@@ -10,71 +10,71 @@ mkdir -p logs
 
 # ---------- biolinkbert-base ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biolinkbert-base.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biolinkbert-base.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biolinkbert-base.yaml >logs/biolinkbert-base.out 2>logs/biolinkbert-base.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biolinkbert-base.yaml >logs/biolinkbert-base.out 2>logs/biolinkbert-base.err
 
 
 # ---------- biolinkbert-large ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biolinkbert-large.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biolinkbert-large.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biolinkbert-large.yaml >logs/biolinkbert-large.out 2>logs/biolinkbert-large.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biolinkbert-large.yaml >logs/biolinkbert-large.out 2>logs/biolinkbert-large.err
 
 
 # ---------- biomedbert-base-uncased-abstract ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biomedbert-base-uncased-abstract.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biomedbert-base-uncased-abstract.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biomedbert-base-uncased-abstract.yaml >logs/biomedbert-base-abstract.out 2>logs/biomedbert-base-abstract.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biomedbert-base-uncased-abstract.yaml >logs/biomedbert-base-abstract.out 2>logs/biomedbert-base-abstract.err
 
 
 # ---------- biomedbert-base-uncased-abstract-fulltext ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biomedbert-base-uncased-abstract-fulltext.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biomedbert-base-uncased-abstract-fulltext.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biomedbert-base-uncased-abstract-fulltext.yaml >logs/biomedbert-base-abstract-fulltext.out 2>logs/biomedbert-base-abstract-fulltext.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biomedbert-base-uncased-abstract-fulltext.yaml >logs/biomedbert-base-abstract-fulltext.out 2>logs/biomedbert-base-abstract-fulltext.err
 
 
 # ---------- biomedbert-large-uncased-abstract ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biomedbert-large-uncased-abstract.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biomedbert-large-uncased-abstract.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biomedbert-large-uncased-abstract.yaml >logs/biomedbert-large-abstract.out 2>logs/biomedbert-large-abstract.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biomedbert-large-uncased-abstract.yaml >logs/biomedbert-large-abstract.out 2>logs/biomedbert-large-abstract.err
 
 
 # ---------- biomedelectra-base-uncased-abstract ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biomedelectra-base-uncased-abstract.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biomedelectra-base-uncased-abstract.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biomedelectra-base-uncased-abstract.yaml >logs/biomedelectra-base-abstract.out 2>logs/biomedelectra-base-abstract.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biomedelectra-base-uncased-abstract.yaml >logs/biomedelectra-base-abstract.out 2>logs/biomedelectra-base-abstract.err
 
 
 # ---------- biomedelectra-large-uncased-abstract ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biomedelectra-large-uncased-abstract.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biomedelectra-large-uncased-abstract.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biomedelectra-large-uncased-abstract.yaml >logs/biomedelectra-large-abstract.out 2>logs/biomedelectra-large-abstract.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biomedelectra-large-uncased-abstract.yaml >logs/biomedelectra-large-abstract.out 2>logs/biomedelectra-large-abstract.err
 
 
 # ---------- biom-albert-xxlarge-pmc ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biom-albert-xxlarge-pmc.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biom-albert-xxlarge-pmc.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biom-albert-xxlarge-pmc.yaml >logs/biom-albert-xxlarge-pmc.out 2>logs/biom-albert-xxlarge-pmc.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biom-albert-xxlarge-pmc.yaml >logs/biom-albert-xxlarge-pmc.out 2>logs/biom-albert-xxlarge-pmc.err
 
 
 # ---------- biom-albert-xxlarge ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/biom-albert-xxlarge.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/pretrained/biom-albert-xxlarge.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/biom-albert-xxlarge.yaml >logs/biom-albert-xxlarge.out 2>logs/biom-albert-xxlarge.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/pretrained/biom-albert-xxlarge.yaml >logs/biom-albert-xxlarge.out 2>logs/biom-albert-xxlarge.err
