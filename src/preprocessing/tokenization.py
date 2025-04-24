@@ -12,7 +12,7 @@ class BIOTokenizer:
 	def __init__(
 		self,
 		datasets: list[dict],
-		tokenizer: AutoTokenizer,
+		tokenizer,
 		save_filename: str = None,
 		dataset_weights: list = None,
 		max_length: int = 512,
@@ -128,6 +128,7 @@ class BIOTokenizer:
 		encoding = self.tokenizer(
 			text, return_offsets_mapping=True, truncation=True, max_length=self.max_length, padding="max_length"
 		)
+		print("Albert tokenizer encoding:\n", encoding)
 		tokens = self.tokenizer.convert_ids_to_tokens(encoding["input_ids"])
 		offsets = encoding["offset_mapping"]
 
@@ -166,10 +167,3 @@ class BIOTokenizer:
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"BIO tokenized data saved to {self.save_filename}. Data size: {len(data)}")
-
-
-if __name__ == "__main__":
-	from utils.utils import load_pkl_data
-
-	data = load_pkl_data("data_preprocessed/BioLinkBERT-base/training_with_html.pkl")
-	print(data[0])
