@@ -5,7 +5,7 @@ import yaml
 import mlflow
 import torch
 from tqdm import tqdm
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, AlbertTokenizer
 
 from utils.utils import load_bio_labels, load_pkl_data, print_evaluation_metrics
 from NER.compute_metrics import compute_evaluation_metrics
@@ -60,11 +60,10 @@ def training(config):
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
-	try:
+	if config["model_name"] in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
+		tokenizer = AlbertTokenizer.from_pretrained(config["model_name"])
+	else:
 		tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
-	except ValueError:
-		print("Fast tokenizer failed, falling back to slow tokenizer.")
-		tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=False)
 	tokenizer.save_pretrained(output_dir)
 
 	training_data = load_pkl_data(config["training_data_path"])
