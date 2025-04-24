@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104018929162381565/130ea5e064c3429daffd2dfde48b4dca/artifacts
+deleted_time: 1745487064764
 end_time: 1745485051804
 entry_point_name: ''
 experiment_id: '104018929162381565'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 130ea5e064c3429daffd2dfde48b4dca
 run_name: bittersweet-gull-741
 run_uuid: 130ea5e064c3429daffd2dfde48b4dca

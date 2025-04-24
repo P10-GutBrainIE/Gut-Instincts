@@ -6,7 +6,7 @@ validation_data_path: "data_preprocessed/BioM-ALBERT-xxlarge-PMC/validation.pkl"
 weighted_training: False
 hyperparameters:
   num_epochs: 50
-  batch_size: 16
+  batch_size: 8
   freeze_epochs: 0
   lr_scheduler:
     method: "custom"

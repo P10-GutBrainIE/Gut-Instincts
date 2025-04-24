@@ -114,7 +114,7 @@ def training(config):
 
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
-		mlflow.log_metrics({"lr": current_lr, "loss": avg_loss})
+		mlflow.log_metrics({"lr": current_lr, "loss": avg_loss}, step=epoch)
 		print(
 			f"Epoch {epoch + 1}/{num_epochs} | Avg. training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)

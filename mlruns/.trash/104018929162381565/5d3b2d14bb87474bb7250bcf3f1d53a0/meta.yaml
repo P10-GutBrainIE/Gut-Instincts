@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104018929162381565/5d3b2d14bb87474bb7250bcf3f1d53a0/artifacts
+deleted_time: 1745487064764
 end_time: 1745486557559
 entry_point_name: ''
 experiment_id: '104018929162381565'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 5d3b2d14bb87474bb7250bcf3f1d53a0
 run_name: wise-pig-765
 run_uuid: 5d3b2d14bb87474bb7250bcf3f1d53a0
