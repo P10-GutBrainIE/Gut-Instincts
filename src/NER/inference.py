@@ -4,7 +4,7 @@ import argparse
 import yaml
 import torch
 from tqdm import tqdm
-from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
+from transformers import AutoModelForTokenClassification, AutoTokenizer, AlbertTokenizer, pipeline
 from utils.utils import load_json_data, load_bio_labels
 
 
@@ -20,7 +20,10 @@ class NERInference:
 	):
 		self.test_data = load_json_data(test_data_path)
 		label_list, label2id, self.id2label = load_bio_labels()
-		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
+		if model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
+			self.tokenizer = AlbertTokenizer.from_pretrained(model_name)
+		else:
+			self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
 		self.validation_model = validation_model
 

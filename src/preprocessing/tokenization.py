@@ -12,7 +12,7 @@ class BIOTokenizer:
 	def __init__(
 		self,
 		datasets: list[dict],
-		tokenizer: AutoTokenizer,
+		tokenizer,
 		save_filename: str = None,
 		dataset_weights: list = None,
 		max_length: int = 512,
