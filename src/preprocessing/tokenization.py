@@ -187,6 +187,17 @@ class RelationTokenizer:
 		self.concatenate_title_abstract = concatenate_title_abstract
 		_, self.relation2id, _ = load_relation_labels()
 
+		# Register entity marker tokens and resize embeddings if applicable
+		new_tokens = self.tokenizer.add_special_tokens(
+			{"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]}
+		)
+		# Resize model embeddings if the tokenizer has been attached to a model
+		if hasattr(self.tokenizer, "model_max_length") and hasattr(self.tokenizer, "model"):
+			try:
+				self.tokenizer.model.resize_token_embeddings(len(self.tokenizer))
+			except Exception:
+				pass  # You can log a warning here if you want
+
 	def process_files(self):
 		"""
 		Load JSON files of papers and process each paper for relation classification.
@@ -211,7 +222,6 @@ class RelationTokenizer:
 			self._save_to_pickle(all_data)
 		else:
 			return all_data
-		
 
 	def _process_paper(self, content, dataset_weight):
 		processed = []
@@ -241,7 +251,6 @@ class RelationTokenizer:
 			else:
 				object_start = relation["object_start_idx"]
 				object_end = relation["object_end_idx"]
-	
 
 			predicate = relation["predicate"]
 			if predicate not in self.relation2id:
@@ -264,7 +273,6 @@ class RelationTokenizer:
 				sample["weight"] = dataset_weight
 
 			processed.append(sample)
-		exit()
 		return processed
 
 	def _tokenize_with_entity_markers(self, text, subj, obj):
@@ -285,8 +293,7 @@ class RelationTokenizer:
 			last_idx = end
 		marked_text += text[last_idx:]
 
-		print("\n"+marked_text)
-		
+		print("\n" + marked_text)
 
 		encoding = self.tokenizer(
 			marked_text,
