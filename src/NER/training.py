@@ -53,6 +53,7 @@ def training(config):
 
 	mlflow.set_experiment(experiment_name=config["experiment_name"])
 	mlflow.start_run()
+	mlflow.log_params(params=config)
 
 	label_list, label2id, id2label = load_bio_labels()
 	model = build_model(config, label_list, id2label, label2id)
