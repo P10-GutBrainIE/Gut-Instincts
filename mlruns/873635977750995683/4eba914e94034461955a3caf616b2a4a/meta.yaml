@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/873635977750995683/4eba914e94034461955a3caf616b2a4a/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '873635977750995683'
+lifecycle_stage: active
+run_id: 4eba914e94034461955a3caf616b2a4a
+run_name: trusting-mole-547
+run_uuid: 4eba914e94034461955a3caf616b2a4a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745485041260
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/833123193716733508/7a9975259ebd43abaea06f062927eb7b/artifacts
+end_time: 1745486576199
+entry_point_name: ''
+experiment_id: '833123193716733508'
+lifecycle_stage: active
+run_id: 7a9975259ebd43abaea06f062927eb7b
+run_name: illustrious-croc-601
+run_uuid: 7a9975259ebd43abaea06f062927eb7b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745485047787
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

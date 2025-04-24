@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/412757812451419506/135eed642b6d4dd39f3a906aab487f1e/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '412757812451419506'
+lifecycle_stage: active
+run_id: 135eed642b6d4dd39f3a906aab487f1e
+run_name: stylish-boar-540
+run_uuid: 135eed642b6d4dd39f3a906aab487f1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745485046196
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

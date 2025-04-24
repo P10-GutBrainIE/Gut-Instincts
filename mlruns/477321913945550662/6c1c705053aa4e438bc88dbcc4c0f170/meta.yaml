@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/477321913945550662/6c1c705053aa4e438bc88dbcc4c0f170/artifacts
+end_time: 1745486073275
+entry_point_name: ''
+experiment_id: '477321913945550662'
+lifecycle_stage: active
+run_id: 6c1c705053aa4e438bc88dbcc4c0f170
+run_name: resilient-moose-294
+run_uuid: 6c1c705053aa4e438bc88dbcc4c0f170
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745485046195
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

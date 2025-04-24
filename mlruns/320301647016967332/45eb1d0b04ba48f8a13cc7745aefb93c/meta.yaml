@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/320301647016967332/45eb1d0b04ba48f8a13cc7745aefb93c/artifacts
+end_time: 1745486557633
+entry_point_name: ''
+experiment_id: '320301647016967332'
+lifecycle_stage: active
+run_id: 45eb1d0b04ba48f8a13cc7745aefb93c
+run_name: burly-tern-848
+run_uuid: 45eb1d0b04ba48f8a13cc7745aefb93c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745486555389
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
