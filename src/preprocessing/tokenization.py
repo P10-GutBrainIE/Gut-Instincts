@@ -16,7 +16,6 @@ class BIOTokenizer:
 		dataset_weights: list = None,
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
-		use_tokenizer_for_RE: bool = False,
 	):
 		self.datasets = datasets
 		self.dataset_weights = dataset_weights
@@ -24,7 +23,6 @@ class BIOTokenizer:
 		self.save_filename = save_filename
 		self.max_length = max_length
 		self.concatenate_title_abstract = concatenate_title_abstract
-		self.use_tokenizer_for_RE = use_tokenizer_for_RE
 		_, self.label2id, _ = load_bio_labels()
 
 	def process_files(self):
@@ -69,7 +67,7 @@ class BIOTokenizer:
 		text_lst, entities_lst = self._extract_entities(content)
 
 		for text, entities in zip(text_lst, entities_lst):
-			bio_tag_ids, input_ids, attention_mask = self._tokenize(text, entities)
+			bio_tag_ids, input_ids, attention_mask = self._tokenize_with_bio(text, entities)
 			if dataset_weight:
 				processed.append(
 					{
@@ -114,16 +112,7 @@ class BIOTokenizer:
 
 		return text_lst, entities_lst
 
-	def _tokenize(self, text, entities):
-		if self.use_tokenizer_for_RE:
-			return self._tokenize_with_entity_markers(text, entities)
-		else:
-			return self._tokenize_with_bio_tags(text, entities)
-
-	def _tokenize_with_entity_markers(text, entities):
-		pass
-
-	def _tokenize_with_bio_tags(self, text, entities):
+	def _tokenize_with_bio(self, text, entities):
 		"""
 		Tokenize a given text using the fast tokenizer (with offset mapping) and assign BIO tags.
 
