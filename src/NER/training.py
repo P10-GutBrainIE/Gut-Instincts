@@ -112,7 +112,7 @@ def training(config):
 		avg_loss = total_loss / len(train_loader)
 		mlflow.log_metrics({"lr": current_lr, "loss": avg_loss})
 		print(
-			f"Epoch {epoch + 1}/{num_epochs} | Training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
+			f"Epoch {epoch + 1}/{num_epochs} | Avg. training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)
 
 		if config["hyperparameters"]["lr_scheduler"]["method"] == "custom":

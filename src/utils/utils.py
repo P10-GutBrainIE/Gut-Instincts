@@ -120,8 +120,5 @@ def print_metrics(metrics):
 
 
 def print_evaluation_metrics(metrics):
-	print("Evaluation metrics:")
-	print(f"{'  Metric':<25}")
-
 	for metric, value in zip(metrics.keys(), metrics.values()):
 		print(f"  {metric:<25} {value:>10.4f}")
