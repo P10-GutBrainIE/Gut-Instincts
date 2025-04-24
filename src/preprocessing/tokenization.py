@@ -266,7 +266,7 @@ class RelationTokenizer:
 			sample = {
 				"input_ids": input_ids,
 				"attention_mask": attention_mask,
-				"label": label_id,
+				"labels": label_id,
 			}
 
 			if dataset_weight:
