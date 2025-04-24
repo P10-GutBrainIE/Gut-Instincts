@@ -1,7 +1,9 @@
 import os
 import pickle
 import logging
-from utils.utils import load_bio_labels
+from transformers import AutoTokenizer
+from utils.utils import load_bio_labels, load_relation_labels, load_json_data, save_json_data
+from preprocessing.remove_html import remove_html
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -165,3 +167,156 @@ class BIOTokenizer:
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"BIO tokenized data saved to {self.save_filename}. Data size: {len(data)}")
+
+
+class RelationTokenizer:
+	def __init__(
+		self,
+		datasets: list[dict],
+		tokenizer: AutoTokenizer,
+		save_filename: str = None,
+		dataset_weights: list = None,
+		max_length: int = 512,
+		concatenate_title_abstract: bool = True,
+	):
+		self.datasets = datasets
+		self.dataset_weights = dataset_weights
+		self.tokenizer = tokenizer
+		self.save_filename = save_filename
+		self.max_length = max_length
+		self.concatenate_title_abstract = concatenate_title_abstract
+		_, self.relation2id, _ = load_relation_labels()
+
+	def process_files(self):
+		"""
+		Load JSON files of papers and process each paper for relation classification.
+		"""
+		logger.info("Starting to process files for relation classification...")
+		all_data = []
+
+		if self.dataset_weights:
+			for data, dataset_weight in zip(self.datasets, self.dataset_weights):
+				for _, content in data.items():
+					processed_data = self._process_paper(content, dataset_weight)
+					all_data.extend(processed_data)
+			logger.info(f"Datasets with weights: {self.dataset_weights} processed")
+		else:
+			for data in self.datasets:
+				for _, content in data.items():
+					processed_data = self._process_paper(content, self.dataset_weights)
+					all_data.extend(processed_data)
+			logger.info("Datasets processed")
+
+		if self.save_filename:
+			self._save_to_pickle(all_data)
+		else:
+			return all_data
+		
+
+	def _process_paper(self, content, dataset_weight):
+		processed = []
+
+		title = content["metadata"]["title"]
+		abstract = content["metadata"]["abstract"]
+		offset = len(title) + 1 if self.concatenate_title_abstract else 0
+
+		full_text = f"{title} {abstract}" if self.concatenate_title_abstract else abstract
+
+		for relation in content.get("relations", []):
+			# Copy subject and object dicts
+			subject = dict(relation)
+			object_ = dict(relation)
+
+			# Adjust abstract indices if concatenating
+			if relation["subject_location"] == "abstract":
+				subject_start = relation["subject_start_idx"] + offset
+				subject_end = relation["subject_end_idx"] + offset + 1
+			else:
+				subject_start = relation["subject_start_idx"]
+				subject_end = relation["subject_end_idx"]
+
+			if relation["object_location"] == "abstract":
+				object_start = relation["object_start_idx"] + offset
+				object_end = relation["object_end_idx"] + offset + 1
+			else:
+				object_start = relation["object_start_idx"]
+				object_end = relation["object_end_idx"]
+	
+
+			predicate = relation["predicate"]
+			if predicate not in self.relation2id:
+				self.relation2id[predicate] = len(self.relation2id)
+			label_id = self.relation2id[predicate]
+
+			input_ids, attention_mask = self._tokenize_with_entity_markers(
+				full_text,
+				{"start_idx": subject_start, "end_idx": subject_end},
+				{"start_idx": object_start, "end_idx": object_end},
+			)
+
+			sample = {
+				"input_ids": input_ids,
+				"attention_mask": attention_mask,
+				"label": label_id,
+			}
+
+			if dataset_weight:
+				sample["weight"] = dataset_weight
+
+			processed.append(sample)
+		exit()
+		return processed
+
+	def _tokenize_with_entity_markers(self, text, subj, obj):
+		# Ensure order is correct
+		s_start, s_end = subj["start_idx"], subj["end_idx"]
+		o_start, o_end = obj["start_idx"], obj["end_idx"]
+
+		if s_start < o_start:
+			spans = [(s_start, s_end, "[E1]", "[/E1]"), (o_start, o_end, "[E2]", "[/E2]")]
+		else:
+			spans = [(o_start, o_end, "[E2]", "[/E2]"), (s_start, s_end, "[E1]", "[/E1]")]
+
+		marked_text = ""
+		last_idx = 0
+		for start, end, pre_tag, post_tag in spans:
+			marked_text += text[last_idx:start]
+			marked_text += f"{pre_tag}{text[start:end]}{post_tag}"
+			last_idx = end
+		marked_text += text[last_idx:]
+
+		print("\n"+marked_text)
+		
+
+		encoding = self.tokenizer(
+			marked_text,
+			return_attention_mask=True,
+			truncation=True,
+			padding="max_length",
+			max_length=self.max_length,
+			return_tensors="pt",
+		)
+
+		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
+
+	def _save_to_pickle(self, data):
+		os.makedirs("data_preprocessed", exist_ok=True)
+		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
+			pickle.dump(data, f)
+			logger.info(f"Relation tokenized data saved to {self.save_filename}. Data size: {len(data)}")
+
+
+if __name__ == "__main__":
+	shared_path = os.path.join("data", "Annotations", "Train")
+	platinum_data = load_json_data(os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"))
+	platinum_data = remove_html(data=platinum_data)
+
+	tokenizer = AutoTokenizer.from_pretrained(
+		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
+	)
+	bio_tokenizer = RelationTokenizer(
+		datasets=[platinum_data],
+		save_filename=os.path.join("test.pkl"),
+		tokenizer=tokenizer,
+	)
+	bio_tokenizer.process_files()
