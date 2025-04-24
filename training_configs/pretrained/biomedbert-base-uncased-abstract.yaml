@@ -1,5 +1,6 @@
 experiment_name: "BiomedBERT-base-uncased-abstract"
-model_name: "microsoft/BiomedBERT-base-uncased-abstract"
+model_type: "huggingface"
+model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract"
 training_data_path: "data_preprocessed/BiomedBERT-base-uncased-abstract/training.pkl"
 validation_data_path: "data_preprocessed/BiomedBERT-base-uncased-abstract/validation.pkl"
 weighted_training: False

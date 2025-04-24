@@ -1,4 +1,5 @@
 experiment_name: "BioLinkBERT-large"
+model_type: "huggingface"
 model_name: "michiyasunaga/BioLinkBERT-large"
 training_data_path: "data_preprocessed/BioLinkBERT-large/training.pkl"
 validation_data_path: "data_preprocessed/BioLinkBERT-large/validation.pkl"

@@ -1,5 +1,6 @@
 experiment_name: "BiomedElectra-large-uncased-abstract"
-model_name: "microsoft/BiomedElectra-large-uncased-abstract"
+model_type: "huggingface"
+model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
 training_data_path: "data_preprocessed/BiomedElectra-large-uncased-abstract/training.pkl"
 validation_data_path: "data_preprocessed/BiomedElectra-large-uncased-abstract/validation.pkl"
 weighted_training: False
