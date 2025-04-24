@@ -1,0 +1,17 @@
+experiment_name: "BiomedBERT-base-uncased-abstract-fulltext"
+model_name: "microsoft/BiomedBERT-base-uncased-abstract-fulltext"
+training_data_path: "data_preprocessed/BiomedBERT-base-uncased-abstract-fulltext/training.pkl"
+validation_data_path: "data_preprocessed/BiomedBERT-base-uncased-abstract-fulltext/validation.pkl"
+weighted_training: False
+hyperparameters:
+  num_epochs: 25
+  batch_size: 16
+  freeze_epochs: 0
+  lr_scheduler:
+    method: "custom"
+    learning_rate: 0.00004
+    custom_schedule:
+    - [0, 2, 1]
+    - [3, 10, 2]
+    step_size: 2
+    gamma: 0.7

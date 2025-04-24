@@ -3,12 +3,7 @@ model_type: "huggingface"
 model_name: "michiyasunaga/BioLinkBERT-base"
 training_data_path: "data_preprocessed/BioLinkBERT-base/training.pkl"
 validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl"
-weighted_training: True
-dataset_weights:
-- 1.0
-- 1.0
-- 1.0
-- 0.33
+weighted_training: False
 hyperparameters:
   num_epochs: 25
   batch_size: 16
