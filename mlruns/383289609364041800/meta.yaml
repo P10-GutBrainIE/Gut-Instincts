@@ -1,0 +1,6 @@
+artifact_location: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/383289609364041800
+creation_time: 1745487242784
+experiment_id: '383289609364041800'
+last_update_time: 1745487242784
+lifecycle_stage: active
+name: BioM-ALBERT-xxlarge
