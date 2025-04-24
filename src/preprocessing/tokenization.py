@@ -129,7 +129,6 @@ class BIOTokenizer:
 			text, return_offsets_mapping=True, truncation=True, max_length=self.max_length, padding="max_length"
 		)
 		print("Albert tokenizer encoding:\n", encoding)
-		exit()
 		tokens = self.tokenizer.convert_ids_to_tokens(encoding["input_ids"])
 		offsets = encoding["offset_mapping"]
 
