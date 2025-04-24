@@ -96,8 +96,10 @@ class NERInference:
 			return_tensors="pt",
 			return_offsets_mapping=True,
 		)
-		print(result)
-		print(len(result["input_ids"]))
+		print(result, "\n")
+		print(len(result["input_ids"][0]))
+		print(len(result["attention_mask"][0]))
+		print(len(result["offset_mapping"][0]), "\n")
 		tokens = self.tokenizer.convert_ids_to_tokens(result["input_ids"][0])[1:-1]
 		offsets = result["offset_mapping"][0][1:-1]
 
