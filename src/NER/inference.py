@@ -93,8 +93,6 @@ class NERInference:
 	def _ner_pipeline(self, text):
 		result = self.tokenizer(
 			text,
-			padding="max_length",
-			truncation=True,
 			return_tensors="pt",
 			return_offsets_mapping=True,
 		)
