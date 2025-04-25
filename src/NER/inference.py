@@ -5,7 +5,7 @@ import yaml
 import torch
 from tqdm import tqdm
 from transformers import AutoModelForTokenClassification, AutoTokenizer, AlbertTokenizerFast, pipeline
-from utils.utils import load_json_data, load_bio_labels
+from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name
 
 
 class NERInference:
@@ -98,8 +98,8 @@ class NERInference:
 			truncation=True,
 			max_length=512,
 		)
-		
-		if (len(result["input_ids"][0]) > 512):
+
+		if len(result["input_ids"][0]) > 512:
 			print("Input longer than 512 tokens")
 
 		tokens = self.tokenizer.convert_ids_to_tokens(result["input_ids"][0])[1:-1]
@@ -168,11 +168,15 @@ if __name__ == "__main__":
 	with open(args.config, "r") as file:
 		config = yaml.safe_load(file)
 
+	dataset_dir_name = make_dataset_dir_name(
+		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
+	)
+
 	ner_inference = NERInference(
 		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name_path=os.path.join("models", f"{config['experiment_name']}"),
+		model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
 		model_name=config["model_name"],
 		model_type=config["model_type"],
-		save_path=os.path.join("data_inference_results", f"{config['experiment_name']}.json"),
+		save_path=os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}".json),
 	)
 	ner_inference.perform_inference()

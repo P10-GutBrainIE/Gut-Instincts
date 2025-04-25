@@ -2,6 +2,7 @@ import json
 import os
 import argparse
 import yaml
+from utils.utils import make_dataset_dir_name
 
 parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
 parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
@@ -10,8 +11,12 @@ args = parser.parse_args()
 with open(args.config, "r") as file:
 	config = yaml.safe_load(file)
 
+dataset_dir_name = make_dataset_dir_name(
+	config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
+)
+
 # DEFINE HERE THE PATH(S) TO YOUR PREDICTIONS
-PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", f"{config['experiment_name']}.json")
+PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json")
 PREDICTIONS_PATH_6_2 = "org_T621_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"

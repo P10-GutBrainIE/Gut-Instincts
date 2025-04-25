@@ -48,7 +48,11 @@ def build_model(config, label_list, id2label, label2id):
 
 
 def training(config):
-	output_dir = os.path.join("models", config["experiment_name"])
+	dataset_dir_name = make_dataset_dir_name(
+		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
+	)
+
+	output_dir = os.path.join("models", config["experiment_name"], dataset_dir_name)
 	os.makedirs(output_dir, exist_ok=True)
 
 	mlflow.set_experiment(experiment_name=config["experiment_name"])
@@ -60,15 +64,6 @@ def training(config):
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
-	if config["model_name"] in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
-		tokenizer = AlbertTokenizerFast.from_pretrained(config["model_name"])
-	else:
-		tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
-	tokenizer.save_pretrained(output_dir)
-
-	dataset_dir_name = make_dataset_dir_name(
-		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
-	)
 
 	training_data = load_pkl_data(
 		os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "training.pkl")

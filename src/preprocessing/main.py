@@ -94,19 +94,16 @@ if __name__ == "__main__":
 	with open(args.config, "r") as file:
 		config = yaml.safe_load(file)
 
-	if config["weighted_training"]:
-		dataset_weights = config["dataset_weights"]
-	else:
-		dataset_weights = None
-
-	dataset_dir_name = make_dataset_dir_name(config["dataset_qualities"], config["weighted_training"], dataset_weights)
+	dataset_dir_name = make_dataset_dir_name(
+		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
+	)
 
 	create_training_dataset(
 		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
 		dataset_qualities=config["dataset_qualities"],
 		dataset_dir_name=dataset_dir_name,
-		dataset_weights=dataset_weights,
+		dataset_weights=config.get("dataset_weights"),
 		remove_html=config["remove_html"],
 	)
 	create_validation_dataset(
