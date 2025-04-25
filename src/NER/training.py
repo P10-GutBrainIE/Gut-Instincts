@@ -6,8 +6,10 @@ import mlflow
 import torch
 from tqdm import tqdm
 
-from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_evaluation_metrics
+from utils.utils import load_bio_labels, load_relation_labels, load_pkl_data, make_dataset_dir_name, print_evaluation_metrics
 from NER.compute_metrics import compute_evaluation_metrics
+from transformers import AutoTokenizer, AutoModelForTokenClassification, AutoModelForSequenceClassification
+import torch
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
 
@@ -42,6 +44,17 @@ def build_model(config, label_list, id2label, label2id):
 			model_name=config["model_name"],
 			num_labels=len(label_list),
 		)
+	elif config["model_type"] == "re":
+		from NER.architectures.bert_with_entity_start import BertForREWithEntityStart
+		from transformers import AutoConfig
+
+		#e1_id = tokenizer.convert_tokens_to_ids("[E1]")
+		#e2_id = tokenizer.convert_tokens_to_ids("[E2]")
+
+		return BertForREWithEntityStart(
+			config==AutoConfig.from_pretrained(config["model_name"]),
+			num_labels=len(label_list)
+		)
 	else:
 		raise ValueError("Unknown model_type")
 
@@ -58,7 +71,7 @@ def training(config):
 	mlflow.start_run()
 	mlflow.log_params(params=config)
 
-	label_list, label2id, id2label = load_bio_labels()
+	label_list, label2id, id2label = load_relation_labels() if config["model_type"] == "re" else load_bio_labels()
 	model = build_model(config, label_list, id2label, label2id)
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")

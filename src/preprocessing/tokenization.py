@@ -2,7 +2,7 @@ import os
 import pickle
 import logging
 from transformers import AutoTokenizer
-from utils.utils import load_bio_labels, load_relation_labels, load_json_data, save_json_data
+from utils.utils import load_bio_labels, load_relation_labels, load_json_data
 from preprocessing.remove_html import remove_html
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -188,9 +188,8 @@ class RelationTokenizer:
 		_, self.relation2id, _ = load_relation_labels()
 
 		# Register entity marker tokens and resize embeddings if applicable
-		new_tokens = self.tokenizer.add_special_tokens(
-			{"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]}
-		)
+		self.tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
+		
 		# Resize model embeddings if the tokenizer has been attached to a model
 		if hasattr(self.tokenizer, "model_max_length") and hasattr(self.tokenizer, "model"):
 			try:
