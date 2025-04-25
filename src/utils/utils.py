@@ -111,7 +111,7 @@ def set_experiment_id(experiment_name):
 	return experiment_name + "_" + timestamp
 
 
-def make_dataset_dir_name(dataset_qualities, weighted_training, dataset_weights):
+def make_dataset_dir_name(dataset_qualities, weighted_training, dataset_weights=None):
 	dataset_dir_name = ""
 	for i, quality in enumerate(dataset_qualities):
 		dataset_dir_name += quality[0]

@@ -8,9 +8,9 @@ for script in training_configs/weighted_training/*.yaml; do
 
     sbatch <<EOF
 #!/bin/bash
-#SBATCH --job-name=$script
-#SBATCH --output=$script.out
-#SBATCH --error=$script.err
+#SBATCH --job-name=$filename
+#SBATCH --output=$filename.out
+#SBATCH --error=$filename.err
 #SBATCH --mem=24G
 #SBATCH --cpus-per-task=15
 #SBATCH --gres=gpu:1
