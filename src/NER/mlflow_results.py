@@ -13,19 +13,20 @@ def find_best_f1_for_experiment(experiment_name):
 
 	for run in runs:
 		run_id = run.info.run_id
+		run_name = run.info.run_name
 		f1_history = client.get_metric_history(run_id, "F1_micro")
 		best_f1 = max(metric.value for metric in f1_history)
 		weights = run.data.params.get("dataset_weights", "Not logged")
 		qualities = run.data.params.get("dataset_qualities", "Not logged")
-		results.append((best_f1, weights, qualities, run_id))
+		results.append((best_f1, weights, qualities, run_name))
 
 	results.sort(key=lambda x: x[0], reverse=True)
 
 	print(f"Best F1_micro values for experiment '{experiment_name}':")
-	print(f"{'F1_micro':<8} {'Weights':<26} {'Qualities':<42} {'Run ID':<34}")
-	print("-" * 111)
-	for best_f1, weights, qualities, run_id in results:
-		print(f"{best_f1:<8.4f} {weights:<26} {qualities:<42} {run_id:<34}")
+	print(f"{'F1_micro':<8} {'Weights':<26} {'Qualities':<42} {'Run Name':<20}")
+	print("-" * 100)
+	for best_f1, weights, qualities, run_name in results:
+		print(f"{best_f1:<8.4f} {weights:<26} {qualities:<42} {run_name:<20}")
 
 
 if __name__ == "__main__":
