@@ -28,4 +28,5 @@ def find_best_f1_for_experiment(experiment_name):
 		print(f"{best_f1:<8.4f} {weights:<26} {qualities:<42} {run_id:<34}")
 
 
-find_best_f1_for_experiment("BioLinkBERT-base")
+if __name__ == "__main__":
+	find_best_f1_for_experiment("BioLinkBERT-base")
