@@ -1,7 +1,6 @@
 import os
 import pickle
 import logging
-from transformers import AutoTokenizer
 from utils.utils import load_bio_labels
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
