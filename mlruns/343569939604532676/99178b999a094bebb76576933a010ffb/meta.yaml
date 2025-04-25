@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/343569939604532676/99178b999a094bebb76576933a010ffb/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '343569939604532676'
+lifecycle_stage: active
+run_id: 99178b999a094bebb76576933a010ffb
+run_name: nervous-pig-387
+run_uuid: 99178b999a094bebb76576933a010ffb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745581019813
+status: 1
+tags: []
+user_id: lran18@student.aau.dk
