@@ -1,11 +1,13 @@
-import json
 import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+from preprocessing.remove_html import remove_html_tags
+from preprocessing.data_cleanup import clean_incorrect_text_spans, remove_incorrect_text_spans
+from utils.utils import load_json_data
 
 
-def n_gram_per_label(file_paths: str, n: int = 1, top_k: int = 3) -> pd.DataFrame:
+def n_gram_per_label(data: list, n: int = 1, top_k: int = 3) -> pd.DataFrame:
 	"""
 	Extract n-grams from the text spans of entities in the given JSON files and count their occurrences.
 
@@ -17,24 +19,22 @@ def n_gram_per_label(file_paths: str, n: int = 1, top_k: int = 3) -> pd.DataFram
 		Returns:
 			pd.DataFrame: A DataFrame containing the n-grams, their labels, and their counts.
 	"""
-	data = []
-	for file_path in file_paths:
-		with open(file_path, "r", encoding="utf-8") as f:
-			file_data = json.load(f)
-			for _, content in file_data.items():
-				for entity in content["entities"]:
-					words = entity["text_span"].split(" ")
-					words = [word.lower() for word in words]
-					for i in range(len(words) - n + 1):
-						ngram = " ".join(words[i : i + n])
-						data.append(
-							{
-								"ngram": ngram,
-								"label": entity["label"],
-							}
-						)
+	all_data = []
+	for file_data in data:
+		for _, content in file_data.items():
+			for entity in content["entities"]:
+				words = entity["text_span"].split(" ")
+				words = [word.lower() for word in words]
+				for i in range(len(words) - n + 1):
+					ngram = " ".join(words[i : i + n])
+					all_data.append(
+						{
+							"ngram": ngram,
+							"label": entity["label"],
+						}
+					)
 
-	df = pd.DataFrame(data)
+	df = pd.DataFrame(all_data)
 
 	df["count"] = 1
 	df = df.groupby(["ngram", "label"]).count().reset_index()
@@ -186,17 +186,35 @@ def plot_n_gram_subplots(
 
 
 if __name__ == "__main__":
-	shared_path = "data_preprocessed"
-	file_paths = [
-		os.path.join(shared_path, "platinum_html_removed.json"),
-		os.path.join(shared_path, "gold_html_removed.json"),
-		os.path.join(shared_path, "silver_html_removed.json"),
-		os.path.join(shared_path, "bronze_html_removed.json"),
-	]
+	shared_path = os.path.join("data", "Annotations", "Train")
+	platinum_data = load_json_data(os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"))
+	gold_data = load_json_data(os.path.join(shared_path, "gold_quality", "json_format", "train_gold.json"))
+	silver_data = load_json_data(os.path.join(shared_path, "silver_quality", "json_format", "train_silver.json"))
+	bronze_data = load_json_data(os.path.join(shared_path, "bronze_quality", "json_format", "train_bronze.json"))
 
-	unigram = n_gram_per_label(file_paths=file_paths, n=1, top_k=3)
-	bigram = n_gram_per_label(file_paths=file_paths, n=2, top_k=3)
-	trigram = n_gram_per_label(file_paths=file_paths, n=3, top_k=3)
+	silver_data = clean_incorrect_text_spans(
+		data=silver_data,
+		corrections=load_json_data(os.path.join("data", "metadata", "silver_incorrect_annotations.json"))["clean"],
+	)
+	bronze_data = clean_incorrect_text_spans(
+		data=bronze_data,
+		corrections=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))["clean"],
+	)
+	bronze_data = remove_incorrect_text_spans(
+		data=bronze_data,
+		incorrect_annotations=load_json_data(os.path.join("data", "metadata", "bronze_incorrect_annotations.json"))[
+			"remove"
+		],
+	)
+
+	platinum_data = remove_html_tags(data=platinum_data)
+	gold_data = remove_html_tags(data=gold_data)
+	silver_data = remove_html_tags(data=silver_data)
+	bronze_data = remove_html_tags(data=bronze_data)
+
+	unigram = n_gram_per_label(data=[platinum_data, gold_data, silver_data, bronze_data], n=1, top_k=3)
+	bigram = n_gram_per_label(data=[platinum_data, gold_data, silver_data, bronze_data], n=2, top_k=3)
+	trigram = n_gram_per_label(data=[platinum_data, gold_data, silver_data, bronze_data], n=3, top_k=3)
 	plot_n_gram(df=unigram, save_path=os.path.join("plots", "unigram_per_label.pdf"))
 	plot_n_gram(df=bigram, save_path=os.path.join("plots", "bigram_per_label.pdf"))
 	plot_n_gram(df=trigram, save_path=os.path.join("plots", "trigram_per_label.pdf"))

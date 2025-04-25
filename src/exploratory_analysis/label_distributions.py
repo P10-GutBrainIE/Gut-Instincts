@@ -31,19 +31,11 @@ def label_distribution_stacked_bar_plot(
 
 	palette = sns.color_palette("magma", n_colors=4, desat=1)
 
-	total_quality = {"Bronze": 0, "Silver": 0, "Gold": 0, "Platinum": 0}
 	plt.figure(figsize=(14, 7))
 	for i, quality in enumerate(qualities):
 		counts = df_pivot[quality].values
-		total_quality[quality] += counts.sum()
 		plt.bar(x, counts, bottom=bottom, color=palette[i], edgecolor="black", linewidth=0.5, label=quality)
 		bottom += counts
-
-	total_quality["Bronze"] = total_quality["Bronze"] / 749
-	total_quality["Silver"] = total_quality["Silver"] / 499
-	total_quality["Gold"] = total_quality["Gold"] / 208
-	total_quality["Platinum"] = total_quality["Platinum"] / 111
-	print(f"Total counts per quality: {total_quality}")
 
 	for idx, total in enumerate(totals):
 		ratio = total / totals.sum()

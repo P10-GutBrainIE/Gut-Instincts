@@ -2,7 +2,6 @@ import json
 import os
 import re
 import logging
-from utils.utils import load_json_data
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
