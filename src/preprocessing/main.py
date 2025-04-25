@@ -12,7 +12,7 @@ def create_training_dataset(
 	experiment_name: str,
 	model_name: str,
 	dataset_qualities: list[str],
-	weighted_training: bool,
+	dataset_dir_name: str,
 	dataset_weights: list[float],
 	remove_html: bool,
 ):
@@ -46,7 +46,6 @@ def create_training_dataset(
 			)
 
 		if remove_html:
-			print(f"removed html from {quality}")
 			datasets[quality] = remove_html_tags(datasets[quality])
 
 	if model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
@@ -54,7 +53,6 @@ def create_training_dataset(
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-	dataset_dir_name = make_dataset_dir_name(dataset_qualities, weighted_training, dataset_weights)
 	bio_tokenizer = BIOTokenizer(
 		datasets=list(datasets.values()),
 		dataset_weights=dataset_weights,
@@ -67,9 +65,7 @@ def create_training_dataset(
 def create_validation_dataset(
 	experiment_name: str,
 	model_name: str,
-	dataset_qualities: list[str],
-	weighted_training: bool,
-	dataset_weights: list[float],
+	dataset_dir_name: str,
 	remove_html: bool,
 ):
 	dev_data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
@@ -82,7 +78,6 @@ def create_validation_dataset(
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-	dataset_dir_name = make_dataset_dir_name(dataset_qualities, weighted_training, dataset_weights)
 	bio_tokenizer = BIOTokenizer(
 		datasets=[dev_data],
 		save_filename=os.path.join(experiment_name, dataset_dir_name, "validation.pkl"),
@@ -104,21 +99,19 @@ if __name__ == "__main__":
 	else:
 		dataset_weights = None
 
-	os.makedirs(os.path.join("data_preprocessed", config["experiment_name"]), exist_ok=True)
+	dataset_dir_name = make_dataset_dir_name(config["dataset_qualities"], config["weighted_training"], dataset_weights)
 
 	create_training_dataset(
 		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
 		dataset_qualities=config["dataset_qualities"],
-		weighted_training=config["weighted_training"],
+		dataset_dir_name=dataset_dir_name,
 		dataset_weights=dataset_weights,
 		remove_html=config["remove_html"],
 	)
 	create_validation_dataset(
 		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
-		dataset_qualities=config["dataset_qualities"],
-		weighted_training=config["weighted_training"],
-		dataset_weights=dataset_weights,
+		dataset_dir_name=dataset_dir_name,
 		remove_html=config["remove_html"],
 	)

@@ -161,7 +161,7 @@ class BIOTokenizer:
 		Args:
 		    Data (list[dict]): List of data.
 		"""
-		os.makedirs("data_preprocessed", exist_ok=True)
+		os.makedirs(os.path.join("data_preprocessed", os.path.dirname(self.save_filename)), exist_ok=True)
 
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
