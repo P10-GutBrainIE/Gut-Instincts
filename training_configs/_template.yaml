@@ -39,5 +39,5 @@ hyperparameters:
     # For 'custom':
     # LambdaLR for warmup and decay.
     # custom_schedule: Used for warmup with a list of 3-tuples (start_epoch, end_epoch, multiplier).
-    # step_size: How many epochs (after warmup) before update the LR with a factor of gamma.
+    # step_size: How many epochs before update the LR with a factor of gamma. Will update first time immediately after warmup. 
     # gamma: The factor to update the the LR with.

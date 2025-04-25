@@ -18,17 +18,17 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler
 		)
 	elif method == "custom":
 
-		def custom_schedule(epoch, schedule=lr_scheduler_dict["custom_schedule"]):
+		def custom_schedule(epoch):
+			schedule = lr_scheduler_dict["custom_schedule"]
 			for start, end, multiplier in schedule:
 				if start <= epoch <= end:
 					return multiplier
 
-			epochs_post_warmup = epoch - (lr_scheduler_dict["custom_schedule"][-1][1] + 1)
+			epochs_post_warmup = epoch - (schedule[-1][1] + 1)
 
-			if epochs_post_warmup < lr_scheduler_dict["step_size"]:
-				return lr_scheduler_dict["custom_schedule"][-1][2]
-			else:
-				return lr_scheduler_dict["gamma"] ** (epochs_post_warmup // lr_scheduler_dict["step_size"])
+			return schedule[-1][2] * lr_scheduler_dict["gamma"] ** (
+				epochs_post_warmup // lr_scheduler_dict["step_size"]
+			)
 
 		scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda epoch: custom_schedule(epoch))
 
