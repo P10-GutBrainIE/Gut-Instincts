@@ -2,7 +2,7 @@
 
 mkdir -p logs
 
-for script in training_configs/weighted_training2/*.yaml; do
+for script in training_configs/weighted_training/*.yaml; do
     filename=$(basename "$script")
     echo "Submitting $script"
 
