@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/355120353153921676/412a46fc1a734cb09048ee0008e49e0f/artifacts
+end_time: 1745576737331
+entry_point_name: ''
+experiment_id: '355120353153921676'
+lifecycle_stage: active
+run_id: 412a46fc1a734cb09048ee0008e49e0f
+run_name: sincere-perch-398
+run_uuid: 412a46fc1a734cb09048ee0008e49e0f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745574607379
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

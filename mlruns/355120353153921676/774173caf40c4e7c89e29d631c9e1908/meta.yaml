@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/355120353153921676/774173caf40c4e7c89e29d631c9e1908/artifacts
+end_time: 1745576519187
+entry_point_name: ''
+experiment_id: '355120353153921676'
+lifecycle_stage: active
+run_id: 774173caf40c4e7c89e29d631c9e1908
+run_name: rogue-fish-828
+run_uuid: 774173caf40c4e7c89e29d631c9e1908
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745574445409
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

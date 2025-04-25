@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/355120353153921676/e0a6c847299d48f5b68296169442cc8c/artifacts
+end_time: 1745576553164
+entry_point_name: ''
+experiment_id: '355120353153921676'
+lifecycle_stage: active
+run_id: e0a6c847299d48f5b68296169442cc8c
+run_name: sedate-stork-762
+run_uuid: e0a6c847299d48f5b68296169442cc8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745574449023
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
