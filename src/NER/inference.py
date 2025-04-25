@@ -177,6 +177,6 @@ if __name__ == "__main__":
 		model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
 		model_name=config["model_name"],
 		model_type=config["model_type"],
-		save_path=os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}".json),
+		save_path=os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json"),
 	)
 	ner_inference.perform_inference()

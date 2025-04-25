@@ -160,6 +160,9 @@ def training(config):
 			model.save(output_dir)
 			print(f"New best model saved with F1_micro: {best_f1_micro:.4f}")
 
+		if epoch == num_epochs - 1:
+			mlflow.log_metric({"Best F1_micro": best_f1_micro})
+
 	mlflow.end_run()
 
 
