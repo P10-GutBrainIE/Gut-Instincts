@@ -189,13 +189,13 @@ class RelationTokenizer:
 
 		# Register entity marker tokens and resize embeddings if applicable
 		self.tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
-		
+
 		# Resize model embeddings if the tokenizer has been attached to a model
-		if hasattr(self.tokenizer, "model_max_length") and hasattr(self.tokenizer, "model"):
-			try:
-				self.tokenizer.model.resize_token_embeddings(len(self.tokenizer))
-			except Exception:
-				pass  # You can log a warning here if you want
+		# if hasattr(self.tokenizer, "model_max_length") and hasattr(self.tokenizer, "model"):
+		# 	try:
+		# 		self.tokenizer.model.resize_token_embeddings(len(self.tokenizer))
+		# 	except Exception:
+		# 		pass  # You can log a warning here if you want
 
 	def process_files(self):
 		"""
@@ -232,10 +232,6 @@ class RelationTokenizer:
 		full_text = f"{title} {abstract}" if self.concatenate_title_abstract else abstract
 
 		for relation in content.get("relations", []):
-			# Copy subject and object dicts
-			subject = dict(relation)
-			object_ = dict(relation)
-
 			# Adjust abstract indices if concatenating
 			if relation["subject_location"] == "abstract":
 				subject_start = relation["subject_start_idx"] + offset
