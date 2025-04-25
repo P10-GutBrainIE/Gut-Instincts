@@ -6,12 +6,11 @@ for script in training_configs/weighted_training/*.yaml; do
     filename=$(basename "$script")
     echo "Submitting $script"
 
-    sbatch
-    <<EOF
+    sbatch <<EOF
 #!/bin/bash
-#SBATCH --job-name=biolinkbert-base
-#SBATCH --output=biolinkbert-base.out
-#SBATCH --error=biolinkbert-base.err
+#SBATCH --job-name=$script
+#SBATCH --output=$script.out
+#SBATCH --error=$script.err
 #SBATCH --mem=24G
 #SBATCH --cpus-per-task=15
 #SBATCH --gres=gpu:1
