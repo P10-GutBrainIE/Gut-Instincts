@@ -5,7 +5,6 @@ import yaml
 import mlflow
 import torch
 from tqdm import tqdm
-from transformers import AutoTokenizer, AlbertTokenizerFast
 
 from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_evaluation_metrics
 from NER.compute_metrics import compute_evaluation_metrics
