@@ -288,8 +288,6 @@ class RelationTokenizer:
 			last_idx = end
 		marked_text += text[last_idx:]
 
-		print("\n" + marked_text)
-
 		encoding = self.tokenizer(
 			marked_text,
 			return_attention_mask=True,
@@ -316,9 +314,9 @@ if __name__ == "__main__":
 	tokenizer = AutoTokenizer.from_pretrained(
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
-	bio_tokenizer = RelationTokenizer(
+	re_tokenizer = RelationTokenizer(
 		datasets=[platinum_data],
 		save_filename=os.path.join("test.pkl"),
 		tokenizer=tokenizer,
 	)
-	bio_tokenizer.process_files()
+	re_tokenizer.process_files()
