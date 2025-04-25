@@ -111,6 +111,16 @@ def set_experiment_id(experiment_name):
 	return experiment_name + "_" + timestamp
 
 
+def make_dataset_dir_name(dataset_qualities, weighted_training, dataset_weights):
+	dataset_dir_name = ""
+	for i, quality in enumerate(dataset_qualities):
+		dataset_dir_name += quality[0]
+		if weighted_training and dataset_weights:
+			dataset_dir_name += str(dataset_weights[i])
+
+	return dataset_dir_name
+
+
 def print_metrics(metrics):
 	print("Validation metrics:")
 	print(f"{'  Metric':<25} {'All':>10} {'No_O':>10}")

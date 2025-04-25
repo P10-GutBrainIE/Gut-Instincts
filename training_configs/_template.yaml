@@ -1,8 +1,6 @@
 experiment_name: "BioLinkBERT-base" # Descriptive name for this experiment run.
 model_type: "huggingface" # or "bertlstmcrf" # Type of model to train.
 model_name: "michiyasunaga/BioLinkBERT-base" # The Huggingface model identifier.
-training_data_path: "data_preprocessed/BioLinkBERT-base/training.pkl" # Path to the preprocessed training dataset.
-validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl" # Path to the preprocessed validation dataset.
 dataset_qualities: # Specify in this list which qualities of data should be included in the training dataset.
 - "platinum"
 - "gold"

@@ -7,7 +7,7 @@ import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer, AlbertTokenizerFast
 
-from utils.utils import load_bio_labels, load_pkl_data, print_evaluation_metrics
+from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_evaluation_metrics
 from NER.compute_metrics import compute_evaluation_metrics
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
@@ -66,8 +66,15 @@ def training(config):
 		tokenizer = AutoTokenizer.from_pretrained(config["model_name"], use_fast=True)
 	tokenizer.save_pretrained(output_dir)
 
-	training_data = load_pkl_data(config["training_data_path"])
-	validation_data = load_pkl_data(config["validation_data_path"])
+	dataset_dir_name = make_dataset_dir_name(
+		config["dataset_qualities"], config["weighted_training"], config["dataset_weights"]
+	)
+	training_data = load_pkl_data(
+		os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "training.pkl")
+	)
+	validation_data = load_pkl_data(
+		os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "validation.pkl")
+	)
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 	validation_dataset = Dataset(validation_data, with_weights=False)
 	train_loader = torch.utils.data.DataLoader(
