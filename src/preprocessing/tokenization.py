@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 class BIOTokenizer:
 	def __init__(
 		self,
-		datasets: list[dict],
+		datasets: list[list[dict]],
 		tokenizer,
 		save_filename: str = None,
 		dataset_weights: list = None,
@@ -128,7 +128,6 @@ class BIOTokenizer:
 		encoding = self.tokenizer(
 			text, return_offsets_mapping=True, truncation=True, max_length=self.max_length, padding="max_length"
 		)
-		print("Albert tokenizer encoding:\n", encoding)
 		tokens = self.tokenizer.convert_ids_to_tokens(encoding["input_ids"])
 		offsets = encoding["offset_mapping"]
 

@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 
-def remove_html(data: dict, replacement_char: str = "$", save_filename: str = None) -> None | dict:
+def remove_html_tags(data: dict, replacement_char: str = "$", save_filename: str = None) -> None | dict:
 	"""
 	Remove HTML tags and adjust entity text span indices.
 
@@ -125,8 +125,3 @@ def remove_html(data: dict, replacement_char: str = "$", save_filename: str = No
 	else:
 		logger.info("Returning processed data.")
 		return data
-
-
-if __name__ == "__main__":
-	data = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
-	remove_html(data=data, save_filename="test_data.json")

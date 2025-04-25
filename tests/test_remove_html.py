@@ -1,13 +1,13 @@
 import os
 import pytest
 from utils.utils import load_json_data
-from preprocessing.remove_html import remove_html
+from preprocessing.remove_html import remove_html_tags
 
 
 @pytest.fixture
 def cleaned_data():
 	raw_data = load_json_data(file_path=os.path.join("tests", "test_data", "remove_html.json"))
-	return remove_html(data=raw_data)
+	return remove_html_tags(data=raw_data)
 
 
 def test_remove_html_title(cleaned_data):
