@@ -67,9 +67,7 @@ def training(config):
 	tokenizer.save_pretrained(output_dir)
 
 	dataset_dir_name = make_dataset_dir_name(
-		config["dataset_qualities"],
-		config["weighted_training"],
-		config["dataset_weights"] if config["dataset_weights"] else None,
+		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
 	)
 
 	training_data = load_pkl_data(
