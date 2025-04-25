@@ -83,7 +83,11 @@ def training(config):
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
-	scheduler = lr_scheduler(config["hyperparameters"]["lr_scheduler"], optimizer)
+	scheduler = lr_scheduler(
+		lr_scheduler_dict=config["hyperparameters"]["lr_scheduler"],
+		optimizer=optimizer,
+		steps_per_epoch=len(train_loader),
+	)
 
 	best_f1_micro = 0.0
 	num_epochs = config["hyperparameters"]["num_epochs"]
@@ -114,6 +118,9 @@ def training(config):
 			optimizer.step()
 			total_loss += loss.item()
 
+			if config["hyperparameters"]["lr_scheduler"]["method"] == "one cycle":
+				scheduler.step()
+
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
 		mlflow.log_metrics({"lr": current_lr, "loss": avg_loss}, step=epoch)
@@ -121,12 +128,10 @@ def training(config):
 			f"Epoch {epoch + 1}/{num_epochs} | Avg. training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)
 
-		if config["hyperparameters"]["lr_scheduler"]["method"] == "custom":
+		if config["hyperparameters"]["lr_scheduler"]["method"] == "custom" or "cosine annealing":
 			scheduler.step()
 		elif config["hyperparameters"]["lr_scheduler"]["method"] == "reduce on plateau":
 			scheduler.step(avg_loss)
-		else:
-			scheduler.step(epoch)
 
 		model.eval()
 		all_preds = []

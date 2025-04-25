@@ -1,7 +1,7 @@
 import torch
 
 
-def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler:
+def lr_scheduler(lr_scheduler_dict: dict, optimizer, steps_per_epoch: int) -> torch.optim.lr_scheduler:
 	method = lr_scheduler_dict["method"]
 	if method == "cosine annealing":
 		scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
@@ -15,6 +15,17 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler
 			factor=lr_scheduler_dict["factor"],
 			patience=lr_scheduler_dict["patience"],
 			threshold=lr_scheduler_dict["threshold"],
+		)
+	elif method == "one cycle":
+		scheduler = torch.optim.lr_scheduler.OneCycleLR(
+			optimizer=optimizer,
+			max_lr=lr_scheduler_dict["max_learning_rate"],
+			steps_per_epoch=steps_per_epoch,
+			epochs=lr_scheduler_dict["num_epochs"],
+			pct_start=lr_scheduler_dict.get("pct_start", 0.3),
+			anneal_strategy=lr_scheduler_dict.get("anneal_strategy", "cos"),
+			div_factor=lr_scheduler_dict.get("div_factor", 25),
+			final_div_factor=lr_scheduler_dict.get("final_div_factor", 1e4),
 		)
 	elif method == "custom":
 
