@@ -1,6 +1,0 @@
-artifact_location: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/723875631741895121
-creation_time: 1745581018556
-experiment_id: '723875631741895121'
-last_update_time: 1745581018556
-lifecycle_stage: active
-name: BioLinkBERT-base
