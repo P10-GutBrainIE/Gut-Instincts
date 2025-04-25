@@ -95,11 +95,13 @@ class NERInference:
 			text,
 			return_tensors="pt",
 			return_offsets_mapping=True,
+			truncation=True,
+			max_length=512,
 		)
-		print(result, "\n")
-		print(len(result["input_ids"][0]))
-		print(len(result["attention_mask"][0]))
-		print(len(result["offset_mapping"][0]), "\n")
+		
+		if (len(result["input_ids"][0]) > 512):
+			print("Input longer than 512 tokens")
+
 		tokens = self.tokenizer.convert_ids_to_tokens(result["input_ids"][0])[1:-1]
 		offsets = result["offset_mapping"][0][1:-1]
 
