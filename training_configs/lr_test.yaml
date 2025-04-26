@@ -6,7 +6,7 @@ dataset_qualities:
 - "gold"
 - "silver"
 - "bronze"
-remove_html: True
+remove_html: False
 weighted_training: True
 dataset_weights:
 - 1.25
@@ -17,7 +17,6 @@ find_optimal_lr: False
 hyperparameters:
   num_epochs: 10
   batch_size: 16
-  freeze_epochs: 0
   lr_scheduler:
     learning_rate: 0.001
     method: "one cycle"

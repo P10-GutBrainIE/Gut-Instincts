@@ -20,11 +20,9 @@ class NERInference:
 		save_path: str = None,
 		validation_model=None,
 	):
-		if remove_html:
-			self.test_data = remove_html_tags(load_json_data(test_data_path))
-		else:
-			self.test_data = load_json_data(test_data_path)
-
+		self.test_data = (
+			remove_html_tags(load_json_data(test_data_path)) if remove_html else load_json_data(test_data_path)
+		)
 		label_list, label2id, self.id2label = load_bio_labels()
 		if model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
 			self.tokenizer = AlbertTokenizerFast.from_pretrained(model_name, max_length=512, truncation=True)
