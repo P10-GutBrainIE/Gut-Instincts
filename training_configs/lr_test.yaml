@@ -1,0 +1,26 @@
+experiment_name: "LR_finder_test"
+model_type: "huggingface"
+model_name: "michiyasunaga/BioLinkBERT-base"
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+remove_html: True
+weighted_training: True
+dataset_weights:
+- 1.25
+- 1.25
+- 1.25
+- 0.75
+find_optimal_lr: False
+hyperparameters:
+  num_epochs: 15
+  batch_size: 16
+  freeze_epochs: 0
+  lr_scheduler:
+    method: "one cycle"
+    max_learning_rate: 0.001
+    pct_start: 0.3
+    div_factor: 25
+    final_div_factor: 10000
