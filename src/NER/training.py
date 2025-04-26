@@ -225,7 +225,9 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 	plt.ylabel("Smoothed Loss")
 	plt.title("Learning Rate Finder")
 	os.makedirs(os.path.join("plots", "lr_vs_loss"), exist_ok=True)
-	plt.savefig(os.path.join("plots", "lr_vs_loss", f"{config['experiment_name']}.pdf"), format="pdf")
+	plt.savefig(
+		os.path.join("plots", "lr_vs_loss", f"{config['model_name']}_{config['experiment_name']}.pdf"), format="pdf"
+	)
 
 	print("Learning rate finder finished. Inspect the plot and select an LR just before the loss increases rapidly.")
 
