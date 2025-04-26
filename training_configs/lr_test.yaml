@@ -13,7 +13,7 @@ dataset_weights:
 - 1.25
 - 1.25
 - 0.75
-find_optimal_lr: False
+find_optimal_lr: True
 hyperparameters:
   num_epochs: 10
   batch_size: 16

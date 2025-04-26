@@ -4,6 +4,7 @@ import sys
 import yaml
 import matplotlib.pyplot as plt
 import mlflow
+import numpy as np
 import torch
 from tqdm import tqdm
 
@@ -224,8 +225,30 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
 	plt.xlabel("Learning Rate (log scale)")
 	plt.ylabel("Smoothed Loss")
 	plt.title("Learning Rate Finder")
-	os.makedirs("plots", exist_ok=True)
-	plt.savefig(os.path.join("plots", f"lr_vs_loss_{config['experiment_name']}.pdf"), format="pdf")
+
+	# --- FIND STEEPEST SLOPE AND PLOT TANGENT LINE ---
+	lrs_np = np.array(lrs)
+	losses_np = np.array(losses)
+	log_lrs = np.log10(lrs_np)
+
+	# Compute finite differences: slope = d(loss)/d(log10(lr))
+	slopes = np.diff(losses_np) / np.diff(log_lrs)
+	min_slope_idx = np.argmin(slopes)  # index of steepest descent
+
+	# Tangent point
+	x0 = lrs_np[min_slope_idx + 1]  # because np.diff skips the first point
+	y0 = losses_np[min_slope_idx + 1]
+	slope_at_min = slopes[min_slope_idx]
+
+	# Tangent line in log space: y = slope * (log10(x) - log10(x0)) + y0
+	log_lr_tangent = np.linspace(log_lrs[min_slope_idx], log_lrs[min_slope_idx + 2], 100)
+	tangent = slope_at_min * (log_lr_tangent - np.log10(x0)) + y0
+	plt.plot(10**log_lr_tangent, tangent, "--", color="red", label="Steepest tangent")
+	plt.scatter([x0], [y0], color="red", zorder=5)
+	plt.legend()
+
+	os.makedirs("plots", "lr_vs_loss", exist_ok=True)
+	plt.savefig(os.path.join("plots", "lr_vs_loss", f"{config['experiment_name']}.pdf"), format="pdf")
 
 	print("Learning rate finder finished. Inspect the plot and select an LR just before the loss increases rapidly.")
 
@@ -235,7 +258,7 @@ if __name__ == "__main__":
 		torch.cuda.empty_cache()
 		torch.manual_seed(17)
 		torch.cuda.manual_seed_all(17)
-		print(f"CUDA is available. GPU: {torch.cuda.get_device_name(0)}. Device count: {torch.cuda.device_count()}")
+		print(f"CUDA is available. GPU: {torch.cuda.get_device_name(0)}. Device count: {torch.cuda.device_count()}.")
 
 		parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
 		parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
