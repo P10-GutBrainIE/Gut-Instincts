@@ -233,8 +233,8 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
 if __name__ == "__main__":
 	if torch.cuda.is_available():
 		torch.cuda.empty_cache()
-		torch.manual_seed(17)
-		torch.cuda.manual_seed_all(17)
+		torch.manual_seed(42)
+		torch.cuda.manual_seed_all(42)
 		print("Device count:", torch.cuda.device_count())
 		print("CUDA is available. GPU:", torch.cuda.get_device_name(0))
 
