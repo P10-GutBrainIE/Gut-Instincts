@@ -102,6 +102,9 @@ class NERInference:
 			truncation=True,
 			max_length=512,
 		)
+		device = next(self.model.parameters()).device
+		input_ids = result["input_ids"].to(device)
+		attention_mask = result["attention_mask"].to(device)
 
 		if len(result["input_ids"][0]) > 512:
 			print("Input longer than 512 tokens")
@@ -109,7 +112,7 @@ class NERInference:
 		tokens = self.tokenizer.convert_ids_to_tokens(result["input_ids"][0])[1:-1]
 		offsets = result["offset_mapping"][0][1:-1]
 
-		outputs = self.model.predict(result["input_ids"], result["attention_mask"])
+		outputs = self.model.predict(input_ids, attention_mask)
 		if isinstance(outputs[0], torch.Tensor):
 			outputs = outputs[0].tolist()
 		else:
