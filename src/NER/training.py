@@ -76,9 +76,14 @@ def training(config):
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
-	scheduler = lr_scheduler(lr_scheduler_dict=config["hyperparameters"], optimizer=optimizer)
+	scheduler = lr_scheduler(
+		lr_scheduler_dict=config["hyperparameters"],
+		optimizer=optimizer,
+		steps_per_epoch=len(train_loader),
+	)
 
 	best_f1_micro = 0.0
+	global_step = 0
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
 		model.train()
@@ -107,6 +112,13 @@ def training(config):
 			optimizer.step()
 			total_loss += loss.item()
 
+			if config["hyperparameters"]["lr_scheduler"]["method"] == "one cycle":
+				current_lr = optimizer.param_groups[0]["lr"]
+				mlflow.log_metric("batch_lr", current_lr, step=global_step)
+				mlflow.log_metric("batch_loss", loss.item(), step=global_step)
+				global_step += 1
+				scheduler.step()
+
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
 		mlflow.log_metrics({"epoch_lr": current_lr, "epoch_loss": avg_loss}, step=epoch)
@@ -114,7 +126,7 @@ def training(config):
 			f"Epoch {epoch + 1}/{num_epochs} | Avg. training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)
 
-		if config["hyperparameters"]["lr_scheduler"]["method"] in ["custom", "cosine annealing", "one cycle"]:
+		if config["hyperparameters"]["lr_scheduler"]["method"] in ["custom", "cosine annealing"]:
 			scheduler.step()
 		elif config["hyperparameters"]["lr_scheduler"]["method"] == "reduce on plateau":
 			scheduler.step(avg_loss)
