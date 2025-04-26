@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/144610107049397532/5c20646320334a19b975fa63cf33bbd6/artifacts
+end_time: 1745666396019
+entry_point_name: ''
+experiment_id: '144610107049397532'
+lifecycle_stage: active
+run_id: 5c20646320334a19b975fa63cf33bbd6
+run_name: valuable-turtle-403
+run_uuid: 5c20646320334a19b975fa63cf33bbd6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745666393988
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

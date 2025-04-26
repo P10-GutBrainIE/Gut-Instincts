@@ -1,0 +1,1 @@
+{'num_epochs': 15, 'batch_size': 16, 'freeze_epochs': 0, 'learning_rate': 0.001, 'lr_scheduler': {'method': 'one cycle', 'max_learning_rate': 0.001, 'pct_start': 0.3, 'div_factor': 25, 'final_div_factor': 10000}}
