@@ -30,7 +30,7 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer) -> torch.optim.lr_scheduler
 	elif method == "custom":
 
 		def custom_schedule(epoch):
-			schedule = lr_scheduler_dict["custom_schedule"]
+			schedule = lr_scheduler_dict["lr_scheduler"]["custom_schedule"]
 			for start, end, multiplier in schedule:
 				if start <= epoch <= end:
 					return multiplier
