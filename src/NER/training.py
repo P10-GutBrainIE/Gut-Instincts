@@ -71,11 +71,7 @@ def training(config):
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 
 	train_loader = torch.utils.data.DataLoader(
-		training_dataset,
-		batch_size=config["hyperparameters"]["batch_size"],
-		shuffle=True,
-		pin_memory=True,
-		drop_last=True if config["hyperparameters"]["lr_scheduler"]["method"] == "one cycle" else False,
+		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
 	)
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
