@@ -12,9 +12,11 @@ def lr_scheduler(lr_scheduler_dict: dict, optimizer, steps_per_epoch: int) -> to
 	elif method == "reduce on plateau":
 		scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
 			optimizer=optimizer,
+			mode="max",
 			factor=lr_scheduler_dict["lr_scheduler"]["factor"],
 			patience=lr_scheduler_dict["lr_scheduler"]["patience"],
 			threshold=lr_scheduler_dict["lr_scheduler"]["threshold"],
+			min_lr=1e-7,
 		)
 	elif method == "one cycle":
 		scheduler = torch.optim.lr_scheduler.OneCycleLR(

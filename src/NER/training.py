@@ -126,11 +126,6 @@ def training(config):
 			f"Epoch {epoch + 1}/{num_epochs} | Avg. training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)
 
-		if config["hyperparameters"]["lr_scheduler"]["method"] in ["custom", "cosine annealing"]:
-			scheduler.step()
-		elif config["hyperparameters"]["lr_scheduler"]["method"] == "reduce on plateau":
-			scheduler.step(avg_loss)
-
 		model.eval()
 		metrics = compute_metrics(
 			model=model,
@@ -140,6 +135,11 @@ def training(config):
 		)
 		print_metrics(metrics)
 		mlflow.log_metrics(metrics, step=epoch)
+
+		if config["hyperparameters"]["lr_scheduler"]["method"] in ["custom", "cosine annealing"]:
+			scheduler.step()
+		elif config["hyperparameters"]["lr_scheduler"]["method"] == "reduce on plateau":
+			scheduler.step(metrics["F1_micro"])
 
 		if metrics["F1_micro"] > best_f1_micro:
 			best_f1_micro = metrics["F1_micro"]

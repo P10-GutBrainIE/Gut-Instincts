@@ -15,12 +15,11 @@ dataset_weights:
 - 0.75
 find_optimal_lr: False
 hyperparameters:
-  num_epochs: 10
+  num_epochs: 25
   batch_size: 16
   lr_scheduler:
-    learning_rate: 0.00003
-    method: "one cycle"
-    max_learning_rate: 0.00003
-    pct_start: 0.3
-    div_factor: 25
-    final_div_factor: 10000
+    learning_rate: 0.00002
+    method: "reduce on plateau"
+    factor: 0.5
+    patience: 2
+    threshold: 1e-3
