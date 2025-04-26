@@ -106,9 +106,4 @@ def NER_evaluation(predictions):
 	recall = recall / n
 	f1 = f1 / n
 
-	print("Predicted entities per label:", count_predicted_entities_per_label)
-	print("True positives per label:", count_true_positives_per_label)
-	print("Sum true positives:", count_true_positives)
-	print("Sum predicted entities:", count_predicted_entities)
-
 	return precision, recall, f1, micro_precision, micro_recall, micro_f1
