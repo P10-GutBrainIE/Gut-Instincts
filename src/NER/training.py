@@ -77,7 +77,7 @@ def training(config):
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
 	scheduler = lr_scheduler(
-		lr_scheduler_dict=config["hyperparameters"]["lr_scheduler"],
+		lr_scheduler_dict=config["hyperparameters"],
 		optimizer=optimizer,
 		steps_per_epoch=len(train_loader),
 	)
