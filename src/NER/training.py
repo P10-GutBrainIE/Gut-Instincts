@@ -130,7 +130,7 @@ def training(config):
 			f"Epoch {epoch + 1}/{num_epochs} | Avg. training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)
 
-		if config["hyperparameters"]["lr_scheduler"]["method"] == "custom" or "cosine annealing":
+		if config["hyperparameters"]["lr_scheduler"]["method"] in ["custom", "cosine annealing"]:
 			scheduler.step()
 		elif config["hyperparameters"]["lr_scheduler"]["method"] == "reduce on plateau":
 			scheduler.step(avg_loss)
@@ -142,7 +142,6 @@ def training(config):
 			model_type=config["model_type"],
 			remove_html=config["remove_html"],
 		)
-		model.to(device)
 		print_metrics(metrics)
 		mlflow.log_metrics(metrics, step=epoch)
 
