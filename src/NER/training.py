@@ -247,7 +247,7 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
 	plt.scatter([x0], [y0], color="red", zorder=5)
 	plt.legend()
 
-	os.makedirs("plots", "lr_vs_loss", exist_ok=True)
+	os.makedirs(os.path.join("plots", "lr_vs_loss"), exist_ok=True)
 	plt.savefig(os.path.join("plots", "lr_vs_loss", f"{config['experiment_name']}.pdf"), format="pdf")
 
 	print("Learning rate finder finished. Inspect the plot and select an LR just before the loss increases rapidly.")
