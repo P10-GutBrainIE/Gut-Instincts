@@ -18,7 +18,7 @@ hyperparameters:
   num_epochs: 25
   batch_size: 16
   lr_scheduler:
-    learning_rate: 0.00003
+    learning_rate: 0.0005
     method: "reduce on plateau"
     factor: 0.5
     patience: 2
