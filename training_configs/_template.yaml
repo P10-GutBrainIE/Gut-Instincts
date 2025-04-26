@@ -13,6 +13,7 @@ dataset_weights: # Weights for weighted training. Has to correspond to the datas
 - 1.2
 - 1.0
 - 0.33
+find_optimal_lr: True # If True, a learning rate finder is run instead of training.
 hyperparameters:
   num_epochs: 25 # Total number of full passes over the dataset.
   batch_size: 16 # Number of samples processed in one forward/backward pass.

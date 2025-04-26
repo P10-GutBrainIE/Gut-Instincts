@@ -2,6 +2,7 @@ import argparse
 import os
 import sys
 import yaml
+import matplotlib.pyplot as plt
 import mlflow
 import torch
 from tqdm import tqdm
@@ -151,6 +152,84 @@ def training(config):
 	mlflow.end_run()
 
 
+def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
+	print("Running learning rate finder instead of training")
+	dataset_dir_name = make_dataset_dir_name(
+		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
+	)
+	label_list, label2id, id2label = load_bio_labels()
+	model = build_model(config, label_list, id2label, label2id)
+	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+	model.to(device)
+	training_data = load_pkl_data(
+		os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "training.pkl")
+	)
+	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
+	train_loader = torch.utils.data.DataLoader(
+		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
+	)
+
+	optimizer = torch.optim.AdamW(model.parameters(), lr=min_lr)
+	num_batches = min(num_iter, len(train_loader))
+	lr_mult = (max_lr / min_lr) ** (1 / num_batches)
+	lrs = []
+	losses = []
+	iter_loader = iter(train_loader)
+	lr = min_lr
+	best_loss = float("inf")
+	avg_loss = 0.0
+	beta = 0.98
+
+	for batch_num in range(num_batches):
+		try:
+			batch = next(iter_loader)
+		except StopIteration:
+			iter_loader = iter(train_loader)
+			batch = next(iter_loader)
+		for k, v in batch.items():
+			if isinstance(v, torch.Tensor):
+				batch[k] = v.to(device)
+		optimizer.zero_grad()
+		if config.get("weighted_training"):
+			outputs = model(
+				batch["input_ids"],
+				attention_mask=batch.get("attention_mask"),
+				labels=batch.get("labels"),
+				weight=batch.get("weight"),
+			)
+		else:
+			outputs = model(
+				batch["input_ids"],
+				attention_mask=batch.get("attention_mask"),
+				labels=batch.get("labels"),
+			)
+		loss = outputs["loss"]
+		avg_loss = beta * avg_loss + (1 - beta) * loss.item()
+		smoothed_loss = avg_loss / (1 - beta ** (batch_num + 1))
+		if smoothed_loss < best_loss or batch_num == 0:
+			best_loss = smoothed_loss
+		lrs.append(lr)
+		losses.append(smoothed_loss)
+		loss.backward()
+		optimizer.step()
+		lr *= lr_mult
+		for param_group in optimizer.param_groups:
+			param_group["lr"] = lr
+		if smoothed_loss > 4 * best_loss:
+			break
+
+	plt.figure()
+	plt.plot(lrs, losses)
+	plt.xscale("log")
+	plt.xlabel("Learning Rate (log scale)")
+	plt.ylabel("Smoothed Loss")
+	plt.title("Learning Rate Finder")
+	os.makedirs("plots", exist_ok=True)
+	plt.savefig(os.path.join("plots", f"lr_vs_loss_{config['experiment_name']}.pdf"), format="pdf")
+
+	print("Learning rate finder finished. Inspect the plot and select an LR just before the loss increases rapidly.")
+
+
 if __name__ == "__main__":
 	if torch.cuda.is_available():
 		torch.cuda.empty_cache()
@@ -166,7 +245,11 @@ if __name__ == "__main__":
 		with open(args.config, "r") as file:
 			config = yaml.safe_load(file)
 			os.makedirs("models", exist_ok=True)
-			training(config)
+
+			if config.get("find_optimal_lr"):
+				find_optimal_lr(config)
+			else:
+				training(config)
 	else:
 		print("CUDA is not available.")
 		exit()
