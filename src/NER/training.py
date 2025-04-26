@@ -75,7 +75,7 @@ def training(config):
 		batch_size=config["hyperparameters"]["batch_size"],
 		shuffle=True,
 		pin_memory=True,
-		drop_last=True,
+		drop_last=True if config["hyperparameters"]["lr_scheduler"]["method"] == "one cycle" else False,
 	)
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
