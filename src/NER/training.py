@@ -153,7 +153,7 @@ def training(config):
 	mlflow.end_run()
 
 
-def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
+def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 	print("Running learning rate finder instead of training")
 	dataset_dir_name = make_dataset_dir_name(
 		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
@@ -171,8 +171,7 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
 	)
 
 	optimizer = torch.optim.AdamW(model.parameters(), lr=min_lr)
-	num_batches = min(num_iter, len(train_loader))
-	lr_mult = (max_lr / min_lr) ** (1 / num_batches)
+	lr_mult = (max_lr / min_lr) ** (1 / len(train_loader))
 	lrs = []
 	losses = []
 	iter_loader = iter(train_loader)
@@ -181,7 +180,7 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
 	avg_loss = 0.0
 	beta = 0.98
 
-	for batch_num in range(num_batches):
+	for batch_num in tqdm(range(len(train_loader)), desc="Find best learning rate:", unit="batch"):
 		try:
 			batch = next(iter_loader)
 		except StopIteration:
@@ -225,28 +224,6 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1, num_iter=100):
 	plt.xlabel("Learning Rate (log scale)")
 	plt.ylabel("Smoothed Loss")
 	plt.title("Learning Rate Finder")
-
-	# --- FIND STEEPEST SLOPE AND PLOT TANGENT LINE ---
-	lrs_np = np.array(lrs)
-	losses_np = np.array(losses)
-	log_lrs = np.log10(lrs_np)
-
-	# Compute finite differences: slope = d(loss)/d(log10(lr))
-	slopes = np.diff(losses_np) / np.diff(log_lrs)
-	min_slope_idx = np.argmin(slopes)  # index of steepest descent
-
-	# Tangent point
-	x0 = lrs_np[min_slope_idx + 1]  # because np.diff skips the first point
-	y0 = losses_np[min_slope_idx + 1]
-	slope_at_min = slopes[min_slope_idx]
-
-	# Tangent line in log space: y = slope * (log10(x) - log10(x0)) + y0
-	log_lr_tangent = np.linspace(log_lrs[min_slope_idx], log_lrs[min_slope_idx + 2], 100)
-	tangent = slope_at_min * (log_lr_tangent - np.log10(x0)) + y0
-	plt.plot(10**log_lr_tangent, tangent, "--", color="red", label="Steepest tangent")
-	plt.scatter([x0], [y0], color="red", zorder=5)
-	plt.legend()
-
 	os.makedirs(os.path.join("plots", "lr_vs_loss"), exist_ok=True)
 	plt.savefig(os.path.join("plots", "lr_vs_loss", f"{config['experiment_name']}.pdf"), format="pdf")
 
