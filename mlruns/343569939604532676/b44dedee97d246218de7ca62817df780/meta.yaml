@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/343569939604532676/b44dedee97d246218de7ca62817df780/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '343569939604532676'
+lifecycle_stage: active
+run_id: b44dedee97d246218de7ca62817df780
+run_name: youthful-horse-164
+run_uuid: b44dedee97d246218de7ca62817df780
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745673526688
+status: 1
+tags: []
+user_id: lran18@student.aau.dk
