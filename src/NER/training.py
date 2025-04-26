@@ -46,14 +46,16 @@ def build_model(config, label_list, id2label, label2id):
 		)
 	elif config["model_type"] == "re":
 		from NER.architectures.bert_with_entity_start import BertForREWithEntityStart
-		from transformers import AutoConfig
+		from transformers import AutoConfig, AutoTokenizer
 
-		#e1_id = tokenizer.convert_tokens_to_ids("[E1]")
-		#e2_id = tokenizer.convert_tokens_to_ids("[E2]")
+		tokenizer = AutoTokenizer.from_pretrained(config["model_name"])
+		tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
 
 		return BertForREWithEntityStart(
-			config==AutoConfig.from_pretrained(config["model_name"]),
-			num_labels=len(label_list)
+			config=AutoConfig.from_pretrained(config["model_name"]),
+			e1_token_id=tokenizer.convert_tokens_to_ids("[E1]"),
+			e2_token_id=tokenizer.convert_tokens_to_ids("[E2]"),
+			#num_labels=len(label_list)
 		)
 	else:
 		raise ValueError("Unknown model_type")
