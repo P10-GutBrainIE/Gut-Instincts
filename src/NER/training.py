@@ -6,8 +6,8 @@ import mlflow
 import torch
 from tqdm import tqdm
 
-from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_evaluation_metrics
-from NER.compute_metrics import compute_evaluation_metrics
+from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_metrics
+from NER.compute_metrics import compute_metrics
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
 
@@ -67,18 +67,10 @@ def training(config):
 	training_data = load_pkl_data(
 		os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "training.pkl")
 	)
-	validation_data = load_pkl_data(
-		os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "validation.pkl")
-	)
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
-	validation_dataset = Dataset(validation_data, with_weights=False)
+
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
-	)
-	val_loader = torch.utils.data.DataLoader(
-		validation_dataset,
-		batch_size=config["hyperparameters"]["batch_size"],
-		shuffle=False,
 	)
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
@@ -134,30 +126,18 @@ def training(config):
 			scheduler.step(avg_loss)
 
 		model.eval()
-		all_preds = []
-		all_labels = []
-		with torch.no_grad():
-			for batch in tqdm(val_loader, desc=f"Epoch {epoch + 1}/{num_epochs}", leave=False):
-				labels = batch["labels"].cpu().numpy()
-				for k, v in batch.items():
-					if isinstance(v, torch.Tensor):
-						batch[k] = v.to(device)
-				outputs = model(
-					batch["input_ids"],
-					attention_mask=batch.get("attention_mask"),
-				)
-				if config["model_type"] == "huggingface":
-					preds = outputs["logits"].argmax(-1).cpu().tolist()
-				else:
-					preds = outputs.get("decoded_tags", outputs["logits"].argmax(-1).cpu().tolist())
-				all_preds.extend(preds)
-				all_labels.extend(labels)
-
-		metrics = compute_evaluation_metrics(
-			model=model, model_name=config["model_name"], model_type=config["model_type"]
+		if config["remove_html"]:
+			data_path = os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "validation.pkl")
+		else:
+			data_path = os.path.join("data", "Annotations", "Dev", "json_format", "dev.json")
+		metrics = compute_metrics(
+			model=model,
+			model_name=config["model_name"],
+			model_type=config["model_type"],
+			data_path=data_path,
 		)
 		model.to(device)
-		print_evaluation_metrics(metrics)
+		print_metrics(metrics)
 		mlflow.log_metrics(metrics, step=epoch)
 
 		if metrics["F1_micro"] > best_f1_micro:

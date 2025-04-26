@@ -122,13 +122,5 @@ def make_dataset_dir_name(dataset_qualities, weighted_training, dataset_weights=
 
 
 def print_metrics(metrics):
-	print("Validation metrics:")
-	print(f"{'  Metric':<25} {'All':>10} {'No_O':>10}")
-
-	for metric, all_value, no_o_value in zip(metrics["all"].keys(), metrics["all"].values(), metrics["no_o"].values()):
-		print(f"  {metric:<25} {all_value:>10.4f} {no_o_value:>10.4f}")
-
-
-def print_evaluation_metrics(metrics):
 	for metric, value in zip(metrics.keys(), metrics.values()):
 		print(f"  {metric:<25} {value:>10.4f}")
