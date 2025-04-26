@@ -4,7 +4,6 @@ import sys
 import yaml
 import matplotlib.pyplot as plt
 import mlflow
-import numpy as np
 import torch
 from tqdm import tqdm
 
