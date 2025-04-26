@@ -5,7 +5,8 @@ import yaml
 import torch
 from tqdm import tqdm
 from transformers import AutoModelForTokenClassification, AutoTokenizer, AlbertTokenizerFast, pipeline
-from utils.utils import load_json_data, load_pkl_data, load_bio_labels, make_dataset_dir_name
+from preprocessing.remove_html import remove_html_tags
+from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name
 
 
 class NERInference:
@@ -14,16 +15,15 @@ class NERInference:
 		test_data_path: str,
 		model_name: str,
 		model_type: str,
+		remove_html: bool,
 		model_name_path: str = None,
 		save_path: str = None,
 		validation_model=None,
 	):
-		if test_data_path.endswith(".json"):
-			self.test_data = load_json_data(test_data_path)
-		elif test_data_path.endswith(".pkl"):
-			self.test_data = load_pkl_data(test_data_path)
+		if remove_html:
+			self.test_data = remove_html_tags(load_json_data(test_data_path))
 		else:
-			raise ValueError("Unsupported file format. Please provide a .json or .pkl file.")
+			self.test_data = load_json_data(test_data_path)
 
 		label_list, label2id, self.id2label = load_bio_labels()
 		if model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:

@@ -127,15 +127,11 @@ def training(config):
 			scheduler.step(avg_loss)
 
 		model.eval()
-		if config["remove_html"]:
-			data_path = os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "validation.pkl")
-		else:
-			data_path = os.path.join("data", "Annotations", "Dev", "json_format", "dev.json")
 		metrics = compute_metrics(
 			model=model,
 			model_name=config["model_name"],
 			model_type=config["model_type"],
-			data_path=data_path,
+			remove_html=config["remove_html"],
 		)
 		model.to(device)
 		print_metrics(metrics)

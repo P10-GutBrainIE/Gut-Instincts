@@ -3,14 +3,15 @@ from NER.inference import NERInference
 from utils.utils import load_entity_labels, load_json_data
 
 
-def compute_metrics(model, model_name, model_type, data_path):
+def compute_metrics(model, model_name, model_type, remove_html):
 	model.to("cpu")
 
 	ner_inference = NERInference(
-		test_data_path=data_path,
+		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 		model_name=model_name,
 		model_type=model_type,
 		validation_model=model,
+		remove_html=remove_html,
 	)
 
 	inference_results = ner_inference.perform_inference()
