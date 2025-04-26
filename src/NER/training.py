@@ -235,8 +235,7 @@ if __name__ == "__main__":
 		torch.cuda.empty_cache()
 		torch.manual_seed(17)
 		torch.cuda.manual_seed_all(17)
-		print("Device count:", torch.cuda.device_count())
-		print("CUDA is available. GPU:", torch.cuda.get_device_name(0))
+		print(f"CUDA is available. GPU: {torch.cuda.get_device_name(0)}. Device count: {torch.cuda.device_count()}")
 
 		parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
 		parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
