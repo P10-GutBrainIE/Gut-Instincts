@@ -9,7 +9,7 @@
 mkdir -p logs
 
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/1,25-1,25-1,25-0,75_hmtl.yaml
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/1,25-1,25-1,25-0,75_html.yaml
 
 # training
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/1,25-1,25-1,25-0,75_hmtl.yaml >logs/biolinkbert-base.out 2>logs/biolinkbert-base.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/1,25-1,25-1,25-0,75_html.yaml >logs/biolinkbert-base.out 2>logs/biolinkbert-base.err
