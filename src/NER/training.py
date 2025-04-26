@@ -83,6 +83,7 @@ def training(config):
 	)
 
 	best_f1_micro = 0.0
+	global_step = 0
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
 		model.train()
@@ -112,11 +113,15 @@ def training(config):
 			total_loss += loss.item()
 
 			if config["hyperparameters"]["lr_scheduler"]["method"] == "one cycle":
+				current_lr = optimizer.param_groups[0]["lr"]
+				mlflow.log_metric("batch_lr", current_lr, step=global_step)
+				mlflow.log_metric("batch_loss", loss.item(), step=global_step)
+				global_step += 1
 				scheduler.step()
 
 		current_lr = optimizer.param_groups[0]["lr"]
 		avg_loss = total_loss / len(train_loader)
-		mlflow.log_metrics({"lr": current_lr, "loss": avg_loss}, step=epoch)
+		mlflow.log_metrics({"epoch_lr": current_lr, "epoch_loss": avg_loss}, step=epoch)
 		print(
 			f"Epoch {epoch + 1}/{num_epochs} | Avg. training loss per batch: {avg_loss:.4f} | Learning rate: {current_lr:.8f}"
 		)
