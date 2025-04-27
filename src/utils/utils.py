@@ -119,7 +119,7 @@ def make_dataset_dir_name(config):
 			dataset_dir_name += str(config["dataset_weights"][i])
 
 	if config["remove_html"]:
-		dataset_dir_name + "_no_html"
+		dataset_dir_name += "_no_html"
 
 	return dataset_dir_name
 
