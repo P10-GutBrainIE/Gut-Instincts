@@ -2,9 +2,13 @@ data/Annotations
 data/Articles
 data_preprocessed/
 models/
-logs/
 
 .VSCodeCounter/
+
+# Log files from AI-lab
+logs/
+*.err
+*.out
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
