@@ -1,6 +1,6 @@
-experiment_name: "BiomedElectra-large-uncased-abstract"
+experiment_name: "BiomedBERT-large-uncased-abstract"
 model_type: "huggingface"
-model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
+model_name: "microsoft/BiomedNLP-BiomedBERT-large-uncased-abstract"
 dataset_qualities:
 - "platinum"
 - "gold"
@@ -10,8 +10,8 @@ remove_html: False
 find_optimal_lr: False
 weighted_training: True
 dataset_weights:
-- 1.5
-- 1.5
+- 1.25
+- 1.25
 - 1
 - 0.75
 hyperparameters:

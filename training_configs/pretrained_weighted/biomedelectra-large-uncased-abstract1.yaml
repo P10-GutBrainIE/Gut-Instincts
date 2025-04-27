@@ -10,8 +10,8 @@ remove_html: False
 find_optimal_lr: False
 weighted_training: True
 dataset_weights:
-- 1.5
-- 1.5
+- 1.25
+- 1.25
 - 1
 - 0.75
 hyperparameters:
