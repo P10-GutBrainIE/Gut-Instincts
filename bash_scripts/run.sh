@@ -10,7 +10,7 @@ if [ ! -d "training_configs/$1" ]; then
   exit 1
 fi
 
-mkdir -p logs/$1
+mkdir -p logs/
 
 for script in training_configs/$1/*.yaml; do
     filename=$(basename "$script")
