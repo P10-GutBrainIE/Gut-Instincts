@@ -7,11 +7,10 @@ dataset_qualities:
 - "silver"
 - "bronze"
 remove_html: False
-find_optimal_lr: True
-remove_html: False
+find_optimal_lr: False
 weighted_training: False
 hyperparameters:
-  num_epochs: 25
+  num_epochs: 20
   batch_size: 16
   lr_scheduler:
     learning_rate: 0.00002
