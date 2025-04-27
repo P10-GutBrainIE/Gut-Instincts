@@ -1,8 +1,18 @@
 #!/bin/bash
 
-mkdir -p logs
+if [ -z "$1" ]; then
+  echo "Usage: $0 <folder_name>"
+  exit 1
+fi
 
-for script in training_configs/weighted_training_with_html/*.yaml; do
+if [ ! -d "training_configs/$1" ]; then
+  echo "Error: Folder 'training_configs/$1' does not exist."
+  exit 1
+fi
+
+mkdir -p logs/$1
+
+for script in training_configs/$1/*.yaml; do
     filename=$(basename "$script")
     echo "Submitting $script"
 
