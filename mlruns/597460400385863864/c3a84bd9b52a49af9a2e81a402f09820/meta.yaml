@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/597460400385863864/c3a84bd9b52a49af9a2e81a402f09820/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '597460400385863864'
+lifecycle_stage: active
+run_id: c3a84bd9b52a49af9a2e81a402f09820
+run_name: secretive-crab-359
+run_uuid: c3a84bd9b52a49af9a2e81a402f09820
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745749800753
+status: 1
+tags: []
+user_id: lran18@student.aau.dk
