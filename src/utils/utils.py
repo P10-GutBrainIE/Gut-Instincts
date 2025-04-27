@@ -111,12 +111,15 @@ def set_experiment_id(experiment_name):
 	return experiment_name + "_" + timestamp
 
 
-def make_dataset_dir_name(dataset_qualities, weighted_training, dataset_weights=None):
+def make_dataset_dir_name(config):
 	dataset_dir_name = ""
-	for i, quality in enumerate(dataset_qualities):
+	for i, quality in enumerate(config["dataset_qualities"]):
 		dataset_dir_name += quality[0]
-		if weighted_training and dataset_weights:
-			dataset_dir_name += str(dataset_weights[i])
+		if config["weighted_training"] and config["dataset_weights"]:
+			dataset_dir_name += str(config["dataset_weights"][i])
+
+	if config["remove_html"]:
+		dataset_dir_name + "_no_html"
 
 	return dataset_dir_name
 

@@ -175,9 +175,7 @@ if __name__ == "__main__":
 	with open(args.config, "r") as file:
 		config = yaml.safe_load(file)
 
-	dataset_dir_name = make_dataset_dir_name(
-		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
-	)
+	dataset_dir_name = make_dataset_dir_name(config)
 
 	ner_inference = NERInference(
 		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),

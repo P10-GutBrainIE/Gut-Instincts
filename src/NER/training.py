@@ -48,9 +48,7 @@ def build_model(config, label_list, id2label, label2id):
 
 
 def training(config):
-	dataset_dir_name = make_dataset_dir_name(
-		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
-	)
+	dataset_dir_name = make_dataset_dir_name(config)
 
 	output_dir = os.path.join("models", config["experiment_name"], dataset_dir_name)
 	os.makedirs(output_dir, exist_ok=True)
@@ -154,9 +152,7 @@ def training(config):
 
 def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 	print("Running learning rate finder instead of training")
-	dataset_dir_name = make_dataset_dir_name(
-		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
-	)
+	dataset_dir_name = make_dataset_dir_name(config)
 	label_list, label2id, id2label = load_bio_labels()
 	model = build_model(config, label_list, id2label, label2id)
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
