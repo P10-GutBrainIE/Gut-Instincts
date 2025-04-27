@@ -1,8 +1,13 @@
 experiment_name: "BioM-ALBERT-xxlarge-PMC"
 model_type: "huggingface"
 model_name: "sultan/BioM-ALBERT-xxlarge-PMC"
-training_data_path: "data_preprocessed/BioM-ALBERT-xxlarge-PMC/training.pkl"
-validation_data_path: "data_preprocessed/BioM-ALBERT-xxlarge-PMC/validation.pkl"
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+remove_html: False
+find_optimal_lr: True
 weighted_training: False
 hyperparameters:
   num_epochs: 50
