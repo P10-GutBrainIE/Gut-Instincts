@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/595722650593313819/7d61c32b973c43fb99c2f7dab1c69c4b/artifacts
+end_time: 1745747866319
+entry_point_name: ''
+experiment_id: '595722650593313819'
+lifecycle_stage: active
+run_id: 7d61c32b973c43fb99c2f7dab1c69c4b
+run_name: amazing-stork-7
+run_uuid: 7d61c32b973c43fb99c2f7dab1c69c4b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745746942681
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

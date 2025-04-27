@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/365874853104266200/fc4f1f3e6f674a8291ed7abc7321b414/artifacts
+end_time: 1745747872148
+entry_point_name: ''
+experiment_id: '365874853104266200'
+lifecycle_stage: active
+run_id: fc4f1f3e6f674a8291ed7abc7321b414
+run_name: bustling-squid-886
+run_uuid: fc4f1f3e6f674a8291ed7abc7321b414
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745746949541
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
