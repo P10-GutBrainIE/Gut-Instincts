@@ -40,4 +40,4 @@ def find_best_f1_for_experiment(experiment_name: str = None, top_n: int = 20):
 
 
 if __name__ == "__main__":
-	find_best_f1_for_experiment(experiment_name=None, top_n=10)
+	find_best_f1_for_experiment(experiment_name=None, top_n=20)
