@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/595722650593313819/b999c3e0859a4f6aa23044c660af72cf/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '595722650593313819'
+lifecycle_stage: active
+run_id: b999c3e0859a4f6aa23044c660af72cf
+run_name: agreeable-koi-126
+run_uuid: b999c3e0859a4f6aa23044c660af72cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750713501
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

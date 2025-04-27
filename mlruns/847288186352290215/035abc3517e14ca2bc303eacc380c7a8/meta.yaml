@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/847288186352290215/035abc3517e14ca2bc303eacc380c7a8/artifacts
+end_time: 1745751559698
+entry_point_name: ''
+experiment_id: '847288186352290215'
+lifecycle_stage: active
+run_id: 035abc3517e14ca2bc303eacc380c7a8
+run_name: redolent-goat-199
+run_uuid: 035abc3517e14ca2bc303eacc380c7a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750904959
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

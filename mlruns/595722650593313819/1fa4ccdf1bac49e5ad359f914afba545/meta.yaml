@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/595722650593313819/1fa4ccdf1bac49e5ad359f914afba545/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '595722650593313819'
+lifecycle_stage: active
+run_id: 1fa4ccdf1bac49e5ad359f914afba545
+run_name: grandiose-yak-282
+run_uuid: 1fa4ccdf1bac49e5ad359f914afba545
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750713701
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

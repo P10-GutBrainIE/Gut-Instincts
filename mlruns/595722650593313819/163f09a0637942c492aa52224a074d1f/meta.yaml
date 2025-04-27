@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/595722650593313819/163f09a0637942c492aa52224a074d1f/artifacts
+end_time: 1745751553473
+entry_point_name: ''
+experiment_id: '595722650593313819'
+lifecycle_stage: active
+run_id: 163f09a0637942c492aa52224a074d1f
+run_name: stylish-ram-200
+run_uuid: 163f09a0637942c492aa52224a074d1f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750904176
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
