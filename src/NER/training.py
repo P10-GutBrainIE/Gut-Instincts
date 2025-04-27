@@ -175,7 +175,7 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 	avg_loss = 0.0
 	beta = 0.98
 
-	for batch_num in tqdm(range(len(train_loader)), desc="Find best learning rate:", unit="batch"):
+	for batch_num in tqdm(range(len(train_loader)), desc="Finding best LR:", unit="batch"):
 		try:
 			batch = next(iter_loader)
 		except StopIteration:

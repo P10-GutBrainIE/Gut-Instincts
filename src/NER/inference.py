@@ -64,7 +64,7 @@ class NERInference:
 
 	def perform_inference(self):
 		result = {}
-		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing inference"):
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Inference"):
 			entity_predictions = []
 
 			if self.model_type == "huggingface" and not self.validation_model:
