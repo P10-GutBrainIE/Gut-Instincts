@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/fb29d644c9b94419b1edda3ff97d8498/artifacts
+end_time: 1745701103762
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: fb29d644c9b94419b1edda3ff97d8498
+run_name: indecisive-fly-140
+run_uuid: fb29d644c9b94419b1edda3ff97d8498
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701101730
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

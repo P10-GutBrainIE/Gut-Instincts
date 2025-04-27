@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/39f13a9f2407467d903faa1d632df9ce/artifacts
+end_time: 1745703520634
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 39f13a9f2407467d903faa1d632df9ce
+run_name: gifted-owl-559
+run_uuid: 39f13a9f2407467d903faa1d632df9ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701567512
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

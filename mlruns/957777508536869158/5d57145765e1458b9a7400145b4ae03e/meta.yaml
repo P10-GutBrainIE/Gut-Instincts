@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/5d57145765e1458b9a7400145b4ae03e/artifacts
+end_time: 1745703504013
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 5d57145765e1458b9a7400145b4ae03e
+run_name: nosy-calf-29
+run_uuid: 5d57145765e1458b9a7400145b4ae03e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701568051
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

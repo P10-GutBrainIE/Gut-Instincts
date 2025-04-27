@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/daf7346b86ec46f19cf25163cff3c453/artifacts
+end_time: 1745703509446
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: daf7346b86ec46f19cf25163cff3c453
+run_name: grandiose-bug-410
+run_uuid: daf7346b86ec46f19cf25163cff3c453
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701566986
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

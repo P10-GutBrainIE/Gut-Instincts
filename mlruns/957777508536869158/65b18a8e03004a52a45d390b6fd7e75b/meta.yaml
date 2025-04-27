@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/65b18a8e03004a52a45d390b6fd7e75b/artifacts
+end_time: 1745704436276
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 65b18a8e03004a52a45d390b6fd7e75b
+run_name: fearless-loon-564
+run_uuid: 65b18a8e03004a52a45d390b6fd7e75b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745702505598
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

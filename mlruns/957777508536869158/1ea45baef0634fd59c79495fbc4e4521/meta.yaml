@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/1ea45baef0634fd59c79495fbc4e4521/artifacts
+end_time: 1745701346048
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 1ea45baef0634fd59c79495fbc4e4521
+run_name: wise-whale-237
+run_uuid: 1ea45baef0634fd59c79495fbc4e4521
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701329965
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

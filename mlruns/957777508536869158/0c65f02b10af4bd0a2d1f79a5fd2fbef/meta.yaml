@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/0c65f02b10af4bd0a2d1f79a5fd2fbef/artifacts
+end_time: 1745703664650
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 0c65f02b10af4bd0a2d1f79a5fd2fbef
+run_name: clumsy-snake-800
+run_uuid: 0c65f02b10af4bd0a2d1f79a5fd2fbef
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701707538
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

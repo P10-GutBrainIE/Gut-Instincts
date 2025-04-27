@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/7872149678bc47f099151c504f276853/artifacts
+end_time: 1745703512215
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 7872149678bc47f099151c504f276853
+run_name: luminous-crab-769
+run_uuid: 7872149678bc47f099151c504f276853
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701567294
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

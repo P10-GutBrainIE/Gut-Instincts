@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/f19d5096db9a462291aa226fdb05053f/artifacts
+end_time: 1745704454892
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: f19d5096db9a462291aa226fdb05053f
+run_name: delicate-shrike-103
+run_uuid: f19d5096db9a462291aa226fdb05053f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745702505597
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

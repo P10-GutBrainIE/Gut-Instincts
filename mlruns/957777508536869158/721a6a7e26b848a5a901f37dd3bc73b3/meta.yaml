@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/721a6a7e26b848a5a901f37dd3bc73b3/artifacts
+end_time: 1745703728208
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 721a6a7e26b848a5a901f37dd3bc73b3
+run_name: traveling-rook-755
+run_uuid: 721a6a7e26b848a5a901f37dd3bc73b3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745701709067
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

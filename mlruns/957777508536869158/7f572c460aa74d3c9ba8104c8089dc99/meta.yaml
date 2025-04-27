@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/957777508536869158/7f572c460aa74d3c9ba8104c8089dc99/artifacts
+end_time: 1745703625509
+entry_point_name: ''
+experiment_id: '957777508536869158'
+lifecycle_stage: active
+run_id: 7f572c460aa74d3c9ba8104c8089dc99
+run_name: glamorous-goat-876
+run_uuid: 7f572c460aa74d3c9ba8104c8089dc99
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745702621497
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
