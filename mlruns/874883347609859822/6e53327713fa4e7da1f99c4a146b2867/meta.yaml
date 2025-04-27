@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/6e53327713fa4e7da1f99c4a146b2867/artifacts
+end_time: 1745739738205
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 6e53327713fa4e7da1f99c4a146b2867
+run_name: nebulous-flea-751
+run_uuid: 6e53327713fa4e7da1f99c4a146b2867
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738694276
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/d49cb7777af641f7af6a75576dd8ebe7/artifacts
+end_time: 1745740633633
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: d49cb7777af641f7af6a75576dd8ebe7
+run_name: tasteful-gnat-757
+run_uuid: d49cb7777af641f7af6a75576dd8ebe7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738706861
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

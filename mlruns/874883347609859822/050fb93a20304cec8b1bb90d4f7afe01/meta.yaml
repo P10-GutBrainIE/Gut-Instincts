@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/050fb93a20304cec8b1bb90d4f7afe01/artifacts
+end_time: 1745740655804
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 050fb93a20304cec8b1bb90d4f7afe01
+run_name: lyrical-donkey-281
+run_uuid: 050fb93a20304cec8b1bb90d4f7afe01
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738706057
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
