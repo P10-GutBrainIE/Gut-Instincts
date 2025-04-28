@@ -54,7 +54,7 @@ def create_training_dataset(
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-	if model_name == "re":  # TODO: depends on subtask
+	if model_name == "re":
 		re_tokenizer = RelationTokenizer(
 			datasets=list(datasets.values()),
 			dataset_weights=dataset_weights,
