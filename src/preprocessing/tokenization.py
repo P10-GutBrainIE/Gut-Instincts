@@ -3,7 +3,7 @@ import pickle
 import logging
 from transformers import AutoTokenizer
 from utils.utils import load_bio_labels, load_relation_labels, load_json_data
-from preprocessing.remove_html import remove_html
+from preprocessing.remove_html import remove_html_tags
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -232,35 +232,63 @@ class RelationTokenizer:
 		offset = len(title) + 1 if self.concatenate_title_abstract else 0
 		full_text = f"{title} {abstract}" if self.concatenate_title_abstract else abstract
 
-		for relation in content.get("relations", []):
-			# Adjust abstract indices if concatenate_title_abstract is True
-			if relation["subject_location"] == "abstract":
-				subject_start = relation["subject_start_idx"] + offset
-				subject_end = relation["subject_end_idx"] + offset + 1
-			else:
-				subject_start = relation["subject_start_idx"]
-				subject_end = relation["subject_end_idx"]
+		entities = content["entities"]
+		gold_relations = {}
+		for relation in content["relations"]:
+			subject_key = (relation["subject_start_idx"], relation["subject_end_idx"], relation["subject_location"])
+			object_key = (relation["object_start_idx"], relation["object_end_idx"], relation["object_location"])
+			gold_relations[(subject_key, object_key)] = relation["predicate"]
 
-			if relation["object_location"] == "abstract":
-				object_start = relation["object_start_idx"] + offset
-				object_end = relation["object_end_idx"] + offset + 1
-			else:
-				object_start = relation["object_start_idx"]
-				object_end = relation["object_end_idx"]
+		for i, subject_entity in enumerate(entities):
+			for j, object_entity in enumerate(entities):
+				if i == j:
+					continue  # skip same entity
 
-			if self.subtask == "6.2.1":
-				label_id = 1
-			else:
-				predicate = relation["predicate"]
-				if predicate not in self.relation2id:
-					self.relation2id[predicate] = len(self.relation2id)
-				label_id = self.relation2id[predicate]
+				subject_key = (subject_entity["start_idx"], subject_entity["end_idx"], subject_entity["location"])
+				object_key = (object_entity["start_idx"], object_entity["end_idx"], object_entity["location"])
 
-			input_ids, attention_mask = self._tokenize_with_entity_markers(
-				full_text,
-				subj={"start_idx": subject_start, "end_idx": subject_end},
-				obj={"start_idx": object_start, "end_idx": object_end},
-					)
+				if (subject_key, object_key) in gold_relations:
+					if self.subtask == "6.2.1":
+						label_id = 1
+					else:
+						relation_label = gold_relations[(subject_key, object_key)]
+						if relation_label not in self.relation2id:
+							self.relation2id[relation_label] = len(self.relation2id)
+						label_id = self.relation2id[relation_label]
+				else:
+					if self.subtask == "6.2.1":
+						label_id = 0
+					else:
+						label_id = self.relation2id["no relation"]
+
+				# Adjust indices for title vs abstract
+				subject_start = (
+					subject_entity["start_idx"] + offset
+					if subject_entity["location"] == "abstract"
+					else subject_entity["start_idx"]
+				)
+				subject_end = (
+					subject_entity["end_idx"] + offset + 1
+					if subject_entity["location"] == "abstract"
+					else subject_entity["end_idx"]
+				)
+
+				object_start = (
+					object_entity["start_idx"] + offset
+					if object_entity["location"] == "abstract"
+					else object_entity["start_idx"]
+				)
+				object_end = (
+					object_entity["end_idx"] + offset + 1
+					if object_entity["location"] == "abstract"
+					else object_entity["end_idx"]
+				)
+
+				input_ids, attention_mask = self._tokenize_with_entity_markers(
+					full_text,
+					subj={"start_idx": subject_start, "end_idx": subject_end},
+					obj={"start_idx": object_start, "end_idx": object_end},
+				)
 
 			sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
 
@@ -310,7 +338,7 @@ class RelationTokenizer:
 if __name__ == "__main__":
 	shared_path = os.path.join("data", "Annotations", "Train")
 	platinum_data = load_json_data(os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"))
-	platinum_data = remove_html(data=platinum_data)
+	platinum_data = remove_html_tags(data=platinum_data)
 
 	tokenizer = AutoTokenizer.from_pretrained(
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
