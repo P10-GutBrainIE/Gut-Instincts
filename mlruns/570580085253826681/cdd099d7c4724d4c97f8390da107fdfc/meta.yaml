@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/570580085253826681/cdd099d7c4724d4c97f8390da107fdfc/artifacts
+end_time: 1745837639481
+entry_point_name: ''
+experiment_id: '570580085253826681'
+lifecycle_stage: active
+run_id: cdd099d7c4724d4c97f8390da107fdfc
+run_name: overjoyed-goose-447
+run_uuid: cdd099d7c4724d4c97f8390da107fdfc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745830797659
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
