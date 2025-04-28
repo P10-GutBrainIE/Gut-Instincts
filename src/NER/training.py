@@ -129,22 +129,18 @@ def training(config):
 
 			optimizer.zero_grad()
 
-			labels = batch.get("labels")
-			if config["model_type"] == "re":
-				labels = labels.squeeze(-1)
-
 			if config["weighted_training"]:
 				outputs = model(
 					batch["input_ids"],
 					attention_mask=batch.get("attention_mask"),
-					labels=labels,
+					labels=batch.get("labels"),
 					weight=batch.get("weight"),
 				)
 			else:
 				outputs = model(
 					batch["input_ids"],
 					attention_mask=batch.get("attention_mask"),
-					labels=labels,
+					labels=batch.get("labels"),
 				)
 			loss = outputs["loss"]
 			loss.backward()
