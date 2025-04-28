@@ -160,6 +160,7 @@ class NERInference:
 		return merged
 
 
+
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
 	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")

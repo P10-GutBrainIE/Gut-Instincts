@@ -4,6 +4,7 @@ import logging
 from transformers import AutoTokenizer
 from utils.utils import load_bio_labels, load_relation_labels, load_json_data
 from preprocessing.remove_html import remove_html_tags
+import random
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -179,6 +180,7 @@ class RelationTokenizer:
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
 		subtask: str = None,
+		negative_sample_multiplier: int = 1,
 	):
 		self.datasets = datasets
 		self.dataset_weights = dataset_weights
@@ -187,6 +189,7 @@ class RelationTokenizer:
 		self.max_length = max_length
 		self.concatenate_title_abstract = concatenate_title_abstract
 		self.subtask = subtask
+		self.negative_sample_multiplier = negative_sample_multiplier
 		_, self.relation2id, _ = load_relation_labels()
 
 		# Register entity marker tokens and resize embeddings if applicable
@@ -225,7 +228,9 @@ class RelationTokenizer:
 			return all_data
 
 	def _process_paper(self, content, dataset_weight):
-		processed = []
+		# processed = []
+		positive_samples = []
+		negative_samples = []
 
 		title = content["metadata"]["title"]
 		abstract = content["metadata"]["abstract"]
@@ -290,12 +295,23 @@ class RelationTokenizer:
 					obj={"start_idx": object_start, "end_idx": object_end},
 				)
 
-			sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
+				sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
 
-			if dataset_weight:
-				sample["weight"] = dataset_weight
+				if dataset_weight:
+					sample["weight"] = dataset_weight
 
-			processed.append(sample)
+				if (subject_key, object_key) in gold_relations:
+					positive_samples.append(sample)
+				else:
+					negative_samples.append(sample)
+
+		num_negatives_to_keep = min(len(negative_samples), self.negative_sample_multiplier * len(positive_samples))
+
+		if num_negatives_to_keep < len(negative_samples):
+			negative_samples = random.sample(negative_samples, num_negatives_to_keep)
+
+		processed = positive_samples + negative_samples
+		#random.shuffle(processed)
 
 		return processed
 

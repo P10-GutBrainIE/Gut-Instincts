@@ -90,7 +90,7 @@ def training(config):
 			label_list, label2id, id2label = load_relation_labels()
 	else:
 		label_list, label2id, id2label = load_bio_labels()
-		
+
 	model = build_model(config, label_list, id2label, label2id)
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -180,8 +180,8 @@ def training(config):
 				all_preds.extend(preds)
 				all_labels.extend(labels)
 
-		metrics = compute_evaluation_metrics( # TODO: change compute_evaluation_metrics to incorporate RE aswell
-			model=model, model_name=config["model_name"], model_type=config["model_type"]
+		metrics = compute_evaluation_metrics(
+			model=model, model_name=config["model_name"], model_type=config["model_type"], subtask=config["subtask"]
 		)
 		model.to(device)
 		print_evaluation_metrics(metrics)
