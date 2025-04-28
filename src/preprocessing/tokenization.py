@@ -178,6 +178,7 @@ class RelationTokenizer:
 		dataset_weights: list = None,
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
+		subtask: str = None,
 	):
 		self.datasets = datasets
 		self.dataset_weights = dataset_weights
@@ -185,6 +186,7 @@ class RelationTokenizer:
 		self.save_filename = save_filename
 		self.max_length = max_length
 		self.concatenate_title_abstract = concatenate_title_abstract
+		self.subtask = subtask
 		_, self.relation2id, _ = load_relation_labels()
 
 		# Register entity marker tokens and resize embeddings if applicable
@@ -228,11 +230,10 @@ class RelationTokenizer:
 		title = content["metadata"]["title"]
 		abstract = content["metadata"]["abstract"]
 		offset = len(title) + 1 if self.concatenate_title_abstract else 0
-
 		full_text = f"{title} {abstract}" if self.concatenate_title_abstract else abstract
 
 		for relation in content.get("relations", []):
-			# Adjust abstract indices if concatenating
+			# Adjust abstract indices if concatenate_title_abstract is True
 			if relation["subject_location"] == "abstract":
 				subject_start = relation["subject_start_idx"] + offset
 				subject_end = relation["subject_end_idx"] + offset + 1
@@ -247,27 +248,27 @@ class RelationTokenizer:
 				object_start = relation["object_start_idx"]
 				object_end = relation["object_end_idx"]
 
-			predicate = relation["predicate"]
-			if predicate not in self.relation2id:
-				self.relation2id[predicate] = len(self.relation2id)
-			label_id = self.relation2id[predicate]
+			if self.subtask == "6.2.1":
+				label_id = 1
+			else:
+				predicate = relation["predicate"]
+				if predicate not in self.relation2id:
+					self.relation2id[predicate] = len(self.relation2id)
+				label_id = self.relation2id[predicate]
 
 			input_ids, attention_mask = self._tokenize_with_entity_markers(
 				full_text,
-				{"start_idx": subject_start, "end_idx": subject_end},
-				{"start_idx": object_start, "end_idx": object_end},
-			)
+				subj={"start_idx": subject_start, "end_idx": subject_end},
+				obj={"start_idx": object_start, "end_idx": object_end},
+					)
 
-			sample = {
-				"input_ids": input_ids,
-				"attention_mask": attention_mask,
-				"labels": label_id,
-			}
+			sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
 
 			if dataset_weight:
 				sample["weight"] = dataset_weight
 
 			processed.append(sample)
+
 		return processed
 
 	def _tokenize_with_entity_markers(self, text, subj, obj):

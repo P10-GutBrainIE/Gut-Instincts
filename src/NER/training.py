@@ -6,7 +6,13 @@ import mlflow
 import torch
 from tqdm import tqdm
 
-from utils.utils import load_bio_labels, load_relation_labels, load_pkl_data, make_dataset_dir_name, print_evaluation_metrics
+from utils.utils import (
+	load_bio_labels,
+	load_relation_labels,
+	load_pkl_data,
+	make_dataset_dir_name,
+	print_evaluation_metrics,
+)
 from NER.compute_metrics import compute_evaluation_metrics
 from transformers import AutoTokenizer, AutoModelForTokenClassification, AutoModelForSequenceClassification
 import torch
@@ -51,11 +57,13 @@ def build_model(config, label_list, id2label, label2id):
 		tokenizer = AutoTokenizer.from_pretrained(config["model_name"])
 		tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
 
+		model_config = AutoConfig.from_pretrained(config["model_name"])
+		model_config.num_labels = len(label_list)
+
 		return BertForREWithEntityStart(
-			config=AutoConfig.from_pretrained(config["model_name"]),
+			config=model_config,
 			e1_token_id=tokenizer.convert_tokens_to_ids("[E1]"),
 			e2_token_id=tokenizer.convert_tokens_to_ids("[E2]"),
-			#num_labels=len(label_list)
 		)
 	else:
 		raise ValueError("Unknown model_type")
@@ -73,7 +81,16 @@ def training(config):
 	mlflow.start_run()
 	mlflow.log_params(params=config)
 
-	label_list, label2id, id2label = load_relation_labels() if config["model_type"] == "re" else load_bio_labels()
+	if config["model_type"] == "re":
+		if config.get("subtask") == "6.2.1":
+			label_list = ["relation"]
+			label2id = {"relation": 1}
+			id2label = {1: "relation"}
+		else:
+			label_list, label2id, id2label = load_relation_labels()
+	else:
+		label_list, label2id, id2label = load_bio_labels()
+		
 	model = build_model(config, label_list, id2label, label2id)
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -156,14 +173,14 @@ def training(config):
 					batch["input_ids"],
 					attention_mask=batch.get("attention_mask"),
 				)
-				if config["model_type"] == "huggingface":
+				if config["model_type"] == "huggingface" or config["model_type"] == "re":
 					preds = outputs["logits"].argmax(-1).cpu().tolist()
 				else:
 					preds = outputs.get("decoded_tags", outputs["logits"].argmax(-1).cpu().tolist())
 				all_preds.extend(preds)
 				all_labels.extend(labels)
 
-		metrics = compute_evaluation_metrics(
+		metrics = compute_evaluation_metrics( # TODO: change compute_evaluation_metrics to incorporate RE aswell
 			model=model, model_name=config["model_name"], model_type=config["model_type"]
 		)
 		model.to(device)
