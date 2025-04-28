@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/618286246839069765/70a8e7c6487f48e5abc315b8507f5651/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '618286246839069765'
+lifecycle_stage: active
+run_id: 70a8e7c6487f48e5abc315b8507f5651
+run_name: calm-yak-770
+run_uuid: 70a8e7c6487f48e5abc315b8507f5651
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745871781015
+status: 1
+tags: []
+user_id: lran18@student.aau.dk
