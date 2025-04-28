@@ -20,7 +20,7 @@ class BertLSTMCRF(torch.nn.Module):
 		self.classifier = torch.nn.Linear(self.bert.config.hidden_size, num_labels)
 		self.crf = CRF(num_tags=num_labels, batch_first=True)
 
-	def forward(self, input_ids, attention_mask=None, labels=None):
+	def forward(self, input_ids, attention_mask=None, labels=None, weight=None):
 		outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
 		sequence_output = self.dropout(outputs.last_hidden_state)
 		lstm_output, _ = self.lstm(sequence_output)
@@ -36,10 +36,17 @@ class BertLSTMCRF(torch.nn.Module):
 				mask[:, 0] = True
 			labels = labels.clone()
 			labels[labels == -100] = 0
-			output["loss"] = -self.crf(logits, labels, mask=mask, reduction="mean")
+
+			crf_loss = -self.crf(logits, labels, mask=mask, reduction="none")
+			if weight is not None:
+				weighted_loss_avg = (crf_loss * weight.to(crf_loss.device)).mean()
+				output["loss"] = weighted_loss_avg
+			else:
+				output["loss"] = crf_loss.mean()
 		else:
 			mask = attention_mask.bool() if attention_mask is not None else None
 			output["decoded_tags"] = self.crf.decode(logits, mask=mask)
+
 		return output
 
 	def predict(self, input_ids, attention_mask=None):
