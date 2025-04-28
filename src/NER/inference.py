@@ -4,8 +4,8 @@ import argparse
 import yaml
 import torch
 from tqdm import tqdm
-from transformers import AutoModelForTokenClassification, AutoTokenizer, AlbertTokenizerFast, pipeline
-from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name
+from transformers import AutoModelForTokenClassification, AutoTokenizer, AlbertTokenizerFast, AutoConfig, pipeline
+from utils.utils import load_json_data, load_bio_labels, load_relation_labels, make_dataset_dir_name
 
 
 class NERInference:
@@ -158,6 +158,132 @@ class NERInference:
 			merged.append(current_entity)
 
 		return merged
+
+
+class REInference:
+	def __init__(
+		self,
+		test_data_path: str,
+		ner_predictions_path: str,
+		model_name: str,
+		model_type: str,
+		subtask: str,
+		model_name_path: str = None,
+		save_path: str = None,
+		validation_model=None,
+	):
+		self.test_data = load_json_data(test_data_path)
+		self.ner_predictions = load_json_data(ner_predictions_path)
+		_, _, self.id2label = load_relation_labels()
+		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
+		self.model_type = model_type
+		self.validation_model = validation_model
+		self.subtask = subtask
+		self.save_path = save_path
+
+		self.tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
+		self.e1_token_id = self.tokenizer.convert_tokens_to_ids("[E1]")
+		self.e2_token_id = self.tokenizer.convert_tokens_to_ids("[E2]")
+
+		if validation_model:
+			self.model = validation_model
+		else:
+			from NER.architectures.bert_with_entity_start import BertForREWithEntityStart
+
+			config = AutoConfig.from_pretrained(model_name_path)
+			print("config number of labels: ", config.num_labels)
+			self.model = BertForREWithEntityStart(
+				config=config, e1_token_id=self.e1_token_id, e2_token_id=self.e2_token_id
+			)
+			state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location="cpu")
+			self.model.load_state_dict(state_dict)
+			self.model.eval()
+
+	def perform_inference(self):
+		result = {}
+
+		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing RE inference"):
+			title = content["title"]
+			abstract = content["abstract"]
+			offset = len(title) + 1
+			full_text = f"{title} {abstract}"
+
+			entities = self.ner_predictions.get(paper_id, {}).get("entities", [])
+			if not entities:
+				result[paper_id] = {"relations": []}
+				continue
+
+			relations = []
+
+			for i, subj in enumerate(entities):
+				for j, obj in enumerate(entities):
+					if i == j:
+						continue
+
+					input_ids, attention_mask = self._tokenize_with_entity_markers(full_text, subj, obj)
+
+					with torch.no_grad():
+						outputs = self.model(
+                            input_ids=input_ids.unsqueeze(0),
+                            attention_mask=attention_mask.unsqueeze(0)
+                        )
+						logits = outputs["logits"]
+						pred_label_id = logits.argmax(-1).item()
+						pred_relation = self.id2label[pred_label_id]
+
+						if pred_relation != "no_relation":
+							relations.append({
+                                "subject": subj,
+                                "predicate": pred_relation,
+                                "object": obj
+                            })
+
+			result[paper_id] = {"relations": relations}
+
+		if self.save_path:
+			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
+			with open(self.save_path, "w") as f:
+				json.dump(result, f, indent=4)
+		else:
+			return result
+
+
+	def _tokenize_with_entity_markers(self, text, subj_entity, obj_entity):
+		s_start, s_end = subj_entity["start"], subj_entity["end"]
+		o_start, o_end = obj_entity["start"], obj_entity["end"]
+
+		if s_start < o_start:
+			spans = [(s_start, s_end, "[E1]", "[/E1]"), (o_start, o_end, "[E2]", "[/E2]")]
+		else:
+			spans = [(o_start, o_end, "[E2]", "[/E2]"), (s_start, s_end, "[E1]", "[/E1]")]
+	
+		marked_text = ""
+		last_idx = 0
+		for start, end, pre_tag, post_tag in spans:
+			marked_text += text[last_idx:start]
+			marked_text += f"{pre_tag}{text[start:end]}{post_tag}"
+			last_idx = end
+		marked_text += text[last_idx:]
+
+		encoding = self.tokenizer(
+            marked_text,
+            return_attention_mask=True,
+            truncation=True,
+            padding="max_length",
+            max_length=512,
+            return_tensors="pt",
+        )
+
+		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
+
+
+
+
+
+
+
+
+
 
 
 

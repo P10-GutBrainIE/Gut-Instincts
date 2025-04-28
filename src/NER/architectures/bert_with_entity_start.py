@@ -1,6 +1,7 @@
 from transformers import AutoModel, PreTrainedModel
 import torch.nn as nn
 import torch
+import os
 
 
 # TODO: sometimes people use average spans between [E1] and [/E1] instead of just [E1] itself.
@@ -45,3 +46,7 @@ class BertForREWithEntityStart(PreTrainedModel):
 		mask = mask.unsqueeze(1).float()
 		entity_hidden = torch.bmm(mask, hidden_states).squeeze(1)
 		return entity_hidden
+	
+	def save(self, output_dir):
+		os.makedirs(output_dir, exist_ok=True)
+		torch.save(self.state_dict(), os.path.join(output_dir, "pytorch_model.bin"))
