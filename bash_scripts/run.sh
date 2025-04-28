@@ -27,7 +27,7 @@ for script in training_configs/$1/*.yaml; do
 
 # Preprocessing step
 echo "Running preprocessing for $script"
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config $script
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/create_datasets.py --config $script
 
 # Training step
 echo "Running training for $script"

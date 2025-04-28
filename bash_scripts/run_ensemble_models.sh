@@ -10,7 +10,7 @@ mkdir -p logs
 
 # ---------- BioLinkBERT-base ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/ensemble_inference/BioLinkBert-base_with_freezing.yaml > logs/biolink-base-pre.out 2> logs/biolink-base-pre.err
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/create_datasets.py --config training_configs/ensemble_inference/BioLinkBert-base_with_freezing.yaml > logs/biolink-base-pre.out 2> logs/biolink-base-pre.err
 
 # training
 srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/ensemble_inference/BioLinkBert-base_with_freezing.yaml > logs/biolink-base-train.out 2> logs/biolink-base-train.err
@@ -23,7 +23,7 @@ srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER
 
 # ---------- BiomedBERT-base-uncased-abstract ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/ensemble_inference/BiomedBert-abstract_with_freezing.yaml > logs/BiomedBERT-abstract-pre.out 2> logs/BiomedBERT-abstract-pre.err
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/create_datasets.py --config training_configs/ensemble_inference/BiomedBert-abstract_with_freezing.yaml > logs/BiomedBERT-abstract-pre.out 2> logs/BiomedBERT-abstract-pre.err
 
 # training
 srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/ensemble_inference/BiomedBert-abstract_with_freezing.yaml > logs/BiomedBERT-abstract-train.out 2> logs/BiomedBERT-abstract-train.err
@@ -36,7 +36,7 @@ srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER
 
 # ---------- BiomedBERT-base-uncased-abstract-fulltext ----------
 # preprocessing
-srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/main.py --config training_configs/ensemble_inference/BiomedBert-abstract-fulltext_with_freezing.yaml > logs/BiomedBERT-abstract-fulltext-pre.out 2> logs/BiomedBERT-abstract-fulltext-pre.err
+srun singularity exec /ceph/container/python/python_3.12.sif python src/preprocessing/create_datasets.py --config training_configs/ensemble_inference/BiomedBert-abstract-fulltext_with_freezing.yaml > logs/BiomedBERT-abstract-fulltext-pre.out 2> logs/BiomedBERT-abstract-fulltext-pre.err
 
 # training
 srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/NER/training.py --config training_configs/ensemble_inference/BiomedBert-abstract-fulltext_with_freezing.yaml > logs/BiomedBERT-abstract-fulltext-train.out 2> logs/BiomedBERT-abstract-fulltext-train.err
