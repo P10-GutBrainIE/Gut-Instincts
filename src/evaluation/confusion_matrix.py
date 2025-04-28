@@ -2,6 +2,7 @@ import argparse
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
 import yaml
 from sklearn.metrics import confusion_matrix, classification_report
@@ -39,7 +40,7 @@ def compare_classes(test_data, inference_data):
 	return true_labels, pred_labels
 
 
-def plot_confusion_matrix_with_metrics(
+def plot_confusion_matrix(
 	y_test, y_pred, target_names, save_path=os.path.join("plots", "confusion_matrices", "confusion_matrix.pdf")
 ):
 	cm = confusion_matrix(y_test, y_pred, labels=target_names)
@@ -88,9 +89,34 @@ def plot_confusion_matrix_with_metrics(
 	plt.savefig(save_path, format="pdf")
 	plt.close()
 
-	report = classification_report(y_test, y_pred, labels=target_names, target_names=target_names, zero_division=0)
-	print("Per-label classification metrics:\n")
-	print(report)
+
+def plot_classification_report(
+	y_test, y_pred, target_names, save_path=os.path.join("plots", "confusion_matrices", "classification_report.pdf")
+):
+	report_dict = classification_report(
+		y_test, y_pred, labels=target_names, target_names=target_names, output_dict=True, zero_division=0
+	)
+
+	per_label = {k: v for k, v in report_dict.items() if k in target_names}
+	df = pd.DataFrame(per_label).T[["precision", "recall", "f1-score", "support"]]
+
+	df[["precision", "recall", "f1-score"]] = df[["precision", "recall", "f1-score"]].astype(float).round(4)
+	df["support"] = df["support"].astype(int)
+
+	_, ax = plt.subplots(figsize=(len(target_names) * 0.8 + 2, len(target_names) * 0.4 + 2))
+	ax.axis("off")
+	tbl = ax.table(
+		cellText=df.values, rowLabels=df.index, colLabels=df.columns, cellLoc="center", rowLoc="center", loc="center"
+	)
+	tbl.auto_set_font_size(False)
+	tbl.set_fontsize(12)
+	tbl.scale(1.4, 1.2)
+	plt.title("Per-label Classification Metrics", fontsize=16, pad=20)
+	plt.tight_layout()
+
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
+	plt.savefig(save_path, format="pdf")
+	plt.close()
 
 
 if __name__ == "__main__":
@@ -112,9 +138,17 @@ if __name__ == "__main__":
 		test_data=test_data,
 		inference_data=inference_results,
 	)
-	plot_confusion_matrix_with_metrics(
+	plot_confusion_matrix(
 		y_test=true_labels,
 		y_pred=pred_labels,
 		target_names=load_entity_labels(),
 		save_path=os.path.join("plots", "confusion_matrices", f"{config['experiment_name']}_{dataset_dir_name}.pdf"),
+	)
+	plot_classification_report(
+		y_test=true_labels,
+		y_pred=pred_labels,
+		target_names=load_entity_labels(),
+		save_path=os.path.join(
+			"plots", "confusion_matrices", f"{config['experiment_name']}_{dataset_dir_name}_metrics.pdf"
+		),
 	)
