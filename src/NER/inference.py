@@ -65,28 +65,24 @@ class NERInference:
 
 	def perform_inference(self):
 		result = {}
+
+		if self.model_type == "huggingface" and not self.validation_model:
+			prediction_fn = self.classifier
+		elif self.model_type == "bertlstmcrf" or self.validation_model:
+			prediction_fn = self._ner_pipeline
+		else:
+			raise ValueError("Unknown model_type")
+
 		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Inference"):
 			entity_predictions = []
+			for section in ["title", "abstract"]:
+				text = content["metadata"][section]
+				predictions = prediction_fn(text)
+				merged = self._merge_entities(predictions, section)
+				adjusted = self._adjust_casing(entity_predictions=merged, true_text=text)
+				entity_predictions.extend(adjusted)
 
-			if self.model_type == "huggingface" and not self.validation_model:
-				title_predictions = self.classifier(content["metadata"]["title"])
-				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
-
-				abstract_predictions = self.classifier(content["metadata"]["abstract"])
-				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
-
-				result[paper_id] = {"entities": entity_predictions}
-
-			elif self.model_type == "bertlstmcrf" or self.validation_model:
-				title_predictions = self._ner_pipeline(content["metadata"]["title"])
-				entity_predictions.extend(self._merge_entities(title_predictions, "title"))
-
-				abstract_predictions = self._ner_pipeline(content["metadata"]["abstract"])
-				entity_predictions.extend(self._merge_entities(abstract_predictions, "abstract"))
-
-				result[paper_id] = {"entities": entity_predictions}
-			else:
-				raise ValueError("Unknown model_type")
+			result[paper_id] = {"entities": entity_predictions}
 
 		if self.save_path:
 			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
@@ -149,7 +145,6 @@ class NERInference:
 						else:
 							current_entity["text_span"] += " " + word
 						current_entity["end_idx"] = token_pred["end"] - 1
-					print("Found lookahead scenario:", current_entity)
 					skip = len(lookahead)
 					break
 			else:
@@ -190,10 +185,14 @@ class NERInference:
 					continue
 
 			elif prefix == "I":
-				if current_entity and current_entity["label"] == label:
+				if (
+					current_entity
+					and current_entity["label"] == label
+					and token_prediction["start"] in [current_entity["end_idx"] + 1, current_entity["end_idx"] + 2]
+				):
 					if token_prediction["start"] == current_entity["end_idx"] + 1:
 						current_entity["text_span"] += word
-					else:
+					elif token_prediction["start"] == current_entity["end_idx"] + 2:
 						current_entity["text_span"] += " " + word
 					current_entity["end_idx"] = token_prediction["end"] - 1
 				else:
@@ -211,6 +210,12 @@ class NERInference:
 			merged.append(current_entity)
 
 		return merged
+
+	def _adjust_casing(self, entity_predictions, true_text):
+		for entity in entity_predictions:
+			entity["text_span"] = true_text[entity["start_idx"] : entity["end_idx"] + 1]
+
+		return entity_predictions
 
 
 if __name__ == "__main__":
