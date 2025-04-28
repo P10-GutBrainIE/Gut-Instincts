@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import mlflow
 import torch
 from tqdm import tqdm
+from huggingface_hub import login
 
 from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_metrics
 from NER.compute_metrics import compute_metrics
@@ -13,6 +14,7 @@ from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
 
 token = "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"
+login(token=token)
 
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
