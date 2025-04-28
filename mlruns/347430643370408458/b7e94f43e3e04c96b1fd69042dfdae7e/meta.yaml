@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/347430643370408458/b7e94f43e3e04c96b1fd69042dfdae7e/artifacts
+end_time: 1745837808575
+entry_point_name: ''
+experiment_id: '347430643370408458'
+lifecycle_stage: active
+run_id: b7e94f43e3e04c96b1fd69042dfdae7e
+run_name: lyrical-smelt-912
+run_uuid: b7e94f43e3e04c96b1fd69042dfdae7e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745830797669
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
