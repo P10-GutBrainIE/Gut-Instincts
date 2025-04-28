@@ -133,7 +133,7 @@ class NERInference:
 		for token_prediction in token_predictions:
 			prefix, label = token_prediction["entity"].split("-", 1)
 			if self.model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
-				word = token_prediction.replace("▁", "")
+				word = token_prediction["word"].replace("▁", "")
 			else:
 				word = token_prediction["word"].replace("##", "")
 
