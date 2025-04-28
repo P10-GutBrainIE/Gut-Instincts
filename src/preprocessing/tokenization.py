@@ -363,5 +363,6 @@ if __name__ == "__main__":
 		datasets=[platinum_data],
 		save_filename=os.path.join("test.pkl"),
 		tokenizer=tokenizer,
+		subtask="2.6.1"
 	)
 	re_tokenizer.process_files()
