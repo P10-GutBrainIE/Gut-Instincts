@@ -129,6 +129,9 @@ def training(config):
 
 			optimizer.zero_grad()
 
+			print(f"Shape of batch['labels']: {batch['labels'].shape}")
+			print(f"batch['labels']: {batch['labels']}")
+
 			if config["weighted_training"]:
 				outputs = model(
 					batch["input_ids"],
