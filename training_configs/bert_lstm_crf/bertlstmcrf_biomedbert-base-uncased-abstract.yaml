@@ -1,0 +1,18 @@
+experiment_name: "BERTLSTMCRF"
+model_type: "bertlstmcrf"
+model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract"
+training_data_path: "data_preprocessed/BERTLSTMCRF/training.pkl"
+validation_data_path: "data_preprocessed/BERTLSTMCRF/validation.pkl"
+weighted_training: False
+hyperparameters:
+  num_epochs: 30
+  batch_size: 16
+  freeze_epochs: 0
+  lr_scheduler:
+    method: "custom"
+    learning_rate: 0.00004
+    custom_schedule:
+    - [0, 2, 1]
+    - [3, 15, 2]
+    step_size: 2
+    gamma: 0.7
