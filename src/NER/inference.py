@@ -149,7 +149,6 @@ class NERInference:
 						else:
 							current_entity["text_span"] += " " + word
 						current_entity["end_idx"] = token_pred["end"] - 1
-					print("Found lookahead scenario:", current_entity)
 					skip = len(lookahead)
 					break
 			else:
