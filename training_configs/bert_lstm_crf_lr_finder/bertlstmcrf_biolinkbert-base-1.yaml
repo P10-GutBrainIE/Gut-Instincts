@@ -7,7 +7,7 @@ dataset_qualities:
 - "silver"
 - "bronze"
 remove_html: False
-weighted_training: True
+weighted_training: False
 dataset_weights:
 - 1.5
 - 1.5
