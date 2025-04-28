@@ -64,10 +64,6 @@ def training(config):
 	if freeze_epochs > 0:
 		print(f"Freezing BERT parameters for the first {freeze_epochs} epochs")
 		freeze_bert(model)
-		print("--- Checking requires_grad after freezing ---")
-		for n, p in model.named_parameters():
-			if "bert" in n or "base_model" in n:
-				print(n, p.requires_grad)
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
