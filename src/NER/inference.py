@@ -30,6 +30,7 @@ class NERInference:
 			self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
 		self.validation_model = validation_model
+		self.model_name = model_name
 
 		if model_type == "huggingface":
 			if validation_model:
@@ -131,7 +132,10 @@ class NERInference:
 
 		for token_prediction in token_predictions:
 			prefix, label = token_prediction["entity"].split("-", 1)
-			word = token_prediction["word"].replace("##", "")
+			if self.model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
+				word = token_prediction.replace("▁", "")
+			else:
+				word = token_prediction["word"].replace("##", "")
 
 			if prefix == "B":
 				if current_entity:
