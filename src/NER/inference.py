@@ -30,6 +30,7 @@ class NERInference:
 			self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
 		self.validation_model = validation_model
+		self.model_name = model_name
 
 		if model_type == "huggingface":
 			if validation_model:
@@ -125,13 +126,51 @@ class NERInference:
 			if label != "O"
 		]
 
+	def _process_lookahead(self, token_predictions, i, current_entity, model_name):
+		lookahead = []
+		prev_token_pred_end_idx = current_entity["end_idx"]
+		skip = 0
+
+		for token_pred in token_predictions:
+			prefix, _ = token_pred["entity"].split("-", 1)
+			if token_pred["start"] in [prev_token_pred_end_idx, prev_token_pred_end_idx + 1] and prefix == "I":
+				lookahead.append(token_pred)
+				prev_token_pred_end_idx = token_pred["end"]
+			elif len(lookahead) >= 3 and len(set(tp["entity"].split("-")[1] for tp in lookahead)) > 1:
+				_, label_last = lookahead[-1]["entity"].split("-", 1)
+				if current_entity["label"] == label_last:
+					for token_pred in lookahead:
+						if model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
+							word = token_pred["word"].replace("▁", "")
+						else:
+							word = token_pred["word"].replace("##", "")
+						if token_pred["start"] == current_entity["end_idx"] + 1:
+							current_entity["text_span"] += word
+						else:
+							current_entity["text_span"] += " " + word
+						current_entity["end_idx"] = token_pred["end"] - 1
+					print("Found lookahead scenario:", current_entity)
+					skip = len(lookahead)
+					break
+			else:
+				break
+		return current_entity, skip
+
 	def _merge_entities(self, token_predictions, location):
 		merged = []
 		current_entity = None
+		skip = 0
 
-		for token_prediction in token_predictions:
+		for i, token_prediction in enumerate(token_predictions):
+			if skip:
+				skip -= 1
+				continue
+
 			prefix, label = token_prediction["entity"].split("-", 1)
-			word = token_prediction["word"].replace("##", "")
+			if self.model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
+				word = token_prediction["word"].replace("▁", "")
+			else:
+				word = token_prediction["word"].replace("##", "")
 
 			if prefix == "B":
 				if current_entity:
@@ -143,6 +182,13 @@ class NERInference:
 					"text_span": word,
 					"label": label,
 				}
+
+				current_entity, skip = self._process_lookahead(
+					token_predictions[i + 1 : i + 10], i, current_entity, self.model_name
+				)
+				if skip:
+					continue
+
 			elif prefix == "I":
 				if current_entity and current_entity["label"] == label:
 					if token_prediction["start"] == current_entity["end_idx"] + 1:
