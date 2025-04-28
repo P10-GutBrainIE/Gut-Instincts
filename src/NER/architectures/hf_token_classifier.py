@@ -11,6 +11,7 @@ class HFTokenClassifier(torch.nn.Module):
 			num_labels=num_labels,
 			id2label=id2label,
 			label2id=label2id,
+			ignore_mismatched_sizes=True if model_name in ["alvaroalon2/biobert_chemical_nerchiyasunaga", "ugaray96/biobert_ncbi_disease_ner"] else False,
 		)
 		self.loss_fn = loss_fn
 
