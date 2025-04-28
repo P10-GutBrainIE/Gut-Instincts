@@ -134,6 +134,7 @@ if __name__ == "__main__":
 	create_validation_dataset(
 		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
+		model_type=config["model_type"],
 		dataset_dir_name=dataset_dir_name,
 		remove_html=config["remove_html"],
 		subtask=config["subtask"],
