@@ -12,6 +12,8 @@ from NER.compute_metrics import compute_metrics
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
 
+token = "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"
+
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
 
