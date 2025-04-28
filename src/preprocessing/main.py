@@ -11,6 +11,7 @@ from utils.utils import load_json_data, make_dataset_dir_name
 def create_training_dataset(
 	experiment_name: str,
 	model_name: str,
+	model_type: str,
 	dataset_qualities: list[str],
 	dataset_dir_name: str,
 	dataset_weights: list[float],
@@ -54,7 +55,7 @@ def create_training_dataset(
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-	if model_name == "re":
+	if model_type == "re":
 		re_tokenizer = RelationTokenizer(
 			datasets=list(datasets.values()),
 			dataset_weights=dataset_weights,
@@ -76,6 +77,7 @@ def create_training_dataset(
 def create_validation_dataset(
 	experiment_name: str,
 	model_name: str,
+	model_type: str,
 	dataset_dir_name: str,
 	remove_html: bool,
 	subtask: str = None,
@@ -90,7 +92,7 @@ def create_validation_dataset(
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-	if model_name == "re":
+	if model_type == "re":
 		re_tokenizer = RelationTokenizer(
 			datasets=[dev_data],
 			save_filename=os.path.join(experiment_name, dataset_dir_name, "validation.pkl"),
@@ -122,6 +124,7 @@ if __name__ == "__main__":
 	create_training_dataset(
 		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
+		model_type=config["model_type"],
 		dataset_qualities=config["dataset_qualities"],
 		dataset_dir_name=dataset_dir_name,
 		dataset_weights=config.get("dataset_weights"),
