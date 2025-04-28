@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/618286246839069765/4494d829710846b3882f271eeac7aa61/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '618286246839069765'
+lifecycle_stage: active
+run_id: 4494d829710846b3882f271eeac7aa61
+run_name: bouncy-snake-528
+run_uuid: 4494d829710846b3882f271eeac7aa61
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745871565535
+status: 1
+tags: []
+user_id: lran18@student.aau.dk
