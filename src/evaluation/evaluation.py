@@ -90,7 +90,7 @@ def eval_submission_6_1_NER(path):
 			text_span = str(entity["text_span"])
 			label = str(entity["label"])
 
-			entry = (start_idx, end_idx, location, text_span.lower(), label)
+			entry = (start_idx, end_idx, location, text_span, label)
 			ground_truth_NER[pmid].append(entry)
 
 			if label not in count_annotated_entities_per_label:
