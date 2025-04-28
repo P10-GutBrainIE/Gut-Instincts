@@ -2,7 +2,7 @@ import mlflow
 from mlflow.tracking import MlflowClient
 
 
-def find_best_f1_for_experiment(experiment_name: str = None, top_n: int = 20):
+def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 	"""
 	Find and print the top runs with the highest F1_micro scores for an MLflow experiment.
 
@@ -48,4 +48,4 @@ def find_best_f1_for_experiment(experiment_name: str = None, top_n: int = 20):
 
 
 if __name__ == "__main__":
-	find_best_f1_for_experiment(experiment_name=None, top_n=20)
+	print_top_n_experiments(experiment_name=None, top_n=20)
