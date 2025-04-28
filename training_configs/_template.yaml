@@ -17,6 +17,7 @@ find_optimal_lr: True # If True, a learning rate finder is run instead of traini
 hyperparameters:
   num_epochs: 25 # Total number of full passes over the dataset.
   batch_size: 16 # Number of samples processed in one forward/backward pass.
+  freeze_epochs: 0 # Number of epochs to freeze part of the model (e.g. embeddings + bottom layers).
   lr_scheduler:
     learning_rate: 0.0001 # Initial learning rate at the start of training.
     method: "custom" # Name of the scheduling strategy for adjusting the learning rate.

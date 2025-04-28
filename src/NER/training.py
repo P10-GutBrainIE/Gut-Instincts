@@ -9,6 +9,7 @@ from tqdm import tqdm
 from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_metrics
 from NER.compute_metrics import compute_metrics
 from NER.dataset import Dataset
+from NER.freezing import freeze_bert, unfreeze_bert
 from NER.lr_scheduler import lr_scheduler
 
 sys.stdout.reconfigure(line_buffering=True)
@@ -59,6 +60,15 @@ def training(config):
 	label_list, label2id, id2label = load_bio_labels()
 	model = build_model(config, label_list, id2label, label2id)
 
+	freeze_epochs = config["hyperparameters"]["freeze_epochs"]
+	if freeze_epochs > 0:
+		print(f"Freezing BERT parameters for the first {freeze_epochs} epochs")
+		freeze_bert(model)
+		print("--- Checking requires_grad after freezing ---")
+		for n, p in model.named_parameters():
+			if "bert" in n or "base_model" in n:
+				print(n, p.requires_grad)
+
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
 
@@ -84,6 +94,11 @@ def training(config):
 	num_epochs = config["hyperparameters"]["num_epochs"]
 	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
 		model.train()
+
+		if freeze_epochs > 0 and epoch == freeze_epochs:
+			print(f"\nUnfreezing BERT parameters after {epoch + 1} epochs")
+			unfreeze_bert(model)
+
 		total_loss = 0
 		for batch in tqdm(train_loader, desc=f"Epoch {epoch + 1}/{num_epochs}", leave=False):
 			for k, v in batch.items():
