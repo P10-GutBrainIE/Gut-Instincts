@@ -57,17 +57,18 @@ def label_distribution_stacked_bar_plot(
 
 	sns.despine()
 	plt.tight_layout()
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
 	plt.savefig(save_path, format="pdf")
 
 
 if __name__ == "__main__":
 	label_distribution_stacked_bar_plot(
 		label_distribution=load_label_distribution(),
-		save_path=os.path.join("plots", "entity_label_distribution.pdf"),
+		save_path=os.path.join("plots", "exploratory_analysis", "entity_label_distribution.pdf"),
 	)
 	label_distribution_stacked_bar_plot(
 		label_distribution=load_label_distribution(
 			file_path=os.path.join("data", "metadata", "relation_label_distribution.json"),
 		),
-		save_path=os.path.join("plots", "relation_label_distribution.pdf"),
+		save_path=os.path.join("plots", "exploratory_analysis", "relation_label_distribution.pdf"),
 	)

@@ -7,7 +7,9 @@ import seaborn as sns
 import pandas as pd
 
 
-def text_length_histogram(file_paths: str, save_path: str = os.path.join("plots", "text_length_histogram.pdf")):
+def text_length_histogram(
+	file_paths: str, save_path: str = os.path.join("plots", "exploratory_analysis", "text_length_histogram.pdf")
+):
 	text_lengths = {quality: {"title": [], "abstract": []} for quality in file_paths.keys()}
 
 	for quality, file_path in file_paths.items():
@@ -98,11 +100,13 @@ def text_length_histogram(file_paths: str, save_path: str = os.path.join("plots"
 
 	sns.despine()
 	plt.tight_layout(pad=1.3)
-	os.makedirs("plots", exist_ok=True)
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
 	plt.savefig(save_path, format="pdf")
 
 
-def text_length_violinplot(file_paths: str, save_path: str = os.path.join("plots", "text_length_violinplot.pdf")):
+def text_length_violinplot(
+	file_paths: str, save_path: str = os.path.join("plots", "exploratory_analysis", "text_length_violinplot.pdf")
+):
 	text_lengths = {quality: {"title": [], "abstract": []} for quality in file_paths.keys()}
 
 	for quality, file_path in file_paths.items():
@@ -168,7 +172,7 @@ def text_length_violinplot(file_paths: str, save_path: str = os.path.join("plots
 	sns.despine()
 	plt.tight_layout()
 
-	os.makedirs("plots", exist_ok=True)
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
 	plt.savefig(save_path, format="pdf")
 
 

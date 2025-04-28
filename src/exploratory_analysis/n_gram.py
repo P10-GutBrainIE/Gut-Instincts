@@ -102,7 +102,7 @@ def plot_n_gram(df: pd.DataFrame, save_path: str = os.path.join("plots", "unigra
 	sns.despine()
 	plt.tight_layout()
 
-	os.makedirs("plots", exist_ok=True)
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
 	plt.savefig(save_path, format="pdf")
 	plt.close()
 
@@ -180,7 +180,7 @@ def plot_n_gram_subplots(
 	sns.despine()
 	plt.tight_layout()
 
-	os.makedirs("plots", exist_ok=True)
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
 	plt.savefig(save_path, format="pdf")
 	plt.close()
 
@@ -215,9 +215,12 @@ if __name__ == "__main__":
 	unigram = n_gram_per_label(data=[platinum_data, gold_data, silver_data, bronze_data], n=1, top_k=3)
 	bigram = n_gram_per_label(data=[platinum_data, gold_data, silver_data, bronze_data], n=2, top_k=3)
 	trigram = n_gram_per_label(data=[platinum_data, gold_data, silver_data, bronze_data], n=3, top_k=3)
-	plot_n_gram(df=unigram, save_path=os.path.join("plots", "unigram_per_label.pdf"))
-	plot_n_gram(df=bigram, save_path=os.path.join("plots", "bigram_per_label.pdf"))
-	plot_n_gram(df=trigram, save_path=os.path.join("plots", "trigram_per_label.pdf"))
+	plot_n_gram(df=unigram, save_path=os.path.join("plots", "exploratory_analysis", "unigram_per_label.pdf"))
+	plot_n_gram(df=bigram, save_path=os.path.join("plots", "exploratory_analysis", "bigram_per_label.pdf"))
+	plot_n_gram(df=trigram, save_path=os.path.join("plots", "exploratory_analysis", "trigram_per_label.pdf"))
 	plot_n_gram_subplots(
-		unigram=unigram, bigram=bigram, trigram=trigram, save_path=os.path.join("plots", "n_gram_subplot.pdf")
+		unigram=unigram,
+		bigram=bigram,
+		trigram=trigram,
+		save_path=os.path.join("plots", "exploratory_analysis", "n_gram_subplot.pdf"),
 	)
