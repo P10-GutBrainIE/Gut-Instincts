@@ -183,5 +183,6 @@ if __name__ == "__main__":
 		model_name=config["model_name"],
 		model_type=config["model_type"],
 		save_path=os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json"),
+		remove_html=config["remove_html"],
 	)
 	ner_inference.perform_inference()
