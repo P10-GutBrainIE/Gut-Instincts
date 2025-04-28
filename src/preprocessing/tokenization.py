@@ -8,6 +8,13 @@ logger = logging.getLogger(__name__)
 
 
 class BIOTokenizer:
+	"""
+	Tokenizer for converting biomedical text and entities into tokenized data with BIO-tag annotations.
+
+	This class supports processing multiple datasets, handling dataset weights, concatenating title and abstract,
+	and saving the resulting tokenized data in pickle format.
+	"""
+
 	def __init__(
 		self,
 		datasets: list[list[dict]],
@@ -17,6 +24,17 @@ class BIOTokenizer:
 		max_length: int = 512,
 		concatenate_title_abstract: bool = True,
 	):
+		"""
+		Initialize the BIOTokenizer.
+
+		Args:
+		    datasets (list[list[dict]]): List of datasets to process.
+		    tokenizer: Tokenizer object (e.g., from Hugging Face).
+		    save_filename (str, optional): File name to save processed data as pickle.
+		    dataset_weights (list, optional): Weights for each dataset (if any).
+		    max_length (int, optional): Maximum sequence length for tokenization.
+		    concatenate_title_abstract (bool, optional): Whether to concatenate title and abstract.
+		"""
 		self.datasets = datasets
 		self.dataset_weights = dataset_weights
 		self.tokenizer = tokenizer
@@ -27,9 +45,10 @@ class BIOTokenizer:
 
 	def process_files(self):
 		"""
-		Load JSON files of papers and process each paper.
+		Load and process datasets, converting papers to tokenized BIO-format data.
 
-		This method reads the JSON files, processes each paper's content, and either returns or saves the processed data to a pickle file.
+		Returns:
+		    list[dict] or None: List of processed tokenized examples, or None if saved to file.
 		"""
 		logger.info("Starting to process files...")
 		all_data = []
@@ -54,13 +73,14 @@ class BIOTokenizer:
 
 	def _process_paper(self, content, dataset_weight):
 		"""
-		Process a single paper's content for both title and abstract.
+		Process a single paper's content (title and abstract) and tokenize with BIO tags.
 
 		Args:
-		    content (dict): Dictionary containing the paper's metadata and entities.
+		    content (dict): Paper metadata and entities.
+		    dataset_weight: Optional weight for the dataset.
 
 		Returns:
-		    list[dict]: List of dictionaries with the processed data for title and abstract.
+		    list[dict]: List of processed data for title and/or abstract.
 		"""
 		processed = []
 
@@ -89,6 +109,15 @@ class BIOTokenizer:
 		return processed
 
 	def _extract_entities(self, content):
+		"""
+		Extracts text and associated entity annotations for tokenization.
+
+		Args:
+		    content (dict): Paper content with metadata and entities.
+
+		Returns:
+		    tuple: (list of texts, list of corresponding entity lists)
+		"""
 		text_lst = []
 		entities_lst = []
 		if self.concatenate_title_abstract:
@@ -114,15 +143,14 @@ class BIOTokenizer:
 
 	def _tokenize_with_bio(self, text, entities):
 		"""
-		Tokenize a given text using the fast tokenizer (with offset mapping) and assign BIO tags.
+		Tokenize text and assign BIO tags to each token based on entity spans.
 
 		Args:
 		    text (str): The text to be tokenized.
-		    entities (list[dict]): List of entities with their text spans and labels.
-		    section (str): The section of the text (e.g., "title" or "abstract").
+		    entities (list[dict]): List of entity annotations.
 
 		Returns:
-		    tuple: A tuple containing tokens, BIO tag IDs, input IDs, and attention mask.
+		    tuple: BIO tag IDs, input IDs, and attention mask.
 		"""
 		encoding = self.tokenizer(
 			text, return_offsets_mapping=True, truncation=True, max_length=self.max_length, padding="max_length"
@@ -155,10 +183,10 @@ class BIOTokenizer:
 
 	def _save_to_pickle(self, data):
 		"""
-		Save the processed data to pickle files.
+		Save processed data to a pickle file.
 
 		Args:
-		    Data (list[dict]): List of data.
+		    data (list[dict]): List of processed data samples.
 		"""
 		os.makedirs(os.path.join("data_preprocessed", os.path.dirname(self.save_filename)), exist_ok=True)
 

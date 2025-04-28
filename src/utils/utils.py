@@ -106,12 +106,16 @@ def save_json_data(data: dict, output_path: str):
 		json.dump(data, f, indent=4, ensure_ascii=False)
 
 
-def set_experiment_id(experiment_name):
-	timestamp = dt.datetime.now().strftime("%m%d_%H%M%S")
-	return experiment_name + "_" + timestamp
-
-
 def make_dataset_dir_name(config):
+	"""
+	Create a directory name string based on the dataset configuration.
+
+	Args:
+	    config (dict): Configuration dictionary.
+
+	Returns:
+	    str: Directory name representing the dataset configuration.
+	"""
 	dataset_dir_name = ""
 	for i, quality in enumerate(config["dataset_qualities"]):
 		dataset_dir_name += quality[0]
@@ -125,5 +129,11 @@ def make_dataset_dir_name(config):
 
 
 def print_metrics(metrics):
+	"""
+	Print formatted metric names and values.
+
+	Args:
+	    metrics (dict): Dictionary of metric names and their values.
+	"""
 	for metric, value in zip(metrics.keys(), metrics.values()):
 		print(f"  {metric:<25} {value:>10.4f}")

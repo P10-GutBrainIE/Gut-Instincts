@@ -16,6 +16,21 @@ def create_training_dataset(
 	dataset_weights: list[float],
 	remove_html: bool,
 ):
+	"""
+	Create and preprocess the training dataset, then tokenize and save it.
+
+	Loads the training datasets for the specified qualities, applies corrections and cleaning,
+	optionally removes HTML, and tokenizes the data using the appropriate tokenizer for the model.
+	The processed data is saved as a pickle file.
+
+	Args:
+	    experiment_name (str): Name of the experiment for output directory structure.
+	    model_name (str): Name of the pretrained model (used to select tokenizer).
+	    dataset_qualities (list[str]): List of dataset quality labels (e.g., ["gold", "silver"]).
+	    dataset_dir_name (str): Name of the directory where the dataset will be saved.
+	    dataset_weights (list[float]): List of weights for each dataset quality (can be None).
+	    remove_html (bool): Whether to remove HTML tags from the datasets.
+	"""
 	datasets = {quality: [] for quality in dataset_qualities}
 
 	shared_path = os.path.join("data", "Annotations", "Train")
@@ -68,6 +83,18 @@ def create_validation_dataset(
 	dataset_dir_name: str,
 	remove_html: bool,
 ):
+	"""
+	Create and preprocess the validation (dev) dataset, then tokenize and save it.
+
+	Loads the validation dataset, optionally removes HTML, tokenizes the data using the
+	appropriate tokenizer for the model, and saves the processed data as a pickle file.
+
+	Args:
+	    experiment_name (str): Name of the experiment for output directory structure.
+	    model_name (str): Name of the pretrained model (used to select tokenizer).
+	    dataset_dir_name (str): Name of the directory where the dataset will be saved.
+	    remove_html (bool): Whether to remove HTML tags from the validation data.
+	"""
 	dev_data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 
 	if remove_html:

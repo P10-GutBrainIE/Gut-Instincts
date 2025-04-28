@@ -34,13 +34,7 @@ Run the training for the RE model:
 
 ```
 
-4. **Evaluate the Models**
-After training has finished, run the evaluation:
-```bash
-
-```
-
-5. **Reproduce Submission Files**
+4. **Reproduce Submission Files**
 To generate prediction files in the format required by the challenge for final submission, use:
 ```bash
 
