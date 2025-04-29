@@ -132,19 +132,37 @@ def training(config):
 			print(f"Shape of batch['labels']: {batch['labels'].shape}")
 			print(f"batch['labels']: {batch['labels']}")
 
-			if config["weighted_training"]:
-				outputs = model(
-					batch["input_ids"],
-					attention_mask=batch.get("attention_mask"),
-					labels=batch.get("labels"),
-					weight=batch.get("weight"),
-				)
+			if config["model_type"] == "re":
+				if config["weighted_training"]:
+					outputs = model(
+						input_ids=batch["input_ids"],
+						attention_mask=batch["attention_mask"],
+						token_type_ids=batch["token_type_ids"],  # Only for RE
+						labels=batch["labels"],
+						weight=batch["weight"],
+					)
+				else:
+					outputs = model(
+						input_ids=batch["input_ids"],
+						attention_mask=batch["attention_mask"],
+						token_type_ids=batch["token_type_ids"],  # Only for RE
+						labels=batch["labels"],
+					)
 			else:
-				outputs = model(
-					batch["input_ids"],
-					attention_mask=batch.get("attention_mask"),
-					labels=batch.get("labels"),
-				)
+				if config["weighted_training"]:
+					outputs = model(
+						input_ids=batch["input_ids"],
+						attention_mask=batch["attention_mask"],
+						labels=batch["labels"],
+						weight=batch["weight"],
+					)
+				else:
+					outputs = model(
+						input_ids=batch["input_ids"],
+						attention_mask=batch["attention_mask"],
+						labels=batch["labels"],
+					)
+
 			loss = outputs["loss"]
 			loss.backward()
 			optimizer.step()
