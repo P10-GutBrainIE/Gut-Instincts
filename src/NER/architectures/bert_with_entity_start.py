@@ -18,8 +18,12 @@ class BertForREWithEntityStart(PreTrainedModel):
 
 		self.init_weights()
 
-	def forward(self, input_ids, attention_mask, labels=None):
-		outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+	def forward(self, input_ids, attention_mask=None, token_type_ids=None, labels=None):
+		outputs = self.bert(
+			input_ids=input_ids,
+			attention_mask=attention_mask,
+			token_type_ids=token_type_ids,
+		)
 		last_hidden_state = outputs.last_hidden_state  # [batch_size, seq_len, hidden_size]
 
 		# Find [E1] and [E2] token positions for each sample in batch
@@ -28,11 +32,11 @@ class BertForREWithEntityStart(PreTrainedModel):
 
 		e1_hidden = self._entity_representation(last_hidden_state, e1_mask)
 		e2_hidden = self._entity_representation(last_hidden_state, e2_mask)
-		
+
 		# Concatenate and classify
 		combined = torch.cat([e1_hidden, e2_hidden], dim=-1)
 		combined = self.dropout(combined)
-		
+
 		logits = self.classifier(combined)
 
 		loss = None
@@ -41,12 +45,12 @@ class BertForREWithEntityStart(PreTrainedModel):
 			loss = loss_fct(logits, labels)
 
 		return {"loss": loss, "logits": logits}
-	
+
 	def _entity_representation(self, hidden_states, mask):
 		mask = mask.unsqueeze(1).float()
 		entity_hidden = torch.bmm(mask, hidden_states).squeeze(1)
 		return entity_hidden
-	
+
 	def save(self, output_dir):
 		os.makedirs(output_dir, exist_ok=True)
 		torch.save(self.state_dict(), os.path.join(output_dir, "pytorch_model.bin"))
