@@ -10,7 +10,7 @@ class BertForREWithEntityStart(PreTrainedModel):
 	def __init__(self, config, e1_token_id, e2_token_id):
 		super().__init__(config)
 		self.bert = AutoModel.from_config(config)
-		self.bert.resize_token_type_embeddings(1)
+		self.bert.embeddings.token_type_embeddings = nn.Embedding(1, config.hidden_size)
 		self.dropout = nn.Dropout(config.hidden_dropout_prob)
 		self.classifier = nn.Linear(config.hidden_size * 2, config.num_labels)
 
