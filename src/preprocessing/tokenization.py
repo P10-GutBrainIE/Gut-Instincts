@@ -345,7 +345,7 @@ class RelationTokenizer:
 		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
 
 	def _save_to_pickle(self, data):
-		os.makedirs("data_preprocessed", exist_ok=True)
+		os.makedirs(os.path.join("data_preprocessed", os.path.dirname(self.save_filename)), exist_ok=True)
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"Relation tokenized data saved to {self.save_filename}. Data size: {len(data)}")

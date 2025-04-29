@@ -7,7 +7,6 @@ validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl"
 weighted_training: False
 dataset_qualities:
 - "platinum"
-- "gold"
 remove_html: True
 hyperparameters:
   num_epochs: 10
