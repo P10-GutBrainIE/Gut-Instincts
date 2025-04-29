@@ -14,7 +14,6 @@ from utils.utils import (
 	print_evaluation_metrics,
 )
 from NER.compute_metrics import compute_evaluation_metrics
-from transformers import AutoTokenizer, AutoModelForTokenClassification, AutoModelForSequenceClassification
 import torch
 from NER.dataset import Dataset
 from NER.lr_scheduler import lr_scheduler
@@ -58,6 +57,7 @@ def build_model(config, label_list, id2label, label2id):
 		tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
 
 		model_config = AutoConfig.from_pretrained(config["model_name"])
+		model_config.type_vocab_size = 1
 		model_config.num_labels = len(label_list)
 
 		return BertForREWithEntityStart(

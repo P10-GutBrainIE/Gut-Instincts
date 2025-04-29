@@ -22,6 +22,7 @@ class BertForREWithEntityStart(PreTrainedModel):
 		outputs = self.bert(
 			input_ids=input_ids,
 			attention_mask=attention_mask,
+			token_type_ids=None
 		)
 		last_hidden_state = outputs.last_hidden_state  # [batch_size, seq_len, hidden_size]
 
