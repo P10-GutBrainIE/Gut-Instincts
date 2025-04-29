@@ -290,13 +290,13 @@ class RelationTokenizer:
 					else object_entity["end_idx"]
 				)
 
-				input_ids, attention_mask, token_type_ids = self._tokenize_with_entity_markers(
+				input_ids, attention_mask = self._tokenize_with_entity_markers(
 					full_text,
 					subj={"start_idx": subject_start, "end_idx": subject_end},
 					obj={"start_idx": object_start, "end_idx": object_end},
 				)
 
-				sample = {"input_ids": input_ids, "attention_mask": attention_mask, "token_type_ids": token_type_ids, "labels": label_id}
+				sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
 
 				if dataset_weight:
 					sample["weight"] = dataset_weight
@@ -337,14 +337,13 @@ class RelationTokenizer:
 		encoding = self.tokenizer(
 			marked_text,
 			return_attention_mask=True,
-			return_token_type_ids=True,
 			truncation=True,
 			padding="max_length",
 			max_length=self.max_length,
 			return_tensors="pt",
 		)
 
-		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0), encoding["token_type_ids"].squeeze(0),
+		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
 
 	def _save_to_pickle(self, data):
 		os.makedirs(os.path.join("data_preprocessed", os.path.dirname(self.save_filename)), exist_ok=True)
