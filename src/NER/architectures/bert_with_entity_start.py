@@ -18,7 +18,7 @@ class BertForREWithEntityStart(PreTrainedModel):
 
 		self.init_weights()
 
-	def forward(self, input_ids, attention_mask=None, labels=None):
+	def forward(self, input_ids, attention_mask=None, token_type_ids=None, labels=None):
 		outputs = self.bert(
 			input_ids=input_ids,
 			attention_mask=attention_mask,
