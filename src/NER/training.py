@@ -71,9 +71,9 @@ def training(config):
 
 	if config["model_type"] == "re":
 		if config.get("subtask") == "6.2.1":
-			label_list = ["relation"]
-			label2id = {"relation": 1}
-			id2label = {1: "relation"}
+			label_list = ["no_relation", "relation"]
+			label2id = {"no_relation": 0, "relation": 1}
+			id2label = {0: "no_relation", 1: "relation"}
 		else:
 			label_list, label2id, id2label = load_relation_labels()
 	else:
