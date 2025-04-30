@@ -127,7 +127,7 @@ class NERInference:
 					model_number: deque(model_predictions[paper_id][section]["tokens"])
 					for model_number, model_predictions in enumerate(all_model_predictions)
 				}
-				entity_type = ""
+				entity_type = "O"
 				while True:
 					tokens = {model_number: queue[0] for model_number, queue in token_queues.items() if queue}
 					if not tokens:
@@ -156,7 +156,7 @@ class NERInference:
 					for model_number in tokens_lowest_start:
 						token_queues[model_number].popleft()
 
-					if entity_type != "":
+					if entity_type != "O":
 						t = tokens[tokens_lowest_start[0]]
 						combined_tokens.append(
 							{
@@ -166,7 +166,7 @@ class NERInference:
 								"end": t["end"],
 							}
 						)
-						entity_type = ""
+						entity_type = "O"
 
 				merged = self._merge_entities(combined_tokens, section)
 				adjusted = self._adjust_casing(
@@ -390,9 +390,10 @@ if __name__ == "__main__":
 				model_name.append(config["model_name"])
 				model_type.append(config["model_type"])
 
-		for token_strategy, entity_type_strategy in itertools.product(
-			["union", "majority", "intersection"], ["majority", "softmax_sum"]
-		):
+		# for token_strategy, entity_type_strategy in itertools.product(
+		# 	["union", "majority", "intersection"], ["majority", "softmax_sum"]
+		# ):
+		for token_strategy, entity_type_strategy in itertools.product(["majority"], ["majority"]):
 			strategy = f"{token_strategy}.{entity_type_strategy}"
 			ner_inference = NERInference(
 				test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
