@@ -1,6 +1,6 @@
-experiment_name: "inference_ensemble_test_with_freezing"
+experiment_name: "ensemble_inference"
 model_configs:
-  - "training_configs/ensemble_inference/BioLinkBert-base_with_freezing.yaml"
-  - "training_configs/ensemble_inference/BiomedBert-abstract_with_freezing.yaml"
-  - "training_configs/ensemble_inference/BiomedBert-abstract-fulltext_with_freezing.yaml"
+  - "training_configs/ensemble/1,5-1,5-1-0,75_with_html.yaml"
+  - "training_configs/ensemble/biomedbert-large-uncased-abstract1.yaml"
+  - "training_configs/ensemble/biomedelectra-large-uncased-abstract1.yaml"
 test_data_path: "data/Annotations/Dev/json_format/dev.json"
