@@ -5,7 +5,7 @@ import yaml
 import torch
 from tqdm import tqdm
 from transformers import AutoModelForTokenClassification, AutoTokenizer, AlbertTokenizerFast, AutoConfig, pipeline
-from utils.utils import load_json_data, load_bio_labels, load_relation_labels, make_dataset_dir_name
+from utils.utils import load_json_data, load_pkl_data, load_bio_labels, load_relation_labels, make_dataset_dir_name
 
 
 class NERInference:
@@ -167,17 +167,20 @@ class REInference:
 		ner_predictions_path: str,
 		model_name: str,
 		model_type: str,
+		experiment_name: str,
+		dataset_dir_name: str,
 		subtask: str,
 		model_name_path: str = None,
 		save_path: str = None,
 		validation_model=None,
-		cached_input_path: str = None,
 	):
 		self.test_data = load_json_data(test_data_path)
 		self.ner_predictions = load_json_data(ner_predictions_path)
 		_, _, self.id2label = load_relation_labels()
 		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
+		self.experiment_name = experiment_name
+		self.dataset_dir_name = dataset_dir_name
 		self.validation_model = validation_model
 		self.subtask = subtask
 		self.save_path = save_path
@@ -185,14 +188,6 @@ class REInference:
 		self.tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
 		self.e1_token_id = self.tokenizer.convert_tokens_to_ids("[E1]")
 		self.e2_token_id = self.tokenizer.convert_tokens_to_ids("[E2]")
-
-		self.cached_inputs = None
-		if cached_input_path and os.path.exists(cached_input_path):
-			import pickle
-
-			with open(cached_input_path, "rb") as f:
-				self.cached_inputs = pickle.load(f)
-			print(f"Loaded {len(self.cached_inputs)} cached inference samples from {cached_input_path}")
 
 		if validation_model:
 			self.model = validation_model
@@ -209,89 +204,43 @@ class REInference:
 			self.model.eval()
 
 	def perform_inference(self):
-		if self.cached_inputs is not None:
+		if self.validation_model:
+			# Load pre-tokenized dev data (used as validation set)
+			validation_data = load_pkl_data(
+				os.path.join("data_preprocessed", self.experiment_name, self.dataset_dir_name, "validation.pkl")
+			)
+
 			result = {}
-			for sample in tqdm(self.cached_inputs, desc="Performing RE inference (cached)"):
+			for sample in tqdm(validation_data, desc="Performing RE inference from validation.pkl"):
+				paper_id = sample.get("paper_id", "unknown")
+				subj = sample["subj"]
+				obj = sample["obj"]
+
+				input_ids = sample["input_ids"].unsqueeze(0) if len(sample["input_ids"].shape) == 1 else sample["input_ids"]
+				attention_mask = sample["attention_mask"].unsqueeze(0) if len(sample["attention_mask"].shape) == 1 else sample["attention_mask"]
+
 				with torch.no_grad():
-					outputs = self.model(
-						input_ids=sample["input_ids"].unsqueeze(0), attention_mask=sample["attention_mask"].unsqueeze(0)
-					)
-					pred_label_id = outputs["logits"].argmax(-1).item()
+					outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
+					logits = outputs["logits"]
+					pred_label_id = logits.argmax(-1).item()
 					pred_relation = self.id2label[pred_label_id]
 
 				if pred_relation != "no_relation":
-					if sample["paper_id"] not in result:
-						result[sample["paper_id"]] = {"relations": []}
-					result[sample["paper_id"]]["relations"].append(
-						{"subject": sample["subj"], "predicate": pred_relation, "object": sample["obj"]}
-					)
-
-			if self.save_path:
-				os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
-				with open(self.save_path, "w") as f:
-					json.dump(result, f, indent=4)
-			else:
-				return result
+					if paper_id not in result:
+						result[paper_id] = {"relations": []}
+					result[paper_id]["relations"].append({
+						"subject": subj,
+						"predicate": pred_relation,
+						"object": obj
+					})
 		else:
-			raise ValueError("Cached inputs not loaded — fallback path not supported in this mode.")
+			raise ValueError("Not implemented: no validation model provided")
 
-	def _tokenize_with_entity_markers(self, text, subj_entity, obj_entity):
-		# s_start, s_end = subj_entity["start"], subj_entity["end"]
-		# o_start, o_end = obj_entity["start"], obj_entity["end"]
-		s_start, s_end = self._get_entity_span(subj_entity)
-		o_start, o_end = self._get_entity_span(obj_entity)
-		# o_start, o_end = obj_entity["start"], obj_entity["end"]
-
-		if s_start < o_start:
-			spans = [(s_start, s_end, "[E1]", "[/E1]"), (o_start, o_end, "[E2]", "[/E2]")]
+		if self.save_path:
+			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
+			with open(self.save_path, "w") as f:
+				json.dump(result, f, indent=4)
 		else:
-			spans = [(o_start, o_end, "[E2]", "[/E2]"), (s_start, s_end, "[E1]", "[/E1]")]
-
-		marked_text = ""
-		last_idx = 0
-		for start, end, pre_tag, post_tag in spans:
-			marked_text += text[last_idx:start]
-			marked_text += f"{pre_tag}{text[start:end]}{post_tag}"
-			last_idx = end
-		marked_text += text[last_idx:]
-
-		encoding = self.tokenizer(
-			marked_text,
-			return_attention_mask=True,
-			truncation=True,
-			padding="max_length",
-			max_length=512,
-			return_tensors="pt",
-		)
-
-		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
-
-	def _get_entity_span(self, entity):
-		if "start" in entity and "end" in entity:
-			return entity["start"], entity["end"]
-		elif "start_idx" in entity and "end_idx" in entity:
-			return entity["start_idx"], entity["end_idx"] + 1
-		else:
-			raise KeyError("Entity missing expected span fields")
+			return result
 
 
-if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
-	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
-	args = parser.parse_args()
-
-	with open(args.config, "r") as file:
-		config = yaml.safe_load(file)
-
-	dataset_dir_name = make_dataset_dir_name(
-		config["dataset_qualities"], config["weighted_training"], config.get("dataset_weights")
-	)
-
-	ner_inference = NERInference(
-		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
-		model_name=config["model_name"],
-		model_type=config["model_type"],
-		save_path=os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json"),
-	)
-	ner_inference.perform_inference()

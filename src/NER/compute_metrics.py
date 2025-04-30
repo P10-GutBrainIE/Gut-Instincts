@@ -54,34 +54,33 @@ def compute_metrics(predictions, labels):
 	return metrics, log_metrics
 
 
-def compute_evaluation_metrics(model, model_name, model_type, subtask):
+def compute_evaluation_metrics(model, config, dataset_dir_name):
 	model.to("cpu")
 
-	if model_type == "re":
+	if config["model_type"] == "re":
 		from NER.inference import REInference
-
-		model_tag = model_name.replace("/", "_")
 
 		re_inference = REInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			ner_predictions_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			model_name=model_name,
-			model_type=model_type,
+			model_name=config["model_name"],
+			model_type=config["model_type"],
 			validation_model=model,
-			subtask=subtask,
-			cached_input_path=os.path.join("data_preprocessed", f"dev_cached_inputs_{model_tag}.pkl"),
+			subtask=config["subtask"],
+			experiment_name=config["experiment_name"],
+			dataset_dir_name=dataset_dir_name
 		)
 		inference_results = re_inference.perform_inference()
 
-		if subtask == "6.2.1":
+		if config["subtask"] == "6.2.1":
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
 				RE_evaluation_subtask_621(inference_results)
 			)
-		elif subtask == "6.2.2":
+		elif config["subtask"] == "6.2.2":
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
 				RE_evaluation_subtask_622(inference_results)
 			)
-		elif subtask == "6.2.3":
+		elif config["subtask"] == "6.2.3":
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
 				RE_evaluation_subtask_623(inference_results)
 			)
@@ -100,8 +99,8 @@ def compute_evaluation_metrics(model, model_name, model_type, subtask):
 	else:
 		ner_inference = NERInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			model_name=model_name,
-			model_type=model_type,
+			model_name=config["model_name"],
+			model_type=config["model_type"],
 			validation_model=model,
 		)
 

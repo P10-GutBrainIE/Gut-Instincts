@@ -80,7 +80,7 @@ def training(config):
 			build_cached_inputs(
 				dev_json_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 				tokenizer_name=config["model_name"],
-				output_pkl_path=cached_input_path
+				output_pkl_path=cached_input_path,
 			)
 
 		if config.get("subtask") == "6.2.1":
@@ -183,7 +183,9 @@ def training(config):
 				all_labels.extend(labels)
 
 		metrics = compute_evaluation_metrics(
-			model=model, model_name=config["model_name"], model_type=config["model_type"], subtask=config["subtask"]
+			model=model,
+			config=config,
+			dataset_dir_name=dataset_dir_name,
 		)
 		model.to(device)
 		print_evaluation_metrics(metrics)
