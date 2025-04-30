@@ -205,8 +205,8 @@ class REInference:
 		for paper_id, content in tqdm(
 			self.test_data.items(), total=len(self.test_data), desc="Performing RE inference"
 		):
-			#title = content["title"]
-			#abstract = content["abstract"]
+			#title = content["title"]         to be used for test data
+			#abstract = content["abstract"]   to be used for test data
 			title = content["metadata"]["title"]
 			abstract = content["metadata"]["abstract"]
 
@@ -248,8 +248,12 @@ class REInference:
 			return result
 
 	def _tokenize_with_entity_markers(self, text, subj_entity, obj_entity):
-		s_start, s_end = subj_entity["start"], subj_entity["end"]
-		o_start, o_end = obj_entity["start"], obj_entity["end"]
+		#s_start, s_end = subj_entity["start"], subj_entity["end"]
+		#o_start, o_end = obj_entity["start"], obj_entity["end"]
+		s_start, s_end = self._get_entity_span(subj_entity)
+		o_start, o_end = self._get_entity_span(obj_entity)
+		#o_start, o_end = obj_entity["start"], obj_entity["end"]
+
 
 		if s_start < o_start:
 			spans = [(s_start, s_end, "[E1]", "[/E1]"), (o_start, o_end, "[E2]", "[/E2]")]
@@ -274,6 +278,14 @@ class REInference:
 		)
 
 		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
+
+	def _get_entity_span(self, entity):
+		if "start" in entity and "end" in entity:
+			return entity["start"], entity["end"]
+		elif "start_idx" in entity and "end_idx" in entity:
+			return entity["start_idx"], entity["end_idx"] + 1
+		else:
+			raise KeyError("Entity missing expected span fields")
 
 
 if __name__ == "__main__":

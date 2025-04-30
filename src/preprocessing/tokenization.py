@@ -312,7 +312,7 @@ class RelationTokenizer:
 			negative_samples = random.sample(negative_samples, num_negatives_to_keep)
 
 		processed = positive_samples + negative_samples
-		#random.shuffle(processed)
+		# random.shuffle(processed)
 
 		return processed
 
@@ -361,9 +361,6 @@ if __name__ == "__main__":
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
 	re_tokenizer = RelationTokenizer(
-		datasets=[platinum_data],
-		save_filename=os.path.join("test.pkl"),
-		tokenizer=tokenizer,
-		subtask="2.6.1"
+		datasets=[platinum_data], save_filename=os.path.join("test.pkl"), tokenizer=tokenizer, subtask="2.6.1"
 	)
 	re_tokenizer.process_files()
