@@ -30,8 +30,7 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 	results = []
 
 	for run in runs:
-		run_id = run.info.run_id
-		best_f1 = max(metric.value for metric in client.get_metric_history(run_id, "F1_micro"))
+		best_f1 = run.data.metrics.get("Best F1_micro", 0)
 		weights = run.data.params.get("dataset_weights", "No weights")
 		qualities = run.data.params.get("dataset_qualities", "Not logged")
 		remove_html = run.data.params.get("remove_html", "Not logged")
@@ -48,4 +47,4 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 
 
 if __name__ == "__main__":
-	print_top_n_experiments(experiment_name=None, top_n=20)
+	print_top_n_experiments(experiment_name=None, top_n=10)
