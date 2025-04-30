@@ -210,8 +210,20 @@ class REInference:
 				os.path.join("data_preprocessed", self.experiment_name, self.dataset_dir_name, "validation.pkl")
 			)
 
+			print(f"\n Number of samples in validation.pkl: {len(validation_data)}")
+
+			# Print keys and types from the first sample
+			sample = validation_data[0]
+			print(" Sample keys:", sample.keys())
+			for k, v in sample.items():
+				if isinstance(v, torch.Tensor):
+					print(f" {k}: tensor with shape {v.shape}")
+				else:
+					print(f" {k}: {type(v)} — {v}")
+			exit()
 			result = {}
-			for sample in tqdm(validation_data, desc="Performing RE inference from validation.pkl"):
+			for sample in tqdm(validation_data, desc="Performing RE inference"):
+				print
 				paper_id = sample.get("paper_id", "unknown")
 				subj = sample["subj"]
 				obj = sample["obj"]
