@@ -202,7 +202,9 @@ class REInference:
 	def perform_inference(self):
 		result = {}
 
-		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Performing RE inference"):
+		for paper_id, content in tqdm(
+			self.test_data.items(), total=len(self.test_data), desc="Performing RE inference"
+		):
 			title = content["title"]
 			abstract = content["abstract"]
 			offset = len(title) + 1
@@ -224,19 +226,14 @@ class REInference:
 
 					with torch.no_grad():
 						outputs = self.model(
-                            input_ids=input_ids.unsqueeze(0),
-                            attention_mask=attention_mask.unsqueeze(0)
-                        )
+							input_ids=input_ids.unsqueeze(0), attention_mask=attention_mask.unsqueeze(0)
+						)
 						logits = outputs["logits"]
 						pred_label_id = logits.argmax(-1).item()
 						pred_relation = self.id2label[pred_label_id]
 
 						if pred_relation != "no_relation":
-							relations.append({
-                                "subject": subj,
-                                "predicate": pred_relation,
-                                "object": obj
-                            })
+							relations.append({"subject": subj, "predicate": pred_relation, "object": obj})
 
 			result[paper_id] = {"relations": relations}
 
@@ -247,7 +244,6 @@ class REInference:
 		else:
 			return result
 
-
 	def _tokenize_with_entity_markers(self, text, subj_entity, obj_entity):
 		s_start, s_end = subj_entity["start"], subj_entity["end"]
 		o_start, o_end = obj_entity["start"], obj_entity["end"]
@@ -256,7 +252,7 @@ class REInference:
 			spans = [(s_start, s_end, "[E1]", "[/E1]"), (o_start, o_end, "[E2]", "[/E2]")]
 		else:
 			spans = [(o_start, o_end, "[E2]", "[/E2]"), (s_start, s_end, "[E1]", "[/E1]")]
-	
+
 		marked_text = ""
 		last_idx = 0
 		for start, end, pre_tag, post_tag in spans:
@@ -266,25 +262,15 @@ class REInference:
 		marked_text += text[last_idx:]
 
 		encoding = self.tokenizer(
-            marked_text,
-            return_attention_mask=True,
-            truncation=True,
-            padding="max_length",
-            max_length=512,
-            return_tensors="pt",
-        )
+			marked_text,
+			return_attention_mask=True,
+			truncation=True,
+			padding="max_length",
+			max_length=512,
+			return_tensors="pt",
+		)
 
 		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

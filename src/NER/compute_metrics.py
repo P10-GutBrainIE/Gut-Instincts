@@ -62,12 +62,14 @@ def compute_evaluation_metrics(model, model_name, model_type, subtask):
 
 		re_inference = REInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			ner_predictions_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=model_name,
 			model_type=model_type,
 			validation_model=model,
+			subtask=subtask,
 		)
 		inference_results = re_inference.perform_inference()
-	
+
 		if subtask == "6.2.1":
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
 				RE_evaluation_subtask_621(inference_results)
@@ -80,6 +82,8 @@ def compute_evaluation_metrics(model, model_name, model_type, subtask):
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
 				RE_evaluation_subtask_623(inference_results)
 			)
+		else:
+			return ValueError("No matching subtask")
 
 		return {
 			"Precision_micro": precision_micro,
@@ -203,7 +207,6 @@ def RE_evaluation_subtask_621(predictions):
 	entity_labels = load_entity_labels()[1:]
 	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 
-
 	for pmid, article in ground_truth.items():
 		if pmid not in ground_truth_binary_tag_RE:
 			ground_truth_binary_tag_RE[pmid] = []
@@ -285,7 +288,6 @@ def RE_evaluation_subtask_622(predictions):
 	entity_labels = load_entity_labels()[1:]
 	relation_labels = load_relation_labels()[1:]
 	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
-
 
 	for pmid, article in ground_truth.items():
 		if pmid not in ground_truth_ternary_tag_RE:
@@ -373,7 +375,6 @@ def RE_evaluation_subtask_623(predictions):
 	entity_labels = load_entity_labels()[1:]
 	relation_labels = load_relation_labels()[1:]
 	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
-
 
 	for pmid, article in ground_truth.items():
 		if pmid not in ground_truth_ternary_mention_RE:
