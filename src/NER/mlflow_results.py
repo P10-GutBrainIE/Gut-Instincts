@@ -1,5 +1,4 @@
 import mlflow
-from mlflow.tracking import MlflowClient
 
 
 def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
@@ -13,8 +12,6 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 	    experiment_name (str, optional): Name of the MLflow experiment. If None, considers all experiments.
 	    top_n (int, optional): Number of top runs to display. Defaults to 20.
 	"""
-	client = MlflowClient()
-
 	if experiment_name is not None:
 		experiment = mlflow.get_experiment_by_name(experiment_name)
 		if not experiment:
