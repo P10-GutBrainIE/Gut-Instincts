@@ -53,7 +53,8 @@ class HFTokenClassifier(torch.nn.Module):
 			logits = outputs.logits
 			predictions = torch.argmax(logits, dim=-1)
 			if return_softmax:
-				return torch.nn.functional.softmax(logits, dim=-1)
+				probs = torch.nn.functional.softmax(logits, dim=-1)
+				return predictions, probs
 			else:
 				return predictions
 
