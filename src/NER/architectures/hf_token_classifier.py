@@ -11,7 +11,9 @@ class HFTokenClassifier(torch.nn.Module):
 			num_labels=num_labels,
 			id2label=id2label,
 			label2id=label2id,
-			ignore_mismatched_sizes=True if model_name in ["alvaroalon2/biobert_chemical_nerchiyasunaga", "ugaray96/biobert_ncbi_disease_ner"] else False,
+			ignore_mismatched_sizes=True
+			if model_name in ["alvaroalon2/biobert_chemical_nerchiyasunaga", "ugaray96/biobert_ncbi_disease_ner"]
+			else False,
 		)
 		self.loss_fn = loss_fn
 
@@ -40,7 +42,7 @@ class HFTokenClassifier(torch.nn.Module):
 				"logits": outputs.logits,
 			}
 
-	def predict(self, input_ids, attention_mask=None):
+	def predict(self, input_ids, attention_mask=None, return_softmax=None):
 		self.eval()
 		with torch.no_grad():
 			outputs = self.model(
@@ -50,7 +52,10 @@ class HFTokenClassifier(torch.nn.Module):
 			)
 			logits = outputs.logits
 			predictions = torch.argmax(logits, dim=-1)
-			return predictions
+			if return_softmax:
+				return torch.nn.functional.softmax(logits, dim=-1)
+			else:
+				return predictions
 
 	def save(self, output_dir):
 		os.makedirs(output_dir, exist_ok=True)
