@@ -47,39 +47,38 @@ def build_cached_inputs(dev_json_path, tokenizer_name, output_pkl_path):
         text = f"{title} {abstract}"
         offset = len(title) + 1
 
-        entities = content.get("entities", [])
-        for i, subj in enumerate(entities):
-            for j, obj in enumerate(entities):
-                if i == j:
-                    continue
+        for relation in content.get("relations", []):
+            subj = relation["subject"]
+            obj = relation["object"]
 
-                subj_adj = subj.copy()
-                obj_adj = obj.copy()
+            subj_adj = subj.copy()
+            obj_adj = obj.copy()
 
-                if subj["location"] == "abstract":
-                    subj_adj["start_idx"] += offset
-                    subj_adj["end_idx"] += offset
-                if obj["location"] == "abstract":
-                    obj_adj["start_idx"] += offset
-                    obj_adj["end_idx"] += offset
+            if subj["location"] == "abstract":
+                subj_adj["start_idx"] += offset
+                subj_adj["end_idx"] += offset
+            if obj["location"] == "abstract":
+                obj_adj["start_idx"] += offset
+                obj_adj["end_idx"] += offset
 
-                input_ids, attention_mask = tokenize_with_entity_markers(
-                    text, subj_adj, obj_adj, tokenizer
-                )
+            input_ids, attention_mask = tokenize_with_entity_markers(
+                text, subj_adj, obj_adj, tokenizer
+            )
 
-                cached.append({
-                    "paper_id": paper_id,
-                    "input_ids": input_ids,
-                    "attention_mask": attention_mask,
-                    "subj": subj,
-                    "obj": obj
-                })
+            cached.append({
+                "paper_id": paper_id,
+                "input_ids": input_ids,
+                "attention_mask": attention_mask,
+                "subj": subj,
+                "obj": obj
+            })
 
     os.makedirs(os.path.dirname(output_pkl_path), exist_ok=True)
     with open(output_pkl_path, "wb") as f:
         pickle.dump(cached, f)
 
-    print(f"Cached {len(cached)} RE inference samples to: {output_pkl_path}")
+    print(f"✅ Cached {len(cached)} RE gold relation inputs to: {output_pkl_path}")
+
 
 if __name__ == "__main__":
 	import argparse
