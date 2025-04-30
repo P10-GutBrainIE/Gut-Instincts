@@ -78,7 +78,7 @@ def training(config):
 		if not os.path.exists(cached_input_path):
 			print("computing cached inference")
 			build_cached_inputs(
-				dev_json_path=os.path.join("data", "Annotation", "Dev", "json_format", "dev.json"),
+				dev_json_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 				tokenizer_name=config["model_name"],
 				output_pkl_path=cached_input_path
 			)
