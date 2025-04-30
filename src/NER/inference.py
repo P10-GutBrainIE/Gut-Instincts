@@ -205,8 +205,11 @@ class REInference:
 		for paper_id, content in tqdm(
 			self.test_data.items(), total=len(self.test_data), desc="Performing RE inference"
 		):
-			title = content["title"]
-			abstract = content["abstract"]
+			#title = content["title"]
+			#abstract = content["abstract"]
+			title = content["metadata"]["title"]
+			abstract = content["metadata"]["abstract"]
+
 			offset = len(title) + 1
 			full_text = f"{title} {abstract}"
 
