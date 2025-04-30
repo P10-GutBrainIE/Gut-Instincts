@@ -96,7 +96,7 @@ def training(config):
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 	validation_dataset = Dataset(validation_data, with_weights=False)
 	train_loader = torch.utils.data.DataLoader(
-		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True, num_workers=0
+		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
 	)
 	val_loader = torch.utils.data.DataLoader(
 		validation_dataset,

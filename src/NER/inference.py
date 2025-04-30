@@ -221,6 +221,7 @@ class REInference:
 			relations = []
 
 			for i, subj in enumerate(entities):
+				print("subject: ", i)
 				for j, obj in enumerate(entities):
 					if i == j:
 						continue
