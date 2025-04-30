@@ -1,7 +1,7 @@
 import os
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 from NER.inference import NERInference
-from utils.utils import load_entity_labels, load_relation_labels, load_json_data
+from utils.utils import load_entity_labels, load_relation_labels, load_json_data, save_json_data
 
 
 def compute_metrics(predictions, labels):
@@ -71,6 +71,9 @@ def compute_evaluation_metrics(model, config, dataset_dir_name):
 			dataset_dir_name=dataset_dir_name
 		)
 		inference_results = re_inference.perform_inference()
+
+		save_json_data(inference_results, os.path.join("data_preprocessed", "re_inference_results.json"))	
+
 
 		if config["subtask"] == "6.2.1":
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
