@@ -1,6 +1,6 @@
 experiment_name: "BioLinkBERT-base"
 model_type: "re"
-subtask: "2.6.2"
+subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
 training_data_path: "data_preprocessed/BioLinkBERT-base/training.pkl"
 validation_data_path: "data_preprocessed/BioLinkBERT-base/validation.pkl"

@@ -204,49 +204,60 @@ class REInference:
 			self.model.eval()
 
 	def perform_inference(self):
-		if self.validation_model:
-			# Load pre-tokenized dev data (used as validation set)
-			validation_data = load_pkl_data(
-				os.path.join("data_preprocessed", self.experiment_name, self.dataset_dir_name, "validation.pkl")
-			)
+		if not self.validation_model:
+			raise ValueError("Validation model is required for inference.")
 
-			print(f"\n Number of samples in validation.pkl: {len(validation_data)}")
+		validation_data = load_pkl_data(
+			os.path.join("data_preprocessed", self.experiment_name, self.dataset_dir_name, "validation.pkl")
+		)
 
-			# Print keys and types from the first sample
-			sample = validation_data[0]
-			print(" Sample keys:", sample.keys())
-			for k, v in sample.items():
-				if isinstance(v, torch.Tensor):
-					print(f" {k}: tensor with shape {v.shape}")
-				else:
-					print(f" {k}: {type(v)} — {v}")
-			exit()
+		if self.subtask == "6.2.3":
 			result = {}
-			for sample in tqdm(validation_data, desc="Performing RE inference"):
-				print
-				paper_id = sample.get("paper_id", "unknown")
-				subj = sample["subj"]
-				obj = sample["obj"]
-
-				input_ids = sample["input_ids"].unsqueeze(0) if len(sample["input_ids"].shape) == 1 else sample["input_ids"]
-				attention_mask = sample["attention_mask"].unsqueeze(0) if len(sample["attention_mask"].shape) == 1 else sample["attention_mask"]
-
-				with torch.no_grad():
-					outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
-					logits = outputs["logits"]
-					pred_label_id = logits.argmax(-1).item()
-					pred_relation = self.id2label[pred_label_id]
-
-				if pred_relation != "no_relation":
-					if paper_id not in result:
-						result[paper_id] = {"relations": []}
-					result[paper_id]["relations"].append({
-						"subject": subj,
-						"predicate": pred_relation,
-						"object": obj
-					})
 		else:
-			raise ValueError("Not implemented: no validation model provided")
+			result = []
+
+		for sample in tqdm(validation_data, desc=f"Performing RE inference ({self.subtask})"):
+			input_ids = sample["input_ids"].unsqueeze(0)
+			attention_mask = sample["attention_mask"].unsqueeze(0)
+
+			with torch.no_grad():
+				outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
+				logits = outputs["logits"]
+				pred_label = logits.argmax(-1).item()
+
+			# Subtask 6.2.1: binary
+			if self.subtask == "6.2.1":
+				if pred_label == 1:
+					result.append({
+						"subject": sample["subj_label"],
+						"object": sample["obj_label"]
+					})
+
+			# Subtask 6.2.2: flat predicate format
+			elif self.subtask == "6.2.2":
+				pred_relation = self.id2label[pred_label]
+				if pred_relation != "no relation":
+					result.append({
+						"subject": sample["subj_label"],
+						"predicate": pred_relation,
+						"object": sample["obj_label"]
+					})
+
+			# Subtask 6.2.3: group by paper_id
+			elif self.subtask == "6.2.3":
+				pred_relation = self.id2label[pred_label]
+				if pred_relation != "no relation":
+					pid = sample.get("paper_id", "unknown")
+					if pid not in result:
+						result[pid] = {"relations": []}
+					result[pid]["relations"].append({
+						"subject": sample["subj"],
+						"predicate": pred_relation,
+						"object": sample["obj"]
+					})
+
+			else:
+				raise ValueError(f"Unsupported subtask: {self.subtask}")
 
 		if self.save_path:
 			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
@@ -254,5 +265,4 @@ class REInference:
 				json.dump(result, f, indent=4)
 		else:
 			return result
-
 

@@ -296,7 +296,17 @@ class RelationTokenizer:
 					obj={"start_idx": object_start, "end_idx": object_end},
 				)
 
-				sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
+				#sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
+				sample = {
+					"input_ids": input_ids,
+					"attention_mask": attention_mask,
+					"labels": label_id,
+					"subj_label": subject_entity["label"],
+					"obj_label": object_entity["label"],
+					"subj": subject_entity,
+					"obj": object_entity,
+					"paper_id": content.get("paper_id", "unknown"),  # Optional but useful for 6.2.3
+				}
 
 				if dataset_weight:
 					sample["weight"] = dataset_weight
