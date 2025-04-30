@@ -28,16 +28,12 @@ class BertLSTMCRF(torch.nn.Module):
 		logits = self.classifier(lstm_output)
 
 		output = {"logits": logits}
+
 		if labels is not None:
-			print("Labels: ", labels)
-			print("Input IDs: ", input_ids)
-			print("Attention mask: ", attention_mask)
 			mask = (labels != -100) & attention_mask.bool()
-			print("Mask: ", mask)
 			if not mask[:, 0].all():
 				labels = labels.clone()
 				labels[(labels[:, 0] == -100) & (attention_mask[:, 0] == 1), 0] = 0
-				print("Labels clone: ", labels)
 				mask[:, 0] = True
 			labels = labels.clone()
 			labels[labels == -100] = 0
@@ -65,8 +61,8 @@ class BertLSTMCRF(torch.nn.Module):
 		torch.save(self.state_dict(), os.path.join(output_dir, "pytorch_model.bin"))
 
 	@classmethod
-	def load(cls, output_dir, model_name, num_labels, lstm_hidden_dim=256, dropout_prob=0.3):
-		model = cls(model_name, num_labels, lstm_hidden_dim, dropout_prob)
+	def load(cls, output_dir, model_name, num_labels):
+		model = cls(model_name, num_labels)
 		state_dict = torch.load(os.path.join(output_dir, "pytorch_model.bin"), map_location="cpu")
 		model.load_state_dict(state_dict)
 		return model
