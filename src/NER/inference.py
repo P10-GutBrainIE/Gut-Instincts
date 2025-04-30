@@ -1,5 +1,6 @@
 import argparse
-from collections import deque
+from collections import deque, Counter
+import itertools
 import json
 import os
 import yaml
@@ -9,19 +10,6 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AlbertTokenizerFast
 from preprocessing.remove_html import remove_html_tags
 from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name
-
-# Tokens:
-# - Keep all
-# - Keep if majority of models prediction that token
-# - Keep only if all models predicted that token
-# Label:
-# - Majority vote on highest softmax
-# - Max of sum of combined softmax
-
-# "token strategy/label strategy"
-# token strategies: union, majority, intersection
-# label strategies: majority, softmax_sum
-ENSEMBLE_STRATEGY = "majority/majority"
 
 
 class NERInference:
@@ -98,17 +86,20 @@ class NERInference:
 				raise ValueError(f"Unknown model_type: {m_type}")
 			self.models.append(model)
 
-			# if len(self.models) == 1:
-			# 	self.model = self.models[0]
-			# 	self.tokenizer = self.tokenizers[0]
+			if len(self.models) == 1 and self.ensemble_strategy is None:
+				self.model = self.models[0]
+				self.tokenizer = self.tokenizers[0]
 
 	def perform_ensemble_inference(self):
+		print(f"Performing ensemble inference with {self.ensemble_strategy} strategy")
 		all_model_predictions = []
-		for model, tokenizer in zip(self.models, self.tokenizers):
+		for model_name, model, tokenizer in zip(self.model_name, self.models, self.tokenizers):
 			self.model = model
 			self.tokenizer = tokenizer
 			model_predictions = {}
-			for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Inference"):
+			for paper_id, content in tqdm(
+				self.test_data.items(), total=len(self.test_data), desc=f"Inference with {model_name}"
+			):
 				model_predictions[paper_id] = {}
 				for section in ["title", "abstract"]:
 					text = content["metadata"][section]
@@ -122,7 +113,7 @@ class NERInference:
 	def _combine_ensemble_predictions(self, all_model_predictions):
 		result = {}
 
-		token_strategy, label_strategy = self.ensemble_strategy.split("/")
+		token_strategy, label_strategy = self.ensemble_strategy.split(".")
 
 		for paper_id in tqdm(
 			all_model_predictions[0].keys(),
@@ -132,39 +123,56 @@ class NERInference:
 			entity_predictions = []
 			for section in ["title", "abstract"]:
 				combined_tokens = []
-				token_queues = [
-					deque(model_predictions[paper_id][section]["tokens"]) for model_predictions in all_model_predictions
-				]
-				current_token_start = 0
-				stop_loop = False
-				while not stop_loop:
-					tokens = [q[0] for q in token_queues] # problem when one of the queues go empty, then the index wont correspond to the right queue from tokens_queues
-					if tokens == []:
-						stop_loop = True
+				token_queues = {
+					model_number: deque(model_predictions[paper_id][section]["tokens"])
+					for model_number, model_predictions in enumerate(all_model_predictions)
+				}
+				entity_type = ""
+				while True:
+					tokens = {model_number: queue[0] for model_number, queue in token_queues.items() if queue}
+					if not tokens:
 						break
 
-					token_starts = [
-						i
-						for i, x in enumerate([token["start"] for token in tokens])
-						if x == min([token["start"] for token in tokens])
+					min_start_value = min(token["start"] for _, token in tokens.items())
+					tokens_lowest_start = [
+						model_number for model_number, token in tokens.items() if token["start"] == min_start_value
 					]
+
 					if token_strategy == "union":
-						token = self._ensemble_label([tokens[i] for i in token_starts], label_strategy)
+						entity_type = self._ensemble_entity_type(
+							[tokens[i] for i in tokens_lowest_start], label_strategy
+						)
 					elif token_strategy == "majority":
-						pass
+						if len(tokens_lowest_start) >= int(np.ceil(len(self.model_name) / 2)):
+							entity_type = self._ensemble_entity_type(
+								[tokens[i] for i in tokens_lowest_start], label_strategy
+							)
 					elif token_strategy == "intersection":
-						pass
+						if len(tokens_lowest_start) == len(self.model_name):
+							entity_type = self._ensemble_entity_type(
+								[tokens[i] for i in tokens_lowest_start], label_strategy
+							)
 
-					for i in token_starts:
-						token_queues[i].popleft()
+					for model_number in tokens_lowest_start:
+						token_queues[model_number].popleft()
 
-					combined_tokens.append(
-						{"entity": token["entity"], "word": token["word"], "start": token["start"], "end": token["end"]}
-					)
+					if entity_type != "":
+						t = tokens[tokens_lowest_start[0]]
+						combined_tokens.append(
+							{
+								"entity": entity_type,
+								"word": t["word"],
+								"start": t["start"],
+								"end": t["end"],
+							}
+						)
+						entity_type = ""
 
-				# merged = self._merge_entities(predictions, section)
-				# adjusted = self._adjust_casing(entity_predictions=merged, true_text=text)
-				# entity_predictions.extend(adjusted)
+				merged = self._merge_entities(combined_tokens, section)
+				adjusted = self._adjust_casing(
+					entity_predictions=merged, true_text=all_model_predictions[0][paper_id][section]["true_text"]
+				)
+				entity_predictions.extend(adjusted)
 
 			result[paper_id] = {"entities": entity_predictions}
 
@@ -175,11 +183,20 @@ class NERInference:
 		else:
 			return result
 
-	def _ensemble_label(self, tokens: list, strategy: str):
+	def _ensemble_entity_type(self, tokens: list, strategy: str):
 		if strategy == "majority":
-			pass
+			counter = Counter([token["entity"] for token in tokens])
+			majority_vote = counter.most_common()
+			if len(majority_vote) > 1 and majority_vote[0][1] == majority_vote[1][1]:
+				total_softmax_sum = np.sum([token["softmax"] for token in tokens], axis=0)
+				entity_type = self.id2label[np.argmax(total_softmax_sum)]
+			else:
+				entity_type = majority_vote[0][0]
 		elif strategy == "softmax_sum":
-			pass
+			total_softmax_sum = np.sum([token["softmax"] for token in tokens], axis=0)
+			entity_type = self.id2label[np.argmax(total_softmax_sum)]
+
+		return entity_type
 
 	def perform_inference(self):
 		result = {}
@@ -335,12 +352,12 @@ class NERInference:
 		return entity_predictions
 
 
-def load_config(path):
-	with open(path, "r") as file:
-		return yaml.safe_load(file)
-
-
 if __name__ == "__main__":
+
+	def load_config(path):
+		with open(path, "r") as file:
+			return yaml.safe_load(file)
+
 	parser = argparse.ArgumentParser(description="Load configuration from a YAML file or directory of YAML files.")
 	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file or directory")
 	args = parser.parse_args()
@@ -350,16 +367,20 @@ if __name__ == "__main__":
 	if os.path.isfile(config_path):
 		config = load_config(config_path)
 		dataset_dir_name = make_dataset_dir_name(config)
-		model_name_path = os.path.join("models", config["experiment_name"], dataset_dir_name)
-		model_name = config["model_name"]
-		model_type = config["model_type"]
-		save_path = os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json")
+		ner_inference = NERInference(
+			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
+			model_name=config["model_name"],
+			model_type=config["model_type"],
+			save_path=os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json"),
+			remove_html=config["remove_html"],
+		)
+		ner_inference.perform_inference()
 
 	elif os.path.isdir(config_path):
 		model_name_path = []
 		model_name = []
 		model_type = []
-		configs = []
 		for config_name in os.listdir(config_path):
 			full_path = os.path.join(config_path, config_name)
 			if os.path.isfile(full_path) and config_name.endswith((".yml", ".yaml")):
@@ -369,21 +390,23 @@ if __name__ == "__main__":
 				model_name.append(config["model_name"])
 				model_type.append(config["model_type"])
 
-		save_path = os.path.join("data_inference_results", "ensemble", "results.json")
+		for token_strategy, entity_type_strategy in itertools.product(
+			["union", "majority", "intersection"], ["majority", "softmax_sum"]
+		):
+			strategy = f"{token_strategy}.{entity_type_strategy}"
+			ner_inference = NERInference(
+				test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+				model_name_path=model_name_path,
+				model_name=model_name,
+				model_type=model_type,
+				save_path=os.path.join(
+					"data_inference_results",
+					"ensemble",
+					f"{strategy}.json",
+				),
+				remove_html=config["remove_html"],
+				ensemble_strategy=strategy,
+			)
+			ner_inference.perform_ensemble_inference()
 	else:
 		raise ValueError(f"Provided config path '{config_path}' is neither a file nor a directory.")
-
-	ner_inference = NERInference(
-		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name_path=model_name_path,
-		model_name=model_name,
-		model_type=model_type,
-		save_path=save_path,
-		remove_html=config["remove_html"],
-		ensemble_strategy=ENSEMBLE_STRATEGY,
-	)
-
-	if ENSEMBLE_STRATEGY:
-		ner_inference.perform_ensemble_inference()
-	else:
-		ner_inference.perform_inference()

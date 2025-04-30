@@ -4,17 +4,22 @@ import argparse
 import yaml
 from utils.utils import make_dataset_dir_name
 
-parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
-parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
-args = parser.parse_args()
+ENSEMBLE_PREDICTION_PATH = os.path.join("data_inference_results", "ensemble", "intersection.majority.json")
 
-with open(args.config, "r") as file:
-	config = yaml.safe_load(file)
+if not ENSEMBLE_PREDICTION_PATH:
+	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
+	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
+	args = parser.parse_args()
 
-dataset_dir_name = make_dataset_dir_name(config)
+	with open(args.config, "r") as file:
+		config = yaml.safe_load(file)
 
-# DEFINE HERE THE PATH(S) TO YOUR PREDICTIONS
-PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json")
+	dataset_dir_name = make_dataset_dir_name(config)
+
+	PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json")
+else:
+	PREDICTIONS_PATH_6_1 = ENSEMBLE_PREDICTION_PATH
+
 PREDICTIONS_PATH_6_2 = "org_T621_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"
