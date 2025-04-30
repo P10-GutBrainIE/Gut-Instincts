@@ -96,13 +96,20 @@ def training(config):
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 	validation_dataset = Dataset(validation_data, with_weights=False)
 	train_loader = torch.utils.data.DataLoader(
-		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True
+		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True, num_workers=0
 	)
 	val_loader = torch.utils.data.DataLoader(
 		validation_dataset,
 		batch_size=config["hyperparameters"]["batch_size"],
 		shuffle=False,
 	)
+
+	# Add print
+	print("Training dataset size:", len(training_dataset))
+	print("Trying to load first batch...")
+	for batch in train_loader:
+		print("Batch loaded.")
+		break
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)
