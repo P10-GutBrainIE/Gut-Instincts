@@ -211,51 +211,54 @@ class REInference:
 			os.path.join("data_preprocessed", self.experiment_name, self.dataset_dir_name, "validation.pkl")
 		)
 
-		if self.subtask == "6.2.3":
-			result = {}
-		else:
-			result = []
+		result = {}
 
 		for sample in tqdm(validation_data, desc=f"Performing RE inference ({self.subtask})"):
 			input_ids = sample["input_ids"].unsqueeze(0)
 			attention_mask = sample["attention_mask"].unsqueeze(0)
+			paper_id = sample.get("paper_id", "unknown")
 
 			with torch.no_grad():
 				outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
 				logits = outputs["logits"]
 				pred_label = logits.argmax(-1).item()
 
-			# Subtask 6.2.1: binary
 			if self.subtask == "6.2.1":
+				if paper_id not in result:
+					result[paper_id] = {"binary_tag_based_relations": []}
 				if pred_label == 1:
-					result.append({
-						"subject": sample["subj_label"],
-						"object": sample["obj_label"]
-					})
-
-			# Subtask 6.2.2: flat predicate format
+					result[paper_id]["binary_tag_based_relations"].append(
+						{
+							"subject_label": sample["subj_label"],
+							"object_label": sample["obj_label"],
+						}
+					)
 			elif self.subtask == "6.2.2":
 				pred_relation = self.id2label[pred_label]
+				if paper_id not in result:
+					result[paper_id] = {"ternary_tag_based_relations": []}
 				if pred_relation != "no relation":
-					result.append({
-						"subject": sample["subj_label"],
-						"predicate": pred_relation,
-						"object": sample["obj_label"]
-					})
-
-			# Subtask 6.2.3: group by paper_id
+					result[paper_id]["ternary_tag_based_relations"].append(
+						{
+							"subject_label": sample["subj_label"],
+							"predicate": pred_relation,
+							"object_label": sample["obj_label"],
+						}
+					)
 			elif self.subtask == "6.2.3":
 				pred_relation = self.id2label[pred_label]
+				if paper_id not in result:
+					result[paper_id] = {"ternary_mention_based_relations": []}
 				if pred_relation != "no relation":
-					pid = sample.get("paper_id", "unknown")
-					if pid not in result:
-						result[pid] = {"relations": []}
-					result[pid]["relations"].append({
-						"subject": sample["subj"],
-						"predicate": pred_relation,
-						"object": sample["obj"]
-					})
-
+					result[paper_id]["ternary_mention_based_relations"].append(
+						{
+							"subject_text_span": sample["subj"]["text_span"],
+							"subject_label": sample["subj"],
+							"predicate": pred_relation,
+							"object_label": sample["obj"],
+							"object_text_span": sample["obj"]["text_span"],
+						}
+					)
 			else:
 				raise ValueError(f"Unsupported subtask: {self.subtask}")
 
@@ -265,4 +268,3 @@ class REInference:
 				json.dump(result, f, indent=4)
 		else:
 			return result
-
