@@ -14,7 +14,6 @@ def highlight_text(text, entities, color_map):
 	Highlight entities in the text using HTML span elements with background colors.
 	Handles escaping, sorting, and inclusive end_idx logic.
 	"""
-
 	entities = sorted(entities, key=lambda x: x["start_idx"])
 
 	highlighted_text = ""
@@ -45,10 +44,10 @@ def calculate_differences(true_entities, predicted_entities):
 	predicted_set = {(e["start_idx"], e["end_idx"], e["label"]) for e in predicted_entities}
 
 	for start_idx, end_idx, label in true_set - predicted_set:
-		differences.append({"start_idx": start_idx, "end_idx": end_idx, "label": f"Missing ({label})"})
+		differences.append({"start_idx": start_idx, "end_idx": end_idx, "label": "True"})
 
 	for start_idx, end_idx, label in predicted_set - true_set:
-		differences.append({"start_idx": start_idx, "end_idx": end_idx, "label": f"Extra ({label})"})
+		differences.append({"start_idx": start_idx, "end_idx": end_idx, "label": "Predicted"})
 
 	return differences
 
@@ -57,7 +56,6 @@ st.title("NER Prediction Visualizer with Differences")
 st.sidebar.title("Options")
 
 uploaded_predictions_file = st.sidebar.file_uploader("Upload Predictions JSON File", type=["json"])
-
 
 uploaded_dataset_file = st.sidebar.file_uploader("Upload Dataset JSON File (with True Entities)", type=["json"])
 
@@ -69,16 +67,23 @@ if uploaded_predictions_file and uploaded_dataset_file:
 
 	selected_document = st.sidebar.selectbox("Select Document ID", document_ids)
 
+	# Define a unique color map for each entity type
 	color_map = {
+		"anatomical location": "#FF4500",  # Orange Red
+		"animal": "#FF8C00",  # Dark Orange
+		"biomedical technique": "#FFD700",  # Gold
+		"bacteria": "#9ACD32",  # Yellow Green
+		"chemical": "#32CD32",  # Lime Green
+		"dietary supplement": "#00FA9A",  # Medium Spring Green
 		"DDF": "#8B0000",  # Dark Red
-		"microbiome": "#006400",  # Dark Green
+		"drug": "#1E90FF",  # Dodger Blue
+		"food": "#4169E1",  # Royal Blue
+		"gene": "#6A5ACD",  # Slate Blue
 		"human": "#104E8B",  # Dark Blue
-		"Missing (DDF)": "#8B4513",  # Saddle Brown for missing entities
-		"Extra (DDF)": "#800080",  # Purple for extra entities
-		"Missing (microbiome)": "#2E8B57",  # Sea Green for missing entities
-		"Extra (microbiome)": "#9370DB",  # Medium Purple for extra entities
-		"Missing (human)": "#4682B4",  # Steel Blue for missing entities
-		"Extra (human)": "#6A5ACD",  # Slate Blue for extra entities
+		"microbiome": "#006400",  # Dark Green
+		"statistical technique": "#8B4513",  # Saddle Brown
+		"True": "#2E8B57",  # Sea Green for differences (true)
+		"Predicted": "#800080",  # Purple for differences (predicted)
 	}
 
 	# Display document metadata
@@ -92,19 +97,11 @@ if uploaded_predictions_file and uploaded_dataset_file:
 
 	# Explanation of colors
 	st.markdown("### Color Explanation")
-	st.markdown(
-		"""
-        - **Dark Red**: True `DDF` entities
-        - **Dark Green**: True `microbiome` entities
-        - **Dark Blue**: True `human` entities
-        - **Purple**: Extra `DDF` entities in predictions
-        - **Medium Purple**: Extra `microbiome` entities in predictions
-        - **Slate Blue**: Extra `human` entities in predictions
-        - **Saddle Brown**: Missing `DDF` entities from predictions
-        - **Sea Green**: Missing `microbiome` entities from predictions
-        - **Steel Blue**: Missing `human` entities from predictions
-        """
-	)
+	for entity_type, color in color_map.items():
+		st.markdown(
+			f"<span style='color: {color}; font-weight: bold;'>{entity_type}</span>",
+			unsafe_allow_html=True,
+		)
 
 	# Highlight and display the title with true entities
 	if "title" in document_data:
