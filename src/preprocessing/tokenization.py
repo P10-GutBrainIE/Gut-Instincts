@@ -211,14 +211,14 @@ class RelationTokenizer:
 
 		if self.dataset_weights:
 			for data, dataset_weight in zip(self.datasets, self.dataset_weights):
-				for _, content in data.items():
-					processed_data = self._process_paper(content, dataset_weight)
+				for paper_id, content in data.items():
+					processed_data = self._process_paper(content, dataset_weight, paper_id)
 					all_data.extend(processed_data)
 			logger.info(f"Datasets with weights: {self.dataset_weights} processed")
 		else:
 			for data in self.datasets:
-				for _, content in data.items():
-					processed_data = self._process_paper(content, self.dataset_weights)
+				for paper_id, content in data.items():
+					processed_data = self._process_paper(content, self.dataset_weights, paper_id)
 					all_data.extend(processed_data)
 			logger.info("Datasets processed")
 
@@ -227,7 +227,7 @@ class RelationTokenizer:
 		else:
 			return all_data
 
-	def _process_paper(self, content, dataset_weight):
+	def _process_paper(self, content, dataset_weight, paper_id):
 		positive_samples = []
 		negative_samples = []
 		negative_samples_seen = 0
@@ -305,7 +305,7 @@ class RelationTokenizer:
 					"obj_label": object_entity["label"],
 					"subj": subject_entity,
 					"obj": object_entity,
-					"paper_id": content.get("paper_id", "unknown"),  # Optional but useful for 6.2.3
+					"paper_id": paper_id,
 				}
 
 				if dataset_weight:
