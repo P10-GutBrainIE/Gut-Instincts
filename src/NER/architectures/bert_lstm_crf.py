@@ -29,10 +29,15 @@ class BertLSTMCRF(torch.nn.Module):
 
 		output = {"logits": logits}
 		if labels is not None:
+			print("Labels: ", labels)
+			print("Input IDs: ", input_ids)
+			print("Attention mask: ", attention_mask)
 			mask = (labels != -100) & attention_mask.bool()
+			print("Mask: ", mask)
 			if not mask[:, 0].all():
 				labels = labels.clone()
 				labels[(labels[:, 0] == -100) & (attention_mask[:, 0] == 1), 0] = 0
+				print("Labels clone: ", labels)
 				mask[:, 0] = True
 			labels = labels.clone()
 			labels[labels == -100] = 0
