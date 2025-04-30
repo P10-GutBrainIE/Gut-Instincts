@@ -207,67 +207,60 @@ class REInference:
 		if not self.validation_model:
 			raise ValueError("Validation model is required for inference.")
 
-		device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-		self.model.to(device)
-		self.model.eval()
-
 		validation_data = load_pkl_data(
 			os.path.join("data_preprocessed", self.experiment_name, self.dataset_dir_name, "validation.pkl")
 		)
 
-		batch_size = 64
 		result = {}
-		batched_input_ids = []
-		batched_attention_mask = []
-		batched_metadata = []
 
-		for sample in validation_data:
-			batched_input_ids.append(sample["input_ids"])
-			batched_attention_mask.append(sample["attention_mask"])
-			batched_metadata.append(sample)
+		for sample in tqdm(validation_data, desc=f"Performing RE inference ({self.subtask})"):
+			input_ids = sample["input_ids"].unsqueeze(0)
+			attention_mask = sample["attention_mask"].unsqueeze(0)
+			paper_id = sample.get("paper_id", "unknown")
 
-			# When we hit a full batch or the last sample
-			if len(batched_input_ids) == batch_size or sample is validation_data[-1]:
-				input_ids = torch.stack(batched_input_ids).to(device)
-				attention_mask = torch.stack(batched_attention_mask).to(device)
+			with torch.no_grad():
+				outputs = self.model(input_ids=input_ids, attention_mask=attention_mask)
+				logits = outputs["logits"]
+				pred_label = logits.argmax(-1).item()
 
-				with torch.no_grad():
-					logits = self.model(input_ids=input_ids, attention_mask=attention_mask)["logits"]
-					pred_labels = torch.argmax(logits, dim=-1).tolist()
-
-				for pred_label, sample in zip(pred_labels, batched_metadata):
-					paper_id = sample["paper_id"]
-					pred_relation = self.id2label[pred_label]
-
-					if self.subtask == "6.2.1":
-						if pred_label == 1:
-							result.setdefault(paper_id, {"binary_tag_based_relations": []})["binary_tag_based_relations"].append({
-								"subject_label": sample["subj_label"],
-								"object_label": sample["obj_label"],
-							})
-					elif self.subtask == "6.2.2":
-						if pred_relation != "no relation":
-							result.setdefault(paper_id, {"ternary_tag_based_relations": []})["ternary_tag_based_relations"].append({
-								"subject_label": sample["subj_label"],
-								"predicate": pred_relation,
-								"object_label": sample["obj_label"],
-							})
-					elif self.subtask == "6.2.3":
-						if pred_relation != "no relation":
-							result.setdefault(paper_id, {"ternary_mention_based_relations": []})["ternary_mention_based_relations"].append({
-								"subject_text_span": sample["subj"]["text_span"],
-								"subject_label": sample["subj"]["label"],
-								"predicate": pred_relation,
-								"object_text_span": sample["obj"]["text_span"],
-								"object_label": sample["obj"]["label"],
-							})
-					else:
-						raise ValueError(f"Unsupported subtask: {self.subtask}")
-
-				# Clear batch buffers
-				batched_input_ids.clear()
-				batched_attention_mask.clear()
-				batched_metadata.clear()
+			if self.subtask == "6.2.1":
+				if paper_id not in result:
+					result[paper_id] = {"binary_tag_based_relations": []}
+				if pred_label == 1:
+					result[paper_id]["binary_tag_based_relations"].append(
+						{
+							"subject_label": sample["subj_label"],
+							"object_label": sample["obj_label"],
+						}
+					)
+			elif self.subtask == "6.2.2":
+				pred_relation = self.id2label[pred_label]
+				if paper_id not in result:
+					result[paper_id] = {"ternary_tag_based_relations": []}
+				if pred_relation != "no relation":
+					result[paper_id]["ternary_tag_based_relations"].append(
+						{
+							"subject_label": sample["subj_label"],
+							"predicate": pred_relation,
+							"object_label": sample["obj_label"],
+						}
+					)
+			elif self.subtask == "6.2.3":
+				pred_relation = self.id2label[pred_label]
+				if paper_id not in result:
+					result[paper_id] = {"ternary_mention_based_relations": []}
+				if pred_relation != "no relation":
+					result[paper_id]["ternary_mention_based_relations"].append(
+						{
+							"subject_text_span": sample["subj"]["text_span"],
+							"subject_label": sample["subj"],
+							"predicate": pred_relation,
+							"object_label": sample["obj"],
+							"object_text_span": sample["obj"]["text_span"],
+						}
+					)
+			else:
+				raise ValueError(f"Unsupported subtask: {self.subtask}")
 
 		if self.save_path:
 			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
@@ -275,4 +268,3 @@ class REInference:
 				json.dump(result, f, indent=4)
 		else:
 			return result
-
