@@ -52,10 +52,7 @@ def build_model(config, label_list, id2label, label2id):
 	elif config["model_type"] == "re":
 		from NER.architectures.bert_with_entity_start import BertForREWithEntityStart
 
-		return BertForREWithEntityStart(
-			model_name=config["model_name"],
-			num_labels=len(label_list)
-		)
+		return BertForREWithEntityStart(model_name=config["model_name"], num_labels=len(label_list))
 	else:
 		raise ValueError("Unknown model_type")
 
@@ -73,6 +70,19 @@ def training(config):
 	mlflow.log_params(params=config)
 
 	if config["model_type"] == "re":
+		from NER.cached_re_dev_inputs import build_cached_inputs
+
+		model_tag = config["model_name"].replace("/", "_")
+		cached_input_path = os.path.join("data_preprocessed", f"dev_cached_inputs_{model_tag}.pkl")
+
+		if not os.path.exists(cached_input_path):
+			print("computing cached inference")
+			build_cached_inputs(
+				dev_json_path=os.path.join("data", "Annotation", "Dev", "json_format", "dev.json"),
+				tokenizer_name=config["model_name"],
+				output_pkl_path=cached_input_path
+			)
+
 		if config.get("subtask") == "6.2.1":
 			label_list = ["relation"]
 			label2id = {"relation": 1}
@@ -103,13 +113,6 @@ def training(config):
 		batch_size=config["hyperparameters"]["batch_size"],
 		shuffle=False,
 	)
-
-	# Add print
-	print("Training dataset size:", len(training_dataset))
-	print("Trying to load first batch...")
-	for batch in train_loader:
-		print("Batch loaded.")
-		break
 
 	current_lr = config["hyperparameters"]["lr_scheduler"]["learning_rate"]
 	optimizer = torch.optim.AdamW(model.parameters(), lr=current_lr)

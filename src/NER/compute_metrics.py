@@ -60,6 +60,8 @@ def compute_evaluation_metrics(model, model_name, model_type, subtask):
 	if model_type == "re":
 		from NER.inference import REInference
 
+		model_tag = model_name.replace("/", "_")
+
 		re_inference = REInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			ner_predictions_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
@@ -67,6 +69,7 @@ def compute_evaluation_metrics(model, model_name, model_type, subtask):
 			model_type=model_type,
 			validation_model=model,
 			subtask=subtask,
+			cached_input_path=os.path.join("data_preprocessed", f"dev_cached_inputs_{model_tag}.pkl"),
 		)
 		inference_results = re_inference.perform_inference()
 

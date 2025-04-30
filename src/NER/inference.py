@@ -171,6 +171,7 @@ class REInference:
 		model_name_path: str = None,
 		save_path: str = None,
 		validation_model=None,
+		cached_input_path: str = None,
 	):
 		self.test_data = load_json_data(test_data_path)
 		self.ner_predictions = load_json_data(ner_predictions_path)
@@ -184,6 +185,14 @@ class REInference:
 		self.tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
 		self.e1_token_id = self.tokenizer.convert_tokens_to_ids("[E1]")
 		self.e2_token_id = self.tokenizer.convert_tokens_to_ids("[E2]")
+
+		self.cached_inputs = None
+		if cached_input_path and os.path.exists(cached_input_path):
+			import pickle
+
+			with open(cached_input_path, "rb") as f:
+				self.cached_inputs = pickle.load(f)
+			print(f"Loaded {len(self.cached_inputs)} cached inference samples from {cached_input_path}")
 
 		if validation_model:
 			self.model = validation_model
@@ -200,61 +209,38 @@ class REInference:
 			self.model.eval()
 
 	def perform_inference(self):
-		result = {}
+		if self.cached_inputs is not None:
+			result = {}
+			for sample in tqdm(self.cached_inputs, desc="Performing RE inference (cached)"):
+				with torch.no_grad():
+					outputs = self.model(
+						input_ids=sample["input_ids"].unsqueeze(0), attention_mask=sample["attention_mask"].unsqueeze(0)
+					)
+					pred_label_id = outputs["logits"].argmax(-1).item()
+					pred_relation = self.id2label[pred_label_id]
 
-		for paper_id, content in tqdm(
-			self.test_data.items(), total=len(self.test_data), desc="Performing RE inference"
-		):
-			#title = content["title"]         to be used for test data
-			#abstract = content["abstract"]   to be used for test data
-			title = content["metadata"]["title"]
-			abstract = content["metadata"]["abstract"]
+				if pred_relation != "no_relation":
+					if sample["paper_id"] not in result:
+						result[sample["paper_id"]] = {"relations": []}
+					result[sample["paper_id"]]["relations"].append(
+						{"subject": sample["subj"], "predicate": pred_relation, "object": sample["obj"]}
+					)
 
-			offset = len(title) + 1
-			full_text = f"{title} {abstract}"
-
-			entities = self.ner_predictions.get(paper_id, {}).get("entities", [])
-			if not entities:
-				result[paper_id] = {"relations": []}
-				continue
-
-			relations = []
-
-			for i, subj in enumerate(entities):
-				print("subject: ", i)
-				for j, obj in enumerate(entities):
-					if i == j:
-						continue
-
-					input_ids, attention_mask = self._tokenize_with_entity_markers(full_text, subj, obj)
-
-					with torch.no_grad():
-						outputs = self.model(
-							input_ids=input_ids.unsqueeze(0), attention_mask=attention_mask.unsqueeze(0)
-						)
-						logits = outputs["logits"]
-						pred_label_id = logits.argmax(-1).item()
-						pred_relation = self.id2label[pred_label_id]
-
-						if pred_relation != "no_relation":
-							relations.append({"subject": subj, "predicate": pred_relation, "object": obj})
-
-			result[paper_id] = {"relations": relations}
-
-		if self.save_path:
-			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
-			with open(self.save_path, "w") as f:
-				json.dump(result, f, indent=4)
+			if self.save_path:
+				os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
+				with open(self.save_path, "w") as f:
+					json.dump(result, f, indent=4)
+			else:
+				return result
 		else:
-			return result
+			raise ValueError("Cached inputs not loaded — fallback path not supported in this mode.")
 
 	def _tokenize_with_entity_markers(self, text, subj_entity, obj_entity):
-		#s_start, s_end = subj_entity["start"], subj_entity["end"]
-		#o_start, o_end = obj_entity["start"], obj_entity["end"]
+		# s_start, s_end = subj_entity["start"], subj_entity["end"]
+		# o_start, o_end = obj_entity["start"], obj_entity["end"]
 		s_start, s_end = self._get_entity_span(subj_entity)
 		o_start, o_end = self._get_entity_span(obj_entity)
-		#o_start, o_end = obj_entity["start"], obj_entity["end"]
-
+		# o_start, o_end = obj_entity["start"], obj_entity["end"]
 
 		if s_start < o_start:
 			spans = [(s_start, s_end, "[E1]", "[/E1]"), (o_start, o_end, "[E2]", "[/E2]")]
