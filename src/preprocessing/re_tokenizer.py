@@ -87,7 +87,7 @@ class RelationTokenizer:
 					{
 						"input_ids": input_ids,
 						"attention_mask": attention_mask,
-						"labels": relation["predicate"] if self.subtask in ["6.2.2", "6.2.3"] else 1,
+						"labels": self.relation2id[relation["predicate"]] if self.subtask in ["6.2.2", "6.2.3"] else 1,
 						"subject_label": relation["subject_label"],
 						"object_label": relation["object_label"],
 						"subject_text_span": relation["subject_text_span"],
@@ -100,7 +100,7 @@ class RelationTokenizer:
 					{
 						"input_ids": input_ids,
 						"attention_mask": attention_mask,
-						"labels": relation["predicate"] if self.subtask in ["6.2.2", "6.2.3"] else 1,
+						"labels": self.relation2id[relation["predicate"]] if self.subtask in ["6.2.2", "6.2.3"] else 1,
 						"subject_label": relation["subject_label"],
 						"object_label": relation["object_label"],
 						"subject_text_span": relation["subject_text_span"],
