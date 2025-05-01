@@ -60,7 +60,7 @@ class BertForREWithEntityStart(nn.Module):
 				input_ids=input_ids,
 				attention_mask=attention_mask,
 			)
-			logits = outputs.logits
+			logits = outputs["logits"]
 			if self.subtask == "6.2.1":
 				probs = torch.sigmoid(logits).squeeze(-1)
 				prediction = (probs >= 0.5).long()
