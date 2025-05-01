@@ -35,6 +35,9 @@ def create_training_dataset(
 	    dataset_weights (list[float]): List of weights for each dataset quality (can be None).
 	    remove_html (bool): Whether to remove HTML tags from the datasets.
 	"""
+	if os.path.join(experiment_name, task_name, dataset_dir_name, "training.pkl"):
+		return
+
 	datasets = {quality: [] for quality in dataset_qualities}
 
 	shared_path = os.path.join("data", "Annotations", "Train")
