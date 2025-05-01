@@ -54,7 +54,10 @@ def build_model(config, label_list=None, id2label=None, label2id=None):
 def training(config):
 	dataset_dir_name = make_dataset_dir_name(config)
 
-	output_dir = os.path.join("models", config["experiment_name"], dataset_dir_name)
+	if config["model_type"] == "re":
+		output_dir = os.path.join("models", config["experiment_name"], f"{config['subtask']}_{dataset_dir_name}")
+	else:
+		output_dir = os.path.join("models", config["experiment_name"], dataset_dir_name)
 	os.makedirs(output_dir, exist_ok=True)
 
 	mlflow.set_experiment(experiment_name=config["experiment_name"])
