@@ -7,10 +7,10 @@ import mlflow
 import torch
 from tqdm import tqdm
 from utils.utils import load_bio_labels, load_relation_labels, load_pkl_data, make_dataset_dir_name, print_metrics
-from NER.compute_metrics import compute_metrics
-from NER.dataset import Dataset
-from NER.freezing import freeze_bert, unfreeze_bert
-from NER.lr_scheduler import lr_scheduler
+from training.compute_metrics import compute_metrics
+from training.dataset import Dataset
+from training.freezing import freeze_bert, unfreeze_bert
+from training.lr_scheduler import lr_scheduler
 
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
@@ -18,7 +18,7 @@ sys.stderr.reconfigure(line_buffering=True)
 
 def build_model(config, label_list, id2label, label2id):
 	if config["model_type"] == "huggingface":
-		from NER.architectures.hf_token_classifier import HFTokenClassifier
+		from architectures.hf_token_classifier import HFTokenClassifier
 
 		if config["weighted_training"]:
 			loss_fn = torch.nn.CrossEntropyLoss(ignore_index=-100, reduction="none")
@@ -37,14 +37,14 @@ def build_model(config, label_list, id2label, label2id):
 				label2id=label2id,
 			)
 	elif config["model_type"] == "bertlstmcrf":
-		from NER.architectures.bert_lstm_crf import BertLSTMCRF
+		from architectures.bert_lstm_crf import BertLSTMCRF
 
 		return BertLSTMCRF(
 			model_name=config["model_name"],
 			num_labels=len(label_list),
 		)
 	elif config["model_type"] == "re":
-		from NER.architectures.bert_with_entity_start import BertForREWithEntityStart
+		from architectures.bert_with_entity_start import BertForREWithEntityStart
 
 		return BertForREWithEntityStart(model_name=config["model_name"], num_labels=len(label_list))
 	else:

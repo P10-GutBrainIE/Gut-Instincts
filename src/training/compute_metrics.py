@@ -1,5 +1,5 @@
 import os
-from NER.inference import NERInference
+from inference.ner import NERInference
 from utils.utils import load_entity_labels, load_relation_labels, load_json_data, save_json_data
 
 
@@ -13,7 +13,7 @@ def compute_metrics(model, model_name, model_type, remove_html, config):
 	)
 
 	if config["model_type"] == "re":
-		from NER.inference import REInference
+		from inference.re import REInference
 
 		re_inference = REInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),

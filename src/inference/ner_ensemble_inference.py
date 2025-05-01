@@ -2,7 +2,7 @@ import argparse
 from collections import Counter, defaultdict
 import os
 import yaml
-from NER.inference import NERInference
+from inference.ner import NERInference
 from utils.utils import save_json_data, make_dataset_dir_name
 
 
