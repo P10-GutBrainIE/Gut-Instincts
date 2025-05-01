@@ -138,7 +138,7 @@ class REInference:
 			last_idx = end
 		marked_text += text[last_idx:]
 
-		encoding = self.tokenizer(
+		result = self.tokenizer(
 			marked_text,
 			return_attention_mask=True,
 			truncation=True,
@@ -146,4 +146,8 @@ class REInference:
 			max_length=512,
 		)
 
-		return encoding["input_ids"], encoding["attention_mask"]
+		device = next(self.model.parameters()).device
+		input_ids = result["input_ids"].to(device)
+		attention_mask = result["attention_mask"].to(device)
+
+		return input_ids, attention_mask
