@@ -236,23 +236,32 @@ class RelationTokenizer:
 			return all_data
 
 	def _process_paper(self, content, dataset_weight, paper_id):
-		positive_samples = []
-		negative_samples = []
-		negative_samples_seen = 0
+		samples = []
 
-		title = content["metadata"]["title"]
-		abstract = content["metadata"]["abstract"]
-		offset = len(title) + 1 if self.concatenate_title_abstract else 0
-		full_text = f"{title} {abstract}" if self.concatenate_title_abstract else abstract
+		offset = len(content["metadata"]["title"]) + 1 if self.concatenate_title_abstract else 0
+		full_text = (
+			f"{content['metadata']['title']} {content['metadata']['abstract']}"
+			if self.concatenate_title_abstract
+			else content["metadata"]["abstract"]
+		)
 
 		entities = content["entities"]
 		# Building gold_relation lookup
 		gold_relations = {}
-		if "relations" in content:
-			for relation in content["relations"]:
-				subject_key = (relation["subject_start_idx"], relation["subject_end_idx"], relation["subject_location"])
-				object_key = (relation["object_start_idx"], relation["object_end_idx"], relation["object_location"])
-				gold_relations[(subject_key, object_key)] = relation["predicate"]
+		for relation in content["relations"]:
+			subject_key = (relation["subject_start_idx"], relation["subject_end_idx"], relation["subject_location"])
+			object_key = (relation["object_start_idx"], relation["object_end_idx"], relation["object_location"])
+			gold_relations[(subject_key, object_key)] = relation["predicate"]
+
+		# add relations from ground truth
+		# add negative samples based on length of positive samples
+
+		for relation in content["relations"]:
+			pass
+			#samples.append()
+
+		for i, subject_entity in enumerate(entities):
+			for j, object_entity in enumerate(entities):
 
 		for i, subject_entity in enumerate(entities):
 			for j, object_entity in enumerate(entities):
@@ -278,7 +287,7 @@ class RelationTokenizer:
 					else subject_entity["start_idx"]
 				)
 				subject_end = (
-					subject_entity["end_idx"] + offset + 1
+					subject_entity["end_idx"] + offset
 					if subject_entity["location"] == "abstract"
 					else subject_entity["end_idx"]
 				)
@@ -289,7 +298,7 @@ class RelationTokenizer:
 					else object_entity["start_idx"]
 				)
 				object_end = (
-					object_entity["end_idx"] + offset + 1
+					object_entity["end_idx"] + offset
 					if object_entity["location"] == "abstract"
 					else object_entity["end_idx"]
 				)
@@ -307,9 +316,8 @@ class RelationTokenizer:
 					"labels": label_id,
 					"subj_label": subject_entity["label"],
 					"obj_label": object_entity["label"],
-					"subj": subject_entity,
-					"obj": object_entity,
-					"paper_id": paper_id,
+					"subj_text_span": subject_entity["text_span"],
+					"obj_text_span": object_entity["text_span"]
 				}
 
 				if dataset_weight:
@@ -435,14 +443,16 @@ class RelationTokenizer:
 
 
 if __name__ == "__main__":
-	shared_path = os.path.join("data", "Annotations", "Train")
-	platinum_data = load_json_data(os.path.join(shared_path, "platinum_quality", "json_format", "train_platinum.json"))
-	platinum_data = remove_html_tags(data=platinum_data)
+	shared_path = os.path.join("data", "Annotations", "Dev")
+	platinum_data = load_json_data(os.path.join(shared_path, "json_format", "dev.json"))
 
 	tokenizer = AutoTokenizer.from_pretrained(
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
 	re_tokenizer = RelationTokenizer(
-		datasets=[platinum_data], save_filename=os.path.join("test.pkl"), tokenizer=tokenizer, subtask="6.2.1"
+		dataset_weights=[1], datasets=[platinum_data], tokenizer=tokenizer, subtask="6.2.1"
 	)
-	re_tokenizer.process_files()
+	processed = re_tokenizer.process_files()
+	for item in processed[:5]:
+		print(item)
+		print(tokenizer.convert_ids_to_tokens(item["input_ids"][0]))
