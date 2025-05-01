@@ -31,7 +31,7 @@ srun singularity exec /ceph/container/python/python_3.12.sif python src/preproce
 
 # Training step
 echo "Running training for $script"
-srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/training/training.py --config $script >logs/$filename.out 2>logs/$filename.err
+srun singularity exec --nv /ceph/container/python/python_3.12.sif python src/training/run_training.py --config $script >logs/$filename.out 2>logs/$filename.err
 EOF
 
 done
