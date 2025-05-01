@@ -55,7 +55,7 @@ class BertForREWithEntityStart(nn.Module):
 
 
 # TODO: sometimes people use average spans between [E1] and [/E1] instead of just [E1] itself.
-# If entity mentions are long, taking only the start token might not capture the full menaing.
+# If entity mentions are long, taking only the start token might not capture the full meaning.
 # class BertForREWithEntityStart(nn.Module):
 # 	def __init__(self, config, e1_token_id, e2_token_id):
 # 		super().__init__(config)

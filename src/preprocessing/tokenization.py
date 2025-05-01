@@ -202,7 +202,7 @@ class RelationTokenizer:
 		# 	except Exception:
 		# 		pass  # You can log a warning here if you want
 
-	def process_files(self):
+	def process_files(self, is_ner_predictions=False):
 		"""
 		Load JSON files of papers and process each paper for relation classification.
 		"""
@@ -212,13 +212,21 @@ class RelationTokenizer:
 		if self.dataset_weights:
 			for data, dataset_weight in zip(self.datasets, self.dataset_weights):
 				for paper_id, content in data.items():
-					processed_data = self._process_paper(content, dataset_weight, paper_id)
+					processed_data = (
+						self._process_paper(content, dataset_weight, paper_id)
+						if not is_ner_predictions
+						else self._process_paper_NER_predictions(content, dataset_weight, paper_id)
+					)
 					all_data.extend(processed_data)
 			logger.info(f"Datasets with weights: {self.dataset_weights} processed")
 		else:
 			for data in self.datasets:
 				for paper_id, content in data.items():
-					processed_data = self._process_paper(content, self.dataset_weights, paper_id)
+					processed_data = (
+						self._process_paper(content, dataset_weight, paper_id)
+						if not is_ner_predictions
+						else self._process_paper_NER_predictions(content, dataset_weight, paper_id)
+					)
 					all_data.extend(processed_data)
 			logger.info("Datasets processed")
 
@@ -240,10 +248,11 @@ class RelationTokenizer:
 		entities = content["entities"]
 		# Building gold_relation lookup
 		gold_relations = {}
-		for relation in content["relations"]:
-			subject_key = (relation["subject_start_idx"], relation["subject_end_idx"], relation["subject_location"])
-			object_key = (relation["object_start_idx"], relation["object_end_idx"], relation["object_location"])
-			gold_relations[(subject_key, object_key)] = relation["predicate"]
+		if "relations" in content:
+			for relation in content["relations"]:
+				subject_key = (relation["subject_start_idx"], relation["subject_end_idx"], relation["subject_location"])
+				object_key = (relation["object_start_idx"], relation["object_end_idx"], relation["object_location"])
+				gold_relations[(subject_key, object_key)] = relation["predicate"]
 
 		for i, subject_entity in enumerate(entities):
 			for j, object_entity in enumerate(entities):
@@ -258,14 +267,9 @@ class RelationTokenizer:
 						label_id = 1
 					else:
 						relation_label = gold_relations[(subject_key, object_key)]
-						if relation_label not in self.relation2id:
-							self.relation2id[relation_label] = len(self.relation2id)
 						label_id = self.relation2id[relation_label]
 				else:
-					if self.subtask == "6.2.1":
-						label_id = 0
-					else:
-						label_id = self.relation2id["no relation"]
+					label_id = 0
 
 				# Adjust indices for title vs abstract
 				subject_start = (
@@ -296,7 +300,7 @@ class RelationTokenizer:
 					obj={"start_idx": object_start, "end_idx": object_end},
 				)
 
-				#sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
+				# sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
 				sample = {
 					"input_ids": input_ids,
 					"attention_mask": attention_mask,
@@ -326,6 +330,74 @@ class RelationTokenizer:
 
 		return processed
 
+	def _process_paper_NER_predictions(self, content, dataset_weight, paper_id):
+		samples = []
+
+		title = content["metadata"]["title"]
+		abstract = content["metadata"]["abstract"]
+		offset = len(title) + 1 if self.concatenate_title_abstract else 0
+		full_text = f"{title} {abstract}" if self.concatenate_title_abstract else abstract
+
+		entities = content.get("entities", [])
+
+		for i, subject_entity in enumerate(entities):
+			for j, object_entity in enumerate(entities):
+				if i == j:
+					continue  # skip same entity pair
+
+				# Adjust indices
+				subject_start = (
+					subject_entity["start_idx"] + offset
+					if subject_entity["location"] == "abstract"
+					else subject_entity["start_idx"]
+				)
+				subject_end = (
+					subject_entity["end_idx"] + offset + 1
+					if subject_entity["location"] == "abstract"
+					else subject_entity["end_idx"]
+				)
+
+				object_start = (
+					object_entity["start_idx"] + offset
+					if object_entity["location"] == "abstract"
+					else object_entity["start_idx"]
+				)
+				object_end = (
+					object_entity["end_idx"] + offset + 1
+					if object_entity["location"] == "abstract"
+					else object_entity["end_idx"]
+				)
+
+				input_ids, attention_mask = self._tokenize_with_entity_markers(
+					full_text,
+					subj={"start_idx": subject_start, "end_idx": subject_end},
+					obj={"start_idx": object_start, "end_idx": object_end},
+				)
+
+				# Dummy label: 0 for binary task, or 'no relation' otherwise
+				if self.subtask == "6.2.1":
+					label_id = 0
+				else:
+					label_id = self.relation2id["no relation"]
+
+				sample = {
+					"input_ids": input_ids,
+					"attention_mask": attention_mask,
+					"labels": label_id,
+					"subj_label": subject_entity["label"],
+					"obj_label": object_entity["label"],
+					"subj": subject_entity,
+					"obj": object_entity,
+					"paper_id": paper_id,
+				}
+
+				if dataset_weight:
+					sample["weight"] = dataset_weight
+
+				samples.append(sample)
+
+		return samples
+
 	def _tokenize_with_entity_markers(self, text, subj, obj):
 		# Ensure order is correct
 		s_start, s_end = subj["start_idx"], subj["end_idx"]
@@ -353,7 +425,7 @@ class RelationTokenizer:
 			return_tensors="pt",
 		)
 
-		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
+		return encoding["input_ids"], encoding["attention_mask"]
 
 	def _save_to_pickle(self, data):
 		os.makedirs(os.path.join("data_preprocessed", os.path.dirname(self.save_filename)), exist_ok=True)
@@ -371,6 +443,6 @@ if __name__ == "__main__":
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
 	re_tokenizer = RelationTokenizer(
-		datasets=[platinum_data], save_filename=os.path.join("test.pkl"), tokenizer=tokenizer, subtask="2.6.1"
+		datasets=[platinum_data], save_filename=os.path.join("test.pkl"), tokenizer=tokenizer, subtask="6.2.1"
 	)
 	re_tokenizer.process_files()
