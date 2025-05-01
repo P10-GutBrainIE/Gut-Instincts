@@ -33,9 +33,9 @@ class RelationTokenizer:
 
 	def process_files(self):
 		"""
-		Load JSON files of papers and process each paper for relation classification.
+		Load JSON files of papers and process each paper for relation extraction.
 		"""
-		logger.info("Starting to process files for relation classification...")
+		logger.info("Starting to process files for relation extraction...")
 		all_data = []
 
 		if self.dataset_weights:
@@ -109,14 +109,15 @@ class RelationTokenizer:
 				)
 
 		entity_combinations = [(a, b) for a in content["entities"] for b in content["entities"] if a != b]
+		print(f"Total entity combinations: {len(entity_combinations)}")
 		random.shuffle(entity_combinations)
 		if len(samples) * self.negative_sample_multiplier > len(entity_combinations):
 			number_negative_samples = len(entity_combinations)
 		else:
 			number_negative_samples = len(samples) * self.negative_sample_multiplier
-		entity_combinations[:number_negative_samples]
 
-		for ent_a, ent_b in entity_combinations:
+		print(f"Number of entity combinations for negative samples: {number_negative_samples}")
+		for ent_a, ent_b in entity_combinations[:number_negative_samples]:
 			input_ids, attention_mask = self._tokenize_with_entity_markers(
 				full_text,
 				subject={
@@ -186,7 +187,6 @@ class RelationTokenizer:
 			truncation=True,
 			padding="max_length",
 			max_length=self.max_length,
-			return_tensors="pt",
 		)
 
 		return encoding["input_ids"], encoding["attention_mask"]
@@ -200,15 +200,29 @@ class RelationTokenizer:
 
 if __name__ == "__main__":
 	shared_path = os.path.join("data", "Annotations", "Dev")
-	platinum_data = load_json_data(os.path.join(shared_path, "json_format", "dev.json"))
+	dev = load_json_data(os.path.join(shared_path, "json_format", "dev.json"))
 
 	tokenizer = AutoTokenizer.from_pretrained(
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
 	re_tokenizer = RelationTokenizer(
-		dataset_weights=[1], datasets=[platinum_data], tokenizer=tokenizer, subtask="6.2.1"
+		datasets=[dev], tokenizer=tokenizer, save_filename="re_dev_test.pkl", subtask="6.2.1"
 	)
-	processed = re_tokenizer.process_files()
-	for item in processed[:1]:
-		print(item)
-		print(tokenizer.convert_ids_to_tokens(item["input_ids"][0]))
+	re_tokenizer.process_files()
+
+	from utils.utils import load_pkl_data
+	from training.dataset import Dataset
+	import torch
+
+	training_data = load_pkl_data(os.path.join("data_preprocessed", "re_dev_test.pkl"))
+	training_dataset = Dataset(training_data, with_weights=False)
+
+	train_loader = torch.utils.data.DataLoader(training_dataset, batch_size=2, shuffle=True, pin_memory=True)
+
+	for batch in train_loader:
+		print(batch["input_ids"].shape)
+		print(batch["attention_mask"].shape)
+		print(batch["labels"])
+		print(batch["subject_label"])
+		print(batch["object_label"])
+		break
