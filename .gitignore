@@ -3,6 +3,7 @@ data/Articles
 models/
 plots/
 
+.vscode
 .VSCodeCounter/
 
 # Byte-compiled / optimized / DLL files

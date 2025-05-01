@@ -1,10 +1,10 @@
 import os
 import pickle
+import random
 import logging
 from transformers import AutoTokenizer
+from tqdm import tqdm
 from utils.utils import load_bio_labels, load_relation_labels, load_json_data
-from preprocessing.remove_html import remove_html_tags
-import random
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -185,6 +185,7 @@ class RelationTokenizer:
 		self.datasets = datasets
 		self.dataset_weights = dataset_weights
 		self.tokenizer = tokenizer
+		self.tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
 		self.save_filename = save_filename
 		self.max_length = max_length
 		self.concatenate_title_abstract = concatenate_title_abstract
@@ -192,17 +193,7 @@ class RelationTokenizer:
 		self.negative_sample_multiplier = negative_sample_multiplier
 		_, self.relation2id, _ = load_relation_labels()
 
-		# Register entity marker tokens and resize embeddings if applicable
-		self.tokenizer.add_special_tokens({"additional_special_tokens": ["[E1]", "[/E1]", "[E2]", "[/E2]"]})
-
-		# Resize model embeddings if the tokenizer has been attached to a model
-		# if hasattr(self.tokenizer, "model_max_length") and hasattr(self.tokenizer, "model"):
-		# 	try:
-		# 		self.tokenizer.model.resize_token_embeddings(len(self.tokenizer))
-		# 	except Exception:
-		# 		pass  # You can log a warning here if you want
-
-	def process_files(self, is_ner_predictions=False):
+	def process_files(self):
 		"""
 		Load JSON files of papers and process each paper for relation classification.
 		"""
@@ -211,22 +202,14 @@ class RelationTokenizer:
 
 		if self.dataset_weights:
 			for data, dataset_weight in zip(self.datasets, self.dataset_weights):
-				for paper_id, content in data.items():
-					processed_data = (
-						self._process_paper(content, dataset_weight, paper_id)
-						if not is_ner_predictions
-						else self._process_paper_NER_predictions(content, dataset_weight, paper_id)
-					)
+				for _, content in tqdm(data.items(), total=len(data.items()), desc="Preprocessing"):
+					processed_data = self._process_paper(content, dataset_weight)
 					all_data.extend(processed_data)
 			logger.info(f"Datasets with weights: {self.dataset_weights} processed")
 		else:
 			for data in self.datasets:
-				for paper_id, content in data.items():
-					processed_data = (
-						self._process_paper(content, dataset_weight, paper_id)
-						if not is_ner_predictions
-						else self._process_paper_NER_predictions(content, dataset_weight, paper_id)
-					)
+				for _, content in tqdm(data.items(), total=len(data.items()), desc="Preprocessing"):
+					processed_data = self._process_paper(content, dataset_weight)
 					all_data.extend(processed_data)
 			logger.info("Datasets processed")
 
@@ -235,7 +218,7 @@ class RelationTokenizer:
 		else:
 			return all_data
 
-	def _process_paper(self, content, dataset_weight, paper_id):
+	def _process_paper(self, content, dataset_weight):
 		samples = []
 
 		offset = len(content["metadata"]["title"]) + 1 if self.concatenate_title_abstract else 0
@@ -245,176 +228,115 @@ class RelationTokenizer:
 			else content["metadata"]["abstract"]
 		)
 
-		entities = content["entities"]
-		# Building gold_relation lookup
-		gold_relations = {}
 		for relation in content["relations"]:
-			subject_key = (relation["subject_start_idx"], relation["subject_end_idx"], relation["subject_location"])
-			object_key = (relation["object_start_idx"], relation["object_end_idx"], relation["object_location"])
-			gold_relations[(subject_key, object_key)] = relation["predicate"]
-
-		# add relations from ground truth
-		# add negative samples based on length of positive samples
-
-		for relation in content["relations"]:
-			pass
-			#samples.append()
-
-		for i, subject_entity in enumerate(entities):
-			for j, object_entity in enumerate(entities):
-
-		for i, subject_entity in enumerate(entities):
-			for j, object_entity in enumerate(entities):
-				if i == j:
-					continue  # skip same entity
-
-				subject_key = (subject_entity["start_idx"], subject_entity["end_idx"], subject_entity["location"])
-				object_key = (object_entity["start_idx"], object_entity["end_idx"], object_entity["location"])
-
-				if (subject_key, object_key) in gold_relations:
-					if self.subtask == "6.2.1":
-						label_id = 1
-					else:
-						relation_label = gold_relations[(subject_key, object_key)]
-						label_id = self.relation2id[relation_label]
-				else:
-					label_id = 0
-
-				# Adjust indices for title vs abstract
-				subject_start = (
-					subject_entity["start_idx"] + offset
-					if subject_entity["location"] == "abstract"
-					else subject_entity["start_idx"]
+			input_ids, attention_mask = self._tokenize_with_entity_markers(
+				full_text,
+				subject={
+					"start_idx": relation["subject_start_idx"] + offset
+					if relation["subject_location"] == "abstract"
+					else relation["subject_start_idx"],
+					"end_idx": relation["subject_end_idx"] + offset + 1
+					if relation["subject_location"] == "abstract"
+					else relation["subject_end_idx"] + 1,
+				},
+				object={
+					"start_idx": relation["object_start_idx"] + offset
+					if relation["object_location"] == "abstract"
+					else relation["object_start_idx"],
+					"end_idx": relation["object_end_idx"] + offset + 1
+					if relation["object_location"] == "abstract"
+					else relation["object_end_idx"] + 1,
+				},
+			)
+			if dataset_weight:
+				samples.append(
+					{
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+						"labels": relation["predicate"] if self.subtask in ["6.2.2", "6.2.3"] else 1,
+						"subject_label": relation["subject_label"],
+						"object_label": relation["object_label"],
+						"subject_text_span": relation["subject_text_span"],
+						"object_text_span": relation["object_text_span"],
+						"weight": dataset_weight,
+					}
 				)
-				subject_end = (
-					subject_entity["end_idx"] + offset
-					if subject_entity["location"] == "abstract"
-					else subject_entity["end_idx"]
-				)
-
-				object_start = (
-					object_entity["start_idx"] + offset
-					if object_entity["location"] == "abstract"
-					else object_entity["start_idx"]
-				)
-				object_end = (
-					object_entity["end_idx"] + offset
-					if object_entity["location"] == "abstract"
-					else object_entity["end_idx"]
+			else:
+				samples.append(
+					{
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+						"labels": relation["predicate"] if self.subtask in ["6.2.2", "6.2.3"] else 1,
+						"subject_label": relation["subject_label"],
+						"object_label": relation["object_label"],
+						"subject_text_span": relation["subject_text_span"],
+						"object_text_span": relation["object_text_span"],
+					}
 				)
 
-				input_ids, attention_mask = self._tokenize_with_entity_markers(
-					full_text,
-					subj={"start_idx": subject_start, "end_idx": subject_end},
-					obj={"start_idx": object_start, "end_idx": object_end},
+		entity_combinations = [(a, b) for a in content["entities"] for b in content["entities"] if a != b]
+		random.shuffle(entity_combinations)
+		if len(samples) * self.negative_sample_multiplier > len(entity_combinations):
+			number_negative_samples = len(entity_combinations)
+		else:
+			number_negative_samples = len(samples) * self.negative_sample_multiplier
+		entity_combinations[:number_negative_samples]
+
+		for ent_a, ent_b in entity_combinations:
+			input_ids, attention_mask = self._tokenize_with_entity_markers(
+				full_text,
+				subject={
+					"start_idx": ent_a["start_idx"] + offset if ent_a["location"] == "abstract" else ent_a["start_idx"],
+					"end_idx": ent_a["end_idx"] + offset + 1
+					if ent_a["location"] == "abstract"
+					else ent_a["end_idx"] + 1,
+				},
+				object={
+					"start_idx": ent_b["start_idx"] + offset if ent_b["location"] == "abstract" else ent_b["start_idx"],
+					"end_idx": ent_b["end_idx"] + offset + 1
+					if ent_b["location"] == "abstract"
+					else ent_b["end_idx"] + 1,
+				},
+			)
+			if dataset_weight:
+				samples.append(
+					{
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+						"labels": 0,
+						"subject_label": ent_a["label"],
+						"object_label": ent_b["label"],
+						"subject_text_span": ent_a["text_span"],
+						"object_text_span": ent_b["text_span"],
+						"weight": dataset_weight,
+					}
 				)
-
-				# sample = {"input_ids": input_ids, "attention_mask": attention_mask, "labels": label_id}
-				sample = {
-					"input_ids": input_ids,
-					"attention_mask": attention_mask,
-					"labels": label_id,
-					"subj_label": subject_entity["label"],
-					"obj_label": object_entity["label"],
-					"subj_text_span": subject_entity["text_span"],
-					"obj_text_span": object_entity["text_span"]
-				}
-
-				if dataset_weight:
-					sample["weight"] = dataset_weight
-
-				if (subject_key, object_key) in gold_relations:
-					positive_samples.append(sample)
-				else:
-					negative_samples.append(sample)
-
-		num_negatives_to_keep = min(len(negative_samples), self.negative_sample_multiplier * len(positive_samples))
-
-		if num_negatives_to_keep < len(negative_samples):
-			negative_samples = random.sample(negative_samples, num_negatives_to_keep)
-
-		processed = positive_samples + negative_samples
-		# random.shuffle(processed)
-
-		return processed
-
-	def _process_paper_NER_predictions(self, content, dataset_weight, paper_id):
-		samples = []
-
-		title = content["metadata"]["title"]
-		abstract = content["metadata"]["abstract"]
-		offset = len(title) + 1 if self.concatenate_title_abstract else 0
-		full_text = f"{title} {abstract}" if self.concatenate_title_abstract else abstract
-
-		entities = content.get("entities", [])
-
-		for i, subject_entity in enumerate(entities):
-			for j, object_entity in enumerate(entities):
-				if i == j:
-					continue  # skip same entity pair
-
-				# Adjust indices
-				subject_start = (
-					subject_entity["start_idx"] + offset
-					if subject_entity["location"] == "abstract"
-					else subject_entity["start_idx"]
+			else:
+				samples.append(
+					{
+						"input_ids": input_ids,
+						"attention_mask": attention_mask,
+						"labels": 0,
+						"subject_label": ent_a["label"],
+						"object_label": ent_b["label"],
+						"subject_text_span": ent_a["text_span"],
+						"object_text_span": ent_b["text_span"],
+					}
 				)
-				subject_end = (
-					subject_entity["end_idx"] + offset + 1
-					if subject_entity["location"] == "abstract"
-					else subject_entity["end_idx"]
-				)
-
-				object_start = (
-					object_entity["start_idx"] + offset
-					if object_entity["location"] == "abstract"
-					else object_entity["start_idx"]
-				)
-				object_end = (
-					object_entity["end_idx"] + offset + 1
-					if object_entity["location"] == "abstract"
-					else object_entity["end_idx"]
-				)
-
-				input_ids, attention_mask = self._tokenize_with_entity_markers(
-					full_text,
-					subj={"start_idx": subject_start, "end_idx": subject_end},
-					obj={"start_idx": object_start, "end_idx": object_end},
-				)
-
-				# Dummy label: 0 for binary task, or 'no relation' otherwise
-				if self.subtask == "6.2.1":
-					label_id = 0
-				else:
-					label_id = self.relation2id["no relation"]
-
-				sample = {
-					"input_ids": input_ids,
-					"attention_mask": attention_mask,
-					"labels": label_id,
-					"subj_label": subject_entity["label"],
-					"obj_label": object_entity["label"],
-					"subj": subject_entity,
-					"obj": object_entity,
-					"paper_id": paper_id,
-				}
-
-				if dataset_weight:
-					sample["weight"] = dataset_weight
-
-				samples.append(sample)
 
 		return samples
 
-	def _tokenize_with_entity_markers(self, text, subj, obj):
-		# Ensure order is correct
-		s_start, s_end = subj["start_idx"], subj["end_idx"]
-		o_start, o_end = obj["start_idx"], obj["end_idx"]
-
-		if s_start < o_start:
-			spans = [(s_start, s_end, "[E1]", "[/E1]"), (o_start, o_end, "[E2]", "[/E2]")]
+	def _tokenize_with_entity_markers(self, text, subject, object):
+		if subject["start_idx"] < object["start_idx"]:
+			spans = [
+				(subject["start_idx"], subject["end_idx"], "[E1]", "[/E1]"),
+				(object["start_idx"], object["end_idx"], "[E2]", "[/E2]"),
+			]
 		else:
-			spans = [(o_start, o_end, "[E2]", "[/E2]"), (s_start, s_end, "[E1]", "[/E1]")]
+			spans = [
+				(object["start_idx"], object["end_idx"], "[E2]", "[/E2]"),
+				(subject["start_idx"], subject["end_idx"], "[E1]", "[/E1]"),
+			]
 
 		marked_text = ""
 		last_idx = 0
@@ -453,6 +375,6 @@ if __name__ == "__main__":
 		dataset_weights=[1], datasets=[platinum_data], tokenizer=tokenizer, subtask="6.2.1"
 	)
 	processed = re_tokenizer.process_files()
-	for item in processed[:5]:
+	for item in processed[:1]:
 		print(item)
 		print(tokenizer.convert_ids_to_tokens(item["input_ids"][0]))
