@@ -139,6 +139,16 @@ def make_dataset_dir_name(config):
 	return dataset_dir_name
 
 
+def make_task_name(config):
+	if config["model_type"] == "re":
+		if config["subtask"] == "6.2.1":
+			return "re_binary"
+		elif config["subtask"] in ["6.2.2", "6.2.3"]:
+			return "re_multiclass"
+	else:
+		return "ner"
+
+
 def print_metrics(metrics):
 	"""
 	Print formatted metric names and values.
