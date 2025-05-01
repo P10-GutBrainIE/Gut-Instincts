@@ -37,9 +37,7 @@ def create_training_dataset(
 	"""
 	save_data_path = os.path.join(task_name, experiment_name, dataset_dir_name, "training.pkl")
 	if os.path.exists(save_data_path):
-		print(
-			f"Training dataset already exists at {experiment_name, task_name, dataset_dir_name, 'training.pkl'}. Skipping create_training_dataset()."
-		)
+		print(f"Training dataset already exists at {save_data_path}. Skipping create_training_dataset().")
 		return
 
 	datasets = {quality: [] for quality in dataset_qualities}
