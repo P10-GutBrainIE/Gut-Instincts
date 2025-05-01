@@ -67,7 +67,17 @@ class REInference:
 			return result
 
 	def _re_pipeline(self, content):
+		if (
+			not content.get("metadata")
+			or not content["metadata"].get("title")
+			or not content["metadata"].get("abstract")
+		):
+			raise ValueError("Content metadata is missing required 'title' or 'abstract' fields.")
+		if not content.get("entities"):
+			return []  # No entities to process
+
 		predictions = []
+		seen = set()  # To store unique dictionaries as JSON strings
 
 		offset = len(content["metadata"]["title"]) + 1
 		full_text = f"{content['metadata']['title']} {content['metadata']['abstract']}"
@@ -97,43 +107,43 @@ class REInference:
 			prediction = self.model.predict(input_ids=input_ids, attention_mask=attention_mask)
 			if self.subtask == "6.2.1":
 				if prediction:
-					if {"subject_label": subject["label"], "object_label": object["label"]} not in predictions:
-						predictions.append({"subject_label": subject["label"], "object_label": object["label"]})
+					item = json.dumps(
+						{"subject_label": subject["label"], "object_label": object["label"]}, sort_keys=True
+					)
+					if item not in seen:
+						seen.add(item)
+						predictions.append(json.loads(item))
 			elif self.subtask in ["6.2.2", "6.2.3"]:
 				predicate = self.id2label[prediction]
 				if predicate != "no relation":
 					if self.subtask == "6.2.2":
-						if {
-							"subject_label": subject["label"],
-							"predicate": predicate,
-							"object_label": object["label"],
-						} not in predictions:
-							predictions.append(
-								{
-									"subject_label": subject["label"],
-									"predicate": predicate,
-									"object_label": object["label"],
-								}
-							)
+						item = json.dumps(
+							{
+								"subject_label": subject["label"],
+								"predicate": predicate,
+								"object_label": object["label"],
+							},
+							sort_keys=True,
+						)
+						if item not in seen:
+							seen.add(item)
+							predictions.append(json.loads(item))
 					elif self.subtask == "6.2.3":
-						if {
-							"subject_text_span": subject["text_span"],
-							"subject_label": subject["label"],
-							"predicate": predicate,
-							"object_text_span": object["text_span"],
-							"object_label": object["label"],
-						} not in predictions:
-							predictions.add(
-								{
-									"subject_text_span": subject["text_span"],
-									"subject_label": subject["label"],
-									"predicate": predicate,
-									"object_text_span": object["text_span"],
-									"object_label": object["label"],
-								}
-							)
+						item = json.dumps(
+							{
+								"subject_text_span": subject["text_span"],
+								"subject_label": subject["label"],
+								"predicate": predicate,
+								"object_text_span": object["text_span"],
+								"object_label": object["label"],
+							},
+							sort_keys=True,
+						)
+						if item not in seen:
+							seen.add(item)
+							predictions.append(json.loads(item))
 
-		return list(predictions)
+		return predictions
 
 	def _tokenize_with_entity_markers(self, text, subject, object):
 		if subject["start_idx"] < object["start_idx"]:
