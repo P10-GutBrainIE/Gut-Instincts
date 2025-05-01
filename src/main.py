@@ -1,6 +1,6 @@
 import os
 import yaml
-from inference.ner import NERInference
+from inference.ner_inference import NERInference
 from utils.utils import make_dataset_dir_name
 
 NER_CONFIG = os.path.join("training_configs", "weighted_training", "1,5-1,5-1-0,75.yaml")

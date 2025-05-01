@@ -12,7 +12,6 @@ class REInference:
 		test_data_path: str,
 		model_name: str,
 		model_type: str,
-		experiment_name: str,
 		subtask: str,
 		model_name_path: str = None,
 		save_path: str = None,
@@ -22,7 +21,6 @@ class REInference:
 		_, _, self.id2label = load_relation_labels()
 		self.tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True, max_length=512, truncation=True)
 		self.model_type = model_type
-		self.experiment_name = experiment_name
 		self.validation_model = validation_model
 		self.subtask = subtask
 		self.save_path = save_path

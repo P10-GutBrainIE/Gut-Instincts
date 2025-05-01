@@ -1,33 +1,19 @@
 import os
-from inference.ner import NERInference
-from utils.utils import load_entity_labels, load_relation_labels, load_json_data, save_json_data
+from inference.re_inference import REInference
+from inference.ner_inference import NERInference
+from utils.utils import load_entity_labels, load_relation_labels, load_json_data
 
 
 def compute_metrics(model, model_name, model_type, remove_html, config):
-	ner_inference = NERInference(
-		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-		model_name=model_name,
-		model_type=model_type,
-		validation_model=model,
-		remove_html=remove_html,
-	)
-
 	if config["model_type"] == "re":
-		from inference.re import REInference
-
 		re_inference = REInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			ner_predictions_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
 			validation_model=model,
 			subtask=config["subtask"],
-			experiment_name=config["experiment_name"],
 		)
 		inference_results = re_inference.perform_inference()
-
-		save_json_data(inference_results, os.path.join("data_preprocessed", "re_inference_results.json"))
-
 		if config["subtask"] == "6.2.1":
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
 				RE_evaluation_subtask_621(inference_results)
@@ -42,22 +28,13 @@ def compute_metrics(model, model_name, model_type, remove_html, config):
 			)
 		else:
 			return ValueError("No matching subtask")
-
-		return {
-			"Precision_micro": precision_micro,
-			"Recall_micro": recall_micro,
-			"F1_micro": f1_micro,
-			"Precision_macro": precision_macro,
-			"Recall_macro": recall_macro,
-			"F1_macro": f1_macro,
-		}
-
 	else:
 		ner_inference = NERInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			model_name=config["model_name"],
-			model_type=config["model_type"],
+			model_name=model_name,
+			model_type=model_type,
 			validation_model=model,
+			remove_html=remove_html,
 		)
 
 		inference_results = ner_inference.perform_inference()
@@ -65,14 +42,14 @@ def compute_metrics(model, model_name, model_type, remove_html, config):
 			inference_results
 		)
 
-		return {
-			"Precision_micro": precision_micro,
-			"Recall_micro": recall_micro,
-			"F1_micro": f1_micro,
-			"Precision_macro": precision_macro,
-			"Recall_macro": recall_macro,
-			"F1_macro": f1_macro,
-		}
+	return {
+		"Precision_micro": precision_micro,
+		"Recall_micro": recall_micro,
+		"F1_micro": f1_micro,
+		"Precision_macro": precision_macro,
+		"Recall_macro": recall_macro,
+		"F1_macro": f1_macro,
+	}
 
 
 def NER_evaluation(predictions):
