@@ -1,0 +1,22 @@
+{
+    "relation_labels": [
+        "no relation",
+        "influence",
+        "target",
+        "is linked to",
+        "located in",
+        "affect",
+        "impact",
+        "used by",
+        "change abundance",
+        "part of",
+        "change expression",
+        "interact",
+        "strike",
+        "administered",
+        "change effect",
+        "is a",
+        "produced by",
+        "compared to"
+    ]
+}

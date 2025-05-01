@@ -3,6 +3,7 @@ data/Articles
 data_preprocessed/
 models/
 
+.vscode
 .VSCodeCounter/
 
 # Log files from AI-lab

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import mlflow
 import torch
 from tqdm import tqdm
-from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_metrics
+from utils.utils import load_bio_labels, load_relation_labels, load_pkl_data, make_dataset_dir_name, print_metrics
 from NER.compute_metrics import compute_metrics
 from NER.dataset import Dataset
 from NER.freezing import freeze_bert, unfreeze_bert
@@ -43,6 +43,10 @@ def build_model(config, label_list, id2label, label2id):
 			model_name=config["model_name"],
 			num_labels=len(label_list),
 		)
+	elif config["model_type"] == "re":
+		from NER.architectures.bert_with_entity_start import BertForREWithEntityStart
+
+		return BertForREWithEntityStart(model_name=config["model_name"], num_labels=len(label_list))
 	else:
 		raise ValueError("Unknown model_type")
 
@@ -57,7 +61,16 @@ def training(config):
 	mlflow.start_run()
 	mlflow.log_params(params=config)
 
-	label_list, label2id, id2label = load_bio_labels()
+	if config["model_type"] == "re":
+		if config.get("subtask") == "6.2.1":
+			label_list = ["no_relation", "relation"]
+			label2id = {"no_relation": 0, "relation": 1}
+			id2label = {0: "no_relation", 1: "relation"}
+		else:
+			label_list, label2id, id2label = load_relation_labels()
+	else:
+		label_list, label2id, id2label = load_bio_labels()
+
 	model = build_model(config, label_list, id2label, label2id)
 
 	freeze_epochs = config["hyperparameters"]["freeze_epochs"]
@@ -102,6 +115,7 @@ def training(config):
 					batch[k] = v.to(device)
 
 			optimizer.zero_grad()
+
 			if config["weighted_training"]:
 				outputs = model(
 					batch["input_ids"],

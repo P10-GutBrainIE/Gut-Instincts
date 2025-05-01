@@ -1,9 +1,9 @@
 import os
 from NER.inference import NERInference
-from utils.utils import load_entity_labels, load_json_data
+from utils.utils import load_entity_labels, load_relation_labels, load_json_data, save_json_data
 
 
-def compute_metrics(model, model_name, model_type, remove_html):
+def compute_metrics(model, model_name, model_type, remove_html, config):
 	ner_inference = NERInference(
 		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 		model_name=model_name,
@@ -12,17 +12,67 @@ def compute_metrics(model, model_name, model_type, remove_html):
 		remove_html=remove_html,
 	)
 
-	inference_results = ner_inference.perform_inference()
-	precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = NER_evaluation(inference_results)
+	if config["model_type"] == "re":
+		from NER.inference import REInference
 
-	return {
-		"Precision_micro": precision_micro,
-		"Recall_micro": recall_micro,
-		"F1_micro": f1_micro,
-		"Precision_macro": precision_macro,
-		"Recall_macro": recall_macro,
-		"F1_macro": f1_macro,
-	}
+		re_inference = REInference(
+			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			ner_predictions_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			model_name=config["model_name"],
+			model_type=config["model_type"],
+			validation_model=model,
+			subtask=config["subtask"],
+			experiment_name=config["experiment_name"],
+		)
+		inference_results = re_inference.perform_inference()
+
+		save_json_data(inference_results, os.path.join("data_preprocessed", "re_inference_results.json"))
+
+		if config["subtask"] == "6.2.1":
+			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
+				RE_evaluation_subtask_621(inference_results)
+			)
+		elif config["subtask"] == "6.2.2":
+			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
+				RE_evaluation_subtask_622(inference_results)
+			)
+		elif config["subtask"] == "6.2.3":
+			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
+				RE_evaluation_subtask_623(inference_results)
+			)
+		else:
+			return ValueError("No matching subtask")
+
+		return {
+			"Precision_micro": precision_micro,
+			"Recall_micro": recall_micro,
+			"F1_micro": f1_micro,
+			"Precision_macro": precision_macro,
+			"Recall_macro": recall_macro,
+			"F1_macro": f1_macro,
+		}
+
+	else:
+		ner_inference = NERInference(
+			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			model_name=config["model_name"],
+			model_type=config["model_type"],
+			validation_model=model,
+		)
+
+		inference_results = ner_inference.perform_inference()
+		precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = NER_evaluation(
+			inference_results
+		)
+
+		return {
+			"Precision_micro": precision_micro,
+			"Recall_micro": recall_micro,
+			"F1_micro": f1_micro,
+			"Precision_macro": precision_macro,
+			"Recall_macro": recall_macro,
+			"F1_macro": f1_macro,
+		}
 
 
 def NER_evaluation(predictions):
@@ -107,3 +157,278 @@ def NER_evaluation(predictions):
 	f1 = f1 / n
 
 	return precision, recall, f1, micro_precision, micro_recall, micro_f1
+
+
+def RE_evaluation_subtask_621(predictions, ground_truth_path="data/Annotations/Dev/json_format/dev.json"):
+	from utils.utils import load_json_data
+
+	ground_truth_binary_tag_RE = dict()
+	count_annotated_relations_per_label = {}
+
+	# Load ground truth
+	ground_truth = load_json_data(file_path=ground_truth_path)
+
+	# Dynamically extract legal entity labels from ground truth
+	legal_entity_labels = set()
+	for article in ground_truth.values():
+		for ent in article["entities"]:
+			legal_entity_labels.add(ent["label"])
+
+	# Build ground truth label counts (deduplicated per paper)
+	for pmid, article in ground_truth.items():
+		ground_truth_binary_tag_RE[pmid] = set()
+		for relation in article["binary_tag_based_relations"]:
+			subj, obj = relation["subject_label"], relation["object_label"]
+			ground_truth_binary_tag_RE[pmid].add((subj, obj))
+
+	# Flatten to count total GT
+	for labels in ground_truth_binary_tag_RE.values():
+		for label in labels:
+			count_annotated_relations_per_label[label] = count_annotated_relations_per_label.get(label, 0) + 1
+
+	# Initialize counters
+	count_predicted_relations_per_label = {label: 0 for label in count_annotated_relations_per_label}
+	count_true_positives_per_label = {label: 0 for label in count_annotated_relations_per_label}
+
+	for pmid, article_preds in predictions.items():
+		seen_pred_labels = set()
+
+		try:
+			relations = article_preds["binary_tag_based_relations"]
+		except KeyError:
+			raise KeyError(f'{pmid} - Missing "binary_tag_based_relations" in prediction')
+
+		for rel in relations:
+			subj = rel["subject_label"]
+			obj = rel["object_label"]
+
+			if subj not in legal_entity_labels or obj not in legal_entity_labels:
+				continue  # Skip invalid
+
+			label = (subj, obj)
+			if label not in seen_pred_labels:
+				seen_pred_labels.add(label)
+
+		for label in seen_pred_labels:
+			if label in count_predicted_relations_per_label:
+				count_predicted_relations_per_label[label] += 1
+			if label in ground_truth_binary_tag_RE.get(pmid, set()):
+				count_true_positives_per_label[label] += 1
+
+	# Aggregate counts
+	count_annotated = sum(count_annotated_relations_per_label.values())
+	count_predicted = sum(count_predicted_relations_per_label.values())
+	count_true_pos = sum(count_true_positives_per_label.values())
+
+	# Micro metrics
+	micro_precision = count_true_pos / (count_predicted + 1e-10)
+	micro_recall = count_true_pos / (count_annotated + 1e-10)
+	micro_f1 = 2 * micro_precision * micro_recall / (micro_precision + micro_recall + 1e-10)
+
+	# Macro metrics
+	precision = recall = f1 = 0
+	n = len(count_annotated_relations_per_label)
+	for label in count_annotated_relations_per_label:
+		p = count_true_positives_per_label[label] / (count_predicted_relations_per_label[label] + 1e-10)
+		r = count_true_positives_per_label[label] / (count_annotated_relations_per_label[label] + 1e-10)
+		f = 2 * p * r / (p + r + 1e-10)
+		precision += p
+		recall += r
+		f1 += f
+
+	precision /= n
+	recall /= n
+	f1 /= n
+
+	return precision, recall, f1, micro_precision, micro_recall, micro_f1
+
+
+def RE_evaluation_subtask_622(predictions):
+	ground_truth_ternary_tag_RE = dict()
+	count_annotated_relations_per_label = {}
+	entity_labels = load_entity_labels()[1:]
+	relation_labels = load_relation_labels()[1:]
+	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
+
+	for pmid, article in ground_truth.items():
+		if pmid not in ground_truth_ternary_tag_RE:
+			ground_truth_ternary_tag_RE[pmid] = []
+		for relation in article["ternary_tag_based_relations"]:
+			subject_label = str(relation["subject_label"])
+			predicate = str(relation["predicate"])
+			object_label = str(relation["object_label"])
+
+			label = (subject_label, predicate, object_label)
+			ground_truth_ternary_tag_RE[pmid].append(label)
+
+			if label not in count_annotated_relations_per_label:
+				count_annotated_relations_per_label[label] = 0
+			count_annotated_relations_per_label[label] += 1
+
+	count_predicted_relations_per_label = {label: 0 for label in list(count_annotated_relations_per_label.keys())}
+	count_true_positives_per_label = {label: 0 for label in list(count_annotated_relations_per_label.keys())}
+
+	for pmid in predictions.keys():
+		try:
+			relations = predictions[pmid]["ternary_tag_based_relations"]
+		except KeyError:
+			raise KeyError(f'{pmid} - Not able to find field "ternary_tag_based_relations" within article')
+
+		for relation in relations:
+			try:
+				subject_label = str(relation["subject_label"])
+				predicate = str(relation["predicate"])
+				object_label = str(relation["object_label"])
+			except KeyError:
+				raise KeyError(f"{pmid} - Not able to find one or more of the expected fields for relation: {relation}")
+
+			if subject_label not in entity_labels:
+				raise NameError(f"{pmid} - Illegal subject entity label {subject_label} for relation: {relation}")
+
+			if object_label not in entity_labels:
+				raise NameError(f"{pmid} - Illegal object entity label {object_label} for relation: {relation}")
+
+			if predicate not in relation_labels:
+				raise NameError(f"{pmid} - Illegal predicate {predicate} for relation: {relation}")
+
+			label = (subject_label, predicate, object_label)
+			if label in count_predicted_relations_per_label:
+				count_predicted_relations_per_label[label] += 1
+
+			if label in ground_truth_ternary_tag_RE[pmid]:
+				count_true_positives_per_label[label] += 1
+
+	count_annotated_relations = sum(
+		count_annotated_relations_per_label[label] for label in list(count_annotated_relations_per_label.keys())
+	)
+	count_predicted_relations = sum(
+		count_predicted_relations_per_label[label] for label in list(count_annotated_relations_per_label.keys())
+	)
+	count_true_positives = sum(
+		count_true_positives_per_label[label] for label in list(count_annotated_relations_per_label.keys())
+	)
+
+	micro_precision = count_true_positives / (count_predicted_relations + 1e-10)
+	micro_recall = count_true_positives / (count_annotated_relations + 1e-10)
+	micro_f1 = 2 * ((micro_precision * micro_recall) / (micro_precision + micro_recall + 1e-10))
+
+	precision, recall, f1 = 0, 0, 0
+	n = 0
+	for label in list(count_annotated_relations_per_label.keys()):
+		n += 1
+		current_precision = count_true_positives_per_label[label] / (count_predicted_relations_per_label[label] + 1e-10)
+		current_recall = count_true_positives_per_label[label] / (count_annotated_relations_per_label[label] + 1e-10)
+
+		precision += current_precision
+		recall += current_recall
+		f1 += 2 * ((current_precision * current_recall) / (current_precision + current_recall + 1e-10))
+
+	precision = precision / n
+	recall = recall / n
+	f1 = f1 / n
+
+	return precision, recall, f1, micro_precision, micro_recall, micro_f1
+
+
+def RE_evaluation_subtask_623(predictions):
+	ground_truth_ternary_mention_RE = dict()
+	count_annotated_relations_per_label = {}
+	entity_labels = load_entity_labels()[1:]
+	relation_labels = load_relation_labels()[1:]
+	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
+
+	for pmid, article in ground_truth.items():
+		if pmid not in ground_truth_ternary_mention_RE:
+			ground_truth_ternary_mention_RE[pmid] = []
+		for relation in article["ternary_mention_based_relations"]:
+			subject_text_span = str(relation["subject_text_span"])
+			subject_label = str(relation["subject_label"])
+			predicate = str(relation["predicate"])
+			object_text_span = str(relation["object_text_span"])
+			object_label = str(relation["object_label"])
+
+			entry = (subject_text_span, subject_label, predicate, object_text_span, object_label)
+			ground_truth_ternary_mention_RE[pmid].append(entry)
+
+			label = (subject_label, predicate, object_label)
+			if label not in count_annotated_relations_per_label:
+				count_annotated_relations_per_label[label] = 0
+			count_annotated_relations_per_label[label] += 1
+
+	count_predicted_relations_per_label = {label: 0 for label in list(count_annotated_relations_per_label.keys())}
+	count_true_positives_per_label = {label: 0 for label in list(count_annotated_relations_per_label.keys())}
+
+	for pmid in predictions.keys():
+		try:
+			relations = predictions[pmid]["ternary_mention_based_relations"]
+		except KeyError:
+			raise KeyError(f'{pmid} - Not able to find field "ternary_mention_based_relations" within article')
+
+		for relation in relations:
+			try:
+				subject_text_span = str(relation["subject_text_span"])
+				subject_label = str(relation["subject_label"])
+				predicate = str(relation["predicate"])
+				object_text_span = str(relation["object_text_span"])
+				object_label = str(relation["object_label"])
+			except KeyError:
+				raise KeyError(f"{pmid} - Not able to find one or more of the expected fields for relation: {relation}")
+
+			if subject_label not in entity_labels:
+				raise NameError(f"{pmid} - Illegal subject entity label {subject_label} for relation: {relation}")
+
+			if object_label not in entity_labels:
+				raise NameError(f"{pmid} - Illegal object entity label {object_label} for relation: {relation}")
+
+			if predicate not in relation_labels:
+				raise NameError(f"{pmid} - Illegal predicate {predicate} for relation: {relation}")
+
+			entry = (subject_text_span, subject_label, predicate, object_text_span, object_label)
+			label = (subject_label, predicate, object_label)
+
+			if label in count_predicted_relations_per_label:
+				count_predicted_relations_per_label[label] += 1
+
+			if entry in ground_truth_ternary_mention_RE[pmid]:
+				count_true_positives_per_label[label] += 1
+
+	count_annotated_relations = sum(
+		count_annotated_relations_per_label[label] for label in list(count_annotated_relations_per_label.keys())
+	)
+	count_predicted_relations = sum(
+		count_predicted_relations_per_label[label] for label in list(count_annotated_relations_per_label.keys())
+	)
+	count_true_positives = sum(
+		count_true_positives_per_label[label] for label in list(count_annotated_relations_per_label.keys())
+	)
+
+	micro_precision = count_true_positives / (count_predicted_relations + 1e-10)
+	micro_recall = count_true_positives / (count_annotated_relations + 1e-10)
+	micro_f1 = 2 * ((micro_precision * micro_recall) / (micro_precision + micro_recall + 1e-10))
+
+	precision, recall, f1 = 0, 0, 0
+	n = 0
+	for label in list(count_annotated_relations_per_label.keys()):
+		n += 1
+		current_precision = count_true_positives_per_label[label] / (count_predicted_relations_per_label[label] + 1e-10)
+		current_recall = count_true_positives_per_label[label] / (count_annotated_relations_per_label[label] + 1e-10)
+
+		precision += current_precision
+		recall += current_recall
+		f1 += 2 * ((current_precision * current_recall) / (current_precision + current_recall + 1e-10))
+
+	precision = precision / n
+	recall = recall / n
+	f1 = f1 / n
+
+	return precision, recall, f1, micro_precision, micro_recall, micro_f1
+
+
+if __name__ == "__main__":
+	predictions = load_json_data(os.path.join("data_preprocessed", "re_inference_results.json"))
+	metrics = RE_evaluation_subtask_621(predictions)
+
+	for name, value in zip(
+		["Precision_macro", "Recall_macro", "F1_macro", "Precision_micro", "Recall_micro", "F1_micro"], metrics
+	):
+		print(f"{name:<25} {value:.4f}")

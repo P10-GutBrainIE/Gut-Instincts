@@ -4,17 +4,19 @@ import yaml
 from transformers import AutoTokenizer, AlbertTokenizerFast
 from preprocessing.remove_html import remove_html_tags
 from preprocessing.data_cleanup import clean_incorrect_text_spans, remove_incorrect_text_spans
-from preprocessing.tokenization import BIOTokenizer
+from preprocessing.tokenization import BIOTokenizer, RelationTokenizer
 from utils.utils import load_json_data, make_dataset_dir_name
 
 
 def create_training_dataset(
 	experiment_name: str,
 	model_name: str,
+	model_type: str,
 	dataset_qualities: list[str],
 	dataset_dir_name: str,
 	dataset_weights: list[float],
 	remove_html: bool,
+	subtask: str = None,
 ):
 	"""
 	Create and preprocess the training dataset, then tokenize and save it.
@@ -68,20 +70,32 @@ def create_training_dataset(
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-	bio_tokenizer = BIOTokenizer(
-		datasets=list(datasets.values()),
-		dataset_weights=dataset_weights,
-		save_filename=os.path.join(experiment_name, dataset_dir_name, "training.pkl"),
-		tokenizer=tokenizer,
-	)
-	bio_tokenizer.process_files()
+	if model_type == "re":
+		re_tokenizer = RelationTokenizer(
+			datasets=list(datasets.values()),
+			dataset_weights=dataset_weights,
+			save_filename=os.path.join(experiment_name, dataset_dir_name, "training.pkl"),
+			tokenizer=tokenizer,
+			subtask=subtask,
+		)
+		re_tokenizer.process_files()
+	else:
+		bio_tokenizer = BIOTokenizer(
+			datasets=list(datasets.values()),
+			dataset_weights=dataset_weights,
+			save_filename=os.path.join(experiment_name, dataset_dir_name, "training.pkl"),
+			tokenizer=tokenizer,
+		)
+		bio_tokenizer.process_files()
 
 
 def create_validation_dataset(
 	experiment_name: str,
 	model_name: str,
+	model_type: str,
 	dataset_dir_name: str,
 	remove_html: bool,
+	subtask: str = None,
 ):
 	"""
 	Create and preprocess the validation (dev) dataset, then tokenize and save it.
@@ -96,6 +110,7 @@ def create_validation_dataset(
 	    remove_html (bool): Whether to remove HTML tags from the validation data.
 	"""
 	dev_data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
+	ner_predictions = load_json_data(os.path.join("data_inference_results", "NER_results", "ensemble_inference.json"))
 
 	if remove_html:
 		dev_data = remove_html_tags(data=dev_data)
@@ -105,12 +120,28 @@ def create_validation_dataset(
 	else:
 		tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=True)
 
-	bio_tokenizer = BIOTokenizer(
-		datasets=[dev_data],
-		save_filename=os.path.join(experiment_name, dataset_dir_name, "validation.pkl"),
-		tokenizer=tokenizer,
-	)
-	bio_tokenizer.process_files()
+	if model_type == "re":
+		for paper_id in ner_predictions:
+			if paper_id not in dev_data:
+				return ValueError("paper_id is not in dev data")
+			dev_content = dev_data[paper_id]
+			inference_content = ner_predictions[paper_id]
+			merged = {"metadata": dev_content["metadata"], "entities": inference_content["entities"]}
+
+		re_tokenizer = RelationTokenizer(
+			datasets=[merged],
+			save_filename=os.path.join(experiment_name, dataset_dir_name, "validation.pkl"),
+			tokenizer=tokenizer,
+			subtask=subtask,
+		)
+		re_tokenizer.process_files(is_ner_predictions=True)
+	else:
+		bio_tokenizer = BIOTokenizer(
+			datasets=[dev_data],
+			save_filename=os.path.join(experiment_name, dataset_dir_name, "validation.pkl"),
+			tokenizer=tokenizer,
+		)
+		bio_tokenizer.process_files()
 
 
 if __name__ == "__main__":
@@ -126,14 +157,18 @@ if __name__ == "__main__":
 	create_training_dataset(
 		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
+		model_type=config["model_type"],
 		dataset_qualities=config["dataset_qualities"],
 		dataset_dir_name=dataset_dir_name,
 		dataset_weights=config.get("dataset_weights"),
 		remove_html=config["remove_html"],
+		subtask=config["subtask"],
 	)
 	create_validation_dataset(
 		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
+		model_type=config["model_type"],
 		dataset_dir_name=dataset_dir_name,
 		remove_html=config["remove_html"],
+		subtask=config["subtask"],
 	)
