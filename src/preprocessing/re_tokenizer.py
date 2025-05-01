@@ -47,7 +47,7 @@ class RelationTokenizer:
 		else:
 			for data in self.datasets:
 				for _, content in tqdm(data.items(), total=len(data.items()), desc="Preprocessing"):
-					processed_data = self._process_paper(content, dataset_weight)
+					processed_data = self._process_paper(content)
 					all_data.extend(processed_data)
 			logger.info("Datasets processed")
 
@@ -56,7 +56,7 @@ class RelationTokenizer:
 		else:
 			return all_data
 
-	def _process_paper(self, content, dataset_weight):
+	def _process_paper(self, content, dataset_weight=None):
 		samples = []
 
 		offset = len(content["metadata"]["title"]) + 1
