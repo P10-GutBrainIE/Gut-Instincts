@@ -145,12 +145,7 @@ def training(config):
 		)
 
 		model.eval()
-		metrics = compute_metrics(
-			model=model,
-			model_name=config["model_name"],
-			model_type=config["model_type"],
-			remove_html=config["remove_html"],
-		)
+		metrics = compute_metrics(model, config)
 		print_metrics(metrics)
 		mlflow.log_metrics(metrics, step=epoch)
 

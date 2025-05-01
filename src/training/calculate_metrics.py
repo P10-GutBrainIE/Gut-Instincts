@@ -4,7 +4,7 @@ from inference.ner_inference import NERInference
 from utils.utils import load_entity_labels, load_relation_labels, load_json_data
 
 
-def compute_metrics(model, model_name, model_type, remove_html, config):
+def compute_metrics(model, config):
 	if config["model_type"] == "re":
 		re_inference = REInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
@@ -31,10 +31,10 @@ def compute_metrics(model, model_name, model_type, remove_html, config):
 	else:
 		ner_inference = NERInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			model_name=model_name,
-			model_type=model_type,
+			model_name=config["model_name"],
+			model_type=config["model_type"],
 			validation_model=model,
-			remove_html=remove_html,
+			remove_html=config["remove_html"],
 		)
 
 		inference_results = ner_inference.perform_inference()
