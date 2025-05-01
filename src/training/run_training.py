@@ -16,7 +16,7 @@ sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
 
 
-def build_model(config, label_list, id2label, label2id):
+def build_model(config, label_list=None, id2label=None, label2id=None):
 	if config["model_type"] == "huggingface":
 		from architectures.hf_token_classifier import HFTokenClassifier
 
@@ -63,8 +63,9 @@ def training(config):
 
 	if config["model_type"] != "re":
 		label_list, label2id, id2label = load_bio_labels()
-
-	model = build_model(config, label_list, id2label, label2id)
+		model = build_model(config, label_list, id2label, label2id)
+	else:
+		model = build_model(config)
 
 	freeze_epochs = config["hyperparameters"]["freeze_epochs"]
 	if freeze_epochs > 0:
