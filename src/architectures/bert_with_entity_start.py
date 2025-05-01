@@ -65,7 +65,7 @@ class BertForREWithEntityStart(nn.Module):
 				probs = torch.sigmoid(logits).squeeze(-1)
 				prediction = (probs >= 0.5).long()
 			else:
-				prediction = torch.argmax(logits, dim=-1).squeeze()
+				prediction = torch.argmax(logits, dim=-1).item()
 
 		return prediction
 
