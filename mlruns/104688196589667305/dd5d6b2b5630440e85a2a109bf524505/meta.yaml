@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/dd5d6b2b5630440e85a2a109bf524505/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: dd5d6b2b5630440e85a2a109bf524505
+run_name: angry-foal-679
+run_uuid: dd5d6b2b5630440e85a2a109bf524505
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745876781646
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

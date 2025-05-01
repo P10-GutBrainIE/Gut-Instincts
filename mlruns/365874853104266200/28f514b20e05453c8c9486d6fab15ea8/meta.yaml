@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/365874853104266200/28f514b20e05453c8c9486d6fab15ea8/artifacts
+end_time: 1745752093462
+entry_point_name: ''
+experiment_id: '365874853104266200'
+lifecycle_stage: active
+run_id: 28f514b20e05453c8c9486d6fab15ea8
+run_name: dapper-mouse-647
+run_uuid: 28f514b20e05453c8c9486d6fab15ea8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750838445
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

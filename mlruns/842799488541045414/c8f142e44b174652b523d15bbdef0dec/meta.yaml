@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/842799488541045414/c8f142e44b174652b523d15bbdef0dec/artifacts
+end_time: 1745750468666
+entry_point_name: ''
+experiment_id: '842799488541045414'
+lifecycle_stage: active
+run_id: c8f142e44b174652b523d15bbdef0dec
+run_name: persistent-flea-396
+run_uuid: c8f142e44b174652b523d15bbdef0dec
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745746949603
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/e192bbc36fba46e88333cfbce2e2ac09/artifacts
+end_time: 1745876982503
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: e192bbc36fba46e88333cfbce2e2ac09
+run_name: wistful-bear-448
+run_uuid: e192bbc36fba46e88333cfbce2e2ac09
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745876979128
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

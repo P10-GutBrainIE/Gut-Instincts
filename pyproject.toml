@@ -19,6 +19,7 @@ dependencies = [
     "pytorch-crf==0.7.2",
     "matplotlib==3.10.1",
     "seaborn==0.13.2",
+    "streamlit==1.45.0",
 ]
 
 [build-system]

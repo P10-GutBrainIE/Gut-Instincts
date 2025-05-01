@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/365874853104266200/a0d758ec0f874a89b24823a25843daee/artifacts
+end_time: 1745752093907
+entry_point_name: ''
+experiment_id: '365874853104266200'
+lifecycle_stage: active
+run_id: a0d758ec0f874a89b24823a25843daee
+run_name: smiling-donkey-357
+run_uuid: a0d758ec0f874a89b24823a25843daee
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750838445
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

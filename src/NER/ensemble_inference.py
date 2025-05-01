@@ -1,20 +1,24 @@
-import os
 import argparse
-import yaml
-from utils.utils import save_json_data
 from collections import Counter, defaultdict
+import os
+import yaml
 from NER.inference import NERInference
+from utils.utils import save_json_data, make_dataset_dir_name
 
 
 def load_model_predictions(config):
 	predictions_per_model = []
 	for config_path in config["model_configs"]:
 		with open(config_path, "r") as f:
-			model_config = yaml.safe_load(f)
+			config = yaml.safe_load(f)
 
+		dataset_dir_name = make_dataset_dir_name(config)
 		ner_inference = NERInference(
-			config["test_data_path"],
-			model_name_path=os.path.join("models", f"{model_config['experiment_name']}"),
+			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
+			model_name=config["model_name"],
+			model_type=config["model_type"],
+			remove_html=config["remove_html"],
 		)
 
 		predictions_per_model.append(ner_inference.perform_inference())

@@ -1,0 +1,6 @@
+artifact_location: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/570580085253826681
+creation_time: 1745744928140
+experiment_id: '570580085253826681'
+last_update_time: 1745744928140
+lifecycle_stage: active
+name: BiomedElectra-large-uncased-abstract

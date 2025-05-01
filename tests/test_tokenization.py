@@ -5,7 +5,7 @@ from preprocessing.tokenization import BIOTokenizer
 from utils.utils import load_json_data, load_bio_labels
 
 MAX_LENGTH = 32
-TOKENIZER_MODEL = "michiyasunaga/BioLinkBERT-large"
+TOKENIZER_MODEL = "michiyasunaga/BioLinkBERT-base"
 
 
 @pytest.fixture

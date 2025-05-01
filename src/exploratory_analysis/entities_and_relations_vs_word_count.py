@@ -30,7 +30,8 @@ def extract_data(file_paths: str) -> pd.DataFrame:
 
 
 def entities_and_relations_vs_word_count(
-	df: pd.DataFrame, save_path: str = os.path.join("plots", "entities_and_relations_vs_word_count.pdf")
+	df: pd.DataFrame,
+	save_path: str = os.path.join("plots", "exploratory_analysis", "entities_and_relations_vs_word_count.pdf"),
 ):
 	sns.set_theme(style="ticks")
 	_, axes = plt.subplots(1, 2, figsize=(14, 7))
@@ -74,12 +75,12 @@ def entities_and_relations_vs_word_count(
 
 	sns.despine()
 	plt.tight_layout(pad=1.3)
-	os.makedirs("plots", exist_ok=True)
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
 	plt.savefig(save_path, format="pdf")
 	plt.close()
 
 
-def create_pairplot(df: pd.DataFrame, save_path: str = os.path.join("plots", "pairplot.pdf")):
+def create_pairplot(df: pd.DataFrame, save_path: str = os.path.join("plots", "exploratory_analysis", "pairplot.pdf")):
 	"""
 	Create a pairplot for the variables 'entities', 'relations', and 'paper_length'.
 	Colors the points by the 'quality' column.
@@ -92,7 +93,7 @@ def create_pairplot(df: pd.DataFrame, save_path: str = os.path.join("plots", "pa
 		df, hue="quality", palette=palette, vars=["entities", "relations", "paper_length"], markers=["o", "s", "D"]
 	)
 
-	os.makedirs("plots", exist_ok=True)
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
 	plt.savefig(save_path, format="pdf")
 	plt.close()
 

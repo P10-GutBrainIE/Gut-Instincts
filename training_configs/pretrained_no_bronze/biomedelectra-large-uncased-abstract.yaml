@@ -1,0 +1,21 @@
+experiment_name: "BiomedElectra-large-uncased-abstract"
+model_type: "huggingface"
+model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+remove_html: False
+find_optimal_lr: False
+weighted_training: False
+hyperparameters:
+  num_epochs: 23
+  batch_size: 16
+  lr_scheduler:
+    learning_rate: 0.00002
+    method: "custom"
+    custom_schedule:
+    - [0, 2, 1]
+    - [3, 12, 4]
+    step_size: 2
+    gamma: 0.8

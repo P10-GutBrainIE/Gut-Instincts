@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/e1a7e2fb79f04cf1acec1bd0a6c4fe09/artifacts
+end_time: 1745740749056
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: e1a7e2fb79f04cf1acec1bd0a6c4fe09
+run_name: melodic-cat-495
+run_uuid: e1a7e2fb79f04cf1acec1bd0a6c4fe09
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738830664
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

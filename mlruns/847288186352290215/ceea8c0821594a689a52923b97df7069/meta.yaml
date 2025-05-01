@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/847288186352290215/ceea8c0821594a689a52923b97df7069/artifacts
+end_time: 1745746185302
+entry_point_name: ''
+experiment_id: '847288186352290215'
+lifecycle_stage: active
+run_id: ceea8c0821594a689a52923b97df7069
+run_name: rambunctious-rat-883
+run_uuid: ceea8c0821594a689a52923b97df7069
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745744929110
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

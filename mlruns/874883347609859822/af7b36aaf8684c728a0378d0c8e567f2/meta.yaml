@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/af7b36aaf8684c728a0378d0c8e567f2/artifacts
+end_time: 1745740683175
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: af7b36aaf8684c728a0378d0c8e567f2
+run_name: gentle-bear-105
+run_uuid: af7b36aaf8684c728a0378d0c8e567f2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738709220
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

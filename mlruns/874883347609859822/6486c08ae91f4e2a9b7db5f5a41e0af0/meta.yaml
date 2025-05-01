@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/6486c08ae91f4e2a9b7db5f5a41e0af0/artifacts
+end_time: 1745740619979
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 6486c08ae91f4e2a9b7db5f5a41e0af0
+run_name: sedate-lark-802
+run_uuid: 6486c08ae91f4e2a9b7db5f5a41e0af0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738709062
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

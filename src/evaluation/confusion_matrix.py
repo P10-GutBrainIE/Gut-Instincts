@@ -1,22 +1,15 @@
+import argparse
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
-from sklearn.metrics import confusion_matrix
-from utils.utils import load_json_data, load_entity_labels
+import yaml
+from sklearn.metrics import confusion_matrix, classification_report
+from utils.utils import load_json_data, load_entity_labels, make_dataset_dir_name
 
 
 def compare_classes(test_data, inference_data):
-	"""
-	Compare the entities between data and test_data based on start_idx and end_idx.
-
-	Args:
-	    data (dict): Dictionary containing the ground truth data.
-	    test_data (dict): Dictionary containing the predicted data.
-
-	Returns:
-	    tuple: Two lists containing the true labels and predicted labels.
-	"""
 	true_labels = []
 	pred_labels = []
 
@@ -47,26 +40,20 @@ def compare_classes(test_data, inference_data):
 	return true_labels, pred_labels
 
 
-def plot_confusion_matrix(y_test, y_pred, target_names):
-	"""
-	Plot a confusion matrix with a blue gradient for correct predictions (diagonal)
-	and a red gradient for wrong predictions (off-diagonal).
-
-	Args:
-	    y_test (list): List of true labels.
-	    y_pred (list): List of predicted labels.
-	    target_names (list): List of target names for the labels.
-	"""
-	cm = confusion_matrix(y_test, y_pred, labels=target_names, normalize="pred")
+def plot_confusion_matrix(
+	y_test, y_pred, target_names, save_path=os.path.join("plots", "confusion_matrices", "confusion_matrix.pdf")
+):
+	cm = confusion_matrix(y_test, y_pred, labels=target_names)
 	mask_diag = np.eye(cm.shape[0], dtype=bool)
 	mask_off_diag = ~mask_diag
 
-	_, ax = plt.subplots(figsize=(10, 10))
+	fig, ax = plt.subplots(figsize=(12, 10))
 
 	sns.heatmap(
 		cm,
 		mask=mask_diag,
 		annot=True,
+		fmt="d",
 		cmap="Reds",
 		cbar=False,
 		ax=ax,
@@ -76,11 +63,11 @@ def plot_confusion_matrix(y_test, y_pred, target_names):
 		linecolor="gray",
 		square=True,
 	)
-
 	sns.heatmap(
 		cm,
 		mask=mask_off_diag,
 		annot=True,
+		fmt="d",
 		cmap="Blues",
 		cbar=False,
 		ax=ax,
@@ -93,24 +80,75 @@ def plot_confusion_matrix(y_test, y_pred, target_names):
 
 	ax.set_xlabel("Predicted Label", fontsize=18)
 	ax.set_ylabel("True Label", fontsize=18)
-
 	ax.tick_params(axis="both", which="major", labelsize=14)
 	plt.xticks(rotation=45, ha="right", fontsize=14)
 	plt.yticks(rotation=0, fontsize=14)
-
 	plt.tight_layout()
 
-	os.makedirs("plots", exist_ok=True)
-	plt.savefig(os.path.join("plots", "confusion_matrix.pdf"), format="pdf")
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
+	plt.savefig(save_path, format="pdf")
+	plt.close()
+
+
+def plot_classification_report(
+	y_test, y_pred, target_names, save_path=os.path.join("plots", "confusion_matrices", "classification_report.pdf")
+):
+	report_dict = classification_report(
+		y_test, y_pred, labels=target_names, target_names=target_names, output_dict=True, zero_division=0
+	)
+
+	per_label = {k: v for k, v in report_dict.items() if k in target_names}
+	df = pd.DataFrame(per_label).T[["precision", "recall", "f1-score", "support"]]
+
+	df[["precision", "recall", "f1-score"]] = df[["precision", "recall", "f1-score"]].astype(float).round(4)
+	df["support"] = df["support"].astype(int)
+
+	_, ax = plt.subplots(figsize=(len(target_names) * 0.8 + 2, len(target_names) * 0.4 + 2))
+	ax.axis("off")
+	tbl = ax.table(
+		cellText=df.values, rowLabels=df.index, colLabels=df.columns, cellLoc="center", rowLoc="center", loc="center"
+	)
+	tbl.auto_set_font_size(False)
+	tbl.set_fontsize(12)
+	tbl.scale(1.4, 1.2)
+	plt.title("Per-label Classification Metrics", fontsize=16, pad=20)
+	plt.tight_layout()
+
+	os.makedirs(os.path.dirname(save_path), exist_ok=True)
+	plt.savefig(save_path, format="pdf")
 	plt.close()
 
 
 if __name__ == "__main__":
-	inference_results = load_json_data(os.path.join("data_inference_results", "ner.json"))
+	parser = argparse.ArgumentParser(description="Create confusion matrix")
+	parser.add_argument("--config", type=str, required=True, help="Path to the training config YAML file")
+	args = parser.parse_args()
+
+	with open(args.config, "r") as file:
+		config = yaml.safe_load(file)
+
+	dataset_dir_name = make_dataset_dir_name(config)
+
+	inference_results = load_json_data(
+		os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json")
+	)
 	test_data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 
 	true_labels, pred_labels = compare_classes(
 		test_data=test_data,
 		inference_data=inference_results,
 	)
-	plot_confusion_matrix(y_test=true_labels, y_pred=pred_labels, target_names=load_entity_labels())
+	plot_confusion_matrix(
+		y_test=true_labels,
+		y_pred=pred_labels,
+		target_names=load_entity_labels(),
+		save_path=os.path.join("plots", "confusion_matrices", f"{config['experiment_name']}_{dataset_dir_name}.pdf"),
+	)
+	plot_classification_report(
+		y_test=true_labels,
+		y_pred=pred_labels,
+		target_names=load_entity_labels(),
+		save_path=os.path.join(
+			"plots", "confusion_matrices", f"{config['experiment_name']}_{dataset_dir_name}_metrics.pdf"
+		),
+	)

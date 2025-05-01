@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/00fcb92c4a3f4f1a8d04c648b7922fa9/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 00fcb92c4a3f4f1a8d04c648b7922fa9
+run_name: bald-seal-814
+run_uuid: 00fcb92c4a3f4f1a8d04c648b7922fa9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745876780728
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

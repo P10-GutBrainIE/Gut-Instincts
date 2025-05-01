@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/570580085253826681/f5a130d3e79e4926a654bd6df64520ad/artifacts
+end_time: 1745755348978
+entry_point_name: ''
+experiment_id: '570580085253826681'
+lifecycle_stage: active
+run_id: f5a130d3e79e4926a654bd6df64520ad
+run_name: treasured-tern-414
+run_uuid: f5a130d3e79e4926a654bd6df64520ad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750838445
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

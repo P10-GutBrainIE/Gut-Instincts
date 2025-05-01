@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/570580085253826681/a2e54d08c4c14ed48733df1d2f2fe491/artifacts
+end_time: 1745750440306
+entry_point_name: ''
+experiment_id: '570580085253826681'
+lifecycle_stage: active
+run_id: a2e54d08c4c14ed48733df1d2f2fe491
+run_name: burly-fish-401
+run_uuid: a2e54d08c4c14ed48733df1d2f2fe491
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745746948599
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

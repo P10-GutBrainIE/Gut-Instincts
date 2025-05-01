@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/2aa5a9f9f08b40c39387afbf8f3b2338/artifacts
+end_time: 1745740740081
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 2aa5a9f9f08b40c39387afbf8f3b2338
+run_name: sneaky-ram-446
+run_uuid: 2aa5a9f9f08b40c39387afbf8f3b2338
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738831958
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

@@ -13,17 +13,19 @@ dataset_weights: # Weights for weighted training. Has to correspond to the datas
 - 1.2
 - 1.0
 - 0.33
+find_optimal_lr: True # If True, a learning rate finder is run instead of training.
 hyperparameters:
   num_epochs: 25 # Total number of full passes over the dataset.
   batch_size: 16 # Number of samples processed in one forward/backward pass.
   freeze_epochs: 0 # Number of epochs to freeze part of the model (e.g. embeddings + bottom layers).
   lr_scheduler:
-    method: "cosine annealing"  # Name of the scheduling strategy for adjusting the learning rate.
+    learning_rate: 0.0001 # Initial learning rate at the start of training.
+    method: "custom" # Name of the scheduling strategy for adjusting the learning rate.
     # Supported values:
     # - "cosine annealing"     → smooth decay using cosine curve.
     # - "reduce on plateau"    → reduce LR if validation metric stops improving.
+    # - "one cycle"            → dynamic warmup, peak, and decay in a single cycle.
     # - "custom"               → fully custom LR schedule.
-    learning_rate: 0.0001 # Initial learning rate at the start of training.
 
     # ↓ Fields required by specific methods ↓
 
@@ -35,6 +37,13 @@ hyperparameters:
     # factor: Factor by which the LR will be reduced.
     # patience: Number of epochs to wait before reducing LR.
     # threshold: Threshold for measuring new optimum, to ignore small improvements.
+
+    # For 'one cycle':
+    # max_learning_rate: The peak learning rate during the cycle.
+    # pct_start: Fraction of the cycle spent increasing LR (default: 0.3).
+    # anneal_strategy: Strategy to decay LR ("cos" for cosine, "linear" for linear).
+    # div_factor: Initial LR is max_lr / div_factor (default: 25).
+    # final_div_factor: Final LR is max_lr / final_div_factor (default: 1e4).
 
     # For 'custom':
     # LambdaLR for warmup and decay.

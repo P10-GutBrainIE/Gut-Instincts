@@ -1,0 +1,6 @@
+artifact_location: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/842799488541045414
+creation_time: 1745744933513
+experiment_id: '842799488541045414'
+last_update_time: 1745744933513
+lifecycle_stage: active
+name: BiomedBERT-large-uncased-abstract

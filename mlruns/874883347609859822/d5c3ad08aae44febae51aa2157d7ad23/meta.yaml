@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/d5c3ad08aae44febae51aa2157d7ad23/artifacts
+end_time: 1745751611152
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: d5c3ad08aae44febae51aa2157d7ad23
+run_name: enchanting-bear-702
+run_uuid: d5c3ad08aae44febae51aa2157d7ad23
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745750905107
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

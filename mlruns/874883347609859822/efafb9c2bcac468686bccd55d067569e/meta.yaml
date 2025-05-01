@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/efafb9c2bcac468686bccd55d067569e/artifacts
+end_time: 1745740631616
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: efafb9c2bcac468686bccd55d067569e
+run_name: dazzling-calf-514
+run_uuid: efafb9c2bcac468686bccd55d067569e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745738706860
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

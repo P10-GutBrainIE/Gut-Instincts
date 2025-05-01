@@ -1,59 +1,79 @@
 # Gut-Instincts
-This repo contains the submission of the group Gut-Instincts in the [GutBrainIE CLEF 2025 challenge](https://hereditary.dei.unipd.it/challenges/gutbrainie/2025/), part of the BioASQ CLEF Lab 2025. The challenge focuses on extracting structured information from biomedical abstracts related to the gut microbiota and its connections with Parkinson's disease and mental health. The goal is to develop Information Extraction (IE) systems to support experts in understanding the gut-brain interplay.
+This repo contains the submission of the group **Gut-Instincts** in the [GutBrainIE CLEF 2025 challenge](https://hereditary.dei.unipd.it/challenges/gutbrainie/2025/), part of the BioASQ CLEF Lab 2025. The challenge focuses on extracting structured information from biomedical abstracts related to the gut microbiota and its connections with Parkinson's disease and mental health. The goal is to develop Information Extraction (IE) systems to support experts in understanding the gut-brain interplay.
 
 The challenge is divided into two main subtasks:
 1. Named Entity Recognition (NER): Identifying and classifying specific text spans into predefined categories.
 2. Relation Extraction (RE): Determining if a particular relationship between two categories holds.
 
-The training data includes highly curated datasets manually annotated by experts and students, as well as automatically generated annotations. The test set consists of titles and abstracts from the gold and platinum collections.
-
 ## Table of Contents
+- [Reproducibility](#reproducibility)
+  - [Notes](#notes)
 - [Setup](#setup)
   - [Virtual Environment](#virtual-environment)
   - [Installing Dependencies](#installing-dependencies)
-  - [Adding Hugging Face Token](#adding-hugging-face-token)
-  - [Code Formatting](#code-formatting)
-- [Structure](#structure)
 - [License](#license)
 
-## Setup
-### Virtual Environment
-You can optionally create a virtual environment before installing any dependencies. This helps keep the project dependencies isolated and avoids conflicts with other projects.
+## Reproducibility
+To reproduce our results, follow these steps:
+1. **Download the Data:** 
 
-On Windows, to create the virtual environment, run:
+The official challenge data is not included in this repository. Download the data and place the data in the `data/` directory, preserving the original folder structure.
+
+2. **Prepare the Environment**
+
+Follow the guide in [Setup](#setup) to create an environment, activate the envirnoment, and install all dependencies.
+
+3. **Train the Models**
+
+Run the training for the NER model:
+```bash
+
 ```
+Run the training for the RE model:
+```bash
+
+```
+
+4. **Reproduce Submission Files**
+To generate prediction files in the format required by the challenge for final submission, use:
+```bash
+
+```
+Check the `submission_results/` directory for the output files.
+
+### Notes
+- All training was conducted on a computational cluster with GPU resources. Training on local machines may take significantly longer or may not be feasible depending on hardware.
+- If you encounter issues with missing packages, ensure your environment matches the versions specified in `pyproject.toml`.
+
+## Setup
+
+### Virtual Environment
+
+It is recommended to use a virtual environment to avoid dependency conflicts.
+
+**Windows:**
+```bash
 python -m venv env
-```
-On Linux:
-```
-python3 -m venv env
-```
-On Windows, use the following command to activate the environment:
-```
 env\Scripts\activate
 ```
-On Linux:
-```
+
+**Linux/MacOS:**
+```bash
+python3 -m venv env
 source env/bin/activate
 ```
-To deactivate the environment, use the following command:
-```
+
+To deactivate the environment:
+```bash
 deactivate
 ```
+
 ### Installing Dependencies
-To install the necessary dependencies for the project (as specified in pyproject.toml), run:
-```
+
+Install the necessary dependencies as specified in `pyproject.toml`:
+```bash
 pip install -e .
 ```
-### Adding Hugging Face Token
-To use the Hugging Face API, you need to add your Hugging Face token to a `.env` file in the root directory of the project. Create a `.env` file and add the following line:
-```
-HUGGING_FACE_TOKEN=your_hugging_face_token
-```
-### Code Formatting
-The project is set up to use Ruff as the formatter and linter. Install the Ruff extension in VS Code, and use the shorcut `Alt + Shift + F` to run the formatter in a specfiic file.
-
-## Structure
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

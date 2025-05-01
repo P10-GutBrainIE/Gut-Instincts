@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/570580085253826681/e9b3d9c387d54e5189b8f6b8cf773f37/artifacts
+end_time: 1745750489349
+entry_point_name: ''
+experiment_id: '570580085253826681'
+lifecycle_stage: active
+run_id: e9b3d9c387d54e5189b8f6b8cf773f37
+run_name: merciful-hare-556
+run_uuid: e9b3d9c387d54e5189b8f6b8cf773f37
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745746948436
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

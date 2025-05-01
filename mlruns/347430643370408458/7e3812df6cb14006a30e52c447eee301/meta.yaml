@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/347430643370408458/7e3812df6cb14006a30e52c447eee301/artifacts
+end_time: 1745750567666
+entry_point_name: ''
+experiment_id: '347430643370408458'
+lifecycle_stage: active
+run_id: 7e3812df6cb14006a30e52c447eee301
+run_name: abrasive-mouse-165
+run_uuid: 7e3812df6cb14006a30e52c447eee301
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745746942690
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
