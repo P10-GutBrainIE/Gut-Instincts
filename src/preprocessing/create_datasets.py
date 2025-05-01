@@ -36,7 +36,7 @@ def create_training_dataset(
 	    remove_html (bool): Whether to remove HTML tags from the datasets.
 	"""
 	save_data_path = os.path.join(task_name, experiment_name, dataset_dir_name, "training.pkl")
-	if save_data_path:
+	if os.path.exists(save_data_path):
 		print(
 			f"Training dataset already exists at {experiment_name, task_name, dataset_dir_name, 'training.pkl'}. Skipping create_training_dataset()."
 		)
