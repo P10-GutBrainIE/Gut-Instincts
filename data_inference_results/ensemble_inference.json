@@ -133,16 +133,9 @@
         "entities": [
             {
                 "start_idx": 34,
-                "end_idx": 41,
-                "location": "title",
-                "text_span": "Clinical",
-                "label": "DDF"
-            },
-            {
-                "start_idx": 43,
                 "end_idx": 70,
                 "location": "title",
-                "text_span": "Parkinson's Disease Subtypes",
+                "text_span": "Clinical Parkinson's Disease Subtypes",
                 "label": "DDF"
             },
             {
@@ -150,13 +143,6 @@
                 "end_idx": 18,
                 "location": "abstract",
                 "text_span": "Parkinson's disease",
-                "label": "DDF"
-            },
-            {
-                "start_idx": 39,
-                "end_idx": 64,
-                "location": "abstract",
-                "text_span": "neurodegenerative disorder",
                 "label": "DDF"
             },
             {
@@ -311,6 +297,13 @@
                 "end_idx": 1580,
                 "location": "abstract",
                 "text_span": "AR",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 39,
+                "end_idx": 64,
+                "location": "abstract",
+                "text_span": "neurodegenerative disorder",
                 "label": "DDF"
             }
         ]
@@ -3363,16 +3356,9 @@
             },
             {
                 "start_idx": 587,
-                "end_idx": 593,
-                "location": "abstract",
-                "text_span": "anxiety",
-                "label": "DDF"
-            },
-            {
-                "start_idx": 595,
                 "end_idx": 604,
                 "location": "abstract",
-                "text_span": "depression",
+                "text_span": "anxiety/depression",
                 "label": "DDF"
             },
             {
@@ -6015,6 +6001,13 @@
                 "label": "microbiome"
             },
             {
+                "start_idx": 580,
+                "end_idx": 595,
+                "location": "abstract",
+                "text_span": "healthy subjects",
+                "label": "human"
+            },
+            {
                 "start_idx": 667,
                 "end_idx": 675,
                 "location": "abstract",
@@ -6090,13 +6083,6 @@
                 "location": "abstract",
                 "text_span": "neurotransmitters",
                 "label": "chemical"
-            },
-            {
-                "start_idx": 580,
-                "end_idx": 595,
-                "location": "abstract",
-                "text_span": "healthy subjects",
-                "label": "human"
             },
             {
                 "start_idx": 724,

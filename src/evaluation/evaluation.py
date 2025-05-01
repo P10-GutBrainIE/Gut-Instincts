@@ -4,7 +4,7 @@ import argparse
 import yaml
 from utils.utils import make_dataset_dir_name
 
-ENSEMBLE_PREDICTION_PATH = os.path.join("data_inference_results", "ensemble", "majority.majority.json")
+ENSEMBLE_PREDICTION_PATH = os.path.join("data_inference_results", "ensemble_inference.json")
 
 if not ENSEMBLE_PREDICTION_PATH:
 	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")

@@ -303,7 +303,6 @@ class NERInference:
 				word = token_prediction["word"].replace("##", "")
 
 			if prefix == "B" and prev_entity_type != token_prediction["entity"]:
-				prev_entity_type = token_prediction["entity"]
 				if current_entity:
 					merged.append(current_entity)
 				current_entity = {
@@ -317,11 +316,11 @@ class NERInference:
 				current_entity, skip = self._process_lookahead(
 					token_predictions[i + 1 : i + 10], i, current_entity, self.model_name
 				)
+				prev_entity_type = token_prediction["entity"]
 				if skip:
 					continue
 
 			elif prefix == "I" or prev_entity_type == token_prediction["entity"]:
-				prev_entity_type = token_prediction["entity"]
 				if (
 					current_entity
 					and current_entity["label"] == label
@@ -342,6 +341,7 @@ class NERInference:
 						"text_span": word,
 						"label": label,
 					}
+				prev_entity_type = token_prediction["entity"]
 
 		if current_entity:
 			merged.append(current_entity)
