@@ -67,7 +67,7 @@ class REInference:
 			return result
 
 	def _re_pipeline(self, content):
-		predictions = set()
+		predictions = []
 
 		offset = len(content["metadata"]["title"]) + 1
 		full_text = f"{content['metadata']['title']} {content['metadata']['abstract']}"
@@ -97,24 +97,41 @@ class REInference:
 			prediction = self.model.predict(input_ids=input_ids, attention_mask=attention_mask)
 			if self.subtask == "6.2.1":
 				if prediction:
-					predictions.add({"subject_label": subject["label"], "object_label": object["label"]})
+					if {"subject_label": subject["label"], "object_label": object["label"]} not in predictions:
+						predictions.append({"subject_label": subject["label"], "object_label": object["label"]})
 			elif self.subtask in ["6.2.2", "6.2.3"]:
 				predicate = self.id2label[prediction]
 				if predicate != "no relation":
 					if self.subtask == "6.2.2":
-						predictions.add(
-							{"subject_label": subject["label"], "predicate": predicate, "object_label": object["label"]}
-						)
+						if {
+							"subject_label": subject["label"],
+							"predicate": predicate,
+							"object_label": object["label"],
+						} not in predictions:
+							predictions.append(
+								{
+									"subject_label": subject["label"],
+									"predicate": predicate,
+									"object_label": object["label"],
+								}
+							)
 					elif self.subtask == "6.2.3":
-						predictions.add(
-							{
-								"subject_text_span": subject["text_span"],
-								"subject_label": subject["label"],
-								"predicate": predicate,
-								"object_text_span": object["text_span"],
-								"object_label": object["label"],
-							}
-						)
+						if {
+							"subject_text_span": subject["text_span"],
+							"subject_label": subject["label"],
+							"predicate": predicate,
+							"object_text_span": object["text_span"],
+							"object_label": object["label"],
+						} not in predictions:
+							predictions.add(
+								{
+									"subject_text_span": subject["text_span"],
+									"subject_label": subject["label"],
+									"predicate": predicate,
+									"object_text_span": object["text_span"],
+									"object_label": object["label"],
+								}
+							)
 
 		return list(predictions)
 
