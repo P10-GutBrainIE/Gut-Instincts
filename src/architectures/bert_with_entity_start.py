@@ -44,8 +44,12 @@ class BertForREWithEntityStart(nn.Module):
 		# Compute loss if labels provided
 		loss = None
 		if labels is not None:
-			loss_fct = nn.CrossEntropyLoss()
-			loss = loss_fct(logits, labels)
+			if self.subtask == "6.2.1":
+				loss_fct = nn.BCEWithLogitsLoss()
+				loss = loss_fct(logits.squeeze(-1), labels.float())
+			else:
+				loss_fct = nn.CrossEntropyLoss()
+				loss = loss_fct(logits, labels)
 
 		return {"loss": loss, "logits": logits}
 
@@ -55,7 +59,6 @@ class BertForREWithEntityStart(nn.Module):
 			outputs = self.forward(
 				input_ids=input_ids,
 				attention_mask=attention_mask,
-				return_dict=True,
 			)
 			logits = outputs.logits
 			if self.subtask == "6.2.1":

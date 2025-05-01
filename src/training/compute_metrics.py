@@ -136,14 +136,12 @@ def NER_evaluation(predictions):
 	return precision, recall, f1, micro_precision, micro_recall, micro_f1
 
 
-def RE_evaluation_subtask_621(predictions, ground_truth_path="data/Annotations/Dev/json_format/dev.json"):
-	from utils.utils import load_json_data
-
+def RE_evaluation_subtask_621(predictions):
 	ground_truth_binary_tag_RE = dict()
 	count_annotated_relations_per_label = {}
 
 	# Load ground truth
-	ground_truth = load_json_data(file_path=ground_truth_path)
+	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 
 	# Dynamically extract legal entity labels from ground truth
 	legal_entity_labels = set()
