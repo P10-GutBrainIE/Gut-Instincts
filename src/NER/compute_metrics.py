@@ -68,12 +68,11 @@ def compute_evaluation_metrics(model, config, dataset_dir_name):
 			validation_model=model,
 			subtask=config["subtask"],
 			experiment_name=config["experiment_name"],
-			dataset_dir_name=dataset_dir_name
+			dataset_dir_name=dataset_dir_name,
 		)
 		inference_results = re_inference.perform_inference()
 
-		save_json_data(inference_results, os.path.join("data_preprocessed", "re_inference_results.json"))	
-
+		save_json_data(inference_results, os.path.join("data_preprocessed", "re_inference_results.json"))
 
 		if config["subtask"] == "6.2.1":
 			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
@@ -206,85 +205,89 @@ def NER_evaluation(predictions):
 	return precision, recall, f1, micro_precision, micro_recall, micro_f1
 
 
-def RE_evaluation_subtask_621(predictions):
-	ground_truth_binary_tag_RE = dict()
-	count_annotated_relations_per_label = {}
-	entity_labels = load_entity_labels()[1:]
-	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
+def RE_evaluation_subtask_621(predictions, ground_truth_path="data/Annotations/Dev/json_format/dev.json"):
+    from utils.utils import load_json_data
 
-	for pmid, article in ground_truth.items():
-		if pmid not in ground_truth_binary_tag_RE:
-			ground_truth_binary_tag_RE[pmid] = []
-		for relation in article["binary_tag_based_relations"]:
-			subject_label = str(relation["subject_label"])
-			object_label = str(relation["object_label"])
+    ground_truth_binary_tag_RE = dict()
+    count_annotated_relations_per_label = {}
 
-			label = (subject_label, object_label)
-			ground_truth_binary_tag_RE[pmid].append(label)
+    # Load ground truth
+    ground_truth = load_json_data(file_path=ground_truth_path)
 
-			if label not in count_annotated_relations_per_label:
-				count_annotated_relations_per_label[label] = 0
-			count_annotated_relations_per_label[label] += 1
+    # Dynamically extract legal entity labels from ground truth
+    legal_entity_labels = set()
+    for article in ground_truth.values():
+        for ent in article["entities"]:
+            legal_entity_labels.add(ent["label"])
 
-	count_predicted_relations_per_label = {label: 0 for label in list(count_annotated_relations_per_label.keys())}
-	count_true_positives_per_label = {label: 0 for label in list(count_annotated_relations_per_label.keys())}
+    # Build ground truth label counts (deduplicated per paper)
+    for pmid, article in ground_truth.items():
+        ground_truth_binary_tag_RE[pmid] = set()
+        for relation in article["binary_tag_based_relations"]:
+            subj, obj = relation["subject_label"], relation["object_label"]
+            ground_truth_binary_tag_RE[pmid].add((subj, obj))
 
-	for pmid in predictions.keys():
-		try:
-			relations = predictions[pmid]["binary_tag_based_relations"]
-		except KeyError:
-			raise KeyError(f'{pmid} - Not able to find field "binary_tag_based_relations" within article')
+    # Flatten to count total GT
+    for labels in ground_truth_binary_tag_RE.values():
+        for label in labels:
+            count_annotated_relations_per_label[label] = count_annotated_relations_per_label.get(label, 0) + 1
 
-		for relation in relations:
-			try:
-				subject_label = str(relation["subject_label"])
-				object_label = str(relation["object_label"])
-			except KeyError:
-				raise KeyError(f"{pmid} - Not able to find one or more of the expected fields for relation: {relation}")
+    # Initialize counters
+    count_predicted_relations_per_label = {label: 0 for label in count_annotated_relations_per_label}
+    count_true_positives_per_label = {label: 0 for label in count_annotated_relations_per_label}
 
-			if subject_label not in entity_labels:
-				raise NameError(f"{pmid} - Illegal subject entity label {subject_label} for relation: {relation}")
+    for pmid, article_preds in predictions.items():
+        seen_pred_labels = set()
 
-			if object_label not in entity_labels:
-				raise NameError(f"{pmid} - Illegal object entity label {object_label} for relation: {relation}")
+        try:
+            relations = article_preds["binary_tag_based_relations"]
+        except KeyError:
+            raise KeyError(f'{pmid} - Missing "binary_tag_based_relations" in prediction')
 
-			label = (subject_label, object_label)
-			if label in count_predicted_relations_per_label:
-				count_predicted_relations_per_label[label] += 1
+        for rel in relations:
+            subj = rel["subject_label"]
+            obj = rel["object_label"]
 
-			if label in ground_truth_binary_tag_RE[pmid]:
-				count_true_positives_per_label[label] += 1
+            if subj not in legal_entity_labels or obj not in legal_entity_labels:
+                continue  # Skip invalid
 
-	count_annotated_relations = sum(
-		count_annotated_relations_per_label[label] for label in list(count_annotated_relations_per_label.keys())
-	)
-	count_predicted_relations = sum(
-		count_predicted_relations_per_label[label] for label in list(count_annotated_relations_per_label.keys())
-	)
-	count_true_positives = sum(
-		count_true_positives_per_label[label] for label in list(count_annotated_relations_per_label.keys())
-	)
+            label = (subj, obj)
+            if label not in seen_pred_labels:
+                seen_pred_labels.add(label)
 
-	micro_precision = count_true_positives / (count_predicted_relations + 1e-10)
-	micro_recall = count_true_positives / (count_annotated_relations + 1e-10)
-	micro_f1 = 2 * ((micro_precision * micro_recall) / (micro_precision + micro_recall + 1e-10))
+        for label in seen_pred_labels:
+            if label in count_predicted_relations_per_label:
+                count_predicted_relations_per_label[label] += 1
+            if label in ground_truth_binary_tag_RE.get(pmid, set()):
+                count_true_positives_per_label[label] += 1
 
-	precision, recall, f1 = 0, 0, 0
-	n = 0
-	for label in list(count_annotated_relations_per_label.keys()):
-		n += 1
-		current_precision = count_true_positives_per_label[label] / (count_predicted_relations_per_label[label] + 1e-10)
-		current_recall = count_true_positives_per_label[label] / (count_annotated_relations_per_label[label] + 1e-10)
+    # Aggregate counts
+    count_annotated = sum(count_annotated_relations_per_label.values())
+    count_predicted = sum(count_predicted_relations_per_label.values())
+    count_true_pos = sum(count_true_positives_per_label.values())
 
-		precision += current_precision
-		recall += current_recall
-		f1 += 2 * ((current_precision * current_recall) / (current_precision + current_recall + 1e-10))
+    # Micro metrics
+    micro_precision = count_true_pos / (count_predicted + 1e-10)
+    micro_recall = count_true_pos / (count_annotated + 1e-10)
+    micro_f1 = 2 * micro_precision * micro_recall / (micro_precision + micro_recall + 1e-10)
 
-	precision = precision / n
-	recall = recall / n
-	f1 = f1 / n
+    # Macro metrics
+    precision = recall = f1 = 0
+    n = len(count_annotated_relations_per_label)
+    for label in count_annotated_relations_per_label:
+        p = count_true_positives_per_label[label] / (count_predicted_relations_per_label[label] + 1e-10)
+        r = count_true_positives_per_label[label] / (count_annotated_relations_per_label[label] + 1e-10)
+        f = 2 * p * r / (p + r + 1e-10)
+        precision += p
+        recall += r
+        f1 += f
 
-	return precision, recall, f1, micro_precision, micro_recall, micro_f1
+    precision /= n
+    recall /= n
+    f1 /= n
+
+    return precision, recall, f1, micro_precision, micro_recall, micro_f1
+
 
 
 def RE_evaluation_subtask_622(predictions):
@@ -466,3 +469,13 @@ def RE_evaluation_subtask_623(predictions):
 	f1 = f1 / n
 
 	return precision, recall, f1, micro_precision, micro_recall, micro_f1
+
+
+if __name__ == "__main__":
+	predictions = load_json_data(os.path.join("data_preprocessed", "re_inference_results.json"))
+	metrics = RE_evaluation_subtask_621(predictions)
+
+	for name, value in zip(
+		["Precision_macro", "Recall_macro", "F1_macro", "Precision_micro", "Recall_micro", "F1_micro"], metrics
+	):
+		print(f"{name:<25} {value:.4f}")
