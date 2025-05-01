@@ -9,10 +9,10 @@ dataset_qualities: # Specify in this list which qualities of data should be incl
 remove_html: True # Boolean deciding if HTML should be removed from the data
 weighted_training: False # Boolean for if the training data is weighted or not
 dataset_weights: # Weights for weighted training. Has to correspond to the datasets the number and order of datasets in preprocessing/main.py
-- 1.2
-- 1.2
+- 1.5
+- 1.5
 - 1.0
-- 0.33
+- 0.75
 find_optimal_lr: True # If True, a learning rate finder is run instead of training.
 hyperparameters:
   num_epochs: 25 # Total number of full passes over the dataset.
