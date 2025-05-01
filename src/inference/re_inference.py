@@ -143,8 +143,7 @@ class REInference:
 			return_attention_mask=True,
 			truncation=True,
 			padding="max_length",
-			max_length=self.max_length,
-			return_tensors="pt",
+			max_length=512,
 		)
 
 		return encoding["input_ids"], encoding["attention_mask"]
