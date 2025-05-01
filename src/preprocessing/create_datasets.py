@@ -35,7 +35,8 @@ def create_training_dataset(
 	    dataset_weights (list[float]): List of weights for each dataset quality (can be None).
 	    remove_html (bool): Whether to remove HTML tags from the datasets.
 	"""
-	if os.path.join(experiment_name, task_name, dataset_dir_name, "training.pkl"):
+	save_data_path = os.path.join(task_name, experiment_name, dataset_dir_name, "training.pkl")
+	if save_data_path:
 		print(
 			f"Training dataset already exists at {experiment_name, task_name, dataset_dir_name, 'training.pkl'}. Skipping create_training_dataset()."
 		)
@@ -82,7 +83,7 @@ def create_training_dataset(
 		re_tokenizer = RelationTokenizer(
 			datasets=list(datasets.values()),
 			dataset_weights=dataset_weights,
-			save_filename=os.path.join(task_name, experiment_name, dataset_dir_name, "training.pkl"),
+			save_filename=save_data_path,
 			tokenizer=tokenizer,
 			subtask=subtask,
 		)
@@ -91,7 +92,7 @@ def create_training_dataset(
 		bio_tokenizer = BIOTokenizer(
 			datasets=list(datasets.values()),
 			dataset_weights=dataset_weights,
-			save_filename=os.path.join(task_name, experiment_name, task_name, dataset_dir_name, "training.pkl"),
+			save_filename=save_data_path,
 			tokenizer=tokenizer,
 		)
 		bio_tokenizer.process_files()
