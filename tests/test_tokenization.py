@@ -1,7 +1,7 @@
 import os
 import pytest
 from transformers import AutoTokenizer
-from preprocessing.tokenization import BIOTokenizer
+from preprocessing.ner_tokenizer import BIOTokenizer
 from utils.utils import load_json_data, load_bio_labels
 
 MAX_LENGTH = 32

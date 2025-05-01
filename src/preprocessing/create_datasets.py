@@ -2,9 +2,10 @@ import argparse
 import os
 import yaml
 from transformers import AutoTokenizer, AlbertTokenizerFast
+from preprocessing.ner_tokenizer import BIOTokenizer
+from preprocessing.re_tokenizer import RelationTokenizer
 from preprocessing.remove_html import remove_html_tags
 from preprocessing.data_cleanup import clean_incorrect_text_spans, remove_incorrect_text_spans
-from preprocessing.tokenization import BIOTokenizer, RelationTokenizer
 from utils.utils import load_json_data, make_dataset_dir_name
 
 

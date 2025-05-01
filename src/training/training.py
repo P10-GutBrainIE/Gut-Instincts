@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import mlflow
 import torch
 from tqdm import tqdm
-from utils.utils import load_bio_labels, load_relation_labels, load_pkl_data, make_dataset_dir_name, print_metrics
+from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_metrics
 from training.compute_metrics import compute_metrics
 from training.dataset import Dataset
 from training.freezing import freeze_bert, unfreeze_bert
@@ -46,7 +46,7 @@ def build_model(config, label_list, id2label, label2id):
 	elif config["model_type"] == "re":
 		from architectures.bert_with_entity_start import BertForREWithEntityStart
 
-		return BertForREWithEntityStart(model_name=config["model_name"], num_labels=len(label_list))
+		return BertForREWithEntityStart(model_name=config["model_name"], subtask=config["subtask"])
 	else:
 		raise ValueError("Unknown model_type")
 
@@ -61,14 +61,7 @@ def training(config):
 	mlflow.start_run()
 	mlflow.log_params(params=config)
 
-	if config["model_type"] == "re":
-		if config.get("subtask") == "6.2.1":
-			label_list = ["no_relation", "relation"]
-			label2id = {"no_relation": 0, "relation": 1}
-			id2label = {0: "no_relation", 1: "relation"}
-		else:
-			label_list, label2id, id2label = load_relation_labels()
-	else:
+	if config["model_type"] != "re":
 		label_list, label2id, id2label = load_bio_labels()
 
 	model = build_model(config, label_list, id2label, label2id)

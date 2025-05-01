@@ -1,4 +1,3 @@
-import datetime as dt
 import json
 import os
 import pickle
@@ -25,7 +24,10 @@ def load_bio_labels(
 
 	return bio_labels, label2id, id2label
 
-def load_relation_labels(file_path: str = os.path.join("data", "metadata", "predicate_labels.json")) -> tuple[dict, dict]:
+
+def load_relation_labels(
+	file_path: str = os.path.join("data", "metadata", "predicate_labels.json"),
+) -> tuple[dict, dict]:
 	with open(file_path) as f:
 		data = json.load(f)
 		relation_labels = data["relation_labels"]
@@ -33,6 +35,7 @@ def load_relation_labels(file_path: str = os.path.join("data", "metadata", "pred
 		id2label = {i: label for i, label in enumerate(relation_labels)}
 
 	return relation_labels, label2id, id2label
+
 
 def load_entity_labels(file_path: str = os.path.join("data", "metadata", "entity_labels.json")) -> list[str]:
 	"""

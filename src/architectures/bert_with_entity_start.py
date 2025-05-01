@@ -5,7 +5,7 @@ from transformers import AutoModel, AutoTokenizer
 
 
 class BertForREWithEntityStart(nn.Module):
-	def __init__(self, model_name: str, num_labels: int):
+	def __init__(self, model_name: str, subtask: str):
 		super().__init__()
 		self.encoder = AutoModel.from_pretrained(model_name)
 		self.hidden_size = self.encoder.config.hidden_size
@@ -21,7 +21,8 @@ class BertForREWithEntityStart(nn.Module):
 		self.e2_token_id = self.tokenizer.convert_tokens_to_ids("[E2]")
 
 		# Classifier
-		self.classifier = nn.Linear(self.hidden_size * 2, num_labels)
+		self.subtask = subtask
+		self.classifier = nn.Linear(self.hidden_size * 2, 1 if subtask == "6.2.1" else 18)
 
 	def forward(self, input_ids, attention_mask, labels=None):
 		outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
@@ -47,6 +48,23 @@ class BertForREWithEntityStart(nn.Module):
 			loss = loss_fct(logits, labels)
 
 		return {"loss": loss, "logits": logits}
+
+	def predict(self, input_ids, attention_mask):
+		self.eval()
+		with torch.no_grad():
+			outputs = self.forward(
+				input_ids=input_ids,
+				attention_mask=attention_mask,
+				return_dict=True,
+			)
+			logits = outputs.logits
+			if self.subtask == "6.2.1":
+				probs = torch.sigmoid(logits).squeeze(-1)
+				prediction = (probs >= 0.5).long()
+			else:
+				prediction = torch.argmax(logits, dim=-1)
+
+		return prediction
 
 	def save(self, output_dir):
 		os.makedirs(output_dir, exist_ok=True)

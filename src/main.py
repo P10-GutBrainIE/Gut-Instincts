@@ -1,10 +1,13 @@
 import os
 import yaml
-from NER.inference import NERInference
+from inference.ner import NERInference
 from utils.utils import make_dataset_dir_name
 
 NER_CONFIG = os.path.join("training_configs", "weighted_training", "1,5-1,5-1-0,75.yaml")
 RE_CONFIG = ""
+
+# TODO: load test data and extract metadata with title and abstract
+# to add to ner inference to use in relation extraction inference
 
 
 def named_entity_recognition(config, dataset_dir_name):
