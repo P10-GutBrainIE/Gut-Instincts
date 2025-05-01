@@ -82,7 +82,7 @@ def create_training_dataset(
 		re_tokenizer = RelationTokenizer(
 			datasets=list(datasets.values()),
 			dataset_weights=dataset_weights,
-			save_filename=os.path.join(experiment_name, task_name, dataset_dir_name, "training.pkl"),
+			save_filename=os.path.join(task_name, experiment_name, dataset_dir_name, "training.pkl"),
 			tokenizer=tokenizer,
 			subtask=subtask,
 		)
@@ -91,7 +91,7 @@ def create_training_dataset(
 		bio_tokenizer = BIOTokenizer(
 			datasets=list(datasets.values()),
 			dataset_weights=dataset_weights,
-			save_filename=os.path.join(experiment_name, task_name, dataset_dir_name, "training.pkl"),
+			save_filename=os.path.join(task_name, experiment_name, task_name, dataset_dir_name, "training.pkl"),
 			tokenizer=tokenizer,
 		)
 		bio_tokenizer.process_files()
