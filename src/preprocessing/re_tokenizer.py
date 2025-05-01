@@ -109,14 +109,12 @@ class RelationTokenizer:
 				)
 
 		entity_combinations = [(a, b) for a in content["entities"] for b in content["entities"] if a != b]
-		print(f"Total entity combinations: {len(entity_combinations)}")
 		random.shuffle(entity_combinations)
 		if len(samples) * self.negative_sample_multiplier > len(entity_combinations):
 			number_negative_samples = len(entity_combinations)
 		else:
 			number_negative_samples = len(samples) * self.negative_sample_multiplier
 
-		print(f"Number of entity combinations for negative samples: {number_negative_samples}")
 		for ent_a, ent_b in entity_combinations[:number_negative_samples]:
 			input_ids, attention_mask = self._tokenize_with_entity_markers(
 				full_text,
