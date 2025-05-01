@@ -289,6 +289,7 @@ class NERInference:
 		merged = []
 		current_entity = None
 		skip = 0
+		prev_entity_type = "O"
 
 		for i, token_prediction in enumerate(token_predictions):
 			if skip:
@@ -301,7 +302,8 @@ class NERInference:
 			else:
 				word = token_prediction["word"].replace("##", "")
 
-			if prefix == "B":
+			if prefix == "B" and prev_entity_type != token_prediction["entity"]:
+				prev_entity_type = token_prediction["entity"]
 				if current_entity:
 					merged.append(current_entity)
 				current_entity = {
@@ -318,7 +320,8 @@ class NERInference:
 				if skip:
 					continue
 
-			elif prefix == "I":
+			elif prefix == "I" or prev_entity_type == token_prediction["entity"]:
+				prev_entity_type = token_prediction["entity"]
 				if (
 					current_entity
 					and current_entity["label"] == label
