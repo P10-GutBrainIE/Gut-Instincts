@@ -1,4 +1,5 @@
 import argparse
+import logging
 import os
 import yaml
 from transformers import AutoTokenizer, AlbertTokenizerFast
@@ -7,6 +8,9 @@ from preprocessing.re_tokenizer import RelationTokenizer
 from preprocessing.remove_html import remove_html_tags
 from preprocessing.data_cleanup import clean_incorrect_text_spans, remove_incorrect_text_spans
 from utils.utils import load_json_data, make_dataset_dir_name, make_task_name
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logger = logging.getLogger(__name__)
 
 
 def create_training_dataset(
@@ -37,7 +41,7 @@ def create_training_dataset(
 	"""
 	save_data_path = os.path.join(task_name, experiment_name, dataset_dir_name, "training.pkl")
 	if os.path.exists(save_data_path):
-		print(f"Training dataset already exists at {save_data_path}. Skipping create_training_dataset().")
+		logger.info(f"Training dataset already exists at {save_data_path}. Skipping create_training_dataset().")
 		return
 
 	datasets = {quality: [] for quality in dataset_qualities}
