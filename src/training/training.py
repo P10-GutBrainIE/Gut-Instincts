@@ -7,7 +7,7 @@ import mlflow
 import torch
 from tqdm import tqdm
 from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, make_task_name, print_metrics
-from training.compute_metrics import compute_metrics
+from training.calculate_metrics import compute_metrics
 from training.dataset import Dataset
 from training.freezing import freeze_bert, unfreeze_bert
 from training.lr_scheduler import lr_scheduler
