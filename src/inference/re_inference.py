@@ -144,10 +144,11 @@ class REInference:
 			truncation=True,
 			padding="max_length",
 			max_length=512,
+			return_tensors="pt" 
 		)
 
 		device = next(self.model.parameters()).device
-		input_ids = result["input_ids"].to(device)
-		attention_mask = result["attention_mask"].to(device)
+		input_ids = result["input_ids"].squeeze(0).to(device)
+		attention_mask = result["attention_mask"].squeeze(0).to(device)
 
 		return input_ids, attention_mask

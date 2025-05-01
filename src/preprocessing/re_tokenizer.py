@@ -185,9 +185,10 @@ class RelationTokenizer:
 			truncation=True,
 			padding="max_length",
 			max_length=self.max_length,
+			return_tensors="pt",
 		)
 
-		return encoding["input_ids"], encoding["attention_mask"]
+		return encoding["input_ids"].squeeze(0), encoding["attention_mask"].squeeze(0)
 
 	def _save_to_pickle(self, data):
 		os.makedirs(os.path.join("data_preprocessed", os.path.dirname(self.save_filename)), exist_ok=True)
