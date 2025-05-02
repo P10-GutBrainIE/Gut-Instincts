@@ -49,7 +49,7 @@ class NERInference:
 		model_name_paths = self._as_list(self.model_name_path)
 
 		for m_type, m_name, m_path in zip(model_types, model_names, model_name_paths):
-			if self.model_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
+			if m_name in ["sultan/BioM-ALBERT-xxlarge", "sultan/BioM-ALBERT-xxlarge-PMC"]:
 				self.tokenizers.append(AlbertTokenizerFast.from_pretrained(m_name, max_length=512, truncation=True))
 			else:
 				self.tokenizers.append(
