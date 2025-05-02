@@ -39,6 +39,7 @@ class REInference:
 			state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location=self.device)
 			self.model.load_state_dict(state_dict)
 			self.model.to(self.device)
+			print(f"Model loaded on device: {self.device}")
 			self.model.eval()
 
 	def _subtask_string(self, subtask):
