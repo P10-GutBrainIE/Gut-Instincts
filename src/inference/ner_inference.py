@@ -242,9 +242,6 @@ class NERInference:
 		outputs = outputs[0]
 		labels = [self.id2label[id] for id in outputs][1:-1]
 
-		print(outputs.shape)
-		print(outputs)
-
 		if self.ensemble_strategy:
 			return [
 				{"entity": label, "softmax": prob, "word": token, "start": int(start), "end": int(end)}
