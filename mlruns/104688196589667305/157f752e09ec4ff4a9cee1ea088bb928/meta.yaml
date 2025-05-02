@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/157f752e09ec4ff4a9cee1ea088bb928/artifacts
+end_time: 1746193008988
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 157f752e09ec4ff4a9cee1ea088bb928
+run_name: auspicious-goat-855
+run_uuid: 157f752e09ec4ff4a9cee1ea088bb928
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746192851379
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

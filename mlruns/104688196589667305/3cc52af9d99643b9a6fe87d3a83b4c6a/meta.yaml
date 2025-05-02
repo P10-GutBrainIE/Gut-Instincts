@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/3cc52af9d99643b9a6fe87d3a83b4c6a/artifacts
+end_time: 1746191520145
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 3cc52af9d99643b9a6fe87d3a83b4c6a
+run_name: hilarious-ape-313
+run_uuid: 3cc52af9d99643b9a6fe87d3a83b4c6a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191517621
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

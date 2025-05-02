@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/21a9c42272674242aff4260169958ce9/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 21a9c42272674242aff4260169958ce9
+run_name: resilient-sheep-563
+run_uuid: 21a9c42272674242aff4260169958ce9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746177644939
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

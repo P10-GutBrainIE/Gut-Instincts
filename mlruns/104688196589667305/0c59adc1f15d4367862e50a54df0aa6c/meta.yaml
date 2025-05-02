@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/0c59adc1f15d4367862e50a54df0aa6c/artifacts
+end_time: 1746192496885
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 0c59adc1f15d4367862e50a54df0aa6c
+run_name: fun-duck-197
+run_uuid: 0c59adc1f15d4367862e50a54df0aa6c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746192340578
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

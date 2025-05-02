@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/869844f76a3d488d97f40ff20e90d9b0/artifacts
+end_time: 1746191109442
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 869844f76a3d488d97f40ff20e90d9b0
+run_name: judicious-shrike-394
+run_uuid: 869844f76a3d488d97f40ff20e90d9b0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191100481
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

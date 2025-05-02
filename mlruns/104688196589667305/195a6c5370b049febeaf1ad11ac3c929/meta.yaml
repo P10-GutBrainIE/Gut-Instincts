@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/195a6c5370b049febeaf1ad11ac3c929/artifacts
+end_time: 1746192956872
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 195a6c5370b049febeaf1ad11ac3c929
+run_name: stately-steed-590
+run_uuid: 195a6c5370b049febeaf1ad11ac3c929
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746192851384
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

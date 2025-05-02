@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/706233ed2ea7461eb6c8ad72c9a1ad81/artifacts
+end_time: 1746192921415
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 706233ed2ea7461eb6c8ad72c9a1ad81
+run_name: popular-kit-609
+run_uuid: 706233ed2ea7461eb6c8ad72c9a1ad81
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746192828958
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

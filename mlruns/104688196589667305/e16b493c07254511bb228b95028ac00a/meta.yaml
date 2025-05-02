@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/e16b493c07254511bb228b95028ac00a/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: e16b493c07254511bb228b95028ac00a
+run_name: polite-finch-896
+run_uuid: e16b493c07254511bb228b95028ac00a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746193001487
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

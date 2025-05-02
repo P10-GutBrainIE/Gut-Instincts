@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/cf27845ac07445b4942c72f5025a3220/artifacts
+end_time: 1746191340978
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: cf27845ac07445b4942c72f5025a3220
+run_name: ambitious-zebra-760
+run_uuid: cf27845ac07445b4942c72f5025a3220
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191336911
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

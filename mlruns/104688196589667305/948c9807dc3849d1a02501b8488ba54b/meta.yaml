@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/948c9807dc3849d1a02501b8488ba54b/artifacts
+end_time: 1746191462852
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 948c9807dc3849d1a02501b8488ba54b
+run_name: worried-bug-728
+run_uuid: 948c9807dc3849d1a02501b8488ba54b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191458107
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

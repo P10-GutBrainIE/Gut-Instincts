@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/27d144347f2b4d86b5b4c05e9d2cfdd4/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 27d144347f2b4d86b5b4c05e9d2cfdd4
+run_name: righteous-gnat-208
+run_uuid: 27d144347f2b4d86b5b4c05e9d2cfdd4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746193563245
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

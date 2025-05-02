@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/fe54650e86af47099c7a93368e5c6827/artifacts
+end_time: 1746191042127
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: fe54650e86af47099c7a93368e5c6827
+run_name: beautiful-deer-279
+run_uuid: fe54650e86af47099c7a93368e5c6827
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191002291
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/2809a8e684a74bb3922e7339377c355f/artifacts
+end_time: 1746191896819
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 2809a8e684a74bb3922e7339377c355f
+run_name: entertaining-kite-96
+run_uuid: 2809a8e684a74bb3922e7339377c355f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191808749
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

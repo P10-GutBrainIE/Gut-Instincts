@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/7ac9f0781c7c40b6ba525db6d81ef72c/artifacts
+end_time: 1746191024894
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 7ac9f0781c7c40b6ba525db6d81ef72c
+run_name: merciful-mink-421
+run_uuid: 7ac9f0781c7c40b6ba525db6d81ef72c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191002291
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

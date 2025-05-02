@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/618286246839069765/be673d642d77406f8c1f9f5a537ac16e/artifacts
+end_time: 1746196680450
+entry_point_name: ''
+experiment_id: '618286246839069765'
+lifecycle_stage: active
+run_id: be673d642d77406f8c1f9f5a537ac16e
+run_name: mercurial-ape-69
+run_uuid: be673d642d77406f8c1f9f5a537ac16e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746196672141
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
