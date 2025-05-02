@@ -152,3 +152,23 @@ if __name__ == "__main__":
 			"plots", "confusion_matrices", f"{config['experiment_name']}_{dataset_dir_name}_metrics.pdf"
 		),
 	)
+
+	# inference_results = load_json_data(os.path.join("data_inference_results", "ensemble_inference.json"))
+	# test_data = load_json_data(os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
+
+	# true_labels, pred_labels = compare_classes(
+	# 	test_data=test_data,
+	# 	inference_data=inference_results,
+	# )
+	# plot_confusion_matrix(
+	# 	y_test=true_labels,
+	# 	y_pred=pred_labels,
+	# 	target_names=load_entity_labels(),
+	# 	save_path=os.path.join("plots", "confusion_matrices", "ensemble.pdf"),
+	# )
+	# plot_classification_report(
+	# 	y_test=true_labels,
+	# 	y_pred=pred_labels,
+	# 	target_names=load_entity_labels(),
+	# 	save_path=os.path.join("plots", "confusion_matrices", "ensemble_metrics.pdf"),
+	# )

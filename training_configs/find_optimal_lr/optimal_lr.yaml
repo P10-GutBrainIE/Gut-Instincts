@@ -5,7 +5,7 @@ model_name: "michiyasunaga/BioLinkBERT-base"
 weighted_training: False
 dataset_qualities:
 - "platinum"
-negative_sample_multiplier: 3
+negative_sample_multiplier: 1
 remove_html: False
 find_optimal_lr: True
 hyperparameters:
