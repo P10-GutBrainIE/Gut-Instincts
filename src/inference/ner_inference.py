@@ -235,11 +235,10 @@ class NERInference:
 
 		if self.ensemble_strategy:
 			outputs, probs = self.model.predict(input_ids, attention_mask, return_softmax=True)
-			probs = probs[0].tolist()[1:-1]
+			probs = probs[1:-1]
 		else:
 			outputs = self.model.predict(input_ids, attention_mask)
 
-		outputs = outputs[0].tolist()
 		labels = [self.id2label[id] for id in outputs][1:-1]
 
 		if self.ensemble_strategy:

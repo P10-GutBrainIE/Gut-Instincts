@@ -51,9 +51,9 @@ class HFTokenClassifier(torch.nn.Module):
 				return_dict=True,
 			)
 			logits = outputs.logits
-			predictions = torch.argmax(logits, dim=-1)
+			predictions = torch.argmax(logits, dim=-1).tolist()
 			if return_softmax:
-				probs = torch.nn.functional.softmax(logits, dim=-1)
+				probs = torch.nn.functional.softmax(logits, dim=-1).tolist()
 				return predictions, probs
 			else:
 				return predictions
