@@ -17,7 +17,7 @@ class BertDenseCRF(torch.nn.Module):
 	def forward(self, input_ids, attention_mask=None, labels=None, weight=None):
 		outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
 		sequence_output = self.dropout(outputs.last_hidden_state)
-		dense_output, _ = self.dense(sequence_output)
+		dense_output = self.dense(sequence_output)
 		dense_output = self.dense_activation(dense_output)
 		logits = self.classifier(dense_output)
 
