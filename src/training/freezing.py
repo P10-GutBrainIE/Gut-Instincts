@@ -15,13 +15,6 @@ def freeze_bert(model):
 	for param in base.parameters():
 		param.requires_grad = False
 
-	print("--- Checking requires_grad after freezing ---")
-	for name, param in model.named_parameters():
-		print(f"{name:60} | {str(param.shape):20} | requires_grad={param.requires_grad}")
-	n_total = sum(1 for _ in model.parameters())
-	n_trainable = sum(p.requires_grad for p in model.parameters())
-	print(f"Trainable parameters: {n_trainable} / {n_total}")
-
 
 def unfreeze_bert(model):
 	"""

@@ -120,5 +120,5 @@ if __name__ == "__main__":
 		dataset_dir_name=dataset_dir_name,
 		task_name=task_name,
 		remove_html=config["remove_html"],
-		subtask=config["subtask"] if config["model_type"] == "re" else None,
+		subtask=config.get("subtask"),
 	)
