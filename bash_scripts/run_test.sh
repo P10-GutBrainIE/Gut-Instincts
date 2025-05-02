@@ -21,7 +21,7 @@ for script in training_configs/$1/*.yaml; do
 #SBATCH --job-name=$filename
 #SBATCH --output=$filename.out
 #SBATCH --error=$filename.err
-#SBATCH --mem=24G
+#SBATCH --mem-per-gpu=24G
 #SBATCH --cpus-per-task=15
 #SBATCH --gres=gpu:1
 
