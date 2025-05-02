@@ -88,6 +88,7 @@ def create_training_dataset(
 			save_filename=save_data_path,
 			tokenizer=tokenizer,
 			subtask=subtask,
+			negative_sample_multiplier=config["negative_sample_multiplier"]
 		)
 		re_tokenizer.process_files()
 	else:

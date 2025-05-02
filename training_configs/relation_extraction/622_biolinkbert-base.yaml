@@ -6,6 +6,8 @@ weighted_training: False
 dataset_qualities:
 - "platinum"
 - "gold"
+- "silver"
+negative_sample_multiplier: 3
 remove_html: False
 find_optimal_lr: False
 hyperparameters:
