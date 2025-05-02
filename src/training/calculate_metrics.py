@@ -4,12 +4,10 @@ from inference.ner_inference import NERInference
 from utils.utils import load_entity_labels, load_relation_labels, load_json_data, make_dataset_dir_name
 
 
-def compute_metrics(config, model=None, test_data_path=None):
+def compute_metrics(config, model):
 	if config["model_type"] == "re":
 		re_inference = REInference(
-			test_data_path=test_data_path
-			if test_data_path
-			else os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
 			model_name_path=os.path.join(
@@ -35,9 +33,7 @@ def compute_metrics(config, model=None, test_data_path=None):
 			return ValueError("No matching subtask")
 	else:
 		ner_inference = NERInference(
-			test_data_path=test_data_path
-			if test_data_path
-			else os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
 			model_name_path=os.path.join("models", config["experiment_name"], make_dataset_dir_name(config)),
@@ -76,7 +72,7 @@ def NER_evaluation(predictions):
 			text_span = str(entity["text_span"])
 			label = str(entity["label"])
 
-			entry = (start_idx, end_idx, location, text_span.lower(), label)
+			entry = (start_idx, end_idx, location, text_span, label)
 			ground_truth_NER[pmid].append(entry)
 
 			if label not in count_annotated_entities_per_label:

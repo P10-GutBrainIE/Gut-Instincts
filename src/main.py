@@ -1,8 +1,13 @@
 import os
 from inference.ner_inference import NERInference
 from inference.re_inference import REInference
-from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data
-from training.calculate_metrics import compute_metrics
+from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data, print_metrics
+from training.calculate_metrics import (
+	NER_evaluation,
+	RE_evaluation_subtask_621,
+	RE_evaluation_subtask_622,
+	RE_evaluation_subtask_623,
+)
 
 
 def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path):
@@ -41,7 +46,9 @@ def binary_relation_extraction(config, dataset_dir_name):
 		model_name=config["model_name"],
 		model_type=config["model_type"],
 		subtask=config["subtask"],
-		save_path=os.path.join("submissions", f"Gut-Instincts_T62_{config['experiment_name']}_{dataset_dir_name}.json"),
+		save_path=os.path.join(
+			"submissions", f"Gut-Instincts_T621_{config['experiment_name']}_{dataset_dir_name}.json"
+		),
 	)
 	re_inference.perform_inference()
 
@@ -87,12 +94,57 @@ def pipeline(ner_config_path, re_config_path, test_data_path, run_evaluation):
 		ternary_mention_based_relation_extraction()
 
 	if run_evaluation:
-		compute_metrics(ner_config, test_data_path)
-		compute_metrics(
-			re_config,
-			test_data_path=os.path.join(
-				"submissions", f"Gut-Instincts_T62_{re_config['experiment_name']}_{re_dataset_name}.json"
-			),
+		precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = NER_evaluation(
+			load_json_data(
+				os.path.join(
+					"submissions", f"Gut-Instincts_T61_{ner_config['experiment_name']}_{ner_dataset_name}.json"
+				)
+			)
+		)
+		print("-- NER 6.1 --")
+		print_metrics(
+			{
+				"Precision_macro": precision_macro,
+				"Recall_macro": recall_macro,
+				"F1_macro": f1_macro,
+				"Precision_micro": precision_micro,
+				"Recall_micro": recall_micro,
+				"F1_micro": f1_micro,
+			}
+		)
+		if re_config["subtask"] == "6.2.1":
+			results_path = os.path.join(
+				"submissions", f"Gut-Instincts_T621_{re_config['experiment_name']}_{re_dataset_name}.json"
+			)
+			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
+				RE_evaluation_subtask_621(load_json_data(results_path))
+			)
+			print("-- RE 6.2.1 --")
+		elif re_config["subtask"] == "6.2.2":
+			results_path = os.path.join(
+				"submissions", f"Gut-Instincts_T622_{re_config['experiment_name']}_{re_dataset_name}.json"
+			)
+			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
+				RE_evaluation_subtask_622(load_json_data(results_path))
+			)
+			print("-- RE 6.2.2 --")
+		elif re_config["subtask"] == "6.2.3":
+			results_path = os.path.join(
+				"submissions", f"Gut-Instincts_T623_{re_config['experiment_name']}_{re_dataset_name}.json"
+			)
+			precision_macro, recall_macro, f1_macro, precision_micro, recall_micro, f1_micro = (
+				RE_evaluation_subtask_623(load_json_data(results_path))
+			)
+			print("-- RE 6.2.3 --")
+		print_metrics(
+			{
+				"Precision_macro": precision_macro,
+				"Recall_macro": recall_macro,
+				"F1_macro": f1_macro,
+				"Precision_micro": precision_micro,
+				"Recall_micro": recall_micro,
+				"F1_micro": f1_micro,
+			}
 		)
 
 
