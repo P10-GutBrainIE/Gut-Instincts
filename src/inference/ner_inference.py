@@ -81,6 +81,19 @@ class NERInference:
 					state_dict = torch.load(os.path.join(m_path, "pytorch_model.bin"), map_location="cpu")
 					model.load_state_dict(state_dict)
 					model.eval()
+			elif m_type == "bertdensecrf":
+				if self.validation_model:
+					model = self.validation_model
+				else:
+					from architectures.bert_dense_crf import BertDenseCRF
+
+					model = BertDenseCRF(
+						model_name=m_name,
+						num_labels=len(self.label_list),
+					)
+					state_dict = torch.load(os.path.join(m_path, "pytorch_model.bin"), map_location="cpu")
+					model.load_state_dict(state_dict)
+					model.eval()
 			else:
 				raise ValueError(f"Unknown model_type: {m_type}")
 			self.models.append(model)

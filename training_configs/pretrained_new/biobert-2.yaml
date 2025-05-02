@@ -1,18 +1,19 @@
-experiment_name: "BioLinkBERT-base"
+experiment_name: "biobert"
 model_type: "huggingface"
-model_name: "michiyasunaga/BioLinkBERT-base"
+model_name: "dmis-lab/biobert-v1.1"
 dataset_qualities:
 - "platinum"
 - "gold"
 - "silver"
 - "bronze"
-remove_html: True
+remove_html: False
+find_optimal_lr: False
 weighted_training: True
 dataset_weights:
+- 1.25
+- 1.25
 - 1
-- 1
-- 1
-- 0.5
+- 0.75
 hyperparameters:
   num_epochs: 30
   batch_size: 16
@@ -20,7 +21,9 @@ hyperparameters:
     learning_rate: 0.00002
     method: "custom"
     custom_schedule:
-    - [0, 2, 1]
+    - [0, 0, 1]
+    - [1, 1, 2]
+    - [2, 2, 3]
     - [3, 12, 4]
     step_size: 2
     gamma: 0.8

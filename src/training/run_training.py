@@ -43,6 +43,13 @@ def build_model(config, label_list=None, id2label=None, label2id=None):
 			model_name=config["model_name"],
 			num_labels=len(label_list),
 		)
+	elif config["model_type"] == "bertdensecrf":
+		from architectures.bert_dense_crf import BertDenseCRF
+
+		return BertDenseCRF(
+			model_name=config["model_name"],
+			num_labels=len(label_list),
+		)
 	elif config["model_type"] == "re":
 		from architectures.bert_with_entity_start import BertForREWithEntityStart
 

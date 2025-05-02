@@ -1,6 +1,6 @@
-experiment_name: "BERTLSTMCRF"
-model_type: "bertlstmcrf"
-model_name: "michiyasunaga/BioLinkBERT-base"
+experiment_name: "BERTDENSECRF"
+model_type: "bertdensecrf"
+model_name: "microsoft/BiomedNLP-BiomedElectra-base-uncased-abstract"
 dataset_qualities:
 - "platinum"
 - "gold"
