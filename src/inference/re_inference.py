@@ -98,41 +98,37 @@ class REInference:
 			prediction = self.model.predict(input_ids=input_ids, attention_mask=attention_mask)
 			if self.subtask == "6.2.1":
 				if prediction:
-					item = json.dumps(
-						{"subject_label": subject["label"], "object_label": object["label"]}, sort_keys=True
-					)
+					item = (subject["label"], object["label"])
 					if item not in seen:
 						seen.add(item)
-						predictions.append(json.loads(item))
+						predictions.append({"subject_label": subject["label"], "object_label": object["label"]})
 			elif self.subtask in ["6.2.2", "6.2.3"]:
 				predicate = self.id2label[prediction]
 				if predicate != "no relation":
 					if self.subtask == "6.2.2":
-						item = json.dumps(
-							{
-								"subject_label": subject["label"],
-								"predicate": predicate,
-								"object_label": object["label"],
-							},
-							sort_keys=True,
-						)
+						item = (subject["label"], predicate, object["label"])
 						if item not in seen:
 							seen.add(item)
-							predictions.append(json.loads(item))
+							predictions.append(
+								{
+									"subject_label": subject["label"],
+									"predicate": predicate,
+									"object_label": object["label"],
+								}
+							)
 					elif self.subtask == "6.2.3":
-						item = json.dumps(
-							{
-								"subject_text_span": subject["text_span"],
-								"subject_label": subject["label"],
-								"predicate": predicate,
-								"object_text_span": object["text_span"],
-								"object_label": object["label"],
-							},
-							sort_keys=True,
-						)
+						item = (subject["text_span"], subject["label"], predicate, object["text_span"], object["label"])
 						if item not in seen:
 							seen.add(item)
-							predictions.append(json.loads(item))
+							predictions.append(
+								{
+									"subject_text_span": subject["text_span"],
+									"subject_label": subject["label"],
+									"predicate": predicate,
+									"object_text_span": object["text_span"],
+									"object_label": object["label"],
+								}
+							)
 
 		return predictions
 

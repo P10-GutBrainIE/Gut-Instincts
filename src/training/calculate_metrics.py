@@ -1,15 +1,20 @@
 import os
 from inference.re_inference import REInference
 from inference.ner_inference import NERInference
-from utils.utils import load_entity_labels, load_relation_labels, load_json_data
+from utils.utils import load_entity_labels, load_relation_labels, load_json_data, make_dataset_dir_name
 
 
-def compute_metrics(model, config):
+def compute_metrics(config, model=None, test_data_path=None):
 	if config["model_type"] == "re":
 		re_inference = REInference(
-			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			test_data_path=test_data_path
+			if test_data_path
+			else os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
+			model_name_path=os.path.join(
+				"models", config["experiment_name"], f"{config['subtask']}_{make_dataset_dir_name(config)}"
+			),
 			validation_model=model,
 			subtask=config["subtask"],
 		)
@@ -30,9 +35,12 @@ def compute_metrics(model, config):
 			return ValueError("No matching subtask")
 	else:
 		ner_inference = NERInference(
-			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			test_data_path=test_data_path
+			if test_data_path
+			else os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
+			model_name_path=os.path.join("models", config["experiment_name"], make_dataset_dir_name(config)),
 			validation_model=model,
 			remove_html=config["remove_html"],
 		)
