@@ -88,7 +88,7 @@ def create_training_dataset(
 			save_filename=save_data_path,
 			tokenizer=tokenizer,
 			subtask=subtask,
-			negative_sample_multiplier=config["negative_sample_multiplier"]
+			negative_sample_multiplier=config["negative_sample_multiplier"],
 		)
 		re_tokenizer.process_files()
 	else:
@@ -120,5 +120,5 @@ if __name__ == "__main__":
 		dataset_dir_name=dataset_dir_name,
 		task_name=task_name,
 		remove_html=config["remove_html"],
-		subtask=config["subtask"],
+		subtask=config["subtask"] if config["model_type"] == "re" else None,
 	)
