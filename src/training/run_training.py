@@ -176,7 +176,9 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
 	training_data = load_pkl_data(
-		os.path.join("data_preprocessed", config["experiment_name"], dataset_dir_name, "training.pkl")
+		os.path.join(
+			"data_preprocessed", make_task_name(config), config["experiment_name"], dataset_dir_name, "training.pkl"
+		)
 	)
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 	train_loader = torch.utils.data.DataLoader(
