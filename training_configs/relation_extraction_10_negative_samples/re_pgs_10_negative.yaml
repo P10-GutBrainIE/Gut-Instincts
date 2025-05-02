@@ -1,0 +1,32 @@
+experiment_name: "BioLinkBERT-base"
+model_type: "re"
+subtask: "6.2.1"
+model_name: "michiyasunaga/BioLinkBERT-base"
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+weighted_training: True
+dataset_weights:
+- 1.5
+- 1.5
+- 1
+- 0.75
+negative_sample_multiplier: 10
+remove_html: False
+find_optimal_lr: False
+hyperparameters:
+  num_epochs: 20
+  batch_size: 16
+  freeze_epochs: 0
+  lr_scheduler:
+    learning_rate: 0.000002
+    method: "custom"
+    custom_schedule:
+    - [0, 0, 1]
+    - [1, 1, 2]
+    - [2, 2, 3]
+    - [3, 8, 4]
+    step_size: 2
+    gamma: 0.8
