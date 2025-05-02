@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/afa60267e1854dbfb4f625143f64b910/artifacts
+end_time: 1746134866570
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: afa60267e1854dbfb4f625143f64b910
+run_name: nebulous-fly-54
+run_uuid: afa60267e1854dbfb4f625143f64b910
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746134591214
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

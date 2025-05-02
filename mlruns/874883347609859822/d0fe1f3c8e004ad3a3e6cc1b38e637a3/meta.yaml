@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/d0fe1f3c8e004ad3a3e6cc1b38e637a3/artifacts
+end_time: 1746140505864
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: d0fe1f3c8e004ad3a3e6cc1b38e637a3
+run_name: judicious-bird-188
+run_uuid: d0fe1f3c8e004ad3a3e6cc1b38e637a3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746139708898
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

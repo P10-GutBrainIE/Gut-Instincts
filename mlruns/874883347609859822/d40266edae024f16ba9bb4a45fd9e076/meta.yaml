@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/d40266edae024f16ba9bb4a45fd9e076/artifacts
+end_time: 1746117409101
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: d40266edae024f16ba9bb4a45fd9e076
+run_name: gifted-fly-317
+run_uuid: d40266edae024f16ba9bb4a45fd9e076
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746117405802
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

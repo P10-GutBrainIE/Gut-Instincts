@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/0e6b22081a3e47e4b489a2021c25c3f3/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 0e6b22081a3e47e4b489a2021c25c3f3
+run_name: hilarious-frog-803
+run_uuid: 0e6b22081a3e47e4b489a2021c25c3f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746133999904
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

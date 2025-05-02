@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/f8029ad9fb8d4a7fb0c791b8a277ae1b/artifacts
+end_time: 1746137330055
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: f8029ad9fb8d4a7fb0c791b8a277ae1b
+run_name: serious-fowl-536
+run_uuid: f8029ad9fb8d4a7fb0c791b8a277ae1b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746137050960
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

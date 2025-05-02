@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/298eeb9d29474f1fbc1c13718d255c80/artifacts
+end_time: 1746133433289
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 298eeb9d29474f1fbc1c13718d255c80
+run_name: suave-mare-635
+run_uuid: 298eeb9d29474f1fbc1c13718d255c80
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746133128342
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/3f721b9ef4a84814ab374530a4e6ccab/artifacts
+end_time: 1746117155589
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 3f721b9ef4a84814ab374530a4e6ccab
+run_name: chill-shark-14
+run_uuid: 3f721b9ef4a84814ab374530a4e6ccab
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746117128024
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

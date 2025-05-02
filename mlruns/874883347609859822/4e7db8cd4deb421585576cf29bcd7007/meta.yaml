@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/4e7db8cd4deb421585576cf29bcd7007/artifacts
+end_time: 1746135124620
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 4e7db8cd4deb421585576cf29bcd7007
+run_name: amazing-fowl-847
+run_uuid: 4e7db8cd4deb421585576cf29bcd7007
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746134821285
+status: 3
+tags: []
+user_id: lran18@student.aau.dk

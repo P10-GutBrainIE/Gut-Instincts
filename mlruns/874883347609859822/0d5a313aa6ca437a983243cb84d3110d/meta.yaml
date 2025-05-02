@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/0d5a313aa6ca437a983243cb84d3110d/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 0d5a313aa6ca437a983243cb84d3110d
+run_name: languid-owl-631
+run_uuid: 0d5a313aa6ca437a983243cb84d3110d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746135933327
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

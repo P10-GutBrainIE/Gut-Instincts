@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/c85304948ff34cb79b0c8159479ab062/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: c85304948ff34cb79b0c8159479ab062
+run_name: ambitious-rat-62
+run_uuid: c85304948ff34cb79b0c8159479ab062
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746133791846
+status: 1
+tags: []
+user_id: lran18@student.aau.dk

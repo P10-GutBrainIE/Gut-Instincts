@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/7e577400139546f084c83cacf8bdcdec/artifacts
+end_time: 1746134871742
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 7e577400139546f084c83cacf8bdcdec
+run_name: nimble-mole-155
+run_uuid: 7e577400139546f084c83cacf8bdcdec
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746134595651
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
