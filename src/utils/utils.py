@@ -1,6 +1,7 @@
 import json
 import os
 import pickle
+import yaml
 import numpy as np
 
 
@@ -158,3 +159,8 @@ def print_metrics(metrics):
 	"""
 	for metric, value in zip(metrics.keys(), metrics.values()):
 		print(f"  {metric:<25} {value:>10.4f}")
+
+
+def load_config(path):
+	with open(path, "r") as file:
+		return yaml.safe_load(file)

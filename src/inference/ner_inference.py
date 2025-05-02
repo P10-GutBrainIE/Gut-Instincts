@@ -3,13 +3,12 @@ from collections import deque, Counter
 import itertools
 import json
 import os
-import yaml
 import numpy as np
 import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer, AlbertTokenizerFast
 from preprocessing.remove_html import remove_html_tags
-from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name
+from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name, load_config
 
 
 class NERInference:
@@ -356,11 +355,6 @@ class NERInference:
 
 
 if __name__ == "__main__":
-
-	def load_config(path):
-		with open(path, "r") as file:
-			return yaml.safe_load(file)
-
 	parser = argparse.ArgumentParser(description="Load configuration from a YAML file or directory of YAML files.")
 	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file or directory")
 	args = parser.parse_args()
