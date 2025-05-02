@@ -4,10 +4,6 @@ from inference.re_inference import REInference
 from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data
 
 
-# TODO: load test data and extract metadata with title and abstract
-# to add to ner inference results to use in relation extraction inference
-
-
 def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path):
 	test_data = load_json_data(test_data_path)
 	ner_results_path = load_json_data(ner_results_path)

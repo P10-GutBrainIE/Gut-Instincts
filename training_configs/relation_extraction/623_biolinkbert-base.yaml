@@ -6,21 +6,21 @@ weighted_training: False
 dataset_qualities:
 - "platinum"
 - "gold"
-- "silver"
 negative_sample_multiplier: 3
 remove_html: False
 find_optimal_lr: False
 hyperparameters:
-  num_epochs: 30
+  num_epochs: 20
   batch_size: 16
   freeze_epochs: 0
   lr_scheduler:
-    learning_rate: 0.00002
+    learning_rate: 0.000002
     method: "custom"
     custom_schedule:
     - [0, 0, 1]
     - [1, 1, 2]
     - [2, 2, 3]
-    - [3, 12, 4]
+    - [3, 8, 4]
     step_size: 2
     gamma: 0.8
+
