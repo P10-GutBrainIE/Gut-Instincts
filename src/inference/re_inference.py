@@ -35,8 +35,10 @@ class REInference:
 			from architectures.bert_with_entity_start import BertForREWithEntityStart
 
 			self.model = BertForREWithEntityStart(model_name=model_name, subtask=self.subtask)
-			state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location="cpu")
+			self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+			state_dict = torch.load(os.path.join(model_name_path, "pytorch_model.bin"), map_location=self.device)
 			self.model.load_state_dict(state_dict)
+			self.model.to(self.device)
 			self.model.eval()
 
 	def _subtask_string(self, subtask):
