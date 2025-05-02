@@ -67,17 +67,8 @@ class REInference:
 			return result
 
 	def _re_pipeline(self, content):
-		if (
-			not content.get("metadata")
-			or not content["metadata"].get("title")
-			or not content["metadata"].get("abstract")
-		):
-			raise ValueError("Content metadata is missing required 'title' or 'abstract' fields.")
-		if not content.get("entities"):
-			return []  # No entities to process
-
 		predictions = []
-		seen = set()  # To store unique dictionaries as JSON strings
+		seen = set()
 
 		offset = len(content["metadata"]["title"]) + 1
 		full_text = f"{content['metadata']['title']} {content['metadata']['abstract']}"
