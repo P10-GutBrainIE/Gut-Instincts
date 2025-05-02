@@ -222,7 +222,8 @@ def RE_evaluation_subtask_622(predictions):
 	ground_truth_ternary_tag_RE = dict()
 	count_annotated_relations_per_label = {}
 	entity_labels = load_entity_labels()[1:]
-	relation_labels = load_relation_labels()[1:]
+	relation_labels, _, _ = load_relation_labels()
+	relation_labels = relation_labels[1:]
 	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 
 	for pmid, article in ground_truth.items():
@@ -309,7 +310,8 @@ def RE_evaluation_subtask_623(predictions):
 	ground_truth_ternary_mention_RE = dict()
 	count_annotated_relations_per_label = {}
 	entity_labels = load_entity_labels()[1:]
-	relation_labels = load_relation_labels()[1:]
+	relation_labels, _, _ = load_relation_labels()
+	relation_labels = relation_labels[1:]
 	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
 
 	for pmid, article in ground_truth.items():
@@ -397,13 +399,3 @@ def RE_evaluation_subtask_623(predictions):
 	f1 = f1 / n
 
 	return precision, recall, f1, micro_precision, micro_recall, micro_f1
-
-
-if __name__ == "__main__":
-	predictions = load_json_data(os.path.join("data_preprocessed", "re_inference_results.json"))
-	metrics = RE_evaluation_subtask_621(predictions)
-
-	for name, value in zip(
-		["Precision_macro", "Recall_macro", "F1_macro", "Precision_micro", "Recall_micro", "F1_micro"], metrics
-	):
-		print(f"{name:<25} {value:.4f}")
