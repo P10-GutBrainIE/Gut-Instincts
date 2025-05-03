@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/79323eae35484c9d8f9d802bde5fe259/artifacts
+deleted_time: 1746262659220
 end_time: 1746191021586
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 79323eae35484c9d8f9d802bde5fe259
 run_name: powerful-shrimp-22
 run_uuid: 79323eae35484c9d8f9d802bde5fe259

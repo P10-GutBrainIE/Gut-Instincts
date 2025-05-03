@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/7aa336aa675d4489a43bf78b559ee263/artifacts
+deleted_time: 1746262833784
 end_time: 1746137329822
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 7aa336aa675d4489a43bf78b559ee263
 run_name: masked-ray-471
 run_uuid: 7aa336aa675d4489a43bf78b559ee263

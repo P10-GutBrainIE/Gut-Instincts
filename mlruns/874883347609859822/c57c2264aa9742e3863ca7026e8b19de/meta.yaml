@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/c57c2264aa9742e3863ca7026e8b19de/artifacts
+deleted_time: 1746262833732
 end_time: 1746139574344
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: c57c2264aa9742e3863ca7026e8b19de
 run_name: classy-skink-389
 run_uuid: c57c2264aa9742e3863ca7026e8b19de

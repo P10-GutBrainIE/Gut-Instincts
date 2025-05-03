@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/73919c5f2d264b6d97b2731f7390c563/artifacts
+deleted_time: 1746262833718
 end_time: null
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 73919c5f2d264b6d97b2731f7390c563
 run_name: silent-auk-380
 run_uuid: 73919c5f2d264b6d97b2731f7390c563

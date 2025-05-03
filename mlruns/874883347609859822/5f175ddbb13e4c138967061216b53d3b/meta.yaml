@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/5f175ddbb13e4c138967061216b53d3b/artifacts
+deleted_time: 1746262833794
 end_time: 1746134395111
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 5f175ddbb13e4c138967061216b53d3b
 run_name: nimble-goat-242
 run_uuid: 5f175ddbb13e4c138967061216b53d3b

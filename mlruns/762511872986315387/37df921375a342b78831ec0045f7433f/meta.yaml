@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/762511872986315387/37df921375a342b78831ec0045f7433f/artifacts
+deleted_time: 1746262524236
 end_time: 1746196856227
 entry_point_name: ''
 experiment_id: '762511872986315387'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 37df921375a342b78831ec0045f7433f
 run_name: abrasive-rat-98
 run_uuid: 37df921375a342b78831ec0045f7433f

@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/513776c78fe1420a91724b2418a8f904/artifacts
+deleted_time: 1746262833730
 end_time: 1746139574441
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 513776c78fe1420a91724b2418a8f904
 run_name: whimsical-duck-442
 run_uuid: 513776c78fe1420a91724b2418a8f904

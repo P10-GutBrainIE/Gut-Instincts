@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/293afbb4409e48ec9f51e3524d85697b/artifacts
+deleted_time: 1746262641021
 end_time: 1746192142135
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 293afbb4409e48ec9f51e3524d85697b
 run_name: bald-mink-578
 run_uuid: 293afbb4409e48ec9f51e3524d85697b

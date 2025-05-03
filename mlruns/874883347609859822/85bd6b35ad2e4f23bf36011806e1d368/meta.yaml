@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/85bd6b35ad2e4f23bf36011806e1d368/artifacts
+deleted_time: 1746262833792
 end_time: 1746136690685
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 85bd6b35ad2e4f23bf36011806e1d368
 run_name: agreeable-koi-434
 run_uuid: 85bd6b35ad2e4f23bf36011806e1d368

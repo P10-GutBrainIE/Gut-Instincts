@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/528c5cc19fe64d11a7e934279a923604/artifacts
+deleted_time: 1746262833780
 end_time: 1746136284090
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 528c5cc19fe64d11a7e934279a923604
 run_name: sassy-crane-313
 run_uuid: 528c5cc19fe64d11a7e934279a923604

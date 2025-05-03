@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/eecaff679e1d4675b2582fdc27adda96/artifacts
+deleted_time: 1746262640936
 end_time: null
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: eecaff679e1d4675b2582fdc27adda96
 run_name: enthused-grub-475
 run_uuid: eecaff679e1d4675b2582fdc27adda96

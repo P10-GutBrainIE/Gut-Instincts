@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/ad8288286cb24bd48570660c28125e9a/artifacts
+deleted_time: 1746262640915
 end_time: 1745880703887
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: ad8288286cb24bd48570660c28125e9a
 run_name: beautiful-mole-148
 run_uuid: ad8288286cb24bd48570660c28125e9a
