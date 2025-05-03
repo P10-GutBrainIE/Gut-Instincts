@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/8b7c73f0c8f7419e9c8973956d2a7f22/artifacts
+end_time: 1746201544253
+entry_point_name: ''
+experiment_id: '409352297639908427'
+lifecycle_stage: active
+run_id: 8b7c73f0c8f7419e9c8973956d2a7f22
+run_name: sedate-shrike-768
+run_uuid: 8b7c73f0c8f7419e9c8973956d2a7f22
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746198502579
+status: 3
+tags: []
+user_id: mgards20@student.aau.dk

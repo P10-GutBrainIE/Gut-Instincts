@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/f4d03fc9ce3d45adb4286d758c058ab4/artifacts
+end_time: 1746205686338
+entry_point_name: ''
+experiment_id: '409352297639908427'
+lifecycle_stage: active
+run_id: f4d03fc9ce3d45adb4286d758c058ab4
+run_name: calm-squid-155
+run_uuid: f4d03fc9ce3d45adb4286d758c058ab4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746199098412
+status: 3
+tags: []
+user_id: mgards20@student.aau.dk

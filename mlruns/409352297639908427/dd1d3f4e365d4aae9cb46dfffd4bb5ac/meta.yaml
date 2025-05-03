@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/dd1d3f4e365d4aae9cb46dfffd4bb5ac/artifacts
+end_time: 1746197472467
+entry_point_name: ''
+experiment_id: '409352297639908427'
+lifecycle_stage: active
+run_id: dd1d3f4e365d4aae9cb46dfffd4bb5ac
+run_name: skittish-chimp-783
+run_uuid: dd1d3f4e365d4aae9cb46dfffd4bb5ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746197453892
+status: 3
+tags: []
+user_id: mgards20@student.aau.dk
