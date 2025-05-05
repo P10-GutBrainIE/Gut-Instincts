@@ -4,23 +4,18 @@ import argparse
 import yaml
 from utils.utils import make_dataset_dir_name
 
-# ENSEMBLE_PREDICTION_PATH = os.path.join("data_inference_results", "ensemble_inference.json")
 
-# if not ENSEMBLE_PREDICTION_PATH:
-# 	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
-# 	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
-# 	args = parser.parse_args()
+parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
+parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
+args = parser.parse_args()
 
-# 	with open(args.config, "r") as file:
-# 		config = yaml.safe_load(file)
+with open(args.config, "r") as file:
+	config = yaml.safe_load(file)
 
-# 	dataset_dir_name = make_dataset_dir_name(config)
+dataset_dir_name = make_dataset_dir_name(config)
 
-# 	PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json")
-# else:
-# 	PREDICTIONS_PATH_6_1 = ENSEMBLE_PREDICTION_PATH
-
-PREDICTIONS_PATH_6_1 = "submissions/Gut-Instincts_T61_BioLinkBERT-base_p1.5g1.5s1b0.75.json"
+PREDICTIONS_PATH_6_1 = os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json")
+# PREDICTIONS_PATH_6_1 = "submissions/Gut-Instincts_T61_BioLinkBERT-base_p1.5g1.5s1b0.75.json"
 PREDICTIONS_PATH_6_2 = "submissions/Gut-Instincts_T621_BioLinkBERT-base_pg.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"

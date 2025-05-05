@@ -301,7 +301,8 @@ class NERInference:
 		merged = []
 		current_entity = None
 		skip = 0
-		prev_entity_type = "O"
+		prev_entity_type = "O-nothing"
+		prev_entity_end_idx = -100
 
 		for i, token_prediction in enumerate(token_predictions):
 			if skip:
@@ -314,7 +315,14 @@ class NERInference:
 			else:
 				word = token_prediction["word"].replace("##", "")
 
-			if prefix == "B" and prev_entity_type != token_prediction["entity"]:
+			if (
+				prefix == "B"
+				and prev_entity_type != token_prediction["entity"]
+				and not (
+					prev_entity_type.split("-")[1] == token_prediction["entity"].split("-")[1]
+					and token_prediction["start"] in [prev_entity_end_idx + 1, prev_entity_end_idx + 2]
+				)
+			):
 				if current_entity:
 					merged.append(current_entity)
 				current_entity = {
@@ -329,10 +337,18 @@ class NERInference:
 					token_predictions[i + 1 : i + 10], i, current_entity, self.model_name
 				)
 				prev_entity_type = token_prediction["entity"]
+				prev_entity_end_idx = token_prediction["end"]
 				if skip:
 					continue
 
-			elif prefix == "I" or prev_entity_type == token_prediction["entity"]:
+			elif (
+				prefix == "I"
+				or prev_entity_type == token_prediction["entity"]
+				or (
+					prev_entity_type.split("-")[1] == token_prediction["entity"].split("-")[1]
+					and token_prediction["start"] in [prev_entity_end_idx + 1, prev_entity_end_idx + 2]
+				)
+			):
 				if (
 					current_entity
 					and current_entity["label"] == label
@@ -354,6 +370,7 @@ class NERInference:
 						"label": label,
 					}
 				prev_entity_type = token_prediction["entity"]
+				prev_entity_end_idx = token_prediction["end"]
 
 		if current_entity:
 			merged.append(current_entity)

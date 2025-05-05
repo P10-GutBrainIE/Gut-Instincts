@@ -8047,16 +8047,9 @@
             },
             {
                 "start_idx": 2062,
-                "end_idx": 2083,
-                "location": "abstract",
-                "text_span": "systemic cytokines and",
-                "label": "chemical"
-            },
-            {
-                "start_idx": 2085,
                 "end_idx": 2094,
                 "location": "abstract",
-                "text_span": "chemokines",
+                "text_span": "systemic cytokines and chemokines",
                 "label": "chemical"
             },
             {
