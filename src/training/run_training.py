@@ -303,7 +303,7 @@ if __name__ == "__main__":
 			config = yaml.safe_load(file)
 			os.makedirs("models", exist_ok=True)
 
-			seed = config.get("seed", 607145714675)
+			seed = config.get("seed", 666)
 			print("Seed: ", seed)
 			seed_everything(seed)
 
