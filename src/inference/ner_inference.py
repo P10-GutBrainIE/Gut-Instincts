@@ -381,6 +381,12 @@ class NERInference:
 		for entity in entity_predictions:
 			entity["text_span"] = true_text[entity["start_idx"] : entity["end_idx"] + 1]
 
+			quote_indices = [index for index, char in enumerate(entity["text_span"]) if char == '"']
+			if len(quote_indices) == 1:
+				if quote_indices[0] == 0:
+					entity["text_span"] = entity["text_span"][1:]
+					entity["start_idx"] += 1
+
 		return entity_predictions
 
 

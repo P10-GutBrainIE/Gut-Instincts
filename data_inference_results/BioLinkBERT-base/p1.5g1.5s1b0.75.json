@@ -7492,10 +7492,10 @@
                 "label": "animal"
             },
             {
-                "start_idx": 1074,
+                "start_idx": 1075,
                 "end_idx": 1087,
                 "location": "abstract",
-                "text_span": "\"SD microbiota",
+                "text_span": "SD microbiota",
                 "label": "microbiome"
             },
             {
