@@ -5,6 +5,7 @@ resume_checkpoint: False # Used to resume training from checkpoint
 seed: 1 # Used to provide a seed for the training
 subtask: "6.2.1" # The RE subtask
 negative_sample_multiplier: 1 # Number of negative samples in RE in relation to positive samples
+remove_relation_outliers: True # If true papers with more than 100 relations are removed from the silver dataset
 dataset_qualities: # Specify in this list which qualities of data should be included in the training dataset.
 - "platinum"
 - "gold"

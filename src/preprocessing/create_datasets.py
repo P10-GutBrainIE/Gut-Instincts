@@ -27,6 +27,7 @@ def create_training_dataset(
 	task_name: str,
 	remove_html: bool,
 	subtask: str = None,
+	remove_relation_outliers: bool = None,
 ):
 	"""
 	Create and preprocess the training dataset, then tokenize and save it.
@@ -69,9 +70,10 @@ def create_training_dataset(
 					"clean"
 				],
 			)
-			# datasets[quality] = remove_documents_over_or_under_threshold(
-			# 	data=datasets[quality], threshold=100, type="relations", remove_if="over"
-			# )
+			if remove_relation_outliers:
+				datasets[quality] = remove_documents_over_or_under_threshold(
+					data=datasets[quality], threshold=100, type="relations", remove_if="over"
+				)
 		if quality == "bronze":
 			datasets[quality] = clean_incorrect_text_spans(
 				data=datasets[quality],
@@ -134,4 +136,5 @@ if __name__ == "__main__":
 		task_name=task_name,
 		remove_html=config["remove_html"],
 		subtask=config.get("subtask"),
+		remove_relation_outliers=config.get("remove_relation_outliers"),
 	)
