@@ -58,14 +58,14 @@ class RelationTokenizer:
 
 	def _process_paper(self, content, dataset_weight=None):
 		samples = []
+		positive_samples_lookup = []
 
 		offset = len(content["metadata"]["title"]) + 1
 		full_text = f"{content['metadata']['title']} {content['metadata']['abstract']}"
 
 		for relation in content["relations"]:
-			input_ids, attention_mask = self._tokenize_with_entity_markers(
-				full_text,
-				subject={
+			subject = (
+				{
 					"start_idx": relation["subject_start_idx"] + offset
 					if relation["subject_location"] == "abstract"
 					else relation["subject_start_idx"],
@@ -73,7 +73,9 @@ class RelationTokenizer:
 					if relation["subject_location"] == "abstract"
 					else relation["subject_end_idx"] + 1,
 				},
-				object={
+			)
+			object = (
+				{
 					"start_idx": relation["object_start_idx"] + offset
 					if relation["object_location"] == "abstract"
 					else relation["object_start_idx"],
@@ -82,6 +84,8 @@ class RelationTokenizer:
 					else relation["object_end_idx"] + 1,
 				},
 			)
+			positive_samples_lookup.append((subject, object))
+			input_ids, attention_mask = self._tokenize_with_entity_markers(full_text, subject, object)
 			if dataset_weight:
 				samples.append(
 					{
@@ -115,47 +119,56 @@ class RelationTokenizer:
 		else:
 			number_negative_samples = len(samples) * self.negative_sample_multiplier
 
-		for ent_a, ent_b in entity_combinations[:number_negative_samples]:
-			input_ids, attention_mask = self._tokenize_with_entity_markers(
-				full_text,
-				subject={
+		negative_samples_counter = 0
+		for ent_a, ent_b in entity_combinations:
+			if negative_samples_counter == number_negative_samples:
+				break
+			subject = (
+				{
 					"start_idx": ent_a["start_idx"] + offset if ent_a["location"] == "abstract" else ent_a["start_idx"],
 					"end_idx": ent_a["end_idx"] + offset + 1
 					if ent_a["location"] == "abstract"
 					else ent_a["end_idx"] + 1,
 				},
-				object={
+			)
+			object = (
+				{
 					"start_idx": ent_b["start_idx"] + offset if ent_b["location"] == "abstract" else ent_b["start_idx"],
 					"end_idx": ent_b["end_idx"] + offset + 1
 					if ent_b["location"] == "abstract"
 					else ent_b["end_idx"] + 1,
 				},
 			)
-			if dataset_weight:
-				samples.append(
-					{
-						"input_ids": input_ids,
-						"attention_mask": attention_mask,
-						"labels": 0,
-						"subject_label": ent_a["label"],
-						"object_label": ent_b["label"],
-						"subject_text_span": ent_a["text_span"],
-						"object_text_span": ent_b["text_span"],
-						"weight": dataset_weight,
-					}
-				)
+			if (subject, object) in positive_samples_lookup:
+				continue
 			else:
-				samples.append(
-					{
-						"input_ids": input_ids,
-						"attention_mask": attention_mask,
-						"labels": 0,
-						"subject_label": ent_a["label"],
-						"object_label": ent_b["label"],
-						"subject_text_span": ent_a["text_span"],
-						"object_text_span": ent_b["text_span"],
-					}
-				)
+				input_ids, attention_mask = self._tokenize_with_entity_markers(full_text, subject, object)
+				if dataset_weight:
+					samples.append(
+						{
+							"input_ids": input_ids,
+							"attention_mask": attention_mask,
+							"labels": 0,
+							"subject_label": ent_a["label"],
+							"object_label": ent_b["label"],
+							"subject_text_span": ent_a["text_span"],
+							"object_text_span": ent_b["text_span"],
+							"weight": dataset_weight,
+						}
+					)
+				else:
+					samples.append(
+						{
+							"input_ids": input_ids,
+							"attention_mask": attention_mask,
+							"labels": 0,
+							"subject_label": ent_a["label"],
+							"object_label": ent_b["label"],
+							"subject_text_span": ent_a["text_span"],
+							"object_text_span": ent_b["text_span"],
+						}
+					)
+				negative_samples_counter += 1
 
 		return samples
 
