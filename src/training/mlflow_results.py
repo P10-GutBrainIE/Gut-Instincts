@@ -40,27 +40,20 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 
 			weights = run.get("params.dataset_weights", "No weights")
 			qualities = run.get("params.dataset_qualities", "Not logged")
-			remove_html = run.get("params.remove_html", "Not logged")
 			model_name = run.get("params.model_name", "Not logged").split("/")[-1]
 			experiment_name = run.get("params.experiment_name", "Not logged")
 
-			results.append((experiment_name, model_name, qualities, weights, remove_html, best_f1))
+			results.append((experiment_name, model_name, qualities, weights, best_f1))
 		except Exception as e:
 			print(f"Error processing run {run_id}: {e}")
 
-	results.sort(key=lambda x: x[5], reverse=True)
+	results.sort(key=lambda x: x[4], reverse=True)
 
 	print(f"Best F1_micro values for {experiments_text}:")
-	print(
-		f"{'No.':<5} {'Experiment Name':<32} {'Model Name':<32} {'Qualities':<32} {'Weights':<20} {'Remove HTML':<12} {'F1_micro':<8}"
-	)
+	print(f"{'No.':<5} {'Experiment Name':<32} {'Model Name':<32} {'Qualities':<32} {'Weights':<20} {'F1_micro':<8}")
 	print("-" * 150)
-	for i, (experiment_name, model_name, qualities, weights, remove_html, best_f1) in enumerate(
-		results[:top_n], start=1
-	):
-		print(
-			f"{i:<5} {experiment_name:<32} {model_name:<32} {qualities:<32} {weights:<20} {remove_html:<12} {best_f1:<8.4f}"
-		)
+	for i, (experiment_name, model_name, qualities, weights, best_f1) in enumerate(results[:top_n], start=1):
+		print(f"{i:<5} {experiment_name:<32} {model_name:<32} {qualities:<32} {str(weights):<20} {best_f1:<8.4f}")
 
 
 if __name__ == "__main__":

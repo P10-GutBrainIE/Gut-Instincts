@@ -11,6 +11,7 @@ from training.calculate_metrics import compute_metrics
 from training.dataset import Dataset
 from training.freezing import freeze_bert, unfreeze_bert
 from training.lr_scheduler import lr_scheduler
+from training.seeding import seed_everything
 
 sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
@@ -255,8 +256,7 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 if __name__ == "__main__":
 	if torch.cuda.is_available():
 		torch.cuda.empty_cache()
-		torch.manual_seed(17)
-		torch.cuda.manual_seed_all(17)
+		seed_everything(17)
 		print(f"CUDA is available. GPU: {torch.cuda.get_device_name(0)}. Device count: {torch.cuda.device_count()}.")
 
 		parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
