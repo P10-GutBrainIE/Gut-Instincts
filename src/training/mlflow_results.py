@@ -1,8 +1,9 @@
+import re
 import mlflow
 from mlflow.tracking import MlflowClient
 
 
-def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
+def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="ner"):
 	"""
 	Find and print the top runs with the highest F1_micro scores for an MLflow experiment.
 
@@ -29,7 +30,14 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 	runs = mlflow.search_runs(experiment_ids=experiment_ids, filter_string="")
 	results = []
 
-	for _, run in runs.iterrows():
+	if task == "re":
+		runs = [run for _, run in runs.iterrows() if run.get("params.subtask", False)]
+	elif task == "ner":
+		runs = [run for _, run in runs.iterrows()]
+	else:
+		raise ValueError(f"Unknown task: {task}")
+
+	for run in runs:
 		run_id = run["run_id"]
 		try:
 			metric_history = client.get_metric_history(run_id, "F1_micro")
@@ -40,21 +48,25 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 
 			weights = run.get("params.dataset_weights", "No weights")
 			qualities = run.get("params.dataset_qualities", "Not logged")
+			qualities = str(re.findall("[pgsb]", qualities))
 			model_name = run.get("params.model_name", "Not logged").split("/")[-1]
 			experiment_name = run.get("params.experiment_name", "Not logged")
-
-			results.append((experiment_name, model_name, qualities, weights, best_f1))
+			if task == "re":
+				multiplier = run.get("params.negative_sample_multiplier", "Not logged")
+				results.append((experiment_name, model_name, f"{qualities} x {multiplier}", weights, best_f1))
+			else:
+				results.append((experiment_name, model_name, qualities, weights, best_f1))
 		except Exception as e:
 			print(f"Error processing run {run_id}: {e}")
 
 	results.sort(key=lambda x: x[4], reverse=True)
 
 	print(f"Best F1_micro values for {experiments_text}:")
-	print(f"{'No.':<5} {'Experiment Name':<32} {'Model Name':<32} {'Qualities':<32} {'Weights':<20} {'F1_micro':<8}")
-	print("-" * 150)
+	print(f"{'No.':<5} {'Experiment Name':<40} {'Model Name':<48} {'Qualities':<23} {'Weights':<24} {'F1_micro':<8}")
+	print("-" * 160)
 	for i, (experiment_name, model_name, qualities, weights, best_f1) in enumerate(results[:top_n], start=1):
-		print(f"{i:<5} {experiment_name:<32} {model_name:<32} {qualities:<32} {str(weights):<20} {best_f1:<8.4f}")
+		print(f"{i:<5} {experiment_name:<40} {model_name:<48} {qualities:<23} {str(weights):<24} {best_f1:<8.4f}")
 
 
 if __name__ == "__main__":
-	print_top_n_experiments(experiment_name=None, top_n=50)
+	print_top_n_experiments(experiment_name=None, top_n=10, task="re")
