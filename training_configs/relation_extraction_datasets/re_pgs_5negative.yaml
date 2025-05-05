@@ -2,6 +2,7 @@ experiment_name: "BioLinkBERT-base"
 model_type: "re"
 subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
+resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"

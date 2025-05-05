@@ -6,7 +6,11 @@ from transformers import AutoTokenizer, AlbertTokenizerFast
 from preprocessing.ner_tokenizer import BIOTokenizer
 from preprocessing.re_tokenizer import RelationTokenizer
 from preprocessing.remove_html import remove_html_tags
-from preprocessing.data_cleanup import clean_incorrect_text_spans, remove_incorrect_text_spans
+from preprocessing.data_cleanup import (
+	clean_incorrect_text_spans,
+	remove_incorrect_text_spans,
+	remove_documents_over_or_under_threshold,
+)
 from utils.utils import load_json_data, make_dataset_dir_name, make_task_name
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -65,6 +69,9 @@ def create_training_dataset(
 					"clean"
 				],
 			)
+			# datasets[quality] = remove_documents_over_or_under_threshold(
+			# 	data=datasets[quality], threshold=100, type="relations", remove_if="over"
+			# )
 		if quality == "bronze":
 			datasets[quality] = clean_incorrect_text_spans(
 				data=datasets[quality],
