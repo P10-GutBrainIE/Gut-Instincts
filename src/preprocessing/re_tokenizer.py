@@ -64,26 +64,22 @@ class RelationTokenizer:
 		full_text = f"{content['metadata']['title']} {content['metadata']['abstract']}"
 
 		for relation in content["relations"]:
-			subject = (
-				{
-					"start_idx": relation["subject_start_idx"] + offset
-					if relation["subject_location"] == "abstract"
-					else relation["subject_start_idx"],
-					"end_idx": relation["subject_end_idx"] + offset + 1
-					if relation["subject_location"] == "abstract"
-					else relation["subject_end_idx"] + 1,
-				},
-			)
-			object = (
-				{
-					"start_idx": relation["object_start_idx"] + offset
-					if relation["object_location"] == "abstract"
-					else relation["object_start_idx"],
-					"end_idx": relation["object_end_idx"] + offset + 1
-					if relation["object_location"] == "abstract"
-					else relation["object_end_idx"] + 1,
-				},
-			)
+			subject = {
+				"start_idx": relation["subject_start_idx"] + offset
+				if relation["subject_location"] == "abstract"
+				else relation["subject_start_idx"],
+				"end_idx": relation["subject_end_idx"] + offset + 1
+				if relation["subject_location"] == "abstract"
+				else relation["subject_end_idx"] + 1,
+			}
+			object = {
+				"start_idx": relation["object_start_idx"] + offset
+				if relation["object_location"] == "abstract"
+				else relation["object_start_idx"],
+				"end_idx": relation["object_end_idx"] + offset + 1
+				if relation["object_location"] == "abstract"
+				else relation["object_end_idx"] + 1,
+			}
 			positive_samples_lookup.append((subject, object))
 			input_ids, attention_mask = self._tokenize_with_entity_markers(full_text, subject, object)
 			if dataset_weight:
@@ -123,22 +119,14 @@ class RelationTokenizer:
 		for ent_a, ent_b in entity_combinations:
 			if negative_samples_counter == number_negative_samples:
 				break
-			subject = (
-				{
-					"start_idx": ent_a["start_idx"] + offset if ent_a["location"] == "abstract" else ent_a["start_idx"],
-					"end_idx": ent_a["end_idx"] + offset + 1
-					if ent_a["location"] == "abstract"
-					else ent_a["end_idx"] + 1,
-				},
-			)
-			object = (
-				{
-					"start_idx": ent_b["start_idx"] + offset if ent_b["location"] == "abstract" else ent_b["start_idx"],
-					"end_idx": ent_b["end_idx"] + offset + 1
-					if ent_b["location"] == "abstract"
-					else ent_b["end_idx"] + 1,
-				},
-			)
+			subject = {
+				"start_idx": ent_a["start_idx"] + offset if ent_a["location"] == "abstract" else ent_a["start_idx"],
+				"end_idx": ent_a["end_idx"] + offset + 1 if ent_a["location"] == "abstract" else ent_a["end_idx"] + 1,
+			}
+			object = {
+				"start_idx": ent_b["start_idx"] + offset if ent_b["location"] == "abstract" else ent_b["start_idx"],
+				"end_idx": ent_b["end_idx"] + offset + 1 if ent_b["location"] == "abstract" else ent_b["end_idx"] + 1,
+			}
 			if (subject, object) in positive_samples_lookup:
 				continue
 			else:
