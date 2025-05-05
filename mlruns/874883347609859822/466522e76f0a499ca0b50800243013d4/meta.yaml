@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/466522e76f0a499ca0b50800243013d4/artifacts
+end_time: 1746456564014
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 466522e76f0a499ca0b50800243013d4
+run_name: stately-horse-826
+run_uuid: 466522e76f0a499ca0b50800243013d4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746454984064
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk
