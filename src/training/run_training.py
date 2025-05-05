@@ -2,6 +2,7 @@ import argparse
 import os
 import sys
 import yaml
+import time
 import matplotlib.pyplot as plt
 import mlflow
 import torch
@@ -60,6 +61,7 @@ def build_model(config, label_list=None, id2label=None, label2id=None):
 
 
 def training(config):
+	start_time = time.time() 
 	dataset_dir_name = make_dataset_dir_name(config)
 
 	if config["model_type"] == "re":
@@ -172,6 +174,19 @@ def training(config):
 
 		if epoch == num_epochs - 1:
 			mlflow.log_metric("Best F1_micro", best_f1_micro)
+
+		elapsed_time = time.time() - start_time
+		if elapsed_time > 39600:
+			print("Training time exceeded 11 hours. Saving checkpoint and exiting.")
+			if config["model_type"] == "re":
+				checkpoint_dir = os.path.join("model_checkpoints", config["experiment_name"], f"{config['subtask']}_{dataset_dir_name}")
+			else:
+				checkpoint_dir = os.path.join("model_checkpoints", config["experiment_name"], dataset_dir_name)
+			os.makedirs(checkpoint_dir, exist_ok=True)
+			model.save(checkpoint_dir)
+			mlflow.log_metric("Finished epochs", epoch + 1)
+			mlflow.end_run()
+			return
 
 	mlflow.end_run()
 
