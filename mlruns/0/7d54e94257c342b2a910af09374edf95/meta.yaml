@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/0/7d54e94257c342b2a910af09374edf95/artifacts
+end_time: 1745843164504
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7d54e94257c342b2a910af09374edf95
+run_name: likeable-eel-663
+run_uuid: 7d54e94257c342b2a910af09374edf95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745843163523
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

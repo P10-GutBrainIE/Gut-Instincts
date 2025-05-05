@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/02737648fa184b3192f9e7a70dfbd10b/artifacts
+end_time: 1744962710953
+entry_point_name: ''
+experiment_id: '691989614872902376'
+lifecycle_stage: active
+run_id: 02737648fa184b3192f9e7a70dfbd10b
+run_name: bouncy-shad-171
+run_uuid: 02737648fa184b3192f9e7a70dfbd10b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744962708509
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

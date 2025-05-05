@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/719012585282635031/5c22082d6ade42c78d4c9b08d5df8929/artifacts
+end_time: 1745495307611
+entry_point_name: ''
+experiment_id: '719012585282635031'
+lifecycle_stage: active
+run_id: 5c22082d6ade42c78d4c9b08d5df8929
+run_name: zealous-robin-760
+run_uuid: 5c22082d6ade42c78d4c9b08d5df8929
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745495304697
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

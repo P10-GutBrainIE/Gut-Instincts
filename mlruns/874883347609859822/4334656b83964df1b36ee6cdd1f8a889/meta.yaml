@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/4334656b83964df1b36ee6cdd1f8a889/artifacts
+end_time: 1746003535181
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 4334656b83964df1b36ee6cdd1f8a889
+run_name: enthused-roo-941
+run_uuid: 4334656b83964df1b36ee6cdd1f8a889
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746003523902
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

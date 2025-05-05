@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/06273379e4ba4434aa94ad3da0b68704/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: 06273379e4ba4434aa94ad3da0b68704
+run_name: orderly-perch-826
+run_uuid: 06273379e4ba4434aa94ad3da0b68704
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746199459998
+status: 1
+tags: []
+user_id: mdolme20@student.aau.dk

@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/648531936169217372/7aeae529f9674d478b0ba560d0a925e7/artifacts
+end_time: 1745849790186
+entry_point_name: ''
+experiment_id: '648531936169217372'
+lifecycle_stage: active
+run_id: 7aeae529f9674d478b0ba560d0a925e7
+run_name: salty-shrew-357
+run_uuid: 7aeae529f9674d478b0ba560d0a925e7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745847814690
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

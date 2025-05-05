@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/383289609364041800/d6e3f85d11b4443186e65286480f609e/artifacts
+end_time: 1745498845820
+entry_point_name: ''
+experiment_id: '383289609364041800'
+lifecycle_stage: active
+run_id: d6e3f85d11b4443186e65286480f609e
+run_name: adaptable-steed-826
+run_uuid: d6e3f85d11b4443186e65286480f609e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745498190853
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

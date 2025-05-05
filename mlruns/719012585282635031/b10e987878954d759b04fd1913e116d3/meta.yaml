@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/719012585282635031/b10e987878954d759b04fd1913e116d3/artifacts
+end_time: 1745493805361
+entry_point_name: ''
+experiment_id: '719012585282635031'
+lifecycle_stage: active
+run_id: b10e987878954d759b04fd1913e116d3
+run_name: respected-shoat-582
+run_uuid: b10e987878954d759b04fd1913e116d3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745493794503
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

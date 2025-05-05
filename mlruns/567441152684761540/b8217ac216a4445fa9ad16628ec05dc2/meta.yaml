@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/567441152684761540/b8217ac216a4445fa9ad16628ec05dc2/artifacts
+end_time: 1745831335678
+entry_point_name: ''
+experiment_id: '567441152684761540'
+lifecycle_stage: active
+run_id: b8217ac216a4445fa9ad16628ec05dc2
+run_name: merciful-pig-986
+run_uuid: b8217ac216a4445fa9ad16628ec05dc2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745831322634
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

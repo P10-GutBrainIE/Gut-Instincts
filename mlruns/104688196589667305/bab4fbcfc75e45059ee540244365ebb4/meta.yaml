@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/bab4fbcfc75e45059ee540244365ebb4/artifacts
+end_time: 1746191818434
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: bab4fbcfc75e45059ee540244365ebb4
+run_name: welcoming-sheep-110
+run_uuid: bab4fbcfc75e45059ee540244365ebb4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746191795814
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

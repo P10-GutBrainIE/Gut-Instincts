@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/b13c8eeb1c6341acbb11392e162d9ba2/artifacts
+end_time: 1744790411358
+entry_point_name: ''
+experiment_id: '691989614872902376'
+lifecycle_stage: active
+run_id: b13c8eeb1c6341acbb11392e162d9ba2
+run_name: debonair-zebra-352
+run_uuid: b13c8eeb1c6341acbb11392e162d9ba2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744789563095
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

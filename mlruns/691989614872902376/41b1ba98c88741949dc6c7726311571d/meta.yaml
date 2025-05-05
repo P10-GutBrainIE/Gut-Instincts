@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/41b1ba98c88741949dc6c7726311571d/artifacts
+end_time: 1744809523448
+entry_point_name: ''
+experiment_id: '691989614872902376'
+lifecycle_stage: active
+run_id: 41b1ba98c88741949dc6c7726311571d
+run_name: salty-mouse-207
+run_uuid: 41b1ba98c88741949dc6c7726311571d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744809523380
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

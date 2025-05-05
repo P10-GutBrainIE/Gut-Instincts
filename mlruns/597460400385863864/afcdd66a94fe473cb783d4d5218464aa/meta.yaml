@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/597460400385863864/afcdd66a94fe473cb783d4d5218464aa/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '597460400385863864'
+lifecycle_stage: active
+run_id: afcdd66a94fe473cb783d4d5218464aa
+run_name: amusing-fish-559
+run_uuid: afcdd66a94fe473cb783d4d5218464aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745834112801
+status: 1
+tags: []
+user_id: mdolme20@student.aau.dk

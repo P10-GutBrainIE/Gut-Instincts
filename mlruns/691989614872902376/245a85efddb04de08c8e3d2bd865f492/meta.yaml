@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/691989614872902376/245a85efddb04de08c8e3d2bd865f492/artifacts
+end_time: 1744961171977
+entry_point_name: ''
+experiment_id: '691989614872902376'
+lifecycle_stage: active
+run_id: 245a85efddb04de08c8e3d2bd865f492
+run_name: stylish-yak-721
+run_uuid: 245a85efddb04de08c8e3d2bd865f492
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744961151324
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

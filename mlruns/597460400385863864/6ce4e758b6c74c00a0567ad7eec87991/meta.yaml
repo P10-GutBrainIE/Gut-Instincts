@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/597460400385863864/6ce4e758b6c74c00a0567ad7eec87991/artifacts
+end_time: 1745833500496
+entry_point_name: ''
+experiment_id: '597460400385863864'
+lifecycle_stage: active
+run_id: 6ce4e758b6c74c00a0567ad7eec87991
+run_name: fearless-ox-343
+run_uuid: 6ce4e758b6c74c00a0567ad7eec87991
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745832327484
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

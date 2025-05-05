@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/f898b4244e2d4334a16ce5d0d0884034/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '874883347609859822'
+lifecycle_stage: active
+run_id: f898b4244e2d4334a16ce5d0d0884034
+run_name: spiffy-gnu-33
+run_uuid: f898b4244e2d4334a16ce5d0d0884034
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746199159667
+status: 1
+tags: []
+user_id: mdolme20@student.aau.dk

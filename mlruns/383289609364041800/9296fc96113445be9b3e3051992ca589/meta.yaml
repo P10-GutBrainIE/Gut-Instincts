@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/383289609364041800/9296fc96113445be9b3e3051992ca589/artifacts
+end_time: 1745496774837
+entry_point_name: ''
+experiment_id: '383289609364041800'
+lifecycle_stage: active
+run_id: 9296fc96113445be9b3e3051992ca589
+run_name: funny-newt-541
+run_uuid: 9296fc96113445be9b3e3051992ca589
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745496769932
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

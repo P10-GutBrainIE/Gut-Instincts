@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/383289609364041800/d33c4ee99418421197994bd01a53c966/artifacts
+end_time: 1745522456618
+entry_point_name: ''
+experiment_id: '383289609364041800'
+lifecycle_stage: active
+run_id: d33c4ee99418421197994bd01a53c966
+run_name: secretive-gnat-104
+run_uuid: d33c4ee99418421197994bd01a53c966
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745521815627
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk
