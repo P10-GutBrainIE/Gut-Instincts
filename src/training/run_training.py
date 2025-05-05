@@ -61,7 +61,7 @@ def build_model(config, label_list=None, id2label=None, label2id=None):
 
 
 def training(config):
-	start_time = time.time() 
+	start_time = time.time()
 	dataset_dir_name = make_dataset_dir_name(config)
 
 	if config["model_type"] == "re":
@@ -70,9 +70,22 @@ def training(config):
 		output_dir = os.path.join("models", config["experiment_name"], dataset_dir_name)
 	os.makedirs(output_dir, exist_ok=True)
 
+	if config.get("resume_checkpoint"):
+		checkpoint = torch.load(config["resume_checkpoint"])
+		start_epoch = checkpoint["epoch"] + 1
+		best_f1_micro = checkpoint["best_f1_micro"]
+		run_id = checkpoint["run_id"]
+	else:
+		start_epoch = 0
+		best_f1_micro = 0.0
+		run_id = None
+
 	mlflow.set_experiment(experiment_name=config["experiment_name"])
-	mlflow.start_run()
-	mlflow.log_params(params=config)
+	if run_id:
+		mlflow.start_run(run_id=run_id)
+	else:
+		mlflow.start_run()
+		mlflow.log_params(params=config)
 
 	if config["model_type"] != "re":
 		label_list, label2id, id2label = load_bio_labels()
@@ -107,10 +120,14 @@ def training(config):
 		steps_per_epoch=len(train_loader),
 	)
 
-	best_f1_micro = 0.0
+	if config.get("resume_checkpoint"):
+		model.load_state_dict(checkpoint["model_state_dict"])
+		optimizer.load_state_dict(checkpoint["optimizer_state_dict"])
+		scheduler.load_state_dict(checkpoint["scheduler_state_dict"])
+
 	global_step = 0
 	num_epochs = config["hyperparameters"]["num_epochs"]
-	for epoch in tqdm(range(num_epochs), desc="Training", unit="epoch"):
+	for epoch in tqdm(range(start_epoch, num_epochs), desc="Training", unit="epoch"):
 		model.train()
 
 		if freeze_epochs > 0 and epoch == freeze_epochs:
@@ -175,15 +192,20 @@ def training(config):
 		if epoch == num_epochs - 1:
 			mlflow.log_metric("Best F1_micro", best_f1_micro)
 
-		elapsed_time = time.time() - start_time
-		if elapsed_time > 39600:
-			print("Training time exceeded 11 hours. Saving checkpoint and exiting.")
-			if config["model_type"] == "re":
-				checkpoint_dir = os.path.join("model_checkpoints", config["experiment_name"], f"{config['subtask']}_{dataset_dir_name}")
-			else:
-				checkpoint_dir = os.path.join("model_checkpoints", config["experiment_name"], dataset_dir_name)
-			os.makedirs(checkpoint_dir, exist_ok=True)
-			model.save(checkpoint_dir)
+		if time.time() - start_time > 36000:
+			print("Training time exceeded 10 hours. Saving checkpoint and exiting.")
+			checkpoint_path = os.path.join(output_dir, "checkpoint.pth")
+			torch.save(
+				{
+					"epoch": epoch,
+					"model_state_dict": model.state_dict(),
+					"optimizer_state_dict": optimizer.state_dict(),
+					"scheduler_state_dict": scheduler.state_dict(),
+					"best_f1_micro": best_f1_micro,
+					"run_id": mlflow.active_run().info.run_id,
+				},
+				checkpoint_path,
+			)
 			mlflow.log_metric("Finished epochs", epoch + 1)
 			mlflow.end_run()
 			return
