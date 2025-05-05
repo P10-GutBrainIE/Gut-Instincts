@@ -49,9 +49,14 @@ def create_training_dataset(
 
 	shared_path = os.path.join("data", "Annotations", "Train")
 	for quality in dataset_qualities:
-		datasets[quality] = load_json_data(
-			os.path.join(shared_path, f"{quality}_quality", "json_format", f"train_{quality}.json")
-		)
+		if quality == "dev":
+			datasets[quality] = load_json_data(
+				os.path.join("data", "Annotations", "Dev", "json_format", f"{quality}.json")
+			)
+		else:
+			datasets[quality] = load_json_data(
+				os.path.join(shared_path, f"{quality}_quality", "json_format", f"train_{quality}.json")
+			)
 
 		if quality == "silver":
 			datasets[quality] = clean_incorrect_text_spans(
