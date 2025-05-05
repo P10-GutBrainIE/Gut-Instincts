@@ -2,13 +2,6 @@
     "36532064": {
         "entities": [
             {
-                "start_idx": 26,
-                "end_idx": 35,
-                "location": "title",
-                "text_span": "BrainBiota",
-                "label": "microbiome"
-            },
-            {
                 "start_idx": 57,
                 "end_idx": 83,
                 "location": "title",
@@ -93,13 +86,6 @@
                 "label": "microbiome"
             },
             {
-                "start_idx": 503,
-                "end_idx": 512,
-                "location": "abstract",
-                "text_span": "BrainBiota",
-                "label": "microbiome"
-            },
-            {
                 "start_idx": 515,
                 "end_idx": 522,
                 "location": "abstract",
@@ -142,13 +128,6 @@
                 "label": "microbiome"
             },
             {
-                "start_idx": 967,
-                "end_idx": 976,
-                "location": "abstract",
-                "text_span": "BrainBiota",
-                "label": "bacteria"
-            },
-            {
                 "start_idx": 985,
                 "end_idx": 998,
                 "location": "abstract",
@@ -173,6 +152,13 @@
     },
     "37212075": {
         "entities": [
+            {
+                "start_idx": 0,
+                "end_idx": 17,
+                "location": "title",
+                "text_span": "IgA-Biome Profiles",
+                "label": "biomedical technique"
+            },
             {
                 "start_idx": 34,
                 "end_idx": 70,
@@ -230,6 +216,13 @@
                 "label": "microbiome"
             },
             {
+                "start_idx": 331,
+                "end_idx": 338,
+                "location": "abstract",
+                "text_span": "IgA-Biom",
+                "label": "biomedical technique"
+            },
+            {
                 "start_idx": 344,
                 "end_idx": 354,
                 "location": "abstract",
@@ -238,9 +231,16 @@
             },
             {
                 "start_idx": 383,
+                "end_idx": 386,
+                "location": "abstract",
+                "text_span": "akin",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 386,
                 "end_idx": 396,
                 "location": "abstract",
-                "text_span": "akinetic rigid",
+                "text_span": "netic rigid",
                 "label": "DDF"
             },
             {
@@ -262,6 +262,13 @@
                 "end_idx": 424,
                 "location": "abstract",
                 "text_span": "TD",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 436,
+                "end_idx": 437,
+                "location": "abstract",
+                "text_span": "'s",
                 "label": "DDF"
             },
             {
@@ -314,11 +321,32 @@
                 "label": "DDF"
             },
             {
+                "start_idx": 1038,
+                "end_idx": 1045,
+                "location": "abstract",
+                "text_span": "analyses",
+                "label": "statistical technique"
+            },
+            {
+                "start_idx": 1139,
+                "end_idx": 1140,
+                "location": "abstract",
+                "text_span": "AR",
+                "label": "DDF"
+            },
+            {
                 "start_idx": 1172,
                 "end_idx": 1189,
                 "location": "abstract",
                 "text_span": "IgA-Biome analyses",
                 "label": "biomedical technique"
+            },
+            {
+                "start_idx": 1209,
+                "end_idx": 1210,
+                "location": "abstract",
+                "text_span": "TD",
+                "label": "DDF"
             },
             {
                 "start_idx": 1283,
@@ -472,13 +500,6 @@
                 "label": "human"
             },
             {
-                "start_idx": 541,
-                "end_idx": 560,
-                "location": "abstract",
-                "text_span": "ectopic colonization",
-                "label": "DDF"
-            },
-            {
                 "start_idx": 598,
                 "end_idx": 626,
                 "location": "abstract",
@@ -588,13 +609,6 @@
                 "end_idx": 1126,
                 "location": "abstract",
                 "text_span": "AD",
-                "label": "DDF"
-            },
-            {
-                "start_idx": 1133,
-                "end_idx": 1152,
-                "location": "abstract",
-                "text_span": "ectopic colonization",
                 "label": "DDF"
             },
             {
@@ -887,9 +901,16 @@
             },
             {
                 "start_idx": 94,
+                "end_idx": 96,
+                "location": "title",
+                "text_span": "ine",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 96,
                 "end_idx": 120,
                 "location": "title",
-                "text_span": "inescapable electric stress",
+                "text_span": "escapable electric stress",
                 "label": "DDF"
             },
             {
@@ -922,9 +943,16 @@
             },
             {
                 "start_idx": 226,
+                "end_idx": 228,
+                "location": "abstract",
+                "text_span": "ine",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 228,
                 "end_idx": 252,
                 "location": "abstract",
-                "text_span": "inescapable electric stress",
+                "text_span": "escapable electric stress",
                 "label": "DDF"
             },
             {
@@ -943,9 +971,16 @@
             },
             {
                 "start_idx": 372,
+                "end_idx": 374,
+                "location": "abstract",
+                "text_span": "ine",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 374,
                 "end_idx": 398,
                 "location": "abstract",
-                "text_span": "inescapable electric stress",
+                "text_span": "escapable electric stress",
                 "label": "DDF"
             },
             {
@@ -971,9 +1006,16 @@
             },
             {
                 "start_idx": 536,
+                "end_idx": 552,
+                "location": "abstract",
+                "text_span": "non-LH (resilient",
+                "label": "animal"
+            },
+            {
+                "start_idx": 550,
                 "end_idx": 558,
                 "location": "abstract",
-                "text_span": "non-LH (resilient) rats",
+                "text_span": "ent) rats",
                 "label": "animal"
             },
             {
@@ -999,9 +1041,16 @@
             },
             {
                 "start_idx": 701,
+                "end_idx": 721,
+                "location": "abstract",
+                "text_span": "control and resilient",
+                "label": "animal"
+            },
+            {
+                "start_idx": 719,
                 "end_idx": 726,
                 "location": "abstract",
-                "text_span": "control and resilient rats",
+                "text_span": "ent rats",
                 "label": "animal"
             },
             {
@@ -1020,9 +1069,16 @@
             },
             {
                 "start_idx": 838,
+                "end_idx": 858,
+                "location": "abstract",
+                "text_span": "control and resilient",
+                "label": "animal"
+            },
+            {
+                "start_idx": 856,
                 "end_idx": 863,
                 "location": "abstract",
-                "text_span": "control and resilient rats",
+                "text_span": "ent rats",
                 "label": "animal"
             },
             {
@@ -1055,9 +1111,16 @@
             },
             {
                 "start_idx": 1012,
+                "end_idx": 1032,
+                "location": "abstract",
+                "text_span": "control and resilient",
+                "label": "animal"
+            },
+            {
+                "start_idx": 1030,
                 "end_idx": 1037,
                 "location": "abstract",
-                "text_span": "control and resilient rats",
+                "text_span": "ent rats",
                 "label": "animal"
             },
             {
@@ -1069,9 +1132,16 @@
             },
             {
                 "start_idx": 1066,
+                "end_idx": 1069,
+                "location": "abstract",
+                "text_span": "prop",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 1076,
                 "end_idx": 1079,
                 "location": "abstract",
-                "text_span": "propionic acid",
+                "text_span": "acid",
                 "label": "chemical"
             },
             {
@@ -1083,9 +1153,16 @@
             },
             {
                 "start_idx": 1142,
+                "end_idx": 1162,
+                "location": "abstract",
+                "text_span": "control and resilient",
+                "label": "animal"
+            },
+            {
+                "start_idx": 1160,
                 "end_idx": 1167,
                 "location": "abstract",
-                "text_span": "control and resilient rats",
+                "text_span": "ent rats",
                 "label": "animal"
             },
             {
@@ -1104,9 +1181,16 @@
             },
             {
                 "start_idx": 1255,
+                "end_idx": 1275,
+                "location": "abstract",
+                "text_span": "control and resilient",
+                "label": "animal"
+            },
+            {
+                "start_idx": 1273,
                 "end_idx": 1280,
                 "location": "abstract",
-                "text_span": "control and resilient rats",
+                "text_span": "ent rats",
                 "label": "animal"
             },
             {
@@ -1115,13 +1199,6 @@
                 "location": "abstract",
                 "text_span": "lactic acid",
                 "label": "chemical"
-            },
-            {
-                "start_idx": 1340,
-                "end_idx": 1352,
-                "location": "abstract",
-                "text_span": "Lactobacillus",
-                "label": "bacteria"
             },
             {
                 "start_idx": 1443,
@@ -1153,9 +1230,16 @@
             },
             {
                 "start_idx": 1577,
+                "end_idx": 1579,
+                "location": "abstract",
+                "text_span": "ine",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 1579,
                 "end_idx": 1607,
                 "location": "abstract",
-                "text_span": "inescapable electric foot shock",
+                "text_span": "escapable electric foot shock",
                 "label": "DDF"
             }
         ]
@@ -1178,10 +1262,31 @@
             },
             {
                 "start_idx": 68,
+                "end_idx": 71,
+                "location": "title",
+                "text_span": "gut-",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 72,
+                "end_idx": 76,
+                "location": "title",
+                "text_span": "brain",
+                "label": "anatomical location"
+            },
+            {
+                "start_idx": 77,
+                "end_idx": 77,
+                "location": "title",
+                "text_span": "-",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 78,
                 "end_idx": 84,
                 "location": "title",
-                "text_span": "gut-brain-modules",
-                "label": "chemical"
+                "text_span": "modules",
+                "label": "anatomical location"
             },
             {
                 "start_idx": 89,
@@ -1224,13 +1329,6 @@
                 "location": "abstract",
                 "text_span": "Dietary fiber",
                 "label": "dietary supplement"
-            },
-            {
-                "start_idx": 530,
-                "end_idx": 536,
-                "location": "abstract",
-                "text_span": "enzymes",
-                "label": "chemical"
             },
             {
                 "start_idx": 572,
@@ -1307,10 +1405,10 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 118,
+                "start_idx": 105,
                 "end_idx": 134,
                 "location": "title",
-                "text_span": "Cognitive Decline",
+                "text_span": "Disorders of Cognitive Decline",
                 "label": "DDF"
             },
             {
@@ -1329,9 +1427,9 @@
             },
             {
                 "start_idx": 409,
-                "end_idx": 432,
+                "end_idx": 442,
                 "location": "abstract",
-                "text_span": "pharmacologically active",
+                "text_span": "pharmacologically active compounds",
                 "label": "chemical"
             },
             {
@@ -1368,6 +1466,13 @@
                 "location": "abstract",
                 "text_span": "bacterial symbiont species",
                 "label": "bacteria"
+            },
+            {
+                "start_idx": 1433,
+                "end_idx": 1460,
+                "location": "abstract",
+                "text_span": "dietary flavonoid components",
+                "label": "chemical"
             },
             {
                 "start_idx": 1469,
@@ -1545,10 +1650,10 @@
                 "label": "chemical"
             },
             {
-                "start_idx": 2722,
+                "start_idx": 2715,
                 "end_idx": 2730,
                 "location": "abstract",
-                "text_span": "flavonoid",
+                "text_span": "native flavonoid",
                 "label": "chemical"
             },
             {
@@ -1617,6 +1722,13 @@
                 "location": "abstract",
                 "text_span": "gut microbiota",
                 "label": "microbiome"
+            },
+            {
+                "start_idx": 320,
+                "end_idx": 336,
+                "location": "abstract",
+                "text_span": "clinical symptoms",
+                "label": "DDF"
             },
             {
                 "start_idx": 351,
@@ -1725,9 +1837,16 @@
             },
             {
                 "start_idx": 724,
+                "end_idx": 732,
+                "location": "abstract",
+                "text_span": "Faecaliba",
+                "label": "bacteria"
+            },
+            {
+                "start_idx": 732,
                 "end_idx": 739,
                 "location": "abstract",
-                "text_span": "Faecalibacterium",
+                "text_span": "acterium",
                 "label": "bacteria"
             },
             {
@@ -1736,6 +1855,13 @@
                 "location": "abstract",
                 "text_span": "short-chain fatty acid butyrate",
                 "label": "chemical"
+            },
+            {
+                "start_idx": 793,
+                "end_idx": 812,
+                "location": "abstract",
+                "text_span": "psychiatric symptoms",
+                "label": "DDF"
             },
             {
                 "start_idx": 903,
@@ -1844,17 +1970,17 @@
             },
             {
                 "start_idx": 1343,
-                "end_idx": 1358,
+                "end_idx": 1351,
                 "location": "abstract",
-                "text_span": "Faecalibacterium",
+                "text_span": "Faecaliba",
                 "label": "bacteria"
             },
             {
-                "start_idx": 1364,
-                "end_idx": 1368,
+                "start_idx": 1351,
+                "end_idx": 1358,
                 "location": "abstract",
-                "text_span": "MCP-1",
-                "label": "chemical"
+                "text_span": "acterium",
+                "label": "bacteria"
             },
             {
                 "start_idx": 1418,
@@ -1897,6 +2023,13 @@
                 "location": "abstract",
                 "text_span": "psychiatric symptoms",
                 "label": "DDF"
+            },
+            {
+                "start_idx": 1689,
+                "end_idx": 1697,
+                "location": "abstract",
+                "text_span": "cytokines",
+                "label": "chemical"
             },
             {
                 "start_idx": 1786,
@@ -2103,7 +2236,7 @@
                 "end_idx": 456,
                 "location": "abstract",
                 "text_span": "DAT",
-                "label": "chemical"
+                "label": "gene"
             },
             {
                 "start_idx": 463,
@@ -2268,9 +2401,16 @@
             },
             {
                 "start_idx": 1272,
+                "end_idx": 1275,
+                "location": "abstract",
+                "text_span": "prop",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 1282,
                 "end_idx": 1285,
                 "location": "abstract",
-                "text_span": "propionic acid",
+                "text_span": "acid",
                 "label": "chemical"
             },
             {
@@ -2291,6 +2431,13 @@
     },
     "30900006": {
         "entities": [
+            {
+                "start_idx": 186,
+                "end_idx": 195,
+                "location": "abstract",
+                "text_span": "microbiota",
+                "label": "microbiome"
+            },
             {
                 "start_idx": 273,
                 "end_idx": 296,
@@ -2314,9 +2461,9 @@
             },
             {
                 "start_idx": 585,
-                "end_idx": 619,
+                "end_idx": 609,
                 "location": "abstract",
-                "text_span": "broad-spectrum antibiotic treatment",
+                "text_span": "broad-spectrum antibiotic",
                 "label": "drug"
             },
             {
@@ -2369,10 +2516,10 @@
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 986,
-                "end_idx": 1003,
+                "start_idx": 1085,
+                "end_idx": 1095,
                 "location": "abstract",
-                "text_span": "fecal miRNA target",
+                "text_span": "fecal miRNA",
                 "label": "gene"
             },
             {
@@ -2404,10 +2551,10 @@
                 "label": "gene"
             },
             {
-                "start_idx": 1434,
+                "start_idx": 1427,
                 "end_idx": 1448,
                 "location": "abstract",
-                "text_span": "Parabacteroides",
+                "text_span": "Genera Parabacteroides",
                 "label": "bacteria"
             },
             {
@@ -2443,31 +2590,38 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 19,
-                "end_idx": 52,
+                "start_idx": 80,
+                "end_idx": 94,
                 "location": "abstract",
-                "text_span": "complex and heterogeneous disorder",
+                "text_span": "mild discomfort",
                 "label": "DDF"
             },
             {
                 "start_idx": 99,
-                "end_idx": 109,
+                "end_idx": 103,
                 "location": "abstract",
-                "text_span": "indigestion",
+                "text_span": "indig",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 102,
+                "end_idx": 106,
+                "location": "abstract",
+                "text_span": "igest",
                 "label": "DDF"
             },
             {
                 "start_idx": 118,
-                "end_idx": 121,
+                "end_idx": 131,
                 "location": "abstract",
-                "text_span": "agon",
+                "text_span": "agonizing pain",
                 "label": "DDF"
             },
             {
                 "start_idx": 136,
-                "end_idx": 146,
+                "end_idx": 145,
                 "location": "abstract",
-                "text_span": "renal colic",
+                "text_span": "renal coli",
                 "label": "DDF"
             },
             {
@@ -2500,9 +2654,16 @@
             },
             {
                 "start_idx": 396,
-                "end_idx": 436,
+                "end_idx": 420,
                 "location": "abstract",
-                "text_span": "visceral hypersensitivity and nociception",
+                "text_span": "visceral hypersensitivity",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 426,
+                "end_idx": 430,
+                "location": "abstract",
+                "text_span": "nocic",
                 "label": "DDF"
             },
             {
@@ -2521,9 +2682,16 @@
             },
             {
                 "start_idx": 726,
+                "end_idx": 728,
+                "location": "abstract",
+                "text_span": "pre",
+                "label": "dietary supplement"
+            },
+            {
+                "start_idx": 735,
                 "end_idx": 735,
                 "location": "abstract",
-                "text_span": "prebiotics",
+                "text_span": "s",
                 "label": "dietary supplement"
             },
             {
@@ -2541,17 +2709,10 @@
                 "label": "microbiome"
             },
             {
-                "start_idx": 843,
-                "end_idx": 865,
-                "location": "abstract",
-                "text_span": "visceral pain sensation",
-                "label": "DDF"
-            },
-            {
                 "start_idx": 904,
-                "end_idx": 923,
+                "end_idx": 917,
                 "location": "abstract",
-                "text_span": "visceral nociception",
+                "text_span": "visceral nocic",
                 "label": "DDF"
             },
             {
@@ -2563,9 +2724,16 @@
             },
             {
                 "start_idx": 980,
+                "end_idx": 982,
+                "location": "abstract",
+                "text_span": "pre",
+                "label": "dietary supplement"
+            },
+            {
+                "start_idx": 989,
                 "end_idx": 989,
                 "location": "abstract",
-                "text_span": "prebiotics",
+                "text_span": "s",
                 "label": "dietary supplement"
             },
             {
@@ -2823,17 +2991,10 @@
             },
             {
                 "start_idx": 51,
-                "end_idx": 53,
-                "location": "abstract",
-                "text_span": "gut",
-                "label": "microbiome"
-            },
-            {
-                "start_idx": 55,
                 "end_idx": 73,
                 "location": "abstract",
-                "text_span": "microbial community",
-                "label": "DDF"
+                "text_span": "gut microbial community",
+                "label": "microbiome"
             },
             {
                 "start_idx": 76,
@@ -2956,9 +3117,9 @@
             },
             {
                 "start_idx": 887,
-                "end_idx": 895,
+                "end_idx": 889,
                 "location": "abstract",
-                "text_span": "meropenem",
+                "text_span": "mer",
                 "label": "drug"
             },
             {
@@ -2997,10 +3158,10 @@
                 "label": "biomedical technique"
             },
             {
-                "start_idx": 1031,
+                "start_idx": 1021,
                 "end_idx": 1069,
                 "location": "abstract",
-                "text_span": "-induced microbial community disruption",
+                "text_span": "antibiotic-induced microbial community disruption",
                 "label": "DDF"
             },
             {
@@ -3030,6 +3191,13 @@
                 "location": "abstract",
                 "text_span": "colon",
                 "label": "anatomical location"
+            },
+            {
+                "start_idx": 1211,
+                "end_idx": 1223,
+                "location": "abstract",
+                "text_span": "lipid species",
+                "label": "chemical"
             },
             {
                 "start_idx": 1239,
@@ -3074,13 +3242,6 @@
                 "label": "chemical"
             },
             {
-                "start_idx": 1629,
-                "end_idx": 1642,
-                "location": "abstract",
-                "text_span": "neuropeptide Y",
-                "label": "chemical"
-            },
-            {
                 "start_idx": 1669,
                 "end_idx": 1691,
                 "location": "abstract",
@@ -3120,10 +3281,10 @@
                 "label": "bacteria"
             },
             {
-                "start_idx": 60,
+                "start_idx": 41,
                 "end_idx": 104,
                 "location": "title",
-                "text_span": "physiological and psychological abnormalities",
+                "text_span": "antibiotic induced physiological and psychological abnormalities",
                 "label": "DDF"
             },
             {
@@ -3149,16 +3310,23 @@
             },
             {
                 "start_idx": 123,
+                "end_idx": 127,
+                "location": "abstract",
+                "text_span": "broad",
+                "label": "drug"
+            },
+            {
+                "start_idx": 135,
                 "end_idx": 145,
                 "location": "abstract",
-                "text_span": "broad range antibiotics",
+                "text_span": "antibiotics",
                 "label": "drug"
             },
             {
                 "start_idx": 173,
-                "end_idx": 193,
+                "end_idx": 181,
                 "location": "abstract",
-                "text_span": "probiotic application",
+                "text_span": "probiotic",
                 "label": "dietary supplement"
             },
             {
@@ -3233,9 +3401,16 @@
             },
             {
                 "start_idx": 644,
+                "end_idx": 650,
+                "location": "abstract",
+                "text_span": "mineral",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 662,
                 "end_idx": 695,
                 "location": "abstract",
-                "text_span": "mineralocorticoid and N-methyl-D-aspartate receptors",
+                "text_span": "and N-methyl-D-aspartate receptors",
                 "label": "chemical"
             },
             {
@@ -3254,9 +3429,16 @@
             },
             {
                 "start_idx": 850,
+                "end_idx": 878,
+                "location": "abstract",
+                "text_span": "ampicillin-induced impairment",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 883,
                 "end_idx": 898,
                 "location": "abstract",
-                "text_span": "ampicillin-induced impairment in memory retention",
+                "text_span": "memory retention",
                 "label": "DDF"
             },
             {
@@ -3440,9 +3622,16 @@
             },
             {
                 "start_idx": 937,
+                "end_idx": 945,
+                "location": "abstract",
+                "text_span": "Faecaliba",
+                "label": "bacteria"
+            },
+            {
+                "start_idx": 945,
                 "end_idx": 952,
                 "location": "abstract",
-                "text_span": "Faecalibacterium",
+                "text_span": "acterium",
                 "label": "bacteria"
             },
             {
@@ -3481,6 +3670,13 @@
                 "label": "microbiome"
             },
             {
+                "start_idx": 1253,
+                "end_idx": 1256,
+                "location": "abstract",
+                "text_span": "diet",
+                "label": "dietary supplement"
+            },
+            {
                 "start_idx": 1262,
                 "end_idx": 1285,
                 "location": "abstract",
@@ -3496,7 +3692,7 @@
                 "end_idx": 38,
                 "location": "title",
                 "text_span": "human alpha-Synuclein",
-                "label": "chemical"
+                "label": "gene"
             },
             {
                 "start_idx": 62,
@@ -3563,9 +3759,16 @@
             },
             {
                 "start_idx": 448,
+                "end_idx": 454,
+                "location": "abstract",
+                "text_span": "shotgun",
+                "label": "biomedical technique"
+            },
+            {
+                "start_idx": 452,
                 "end_idx": 465,
                 "location": "abstract",
-                "text_span": "shotgun sequencing",
+                "text_span": "gun sequencing",
                 "label": "biomedical technique"
             },
             {
@@ -3654,9 +3857,16 @@
             },
             {
                 "start_idx": 1175,
+                "end_idx": 1183,
+                "location": "abstract",
+                "text_span": "human SNC",
+                "label": "gene"
+            },
+            {
+                "start_idx": 1183,
                 "end_idx": 1189,
                 "location": "abstract",
-                "text_span": "human SNCA gene",
+                "text_span": "CA gene",
                 "label": "gene"
             },
             {
@@ -3710,9 +3920,16 @@
             },
             {
                 "start_idx": 1589,
+                "end_idx": 1591,
+                "location": "abstract",
+                "text_span": "SNC",
+                "label": "gene"
+            },
+            {
+                "start_idx": 1591,
                 "end_idx": 1597,
                 "location": "abstract",
-                "text_span": "SNCA gene",
+                "text_span": "CA gene",
                 "label": "gene"
             },
             {
@@ -3734,6 +3951,13 @@
                 "end_idx": 1776,
                 "location": "abstract",
                 "text_span": "Na<sup>+</sup>",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 1868,
+                "end_idx": 1876,
+                "location": "abstract",
+                "text_span": "succinate",
                 "label": "chemical"
             },
             {
@@ -3770,13 +3994,6 @@
                 "location": "abstract",
                 "text_span": "antibiotic\u00a0cocktail",
                 "label": "drug"
-            },
-            {
-                "start_idx": 2149,
-                "end_idx": 2170,
-                "location": "abstract",
-                "text_span": "enteric nervous system",
-                "label": "anatomical location"
             },
             {
                 "start_idx": 2179,
@@ -4148,13 +4365,6 @@
                 "label": "microbiome"
             },
             {
-                "start_idx": 41,
-                "end_idx": 51,
-                "location": "title",
-                "text_span": "metabolites",
-                "label": "chemical"
-            },
-            {
                 "start_idx": 33,
                 "end_idx": 35,
                 "location": "abstract",
@@ -4355,7 +4565,7 @@
                 "end_idx": 1535,
                 "location": "abstract",
                 "text_span": "inflammation",
-                "label": "gene"
+                "label": "DDF"
             },
             {
                 "start_idx": 1553,
@@ -4363,6 +4573,13 @@
                 "location": "abstract",
                 "text_span": "gut",
                 "label": "anatomical location"
+            },
+            {
+                "start_idx": 1634,
+                "end_idx": 1655,
+                "location": "abstract",
+                "text_span": "inflammatory mediators",
+                "label": "chemical"
             },
             {
                 "start_idx": 1689,
@@ -4412,23 +4629,37 @@
             },
             {
                 "start_idx": 138,
+                "end_idx": 188,
+                "location": "title",
+                "text_span": "colony stimulating factor 1 receptor inhibitor PLX5",
+                "label": "drug"
+            },
+            {
+                "start_idx": 188,
                 "end_idx": 191,
                 "location": "title",
-                "text_span": "colony stimulating factor 1 receptor inhibitor PLX5622",
+                "text_span": "5622",
                 "label": "drug"
             },
             {
                 "start_idx": 0,
+                "end_idx": 3,
+                "location": "abstract",
+                "text_span": "PLX5",
+                "label": "drug"
+            },
+            {
+                "start_idx": 3,
                 "end_idx": 6,
                 "location": "abstract",
-                "text_span": "PLX5622",
+                "text_span": "5622",
                 "label": "drug"
             },
             {
                 "start_idx": 60,
-                "end_idx": 86,
+                "end_idx": 95,
                 "location": "abstract",
-                "text_span": "colony-stimulating factor 1",
+                "text_span": "colony-stimulating factor 1 receptor",
                 "label": "chemical"
             },
             {
@@ -4454,9 +4685,16 @@
             },
             {
                 "start_idx": 319,
+                "end_idx": 322,
+                "location": "abstract",
+                "text_span": "PLX5",
+                "label": "drug"
+            },
+            {
+                "start_idx": 322,
                 "end_idx": 325,
                 "location": "abstract",
-                "text_span": "PLX5622",
+                "text_span": "5622",
                 "label": "drug"
             },
             {
@@ -4489,9 +4727,16 @@
             },
             {
                 "start_idx": 526,
+                "end_idx": 529,
+                "location": "abstract",
+                "text_span": "PLX5",
+                "label": "drug"
+            },
+            {
+                "start_idx": 529,
                 "end_idx": 532,
                 "location": "abstract",
-                "text_span": "PLX5622",
+                "text_span": "5622",
                 "label": "drug"
             },
             {
@@ -4531,9 +4776,16 @@
             },
             {
                 "start_idx": 843,
+                "end_idx": 846,
+                "location": "abstract",
+                "text_span": "PLX5",
+                "label": "animal"
+            },
+            {
+                "start_idx": 849,
                 "end_idx": 863,
                 "location": "abstract",
-                "text_span": "PLX5622-treated group",
+                "text_span": "2-treated group",
                 "label": "animal"
             },
             {
@@ -4544,24 +4796,31 @@
                 "label": "statistical technique"
             },
             {
-                "start_idx": 945,
-                "end_idx": 952,
+                "start_idx": 979,
+                "end_idx": 982,
                 "location": "abstract",
-                "text_span": "bacteria",
-                "label": "bacteria"
+                "text_span": "PLX5",
+                "label": "animal"
             },
             {
-                "start_idx": 979,
+                "start_idx": 985,
                 "end_idx": 999,
                 "location": "abstract",
-                "text_span": "PLX5622-treated group",
+                "text_span": "2-treated group",
                 "label": "animal"
             },
             {
                 "start_idx": 1029,
+                "end_idx": 1032,
+                "location": "abstract",
+                "text_span": "PLX5",
+                "label": "drug"
+            },
+            {
+                "start_idx": 1032,
                 "end_idx": 1035,
                 "location": "abstract",
-                "text_span": "PLX5622",
+                "text_span": "5622",
                 "label": "drug"
             },
             {
@@ -4573,9 +4832,16 @@
             },
             {
                 "start_idx": 1162,
+                "end_idx": 1165,
+                "location": "abstract",
+                "text_span": "PLX5",
+                "label": "drug"
+            },
+            {
+                "start_idx": 1165,
                 "end_idx": 1168,
                 "location": "abstract",
-                "text_span": "PLX5622",
+                "text_span": "5622",
                 "label": "drug"
             },
             {
@@ -4608,9 +4874,16 @@
             },
             {
                 "start_idx": 1502,
+                "end_idx": 1505,
+                "location": "abstract",
+                "text_span": "PLX5",
+                "label": "drug"
+            },
+            {
+                "start_idx": 1505,
                 "end_idx": 1508,
                 "location": "abstract",
-                "text_span": "PLX5622",
+                "text_span": "5622",
                 "label": "drug"
             },
             {
@@ -4643,17 +4916,17 @@
             },
             {
                 "start_idx": 1686,
-                "end_idx": 1692,
+                "end_idx": 1689,
                 "location": "abstract",
-                "text_span": "PLX5622",
+                "text_span": "PLX5",
                 "label": "drug"
             },
             {
-                "start_idx": 1758,
-                "end_idx": 1764,
+                "start_idx": 1689,
+                "end_idx": 1692,
                 "location": "abstract",
-                "text_span": "animals",
-                "label": "animal"
+                "text_span": "5622",
+                "label": "drug"
             },
             {
                 "start_idx": 1779,
@@ -4667,10 +4940,10 @@
     "32438623": {
         "entities": [
             {
-                "start_idx": 13,
+                "start_idx": 21,
                 "end_idx": 23,
                 "location": "title",
-                "text_span": "Healthy Gut",
+                "text_span": "Gut",
                 "label": "anatomical location"
             },
             {
@@ -4787,9 +5060,16 @@
             },
             {
                 "start_idx": 1248,
+                "end_idx": 1265,
+                "location": "abstract",
+                "text_span": "unpasteurised milk",
+                "label": "food"
+            },
+            {
+                "start_idx": 1271,
                 "end_idx": 1284,
                 "location": "abstract",
-                "text_span": "unpasteurised milk and dairy products",
+                "text_span": "dairy products",
                 "label": "food"
             },
             {
@@ -4815,9 +5095,16 @@
             },
             {
                 "start_idx": 1588,
+                "end_idx": 1605,
+                "location": "abstract",
+                "text_span": "unpasteurised milk",
+                "label": "food"
+            },
+            {
+                "start_idx": 1611,
                 "end_idx": 1624,
                 "location": "abstract",
-                "text_span": "unpasteurised milk and dairy products",
+                "text_span": "dairy products",
                 "label": "food"
             },
             {
@@ -4861,9 +5148,23 @@
         "entities": [
             {
                 "start_idx": 4,
+                "end_idx": 10,
+                "location": "title",
+                "text_span": "Nonnutr",
+                "label": "dietary supplement"
+            },
+            {
+                "start_idx": 10,
+                "end_idx": 25,
+                "location": "title",
+                "text_span": "ritive Sweetener",
+                "label": "dietary supplement"
+            },
+            {
+                "start_idx": 25,
                 "end_idx": 26,
                 "location": "title",
-                "text_span": "Nonnutritive Sweeteners",
+                "text_span": "rs",
                 "label": "dietary supplement"
             },
             {
@@ -4882,9 +5183,16 @@
             },
             {
                 "start_idx": 117,
+                "end_idx": 122,
+                "location": "title",
+                "text_span": "Morbid",
+                "label": "human"
+            },
+            {
+                "start_idx": 126,
                 "end_idx": 139,
                 "location": "title",
-                "text_span": "Morbidly Obese Subjects",
+                "text_span": "Obese Subjects",
                 "label": "human"
             },
             {
@@ -4924,9 +5232,23 @@
             },
             {
                 "start_idx": 207,
+                "end_idx": 213,
+                "location": "abstract",
+                "text_span": "nonnutr",
+                "label": "dietary supplement"
+            },
+            {
+                "start_idx": 213,
+                "end_idx": 228,
+                "location": "abstract",
+                "text_span": "ritive sweetener",
+                "label": "dietary supplement"
+            },
+            {
+                "start_idx": 228,
                 "end_idx": 229,
                 "location": "abstract",
-                "text_span": "nonnutritive sweeteners",
+                "text_span": "rs",
                 "label": "dietary supplement"
             },
             {
@@ -4937,6 +5259,13 @@
                 "label": "dietary supplement"
             },
             {
+                "start_idx": 279,
+                "end_idx": 286,
+                "location": "abstract",
+                "text_span": "subjects",
+                "label": "human"
+            },
+            {
                 "start_idx": 293,
                 "end_idx": 306,
                 "location": "abstract",
@@ -4944,10 +5273,10 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 363,
+                "start_idx": 348,
                 "end_idx": 375,
                 "location": "abstract",
-                "text_span": "questionnaire",
+                "text_span": "food frequency questionnaire",
                 "label": "statistical technique"
             },
             {
@@ -5021,17 +5350,24 @@
                 "label": "human"
             },
             {
-                "start_idx": 703,
+                "start_idx": 701,
                 "end_idx": 704,
                 "location": "abstract",
-                "text_span": "Ss",
+                "text_span": "NNSs",
                 "label": "dietary supplement"
             },
             {
                 "start_idx": 756,
+                "end_idx": 765,
+                "location": "abstract",
+                "text_span": "Faecal but",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 771,
                 "end_idx": 774,
                 "location": "abstract",
-                "text_span": "Faecal butyric acid",
+                "text_span": "acid",
                 "label": "chemical"
             },
             {
@@ -5057,9 +5393,16 @@
             },
             {
                 "start_idx": 1030,
+                "end_idx": 1032,
+                "location": "abstract",
+                "text_span": "But",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 1038,
                 "end_idx": 1041,
                 "location": "abstract",
-                "text_span": "Butyric acid",
+                "text_span": "acid",
                 "label": "chemical"
             },
             {
@@ -5071,9 +5414,16 @@
             },
             {
                 "start_idx": 1112,
+                "end_idx": 1114,
+                "location": "abstract",
+                "text_span": "dys",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 1120,
                 "end_idx": 1124,
                 "location": "abstract",
-                "text_span": "dyslipidaemia",
+                "text_span": "aemia",
                 "label": "DDF"
             },
             {
@@ -5099,22 +5449,22 @@
             },
             {
                 "start_idx": 1297,
+                "end_idx": 1299,
+                "location": "abstract",
+                "text_span": "but",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 1305,
                 "end_idx": 1308,
                 "location": "abstract",
-                "text_span": "butyric acid",
+                "text_span": "acid",
                 "label": "chemical"
             }
         ]
     },
     "30405455": {
         "entities": [
-            {
-                "start_idx": 14,
-                "end_idx": 23,
-                "location": "title",
-                "text_span": "Microbiota",
-                "label": "microbiome"
-            },
             {
                 "start_idx": 62,
                 "end_idx": 86,
@@ -5446,18 +5796,18 @@
     "37676767": {
         "entities": [
             {
-                "start_idx": 6,
-                "end_idx": 16,
-                "location": "title",
-                "text_span": "deprivation",
-                "label": "DDF"
-            },
-            {
                 "start_idx": 22,
                 "end_idx": 43,
                 "location": "title",
                 "text_span": "microbiome-borne curli",
                 "label": "chemical"
+            },
+            {
+                "start_idx": 51,
+                "end_idx": 63,
+                "location": "title",
+                "text_span": "gut bacterial",
+                "label": "microbiome"
             },
             {
                 "start_idx": 120,
@@ -5530,25 +5880,11 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 330,
-                "end_idx": 353,
-                "location": "abstract",
-                "text_span": "reduced barrier function",
-                "label": "DDF"
-            },
-            {
                 "start_idx": 399,
                 "end_idx": 404,
                 "location": "abstract",
                 "text_span": "toxins",
                 "label": "chemical"
-            },
-            {
-                "start_idx": 430,
-                "end_idx": 446,
-                "location": "abstract",
-                "text_span": "fiber deprivation",
-                "label": "DDF"
             },
             {
                 "start_idx": 464,
@@ -5559,9 +5895,16 @@
             },
             {
                 "start_idx": 510,
+                "end_idx": 511,
+                "location": "abstract",
+                "text_span": "\u03b1S",
+                "label": "chemical"
+            },
+            {
+                "start_idx": 511,
                 "end_idx": 513,
                 "location": "abstract",
-                "text_span": "\u03b1Syn",
+                "text_span": "Syn",
                 "label": "chemical"
             },
             {
@@ -5607,13 +5950,6 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 977,
-                "end_idx": 978,
-                "location": "abstract",
-                "text_span": "PD",
-                "label": "DDF"
-            },
-            {
                 "start_idx": 1065,
                 "end_idx": 1066,
                 "location": "abstract",
@@ -5625,17 +5961,17 @@
     "25911232": {
         "entities": [
             {
-                "start_idx": 0,
-                "end_idx": 9,
-                "location": "title",
-                "text_span": "Microbiota",
-                "label": "microbiome"
-            },
-            {
                 "start_idx": 237,
                 "end_idx": 258,
                 "location": "abstract",
                 "text_span": "gastrointestinal tract",
+                "label": "anatomical location"
+            },
+            {
+                "start_idx": 369,
+                "end_idx": 371,
+                "location": "abstract",
+                "text_span": "CNS",
                 "label": "anatomical location"
             },
             {
@@ -5714,13 +6050,6 @@
                 "location": "abstract",
                 "text_span": "schizophrenia",
                 "label": "DDF"
-            },
-            {
-                "start_idx": 1138,
-                "end_idx": 1150,
-                "location": "abstract",
-                "text_span": "psychobiotics",
-                "label": "dietary supplement"
             }
         ]
     },
@@ -5739,20 +6068,6 @@
                 "location": "title",
                 "text_span": "Gut Dysbiosis",
                 "label": "DDF"
-            },
-            {
-                "start_idx": 50,
-                "end_idx": 82,
-                "location": "title",
-                "text_span": "Metabotropic Glutamate Receptor 5",
-                "label": "gene"
-            },
-            {
-                "start_idx": 93,
-                "end_idx": 103,
-                "location": "title",
-                "text_span": "Mouse Model",
-                "label": "animal"
             },
             {
                 "start_idx": 108,
@@ -5804,13 +6119,6 @@
                 "label": "microbiome"
             },
             {
-                "start_idx": 252,
-                "end_idx": 263,
-                "location": "abstract",
-                "text_span": "dysregulated",
-                "label": "DDF"
-            },
-            {
                 "start_idx": 287,
                 "end_idx": 297,
                 "location": "abstract",
@@ -5840,30 +6148,23 @@
             },
             {
                 "start_idx": 443,
-                "end_idx": 454,
+                "end_idx": 447,
                 "location": "abstract",
-                "text_span": "metabotropic",
-                "label": "gene"
+                "text_span": "metab",
+                "label": "animal"
             },
             {
                 "start_idx": 456,
-                "end_idx": 464,
+                "end_idx": 481,
                 "location": "abstract",
-                "text_span": "glutamate",
-                "label": "bacteria"
+                "text_span": "glutamate receptor 5 (mGlu",
+                "label": "animal"
             },
             {
-                "start_idx": 466,
-                "end_idx": 473,
-                "location": "abstract",
-                "text_span": "receptor",
-                "label": "gene"
-            },
-            {
-                "start_idx": 475,
+                "start_idx": 481,
                 "end_idx": 497,
                 "location": "abstract",
-                "text_span": "5 (mGlu5) knockout mice",
+                "text_span": "u5) knockout mice",
                 "label": "animal"
             },
             {
@@ -5882,9 +6183,16 @@
             },
             {
                 "start_idx": 637,
+                "end_idx": 640,
+                "location": "abstract",
+                "text_span": "mGlu",
+                "label": "animal"
+            },
+            {
+                "start_idx": 640,
                 "end_idx": 679,
                 "location": "abstract",
-                "text_span": "mGlu5 knockout (KO) and wild-type (WT) mice",
+                "text_span": "u5 knockout (KO) and wild-type (WT) mice",
                 "label": "animal"
             },
             {
@@ -5896,9 +6204,16 @@
             },
             {
                 "start_idx": 1109,
+                "end_idx": 1118,
+                "location": "abstract",
+                "text_span": "<i>Erysipe",
+                "label": "bacteria"
+            },
+            {
+                "start_idx": 1118,
                 "end_idx": 1141,
                 "location": "abstract",
-                "text_span": "<i>Erysipelotrichaceae</i> family",
+                "text_span": "elotrichaceae</i> family",
                 "label": "bacteria"
             },
             {
@@ -5916,17 +6231,45 @@
                 "label": "DDF"
             },
             {
+                "start_idx": 1280,
+                "end_idx": 1281,
+                "location": "abstract",
+                "text_span": "KO",
+                "label": "animal"
+            },
+            {
+                "start_idx": 1287,
+                "end_idx": 1288,
+                "location": "abstract",
+                "text_span": "WT",
+                "label": "animal"
+            },
+            {
                 "start_idx": 1310,
+                "end_idx": 1316,
+                "location": "abstract",
+                "text_span": "Erysipe",
+                "label": "bacteria"
+            },
+            {
+                "start_idx": 1316,
                 "end_idx": 1327,
                 "location": "abstract",
-                "text_span": "Erysipelotrichales",
+                "text_span": "elotrichales",
                 "label": "bacteria"
             },
             {
                 "start_idx": 1330,
+                "end_idx": 1338,
+                "location": "abstract",
+                "text_span": "Bacteroid",
+                "label": "bacteria"
+            },
+            {
+                "start_idx": 1336,
                 "end_idx": 1342,
                 "location": "abstract",
-                "text_span": "Bacteroidales",
+                "text_span": "oidales",
                 "label": "bacteria"
             },
             {
@@ -5937,17 +6280,17 @@
                 "label": "bacteria"
             },
             {
-                "start_idx": 1470,
-                "end_idx": 1483,
+                "start_idx": 1501,
+                "end_idx": 1504,
                 "location": "abstract",
-                "text_span": "gut microbiota",
-                "label": "microbiome"
+                "text_span": "mGlu",
+                "label": "animal"
             },
             {
-                "start_idx": 1501,
+                "start_idx": 1504,
                 "end_idx": 1520,
                 "location": "abstract",
-                "text_span": "mGlu5 KO and WT mice",
+                "text_span": "u5 KO and WT mice",
                 "label": "animal"
             },
             {
@@ -6197,13 +6540,6 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 724,
-                "end_idx": 733,
-                "location": "abstract",
-                "text_span": "individual",
-                "label": "human"
-            },
-            {
                 "start_idx": 741,
                 "end_idx": 747,
                 "location": "abstract",
@@ -6215,6 +6551,13 @@
                 "end_idx": 762,
                 "location": "abstract",
                 "text_span": "depression",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 790,
+                "end_idx": 800,
+                "location": "abstract",
+                "text_span": "pathologies",
                 "label": "DDF"
             },
             {
@@ -6246,20 +6589,6 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 1082,
-                "end_idx": 1090,
-                "location": "abstract",
-                "text_span": "nutrients",
-                "label": "chemical"
-            },
-            {
-                "start_idx": 1112,
-                "end_idx": 1124,
-                "location": "abstract",
-                "text_span": "ingested food",
-                "label": "food"
-            },
-            {
                 "start_idx": 1159,
                 "end_idx": 1177,
                 "location": "abstract",
@@ -6271,7 +6600,7 @@
                 "end_idx": 1352,
                 "location": "abstract",
                 "text_span": "neuropsychiatric drugs",
-                "label": "chemical"
+                "label": "drug"
             },
             {
                 "start_idx": 1529,
@@ -6284,20 +6613,6 @@
     },
     "33777957": {
         "entities": [
-            {
-                "start_idx": 0,
-                "end_idx": 4,
-                "location": "title",
-                "text_span": "Brain",
-                "label": "anatomical location"
-            },
-            {
-                "start_idx": 6,
-                "end_idx": 21,
-                "location": "title",
-                "text_span": "Neurotransmitter",
-                "label": "gene"
-            },
             {
                 "start_idx": 37,
                 "end_idx": 50,
@@ -6580,13 +6895,6 @@
                 "label": "anatomical location"
             },
             {
-                "start_idx": 81,
-                "end_idx": 94,
-                "location": "title",
-                "text_span": "antidepressant",
-                "label": "drug"
-            },
-            {
                 "start_idx": 0,
                 "end_idx": 9,
                 "location": "abstract",
@@ -6669,13 +6977,6 @@
                 "location": "abstract",
                 "text_span": "susceptible mice",
                 "label": "animal"
-            },
-            {
-                "start_idx": 628,
-                "end_idx": 630,
-                "location": "abstract",
-                "text_span": "eat",
-                "label": "DDF"
             },
             {
                 "start_idx": 728,
@@ -6790,6 +7091,13 @@
                 "label": "chemical"
             },
             {
+                "start_idx": 1470,
+                "end_idx": 1478,
+                "location": "abstract",
+                "text_span": "periphery",
+                "label": "anatomical location"
+            },
+            {
                 "start_idx": 1585,
                 "end_idx": 1598,
                 "location": "abstract",
@@ -6804,18 +7112,18 @@
                 "label": "animal"
             },
             {
-                "start_idx": 1626,
-                "end_idx": 1638,
-                "location": "abstract",
-                "text_span": "social defeat",
-                "label": "DDF"
-            },
-            {
                 "start_idx": 1675,
                 "end_idx": 1687,
                 "location": "abstract",
                 "text_span": "IL-6 receptor",
                 "label": "chemical"
+            },
+            {
+                "start_idx": 1696,
+                "end_idx": 1704,
+                "location": "abstract",
+                "text_span": "periphery",
+                "label": "anatomical location"
             },
             {
                 "start_idx": 1756,
@@ -6897,6 +7205,13 @@
                 "location": "abstract",
                 "text_span": "PD",
                 "label": "DDF"
+            },
+            {
+                "start_idx": 399,
+                "end_idx": 422,
+                "location": "abstract",
+                "text_span": "inherited gene mutations",
+                "label": "gene"
             },
             {
                 "start_idx": 427,
@@ -6997,10 +7312,10 @@
                 "label": "human"
             },
             {
-                "start_idx": 1642,
+                "start_idx": 1624,
                 "end_idx": 1643,
                 "location": "abstract",
-                "text_span": "PD",
+                "text_span": "familial forms of PD",
                 "label": "DDF"
             },
             {
@@ -7170,9 +7485,16 @@
             },
             {
                 "start_idx": 1599,
+                "end_idx": 1607,
+                "location": "abstract",
+                "text_span": "Faecaliba",
+                "label": "bacteria"
+            },
+            {
+                "start_idx": 1607,
                 "end_idx": 1614,
                 "location": "abstract",
-                "text_span": "Faecalibacterium",
+                "text_span": "acterium",
                 "label": "bacteria"
             },
             {
@@ -7198,9 +7520,16 @@
             },
             {
                 "start_idx": 1881,
+                "end_idx": 1889,
+                "location": "abstract",
+                "text_span": "Faecaliba",
+                "label": "bacteria"
+            },
+            {
+                "start_idx": 1889,
                 "end_idx": 1896,
                 "location": "abstract",
-                "text_span": "Faecalibacterium",
+                "text_span": "acterium",
                 "label": "bacteria"
             },
             {
@@ -7236,6 +7565,13 @@
                 "label": "human"
             },
             {
+                "start_idx": 70,
+                "end_idx": 80,
+                "location": "title",
+                "text_span": "hippocampal",
+                "label": "anatomical location"
+            },
+            {
                 "start_idx": 0,
                 "end_idx": 18,
                 "location": "abstract",
@@ -7247,13 +7583,6 @@
                 "end_idx": 58,
                 "location": "abstract",
                 "text_span": "complex neurodegenerative disorder",
-                "label": "DDF"
-            },
-            {
-                "start_idx": 73,
-                "end_idx": 79,
-                "location": "abstract",
-                "text_span": "decline",
                 "label": "DDF"
             },
             {
@@ -7269,13 +7598,6 @@
                 "location": "abstract",
                 "text_span": "Alzheimer's disease",
                 "label": "DDF"
-            },
-            {
-                "start_idx": 272,
-                "end_idx": 285,
-                "location": "abstract",
-                "text_span": "gut microbiome",
-                "label": "microbiome"
             },
             {
                 "start_idx": 302,
@@ -7341,10 +7663,10 @@
                 "label": "human"
             },
             {
-                "start_idx": 1033,
+                "start_idx": 1012,
                 "end_idx": 1042,
                 "location": "abstract",
-                "text_span": "metabolome",
+                "text_span": "ecal and hippocampal metabolome",
                 "label": "chemical"
             },
             {
@@ -7604,17 +7926,10 @@
                 "label": "animal"
             },
             {
-                "start_idx": 943,
-                "end_idx": 946,
-                "location": "abstract",
-                "text_span": "Toll",
-                "label": "DDF"
-            },
-            {
-                "start_idx": 1049,
+                "start_idx": 1039,
                 "end_idx": 1052,
                 "location": "abstract",
-                "text_span": "mice",
+                "text_span": "recipient mice",
                 "label": "animal"
             },
             {
@@ -7714,9 +8029,16 @@
             },
             {
                 "start_idx": 95,
+                "end_idx": 113,
+                "location": "title",
+                "text_span": "chronic social defe",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 113,
                 "end_idx": 122,
                 "location": "title",
-                "text_span": "chronic social defeat stress",
+                "text_span": "eat stress",
                 "label": "DDF"
             },
             {
@@ -7741,10 +8063,10 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 120,
+                "start_idx": 105,
                 "end_idx": 129,
                 "location": "abstract",
-                "text_span": "arketamine",
+                "text_span": "antidepressant arketamine",
                 "label": "drug"
             },
             {
@@ -7756,9 +8078,16 @@
             },
             {
                 "start_idx": 164,
+                "end_idx": 182,
+                "location": "abstract",
+                "text_span": "chronic social defe",
+                "label": "animal"
+            },
+            {
+                "start_idx": 182,
                 "end_idx": 215,
                 "location": "abstract",
-                "text_span": "chronic social defeat stress (CSDS) susceptible mice",
+                "text_span": "eat stress (CSDS) susceptible mice",
                 "label": "animal"
             },
             {
@@ -7791,9 +8120,16 @@
             },
             {
                 "start_idx": 496,
+                "end_idx": 500,
+                "location": "abstract",
+                "text_span": "anhed",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 498,
                 "end_idx": 518,
                 "location": "abstract",
-                "text_span": "anhedonia-like behavior",
+                "text_span": "hedonia-like behavior",
                 "label": "DDF"
             },
             {
@@ -7819,10 +8155,24 @@
             },
             {
                 "start_idx": 628,
+                "end_idx": 632,
+                "location": "abstract",
+                "text_span": "anhed",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 630,
                 "end_idx": 650,
                 "location": "abstract",
-                "text_span": "anhedonia-like behavior",
+                "text_span": "hedonia-like behavior",
                 "label": "DDF"
+            },
+            {
+                "start_idx": 666,
+                "end_idx": 677,
+                "location": "abstract",
+                "text_span": "femoral neck",
+                "label": "anatomical location"
             },
             {
                 "start_idx": 707,
@@ -7833,9 +8183,16 @@
             },
             {
                 "start_idx": 771,
+                "end_idx": 775,
+                "location": "abstract",
+                "text_span": "anhed",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 773,
                 "end_idx": 793,
                 "location": "abstract",
-                "text_span": "anhedonia-like behavior",
+                "text_span": "hedonia-like behavior",
                 "label": "DDF"
             },
             {
@@ -7853,17 +8210,10 @@
                 "label": "chemical"
             },
             {
-                "start_idx": 920,
-                "end_idx": 923,
-                "location": "abstract",
-                "text_span": "CSDS",
-                "label": "animal"
-            },
-            {
                 "start_idx": 945,
-                "end_idx": 954,
+                "end_idx": 946,
                 "location": "abstract",
-                "text_span": "arketamine",
+                "text_span": "ar",
                 "label": "drug"
             },
             {
@@ -8032,10 +8382,24 @@
                 "label": "DDF"
             },
             {
+                "start_idx": 616,
+                "end_idx": 633,
+                "location": "abstract",
+                "text_span": "immune suppression",
+                "label": "DDF"
+            },
+            {
                 "start_idx": 762,
+                "end_idx": 774,
+                "location": "abstract",
+                "text_span": "cervical cont",
+                "label": "DDF"
+            },
+            {
+                "start_idx": 781,
                 "end_idx": 786,
                 "location": "abstract",
-                "text_span": "cervical contusion injury",
+                "text_span": "injury",
                 "label": "DDF"
             },
             {
@@ -8060,31 +8424,45 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 908,
-                "end_idx": 913,
+                "start_idx": 941,
+                "end_idx": 946,
                 "location": "abstract",
-                "text_span": "injury",
-                "label": "DDF"
+                "text_span": "spinal",
+                "label": "animal"
             },
             {
-                "start_idx": 941,
+                "start_idx": 948,
+                "end_idx": 951,
+                "location": "abstract",
+                "text_span": "cord",
+                "label": "human"
+            },
+            {
+                "start_idx": 953,
                 "end_idx": 958,
                 "location": "abstract",
-                "text_span": "spinal cord injury",
-                "label": "human"
+                "text_span": "injury",
+                "label": "animal"
             },
             {
                 "start_idx": 980,
-                "end_idx": 994,
+                "end_idx": 984,
                 "location": "abstract",
-                "text_span": "uninjured group",
+                "text_span": "uninj",
                 "label": "human"
             },
             {
-                "start_idx": 1004,
-                "end_idx": 1007,
+                "start_idx": 990,
+                "end_idx": 994,
                 "location": "abstract",
-                "text_span": "unin",
+                "text_span": "group",
+                "label": "animal"
+            },
+            {
+                "start_idx": 1004,
+                "end_idx": 1008,
+                "location": "abstract",
+                "text_span": "uninj",
                 "label": "animal"
             },
             {
@@ -8187,16 +8565,9 @@
             },
             {
                 "start_idx": 2062,
-                "end_idx": 2079,
-                "location": "abstract",
-                "text_span": "systemic cytokines",
-                "label": "chemical"
-            },
-            {
-                "start_idx": 2085,
                 "end_idx": 2094,
                 "location": "abstract",
-                "text_span": "chemokines",
+                "text_span": "systemic cytokines and chemokines",
                 "label": "chemical"
             },
             {
@@ -8215,9 +8586,9 @@
             },
             {
                 "start_idx": 2207,
-                "end_idx": 2241,
+                "end_idx": 2250,
                 "location": "abstract",
-                "text_span": "central nervous system diseases and",
+                "text_span": "central nervous system diseases and injuries",
                 "label": "DDF"
             }
         ]
@@ -8268,9 +8639,9 @@
             },
             {
                 "start_idx": 581,
-                "end_idx": 584,
+                "end_idx": 583,
                 "location": "abstract",
-                "text_span": "LCHF",
+                "text_span": "LCH",
                 "label": "food"
             },
             {
@@ -8289,9 +8660,9 @@
             },
             {
                 "start_idx": 837,
-                "end_idx": 840,
+                "end_idx": 839,
                 "location": "abstract",
-                "text_span": "LCHF",
+                "text_span": "LCH",
                 "label": "food"
             }
         ]
@@ -8318,6 +8689,13 @@
                 "location": "abstract",
                 "text_span": "Blood",
                 "label": "chemical"
+            },
+            {
+                "start_idx": 9,
+                "end_idx": 25,
+                "location": "abstract",
+                "text_span": "healthy organisms",
+                "label": "animal"
             },
             {
                 "start_idx": 86,
@@ -8362,13 +8740,6 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 708,
-                "end_idx": 715,
-                "location": "abstract",
-                "text_span": "microbes",
-                "label": "bacteria"
-            },
-            {
                 "start_idx": 724,
                 "end_idx": 737,
                 "location": "abstract",
@@ -8397,10 +8768,10 @@
                 "label": "DDF"
             },
             {
-                "start_idx": 1017,
+                "start_idx": 1019,
                 "end_idx": 1027,
                 "location": "abstract",
-                "text_span": "atopobiosis",
+                "text_span": "opobiosis",
                 "label": "DDF"
             },
             {

@@ -435,7 +435,7 @@ if __name__ == "__main__":
 				model_type=model_type,
 				save_path=os.path.join(
 					"data_inference_results",
-					"ensemble",
+					"ensemble3",
 					f"{strategy}.json",
 				),
 				remove_html=config["remove_html"],
