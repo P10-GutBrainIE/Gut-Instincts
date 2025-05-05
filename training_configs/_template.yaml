@@ -1,6 +1,8 @@
 experiment_name: "BioLinkBERT-base" # Descriptive name for this experiment run.
 model_type: "huggingface" # or "bertlstmcrf" # Type of model to train.
 model_name: "michiyasunaga/BioLinkBERT-base" # The Huggingface model identifier.
+resume_checkpoint: False # Used to resume training from checkpoint
+seed: 1 # Used to provide a seed for the training
 subtask: "6.2.1" # The RE subtask
 negative_sample_multiplier: 1 # Number of negative samples in RE in relation to positive samples
 dataset_qualities: # Specify in this list which qualities of data should be included in the training dataset.

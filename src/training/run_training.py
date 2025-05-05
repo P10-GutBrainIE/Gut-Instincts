@@ -293,7 +293,6 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 if __name__ == "__main__":
 	if torch.cuda.is_available():
 		torch.cuda.empty_cache()
-		seed_everything(17)
 		print(f"CUDA is available. GPU: {torch.cuda.get_device_name(0)}. Device count: {torch.cuda.device_count()}.")
 
 		parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
@@ -303,6 +302,10 @@ if __name__ == "__main__":
 		with open(args.config, "r") as file:
 			config = yaml.safe_load(file)
 			os.makedirs("models", exist_ok=True)
+
+			seed = config.get("seed", 607145714675)
+			print("Seed: ", seed)
+			seed_everything(seed)
 
 			if config.get("find_optimal_lr"):
 				find_optimal_lr(config)
