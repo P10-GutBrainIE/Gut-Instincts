@@ -1,5 +1,5 @@
 import argparse
-from collections import Counter, defaultdict
+from collections import defaultdict
 import os
 import json
 import math
