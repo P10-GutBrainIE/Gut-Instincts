@@ -8,10 +8,10 @@ dataset_qualities:
 - "gold"
 - "silver"
 weighted_training: False
-negative_sample_multiplier: 5
+negative_sample_multiplier: 10
 remove_html: False
 find_optimal_lr: False
-remove_relation_outliers: False
+remove_relation_outliers: True
 hyperparameters:
   num_epochs: 20
   batch_size: 16

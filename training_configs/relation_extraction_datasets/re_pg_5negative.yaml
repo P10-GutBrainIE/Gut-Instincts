@@ -10,6 +10,7 @@ weighted_training: False
 negative_sample_multiplier: 5
 remove_html: False
 find_optimal_lr: False
+remove_relation_outliers: False
 hyperparameters:
   num_epochs: 20
   batch_size: 16
