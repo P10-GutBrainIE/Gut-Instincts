@@ -1,0 +1,16 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/378261083913746340/3a1fb43bcb4547569b2c341f48ee8fae/artifacts
+deleted_time: 1746433783506
+end_time: 1745847815169
+entry_point_name: ''
+experiment_id: '378261083913746340'
+lifecycle_stage: deleted
+run_id: 3a1fb43bcb4547569b2c341f48ee8fae
+run_name: adaptable-bug-889
+run_uuid: 3a1fb43bcb4547569b2c341f48ee8fae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745847814690
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

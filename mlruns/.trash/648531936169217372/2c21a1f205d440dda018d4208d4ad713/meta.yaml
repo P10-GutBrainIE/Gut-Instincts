@@ -1,0 +1,16 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/648531936169217372/2c21a1f205d440dda018d4208d4ad713/artifacts
+deleted_time: 1746433770739
+end_time: 1745849774915
+entry_point_name: ''
+experiment_id: '648531936169217372'
+lifecycle_stage: deleted
+run_id: 2c21a1f205d440dda018d4208d4ad713
+run_name: sneaky-trout-906
+run_uuid: 2c21a1f205d440dda018d4208d4ad713
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745847814690
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

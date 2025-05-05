@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/842799488541045414/bc22404a3c054744b995ca56354dd932/artifacts
+deleted_time: 1746433797816
 end_time: 1746011270194
 entry_point_name: ''
 experiment_id: '842799488541045414'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: bc22404a3c054744b995ca56354dd932
 run_name: blushing-penguin-518
 run_uuid: bc22404a3c054744b995ca56354dd932

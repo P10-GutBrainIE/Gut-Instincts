@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/f500c233ed79445fa6308eb57a4490bc/artifacts
+deleted_time: 1746433721478
 end_time: 1746197410422
 entry_point_name: ''
 experiment_id: '409352297639908427'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: f500c233ed79445fa6308eb57a4490bc
 run_name: capable-asp-508
 run_uuid: f500c233ed79445fa6308eb57a4490bc

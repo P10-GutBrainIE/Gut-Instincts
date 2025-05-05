@@ -1,0 +1,16 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/648531936169217372/4d59e0f227ea438b8901c873745dface/artifacts
+deleted_time: 1746433770739
+end_time: null
+entry_point_name: ''
+experiment_id: '648531936169217372'
+lifecycle_stage: deleted
+run_id: 4d59e0f227ea438b8901c873745dface
+run_name: skillful-trout-395
+run_uuid: 4d59e0f227ea438b8901c873745dface
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745844122745
+status: 1
+tags: []
+user_id: mdolme20@student.aau.dk

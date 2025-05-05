@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/9975c10013bc4c71aa5755f7b86c9df9/artifacts
+deleted_time: 1746433721470
 end_time: 1746197536775
 entry_point_name: ''
 experiment_id: '409352297639908427'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 9975c10013bc4c71aa5755f7b86c9df9
 run_name: silent-mole-116
 run_uuid: 9975c10013bc4c71aa5755f7b86c9df9

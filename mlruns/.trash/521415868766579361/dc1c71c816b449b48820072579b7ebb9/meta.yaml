@@ -1,0 +1,16 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/521415868766579361/dc1c71c816b449b48820072579b7ebb9/artifacts
+deleted_time: 1746433778257
+end_time: 1745843176205
+entry_point_name: ''
+experiment_id: '521415868766579361'
+lifecycle_stage: deleted
+run_id: dc1c71c816b449b48820072579b7ebb9
+run_name: fun-jay-181
+run_uuid: dc1c71c816b449b48820072579b7ebb9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745843163522
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

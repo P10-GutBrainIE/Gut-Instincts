@@ -1,6 +1,0 @@
-artifact_location: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/521415868766579361
-creation_time: 1745843161131
-experiment_id: '521415868766579361'
-last_update_time: 1745843161131
-lifecycle_stage: active
-name: biobert_ncbi_disease_ner

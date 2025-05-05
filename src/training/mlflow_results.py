@@ -1,4 +1,5 @@
 import mlflow
+from mlflow.tracking import MlflowClient
 
 
 def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
@@ -12,6 +13,8 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 	    experiment_name (str, optional): Name of the MLflow experiment. If None, considers all experiments.
 	    top_n (int, optional): Number of top runs to display. Defaults to 20.
 	"""
+	client = MlflowClient()
+
 	if experiment_name is not None:
 		experiment = mlflow.get_experiment_by_name(experiment_name)
 		if not experiment:
@@ -23,28 +26,40 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20):
 		experiment_ids = [exp.experiment_id for exp in all_experiments]
 		experiments_text = "all experiments"
 
-	runs = mlflow.search_runs(experiment_ids=experiment_ids, filter_string="", output_format="list")
+	runs = mlflow.search_runs(experiment_ids=experiment_ids, filter_string="")
 	results = []
 
-	for run in runs:
-		best_f1 = run.data.metrics.get("Best F1_micro", 0)
-		weights = run.data.params.get("dataset_weights", "No weights")
-		qualities = run.data.params.get("dataset_qualities", "Not logged")
-		remove_html = run.data.params.get("remove_html", "Not logged")
-		model_name = run.data.params.get("model_name", "Not logged").split("/")[-1]
-		experiment_name = run.data.params.get("experiment_name", "Not logged")
-		results.append((experiment_name, model_name, qualities, weights, remove_html, best_f1))
+	for _, run in runs.iterrows():
+		run_id = run["run_id"]
+		try:
+			metric_history = client.get_metric_history(run_id, "F1_micro")
+			if metric_history:
+				best_f1 = max(point.value for point in metric_history)
+			else:
+				best_f1 = float("-inf")
+
+			weights = run.get("params.dataset_weights", "No weights")
+			qualities = run.get("params.dataset_qualities", "Not logged")
+			remove_html = run.get("params.remove_html", "Not logged")
+			model_name = run.get("params.model_name", "Not logged").split("/")[-1]
+			experiment_name = run.get("params.experiment_name", "Not logged")
+
+			results.append((experiment_name, model_name, qualities, weights, remove_html, best_f1))
+		except Exception as e:
+			print(f"Error processing run {run_id}: {e}")
 
 	results.sort(key=lambda x: x[5], reverse=True)
 
 	print(f"Best F1_micro values for {experiments_text}:")
-	print(f"{'No.':<5} {'Model Name':<52} {'Qualities':<42} {'Weights':<26} {'Remove HTML':<12} {'F1_micro':<8}")
-	print("-" * 182)
+	print(
+		f"{'No.':<5} {'Experiment Name':<32} {'Model Name':<32} {'Qualities':<32} {'Weights':<20} {'Remove HTML':<12} {'F1_micro':<8}"
+	)
+	print("-" * 150)
 	for i, (experiment_name, model_name, qualities, weights, remove_html, best_f1) in enumerate(
 		results[:top_n], start=1
 	):
 		print(
-			f"{i:<5} {experiment_name:<52} {model_name:<52} {qualities:<42} {weights:<26} {remove_html:<12} {best_f1:<8.4f}"
+			f"{i:<5} {experiment_name:<32} {model_name:<32} {qualities:<32} {weights:<20} {remove_html:<12} {best_f1:<8.4f}"
 		)
 
 

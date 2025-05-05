@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/d71384930f4646c584dfa181646680a7/artifacts
+deleted_time: 1746433721477
 end_time: 1746197459277
 entry_point_name: ''
 experiment_id: '409352297639908427'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: d71384930f4646c584dfa181646680a7
 run_name: dazzling-bear-279
 run_uuid: d71384930f4646c584dfa181646680a7

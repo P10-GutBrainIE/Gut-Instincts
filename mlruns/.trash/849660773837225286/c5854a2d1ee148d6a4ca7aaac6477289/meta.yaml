@@ -1,0 +1,16 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/849660773837225286/c5854a2d1ee148d6a4ca7aaac6477289/artifacts
+deleted_time: 1746433666588
+end_time: 1746197428057
+entry_point_name: ''
+experiment_id: '849660773837225286'
+lifecycle_stage: deleted
+run_id: c5854a2d1ee148d6a4ca7aaac6477289
+run_name: whimsical-wasp-113
+run_uuid: c5854a2d1ee148d6a4ca7aaac6477289
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746197380290
+status: 3
+tags: []
+user_id: mgards20@student.aau.dk

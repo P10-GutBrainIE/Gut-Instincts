@@ -1,0 +1,16 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/378261083913746340/1c4bb41b68b448b3b1688ec28d9969e1/artifacts
+deleted_time: 1746433783506
+end_time: 1745844109602
+entry_point_name: ''
+experiment_id: '378261083913746340'
+lifecycle_stage: deleted
+run_id: 1c4bb41b68b448b3b1688ec28d9969e1
+run_name: ambitious-roo-398
+run_uuid: 1c4bb41b68b448b3b1688ec28d9969e1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745844109320
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk

@@ -1,0 +1,16 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/321212439162949124/ae892c63b18046eaa9ca76943584ac0e/artifacts
+deleted_time: 1746433838243
+end_time: 1744357641281
+entry_point_name: ''
+experiment_id: '321212439162949124'
+lifecycle_stage: deleted
+run_id: ae892c63b18046eaa9ca76943584ac0e
+run_name: defiant-ox-468
+run_uuid: ae892c63b18046eaa9ca76943584ac0e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744356479471
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk
