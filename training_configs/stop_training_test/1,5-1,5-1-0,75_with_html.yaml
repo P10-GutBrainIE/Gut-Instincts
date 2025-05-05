@@ -1,6 +1,7 @@
 experiment_name: "BioLinkBERT-base"
 model_type: "huggingface"
 model_name: "michiyasunaga/BioLinkBERT-base"
+resume_checkpoint: True
 dataset_qualities:
 - "platinum"
 - "gold"
