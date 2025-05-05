@@ -70,8 +70,10 @@ def training(config):
 		output_dir = os.path.join("models", config["experiment_name"], dataset_dir_name)
 	os.makedirs(output_dir, exist_ok=True)
 
+	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 	if config.get("resume_checkpoint"):
-		checkpoint = torch.load(config["resume_checkpoint"])
+		checkpoint = torch.load(os.path.join(output_dir, "checkpoint.pth"), map_location=device)
 		start_epoch = checkpoint["epoch"] + 1
 		best_f1_micro = checkpoint["best_f1_micro"]
 		run_id = checkpoint["run_id"]
@@ -98,7 +100,6 @@ def training(config):
 		print(f"Freezing BERT parameters for the first {freeze_epochs} epochs")
 		freeze_bert(model)
 
-	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
 
 	training_data = load_pkl_data(
