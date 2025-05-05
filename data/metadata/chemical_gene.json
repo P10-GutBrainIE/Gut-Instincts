@@ -1,7 +1,7 @@
 {
     "37212075": [
         {
-            "text_span": "secretory IgA ",
+            "text_span": "secretory IgA",
             "ground_truth": "gene",
             "predicted": "chemical"
         },
