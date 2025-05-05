@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/337dc46d60aa4da88b582f1d320c97a7/artifacts
+deleted_time: 1746262833770
 end_time: 1746135526021
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 337dc46d60aa4da88b582f1d320c97a7
 run_name: shivering-pug-662
 run_uuid: 337dc46d60aa4da88b582f1d320c97a7

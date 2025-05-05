@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/63c13beed7b848abaf31f8f902127dde/artifacts
+deleted_time: 1746262640955
 end_time: 1746191558245
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 63c13beed7b848abaf31f8f902127dde
 run_name: melodic-toad-164
 run_uuid: 63c13beed7b848abaf31f8f902127dde

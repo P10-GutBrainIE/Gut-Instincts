@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/4d7cd2a19bf542ffba8a3eb6b49d79ff/artifacts
+deleted_time: 1746262640908
 end_time: 1745884139386
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 4d7cd2a19bf542ffba8a3eb6b49d79ff
 run_name: efficient-donkey-750
 run_uuid: 4d7cd2a19bf542ffba8a3eb6b49d79ff

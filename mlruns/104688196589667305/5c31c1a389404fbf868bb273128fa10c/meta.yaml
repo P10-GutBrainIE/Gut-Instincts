@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/5c31c1a389404fbf868bb273128fa10c/artifacts
+deleted_time: 1746262640954
 end_time: 1746191951448
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 5c31c1a389404fbf868bb273128fa10c
 run_name: trusting-conch-740
 run_uuid: 5c31c1a389404fbf868bb273128fa10c

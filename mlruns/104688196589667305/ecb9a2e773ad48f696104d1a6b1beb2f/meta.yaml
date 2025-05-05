@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/ecb9a2e773ad48f696104d1a6b1beb2f/artifacts
+deleted_time: 1746262640913
 end_time: 1745880731368
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: ecb9a2e773ad48f696104d1a6b1beb2f
 run_name: mysterious-robin-496
 run_uuid: ecb9a2e773ad48f696104d1a6b1beb2f

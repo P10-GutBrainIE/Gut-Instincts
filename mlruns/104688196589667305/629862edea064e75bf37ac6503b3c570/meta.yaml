@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/629862edea064e75bf37ac6503b3c570/artifacts
-end_time: null
+deleted_time: 1746262640918
+end_time: 1746200919878
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 629862edea064e75bf37ac6503b3c570
 run_name: defiant-robin-41
 run_uuid: 629862edea064e75bf37ac6503b3c570
@@ -10,6 +11,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1746193748790
-status: 1
+status: 3
 tags: []
 user_id: lran18@student.aau.dk

@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/8c99571b6d3f4ae5a6b3d81d4b45777f/artifacts
+deleted_time: 1746262640937
 end_time: 1746193007778
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 8c99571b6d3f4ae5a6b3d81d4b45777f
 run_name: merciful-asp-120
 run_uuid: 8c99571b6d3f4ae5a6b3d81d4b45777f

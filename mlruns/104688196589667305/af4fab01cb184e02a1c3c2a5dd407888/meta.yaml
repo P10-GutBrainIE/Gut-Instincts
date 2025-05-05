@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/af4fab01cb184e02a1c3c2a5dd407888/artifacts
+deleted_time: 1746262640921
 end_time: 1746196873275
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: af4fab01cb184e02a1c3c2a5dd407888
 run_name: intelligent-yak-284
 run_uuid: af4fab01cb184e02a1c3c2a5dd407888

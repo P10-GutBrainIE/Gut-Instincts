@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/d5a55912a805439ab1210b7dd7bb365c/artifacts
+deleted_time: 1746262640906
 end_time: 1746001841356
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: d5a55912a805439ab1210b7dd7bb365c
 run_name: valuable-skink-939
 run_uuid: d5a55912a805439ab1210b7dd7bb365c

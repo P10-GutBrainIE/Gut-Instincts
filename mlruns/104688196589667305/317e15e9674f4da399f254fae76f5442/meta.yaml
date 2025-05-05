@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/317e15e9674f4da399f254fae76f5442/artifacts
+deleted_time: 1746262659230
 end_time: null
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 317e15e9674f4da399f254fae76f5442
 run_name: incongruous-mare-698
 run_uuid: 317e15e9674f4da399f254fae76f5442

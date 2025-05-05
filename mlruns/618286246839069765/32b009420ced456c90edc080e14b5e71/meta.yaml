@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/618286246839069765/32b009420ced456c90edc080e14b5e71/artifacts
+deleted_time: 1746262705969
 end_time: 1746196680449
 entry_point_name: ''
 experiment_id: '618286246839069765'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 32b009420ced456c90edc080e14b5e71
 run_name: sincere-rat-849
 run_uuid: 32b009420ced456c90edc080e14b5e71

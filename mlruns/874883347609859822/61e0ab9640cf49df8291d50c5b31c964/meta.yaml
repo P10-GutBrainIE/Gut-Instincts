@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/61e0ab9640cf49df8291d50c5b31c964/artifacts
+deleted_time: 1746262833738
 end_time: null
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 61e0ab9640cf49df8291d50c5b31c964
 run_name: selective-lamb-213
 run_uuid: 61e0ab9640cf49df8291d50c5b31c964

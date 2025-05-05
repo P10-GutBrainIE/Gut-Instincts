@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/6aafee1bb41d4ecba803a3342d1f6ce8/artifacts
+deleted_time: 1746262833753
 end_time: 1746116977126
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 6aafee1bb41d4ecba803a3342d1f6ce8
 run_name: burly-vole-239
 run_uuid: 6aafee1bb41d4ecba803a3342d1f6ce8

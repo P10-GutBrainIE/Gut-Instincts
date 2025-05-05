@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/71d9bf87a9b245bda1ed4b61c9ae9f57/artifacts
+deleted_time: 1746262640911
 end_time: 1745884128953
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 71d9bf87a9b245bda1ed4b61c9ae9f57
 run_name: adventurous-pug-433
 run_uuid: 71d9bf87a9b245bda1ed4b61c9ae9f57

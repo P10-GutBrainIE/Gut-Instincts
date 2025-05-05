@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/1ffbb4a72dc34ebb846b7499675f3faa/artifacts
+deleted_time: 1746262659243
 end_time: null
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 1ffbb4a72dc34ebb846b7499675f3faa
 run_name: gifted-worm-794
 run_uuid: 1ffbb4a72dc34ebb846b7499675f3faa

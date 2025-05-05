@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/b8312200ee2d4ea097e66d5faafaf7d1/artifacts
+deleted_time: 1746262641007
 end_time: 1746192021990
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: b8312200ee2d4ea097e66d5faafaf7d1
 run_name: rumbling-kit-721
 run_uuid: b8312200ee2d4ea097e66d5faafaf7d1

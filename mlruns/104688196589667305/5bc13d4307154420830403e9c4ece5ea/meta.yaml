@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/5bc13d4307154420830403e9c4ece5ea/artifacts
+deleted_time: 1746262641021
 end_time: 1746191521998
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 5bc13d4307154420830403e9c4ece5ea
 run_name: sassy-dolphin-76
 run_uuid: 5bc13d4307154420830403e9c4ece5ea

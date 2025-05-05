@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/8c0facd590904cafa95d907778c62fff/artifacts
+deleted_time: 1746262640963
 end_time: 1746191080115
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 8c0facd590904cafa95d907778c62fff
 run_name: amusing-seal-964
 run_uuid: 8c0facd590904cafa95d907778c62fff

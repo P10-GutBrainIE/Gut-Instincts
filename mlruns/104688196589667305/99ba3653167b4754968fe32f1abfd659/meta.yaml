@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/99ba3653167b4754968fe32f1abfd659/artifacts
+deleted_time: 1746262659225
 end_time: 1746191024841
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 99ba3653167b4754968fe32f1abfd659
 run_name: fearless-smelt-189
 run_uuid: 99ba3653167b4754968fe32f1abfd659

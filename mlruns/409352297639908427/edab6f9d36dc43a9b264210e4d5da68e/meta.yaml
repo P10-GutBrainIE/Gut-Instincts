@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/edab6f9d36dc43a9b264210e4d5da68e/artifacts
+end_time: 1746205421308
+entry_point_name: ''
+experiment_id: '409352297639908427'
+lifecycle_stage: active
+run_id: edab6f9d36dc43a9b264210e4d5da68e
+run_name: clumsy-fish-400
+run_uuid: edab6f9d36dc43a9b264210e4d5da68e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746198502579
+status: 3
+tags: []
+user_id: mgards20@student.aau.dk

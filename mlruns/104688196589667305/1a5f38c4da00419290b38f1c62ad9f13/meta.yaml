@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/1a5f38c4da00419290b38f1c62ad9f13/artifacts
+deleted_time: 1746262640988
 end_time: 1746191584367
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 1a5f38c4da00419290b38f1c62ad9f13
 run_name: powerful-deer-327
 run_uuid: 1a5f38c4da00419290b38f1c62ad9f13

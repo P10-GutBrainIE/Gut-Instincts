@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/a6f351027cbc4b2ab3b8bfed1795c4d4/artifacts
+deleted_time: 1746262833743
 end_time: 1746137764613
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: a6f351027cbc4b2ab3b8bfed1795c4d4
 run_name: magnificent-bat-963
 run_uuid: a6f351027cbc4b2ab3b8bfed1795c4d4

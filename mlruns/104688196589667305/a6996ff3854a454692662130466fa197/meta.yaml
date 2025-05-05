@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/a6996ff3854a454692662130466fa197/artifacts
+deleted_time: 1746262640909
 end_time: 1745881536250
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: a6996ff3854a454692662130466fa197
 run_name: judicious-stoat-931
 run_uuid: a6996ff3854a454692662130466fa197

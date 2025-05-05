@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/869844f76a3d488d97f40ff20e90d9b0/artifacts
+deleted_time: 1746262640990
 end_time: 1746191109442
 entry_point_name: ''
 experiment_id: '104688196589667305'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 869844f76a3d488d97f40ff20e90d9b0
 run_name: judicious-shrike-394
 run_uuid: 869844f76a3d488d97f40ff20e90d9b0
