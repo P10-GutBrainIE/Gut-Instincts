@@ -1,6 +1,8 @@
 experiment_name: "BERTLSTMCRF"
 model_type: "bertlstmcrf"
 model_name: "microsoft/BiomedNLP-BiomedBERT-large-uncased-abstract"
+seed: 1
+resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"
