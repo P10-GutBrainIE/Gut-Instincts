@@ -1,7 +1,0 @@
-artifact_location: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/161256923293184764
-creation_time: 1746197376787
-experiment_id: '161256923293184764'
-last_update_time: 1746433670413
-lifecycle_stage: deleted
-name: BERTDENSECRF
-tags: {}

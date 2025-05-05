@@ -1,7 +1,0 @@
-artifact_location: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/321212439162949124
-creation_time: 1744356476910
-experiment_id: '321212439162949124'
-last_update_time: 1746433838243
-lifecycle_stage: deleted
-name: BioLinkBert-large_concatenated_data
-tags: {}

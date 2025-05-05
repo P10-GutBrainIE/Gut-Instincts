@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/409352297639908427/7d73c63745e2413fb1b3e105fdb886ba/artifacts
+deleted_time: 1746433987413
 end_time: 1746203003910
 entry_point_name: ''
 experiment_id: '409352297639908427'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: 7d73c63745e2413fb1b3e105fdb886ba
 run_name: rare-cat-123
 run_uuid: 7d73c63745e2413fb1b3e105fdb886ba
