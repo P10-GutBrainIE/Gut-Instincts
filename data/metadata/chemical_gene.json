@@ -1,0 +1,110 @@
+{
+    "37212075": [
+        {
+            "text_span": "secretory IgA ",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "SIgA",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        }
+    ],
+    "31610228": [
+        {
+            "text_span": "TGF-\u03b2",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "TNF-\u03b11",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-10",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-8",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-6",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-10",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IFN-\u03b3",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "MCP-1",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-1RA",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-1\u03b2",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-17",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-6",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        }
+    ],
+    "34560239": [
+        {
+            "text_span": "phosphorylated \u03b1-synuclein",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "p-\u03b1-Syn",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        }
+    ],
+    "28556833": [
+        {
+            "text_span": "pro-inflammatory cytokines",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "interlukin-6",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "IL-6",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        },
+        {
+            "text_span": "peripheral IL-6",
+            "ground_truth": "gene",
+            "predicted": "chemical"
+        }
+    ]
+}
