@@ -149,6 +149,15 @@ def make_task_name(config):
 	else:
 		return "ner"
 
+def subtask_string(subtask):
+		if subtask == "6.2.1":
+			return "binary_tag_based_relations"
+		elif subtask == "6.2.2":
+			return "ternary_tag_based_relations"
+		elif subtask == "6.2.3":
+			return "ternary_mention_based_relations"
+		else:
+			raise ValueError(f"Unknown subtask type: {subtask}")
 
 def print_metrics(metrics):
 	"""
