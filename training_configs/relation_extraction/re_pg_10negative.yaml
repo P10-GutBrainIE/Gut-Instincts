@@ -1,20 +1,22 @@
 experiment_name: "BioLinkBERT-base"
 model_type: "re"
-subtask: "6.2.2"
+subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
-weighted_training: False
+resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"
-negative_sample_multiplier: 3
+weighted_training: False
+negative_sample_multiplier: 10
 remove_html: False
 find_optimal_lr: False
+remove_relation_outliers: False
 hyperparameters:
-  num_epochs: 20
+  num_epochs: 16
   batch_size: 16
   freeze_epochs: 0
   lr_scheduler:
-    learning_rate: 0.000002
+    learning_rate: 0.000001
     method: "custom"
     custom_schedule:
     - [0, 0, 1]

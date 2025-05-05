@@ -19,11 +19,11 @@ remove_html: False
 find_optimal_lr: False
 remove_relation_outliers: True
 hyperparameters:
-  num_epochs: 20
+  num_epochs: 16
   batch_size: 16
   freeze_epochs: 0
   lr_scheduler:
-    learning_rate: 0.000002
+    learning_rate: 0.000001
     method: "custom"
     custom_schedule:
     - [0, 0, 1]

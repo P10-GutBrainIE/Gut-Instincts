@@ -6,24 +6,17 @@ resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"
-- "silver"
-- "bronze"
-weighted_training: True
-dataset_weights:
-- 1.25
-- 1.25
-- 1
-- 0.75
-negative_sample_multiplier: 10
+weighted_training: False
+negative_sample_multiplier: 5
 remove_html: False
 find_optimal_lr: False
-remove_relation_outliers: False
+remove_relation_outliers: True
 hyperparameters:
-  num_epochs: 20
+  num_epochs: 16
   batch_size: 16
   freeze_epochs: 0
   lr_scheduler:
-    learning_rate: 0.000002
+    learning_rate: 0.000001
     method: "custom"
     custom_schedule:
     - [0, 0, 1]
