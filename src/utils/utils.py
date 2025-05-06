@@ -134,6 +134,9 @@ def make_dataset_dir_name(config):
 		if config["weighted_training"] and config["dataset_weights"]:
 			dataset_dir_name += str(config["dataset_weights"][i])
 
+	if config["negative_sample_multiplier"]:
+		dataset_dir_name += f"_{config['negative_sample_multiplier']}nsm"
+
 	if config["remove_html"]:
 		dataset_dir_name += "_no_html"
 
@@ -149,15 +152,17 @@ def make_task_name(config):
 	else:
 		return "ner"
 
+
 def subtask_string(subtask):
-		if subtask == "6.2.1":
-			return "binary_tag_based_relations"
-		elif subtask == "6.2.2":
-			return "ternary_tag_based_relations"
-		elif subtask == "6.2.3":
-			return "ternary_mention_based_relations"
-		else:
-			raise ValueError(f"Unknown subtask type: {subtask}")
+	if subtask == "6.2.1":
+		return "binary_tag_based_relations"
+	elif subtask == "6.2.2":
+		return "ternary_tag_based_relations"
+	elif subtask == "6.2.3":
+		return "ternary_mention_based_relations"
+	else:
+		raise ValueError(f"Unknown subtask type: {subtask}")
+
 
 def print_metrics(metrics):
 	"""
