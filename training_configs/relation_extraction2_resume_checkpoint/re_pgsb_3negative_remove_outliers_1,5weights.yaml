@@ -1,12 +1,19 @@
-experiment_name: "BioLinkBERT-base"
+experiment_name: "RE_621"
 model_type: "re"
 subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
-resume_checkpoint: False
+resume_checkpoint: True
 dataset_qualities:
 - "platinum"
 - "gold"
-weighted_training: False
+- "silver"
+- "bronze"
+weighted_training: True
+dataset_weights:
+- 1.5
+- 1.5
+- 1
+- 0.75
 negative_sample_multiplier: 3
 remove_html: False
 find_optimal_lr: False

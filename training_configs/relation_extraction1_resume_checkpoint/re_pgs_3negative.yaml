@@ -2,16 +2,16 @@ experiment_name: "RE_621"
 model_type: "re"
 subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
-resume_checkpoint: False
+resume_checkpoint: True
 dataset_qualities:
 - "platinum"
 - "gold"
 - "silver"
 weighted_training: False
-negative_sample_multiplier: 5
+negative_sample_multiplier: 3
 remove_html: False
 find_optimal_lr: False
-remove_relation_outliers: True
+remove_relation_outliers: False
 hyperparameters:
   num_epochs: 16
   batch_size: 16
@@ -26,4 +26,3 @@ hyperparameters:
     - [3, 8, 4]
     step_size: 2
     gamma: 0.8
-

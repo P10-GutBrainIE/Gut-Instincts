@@ -1,4 +1,4 @@
-experiment_name: "BioLinkBERT-base"
+experiment_name: "RE_621"
 model_type: "re"
 subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
@@ -11,7 +11,7 @@ weighted_training: False
 negative_sample_multiplier: 1
 remove_html: False
 find_optimal_lr: False
-remove_relation_outliers: True
+remove_relation_outliers: False
 hyperparameters:
   num_epochs: 16
   batch_size: 16

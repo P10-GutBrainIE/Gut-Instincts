@@ -1,4 +1,4 @@
-experiment_name: "BioLinkBERT-base"
+experiment_name: "RE_621"
 model_type: "re"
 subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
