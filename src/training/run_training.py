@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import mlflow
 import torch
 from tqdm import tqdm
-from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, make_task_name, print_metrics
+from utils.utils import load_bio_labels, load_pkl_data, make_dataset_dir_name, print_metrics
 from training.calculate_metrics import compute_metrics
 from training.dataset import Dataset
 from training.freezing import freeze_bert, unfreeze_bert
@@ -102,11 +102,7 @@ def training(config):
 
 	model.to(device)
 
-	training_data = load_pkl_data(
-		os.path.join(
-			"data_preprocessed", make_task_name(config), config["experiment_name"], dataset_dir_name, "training.pkl"
-		)
-	)
+	training_data = load_pkl_data(os.path.join("data_preprocessed", dataset_dir_name, "training.pkl"))
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 
 	train_loader = torch.utils.data.DataLoader(
@@ -220,11 +216,7 @@ def find_optimal_lr(config, min_lr=1e-7, max_lr=1):
 	model = build_model(config, label_list, id2label, label2id)
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 	model.to(device)
-	training_data = load_pkl_data(
-		os.path.join(
-			"data_preprocessed", make_task_name(config), config["experiment_name"], dataset_dir_name, "training.pkl"
-		)
-	)
+	training_data = load_pkl_data(os.path.join("data_preprocessed", dataset_dir_name, "training.pkl"))
 	training_dataset = Dataset(training_data, with_weights=config["weighted_training"])
 	train_loader = torch.utils.data.DataLoader(
 		training_dataset, batch_size=config["hyperparameters"]["batch_size"], shuffle=True, pin_memory=True

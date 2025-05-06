@@ -11,20 +11,18 @@ from preprocessing.data_cleanup import (
 	remove_incorrect_text_spans,
 	remove_documents_over_or_under_threshold,
 )
-from utils.utils import load_json_data, make_dataset_dir_name, make_task_name
+from utils.utils import load_json_data, make_dataset_dir_name
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
 
 def create_training_dataset(
-	experiment_name: str,
 	model_name: str,
 	model_type: str,
 	dataset_qualities: list[str],
 	dataset_weights: list[float],
 	dataset_dir_name: str,
-	task_name: str,
 	remove_html: bool,
 	subtask: str = None,
 	remove_relation_outliers: bool = None,
@@ -37,14 +35,13 @@ def create_training_dataset(
 	The processed data is saved as a pickle file.
 
 	Args:
-	    experiment_name (str): Name of the experiment for output directory structure.
 	    model_name (str): Name of the pretrained model (used to select tokenizer).
 	    dataset_qualities (list[str]): List of dataset quality labels (e.g., ["gold", "silver"]).
 	    dataset_dir_name (str): Name of the directory where the dataset will be saved.
 	    dataset_weights (list[float]): List of weights for each dataset quality (can be None).
 	    remove_html (bool): Whether to remove HTML tags from the datasets.
 	"""
-	save_data_path = os.path.join(task_name, experiment_name, dataset_dir_name, "training.pkl")
+	save_data_path = os.path.join(dataset_dir_name, "training.pkl")
 	full_save_data_path = os.path.join("data_preprocessed", save_data_path)
 	if os.path.exists(full_save_data_path):
 		logger.info(f"Training dataset already exists at {full_save_data_path}. Skipping create_training_dataset().")
@@ -125,15 +122,12 @@ if __name__ == "__main__":
 		config = yaml.safe_load(file)
 
 	dataset_dir_name = make_dataset_dir_name(config)
-	task_name = make_task_name(config)
 	create_training_dataset(
-		experiment_name=config["experiment_name"],
 		model_name=config["model_name"],
 		model_type=config["model_type"],
 		dataset_qualities=config["dataset_qualities"],
 		dataset_weights=config.get("dataset_weights"),
 		dataset_dir_name=dataset_dir_name,
-		task_name=task_name,
 		remove_html=config["remove_html"],
 		subtask=config.get("subtask"),
 		remove_relation_outliers=config.get("remove_relation_outliers"),

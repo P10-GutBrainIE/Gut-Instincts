@@ -129,10 +129,26 @@ def make_dataset_dir_name(config):
 	    str: Directory name representing the dataset configuration.
 	"""
 	dataset_dir_name = ""
+
+	if config["model_type"] == "re":
+		if config["subtask"] == "6.2.1":
+			dataset_dir_name += "621"
+		elif config["subtask"] == "6.2.2":
+			dataset_dir_name += "622"
+		elif config["subtask"] == "6.2.3":
+			dataset_dir_name += "623"
+	else:
+		dataset_dir_name += "61"
+
+	dataset_dir_name += f"_{config['model_name'].split('/')[1]}_"
+
 	for i, quality in enumerate(config["dataset_qualities"]):
 		dataset_dir_name += quality[0]
 		if config["weighted_training"] and config["dataset_weights"]:
 			dataset_dir_name += str(config["dataset_weights"][i])
+
+	if config["remove_relation_outliers"]:
+		dataset_dir_name += f"_{config['remove_relation_outliers']}rro"
 
 	if config["negative_sample_multiplier"]:
 		dataset_dir_name += f"_{config['negative_sample_multiplier']}nsm"
@@ -141,16 +157,6 @@ def make_dataset_dir_name(config):
 		dataset_dir_name += "_no_html"
 
 	return dataset_dir_name
-
-
-def make_task_name(config):
-	if config["model_type"] == "re":
-		if config["subtask"] == "6.2.1":
-			return "re_binary"
-		elif config["subtask"] in ["6.2.2", "6.2.3"]:
-			return "re_multiclass"
-	else:
-		return "ner"
 
 
 def subtask_string(subtask):
