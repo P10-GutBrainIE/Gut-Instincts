@@ -19,7 +19,7 @@ remove_html: False
 find_optimal_lr: False
 remove_relation_outliers: False
 hyperparameters:
-  num_epochs: 16
+  num_epochs: 13
   batch_size: 16
   freeze_epochs: 0
   lr_scheduler:
@@ -29,6 +29,7 @@ hyperparameters:
     - [0, 0, 1]
     - [1, 1, 2]
     - [2, 2, 3]
-    - [3, 8, 4]
+    - [3, 5, 4]
     step_size: 2
     gamma: 0.8
+
