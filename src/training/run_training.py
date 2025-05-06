@@ -64,10 +64,7 @@ def training(config):
 	start_time = time.time()
 	dataset_dir_name = make_dataset_dir_name(config)
 
-	if config["model_type"] == "re":
-		output_dir = os.path.join("models", config["experiment_name"], f"{config['subtask']}_{dataset_dir_name}")
-	else:
-		output_dir = os.path.join("models", config["experiment_name"], dataset_dir_name)
+	output_dir = os.path.join("models", dataset_dir_name)
 	os.makedirs(output_dir, exist_ok=True)
 
 	device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
