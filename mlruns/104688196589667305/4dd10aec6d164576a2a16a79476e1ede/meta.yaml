@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/104688196589667305/4dd10aec6d164576a2a16a79476e1ede/artifacts
+end_time: 1746617735466
+entry_point_name: ''
+experiment_id: '104688196589667305'
+lifecycle_stage: active
+run_id: 4dd10aec6d164576a2a16a79476e1ede
+run_name: chill-owl-867
+run_uuid: 4dd10aec6d164576a2a16a79476e1ede
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746610622174
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
