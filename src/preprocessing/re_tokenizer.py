@@ -206,23 +206,44 @@ if __name__ == "__main__":
 		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
 	)
 	re_tokenizer = RelationTokenizer(
-		datasets=[dev], tokenizer=tokenizer, save_filename="re_dev_test.pkl", subtask="6.2.1"
+		datasets=[dev],
+		tokenizer=tokenizer,
+		subtask="6.2.2",
+		# datasets=[dev], tokenizer=tokenizer, save_filename="re_dev_test.pkl", subtask="6.2.2"
 	)
-	re_tokenizer.process_files()
+	tokenized_samples = re_tokenizer.process_files()
 
-	from utils.utils import load_pkl_data
-	from training.dataset import Dataset
-	import torch
+	positive_pairs = set()
+	negative_pairs = set()
 
-	training_data = load_pkl_data(os.path.join("data_preprocessed", "re_dev_test.pkl"))
-	training_dataset = Dataset(training_data, with_weights=False)
+	for sample in tokenized_samples:
+		pair = (
+			sample["input_ids"],
+			sample["subject_text_span"],
+			sample["subject_label"],
+			sample["object_text_span"],
+			sample["object_label"],
+		)
 
-	train_loader = torch.utils.data.DataLoader(training_dataset, batch_size=2, shuffle=True, pin_memory=True)
+		if sample["labels"] == 1:
+			positive_pairs.add(pair)
+		else:
+			negative_pairs.add(pair)
 
-	for batch in train_loader:
-		print(batch["input_ids"].shape)
-		print(batch["attention_mask"].shape)
-		print(batch["labels"])
-		print(batch["subject_label"])
-		print(batch["object_label"])
-		break
+	print(positive_pairs.intersection(negative_pairs))
+
+	# from utils.utils import load_pkl_data
+	# from training.dataset import Dataset
+	# import torch
+
+	# training_data = load_pkl_data(os.path.join("data_preprocessed", "re_dev_test.pkl"))
+	# training_dataset = Dataset(training_data, with_weights=False)
+
+	# train_loader = torch.utils.data.DataLoader(training_dataset, batch_size=2, shuffle=False, pin_memory=True)
+
+	# for i, batch in enumerate(train_loader):
+	# 	print("", batch["labels"])
+	# 	print("", batch["subject_label"])
+	# 	print("", batch["object_label"])
+	# 	if i == 10:
+	# 		break
