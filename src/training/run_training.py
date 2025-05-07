@@ -186,7 +186,7 @@ def training(config):
 		if epoch == num_epochs - 1:
 			mlflow.log_metric("Best F1_micro", best_f1_micro)
 
-		if time.time() - start_time > 36000:
+		if time.time() - start_time > 120:
 			print("Training time exceeded 10 hours. Saving checkpoint and exiting.")
 			checkpoint_path = os.path.join(output_dir, "checkpoint.pth")
 			torch.save(
