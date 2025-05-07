@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/336254485147680797/199397f9274c4d78b58afeba725d6724/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '336254485147680797'
+lifecycle_stage: active
+run_id: 199397f9274c4d78b58afeba725d6724
+run_name: omniscient-jay-290
+run_uuid: 199397f9274c4d78b58afeba725d6724
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746564425954
+status: 1
+tags: []
+user_id: lran18@student.aau.dk
