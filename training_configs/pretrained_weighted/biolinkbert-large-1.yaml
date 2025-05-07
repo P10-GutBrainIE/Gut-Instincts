@@ -1,22 +1,31 @@
-experiment_name: "BiomedBERT-large-uncased-abstract"
+experiment_name: "BioLinkBERT-large"
 model_type: "huggingface"
-model_name: "microsoft/BiomedNLP-BiomedBERT-large-uncased-abstract"
+model_name: "michiyasunaga/BioLinkBERT-large"
+resume_checkpoint: False
+seed: 2
 dataset_qualities:
 - "platinum"
 - "gold"
 - "silver"
 - "bronze"
 remove_html: False
+weighted_training: True
+dataset_weights:
+- 1.5
+- 1.5
+- 1
+- 0.75
 find_optimal_lr: False
-weighted_training: False
 hyperparameters:
-  num_epochs: 23
+  num_epochs: 30
   batch_size: 16
   lr_scheduler:
     learning_rate: 0.00002
     method: "custom"
     custom_schedule:
-    - [0, 2, 1]
+    - [0, 0, 1]
+    - [1, 1, 2]
+    - [2, 2, 3]
     - [3, 12, 4]
     step_size: 2
     gamma: 0.8

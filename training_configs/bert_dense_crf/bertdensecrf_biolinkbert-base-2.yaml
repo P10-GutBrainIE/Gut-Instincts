@@ -2,6 +2,7 @@ experiment_name: "BERTDENSECRF"
 model_type: "bertdensecrf"
 model_name: "michiyasunaga/BioLinkBERT-base"
 resume_checkpoint: False
+seed: 3
 dataset_qualities:
 - "platinum"
 - "gold"
