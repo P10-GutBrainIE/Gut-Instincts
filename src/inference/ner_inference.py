@@ -114,7 +114,7 @@ class NERInference:
 			):
 				model_predictions[paper_id] = {}
 				for section in ["title", "abstract"]:
-					text = content["metadata"][section]
+					text = content[section]
 					predictions = self._ner_pipeline(text)
 					model_predictions[paper_id][section] = {"tokens": predictions, "true_text": text}
 
@@ -216,7 +216,7 @@ class NERInference:
 		for paper_id, content in tqdm(self.test_data.items(), total=len(self.test_data), desc="Inference"):
 			entity_predictions = []
 			for section in ["title", "abstract"]:
-				text = content["metadata"][section]
+				text = content[section]
 				predictions = self._ner_pipeline(text)
 				merged = self._merge_entities(predictions, section)
 				adjusted = self._adjust_casing(entity_predictions=merged, true_text=text)
@@ -401,7 +401,7 @@ if __name__ == "__main__":
 		config = load_config(config_path)
 		dataset_dir_name = make_dataset_dir_name(config)
 		ner_inference = NERInference(
-			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
 			model_name_path=os.path.join("models", dataset_dir_name),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
@@ -409,6 +409,7 @@ if __name__ == "__main__":
 			remove_html=config["remove_html"],
 		)
 		ner_inference.perform_inference()
+		print("works")
 
 	elif os.path.isdir(config_path):
 		model_name_path = []
@@ -429,7 +430,7 @@ if __name__ == "__main__":
 		for token_strategy, entity_type_strategy in itertools.product(["majority"], ["majority"]):
 			strategy = f"{token_strategy}.{entity_type_strategy}"
 			ner_inference = NERInference(
-				test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+				test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
 				model_name_path=model_name_path,
 				model_name=model_name,
 				model_type=model_type,

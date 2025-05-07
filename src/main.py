@@ -154,6 +154,6 @@ if __name__ == "__main__":
 			"training_configs", "weighted_training_with_html", "1,5-1,5-1-0,75_with_html.yaml"
 		),
 		re_config_path=os.path.join("training_configs", "relation_extraction", "621_biolinkbert-base.yaml"),
-		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+		test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
 		run_evaluation=True,
 	)

@@ -31,7 +31,7 @@ def compute_metrics(config, model):
 			return ValueError("No matching subtask")
 	else:
 		ner_inference = NERInference(
-			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+			test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
 			model_name_path=os.path.join("models", make_dataset_dir_name(config)),

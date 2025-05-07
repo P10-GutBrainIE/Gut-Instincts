@@ -85,7 +85,7 @@ if __name__ == "__main__":
 
 	ensemble_ner_inference = EnsembleNERInference(
 		config_paths=config.get("model_configs"),
-		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
+		test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
 		save_path=os.path.join("data_inference_results", "entity_ensemble", f"{config['experiment_name']}.json"),
 		token_ensemble_results_paths=config.get("token_ensemble_results_paths"),
 	)
