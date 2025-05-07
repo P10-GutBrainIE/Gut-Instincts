@@ -1,7 +1,8 @@
-experiment_name: "BERTDENSECRF"
+experiment_name: "BERTDENSECRF-2"
 model_type: "bertdensecrf"
 model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
 resume_checkpoint: False
+seed: 3
 dataset_qualities:
 - "platinum"
 - "gold"
@@ -18,7 +19,6 @@ find_optimal_lr: False
 hyperparameters:
   num_epochs: 30
   batch_size: 16
-  freeze_epochs: 4
   lr_scheduler:
     learning_rate: 0.00002
     method: "custom"
