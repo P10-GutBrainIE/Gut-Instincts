@@ -92,7 +92,7 @@ def training(config):
 	else:
 		model = build_model(config)
 
-	freeze_epochs = config["hyperparameters"]["freeze_epochs"]
+	freeze_epochs = config["hyperparameters"].get("freeze_epochs", 0)
 	if freeze_epochs > 0:
 		print(f"Freezing BERT parameters for the first {freeze_epochs} epochs")
 		freeze_bert(model)
