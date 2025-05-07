@@ -4,7 +4,7 @@ import random
 import logging
 from transformers import AutoTokenizer
 from tqdm import tqdm
-from utils.utils import load_relation_labels, load_json_data
+from utils.utils import load_relation_labels
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -88,10 +88,6 @@ class RelationTokenizer:
 						"input_ids": input_ids,
 						"attention_mask": attention_mask,
 						"labels": self.relation2id[relation["predicate"]] if self.subtask in ["6.2.2", "6.2.3"] else 1,
-						"subject_label": relation["subject_label"],
-						"object_label": relation["object_label"],
-						"subject_text_span": relation["subject_text_span"],
-						"object_text_span": relation["object_text_span"],
 						"weight": dataset_weight,
 					}
 				)
@@ -101,10 +97,6 @@ class RelationTokenizer:
 						"input_ids": input_ids,
 						"attention_mask": attention_mask,
 						"labels": self.relation2id[relation["predicate"]] if self.subtask in ["6.2.2", "6.2.3"] else 1,
-						"subject_label": relation["subject_label"],
-						"object_label": relation["object_label"],
-						"subject_text_span": relation["subject_text_span"],
-						"object_text_span": relation["object_text_span"],
 					}
 				)
 
@@ -137,10 +129,6 @@ class RelationTokenizer:
 							"input_ids": input_ids,
 							"attention_mask": attention_mask,
 							"labels": 0,
-							"subject_label": ent_a["label"],
-							"object_label": ent_b["label"],
-							"subject_text_span": ent_a["text_span"],
-							"object_text_span": ent_b["text_span"],
 							"weight": dataset_weight,
 						}
 					)
@@ -150,10 +138,6 @@ class RelationTokenizer:
 							"input_ids": input_ids,
 							"attention_mask": attention_mask,
 							"labels": 0,
-							"subject_label": ent_a["label"],
-							"object_label": ent_b["label"],
-							"subject_text_span": ent_a["text_span"],
-							"object_text_span": ent_b["text_span"],
 						}
 					)
 				negative_samples_counter += 1
@@ -196,54 +180,3 @@ class RelationTokenizer:
 		with open(os.path.join("data_preprocessed", self.save_filename), "wb") as f:
 			pickle.dump(data, f)
 			logger.info(f"Relation tokenized data saved to {self.save_filename}. Data size: {len(data)}")
-
-
-if __name__ == "__main__":
-	shared_path = os.path.join("data", "Annotations", "Dev")
-	dev = load_json_data(os.path.join(shared_path, "json_format", "dev.json"))
-
-	tokenizer = AutoTokenizer.from_pretrained(
-		"microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext", use_fast=True
-	)
-	re_tokenizer = RelationTokenizer(
-		datasets=[dev],
-		tokenizer=tokenizer,
-		subtask="6.2.2",
-		# datasets=[dev], tokenizer=tokenizer, save_filename="re_dev_test.pkl", subtask="6.2.2"
-	)
-	tokenized_samples = re_tokenizer.process_files()
-
-	positive_pairs = set()
-	negative_pairs = set()
-
-	for sample in tokenized_samples:
-		pair = (
-			sample["input_ids"],
-			sample["subject_text_span"],
-			sample["subject_label"],
-			sample["object_text_span"],
-			sample["object_label"],
-		)
-
-		if sample["labels"] == 1:
-			positive_pairs.add(pair)
-		else:
-			negative_pairs.add(pair)
-
-	print(positive_pairs.intersection(negative_pairs))
-
-	# from utils.utils import load_pkl_data
-	# from training.dataset import Dataset
-	# import torch
-
-	# training_data = load_pkl_data(os.path.join("data_preprocessed", "re_dev_test.pkl"))
-	# training_dataset = Dataset(training_data, with_weights=False)
-
-	# train_loader = torch.utils.data.DataLoader(training_dataset, batch_size=2, shuffle=False, pin_memory=True)
-
-	# for i, batch in enumerate(train_loader):
-	# 	print("", batch["labels"])
-	# 	print("", batch["subject_label"])
-	# 	print("", batch["object_label"])
-	# 	if i == 10:
-	# 		break
