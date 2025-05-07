@@ -1,4 +1,4 @@
-experiment_name: "BioLinkBERT-base"
+experiment_name: "Pretrained_weighted"
 model_type: "huggingface"
 model_name: "michiyasunaga/BioLinkBERT-base"
 resume_checkpoint: False

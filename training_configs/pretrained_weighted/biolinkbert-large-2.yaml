@@ -1,8 +1,8 @@
-experiment_name: "BioLinkBERT-large"
+experiment_name: "Pretrained_weighted"
 model_type: "huggingface"
 model_name: "michiyasunaga/BioLinkBERT-large"
 resume_checkpoint: False
-seed: 2
+seed: 3
 dataset_qualities:
 - "platinum"
 - "gold"

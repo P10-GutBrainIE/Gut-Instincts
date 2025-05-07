@@ -1,27 +1,31 @@
-experiment_name: "BiomedElectra-large-uncased-abstract"
+experiment_name: "Pretrained_weighted"
 model_type: "huggingface"
-model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
+model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+resume_checkpoint: False
+seed: 2
 dataset_qualities:
 - "platinum"
 - "gold"
 - "silver"
 - "bronze"
 remove_html: False
-find_optimal_lr: False
 weighted_training: True
 dataset_weights:
 - 1.5
 - 1.5
 - 1
 - 0.75
+find_optimal_lr: False
 hyperparameters:
-  num_epochs: 35
+  num_epochs: 30
   batch_size: 16
   lr_scheduler:
     learning_rate: 0.00002
     method: "custom"
     custom_schedule:
-    - [0, 2, 1]
-    - [3, 15, 4]
+    - [0, 0, 1]
+    - [1, 1, 2]
+    - [2, 2, 3]
+    - [3, 12, 4]
     step_size: 2
     gamma: 0.8
