@@ -10,9 +10,7 @@ def compute_metrics(config, model):
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
-			model_name_path=os.path.join(
-				"models", config["experiment_name"], f"{config['subtask']}_{make_dataset_dir_name(config)}"
-			),
+			model_name_path=os.path.join("models", make_dataset_dir_name(config)),
 			validation_model=model,
 			subtask=config["subtask"],
 		)
@@ -36,7 +34,7 @@ def compute_metrics(config, model):
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
-			model_name_path=os.path.join("models", config["experiment_name"], make_dataset_dir_name(config)),
+			model_name_path=os.path.join("models", make_dataset_dir_name(config)),
 			validation_model=model,
 			remove_html=config["remove_html"],
 		)

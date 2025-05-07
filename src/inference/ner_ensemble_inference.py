@@ -20,7 +20,7 @@ class EnsembleNERInference:
 			dataset_dir_name = make_dataset_dir_name(config)
 			ner_inference = NERInference(
 				test_data_path=self.test_data_path,
-				model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
+				model_name_path=os.path.join("models", dataset_dir_name),
 				model_name=config["model_name"],
 				model_type=config["model_type"],
 				remove_html=config["remove_html"],
