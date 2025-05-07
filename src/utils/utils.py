@@ -147,10 +147,10 @@ def make_dataset_dir_name(config):
 		if config["weighted_training"] and config["dataset_weights"]:
 			dataset_dir_name += str(config["dataset_weights"][i])
 
-	if config["remove_relation_outliers"]:
+	if config.get("remove_relation_outliers", False):
 		dataset_dir_name += f"_{config['remove_relation_outliers']}rro"
 
-	if config["negative_sample_multiplier"]:
+	if config.get("negative_sample_multiplier", False):
 		dataset_dir_name += f"_{config['negative_sample_multiplier']}nsm"
 
 	if config["remove_html"]:
