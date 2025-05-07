@@ -1,30 +1,27 @@
-experiment_name: "BERTDENSECRF"
-model_type: "bertdensecrf"
+experiment_name: "RE_621"
+model_type: "re"
+subtask: "6.2.1"
 model_name: "michiyasunaga/BioLinkBERT-base"
+resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"
-- "silver"
-- "bronze"
+weighted_training: False
+negative_sample_multiplier: 10
 remove_html: False
-weighted_training: True
-dataset_weights:
-- 1.5
-- 1.5
-- 1
-- 0.75
 find_optimal_lr: False
+remove_relation_outliers: True
 hyperparameters:
-  num_epochs: 30
+  num_epochs: 13
   batch_size: 16
-  freeze_epochs: 4
+  freeze_epochs: 0
   lr_scheduler:
-    learning_rate: 0.00002
+    learning_rate: 0.000001
     method: "custom"
     custom_schedule:
     - [0, 0, 1]
     - [1, 1, 2]
     - [2, 2, 3]
-    - [3, 12, 4]
+    - [3, 5, 4]
     step_size: 2
     gamma: 0.8
