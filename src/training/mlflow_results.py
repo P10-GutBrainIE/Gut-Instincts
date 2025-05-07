@@ -62,11 +62,11 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="
 	results.sort(key=lambda x: x[4], reverse=True)
 
 	print(f"Best F1_micro values for {experiments_text}:")
-	print(f"{'No.':<5} {'Experiment Name':<40} {'Model Name':<48} {'Qualities':<23} {'Weights':<24} {'F1_micro':<8}")
+	print(f"{'No.':<5} {'Experiment Name':<42} {'Model Name':<54} {'Qualities':<23} {'Weights':<24} {'F1_micro':<8}")
 	print("-" * 160)
 	for i, (experiment_name, model_name, qualities, weights, best_f1) in enumerate(results[:top_n], start=1):
-		print(f"{i:<5} {experiment_name:<40} {model_name:<48} {qualities:<23} {str(weights):<24} {best_f1:<8.4f}")
+		print(f"{i:<5} {experiment_name:<42} {model_name:<54} {qualities:<23} {str(weights):<24} {best_f1:<8.4f}")
 
 
 if __name__ == "__main__":
-	print_top_n_experiments(experiment_name=None, top_n=20, task="re")
+	print_top_n_experiments(experiment_name=None, top_n=50, task="ner")

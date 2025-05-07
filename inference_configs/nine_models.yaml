@@ -1,0 +1,12 @@
+experiment_name: "nine_models"
+test_data_path: "data/Annotations/Dev/json_format/dev.json"
+model_configs:
+- "training_configs/ensemble1/1,5-1,5-1-0,75_with_html.yaml"
+- "training_configs/ensemble1/biomedbert-large-uncased-abstract1.yaml"
+- "training_configs/ensemble1/biomedelectra-large-uncased-abstract1.yaml"
+- "training_configs/ensemble2/1-1-1-0,25_with_html.yaml"
+- "training_configs/ensemble2/1,25-1,25-1-0,75_with_html.yaml"
+- "training_configs/ensemble2/biomedelectra-base-uncased-abstract.yaml"
+- "training_configs/ensemble3/1,25-1,25-1,25-0,5_with_html.yaml"
+- "training_configs/ensemble3/biomedbert-base-uncased-abstract-fulltext.yaml"
+- "training_configs/ensemble3/biomedelectra-large-uncased-abstract1.yaml"

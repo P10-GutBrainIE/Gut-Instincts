@@ -6,8 +6,10 @@ dataset_qualities:
 - "gold"
 - "silver"
 - "bronze"
+negative_sample_multiplier: 0
 remove_html: False
 find_optimal_lr: False
+remove_relation_outliers: False
 weighted_training: True
 dataset_weights:
 - 1.25
