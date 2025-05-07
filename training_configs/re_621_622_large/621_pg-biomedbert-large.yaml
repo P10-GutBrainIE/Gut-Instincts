@@ -1,14 +1,12 @@
 experiment_name: "RE_621"
 model_type: "re"
 subtask: "6.2.1"
-model_name: "michiyasunaga/BioLinkBERT-base"
+model_name: "microsoft/BiomedNLP-BiomedBERT-large-uncased-abstract"
 resume_checkpoint: False
 seed: 2
 dataset_qualities:
 - "platinum"
 - "gold"
-- "dev"
-- "silver"
 weighted_training: False
 negative_sample_multiplier: 10
 remove_html: False
