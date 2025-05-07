@@ -156,7 +156,7 @@ def make_dataset_dir_name(config):
 	if config["remove_html"]:
 		dataset_dir_name += "_no_html"
 
-	if config.get["seed"]:
+	if config.get("seed"):
 		dataset_dir_name += f"_seed{config['seed']}"
 
 	return dataset_dir_name
