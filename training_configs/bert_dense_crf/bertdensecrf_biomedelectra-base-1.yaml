@@ -1,6 +1,7 @@
 experiment_name: "BERTDENSECRF"
 model_type: "bertdensecrf"
 model_name: "microsoft/BiomedNLP-BiomedElectra-base-uncased-abstract"
+resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"

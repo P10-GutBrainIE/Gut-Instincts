@@ -1,6 +1,7 @@
 experiment_name: "BERTDENSECRF"
 model_type: "bertdensecrf"
 model_name: "michiyasunaga/BioLinkBERT-large"
+resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"
