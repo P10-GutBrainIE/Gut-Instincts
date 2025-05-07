@@ -69,4 +69,4 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="
 
 
 if __name__ == "__main__":
-	print_top_n_experiments(experiment_name=None, top_n=20, task="ner")
+	print_top_n_experiments(experiment_name=None, top_n=20, task="re")

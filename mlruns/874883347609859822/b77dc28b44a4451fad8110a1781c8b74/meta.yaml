@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/b77dc28b44a4451fad8110a1781c8b74/artifacts
+deleted_time: 1746603393635
 end_time: 1746239776518
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: b77dc28b44a4451fad8110a1781c8b74
 run_name: suave-hound-972
 run_uuid: b77dc28b44a4451fad8110a1781c8b74

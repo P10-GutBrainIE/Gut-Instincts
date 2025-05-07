@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/a66dd339885341a4b85c06b9ca2ac37e/artifacts
+deleted_time: 1746603393642
 end_time: 1746508660008
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: a66dd339885341a4b85c06b9ca2ac37e
 run_name: rogue-vole-386
 run_uuid: a66dd339885341a4b85c06b9ca2ac37e

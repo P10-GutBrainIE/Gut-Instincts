@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/874883347609859822/ad84d8fbf02641039acb758f504acf3b/artifacts
+deleted_time: 1746603393635
 end_time: 1746163646956
 entry_point_name: ''
 experiment_id: '874883347609859822'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: ad84d8fbf02641039acb758f504acf3b
 run_name: marvelous-sow-724
 run_uuid: ad84d8fbf02641039acb758f504acf3b
