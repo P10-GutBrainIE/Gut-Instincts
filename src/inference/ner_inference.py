@@ -402,7 +402,7 @@ if __name__ == "__main__":
 		dataset_dir_name = make_dataset_dir_name(config)
 		ner_inference = NERInference(
 			test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
-			model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
+			model_name_path=os.path.join("models", dataset_dir_name),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
 			save_path=os.path.join("data_inference_results", config["experiment_name"], f"{dataset_dir_name}.json"),
@@ -419,7 +419,7 @@ if __name__ == "__main__":
 			if os.path.isfile(full_path) and config_name.endswith((".yml", ".yaml")):
 				config = load_config(full_path)
 				dataset_dir_name = make_dataset_dir_name(config)
-				model_name_path.append(os.path.join("models", config["experiment_name"], dataset_dir_name))
+				model_name_path.append(os.path.join("models", dataset_dir_name))
 				model_name.append(config["model_name"])
 				model_type.append(config["model_type"])
 

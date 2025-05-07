@@ -30,7 +30,7 @@ def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path)
 def named_entity_recognition(config, dataset_dir_name, test_data_path, ner_save_path):
 	ner_inference = NERInference(
 		test_data_path=test_data_path,
-		model_name_path=os.path.join("models", config["experiment_name"], dataset_dir_name),
+		model_name_path=os.path.join("models", dataset_dir_name),
 		model_name=config["model_name"],
 		model_type=config["model_type"],
 		save_path=ner_save_path,
@@ -42,7 +42,7 @@ def named_entity_recognition(config, dataset_dir_name, test_data_path, ner_save_
 def binary_relation_extraction(config, dataset_dir_name):
 	re_inference = REInference(
 		test_data_path=os.path.join("submissions", "combined_ner_and_test_data.json"),
-		model_name_path=os.path.join("models", config["experiment_name"], f"{config['subtask']}_{dataset_dir_name}"),
+		model_name_path=os.path.join("models", dataset_dir_name),
 		model_name=config["model_name"],
 		model_type=config["model_type"],
 		subtask=config["subtask"],
