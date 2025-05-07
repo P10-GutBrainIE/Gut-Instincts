@@ -17,6 +17,7 @@ dataset_weights:
 - 0.75
 find_optimal_lr: False
 hyperparameters:
+  freeze_epochs: 0
   num_epochs: 30
   batch_size: 16
   lr_scheduler:
