@@ -1,5 +1,5 @@
 artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/177989202877369562/0200d2cf840c484785de8d65f5828b35/artifacts
-end_time: null
+end_time: 1746734171695
 entry_point_name: ''
 experiment_id: '177989202877369562'
 lifecycle_stage: active
@@ -10,6 +10,6 @@ source_name: ''
 source_type: 4
 source_version: ''
 start_time: 1746729352215
-status: 1
+status: 3
 tags: []
 user_id: lran18@student.aau.dk
