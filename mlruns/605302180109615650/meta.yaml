@@ -1,0 +1,6 @@
+artifact_location: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/605302180109615650
+creation_time: 1746689577990
+experiment_id: '605302180109615650'
+last_update_time: 1746689577990
+lifecycle_stage: active
+name: BERTDENSECRF-2
