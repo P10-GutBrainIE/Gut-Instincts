@@ -1,0 +1,34 @@
+experiment_name: "BERTDENSECRF-dev"
+model_type: "bertdensecrf"
+model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract"
+resume_checkpoint: False
+seed: 3
+dataset_qualities:
+- "platinum"
+- "gold"
+- "dev"
+- "silver"
+- "bronze"
+remove_html: False
+weighted_training: True
+dataset_weights:
+- 1.25
+- 1.25
+- 1.25
+- 1
+- 0.75
+find_optimal_lr: False
+hyperparameters:
+  num_epochs: 20
+  batch_size: 16
+  freeze_epochs: 0
+  lr_scheduler:
+    learning_rate: 0.00002
+    method: "custom"
+    custom_schedule:
+    - [0, 0, 1]
+    - [1, 1, 2]
+    - [2, 2, 3]
+    - [3, 12, 4]
+    step_size: 2
+    gamma: 0.8
