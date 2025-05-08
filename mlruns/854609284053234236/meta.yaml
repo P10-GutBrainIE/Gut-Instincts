@@ -1,0 +1,6 @@
+artifact_location: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/854609284053234236
+creation_time: 1746696176166
+experiment_id: '854609284053234236'
+last_update_time: 1746696176166
+lifecycle_stage: active
+name: BERTLSTMCRF-dev
