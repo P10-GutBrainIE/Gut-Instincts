@@ -18,6 +18,21 @@ sys.stdout.reconfigure(line_buffering=True)
 sys.stderr.reconfigure(line_buffering=True)
 
 
+def mlflow_active_run_bug_fix():
+	active_run = mlflow.active_run()
+	if active_run:
+		print(f"Active run ID: {active_run.info.run_id}")
+		mlflow.end_run()
+		print("Active run ended")
+	else:
+		print("No active run.")
+
+	if "MLFLOW_RUN_ID" in os.environ:
+		print(f"Previous run ID: {os.environ['MLFLOW_RUN_ID']} found")
+		del os.environ["MLFLOW_RUN_ID"]
+		print("Previous run ID deleted")
+
+
 def build_model(config, label_list=None, id2label=None, label2id=None):
 	if config["model_type"] == "huggingface":
 		from architectures.hf_token_classifier import HFTokenClassifier
@@ -74,6 +89,8 @@ def training(config):
 		start_epoch = checkpoint["epoch"] + 1
 		best_f1_micro = checkpoint["best_f1_micro"]
 		run_id = checkpoint["run_id"]
+
+		mlflow_active_run_bug_fix()
 	else:
 		start_epoch = 0
 		best_f1_micro = 0.0
