@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/801338082804196374/13a001b7075a4c529c973ba4bd09b59d/artifacts
+end_time: 1746601198185
+entry_point_name: ''
+experiment_id: '801338082804196374'
+lifecycle_stage: active
+run_id: 13a001b7075a4c529c973ba4bd09b59d
+run_name: rogue-vole-386
+run_uuid: 13a001b7075a4c529c973ba4bd09b59d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746564565754
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk
