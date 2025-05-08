@@ -2,7 +2,7 @@ experiment_name: "RE_621"
 model_type: "re"
 subtask: "6.2.1"
 model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
-resume_checkpoint: False
+resume_checkpoint: True
 seed: 2
 dataset_qualities:
 - "platinum"
