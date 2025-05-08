@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/lran18/Gut-Instincts/mlruns/324185377068647855/a8bc6d70a3524c20bcca512dea8ca699/artifacts
+end_time: 1746664597392
+entry_point_name: ''
+experiment_id: '324185377068647855'
+lifecycle_stage: active
+run_id: a8bc6d70a3524c20bcca512dea8ca699
+run_name: bald-calf-86
+run_uuid: a8bc6d70a3524c20bcca512dea8ca699
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746658748188
+status: 3
+tags: []
+user_id: lran18@student.aau.dk
