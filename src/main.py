@@ -3,6 +3,15 @@ import os
 from inference.re_inference import REInference
 from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data
 
+# DEV
+NER_RESULTS_PATH = os.path.join(
+	"data_inference_results_evaluated_on_dev", "entity_ensemble_no_dev_training_data", "9-entity-ensemble.json"
+)
+TEST_DATA_PATH = os.path.join("data", "Articles", "json_format", "articles_dev.json")
+
+# NER_RESULTS_PATH = os.path.join("data_inference_results_evaluated_on_test", "entity_ensemble", "9-entity-ensemble.json")
+# TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
+
 
 def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path):
 	ner_results = load_json_data(ner_results_path)
@@ -18,29 +27,7 @@ def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path)
 			metadata = {"title": title, "abstract": abstract}
 		combined_data[paper_id] = {"metadata": metadata, "entities": ner_results[paper_id]["entities"]}
 
-	save_json_data(combined_data, os.path.join("combined_ner_and_test_data.json"))
-
-
-def pipeline(
-	ner_results_path,
-	test_data_path,
-	config,
-):
-	load_and_combine_metadata_with_ner_results(
-		ner_results_path=ner_results_path,
-		test_data_path=test_data_path,
-	)
-
-	dataset_dir_name = make_dataset_dir_name(config)
-	re_inference = REInference(
-		test_data_path=os.path.join("combined_ner_and_test_data.json"),
-		model_name_path=os.path.join("models", dataset_dir_name),
-		model_name=config["model_name"],
-		model_type=config["model_type"],
-		subtask=config["subtask"],
-		save_path=os.path.join("data_inference_results", config["subtask"], f"{dataset_dir_name}.json"),
-	)
-	re_inference.perform_inference()
+	save_json_data(combined_data, os.path.join("combined_data", "combined_ner_and_test_data.json"))
 
 
 if __name__ == "__main__":
@@ -50,10 +37,18 @@ if __name__ == "__main__":
 
 	config = load_config(args.config)
 
-	pipeline(
-		ner_results_path=os.path.join(
-			"data_inference_results_evaluated_on_test", "entity_ensemble", "9-entity-ensemble.json"
-		),
-		test_data_path=os.path.join("data", "Test_Data", "articles_test.json"),
-		config=config,
+	load_and_combine_metadata_with_ner_results(
+		ner_results_path=NER_RESULTS_PATH,
+		test_data_path=TEST_DATA_PATH,
 	)
+
+	dataset_dir_name = make_dataset_dir_name(config)
+	re_inference = REInference(
+		test_data_path=os.path.join("combined_data", "combined_ner_and_test_data.json"),
+		model_name_path=os.path.join("models", dataset_dir_name),
+		model_name=config["model_name"],
+		model_type=config["model_type"],
+		subtask=config["subtask"],
+		save_path=os.path.join(f"data_inference_results_{config['subtask']}_on_dev", f"{dataset_dir_name}.json"),
+	)
+	re_inference.perform_inference()
