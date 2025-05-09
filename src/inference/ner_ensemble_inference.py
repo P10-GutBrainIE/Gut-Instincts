@@ -9,7 +9,7 @@ from utils.utils import make_dataset_dir_name, load_config, load_json_data
 
 class EnsembleNERInference:
 	def __init__(
-		self, test_data_path, save_path=None, config_paths=None, token_ensemble_results_paths: list[str] = None
+		self, test_data_path=None, save_path=None, config_paths=None, token_ensemble_results_paths: list[str] = None
 	):
 		self.configs = [load_config(path) for path in config_paths] if config_paths else None
 		self.test_data_path = test_data_path
@@ -85,8 +85,8 @@ if __name__ == "__main__":
 
 	ensemble_ner_inference = EnsembleNERInference(
 		config_paths=None,
-		test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
-		save_path=os.path.join("data_inference_results", "entity_ensemble", f"{config['experiment_name']}.json"),
+		# test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
+		save_path=os.path.join("data_inference_results", "entity_ensemble_dev", f"{config['experiment_name']}.json"),
 		token_ensemble_results_paths=config.get("token_ensemble_results_paths"),
 	)
 
