@@ -1,0 +1,11 @@
+experiment_name: "9-entity-ensemble_trained_on_dev"
+token_ensemble_results_paths:
+- "data_inference_results/_ner_top_17_dev/61_bertdensecrf_BioLinkBERT-large_p1.5g1.5d1.5s1b0.75_seed2.json"
+- "data_inference_results/_ner_top_17_dev/61_huggingface_BioLinkBERT-large_p1.5g1.5d1.5s1b0.75_seed2.json"
+- "data_inference_results/_ner_top_17_dev/61_bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.5g1.5d1.5s1b0.75_seed2.json"
+- "data_inference_results/_ner_top_17_dev/61_huggingface_BiomedNLP-BiomedBERT-base-uncased-abstract_p1.25g1.25d1.25s1b0.75_seed3.json"
+- "data_inference_results/_ner_top_17_dev/61_bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.25g1.25d1.25s1b0.75_seed3.json"
+- "data_inference_results/_ner_top_17_dev/61_bertlstmcrf_BiomedNLP-BiomedBERT-large-uncased-abstract_p1.5g1.5d1.5s1b0.75_seed2.json"
+- "data_inference_results/_ner_top_17_dev/61_bertlstmcrf_BioLinkBERT-large_p1.25g1.25d1.25s1b0.75_seed3.json"
+- "data_inference_results/_ner_top_17_dev/61_bertdensecrf_BiomedNLP-BiomedElectra-base-uncased-abstract_p1.5g1.5d1.5s1b0.75_seed2.json"
+- "data_inference_results/_ner_top_17_dev/61_bertdensecrf_BioLinkBERT-large_p1.25g1.25d1.25s1b0.75_seed3.json"
