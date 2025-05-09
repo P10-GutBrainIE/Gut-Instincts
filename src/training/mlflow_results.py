@@ -30,8 +30,10 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="
 	runs = mlflow.search_runs(experiment_ids=experiment_ids, filter_string="")
 	results = []
 
-	if task == "re":
-		runs = [run for _, run in runs.iterrows() if run.get("params.subtask", False)]
+	if task == "re_621":
+		runs = [run for _, run in runs.iterrows() if run.get("params.subtask", False) == "6.2.1"]
+	elif task == "re_622":
+		runs = [run for _, run in runs.iterrows() if run.get("params.subtask", False) in ["6.2.2", "6.2.3"]]
 	elif task == "ner":
 		runs = [
 			run
