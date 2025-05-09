@@ -19,7 +19,7 @@ from utils.utils import make_dataset_dir_name
 
 # PREDICTIONS_PATH_6_1 = "data_inference_results/ensemble1/majority.majority.json"
 # PREDICTIONS_PATH_6_1 = "data_inference_results/entity_ensemble/three_models.json"
-PREDICTIONS_PATH_6_1 = "data_inference_results/61_huggingface_BioLinkBERT-base_p1.25g1.25s1b0.75_seed3.json"
+PREDICTIONS_PATH_6_1 = "data_inference_results/entity_ensemble/17-entity-ensemble.json"
 PREDICTIONS_PATH_6_2 = "submissions/Gut-Instincts_T621_BioLinkBERT-base_pg.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"

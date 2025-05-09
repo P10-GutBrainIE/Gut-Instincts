@@ -1,0 +1,5 @@
+experiment_name: "3-token-3-entity-ensemble"
+token_ensemble_results_paths:
+- "data_inference_results/3t_3e/t_ensemble1_majority.majority.json"
+- "data_inference_results/3t_3e/t_ensemble2_majority.majority.json"
+- "data_inference_results/3t_3e/t_ensemble3_majority.majority.json"

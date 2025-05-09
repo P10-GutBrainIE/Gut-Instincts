@@ -494,11 +494,12 @@ if __name__ == "__main__":
 		config = load_config(config_path)
 		dataset_dir_name = make_dataset_dir_name(config)
 		ner_inference = NERInference(
-			test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
+			# test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
+			test_data_path=os.path.join("data", "Test_Data", "articles_test.json"),
 			model_name_path=os.path.join("models", dataset_dir_name),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
-			save_path=os.path.join("data_inference_results", f"{dataset_dir_name}.json"),
+			save_path=os.path.join("data_inference_results", "_ner_top_17_dev", f"{dataset_dir_name}.json"),
 			remove_html=config["remove_html"],
 		)
 		ner_inference.perform_inference()
