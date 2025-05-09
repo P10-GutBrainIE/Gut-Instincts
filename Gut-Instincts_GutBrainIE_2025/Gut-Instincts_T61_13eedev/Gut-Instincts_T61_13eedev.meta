@@ -1,0 +1,30 @@
+Team ID: Gut Instincts
+Task ID: T61
+Run ID: 13eedev
+Training data used: Platinum, gold, dev, silver, and bronze
+Pre-processing methods: 
+    - Cleaned the bronze dataset by removing entities with incorrect text spans, as listed under the "remove" dict in data/metadata/bronze_incorrect_annotations.json
+    - Cleaned the bronze dataset by adjusting text spans, start indices, and end indicies of entites listed under the "clean" dict in data/metadata/bronze_incorrect_annotations.json
+    - Cleaned the silver dataset by adjusting text spans, start indices, and end indicies of entites listed under the "clean" dict in data/metadata/silver_incorrect_annotations.json
+    - Cleaned the silver dataset by removing papers with more than 100 annotated relations
+Type of training applied:
+    - Weighted training
+    - Custom learning rate scheduler with gradual warm-up for the first 3 epochs, then steady learning rate, and then a step decay.
+Relevant details of the run:
+    - Post-processing:
+        - Merge entities based on rules in src/inference/ner_inference.py
+    - Ensemble entity predictions with top-13 models (architecture_model-name_dataset-weights):
+        - bertdensecrf_BioLinkBERT-large_p1.5g1.5d1.5s1b0.75
+        - huggingface_BioLinkBERT-large_p1.5g1.5d1.5s1b0.75
+        - bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.5g1.5d1.5s1b0.75
+        - huggingface_BiomedNLP-BiomedBERT-base-uncased-abstract_p1.25g1.25d1.25s1b0.75
+        - bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.25g1.25d1.25s1b0.75
+        - bertlstmcrf_BiomedNLP-BiomedBERT-large-uncased-abstract_p1.5g1.5d1.5s1b0.75
+        - bertlstmcrf_BioLinkBERT-large_p1.25g1.25d1.25s1b0.75
+        - bertdensecrf_BiomedNLP-BiomedElectra-base-uncased-abstract_p1.5g1.5d1.5s1b0.75
+        - bertdensecrf_BioLinkBERT-large_p1.25g1.25d1.25s1b0.75
+        - bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract_p1.25g1.25d1.25s1b0.75
+        - huggingface_BiomedNLP-BiomedElectra-large-uncased-abstract_p1.5g1.5d1.5s1b0.75
+        - huggingface_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.5g1.5d1.5s1b0.75
+        - bertdensecrf_BiomedNLP-BiomedElectra-large-uncased-abstract_p1.5g1.5d1.5s1b0.75
+GitHub repository: https://github.com/P10-GutBrainIE/Gut-Instincts
