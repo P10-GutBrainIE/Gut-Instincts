@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/709413559882656232/bc694ef60aa7457d871536a1729b2f19/artifacts
+deleted_time: 1746793687622
 end_time: 1746653040851
 entry_point_name: ''
 experiment_id: '709413559882656232'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: bc694ef60aa7457d871536a1729b2f19
 run_name: bald-calf-86
 run_uuid: bc694ef60aa7457d871536a1729b2f19

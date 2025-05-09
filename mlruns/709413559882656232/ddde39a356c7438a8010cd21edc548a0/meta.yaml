@@ -1,8 +1,9 @@
 artifact_uri: file:///ceph/home/student.aau.dk/mgards20/Gut-Instincts/mlruns/709413559882656232/ddde39a356c7438a8010cd21edc548a0/artifacts
+deleted_time: 1746793495793
 end_time: 1746658249708
 entry_point_name: ''
 experiment_id: '709413559882656232'
-lifecycle_stage: active
+lifecycle_stage: deleted
 run_id: ddde39a356c7438a8010cd21edc548a0
 run_name: charming-grub-937
 run_uuid: ddde39a356c7438a8010cd21edc548a0
