@@ -33,7 +33,11 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="
 	if task == "re":
 		runs = [run for _, run in runs.iterrows() if run.get("params.subtask", False)]
 	elif task == "ner":
-		runs = [run for _, run in runs.iterrows()]
+		runs = [
+			run
+			for _, run in runs.iterrows()
+			if run.get("params.model_type") in ["huggingface", "bertlstmcrf", "bertdensecrf"]
+		]
 	else:
 		raise ValueError(f"Unknown task: {task}")
 
@@ -80,4 +84,4 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="
 
 
 if __name__ == "__main__":
-	print_top_n_experiments(experiment_name=None, top_n=50, task="re")
+	print_top_n_experiments(experiment_name=None, top_n=100, task="ner")
