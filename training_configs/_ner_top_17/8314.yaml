@@ -1,12 +1,12 @@
-model_type: "bertlstmcrf"
-model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
+model_type: "huggingface"
+model_name: "michiyasunaga/BioLinkBERT-base"
 dataset_qualities:
 - "platinum"
 - "gold"
 - "silver"
 - "bronze"
 remove_html: False
-seed: 11
+seed: 10
 weighted_training: True
 dataset_weights:
 - 1.5

@@ -1,5 +1,5 @@
 model_type: "bertlstmcrf"
-model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
+model_name: "michiyasunaga/BioLinkBERT-large"
 dataset_qualities:
 - "platinum"
 - "gold"

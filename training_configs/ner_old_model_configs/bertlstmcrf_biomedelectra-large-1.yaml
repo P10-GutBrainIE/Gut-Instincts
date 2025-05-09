@@ -1,12 +1,14 @@
+experiment_name: "BERTLSTMCRF-2"
 model_type: "bertlstmcrf"
 model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
+seed: 1
+resume_checkpoint: False
 dataset_qualities:
 - "platinum"
 - "gold"
 - "silver"
 - "bronze"
 remove_html: False
-seed: 11
 weighted_training: True
 dataset_weights:
 - 1.5

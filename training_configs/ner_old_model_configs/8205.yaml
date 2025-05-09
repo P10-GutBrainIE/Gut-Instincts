@@ -1,0 +1,10 @@
+model_type: "huggingface"
+model_name: "michiyasunaga/BioLinkBERT-base"
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+remove_html: False
+weighted_training: False
+seed: 25
