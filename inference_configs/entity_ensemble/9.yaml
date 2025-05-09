@@ -1,6 +1,5 @@
 experiment_name: "9-entity-ensemble"
-test_data_path: "data/Annotations/Dev/json_format/dev.json"
-model_configs:
+token_ensemble_results_path:
 - "data_inference_results/61_huggingface_BioLinkBERT-base_p1.5g1.5s1b0.75_seed10.json"
 - "data_inference_results/61_bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.5g1.5s1b0.75_seed2.json"
 - "data_inference_results/61_huggingface_BioLinkBERT-base_p1.25g1.25s1b0.75_seed12.json"
