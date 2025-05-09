@@ -1,0 +1,15 @@
+model_type: "huggingface"
+model_name: "microsoft/BiomedNLP-BiomedBERT-large-uncased-abstract"
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+remove_html: False
+seed: 13
+weighted_training: True
+dataset_weights:
+- 1.25
+- 1.25
+- 1
+- 0.75
