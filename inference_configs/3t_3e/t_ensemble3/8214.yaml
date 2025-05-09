@@ -1,0 +1,11 @@
+model_type: "huggingface"
+model_name: "microsoft/BiomedNLP-BiomedElectra-large-uncased-abstract"
+resume_checkpoint: False
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+remove_html: False
+weighted_training: False
+seed: 21

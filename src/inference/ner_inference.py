@@ -498,11 +498,11 @@ if __name__ == "__main__":
 			model_name_path=os.path.join("models", dataset_dir_name),
 			model_name=config["model_name"],
 			model_type=config["model_type"],
-			# save_path=os.path.join("data_inference_results", f"{dataset_dir_name}.json"),
+			save_path=os.path.join("data_inference_results", f"{dataset_dir_name}.json"),
 			remove_html=config["remove_html"],
 		)
-		preds = ner_inference.perform_inference()
-		print_metrics(temp(preds))
+		ner_inference.perform_inference()
+		# print_metrics(temp(preds))
 
 	elif os.path.isdir(config_path):
 		model_name_path = []
@@ -529,8 +529,8 @@ if __name__ == "__main__":
 				model_type=model_type,
 				save_path=os.path.join(
 					"data_inference_results",
-					"ensemble3",
-					f"{strategy}.json",
+					"3t_3e",
+					f"t_ensemble3_{strategy}.json",
 				),
 				remove_html=config["remove_html"],
 				ensemble_strategy=strategy,

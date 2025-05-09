@@ -1,15 +1,15 @@
-model_type: "bertlstmcrf"
-model_name: "michiyasunaga/BioLinkBERT-large"
+model_type: "huggingface"
+model_name: "michiyasunaga/BioLinkBERT-base"
 dataset_qualities:
 - "platinum"
 - "gold"
 - "silver"
 - "bronze"
 remove_html: False
-seed: 11
 weighted_training: True
 dataset_weights:
-- 1.5
-- 1.5
-- 1
-- 0.75
+- 1.25
+- 1.25
+- 1.25
+- 0.5
+seed: 22

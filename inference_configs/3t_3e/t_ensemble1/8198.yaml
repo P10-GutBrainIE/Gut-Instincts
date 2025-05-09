@@ -1,0 +1,11 @@
+model_type: "huggingface"
+model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+resume_checkpoint: False
+seed: 30
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+remove_html: False
+weighted_training: False
