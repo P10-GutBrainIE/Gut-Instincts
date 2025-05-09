@@ -1,0 +1,15 @@
+artifact_uri: file:///ceph/home/student.aau.dk/mdolme20/Gut-Instincts/mlruns/720583938083077002/742468ebb58b40d1a554b17f4648b7ff/artifacts
+end_time: 1746749004944
+entry_point_name: ''
+experiment_id: '720583938083077002'
+lifecycle_stage: active
+run_id: 742468ebb58b40d1a554b17f4648b7ff
+run_name: charming-grub-937
+run_uuid: 742468ebb58b40d1a554b17f4648b7ff
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1746742086629
+status: 3
+tags: []
+user_id: mdolme20@student.aau.dk
