@@ -3,33 +3,13 @@ from inference.re_inference import REInference
 from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data
 
 
-# 9-entity-ensemble fra modeller ikke trænet på dev
-# NER_RESULTS_PATH = os.path.join("data_inference_results_evaluated_on_test", "entity_ensemble", "9-entity-ensemble.json")
-# TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
-
-# 9-entity-ensemble fra modeller trænet på dev
 NER_RESULTS_PATH = os.path.join(
 	"data_inference_results_evaluated_on_test", "entity_ensemble_dev", "9-entity-ensemble_trained_on_dev.json"
 )
 TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
 
-# re 621 top 3
-# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_3")
 
-# re 621 top 3 dev
-# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_3_dev")
-
-# re 622 top 3
-# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_3")
-
-# re 622 top 3 dev
-# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_3_dev")
-
-# re 623 top 3
 CONFIG_DIR = os.path.join("training_configs", "_re_623_top_3")
-
-# re 623 top 3 dev
-# CONFIG_DIR = os.path.join("training_configs", "_re_623_top_3_dev")
 
 
 def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path):
@@ -68,7 +48,6 @@ if __name__ == "__main__":
 				model_name=config["model_name"],
 				model_type=config["model_type"],
 				subtask=config["subtask"],
-				# HUSK AT SKIFTE STI
 				save_path=os.path.join(
 					"data_inference_results_re_evaluated_on_test_ee9dev",
 					f"{config['subtask']}",

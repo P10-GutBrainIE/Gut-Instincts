@@ -14,7 +14,5 @@ Relevant details of the run:
     - Post-processing:
         - Merge entities based on rules in src/inference/ner_inference.py
     - Ensemble entity predictions with top-3 models (architecture_model-name_dataset-weights):
-        - huggingface_BioLinkBERT-base_p1.5g1.5s1b0.75
-        - bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.5g1.5s1b0.75
-        - huggingface_BioLinkBERT-base_p1.25g1.25s1b0.75
+        - 
 GitHub repository: https://github.com/P10-GutBrainIE/Gut-Instincts
