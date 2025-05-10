@@ -64,7 +64,7 @@ if __name__ == "__main__":
 		subtask=config["subtask"],
 		save_path=os.path.join(
 			config["prediction_paths"][0].split(os.sep)[0],
-			"ensemble_results",
+			f"{len(config['prediction_paths'])}-ensemble_results",
 			f"{config['prediction_paths'][0].split(os.sep)[1]}.json",
 		),
 	)
