@@ -22,7 +22,7 @@ TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
 # re 622 top 5
 CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5")
 
-# re
+# re 622 top 5 dev
 # CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5_dev")
 
 

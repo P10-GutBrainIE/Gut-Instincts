@@ -22,7 +22,7 @@ CONFIG_DIR = os.path.join("training_configs", "_re_621_top_5")
 # re 622 top 5
 # CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5")
 
-# re
+# re 622 top 5 dev
 # CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5_dev")
 
 
