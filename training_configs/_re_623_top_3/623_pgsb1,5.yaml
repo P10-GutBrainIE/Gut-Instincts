@@ -1,0 +1,35 @@
+experiment_name: "RE_622"
+model_type: "re"
+subtask: "6.2.3"
+model_name: "michiyasunaga/BioLinkBERT-base"
+resume_checkpoint: False
+seed: 2
+dataset_qualities:
+- "platinum"
+- "gold"
+- "silver"
+- "bronze"
+weighted_training: True
+dataset_weights:
+- 1.5
+- 1.5
+- 1
+- 0.75
+negative_sample_multiplier: 10
+remove_html: False
+find_optimal_lr: False
+remove_relation_outliers: True
+hyperparameters:
+  num_epochs: 10
+  batch_size: 16
+  freeze_epochs: 0
+  lr_scheduler:
+    learning_rate: 0.000001
+    method: "custom"
+    custom_schedule:
+    - [0, 0, 1]
+    - [1, 1, 2]
+    - [2, 2, 3]
+    - [3, 5, 4]
+    step_size: 2
+    gamma: 0.5

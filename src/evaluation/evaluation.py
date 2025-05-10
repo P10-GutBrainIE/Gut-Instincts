@@ -20,13 +20,13 @@ from utils.utils import make_dataset_dir_name
 # PREDICTIONS_PATH_6_1 = "data_inference_results/ensemble1/majority.majority.json"
 # PREDICTIONS_PATH_6_1 = "data_inference_results/entity_ensemble/three_models.json"
 PREDICTIONS_PATH_6_1 = "data_inference_results/entity_ensemble/17-entity-ensemble.json"
-PREDICTIONS_PATH_6_2 = "submissions/Gut-Instincts_T621_BioLinkBERT-base_pg.json"
+PREDICTIONS_PATH_6_2 = "data_inference_results_6.2.1_evaluated_on_dev/ensemble_results/621.json"
 PREDICTIONS_PATH_6_3 = "org_T622_BaselineRun_ATLOP.json"
 PREDICTIONS_PATH_6_4 = "org_T623_BaselineRun_ATLOP.json"
 
 # DEFINE HERE FOR WHICH SUBTASK(S) YOU WANT TO EVAL YOUR PREDICTIONS
-eval_6_1_NER = True
-eval_6_2_binary_tag_RE = False
+eval_6_1_NER = False
+eval_6_2_binary_tag_RE = True
 eval_6_3_ternary_tag_RE = False
 eval_6_4_ternary_mention_RE = False
 
