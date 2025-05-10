@@ -1,21 +1,20 @@
 Team ID: Gut Instincts
 Task ID: T623
-Run ID: 9eedev3redev
-Training data used: Platinum, gold, silver, and bronze
+Run ID: 9ee3redev
+Training data used: Platinum, gold, dev, silver, and bronze
 Pre-processing methods: 
     - Cleaned the bronze dataset by removing entities with incorrect text spans, as listed under the "remove" dict in data/metadata/bronze_incorrect_annotations.json
     - Cleaned the bronze dataset by adjusting text spans, start indices, and end indicies of entites listed under the "clean" dict in data/metadata/bronze_incorrect_annotations.json
     - Cleaned the silver dataset by adjusting text spans, start indices, and end indicies of entites listed under the "clean" dict in data/metadata/silver_incorrect_annotations.json
     - Cleaned the silver dataset by removing papers with more than 100 annotated relations
     - Added entity markers around the entities that are related
+    - Added 10 negative samples for each positive sample
 Type of training applied:
     - Weighted training
-    - Custom learning rate scheduler with gradual warm-up for the first 3 epochs, then steady learning rate, and then a step decay.
+    - Custom learning rate scheduler with gradual warm-up for the first 3 epochs, then steady learning rate, and then a step decay
 Relevant details of the run:
-    - Post-processing:
-        - Merge entities based on rules in src/inference/ner_inference.py
     - Ensemble entity predictions with top-3 models (architecture_model-name_dataset-weights):
-        - huggingface_BioLinkBERT-base_p1.5g1.5s1b0.75
-        - bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.5g1.5s1b0.75
-        - huggingface_BioLinkBERT-base_p1.25g1.25s1b0.75
+        - 623_re_BioLinkBERT-base_p1.5g1.5d1.5s1b0.75_Truerro_10nsm_seed2
+        - 623_re_BioLinkBERT-base_p1.25g1.25d1.25s1b0.75_Truerro_10nsm_seed2
+        - 623_re_BiomedNLP-BiomedElectra-large-uncased-abstract_pgd_Truerro_10nsm_seed2
 GitHub repository: https://github.com/P10-GutBrainIE/Gut-Instincts

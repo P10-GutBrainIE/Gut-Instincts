@@ -1,5 +1,5 @@
 Team ID: Gut Instincts
-Task ID: T623
+Task ID: T622
 Run ID: 9ee3re
 Training data used: Platinum, gold, silver, and bronze
 Pre-processing methods: 
@@ -8,14 +8,13 @@ Pre-processing methods:
     - Cleaned the silver dataset by adjusting text spans, start indices, and end indicies of entites listed under the "clean" dict in data/metadata/silver_incorrect_annotations.json
     - Cleaned the silver dataset by removing papers with more than 100 annotated relations
     - Added entity markers around the entities that are related
+    - Added 10 negative samples for each positive sample
 Type of training applied:
     - Weighted training
-    - Custom learning rate scheduler with gradual warm-up for the first 3 epochs, then steady learning rate, and then a step decay.
+    - Custom learning rate scheduler with gradual warm-up for the first 3 epochs, then steady learning rate, and then a step decay
 Relevant details of the run:
-    - Post-processing:
-        - Merge entities based on rules in src/inference/ner_inference.py
     - Ensemble entity predictions with top-3 models (architecture_model-name_dataset-weights):
-        - huggingface_BioLinkBERT-base_p1.5g1.5s1b0.75
-        - bertdensecrf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext_p1.5g1.5s1b0.75
-        - huggingface_BioLinkBERT-base_p1.25g1.25s1b0.75
+        - 622_re_BioLinkBERT-base_p1.5g1.5s1b0.75_Truerro_10nsm_seed2
+        - 622_re_BioLinkBERT-base_p1.25g1.25s1b0.75_Truerro_10nsm_seed2
+        - 622_re_BioLinkBERT-base_pgs_Truerro_10nsm_seed2
 GitHub repository: https://github.com/P10-GutBrainIE/Gut-Instincts
