@@ -1,2 +1,2 @@
 experiment_name: # A name used to create the location of where the data is saved
-token_ensemble_results_paths: # A lists of paths the the individual inference results of the ner models
+token_ensemble_results_paths: # List of paths the the individual inference results of the ner models

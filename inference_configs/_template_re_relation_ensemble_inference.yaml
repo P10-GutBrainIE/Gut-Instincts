@@ -1,2 +1,2 @@
 subtask: # The RE subtask (6.2.1, 6.2.2, or 6.2.3)
-prediction_paths: # List 
+prediction_paths: # List of paths the the individual inference results of the RE models
