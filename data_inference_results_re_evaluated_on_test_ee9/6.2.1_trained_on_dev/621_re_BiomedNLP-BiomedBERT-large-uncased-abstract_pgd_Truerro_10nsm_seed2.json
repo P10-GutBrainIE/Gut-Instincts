@@ -1,0 +1,1390 @@
+{
+    "30099552": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "bacteria",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            }
+        ]
+    },
+    "37124355": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "bacteria"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "chemical"
+            }
+        ]
+    },
+    "29870894": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "human"
+            }
+        ]
+    },
+    "38222911": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "chemical"
+            }
+        ]
+    },
+    "34588398": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "bacteria"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "chemical"
+            }
+        ]
+    },
+    "38432179": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "chemical",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "animal",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "28027925": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "animal"
+            }
+        ]
+    },
+    "29315562": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "animal",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "drug"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "drug"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "gene"
+            }
+        ]
+    },
+    "35786740": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            }
+        ]
+    },
+    "31749671": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "animal",
+                "object_label": "biomedical technique"
+            }
+        ]
+    },
+    "28767318": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "biomedical technique"
+            }
+        ]
+    },
+    "33742731": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            }
+        ]
+    },
+    "28899766": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "36271691": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "chemical",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "bacteria"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "microbiome"
+            }
+        ]
+    },
+    "35153869": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "anatomical location"
+            }
+        ]
+    },
+    "33935741": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "dietary supplement"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "drug"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "gene"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            }
+        ]
+    },
+    "38463411": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "bacteria",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "drug"
+            }
+        ]
+    },
+    "36801431": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "drug",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "statistical technique"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "37663891": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "human"
+            }
+        ]
+    },
+    "33087994": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "bacteria"
+            }
+        ]
+    },
+    "32399169": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "human"
+            }
+        ]
+    },
+    "38078745": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "chemical"
+            }
+        ]
+    },
+    "34789332": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "30747427": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "33181474": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "human"
+            }
+        ]
+    },
+    "33066107": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "bacteria",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "human"
+            }
+        ]
+    },
+    "37714308": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "human"
+            }
+        ]
+    },
+    "37305758": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            }
+        ]
+    },
+    "31158941": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "microbiome"
+            }
+        ]
+    },
+    "34485176": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "biomedical technique"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "chemical"
+            }
+        ]
+    },
+    "28901279": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "35994167": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "35399136": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "bacteria"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "microbiome"
+            }
+        ]
+    },
+    "32495743": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "drug",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "human",
+                "object_label": "human"
+            }
+        ]
+    },
+    "31736803": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "bacteria"
+            }
+        ]
+    },
+    "37400661": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "animal",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "dietary supplement"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "dietary supplement"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "bacteria"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "animal"
+            }
+        ]
+    },
+    "37432210": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "animal",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "36009361": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "drug",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "26370263": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "dietary supplement",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "drug",
+                "object_label": "DDF"
+            }
+        ]
+    },
+    "31519175": {
+        "binary_tag_based_relations": [
+            {
+                "subject_label": "chemical",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "bacteria"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "anatomical location"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "human"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "DDF",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "chemical",
+                "object_label": "gene"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "gene"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "chemical"
+            },
+            {
+                "subject_label": "gene",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "anatomical location",
+                "object_label": "animal"
+            },
+            {
+                "subject_label": "microbiome",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "microbiome"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "DDF"
+            },
+            {
+                "subject_label": "bacteria",
+                "object_label": "human"
+            }
+        ]
+    }
+}
