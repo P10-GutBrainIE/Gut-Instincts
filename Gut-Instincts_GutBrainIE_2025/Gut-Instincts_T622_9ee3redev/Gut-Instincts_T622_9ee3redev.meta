@@ -7,6 +7,7 @@ Pre-processing methods:
     - Cleaned the bronze dataset by adjusting text spans, start indices, and end indicies of entites listed under the "clean" dict in data/metadata/bronze_incorrect_annotations.json
     - Cleaned the silver dataset by adjusting text spans, start indices, and end indicies of entites listed under the "clean" dict in data/metadata/silver_incorrect_annotations.json
     - Cleaned the silver dataset by removing papers with more than 100 annotated relations
+    - Added entity markers around the entities that are related
 Type of training applied:
     - Weighted training
     - Custom learning rate scheduler with gradual warm-up for the first 3 epochs, then steady learning rate, and then a step decay.

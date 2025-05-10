@@ -1,3 +1,5 @@
 subtask: "6.2.1"
 prediction_paths:
-- 
+- "data_inference_results_re_evaluated_on_test_ee9/6.2.1_trained_on_dev/621_re_BioLinkBERT-base_pgd_Truerro_10nsm_seed2.json"
+- "data_inference_results_re_evaluated_on_test_ee9/6.2.1_trained_on_dev/621_re_BiomedNLP-BiomedBERT-large-uncased-abstract_pgd_Truerro_10nsm_seed2.json"
+- "data_inference_results_re_evaluated_on_test_ee9/6.2.1_trained_on_dev/621_re_BiomedNLP-BiomedElectra-large-uncased-abstract_pgd_Truerro_10nsm_seed2.json"
