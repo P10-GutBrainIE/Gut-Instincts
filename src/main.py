@@ -1,4 +1,3 @@
-import argparse
 import os
 from inference.re_inference import REInference
 from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data
@@ -9,8 +8,25 @@ NER_RESULTS_PATH = os.path.join(
 )
 TEST_DATA_PATH = os.path.join("data", "Articles", "json_format", "articles_dev.json")
 
+# 9-entity-ensemble fra modeller ikke trænet på dev
 # NER_RESULTS_PATH = os.path.join("data_inference_results_evaluated_on_test", "entity_ensemble", "9-entity-ensemble.json")
 # TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
+
+# 9-entity-ensemble fra modeller trænet på dev
+# NER_RESULTS_PATH = os.path.join("data_inference_results_evaluated_on_test", "entity_ensemble_dev", "9-entity-ensemble.json")
+# TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
+
+# re 621 top 5
+CONFIG_DIR = os.path.join("training_configs", "_re_621_top_5")
+
+# re 621 top 5 dev
+# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_5_dev")
+
+# re 622 top 5
+# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5")
+
+# re
+# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5_dev")
 
 
 def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path):
@@ -31,24 +47,29 @@ def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path)
 
 
 if __name__ == "__main__":
-	parser = argparse.ArgumentParser(description="Load configuration from a YAML file.")
-	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file")
-	args = parser.parse_args()
+	for filename in os.listdir(CONFIG_DIR):
+		file_path = os.path.join(CONFIG_DIR, filename)
 
-	config = load_config(args.config)
+		if os.path.isfile(file_path):
+			config = load_config(file_path)
 
-	load_and_combine_metadata_with_ner_results(
-		ner_results_path=NER_RESULTS_PATH,
-		test_data_path=TEST_DATA_PATH,
-	)
+			load_and_combine_metadata_with_ner_results(
+				ner_results_path=NER_RESULTS_PATH,
+				test_data_path=TEST_DATA_PATH,
+			)
 
-	dataset_dir_name = make_dataset_dir_name(config)
-	re_inference = REInference(
-		test_data_path=os.path.join("combined_data", "combined_ner_and_test_data.json"),
-		model_name_path=os.path.join("models", dataset_dir_name),
-		model_name=config["model_name"],
-		model_type=config["model_type"],
-		subtask=config["subtask"],
-		save_path=os.path.join(f"data_inference_results_{config['subtask']}_on_dev", f"{dataset_dir_name}.json"),
-	)
-	re_inference.perform_inference()
+			dataset_dir_name = make_dataset_dir_name(config)
+			re_inference = REInference(
+				test_data_path=os.path.join("combined_data", "combined_ner_and_test_data.json"),
+				model_name_path=os.path.join("models", dataset_dir_name),
+				model_name=config["model_name"],
+				model_type=config["model_type"],
+				subtask=config["subtask"],
+				# HUSK AT SKIFTE STI
+				save_path=os.path.join(
+					f"data_inference_results_{config['subtask']}_evaluated_on_dev", f"{dataset_dir_name}.json"
+				),
+			)
+			re_inference.perform_inference()
+		else:
+			print(f"Provided path {file_path} is not a valid path.")
