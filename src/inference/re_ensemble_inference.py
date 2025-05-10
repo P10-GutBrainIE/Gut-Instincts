@@ -41,7 +41,7 @@ class EnsembleREInference:
 
 		for key, votes in relation_votes.items():
 			if len(votes) >= math.ceil(len(self.predictions) / 2):
-				ensemble_results[key[0]][subtask_name].append(key[1:])
+				ensemble_results[key[0]][subtask_name].append(votes[0])
 
 		if self.save_path:
 			os.makedirs(os.path.dirname(self.save_path), exist_ok=True)
