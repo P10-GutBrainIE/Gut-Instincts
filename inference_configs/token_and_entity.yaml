@@ -1,6 +1,0 @@
-experiment_name: "token_and_entity"
-test_data_path: "data/Annotations/Dev/json_format/dev.json"
-token_ensemble_results_paths:
-- "data_inference_results/ensemble1/majority.majority.json"
-- "data_inference_results/ensemble2/majority.majority.json"
-- "data_inference_results/ensemble3/majority.majority.json"
