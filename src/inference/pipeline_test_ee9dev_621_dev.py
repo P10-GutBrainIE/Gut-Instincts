@@ -1,0 +1,72 @@
+import os
+from inference.re_inference import REInference
+from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data
+
+
+# 9-entity-ensemble fra modeller ikke trænet på dev
+# NER_RESULTS_PATH = os.path.join("data_inference_results_evaluated_on_test", "entity_ensemble", "9-entity-ensemble.json")
+# TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
+
+# 9-entity-ensemble fra modeller trænet på dev
+NER_RESULTS_PATH = os.path.join("data_inference_results_evaluated_on_test", "entity_ensemble_dev", "9-entity-ensemble.json")
+TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
+
+# re 621 top 5
+# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_5")
+
+# re 621 top 5 dev
+CONFIG_DIR = os.path.join("training_configs", "_re_621_top_5_dev")
+
+# re 622 top 5
+# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5")
+
+# re
+# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5_dev")
+
+
+def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path):
+	ner_results = load_json_data(ner_results_path)
+	test_data = load_json_data(test_data_path)
+
+	combined_data = {}
+	for paper_id in test_data:
+		entry = test_data[paper_id]
+		if isinstance(entry, dict):
+			meta = entry.get("metadata", entry)
+			title = meta["title"]
+			abstract = meta["abstract"]
+			metadata = {"title": title, "abstract": abstract}
+		combined_data[paper_id] = {"metadata": metadata, "entities": ner_results[paper_id]["entities"]}
+
+	save_json_data(combined_data, os.path.join("combined_data", "combined_ner_and_test_data.json"))
+
+
+if __name__ == "__main__":
+	for filename in os.listdir(CONFIG_DIR):
+		file_path = os.path.join(CONFIG_DIR, filename)
+
+		if os.path.isfile(file_path):
+			config = load_config(file_path)
+
+			load_and_combine_metadata_with_ner_results(
+				ner_results_path=NER_RESULTS_PATH,
+				test_data_path=TEST_DATA_PATH,
+			)
+
+			dataset_dir_name = make_dataset_dir_name(config)
+			re_inference = REInference(
+				test_data_path=os.path.join("combined_data", "combined_ner_and_test_data.json"),
+				model_name_path=os.path.join("models", dataset_dir_name),
+				model_name=config["model_name"],
+				model_type=config["model_type"],
+				subtask=config["subtask"],
+				# HUSK AT SKIFTE STI
+				save_path=os.path.join(
+					"data_inference_results_re_evaluated_on_test_ee9dev",
+					f"{config['subtask']}_trained_on_dev",
+					f"{dataset_dir_name}.json",
+				),
+			)
+			re_inference.perform_inference()
+		else:
+			print(f"Provided path {file_path} is not a valid path.")
