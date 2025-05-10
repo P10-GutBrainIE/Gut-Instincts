@@ -38,24 +38,24 @@ def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path)
 			metadata = {"title": title, "abstract": abstract}
 		combined_data[paper_id] = {"metadata": metadata, "entities": ner_results[paper_id]["entities"]}
 
-	save_json_data(combined_data, os.path.join("combined_data", "combined_ner_and_test_data.json"))
+	save_json_data(combined_data, os.path.join("combined_data", "combined_ner_and_test_data_2.json"))
 
 
 if __name__ == "__main__":
+	load_and_combine_metadata_with_ner_results(
+		ner_results_path=NER_RESULTS_PATH,
+		test_data_path=TEST_DATA_PATH,
+	)
+
 	for filename in os.listdir(CONFIG_DIR):
 		file_path = os.path.join(CONFIG_DIR, filename)
 
 		if os.path.isfile(file_path):
 			config = load_config(file_path)
 
-			load_and_combine_metadata_with_ner_results(
-				ner_results_path=NER_RESULTS_PATH,
-				test_data_path=TEST_DATA_PATH,
-			)
-
 			dataset_dir_name = make_dataset_dir_name(config)
 			re_inference = REInference(
-				test_data_path=os.path.join("combined_data", "combined_ner_and_test_data.json"),
+				test_data_path=os.path.join("combined_data", "combined_ner_and_test_data_2.json"),
 				model_name_path=os.path.join("models", dataset_dir_name),
 				model_name=config["model_name"],
 				model_type=config["model_type"],
