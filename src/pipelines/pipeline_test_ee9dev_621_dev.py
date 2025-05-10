@@ -9,7 +9,7 @@ from utils.utils import make_dataset_dir_name, load_config, load_json_data, save
 
 # 9-entity-ensemble fra modeller trænet på dev
 NER_RESULTS_PATH = os.path.join(
-	"data_inference_results_evaluated_on_test", "entity_ensemble_dev", "9-entity-ensemble.json"
+	"data_inference_results_evaluated_on_test", "entity_ensemble_dev", "9-entity-ensemble_trained_on_dev.json"
 )
 TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
 
