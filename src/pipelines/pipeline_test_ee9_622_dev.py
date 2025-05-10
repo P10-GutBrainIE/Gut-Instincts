@@ -11,17 +11,17 @@ TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
 # NER_RESULTS_PATH = os.path.join("data_inference_results_evaluated_on_test", "entity_ensemble_dev", "9-entity-ensemble.json")
 # TEST_DATA_PATH = os.path.join("data", "Test_Data", "articles_test.json")
 
-# re 621 top 5
-# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_5")
+# re 621 top 3
+# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_3")
 
-# re 621 top 5 dev
-# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_5_dev")
+# re 621 top 3 dev
+# CONFIG_DIR = os.path.join("training_configs", "_re_621_top_3_dev")
 
-# re 622 top 5
-# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5")
+# re 622 top 3
+# CONFIG_DIR = os.path.join("training_configs", "_re_622_top_3")
 
-# re 622 top 5 dev
-CONFIG_DIR = os.path.join("training_configs", "_re_622_top_5_dev")
+# re 622 top 3 dev
+CONFIG_DIR = os.path.join("training_configs", "_re_622_top_3_dev")
 
 
 def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path):
