@@ -62,7 +62,9 @@ if __name__ == "__main__":
 		re_predictions_paths=config["prediction_paths"],
 		test_data_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"),
 		save_path=os.path.join(
-			config["save_path"].split(os.sep)[0], "ensemble_results", f"{config['save_path'].split(os.sep)[1]}.json"
+			config["prediction_paths"][0].split(os.sep)[0],
+			"ensemble_results",
+			f"{config['prediction_paths'][0].split(os.sep)[1]}.json",
 		),
 	)
 
