@@ -1,6 +1,7 @@
 data/Annotations
 data/Articles
 data_preprocessed/
+data_inference_results/
 data_inference_results_evaluated_on_dev/
 data_inference_results_6.2.1_evaluated_on_dev
 data_inference_results_6.2.3_evaluated_on_dev
