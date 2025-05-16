@@ -30,14 +30,15 @@ def extract_data(file_paths: str) -> pd.DataFrame:
 
 
 def entities_and_relations_vs_word_count(
-	df: pd.DataFrame,
-	save_path: str = os.path.join("plots", "exploratory_analysis", "entities_and_relations_vs_word_count.pdf"),
+	df,
+	save_path_entities="plots/exploratory_analysis/entities_vs_word_count.pdf",
+	save_path_relations="plots/exploratory_analysis/relations_vs_word_count.pdf",
 ):
 	sns.set_theme(style="ticks")
-	_, axes = plt.subplots(1, 2, figsize=(14, 7))
 	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=1)[::-1]
 
-	sns.scatterplot(
+	plt.figure(figsize=(7, 7))
+	ax1 = sns.scatterplot(
 		x=df["paper_length"],
 		y=df["entities"],
 		hue=df["quality"],
@@ -45,13 +46,18 @@ def entities_and_relations_vs_word_count(
 		alpha=1,
 		edgecolor="black",
 		linewidth=0.5,
-		ax=axes[0],
 		legend=False,
 	)
-	axes[0].set_xlabel("Word Count", fontsize=14)
-	axes[0].set_ylabel("Number of Entities", fontsize=14)
+	ax1.set_xlabel("Word Count", fontsize=14)
+	ax1.set_ylabel("Number of Entities", fontsize=14)
+	sns.despine()
+	plt.tight_layout(pad=1.3)
+	os.makedirs(os.path.dirname(save_path_entities), exist_ok=True)
+	plt.savefig(save_path_entities, format="pdf")
+	plt.close()
 
-	sns.scatterplot(
+	plt.figure(figsize=(7, 7))
+	ax2 = sns.scatterplot(
 		x=df["paper_length"],
 		y=df["relations"],
 		hue=df["quality"],
@@ -59,11 +65,10 @@ def entities_and_relations_vs_word_count(
 		alpha=1,
 		edgecolor="black",
 		linewidth=0.5,
-		ax=axes[1],
 		legend=False,
 	)
-	axes[1].set_xlabel("Word Count", fontsize=14)
-	axes[1].set_ylabel("Number of Relations", fontsize=14)
+	ax2.set_xlabel("Word Count", fontsize=14)
+	ax2.set_ylabel("Number of Relations", fontsize=14)
 
 	unique_qualities = df["quality"].unique()
 	handles = [
@@ -71,30 +76,12 @@ def entities_and_relations_vs_word_count(
 		for i, quality in enumerate(unique_qualities)
 	]
 	handles.reverse()
-	axes[1].legend(handles=handles, title="Quality", loc="upper right", fontsize=12, title_fontsize=14)
+	ax2.legend(handles=handles, title="Quality", loc="upper right", fontsize=12, title_fontsize=14)
 
 	sns.despine()
 	plt.tight_layout(pad=1.3)
-	os.makedirs(os.path.dirname(save_path), exist_ok=True)
-	plt.savefig(save_path, format="pdf")
-	plt.close()
-
-
-def create_pairplot(df: pd.DataFrame, save_path: str = os.path.join("plots", "exploratory_analysis", "pairplot.pdf")):
-	"""
-	Create a pairplot for the variables 'entities', 'relations', and 'paper_length'.
-	Colors the points by the 'quality' column.
-	"""
-	sns.set_theme(style="ticks")
-	plt.figure(figsize=(14, 7))
-	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=1)[::-1]
-
-	sns.pairplot(
-		df, hue="quality", palette=palette, vars=["entities", "relations", "paper_length"], markers=["o", "s", "D"]
-	)
-
-	os.makedirs(os.path.dirname(save_path), exist_ok=True)
-	plt.savefig(save_path, format="pdf")
+	os.makedirs(os.path.dirname(save_path_relations), exist_ok=True)
+	plt.savefig(save_path_relations, format="pdf")
 	plt.close()
 
 
