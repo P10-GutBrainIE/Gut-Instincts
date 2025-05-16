@@ -390,99 +390,6 @@ class NERInference:
 		return entity_predictions
 
 
-def temp(predictions):
-	from utils.utils import load_entity_labels
-
-	ground_truth_NER = dict()
-	count_annotated_entities_per_label = {}
-	entity_labels = load_entity_labels()[1:]
-	ground_truth = load_json_data(file_path=os.path.join("data", "Annotations", "Dev", "json_format", "dev.json"))
-
-	for pmid, article in ground_truth.items():
-		if pmid not in ground_truth_NER:
-			ground_truth_NER[pmid] = []
-		for entity in article["entities"]:
-			start_idx = int(entity["start_idx"])
-			end_idx = int(entity["end_idx"])
-			location = str(entity["location"])
-			text_span = str(entity["text_span"])
-			label = str(entity["label"])
-
-			entry = (start_idx, end_idx, location, text_span, label)
-			ground_truth_NER[pmid].append(entry)
-
-			if label not in count_annotated_entities_per_label:
-				count_annotated_entities_per_label[label] = 0
-			count_annotated_entities_per_label[label] += 1
-
-	count_predicted_entities_per_label = {label: 0 for label in list(count_annotated_entities_per_label.keys())}
-	count_true_positives_per_label = {label: 0 for label in list(count_annotated_entities_per_label.keys())}
-
-	for pmid in predictions.keys():
-		try:
-			entities = predictions[pmid]["entities"]
-		except KeyError:
-			raise KeyError(f'{pmid} - Not able to find field "entities" within article')
-
-		for entity in entities:
-			try:
-				start_idx = int(entity["start_idx"])
-				end_idx = int(entity["end_idx"])
-				location = str(entity["location"])
-				text_span = str(entity["text_span"])
-				label = str(entity["label"])
-			except KeyError:
-				raise KeyError(f"{pmid} - Not able to find one or more of the expected fields for entity: {entity}")
-
-			if label not in entity_labels:
-				raise NameError(f"{pmid} - Illegal label {label} for entity: {entity}")
-
-			if label in count_predicted_entities_per_label:
-				count_predicted_entities_per_label[label] += 1
-
-			entry = (start_idx, end_idx, location, text_span, label)
-			if entry in ground_truth_NER[pmid]:
-				count_true_positives_per_label[label] += 1
-
-	count_annotated_entities = sum(
-		count_annotated_entities_per_label[label] for label in list(count_annotated_entities_per_label.keys())
-	)
-	count_predicted_entities = sum(
-		count_predicted_entities_per_label[label] for label in list(count_annotated_entities_per_label.keys())
-	)
-	count_true_positives = sum(
-		count_true_positives_per_label[label] for label in list(count_annotated_entities_per_label.keys())
-	)
-
-	micro_precision = count_true_positives / (count_predicted_entities + 1e-10)
-	micro_recall = count_true_positives / (count_annotated_entities + 1e-10)
-	micro_f1 = 2 * ((micro_precision * micro_recall) / (micro_precision + micro_recall + 1e-10))
-
-	precision, recall, f1 = 0, 0, 0
-	n = 0
-	for label in list(count_annotated_entities_per_label.keys()):
-		n += 1
-		current_precision = count_true_positives_per_label[label] / (count_predicted_entities_per_label[label] + 1e-10)
-		current_recall = count_true_positives_per_label[label] / (count_annotated_entities_per_label[label] + 1e-10)
-
-		precision += current_precision
-		recall += current_recall
-		f1 += 2 * ((current_precision * current_recall) / (current_precision + current_recall + 1e-10))
-
-	precision = precision / n
-	recall = recall / n
-	f1 = f1 / n
-
-	return {
-		"Precision_micro": micro_precision,
-		"Recall_micro": micro_recall,
-		"F1_micro": micro_f1,
-		"Precision_macro": precision,
-		"Recall_macro": recall,
-		"F1_macro": f1,
-	}
-
-
 if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description="Load configuration from a YAML file or directory of YAML files.")
 	parser.add_argument("--config", type=str, required=True, help="Path to the YAML configuration file or directory")
@@ -494,7 +401,6 @@ if __name__ == "__main__":
 		config = load_config(config_path)
 		dataset_dir_name = make_dataset_dir_name(config)
 		ner_inference = NERInference(
-			# test_data_path=os.path.join("data", "Articles", "json_format", "articles_dev.json"),
 			test_data_path=os.path.join("data", "Test_Data", "articles_test.json"),
 			model_name_path=os.path.join("models", dataset_dir_name),
 			model_name=config["model_name"],
@@ -503,7 +409,6 @@ if __name__ == "__main__":
 			remove_html=config["remove_html"],
 		)
 		ner_inference.perform_inference()
-		# print_metrics(temp(preds))
 
 	elif os.path.isdir(config_path):
 		model_name_path = []
