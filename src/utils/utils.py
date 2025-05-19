@@ -140,7 +140,7 @@ def make_dataset_dir_name(config):
 	else:
 		dataset_dir_name += "61"
 
-	dataset_dir_name += f"_{config["model_type"]}"
+	dataset_dir_name += f"_{config['model_type']}"
 
 	dataset_dir_name += f"_{config['model_name'].split('/')[1]}_"
 

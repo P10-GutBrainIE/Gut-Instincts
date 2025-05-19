@@ -8,7 +8,7 @@ import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer, AlbertTokenizerFast
 from preprocessing.remove_html import remove_html_tags
-from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name, load_config, print_metrics
+from utils.utils import load_json_data, load_bio_labels, make_dataset_dir_name, load_config
 
 
 class NERInference:
