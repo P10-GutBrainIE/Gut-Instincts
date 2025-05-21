@@ -25,12 +25,12 @@ class BertForREWithEntityStart(nn.Module):
 		outputs = self.encoder(input_ids=input_ids, attention_mask=attention_mask)
 		sequence_output = outputs.last_hidden_state
 
-		e1_positions = (input_ids == self.e1_token_id).float().argmax(dim=1)
-		e2_positions = (input_ids == self.e2_token_id).float().argmax(dim=1)
+		e1_position = (input_ids == self.e1_token_id).float().argmax(dim=1)
+		e2_position = (input_ids == self.e2_token_id).float().argmax(dim=1)
 
 		batch_indices = torch.arange(input_ids.size(0), device=input_ids.device)
-		e1_repr = sequence_output[batch_indices, e1_positions]
-		e2_repr = sequence_output[batch_indices, e2_positions]
+		e1_repr = sequence_output[batch_indices, e1_position]
+		e2_repr = sequence_output[batch_indices, e2_position]
 
 		combined = torch.cat([e1_repr, e2_repr], dim=-1)
 		logits = self.classifier(combined)
