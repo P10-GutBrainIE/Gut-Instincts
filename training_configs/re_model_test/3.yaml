@@ -1,7 +1,7 @@
 experiment_name: "RE_621"
 model_type: "re"
 subtask: "6.2.1"
-model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract"
 resume_checkpoint: False
 dataset_qualities:
 - "platinum"
