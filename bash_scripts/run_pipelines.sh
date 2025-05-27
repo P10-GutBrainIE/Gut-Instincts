@@ -9,7 +9,7 @@ fi
 mkdir -p logs/
 
 # Loop over all Python scripts in src/pipelines
-for script in src/pipelines/remaining_re_3/*.py; do
+for script in src/pipelines/remaining_re_5/*.py; do
     filename=$(basename "$script")
     jobname="${filename%.*}"  # Remove the .py extension for the job name
     echo "Submitting $script"

@@ -47,7 +47,7 @@ if __name__ == "__main__":
 				model_type=config["model_type"],
 				subtask=config["subtask"],
 				save_path=os.path.join(
-					"data_inference_results_re_evaluated_on_dev_ee9",
+					"data_inference_results_re_evaluated_on_dev_ee9_5",
 					f"{config['subtask']}",
 					f"{dataset_dir_name}.json",
 				),
