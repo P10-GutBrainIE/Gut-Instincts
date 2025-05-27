@@ -3,7 +3,7 @@ from inference.re_inference import REInference
 from utils.utils import make_dataset_dir_name, load_config, load_json_data, save_json_data
 
 NER_RESULTS_PATH = os.path.join(
-	"data_inference_results_evaluated_on_dev", "entity_ensemble_no_dev_training_data", "9-entity-ensemble.json"
+	"data_inference_results_evaluated_on_dev", "entity_ensemble", "9-entity-ensemble.json"
 )
 TEST_DATA_PATH = os.path.join("data", "Articles", "json_format", "articles_dev.json")
 
