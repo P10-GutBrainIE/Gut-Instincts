@@ -24,7 +24,7 @@ def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path)
 			metadata = {"title": title, "abstract": abstract}
 		combined_data[paper_id] = {"metadata": metadata, "entities": ner_results[paper_id]["entities"]}
 
-	save_json_data(combined_data, os.path.join("combined_data", "combined_ner_and_test_data_4.json"))
+	save_json_data(combined_data, os.path.join("combined_data", "combined_ner_and_test_data_2.json"))
 
 
 if __name__ == "__main__":
@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
 			dataset_dir_name = make_dataset_dir_name(config)
 			re_inference = REInference(
-				test_data_path=os.path.join("combined_data", "combined_ner_and_test_data_4.json"),
+				test_data_path=os.path.join("combined_data", "combined_ner_and_test_data_2.json"),
 				model_name_path=os.path.join("models", dataset_dir_name),
 				model_name=config["model_name"],
 				model_type=config["model_type"],
