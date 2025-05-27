@@ -1,7 +1,7 @@
 subtask: "6.2.2"
 prediction_paths:
-- "data_inference_results_6.2.1_evaluated_on_dev/621/621_re_BioLinkBERT-base_p1.25g1.25s1b0.75_Truerro_10nsm_seed2.json"
-- "data_inference_results_6.2.1_evaluated_on_dev/621/621_re_BioLinkBERT-base_p1.5g1.5s1b0.75_Truerro_10nsm_seed2.json"
-- "data_inference_results_6.2.1_evaluated_on_dev/621/621_re_BiomedNLP-BiomedElectra-large-uncased-abstract_pg_Truerro_10nsm_seed2.json"
-- "data_inference_results_6.2.1_evaluated_on_dev/621/621_re_BiomedNLP-BiomedBERT-large-uncased-abstract_pg_Truerro_10nsm_seed2.json"
-- "data_inference_results_6.2.1_evaluated_on_dev/621/621_re_BioLinkBERT-base_pg_Truerro_10nsm_seed2.json"
+- "data_inference_results_re_evaluated_on_dev_ee9_5\\6.2.2\\622_re_BioLinkBERT-base_p1.5g1.5s1b0.75_Truerro_10nsm_seed2.json"
+- "data_inference_results_re_evaluated_on_dev_ee9_5\\6.2.2\\622_re_BioLinkBERT-base_p1.25g1.25s1b0.75_Truerro_10nsm_seed2.json"
+- "data_inference_results_re_evaluated_on_dev_ee9_5\\6.2.2\\622_re_BioLinkBERT-base_pg_Truerro_10nsm_seed2.json"
+- "data_inference_results_re_evaluated_on_dev_ee9_5\\6.2.2\\622_re_BioLinkBERT-base_pgs_Truerro_10nsm_seed2.json"
+- "data_inference_results_re_evaluated_on_dev_ee9_5\\6.2.2\\622_re_BiomedNLP-BiomedBERT-large-uncased-abstract_pg_Truerro_10nsm_seed2.json"
