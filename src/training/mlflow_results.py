@@ -59,14 +59,18 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="
 			model_name = model_name.split("/")[-1]
 			experiment_name = run.get("params.experiment_name") if run.get("params.experiment_name") else "Not logged"
 			seed = run.get("params.seed") if run.get("params.seed") else "No"
-			if task == "re":
+			if task == "re_621" or task == "re_622":
 				multiplier = (
 					run.get("params.negative_sample_multiplier")
 					if run.get("params.negative_sample_multiplier")
 					else "Not logged"
 				)
-
-				results.append((experiment_name, model_name, f"{qualities} x {multiplier}", weights, seed, best_f1))
+				remove_outliers = (
+					run.get("params.remove_relation_outliers")
+					if run.get("params.remove_relation_outliers")
+					else "Not logged"
+				)
+				results.append((experiment_name, model_name, f"{qualities} x {multiplier}", weights, seed, best_f1, remove_outliers))
 			else:
 				results.append((experiment_name, model_name, qualities, weights, seed, best_f1))
 		except Exception as e:
@@ -76,14 +80,14 @@ def print_top_n_experiments(experiment_name: str = None, top_n: int = 20, task="
 
 	print(f"Best F1_micro values for {experiments_text}:")
 	print(
-		f"{'No.':<5} {'Experiment Name':<42} {'Model Name':<54} {'Qualities':<34} {'Weights':<30} {'Seed':<6} {'F1_micro':<8}"
+		f"{'No.':<5} {'Experiment Name':<42} {'Model Name':<54} {'Qualities':<34} {'Weights':<30} {'Seed':<6} {'F1_micro':<8} {'RO':<6}"
 	)
-	print("-" * 180)
-	for i, (experiment_name, model_name, qualities, weights, seed, best_f1) in enumerate(results[:top_n], start=1):
+	print("-" * 190)
+	for i, (experiment_name, model_name, qualities, weights, seed, best_f1, remove_outliers) in enumerate(results[:top_n], start=1):
 		print(
-			f"{i:<5} {experiment_name:<42} {model_name:<54} {qualities:<34} {str(weights):<30} {seed:<6} {best_f1:<8.4f}"
+			f"{i:<5} {experiment_name:<42} {model_name:<54} {qualities:<34} {str(weights):<30} {seed:<6} {best_f1:<8.4f} {remove_outliers:<6}"
 		)
 
 
 if __name__ == "__main__":
-	print_top_n_experiments(experiment_name=None, top_n=100, task="ner")
+	print_top_n_experiments(experiment_name=None, top_n=100, task="re_621")
