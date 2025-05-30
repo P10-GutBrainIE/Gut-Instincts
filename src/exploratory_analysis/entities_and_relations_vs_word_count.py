@@ -35,7 +35,10 @@ def entities_and_relations_vs_word_count(
 	save_path_relations="plots/exploratory_analysis/relations_vs_word_count.pdf",
 ):
 	sns.set_theme(style="ticks")
-	palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=1)[::-1]
+	# palette = sns.color_palette("magma", n_colors=len(df["quality"].unique()), desat=1)[::-1]
+	palette = sns.color_palette("colorblind")[:8]
+	palette = [palette[2]] + [palette[-1]] + [palette[1]] + [palette[0]]
+	palette = palette[::-1]
 
 	plt.figure(figsize=(7, 7))
 	ax1 = sns.scatterplot(

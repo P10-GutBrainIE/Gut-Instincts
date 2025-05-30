@@ -3,6 +3,7 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 import numpy as np
+from scipy.stats import shapiro
 import seaborn as sns
 import pandas as pd
 from transformers import AutoTokenizer
@@ -49,10 +50,26 @@ def text_length_histogram(
 	sns.set_theme(style="ticks")
 	fig, axes = plt.subplots(2, 2, figsize=(14, 7))
 
-	palette = sns.color_palette("magma", n_colors=4, desat=1)
+	# palette = sns.color_palette("magma", n_colors=4, desat=1)
+	palette = sns.color_palette("colorblind")[:8]
+	palette = [palette[2]] + [palette[-1]] + [palette[1]] + [palette[0]]
+
 	qualities = ["bronze", "silver", "gold", "platinum"]
 
 	for i, quality in enumerate(qualities):
+		lengths = df[df["quality"] == quality]["length"]
+
+		# Apply Shapiro-Wilk test
+		if len(lengths) >= 3 and len(lengths) <= 5000:  # Shapiro-Wilk limit is 5000
+			stat, p_value = shapiro(lengths)
+			print(f"[{quality.capitalize()}] Shapiro-Wilk: W={stat:.4f}, p={p_value:.4f}")
+			if p_value < 0.05:
+				print(f"❌ {quality.capitalize()} data is likely NOT normally distributed.")
+			else:
+				print(f"✅ {quality.capitalize()} data appears to be normally distributed.")
+		else:
+			print(f"[{quality.capitalize()}] Skipped Shapiro-Wilk (n={len(lengths)}): too many samples.")
+
 		row, col = divmod(i, 2)
 		ax = axes[row, col]
 		sns.histplot(
@@ -69,11 +86,11 @@ def text_length_histogram(
 			linewidth=0.5,
 		)
 		if row == 1:
-			ax.set_xlabel("Token Count", fontsize=14)
+			ax.set_xlabel("Token Sequence Length", fontsize=14)
 		else:
 			ax.set_xlabel("")
 		if col == 0:
-			ax.set_ylabel("Frequency", fontsize=14)
+			ax.set_ylabel("Number of Articles", fontsize=14)
 		else:
 			ax.set_ylabel("")
 
