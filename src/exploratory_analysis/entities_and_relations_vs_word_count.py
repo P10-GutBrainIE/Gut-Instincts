@@ -51,8 +51,11 @@ def entities_and_relations_vs_word_count(
 		linewidth=0.5,
 		legend=False,
 	)
-	ax1.set_xlabel("Word Count", fontsize=14)
-	ax1.set_ylabel("Number of Entities", fontsize=14)
+	ax1.set_xlabel("Word Count", fontsize=18)
+	ax1.set_ylabel("Number of Entities", fontsize=18)
+	plt.xticks(fontsize=14)
+	plt.yticks(fontsize=14)
+
 	sns.despine()
 	plt.tight_layout(pad=1.3)
 	os.makedirs(os.path.dirname(save_path_entities), exist_ok=True)
@@ -70,8 +73,10 @@ def entities_and_relations_vs_word_count(
 		linewidth=0.5,
 		legend=False,
 	)
-	ax2.set_xlabel("Word Count", fontsize=14)
-	ax2.set_ylabel("Number of Relations", fontsize=14)
+	ax2.set_xlabel("Word Count", fontsize=18)
+	ax2.set_ylabel("Number of Relations", fontsize=18)
+	plt.xticks(fontsize=14)
+	plt.yticks(fontsize=14)
 
 	unique_qualities = df["quality"].unique()
 	handles = [
@@ -79,7 +84,7 @@ def entities_and_relations_vs_word_count(
 		for i, quality in enumerate(unique_qualities)
 	]
 	handles.reverse()
-	ax2.legend(handles=handles, title="Quality", loc="upper right", fontsize=12, title_fontsize=14)
+	ax2.legend(handles=handles, title="Quality", loc="upper right", fontsize=14, title_fontsize=16)
 
 	sns.despine()
 	plt.tight_layout(pad=1.3)

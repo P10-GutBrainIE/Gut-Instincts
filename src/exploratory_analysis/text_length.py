@@ -48,7 +48,7 @@ def text_length_histogram(
 	print(f"{len(df[df['length'] >= 512]) + exclude_cnt} out of {len(df) + exclude_cnt} with length > 512")
 
 	sns.set_theme(style="ticks")
-	fig, axes = plt.subplots(2, 2, figsize=(14, 7))
+	_, axes = plt.subplots(2, 2, figsize=(14, 7))
 
 	# palette = sns.color_palette("magma", n_colors=4, desat=1)
 	palette = sns.color_palette("colorblind")[:8]
@@ -86,11 +86,11 @@ def text_length_histogram(
 			linewidth=0.5,
 		)
 		if row == 1:
-			ax.set_xlabel("Token Sequence Length", fontsize=14)
+			ax.set_xlabel("Token Sequence Length", fontsize=18)
 		else:
 			ax.set_xlabel("")
 		if col == 0:
-			ax.set_ylabel("Number of Articles", fontsize=14)
+			ax.set_ylabel("Number of Articles", fontsize=18)
 		else:
 			ax.set_ylabel("")
 
@@ -104,7 +104,10 @@ def text_length_histogram(
 		for i, quality in enumerate(qualities)
 	][::-1]
 	handles.reverse()
-	axes[0, 1].legend(title="Quality", handles=handles, fontsize=12, title_fontsize=14)
+	axes[0, 1].legend(title="Quality", handles=handles, fontsize=14, title_fontsize=16)
+
+	plt.xticks(fontsize=14)
+	plt.yticks(fontsize=14)
 
 	sns.despine()
 	plt.tight_layout(pad=1.3, rect=[0, 0.05, 1, 0.97])
