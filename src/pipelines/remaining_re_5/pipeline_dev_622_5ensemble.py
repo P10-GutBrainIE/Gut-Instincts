@@ -28,11 +28,6 @@ def load_and_combine_metadata_with_ner_results(ner_results_path, test_data_path)
 
 
 if __name__ == "__main__":
-	load_and_combine_metadata_with_ner_results(
-		ner_results_path=NER_RESULTS_PATH,
-		test_data_path=TEST_DATA_PATH,
-	)
-
 	for filename in os.listdir(CONFIG_DIR):
 		file_path = os.path.join(CONFIG_DIR, filename)
 
@@ -41,13 +36,13 @@ if __name__ == "__main__":
 
 			dataset_dir_name = make_dataset_dir_name(config)
 			re_inference = REInference(
-				test_data_path=os.path.join("combined_data", "combined_ner_and_test_data_3.json"),
+				test_data_path=os.path.join("Annotations", "Dev","json_format", "dev.json"),
 				model_name_path=os.path.join("models", dataset_dir_name),
 				model_name=config["model_name"],
 				model_type=config["model_type"],
 				subtask=config["subtask"],
 				save_path=os.path.join(
-					"data_inference_results_re_evaluated_on_dev_ee9_5",
+					"data_inference_results_re_evaluated_on_dev_ee9_622",
 					f"{config['subtask']}",
 					f"{dataset_dir_name}.json",
 				),
