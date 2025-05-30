@@ -36,7 +36,7 @@ if __name__ == "__main__":
 
 			dataset_dir_name = make_dataset_dir_name(config)
 			re_inference = REInference(
-				test_data_path=os.path.join("Annotations", "Dev","json_format", "dev.json"),
+				test_data_path=os.path.join("data", "Annotations", "Dev","json_format", "dev.json"),
 				model_name_path=os.path.join("models", dataset_dir_name),
 				model_name=config["model_name"],
 				model_type=config["model_type"],
